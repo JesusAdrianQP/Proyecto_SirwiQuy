@@ -5,7 +5,7 @@
         <p class="text-xl mb-1">
           TRABAJA CON NOSOTROS
         </p>
-        <router-link class="text-gray-300 hover:text-primary-900" to="/customer/blank">
+        <router-link class="text-gray-300 hover:text-primary-900" to="/join_us">
           Únete
         </router-link>
         <br>
