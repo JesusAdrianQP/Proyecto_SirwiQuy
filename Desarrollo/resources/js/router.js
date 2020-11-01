@@ -8,6 +8,7 @@ import JoinUs from "./pages/JoinUs.vue";
 
 //Importaciones de la carpeta Auth
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
+import Login from "./pages/Auth/Login.vue";
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
@@ -55,6 +56,13 @@ export default new VueRouter({
             path: "/join_us",
             component: JoinUs,
             beforeEnter: isGuest
+        },
+
+        {
+            path: "/login/:identity",
+            component: Login,
+            beforeEnter: isGuest,
+            props: true
         },
 
         {

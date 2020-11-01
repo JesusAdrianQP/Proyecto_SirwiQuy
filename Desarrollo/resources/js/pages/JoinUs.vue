@@ -54,7 +54,7 @@
                       
                         <span class="">¿Ya tienes cuenta? <br></span>
                         <router-link
-                          to="/customer/blank"
+                          to="/login/employee"
                           class="font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
                         >
                             ¡Inicia sesión!
@@ -84,7 +84,7 @@
                       <div class="text-base leading-5">
                         <span class="font-medium">¿Ya tienes cuenta? <br></span>
                         <router-link
-                          to="/customer/blank"
+                          to="/login/enterprise"
                           class="font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
                         >
                             ¡Inicia sesión!
