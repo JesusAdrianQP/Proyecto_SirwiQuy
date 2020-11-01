@@ -9,6 +9,7 @@ export default {
   async get(url) {
     try {
       let response = await axios.get(`${API_URL}${url}`)
+      console.log(response)
       return {
         ok: true,
         data: response
