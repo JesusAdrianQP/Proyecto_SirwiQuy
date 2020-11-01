@@ -106,10 +106,10 @@ export default {
       this.$emit('setLoading')
 
       //Se llama a toda la lista de servicios
-      //let response = await api.get(`/services/page=${page}`)
+      let response = await api.get(`/services/page=${page}`)
        
       this.services = response.data.data.paginate.data || []
-      //this.pagination = response.data.data.paginate //Se extrae los datos paginados 
+      this.pagination = response.data.data.paginate //Se extrae los datos paginados 
 
       //Evento que el componente padre oira para obtener valores
       this.$emit('getServices', {

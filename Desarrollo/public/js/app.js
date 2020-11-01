@@ -2147,7 +2147,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -2223,7 +2222,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -2305,7 +2304,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    return Object(C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -2345,23 +2344,29 @@ __webpack_require__.r(__webpack_exports__);
     getPagesIndex: function getPagesIndex(page) {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      return Object(C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _this2.$emit('setLoading'); //Se llama a toda la lista de servicios
-                //let response = await api.get(`/services/page=${page}`)
 
 
-                _this2.services = response.data.data.paginate.data || []; //this.pagination = response.data.data.paginate //Se extrae los datos paginados 
+                _context2.next = 3;
+                return _api__WEBPACK_IMPORTED_MODULE_3__["default"].get("/services/page=".concat(page));
+
+              case 3:
+                response = _context2.sent;
+                _this2.services = response.data.data.paginate.data || [];
+                _this2.pagination = response.data.data.paginate; //Se extrae los datos paginados 
                 //Evento que el componente padre oira para obtener valores
 
                 _this2.$emit('getServices', {
                   services_paginate: _this2.services
                 });
 
-              case 3:
+              case 7:
               case "end":
                 return _context2.stop();
             }
@@ -2372,7 +2377,7 @@ __webpack_require__.r(__webpack_exports__);
     changePage: function changePage(page) {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+      return Object(C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -2724,7 +2729,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -2752,7 +2757,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    return Object(C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -2773,7 +2778,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      return Object(C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -28657,7 +28662,7 @@ var render = function() {
                 _c("img", {
                   staticClass: "hidden lg:block h-10 w-auto",
                   attrs: {
-                    src: __webpack_require__(/*! ../../assets/logo_negro_1.png */ "./resources/assets/logo_negro_1.png"),
+                    src: __webpack_require__(/*! ../../assets/Sirwiyquy_b.png */ "./resources/assets/Sirwiyquy_b.png"),
                     alt: "Workflow logo"
                   }
                 })
@@ -28667,7 +28672,7 @@ var render = function() {
                 _c("img", {
                   staticClass: "block lg:hidden h-8 w-auto",
                   attrs: {
-                    src: __webpack_require__(/*! ../../assets/logo_negro_1.png */ "./resources/assets/logo_negro_1.png"),
+                    src: __webpack_require__(/*! ../../assets/Sirwiyquy_b.png */ "./resources/assets/Sirwiyquy_b.png"),
                     alt: "Workflow logo"
                   }
                 })
@@ -28688,15 +28693,13 @@ var render = function() {
                 }
               }),
               _vm._v(" "),
-              !_vm.isCustomer
-                ? _c("NavBarOption", {
-                    attrs: {
-                      title: "Trabaja con Nosotros",
-                      url: "/customer/blank",
-                      icon: { icon: "briefcase", solid: true }
-                    }
-                  })
-                : _vm._e(),
+              _c("NavBarOption", {
+                attrs: {
+                  title: "Trabaja con Nosotros",
+                  url: "/customer/blank",
+                  icon: { icon: "briefcase", solid: true }
+                }
+              }),
               _vm._v(" "),
               _c("NavBarOption", {
                 attrs: {
@@ -28714,113 +28717,109 @@ var render = function() {
           "div",
           { staticClass: "hidden sm:ml-4 lg:flex sm:items-center" },
           [
-            !_vm.isCustomer
-              ? _c(
-                  "router-link",
-                  {
-                    staticClass: "flex w-full rounded-md shadow-sm sm:w-auto",
-                    attrs: { to: "/customer/blank" }
-                  },
-                  [
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-primary-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5",
-                        attrs: { type: "button" }
-                      },
-                      [_vm._v("Ingresar")]
-                    )
-                  ]
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            !_vm.isCustomer
-              ? _c(
-                  "router-link",
-                  {
-                    staticClass:
-                      "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:ml-2 sm:w-auto",
-                    attrs: { to: "/customer/blank" }
-                  },
-                  [
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5",
-                        attrs: { type: "button" }
-                      },
-                      [_vm._v("Crear Cuenta")]
-                    )
-                  ]
-                )
-              : _vm._e()
-          ],
-          1
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "-mr-2 flex items-center lg:hidden" }, [
-        _c(
-          "button",
-          {
-            staticClass:
-              "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out",
-            on: {
-              click: function($event) {
-                _vm.isOpen = !_vm.isOpen
-              }
-            }
-          },
-          [
             _c(
-              "svg",
+              "router-link",
               {
-                staticClass: "h-6 w-6",
-                class: _vm.isOpen ? "hidden" : "block",
-                attrs: {
-                  stroke: "currentColor",
-                  fill: "none",
-                  viewBox: "0 0 24 24"
-                }
+                staticClass: "flex w-full rounded-md shadow-sm sm:w-auto",
+                attrs: { to: "/customer/blank" }
               },
               [
-                _c("path", {
-                  attrs: {
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    d: "M4 6h16M4 12h16M4 18h16"
-                  }
-                })
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-primary-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                    attrs: { type: "button" }
+                  },
+                  [_vm._v("Ingresar")]
+                )
               ]
             ),
             _vm._v(" "),
             _c(
-              "svg",
+              "router-link",
               {
-                staticClass: "h-6 w-6",
-                class: _vm.isOpen ? "block" : "hidden",
-                attrs: {
-                  stroke: "currentColor",
-                  fill: "none",
-                  viewBox: "0 0 24 24"
-                }
+                staticClass:
+                  "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:ml-2 sm:w-auto",
+                attrs: { to: "/customer/blank" }
               },
               [
-                _c("path", {
-                  attrs: {
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    d: "M6 18L18 6M6 6l12 12"
-                  }
-                })
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                    attrs: { type: "button" }
+                  },
+                  [_vm._v("Crear Cuenta")]
+                )
               ]
             )
-          ]
-        )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "-mr-2 flex items-center lg:hidden" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out",
+              on: {
+                click: function($event) {
+                  _vm.isOpen = !_vm.isOpen
+                }
+              }
+            },
+            [
+              _c(
+                "svg",
+                {
+                  staticClass: "h-6 w-6",
+                  class: _vm.isOpen ? "hidden" : "block",
+                  attrs: {
+                    stroke: "currentColor",
+                    fill: "none",
+                    viewBox: "0 0 24 24"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      "stroke-linecap": "round",
+                      "stroke-linejoin": "round",
+                      "stroke-width": "2",
+                      d: "M4 6h16M4 12h16M4 18h16"
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "svg",
+                {
+                  staticClass: "h-6 w-6",
+                  class: _vm.isOpen ? "block" : "hidden",
+                  attrs: {
+                    stroke: "currentColor",
+                    fill: "none",
+                    viewBox: "0 0 24 24"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      "stroke-linecap": "round",
+                      "stroke-linejoin": "round",
+                      "stroke-width": "2",
+                      d: "M6 18L18 6M6 6l12 12"
+                    }
+                  })
+                ]
+              )
+            ]
+          )
+        ])
       ])
     ]),
     _vm._v(" "),
@@ -28842,17 +28841,15 @@ var render = function() {
               [_vm._v("Inicio")]
             ),
             _vm._v(" "),
-            !_vm.isCustomer
-              ? _c(
-                  "router-link",
-                  {
-                    staticClass:
-                      "mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out",
-                    attrs: { to: "/customer/blank" }
-                  },
-                  [_vm._v("Trabaja con Nosotros")]
-                )
-              : _vm._e(),
+            _c(
+              "router-link",
+              {
+                staticClass:
+                  "mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out",
+                attrs: { to: "/customer/blank" }
+              },
+              [_vm._v("Trabaja con Nosotros")]
+            ),
             _vm._v(" "),
             _c(
               "router-link",
@@ -28879,29 +28876,25 @@ var render = function() {
               }
             },
             [
-              !_vm.isCustomer
-                ? _c(
-                    "router-link",
-                    {
-                      staticClass:
-                        "mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out",
-                      attrs: { to: "/customer/blank", role: "menuitem" }
-                    },
-                    [_vm._v("Ingresar")]
-                  )
-                : _vm._e(),
+              _c(
+                "router-link",
+                {
+                  staticClass:
+                    "mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out",
+                  attrs: { to: "/customer/blank", role: "menuitem" }
+                },
+                [_vm._v("Ingresar")]
+              ),
               _vm._v(" "),
-              !_vm.isCustomer
-                ? _c(
-                    "router-link",
-                    {
-                      staticClass:
-                        "mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out",
-                      attrs: { to: "/customer/blank", role: "menuitem" }
-                    },
-                    [_vm._v("Crear cuenta")]
-                  )
-                : _vm._e()
+              _c(
+                "router-link",
+                {
+                  staticClass:
+                    "mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out",
+                  attrs: { to: "/customer/blank", role: "menuitem" }
+                },
+                [_vm._v("Crear cuenta")]
+              )
             ],
             1
           )
@@ -29280,6 +29273,24 @@ var render = function() {
               [_vm._v("\n        Guía de primeros pasos\n      ")]
             ),
             _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "text-gray-300 hover:text-primary-900",
+                attrs: { to: "/customer/blank" }
+              },
+              [_vm._v("\n        Términos y condiciones\n      ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "text-gray-300 hover:text-primary-900",
+                attrs: { to: "/customer/blank" }
+              },
+              [_vm._v("\n        Políticas de la empresa\n      ")]
+            ),
+            _vm._v(" "),
             _c("br")
           ],
           1
@@ -29289,7 +29300,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-lg mt-6" }, [
-        _vm._v("© Copyright 2020 Kusawasi")
+        _vm._v("© Copyright 2020, Kusawasi. Todos los derechos reservados.")
       ])
     ]
   )
@@ -29305,10 +29316,7 @@ var staticRenderFns = [
       [
         _c("img", {
           staticClass: "h-12 w-auto mx-auto mt-4",
-          attrs: {
-            src: __webpack_require__(/*! ../../assets/logo_blanco_2.png */ "./resources/assets/logo_blanco_2.png"),
-            alt: "Workflow"
-          }
+          attrs: { src: "#", alt: "Workflow" }
         }),
         _vm._v(" "),
         _c("p", { staticClass: "text-sm mt-2" }, [
@@ -44917,6 +44925,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/assets/Sirwiyquy_b.png":
+/*!******************************************!*\
+  !*** ./resources/assets/Sirwiyquy_b.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Sirwiyquy_b.png?e5d6ceecc2aba9e7eea5cccc92a2a9f2";
+
+/***/ }),
+
 /***/ "./resources/assets/empty_content.png":
 /*!********************************************!*\
   !*** ./resources/assets/empty_content.png ***!
@@ -45334,28 +45353,6 @@ module.exports = "/images/Construccion_woman.png?b80952a8d247d6c0a2568b9996dfd98
 
 /***/ }),
 
-/***/ "./resources/assets/logo_blanco_2.png":
-/*!********************************************!*\
-  !*** ./resources/assets/logo_blanco_2.png ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/logo_blanco_2.png?220276ea7933af456b61ff0398e81542";
-
-/***/ }),
-
-/***/ "./resources/assets/logo_negro_1.png":
-/*!*******************************************!*\
-  !*** ./resources/assets/logo_negro_1.png ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/logo_negro_1.png?332c963854177d06930685effddc9900";
-
-/***/ }),
-
 /***/ "./resources/js/api.js":
 /*!*****************************!*\
   !*** ./resources/js/api.js ***!
@@ -45371,7 +45368,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants.js */ "./resources/js/constants.js");
@@ -45386,7 +45383,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   get: function get(url) {
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -45398,17 +45395,18 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
             case 3:
               response = _context.sent;
+              console.log(response);
               return _context.abrupt("return", {
                 ok: true,
                 data: response
               });
 
-            case 7:
-              _context.prev = 7;
+            case 8:
+              _context.prev = 8;
               _context.t0 = _context["catch"](0);
 
               if (!_context.t0.response) {
-                _context.next = 15;
+                _context.next = 16;
                 break;
               }
 
@@ -45419,29 +45417,29 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
                 error: _context.t0.response.data
               });
 
-            case 15:
+            case 16:
               if (_context.t0.request) {
                 console.log(_context.t0.request);
               } else {
                 console.log('Error', _context.t0.message);
               }
 
-            case 16:
+            case 17:
               return _context.abrupt("return", {
                 ok: false,
                 error: 'Ocurrió un error, vuelva a intentarlo'
               });
 
-            case 17:
+            case 18:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 7]]);
+      }, _callee, null, [[0, 8]]);
     }))();
   },
   post: function post(url, body) {
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gesti_n_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+    return Object(C_Users_HP_OneDrive_Escritorio_CICLO_2020_I_TALLER_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
@@ -46423,8 +46421,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestión\Desarrollo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestión\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\HP\OneDrive\Escritorio\CICLO 2020-I\TALLER\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\HP\OneDrive\Escritorio\CICLO 2020-I\TALLER\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
