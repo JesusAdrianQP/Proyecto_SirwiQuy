@@ -28,7 +28,7 @@
             <NavBarOption
               
               title="Trabaja con Nosotros"
-              url="/customer/blank"
+              url="/join_us"
               :icon="{ icon: 'briefcase', solid: true }"
             />
             <NavBarOption
@@ -114,7 +114,7 @@
         >Inicio</router-link>
         <router-link
           
-          to="/customer/blank"
+          to="/join_us"
           class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Trabaja con Nosotros</router-link>
         <router-link
