@@ -622,7 +622,7 @@ export default {
         this.vacio_dni = "";
         this.isType = 'DNI';
       } 
-/*
+
       let response = await api.get(`/validate/${this.isType}/${this.dni}`)//Se envia validacion
       
       if (!response.ok) {
@@ -633,7 +633,7 @@ export default {
         this.lastnamem_admi = "";
            
         return this.$toast.open({
-          message: "Ocurrio un error, el DNI ingresado no existe o es de un menor de edad",
+          message: "El sistema detectó que el DNI no es válido",
           type: "error",
           duration: 8000,
           dismissible: true
@@ -651,7 +651,7 @@ export default {
         type: "success",
         duration: 8000,
         dismissible: true
-      });*/
+      });
     },
     //Validacion del numero de RUC con la API
     async validateRUC() {
@@ -667,7 +667,7 @@ export default {
         this.vacio_ruc = "";
         this.isType = 'RUC';
       } 
-/*
+
       let response = await api.get(`/validate/${this.isType}/${this.ruc}`)//Se envia validacion
       
       //Si recibo algún error del RUC
@@ -677,7 +677,7 @@ export default {
         this.name_enterprise = "";
 
         return this.$toast.open({
-          message:"Ocurrio un error, el RUC ingresado no existe",
+          message:"El sistema detecto que el RUC no es válido",
           type: "error",
           duration: 8000,
           dismissible: true,
@@ -692,8 +692,9 @@ export default {
         type: "success",
         duration: 8000,
         dismissible: true,
-      });*/
+      });
     },
+
     //Funcion una vez llenado el formulario
     async submitSignup() {
       this.validateSubmit();
