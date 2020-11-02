@@ -2395,7 +2395,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -2477,7 +2477,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -2517,7 +2517,7 @@ __webpack_require__.r(__webpack_exports__);
     getPagesIndex: function getPagesIndex(page) {
       var _this2 = this;
 
-      return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -2550,7 +2550,7 @@ __webpack_require__.r(__webpack_exports__);
     changePage: function changePage(page) {
       var _this3 = this;
 
-      return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+      return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -2781,7 +2781,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -2929,7 +2929,6 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       hasError: false,
-      openModal: false,
       buttonLoading: false,
       isEnterprise: false,
       //Comprobacion si la ruta es de empresa -
@@ -2952,7 +2951,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -2980,128 +2979,65 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitLogin: function submitLogin() {
-      /*this.validateSubmit();
-      if (this.hasError) return;
-      this.buttonLoading = true;
-        //Conexión con la lógica de negocio
-      //Se pasa como parametros el loger (usario o correo)
-      //identity -> tipo de identificador para el usuario
-      //password -> contraseña
-      let response = await api.post(`/login`, {
-        identity: this.identifier,
-        loger: this.loger,
-        password: this.password,
-      });
-        //Si hay errores se identifica que tipo
-      if (!response.ok) {
-        this.buttonLoading = false;
-          let er = response.error.errors;
-        let mensaje = "Error desconocido";
-          if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
-        else if (er.hasOwnProperty("user")) mensaje = er.user[0];
-        else mensaje = er.pass[0];
-          return this.$toast.open({
-          message: mensaje,
-          type: "error",
-          duration: 8000,
-          dismissible: true,
-        });
-      }
-        //Si todo esta correcto:
-      //Recupero datos del usuario para usarlo después
-      if (this.identifier == "trabajador" || this.identifier == "cliente") {
-        //Datos de un usuario customer o de un usuario employeer
-        localStorage.setItem('e_id', response.data.data._id);
-        localStorage.setItem('e_username', response.data.data.username);
-        localStorage.setItem('e_DNI', response.data.data.DNI);
-        localStorage.setItem('e_edad', response.data.data.edad);
-        localStorage.setItem('e_file', response.data.data.file);
-        localStorage.setItem('e_name', response.data.data.name);
-        localStorage.setItem('e_lastnamep', response.data.data.lastnamep);
-        localStorage.setItem('e_lastnamem', response.data.data.lastnamem);
-        localStorage.setItem('e_email', response.data.data.email);
-        localStorage.setItem('e_depa', response.data.data.departamento);
-        localStorage.setItem('e_prov', response.data.data.provincia);
-        localStorage.setItem('e_dist', response.data.data.distrito);
-        localStorage.setItem('e_adress', response.data.data.adress);
-          if(this.identifier == "trabajador")
-          localStorage.setItem('e_cuenta', response.data.data.cuenta);
-          else{
-            localStorage.setItem('e_nro_piso', response.data.data.nro_piso);
-            localStorage.setItem('e_piso_dpto', response.data.data.piso_dpto);
-          }        
-          this.$toast.open({
-          message: "Bienvenido " + localStorage.getItem('e_name'),
-          type: "success",
-          duration: 8000,
-          dismissible: true,
-        });
-      } 
-      else {
-        //Datos de un usuario empresa
-        localStorage.setItem('e_id', response.data.data._id);
-        localStorage.setItem('e_username', response.data.data.username);
-        localStorage.setItem(
-          'e_name_enterprise',
-          response.data.data.name_enterprise
-        );
-        localStorage.setItem('e_RUC', response.data.data.RUC);
-        localStorage.setItem(
-          'e_file_enterprise',
-          response.data.data.file_enterprise
-        );
-        localStorage.setItem(
-          'e_cuenta_enterprise',
-          response.data.data.cuenta_enterprise
-        );
-        localStorage.setItem('e_file_admi', response.data.data.file_admi);
-        localStorage.setItem('e_name_admi', response.data.data.name_admi);
-        localStorage.setItem(
-          'e_lastnamep_admi',
-          response.data.data.lastnamep_admi
-        );
-        localStorage.setItem(
-          'e_lastnamem_admi',
-          response.data.data.lastnamem_admi
-        );
-        localStorage.setItem('e_DNI', response.data.data.DNI);
-        localStorage.setItem('e_email', response.data.data.email);
-          this.$toast.open({
-          message: "Bienvenido " + localStorage.getItem('e_name_enterprise'),
-          type: "success",
-          duration: 8000,
-          dismissible: true,
-        });
-      }
-        //Concedo nivel de acceso y enrutamiento dependiendo del usuario
-      if (this.identifier == "trabajador" || this.identifier == "empresa") {
-        //Sacamos nivel de acceso del usuario
-        if(this.identifier == "trabajador") localStorage.setItem('e_level', "employee");
-        if(this.identifier == "empresa") localStorage.setItem('e_level', "enterprise");
-        
-        //Observamos que si es la primera vez de ingreso - si es asi se requiere actualizar datos
-        if (
-          localStorage.getItem('e_DNI') === "" ||
-          localStorage.getItem('e_DNI') === null ||
-          localStorage.getItem('e_DNI') === ""
-        )
-          this.$router.push("/worker/profile/edit");
-        else this.$router.push("/supplier");
-      } 
-      else{
-        localStorage.setItem('e_level', "customer");
-        
-        if(localStorage.getItem('worforce')!=null) this.$router.push("/request/form/service");
-          else if(localStorage.getItem('e_response')!=null) 
-            this.$router.push("/customer/payment/response="+localStorage.getItem('e_response')+"/service="+localStorage.getItem('service_pay'));
-              else this.$router.push("/");
-      }*/
+      var _this2 = this;
 
-      return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                _this2.validateSubmit();
+
+                if (!_this2.hasError) {
+                  _context2.next = 3;
+                  break;
+                }
+
+                return _context2.abrupt("return");
+
+              case 3:
+                _this2.buttonLoading = true; //Conexión con la lógica de negocio
+                //Se pasa como parametros el loger (usario o correo)
+                //identity -> tipo de identificador para el usuario
+                //password -> contraseña
+
+                _context2.next = 6;
+                return _api__WEBPACK_IMPORTED_MODULE_3__["default"].post("/login", {
+                  identity: _this2.identifier,
+                  loger: _this2.loger,
+                  password: _this2.password
+                });
+
+              case 6:
+                response = _context2.sent;
+
+                if (response.ok) {
+                  _context2.next = 13;
+                  break;
+                }
+
+                _this2.buttonLoading = false;
+                er = response.error.errors;
+                mensaje = "Error desconocido";
+                if (er.hasOwnProperty("mail")) mensaje = er.mail[0];else if (er.hasOwnProperty("user")) mensaje = er.user[0];else mensaje = er.pass[0];
+                return _context2.abrupt("return", _this2.$toast.open({
+                  message: mensaje,
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 13:
+                //Si todo esta correcto: 
+                _this2.$toast.open({
+                  message: "Bienvenido usuario",
+                  type: "success",
+                  duration: 8000,
+                  dismissible: true
+                });
+
+              case 14:
               case "end":
                 return _context2.stop();
             }
@@ -3152,7 +3088,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -3361,7 +3297,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -3434,7 +3370,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.identifier == "trabajador") this.$router.push("/login/employee");
       else this.$router.push("/login/customer");*/
 
-      return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+      return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -3776,7 +3712,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -3804,7 +3740,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -3825,7 +3761,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -47747,7 +47683,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants.js */ "./resources/js/constants.js");
@@ -47762,7 +47698,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   get: function get(url) {
-    return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -47818,7 +47754,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
     }))();
   },
   post: function post(url, body) {
-    return Object(C_Users_User_Desktop_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+    return Object(C_Users_lenovo_Desktop_SirwiCuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
@@ -47830,17 +47766,18 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
             case 3:
               response = _context2.sent;
+              console.log(response);
               return _context2.abrupt("return", {
                 ok: true,
                 data: response
               });
 
-            case 7:
-              _context2.prev = 7;
+            case 8:
+              _context2.prev = 8;
               _context2.t0 = _context2["catch"](0);
 
               if (!_context2.t0.response) {
-                _context2.next = 15;
+                _context2.next = 16;
                 break;
               }
 
@@ -47851,25 +47788,25 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
                 error: _context2.t0.response.data
               });
 
-            case 15:
+            case 16:
               if (_context2.t0.request) {
                 console.log(_context2.t0.request);
               } else {
                 console.log('Error', _context2.t0.message);
               }
 
-            case 16:
+            case 17:
               return _context2.abrupt("return", {
                 ok: false,
                 error: 'Ocurrió un error, vuelva a intentarlo'
               });
 
-            case 17:
+            case 18:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2, null, [[0, 7]]);
+      }, _callee2, null, [[0, 8]]);
     }))();
   }
 });
@@ -49126,8 +49063,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\User\Desktop\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\User\Desktop\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\lenovo\Desktop\SirwiCuy\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\lenovo\Desktop\SirwiCuy\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
