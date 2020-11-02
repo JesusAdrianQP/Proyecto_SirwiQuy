@@ -139,7 +139,7 @@
             <div class="text-sm leading-5">
               <span
                 class="font-medium"
-              >Al registrarte, estas aceptando los términos y condiciones de uso del servicio SirwiyQuy</span>
+              >Al registrarte estás aceptando los términos y condiciones de uso del servicio SirwiyQu.</span>
             </div>
           </div>
 
