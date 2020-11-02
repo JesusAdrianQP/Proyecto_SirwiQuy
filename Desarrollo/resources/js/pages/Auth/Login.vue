@@ -141,7 +141,6 @@ export default {
   data: () => {
     return {
       hasError: false,
-      openModal: false,
       buttonLoading: false,
       isEnterprise: false, //Comprobacion si la ruta es de empresa -
       //esto debido a que la creacion de empresas es diferente
@@ -177,7 +176,7 @@ export default {
   },
   methods: {
     async submitLogin() {
-      /*this.validateSubmit();
+      this.validateSubmit();
       if (this.hasError) return;
       this.buttonLoading = true;
 
@@ -210,99 +209,13 @@ export default {
         });
       }
 
-      //Si todo esta correcto:
-      //Recupero datos del usuario para usarlo después
-      if (this.identifier == "trabajador" || this.identifier == "cliente") {
-        //Datos de un usuario customer o de un usuario employeer
-        localStorage.setItem('e_id', response.data.data._id);
-        localStorage.setItem('e_username', response.data.data.username);
-        localStorage.setItem('e_DNI', response.data.data.DNI);
-        localStorage.setItem('e_edad', response.data.data.edad);
-        localStorage.setItem('e_file', response.data.data.file);
-        localStorage.setItem('e_name', response.data.data.name);
-        localStorage.setItem('e_lastnamep', response.data.data.lastnamep);
-        localStorage.setItem('e_lastnamem', response.data.data.lastnamem);
-        localStorage.setItem('e_email', response.data.data.email);
-        localStorage.setItem('e_depa', response.data.data.departamento);
-        localStorage.setItem('e_prov', response.data.data.provincia);
-        localStorage.setItem('e_dist', response.data.data.distrito);
-        localStorage.setItem('e_adress', response.data.data.adress);
-
-        if(this.identifier == "trabajador")
-          localStorage.setItem('e_cuenta', response.data.data.cuenta);
-          else{
-            localStorage.setItem('e_nro_piso', response.data.data.nro_piso);
-            localStorage.setItem('e_piso_dpto', response.data.data.piso_dpto);
-          }        
-
-        this.$toast.open({
-          message: "Bienvenido " + localStorage.getItem('e_name'),
+      //Si todo esta correcto: 
+      this.$toast.open({
+          message: "Bienvenido usuario",
           type: "success",
           duration: 8000,
           dismissible: true,
         });
-      } 
-      else {
-        //Datos de un usuario empresa
-        localStorage.setItem('e_id', response.data.data._id);
-        localStorage.setItem('e_username', response.data.data.username);
-        localStorage.setItem(
-          'e_name_enterprise',
-          response.data.data.name_enterprise
-        );
-        localStorage.setItem('e_RUC', response.data.data.RUC);
-        localStorage.setItem(
-          'e_file_enterprise',
-          response.data.data.file_enterprise
-        );
-        localStorage.setItem(
-          'e_cuenta_enterprise',
-          response.data.data.cuenta_enterprise
-        );
-        localStorage.setItem('e_file_admi', response.data.data.file_admi);
-        localStorage.setItem('e_name_admi', response.data.data.name_admi);
-        localStorage.setItem(
-          'e_lastnamep_admi',
-          response.data.data.lastnamep_admi
-        );
-        localStorage.setItem(
-          'e_lastnamem_admi',
-          response.data.data.lastnamem_admi
-        );
-        localStorage.setItem('e_DNI', response.data.data.DNI);
-        localStorage.setItem('e_email', response.data.data.email);
-
-        this.$toast.open({
-          message: "Bienvenido " + localStorage.getItem('e_name_enterprise'),
-          type: "success",
-          duration: 8000,
-          dismissible: true,
-        });
-      }
-
-      //Concedo nivel de acceso y enrutamiento dependiendo del usuario
-      if (this.identifier == "trabajador" || this.identifier == "empresa") {
-        //Sacamos nivel de acceso del usuario
-        if(this.identifier == "trabajador") localStorage.setItem('e_level', "employee");
-        if(this.identifier == "empresa") localStorage.setItem('e_level', "enterprise");
-        
-        //Observamos que si es la primera vez de ingreso - si es asi se requiere actualizar datos
-        if (
-          localStorage.getItem('e_DNI') === "" ||
-          localStorage.getItem('e_DNI') === null ||
-          localStorage.getItem('e_DNI') === ""
-        )
-          this.$router.push("/worker/profile/edit");
-        else this.$router.push("/supplier");
-      } 
-      else{
-        localStorage.setItem('e_level', "customer");
-        
-        if(localStorage.getItem('worforce')!=null) this.$router.push("/request/form/service");
-          else if(localStorage.getItem('e_response')!=null) 
-            this.$router.push("/customer/payment/response="+localStorage.getItem('e_response')+"/service="+localStorage.getItem('service_pay'));
-              else this.$router.push("/");
-      }*/
     },
     
     validateSubmit() {
