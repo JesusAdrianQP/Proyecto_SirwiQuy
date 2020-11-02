@@ -24,7 +24,7 @@
       v-show="!loading && services.length == 0"
       class="h-104 mt-4 bg-gray-200 rounded-lg p-6 text-center items-center justify-center"
     >
-      <span class="text-xl text-gray-900 w-full">No se ha encontrado servicios disponibles!</span>
+      <span class="text-xl text-gray-900 w-full">¡No se ha encontrado servicios disponibles!</span>
       <div class="w-full mt-3 sm:px-10">
         <img class="h-56 sm:h-96 w-full object-contain" src="../../assets/empty_content.png">
       </div>
