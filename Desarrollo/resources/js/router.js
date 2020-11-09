@@ -10,6 +10,7 @@ import JoinUs from "./pages/JoinUs.vue";
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
 import Login from "./pages/Auth/Login.vue";
 import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
+import CreateService from "./pages/Supplier/CreateService.vue";
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
@@ -77,6 +78,11 @@ export default new VueRouter({
             path: "/signup/enterprise",
             component: SignUpEnterprise,
             beforeEnter: isGuest
+        },
+
+        {
+            path: "/supplier/service/create",
+            component: CreateService
         },
 
         //Ruta no registrada
