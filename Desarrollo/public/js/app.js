@@ -3840,7 +3840,6 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       hasError: false,
-      openModal: false,
       buttonLoading: false,
       isEnterprise: false,
       //Comprobacion si la ruta es de empresa -
@@ -3891,128 +3890,64 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitLogin: function submitLogin() {
-      /*this.validateSubmit();
-      if (this.hasError) return;
-      this.buttonLoading = true;
-        //Conexión con la lógica de negocio
-      //Se pasa como parametros el loger (usario o correo)
-      //identity -> tipo de identificador para el usuario
-      //password -> contraseña
-      let response = await api.post(`/login`, {
-        identity: this.identifier,
-        loger: this.loger,
-        password: this.password,
-      });
-        //Si hay errores se identifica que tipo
-      if (!response.ok) {
-        this.buttonLoading = false;
-          let er = response.error.errors;
-        let mensaje = "Error desconocido";
-          if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
-        else if (er.hasOwnProperty("user")) mensaje = er.user[0];
-        else mensaje = er.pass[0];
-          return this.$toast.open({
-          message: mensaje,
-          type: "error",
-          duration: 8000,
-          dismissible: true,
-        });
-      }
-        //Si todo esta correcto:
-      //Recupero datos del usuario para usarlo después
-      if (this.identifier == "trabajador" || this.identifier == "cliente") {
-        //Datos de un usuario customer o de un usuario employeer
-        localStorage.setItem('e_id', response.data.data._id);
-        localStorage.setItem('e_username', response.data.data.username);
-        localStorage.setItem('e_DNI', response.data.data.DNI);
-        localStorage.setItem('e_edad', response.data.data.edad);
-        localStorage.setItem('e_file', response.data.data.file);
-        localStorage.setItem('e_name', response.data.data.name);
-        localStorage.setItem('e_lastnamep', response.data.data.lastnamep);
-        localStorage.setItem('e_lastnamem', response.data.data.lastnamem);
-        localStorage.setItem('e_email', response.data.data.email);
-        localStorage.setItem('e_depa', response.data.data.departamento);
-        localStorage.setItem('e_prov', response.data.data.provincia);
-        localStorage.setItem('e_dist', response.data.data.distrito);
-        localStorage.setItem('e_adress', response.data.data.adress);
-          if(this.identifier == "trabajador")
-          localStorage.setItem('e_cuenta', response.data.data.cuenta);
-          else{
-            localStorage.setItem('e_nro_piso', response.data.data.nro_piso);
-            localStorage.setItem('e_piso_dpto', response.data.data.piso_dpto);
-          }        
-          this.$toast.open({
-          message: "Bienvenido " + localStorage.getItem('e_name'),
-          type: "success",
-          duration: 8000,
-          dismissible: true,
-        });
-      } 
-      else {
-        //Datos de un usuario empresa
-        localStorage.setItem('e_id', response.data.data._id);
-        localStorage.setItem('e_username', response.data.data.username);
-        localStorage.setItem(
-          'e_name_enterprise',
-          response.data.data.name_enterprise
-        );
-        localStorage.setItem('e_RUC', response.data.data.RUC);
-        localStorage.setItem(
-          'e_file_enterprise',
-          response.data.data.file_enterprise
-        );
-        localStorage.setItem(
-          'e_cuenta_enterprise',
-          response.data.data.cuenta_enterprise
-        );
-        localStorage.setItem('e_file_admi', response.data.data.file_admi);
-        localStorage.setItem('e_name_admi', response.data.data.name_admi);
-        localStorage.setItem(
-          'e_lastnamep_admi',
-          response.data.data.lastnamep_admi
-        );
-        localStorage.setItem(
-          'e_lastnamem_admi',
-          response.data.data.lastnamem_admi
-        );
-        localStorage.setItem('e_DNI', response.data.data.DNI);
-        localStorage.setItem('e_email', response.data.data.email);
-          this.$toast.open({
-          message: "Bienvenido " + localStorage.getItem('e_name_enterprise'),
-          type: "success",
-          duration: 8000,
-          dismissible: true,
-        });
-      }
-        //Concedo nivel de acceso y enrutamiento dependiendo del usuario
-      if (this.identifier == "trabajador" || this.identifier == "empresa") {
-        //Sacamos nivel de acceso del usuario
-        if(this.identifier == "trabajador") localStorage.setItem('e_level', "employee");
-        if(this.identifier == "empresa") localStorage.setItem('e_level', "enterprise");
-        
-        //Observamos que si es la primera vez de ingreso - si es asi se requiere actualizar datos
-        if (
-          localStorage.getItem('e_DNI') === "" ||
-          localStorage.getItem('e_DNI') === null ||
-          localStorage.getItem('e_DNI') === ""
-        )
-          this.$router.push("/worker/profile/edit");
-        else this.$router.push("/supplier");
-      } 
-      else{
-        localStorage.setItem('e_level', "customer");
-        
-        if(localStorage.getItem('worforce')!=null) this.$router.push("/request/form/service");
-          else if(localStorage.getItem('e_response')!=null) 
-            this.$router.push("/customer/payment/response="+localStorage.getItem('e_response')+"/service="+localStorage.getItem('service_pay'));
-              else this.$router.push("/");
-      }*/
+      var _this2 = this;
 
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_SirwiyQuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                _this2.validateSubmit();
+
+                if (!_this2.hasError) {
+                  _context2.next = 3;
+                  break;
+                }
+
+                return _context2.abrupt("return");
+
+              case 3:
+                _this2.buttonLoading = true; //Conexión con la lógica de negocio
+                //Se pasa como parametros el loger (usario o correo)
+                //identity -> tipo de identificador para el usuario
+                //password -> contraseña
+
+                _context2.next = 6;
+                return _api__WEBPACK_IMPORTED_MODULE_3__["default"].post("/login", {
+                  identity: _this2.identifier,
+                  loger: _this2.loger,
+                  password: _this2.password
+                });
+
+              case 6:
+                response = _context2.sent;
+
+                if (response.ok) {
+                  _context2.next = 13;
+                  break;
+                }
+
+                _this2.buttonLoading = false;
+                er = response.error.errors;
+                mensaje = "Error desconocido";
+                if (er.hasOwnProperty("mail")) mensaje = er.mail[0];else if (er.hasOwnProperty("user")) mensaje = er.user[0];else mensaje = er.pass[0];
+                return _context2.abrupt("return", _this2.$toast.open({
+                  message: mensaje,
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 13:
+                //Si todo esta correcto: 
+                _this2.$toast.open({
+                  message: "Bienvenido usuario",
+                  type: "success",
+                  duration: 8000,
+                  dismissible: true
+                });
+
+              case 14:
               case "end":
                 return _context2.stop();
             }
@@ -4040,6 +3975,966 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.vacio_pass = "";
       }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
+/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
+/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
+/* harmony import */ var _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/IconSvg.vue */ "./resources/js/components/IconSvg.vue");
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "SignUpEnterprise",
+  components: {
+    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__["default"],
+    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    IconSvg: _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+  },
+  data: function data() {
+    return {
+      hasError: false,
+      buttonLoading: false,
+      dni_valid: false,
+      ruc_valid: false,
+      isType: '',
+      identifier: "empresa",
+      step: 0,
+      //Datos comunes de registro
+      username: "",
+      email: "",
+      password: "",
+      repeat_password: "",
+      //Nombre de los campos de empresa
+      name_enterprise: "",
+      //Razon social de la empresa
+      ruc: "",
+      file_enterprise: "",
+      //Imagen de la empresa
+      cuenta_enterprise: "",
+      //Cuenta bancaria de la empresa
+      //Nombre de los campos del admi de la empresa
+      file_admi: "",
+      //Imagen del administrador de la sesion que registra a la empresa
+      name_admi: "",
+      lastnamep_admi: "",
+      lastnamem_admi: "",
+      dni: "",
+      error_username: "",
+      error_email: "",
+      error_password: "",
+      error_repeat_password: "",
+      error_dni: "",
+      error_ruc: "",
+      vacio_username: "",
+      vacio_email: "",
+      vacio_pass: "",
+      vacio_repeat_pass: "",
+      vacio_name_enterprise: "",
+      vacio_ruc: "",
+      vacio_cuenta_enterprise: "",
+      //Cuenta bancaria de la empresa
+      vacio_name_admi: "",
+      vacio_lastnamep_admi: "",
+      vacio_lastnamem_admi: "",
+      vacio_dni: ""
+    };
+  },
+  methods: {
+    //Validacion del DNI con la API
+    validateDNI: function validateDNI() {
+      var _this = this;
+
+      return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!(_this.dni.length >= 0 && _this.dni.length < 8 || _this.dni.length > 8)) {
+                  _context.next = 7;
+                  break;
+                }
+
+                _this.hasError = true;
+                _this.error_dni = "El DNI debe tener 8 dígitos";
+                _this.vacio_dni = "";
+                return _context.abrupt("return");
+
+              case 7:
+                _this.hasError = false;
+                _this.error_dni = "";
+                _this.vacio_dni = "";
+                _this.isType = 'DNI';
+
+              case 11:
+                _context.next = 13;
+                return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/validate/".concat(_this.isType, "/").concat(_this.dni));
+
+              case 13:
+                response = _context.sent;
+
+                if (response.ok) {
+                  _context.next = 20;
+                  break;
+                }
+
+                _this.dni_valid = false;
+                _this.name_admi = "";
+                _this.lastnamep_admi = "";
+                _this.lastnamem_admi = "";
+                return _context.abrupt("return", _this.$toast.open({
+                  message: "El sistema detectó que el DNI no es válido",
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 20:
+                //Si todo esta correcto obtengo datos del DNI, solo los más relevantes
+                _this.name_admi = response.data.data[0].nombres;
+                _this.lastnamep_admi = response.data.data[0].apellidoPaterno;
+                _this.lastnamem_admi = response.data.data[0].apellidoMaterno;
+                _this.dni_valid = true;
+
+                _this.$toast.open({
+                  message: response.data.data.success,
+                  type: "success",
+                  duration: 8000,
+                  dismissible: true
+                });
+
+              case 25:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    //Validacion del numero de RUC con la API
+    validateRUC: function validateRUC() {
+      var _this2 = this;
+
+      return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                if (!(_this2.ruc.length >= 0 && _this2.ruc.length < 11 || _this2.ruc.length > 11)) {
+                  _context2.next = 7;
+                  break;
+                }
+
+                _this2.hasError = true;
+                _this2.error_ruc = "El RUC debe tener 11 dígitos";
+                _this2.vacio_ruc = "";
+                return _context2.abrupt("return");
+
+              case 7:
+                _this2.hasError = false;
+                _this2.error_ruc = "";
+                _this2.vacio_ruc = "";
+                _this2.isType = 'RUC';
+
+              case 11:
+                _context2.next = 13;
+                return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/validate/".concat(_this2.isType, "/").concat(_this2.ruc));
+
+              case 13:
+                response = _context2.sent;
+
+                if (response.ok) {
+                  _context2.next = 18;
+                  break;
+                }
+
+                _this2.ruc_valid = false;
+                _this2.name_enterprise = "";
+                return _context2.abrupt("return", _this2.$toast.open({
+                  message: "El sistema detecto que el RUC no es válido",
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 18:
+                _this2.ruc_valid = true;
+                _this2.name_enterprise = response.data.data[0].razonSocial;
+
+                _this2.$toast.open({
+                  message: response.data.data.success,
+                  type: "success",
+                  duration: 8000,
+                  dismissible: true
+                });
+
+              case 21:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    },
+    //Funcion una vez llenado el formulario
+    submitSignup: function submitSignup() {
+      var _this3 = this;
+
+      return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _this3.validateSubmit();
+
+                if (!_this3.hasError) {
+                  _context3.next = 3;
+                  break;
+                }
+
+                return _context3.abrupt("return");
+
+              case 3:
+                _this3.buttonLoading = true; //Se condiciona la imagen de la empresa
+
+                if (!(_this3.file_enterprise === '' | _this3.file_enterprise === "" | _this3.file_enterprise === null)) {
+                  _context3.next = 7;
+                  break;
+                }
+
+                _this3.buttonLoading = false;
+                return _context3.abrupt("return", _this3.$toast.open({
+                  message: 'Imagen de la empresa requerida',
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 7:
+                if (!(_this3.file_admi === '' | _this3.file_admi === "" | _this3.file_admi === null)) {
+                  _context3.next = 10;
+                  break;
+                }
+
+                _this3.buttonLoading = false;
+                return _context3.abrupt("return", _this3.$toast.open({
+                  message: '¡La imagen es esencial según nuestras politicas! Por favor, ingrese una ...',
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 10:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }))();
+    },
+    validateSubmit: function validateSubmit() {
+      if (this.hasError == true) this.hasError = true;else this.hasError = false; //Validaciones del campo usuario
+
+      if (this.username == "") {
+        this.hasError = true;
+        this.vacio_username = "Campo necesario";
+        this.error_username = "";
+      } else if (this.username.includes("@") || this.username.includes(".")) {
+        this.hasError = true;
+        this.vacio_username = "";
+        this.error_username = "Usuario no válido, el usuario no debe de incluir @ o .";
+      } else {
+        this.error_username = "";
+        this.vacio_username = "";
+      } //Validaciones del campo Email
+
+
+      if (this.email == "") {
+        this.hasError = true;
+        this.vacio_email = "Campo necesario";
+        this.error_email = "";
+      } else if (!this.email.includes("@") || !this.email.includes(".") || this.email.length < 5) {
+        this.hasError = true;
+        this.vacio_email = "";
+        this.error_email = "Correo no válido";
+      } else {
+        this.error_email = "";
+        this.vacio_email = "";
+      } //Validaciones del campo password
+
+
+      if (this.password == "") {
+        this.hasError = true;
+        this.vacio_pass = "Campo necesario";
+        this.error_password = "";
+      } else if (this.password.length <= 5) {
+        this.hasError = true;
+        this.vacio_pass = "";
+        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
+      } else {
+        this.error_password = "";
+        this.vacio_pass = "";
+      } //Validaciones del campo repeat password
+
+
+      if (this.repeat_password == "") {
+        this.hasError = true;
+        this.vacio_repeat_pass = "Campo necesario";
+        this.error_repeat_password = "";
+      } else if (this.repeat_password != this.password) {
+        this.hasError = true;
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      } else {
+        this.error_repeat_password = "";
+        this.vacio_repeat_pass = "";
+      } //Validacion del DNI
+
+
+      if (this.dni.length == 0) {
+        this.hasError = true;
+        this.error_dni = "";
+        this.vacio_dni = "Campo necesario";
+      } else {
+        this.error_dni = "";
+        this.vacio_dni = "";
+      } //Comprobacion de nombres
+
+
+      if (this.name_admi == "") {
+        this.hasError = true;
+        this.vacio_name_admi = "Campo necesario";
+      } else this.vacio_name_admi = ""; //Comprobacion de apellido paterno
+
+
+      if (this.lastnamep_admi == "") {
+        this.hasError = true;
+        this.vacio_lastnamep_admi = "Campo necesario";
+      } else this.vacio_lastnamep_admi = ""; //Comprobacion de apellido materno
+
+
+      if (this.lastnamem_admi == "") {
+        this.hasError = true;
+        this.vacio_lastnamem_admi = "Campo necesario";
+      } else this.vacio_lastnamem_admi = ""; //Comprobacion de razon social
+
+
+      if (this.name_enterprise == "") {
+        this.hasError = true;
+        this.vacio_name_enterprise = "Campo necesario";
+      } else this.vacio_name_enterprise = ""; //Comprobacion de cuenta de empresa
+
+
+      if (this.cuenta_enterprise == "") {
+        this.hasError = true;
+        this.vacio_cuenta_enterprise = "Campo necesario";
+      } else this.vacio_cuenta_enterprise = ""; //Comprobacion de RUC
+
+
+      if (this.ruc.length == 0) {
+        this.hasError = true;
+        this.error_ruc = "";
+        this.vacio_ruc = "Campo necesario";
+      } else {
+        this.error_ruc = "";
+        this.vacio_ruc = "";
+      }
+    },
+    onFileChange: function onFileChange(e, name) {
+      var files = e.target.files || e.dataTransfer.files;
+      this[name] = files;
+      if (!files.length) return;
+      this.createImage(files[0], name);
+    },
+    createImage: function createImage(file, name) {
+      var image = new Image();
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = function (e) {
+        vm[name] = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    },
+    removeImage: function removeImage(e, name) {
+      this[name] = "";
     }
   }
 });
@@ -33186,7 +34081,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-lg mt-6" }, [
-        _vm._v("© Copyright 2020, Kusawasi. Todos los derechos reservados.")
+        _vm._v("© Copyright 2020, SirwiyQuy. Todos los derechos reservados.")
       ])
     ]
   )
@@ -33304,7 +34199,7 @@ var render = function() {
       },
       [
         _c("span", { staticClass: "text-xl text-gray-900 w-full" }, [
-          _vm._v("No se ha encontrado servicios disponibles!")
+          _vm._v("¡No se ha encontrado servicios disponibles!")
         ]),
         _vm._v(" "),
         _vm._m(0)
@@ -33695,6 +34590,1429 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=template&id=47b1dea7&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=template&id=47b1dea7& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("Visitor", [
+    _c(
+      "main",
+      { staticClass: "flex flex-col justify-center py-8 sm:px-6 lg:px-8" },
+      [
+        _c("div", { staticClass: "sm:mx-auto" }, [
+          _c(
+            "h2",
+            {
+              staticClass:
+                "mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900"
+            },
+            [_vm._v("Crear cuenta como Empresa")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mt-6 sm:mx-auto sm:w-full sm:max-w-2xl" }, [
+          _c("nav", [
+            _c(
+              "ul",
+              {
+                staticClass:
+                  "bg-white shadow rounded-md divide-y divide-gray-300 md:flex md:divide-y-0"
+              },
+              [
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "group cursor-pointer relative md:flex-1 md:flex",
+                    on: {
+                      click: function($event) {
+                        _vm.step = 0
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "px-6 py-4 flex items-center text-sm leading-5 font-medium space-x-4"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex-shrink-0 w-10 h-10 flex items-center justify-center border-2 rounded-full",
+                            class:
+                              _vm.step == 0
+                                ? "border-primary-600"
+                                : "border-gray-300  group-hover:border-gray-400"
+                          },
+                          [
+                            _c(
+                              "p",
+                              {
+                                class:
+                                  _vm.step == 0
+                                    ? "text-primary-600"
+                                    : "text-gray-500  group-hover:text-gray-900"
+                              },
+                              [_vm._v("01")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            staticClass: "text-sm leading-5 font-medium",
+                            class:
+                              _vm.step == 0
+                                ? "text-primary-600"
+                                : "text-gray-500  group-hover:text-gray-900"
+                          },
+                          [_vm._v("Datos de la empresa")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "hidden md:block absolute top-0 right-0 h-full w-5"
+                      },
+                      [
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "h-full w-full text-gray-300",
+                            attrs: {
+                              viewBox: "0 0 22 80",
+                              fill: "none",
+                              preserveAspectRatio: "none"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                d: "M0 -2L20 40L0 82",
+                                "vector-effect": "non-scaling-stroke",
+                                stroke: "currentcolor",
+                                "stroke-linejoin": "round"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "group cursor-pointer relative md:flex-1 md:flex",
+                    on: {
+                      click: function($event) {
+                        _vm.step = 1
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "px-6 py-4 flex items-center text-sm leading-5 font-medium space-x-4"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex-shrink-0 w-10 h-10 flex items-center justify-center border-2 rounded-full",
+                            class:
+                              _vm.step == 1
+                                ? "border-primary-600"
+                                : "border-gray-300  group-hover:border-gray-400"
+                          },
+                          [
+                            _c(
+                              "p",
+                              {
+                                class:
+                                  _vm.step == 1
+                                    ? "text-primary-600"
+                                    : "text-gray-500  group-hover:text-gray-900"
+                              },
+                              [_vm._v("02")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            staticClass: "text-sm leading-5 font-medium",
+                            class:
+                              _vm.step == 1
+                                ? "text-primary-600"
+                                : "text-gray-500  group-hover:text-gray-900"
+                          },
+                          [_vm._v("Datos del administrador")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "hidden md:block absolute top-0 right-0 h-full w-5"
+                      },
+                      [
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "h-full w-full text-gray-300",
+                            attrs: {
+                              viewBox: "0 0 22 80",
+                              fill: "none",
+                              preserveAspectRatio: "none"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                d: "M0 -2L20 40L0 82",
+                                "vector-effect": "non-scaling-stroke",
+                                stroke: "currentcolor",
+                                "stroke-linejoin": "round"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "group cursor-pointer relative md:flex-1 md:flex",
+                    on: {
+                      click: function($event) {
+                        _vm.step = 2
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "px-6 py-4 flex items-center text-sm leading-5 font-medium space-x-4"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex-shrink-0 w-10 h-10 flex items-center justify-center border-2 rounded-full",
+                            class:
+                              _vm.step == 2
+                                ? "border-primary-600"
+                                : "border-gray-300  group-hover:border-gray-400"
+                          },
+                          [
+                            _c(
+                              "p",
+                              {
+                                class:
+                                  _vm.step == 2
+                                    ? "text-primary-600"
+                                    : "text-gray-500  group-hover:text-gray-900"
+                              },
+                              [_vm._v("03")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            staticClass: "text-sm leading-5 font-medium",
+                            class:
+                              _vm.step == 2
+                                ? "text-primary-600"
+                                : "text-gray-500  group-hover:text-gray-900"
+                          },
+                          [_vm._v("Datos de la cuenta")]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "mt-4 bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10"
+            },
+            [
+              _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.step == 0,
+                      expression: "step==0"
+                    }
+                  ]
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-4"
+                    },
+                    [
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "input_ruc" }
+                          },
+                          [_vm._v("RUC")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 relative rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.ruc,
+                                  expression: "ruc"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                placeholder: "Ingrese su RUC",
+                                id: "input_ruc"
+                              },
+                              domProps: { value: _vm.ruc },
+                              on: {
+                                change: _vm.validateRUC,
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.ruc = $event.target.value
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                              },
+                              [
+                                _c("IconSvg", {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: !_vm.ruc_valid,
+                                      expression: "!ruc_valid"
+                                    }
+                                  ],
+                                  attrs: {
+                                    solid: "solid",
+                                    icon: "exclamation-circle",
+                                    myClass: "h-5 w-5 text-red-500"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("IconSvg", {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: _vm.ruc_valid,
+                                      expression: "ruc_valid"
+                                    }
+                                  ],
+                                  attrs: {
+                                    solid: "solid",
+                                    icon: "check-circle",
+                                    myClass: "h-5 w-5 text-green-500"
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_ruc
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_ruc) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_ruc
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_ruc) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "input_name_enterprise" }
+                          },
+                          [_vm._v("Razón social")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.name_enterprise,
+                                  expression: "name_enterprise"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                placeholder: "Digite su razón social",
+                                disabled: "disabled",
+                                id: "input_name_enterprise",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.name_enterprise },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.name_enterprise = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.vacio_name_enterprise
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_name_enterprise) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "input_cuenta_enterprise" }
+                          },
+                          [_vm._v("Cuenta bancaria")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.cuenta_enterprise,
+                                  expression: "cuenta_enterprise"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                placeholder: "Digite su Cuenta bancaria",
+                                id: "input_cuenta_enterprise",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.cuenta_enterprise },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.cuenta_enterprise = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.vacio_cuenta_enterprise
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_cuenta_enterprise) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm leading-5 font-medium text-gray-700",
+                            attrs: { for: "file_enterprise" }
+                          },
+                          [_vm._v("Imagen de la empresa")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "mt-2 flex items-center" }, [
+                          !_vm.file_enterprise
+                            ? _c("div", [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                                    staticStyle: { cursor: "pointer" },
+                                    attrs: { for: "file_enterprise" }
+                                  },
+                                  [_vm._v("Seleccionar imagen")]
+                                ),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "file_enterprise" }, [
+                                  _c("input", {
+                                    staticStyle: { display: "none" },
+                                    attrs: {
+                                      id: "file_enterprise",
+                                      type: "file",
+                                      accept: "image/png, .jpeg, .jpg"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.onFileChange(
+                                          $event,
+                                          "file_enterprise"
+                                        )
+                                      }
+                                    }
+                                  })
+                                ])
+                              ])
+                            : _c(
+                                "div",
+                                {
+                                  staticClass: "flex items-center",
+                                  staticStyle: { width: "100%" }
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                                      staticStyle: { width: "100%" },
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.removeImage(
+                                            $event,
+                                            "file_enterprise"
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("Eliminar imagen")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "text-center",
+                                      staticStyle: { width: "100%" }
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass:
+                                          "inline-block h-20 w-20 sm:h-32 sm:w-32 rounded-full",
+                                        attrs: { src: _vm.file_enterprise }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.step == 1,
+                      expression: "step==1"
+                    }
+                  ]
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6"
+                    },
+                    [
+                      _c("div", { staticClass: "sm:col-span-3" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "input_dni" }
+                          },
+                          [_vm._v("DNI")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 relative rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.dni,
+                                  expression: "dni"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                placeholder: "Ingrese su DNI",
+                                id: "input_dni"
+                              },
+                              domProps: { value: _vm.dni },
+                              on: {
+                                change: _vm.validateDNI,
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.dni = $event.target.value
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                              },
+                              [
+                                _c("IconSvg", {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: !_vm.dni_valid,
+                                      expression: "!dni_valid"
+                                    }
+                                  ],
+                                  attrs: {
+                                    solid: "solid",
+                                    icon: "exclamation-circle",
+                                    myClass: "h-5 w-5 text-red-500"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("IconSvg", {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: _vm.dni_valid,
+                                      expression: "dni_valid"
+                                    }
+                                  ],
+                                  attrs: {
+                                    solid: "solid",
+                                    icon: "check-circle",
+                                    myClass: "h-5 w-5 text-green-500"
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_dni
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_dni) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_dni
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_dni) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-3" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm leading-5 font-medium text-gray-700",
+                            attrs: { for: "photo" }
+                          },
+                          [_vm._v("Foto de Perfil")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "mt-2 flex items-center" }, [
+                          !_vm.file_admi
+                            ? _c("div", [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                                    staticStyle: { cursor: "pointer" },
+                                    attrs: { for: "file_admi" }
+                                  },
+                                  [_vm._v("Seleccionar imagen")]
+                                ),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "file_admi" }, [
+                                  _c("input", {
+                                    staticStyle: { display: "none" },
+                                    attrs: {
+                                      id: "file_admi",
+                                      type: "file",
+                                      accept: "image/png, .jpeg, .jpg"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.onFileChange(
+                                          $event,
+                                          "file_admi"
+                                        )
+                                      }
+                                    }
+                                  })
+                                ])
+                              ])
+                            : _c(
+                                "div",
+                                {
+                                  staticClass: "flex items-center",
+                                  staticStyle: { width: "100%" }
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                                      staticStyle: { width: "100%" },
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.removeImage(
+                                            $event,
+                                            "file_admi"
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("Eliminar imagen")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "text-center",
+                                      staticStyle: { width: "100%" }
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass:
+                                          "inline-block h-20 w-20 sm:h-32 sm:w-32 rounded-full",
+                                        attrs: { src: _vm.file_admi }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-6" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "input_name_admi" }
+                          },
+                          [_vm._v("Nombre(s)")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.name_admi,
+                                  expression: "name_admi"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                placeholder: "Ingrese sus nombres completos",
+                                disabled: "disabled",
+                                id: "input_name_admi",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.name_admi },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.name_admi = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.vacio_name_admi
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_name_admi) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-3" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "input_lastnamep_admi" }
+                          },
+                          [_vm._v("Apellido Paterno")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.lastnamep_admi,
+                                  expression: "lastnamep_admi"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                placeholder: "Ingrese su apellido paterno",
+                                disabled: "disabled",
+                                id: "input_lastnamep_admi"
+                              },
+                              domProps: { value: _vm.lastnamep_admi },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.lastnamep_admi = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.vacio_lastnamep_admi
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_lastnamep_admi) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-3" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "input_lastnamem_admi" }
+                          },
+                          [_vm._v("Apellido Materno")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.lastnamem_admi,
+                                  expression: "lastnamem_admi"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                placeholder: "Ingrese su apellido materno",
+                                disabled: "disabled",
+                                id: "input_lastnamem_admi"
+                              },
+                              domProps: { value: _vm.lastnamem_admi },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.lastnamem_admi = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.vacio_lastnamem_admi
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_lastnamem_admi) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.step == 2,
+                      expression: "step==2"
+                    }
+                  ]
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-4"
+                    },
+                    [
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "username" }
+                          },
+                          [_vm._v("Usuario")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.username,
+                                  expression: "username"
+                                }
+                              ],
+                              staticClass:
+                                "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                id: "username",
+                                placeholder: "Ingrese un nombre de usuario",
+                                type: "text",
+                                required: ""
+                              },
+                              domProps: { value: _vm.username },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.username = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_username
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_username) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_username
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_username) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "email" }
+                          },
+                          [_vm._v("Correo")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.email,
+                                  expression: "email"
+                                }
+                              ],
+                              staticClass:
+                                "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                id: "email",
+                                placeholder: "Ingrese un correo electronico",
+                                type: "email",
+                                required: ""
+                              },
+                              domProps: { value: _vm.email },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.email = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_email
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_email) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_email
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_email) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "password" }
+                          },
+                          [_vm._v("Contraseña")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.password,
+                                  expression: "password"
+                                }
+                              ],
+                              staticClass:
+                                "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                id: "password",
+                                placeholder: "Ingrese una contraseña",
+                                type: "password",
+                                required: ""
+                              },
+                              domProps: { value: _vm.password },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.password = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_password
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_password) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_pass
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_pass) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "repeat_password" }
+                          },
+                          [_vm._v("Repetir Contraseña")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.repeat_password,
+                                  expression: "repeat_password"
+                                }
+                              ],
+                              staticClass:
+                                "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                id: "repeat_password",
+                                placeholder: "Verifique su contraseña",
+                                type: "password",
+                                required: ""
+                              },
+                              domProps: { value: _vm.repeat_password },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.repeat_password = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_repeat_password
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_repeat_password) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_repeat_pass
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_repeat_pass) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "mt-4 flex text-center justify-between" },
+                    [
+                      _c("div", { staticClass: "text-sm leading-5" }, [
+                        _c("span", { staticClass: "font-medium" }, [
+                          _vm._v(
+                            "Al registrarte estás aceptando los términos y condiciones de uso del servicio SirwiyQuy."
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex flex-row-reverse mt-6" }, [
+                _c(
+                  "span",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.step == 2,
+                        expression: "step==2"
+                      }
+                    ],
+                    staticClass: "ml-3 inline-flex rounded-md shadow-sm"
+                  },
+                  [
+                    _c("AnimatedButton", {
+                      attrs: {
+                        content: "Completar registro",
+                        color: "primary",
+                        isLoading: _vm.buttonLoading
+                      },
+                      on: {
+                        onClick: function($event) {
+                          return _vm.submitSignup()
+                        }
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.step < 2,
+                        expression: "step<2"
+                      }
+                    ],
+                    staticClass:
+                      "ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
+                    on: {
+                      click: function($event) {
+                        _vm.step = _vm.step + 1
+                      }
+                    }
+                  },
+                  [_vm._v("Siguiente")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.step > 0,
+                        expression: "step>0"
+                      }
+                    ],
+                    staticClass:
+                      "py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        _vm.step = _vm.step - 1
+                      }
+                    }
+                  },
+                  [_vm._v("Anterior")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "mt-4 flex text-right justify-between" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "text-base leading-5" },
+                    [
+                      _c("span", { staticClass: "font-medium" }, [
+                        _vm._v("¿Ya tienes cuenta?")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass:
+                            "font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150",
+                          attrs: { to: "/login/enterprise" }
+                        },
+                        [_vm._v("¡Inicia sesión!")]
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Auth/SignUpIndie.vue?vue&type=template&id=299fb065&":
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Auth/SignUpIndie.vue?vue&type=template&id=299fb065& ***!
@@ -34020,7 +36338,7 @@ var render = function() {
                   _c("div", { staticClass: "text-sm leading-5" }, [
                     _c("span", { staticClass: "font-medium" }, [
                       _vm._v(
-                        "Al registrarte, estas aceptando los términos y condiciones de uso del servicio SirwiyQuy"
+                        "Al registrarte estás aceptando los términos y condiciones de uso del servicio SirwiyQu."
                       )
                     ])
                   ])
@@ -34309,7 +36627,7 @@ var render = function() {
                           [
                             _c(
                               "router-link",
-                              { attrs: { to: "/customer/blank" } },
+                              { attrs: { to: "/signup/enterprise" } },
                               [
                                 _c(
                                   "div",
@@ -50496,17 +52814,18 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
             case 3:
               response = _context2.sent;
+              console.log(response);
               return _context2.abrupt("return", {
                 ok: true,
                 data: response
               });
 
-            case 7:
-              _context2.prev = 7;
+            case 8:
+              _context2.prev = 8;
               _context2.t0 = _context2["catch"](0);
 
               if (!_context2.t0.response) {
-                _context2.next = 15;
+                _context2.next = 16;
                 break;
               }
 
@@ -50517,25 +52836,25 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
                 error: _context2.t0.response.data
               });
 
-            case 15:
+            case 16:
               if (_context2.t0.request) {
                 console.log(_context2.t0.request);
               } else {
                 console.log('Error', _context2.t0.message);
               }
 
-            case 16:
+            case 17:
               return _context2.abrupt("return", {
                 ok: false,
                 error: 'Ocurrió un error, vuelva a intentarlo'
               });
 
-            case 17:
+            case 18:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2, null, [[0, 7]]);
+      }, _callee2, null, [[0, 8]]);
     }))();
   }
 });
@@ -51721,6 +54040,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/Auth/SignUpEnterprise.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/pages/Auth/SignUpEnterprise.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SignUpEnterprise_vue_vue_type_template_id_47b1dea7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SignUpEnterprise.vue?vue&type=template&id=47b1dea7& */ "./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=template&id=47b1dea7&");
+/* harmony import */ var _SignUpEnterprise_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SignUpEnterprise.vue?vue&type=script&lang=js& */ "./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SignUpEnterprise_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SignUpEnterprise_vue_vue_type_template_id_47b1dea7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SignUpEnterprise_vue_vue_type_template_id_47b1dea7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/Auth/SignUpEnterprise.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SignUpEnterprise_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./SignUpEnterprise.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SignUpEnterprise_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=template&id=47b1dea7&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=template&id=47b1dea7& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SignUpEnterprise_vue_vue_type_template_id_47b1dea7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./SignUpEnterprise.vue?vue&type=template&id=47b1dea7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Auth/SignUpEnterprise.vue?vue&type=template&id=47b1dea7&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SignUpEnterprise_vue_vue_type_template_id_47b1dea7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SignUpEnterprise_vue_vue_type_template_id_47b1dea7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/Auth/SignUpIndie.vue":
 /*!*************************************************!*\
   !*** ./resources/js/pages/Auth/SignUpIndie.vue ***!
@@ -52251,6 +54639,7 @@ __webpack_require__.r(__webpack_exports__);
  //Importaciones de la carpeta Auth
 
 
+
  //Importaciones de la carpeta cliente
 
 
@@ -52286,7 +54675,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: "/customer/blank",
     //Ruta en construcción
-    component: _pages_Customer_Blank_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    component: _pages_Customer_Blank_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
     beforeEnter: isUnique
   }, //Ruta para clientes y trabajador no logueados
   {

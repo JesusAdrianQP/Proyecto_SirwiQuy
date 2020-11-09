@@ -9,6 +9,7 @@ import JoinUs from "./pages/JoinUs.vue";
 //Importaciones de la carpeta Auth
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
 import Login from "./pages/Auth/Login.vue";
+import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
@@ -74,6 +75,12 @@ export default new VueRouter({
         {
             path: "/supplier/create/price",
             component: CreatePrice,
+        },
+
+        {
+            path: "/signup/enterprise",
+            component: SignUpEnterprise,
+            beforeEnter: isGuest
         },
 
         //Ruta no registrada

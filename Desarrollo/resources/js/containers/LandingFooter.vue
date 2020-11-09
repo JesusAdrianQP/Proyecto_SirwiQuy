@@ -28,7 +28,7 @@
         <p class="text-sm mt-2">Protección y cuidado al hogar</p>
       </div>
     </div>
-    <p class="text-lg mt-6">&copy; Copyright 2020, Kusawasi. Todos los derechos reservados.</p>
+    <p class="text-lg mt-6">&copy; Copyright 2020, SirwiyQuy. Todos los derechos reservados.</p>
   </div>
 </template>
 

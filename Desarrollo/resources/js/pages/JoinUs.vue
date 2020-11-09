@@ -65,7 +65,7 @@
 
                   <!-- Sección de empresa. -->
                   <div>
-                    <router-link to="/customer/blank">
+                    <router-link to="/signup/enterprise">
                       <div
                         class="transition ease-in-out duration-150 border-gray-300 border-dashed border-4 hover:border-solid hover:border-primary-400 hover:bg-gray-100 cursor-pointer overflow-hidden rounded-lg sm:ml-8 mt-4 sm:mt-0"
                       >
