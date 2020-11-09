@@ -12,7 +12,7 @@ import Login from "./pages/Auth/Login.vue";
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
-
+import CreatePrice from "./pages/Supplier/CreatePrice.vue";
 import { isElement } from "lodash";
 
 
@@ -70,6 +70,10 @@ export default new VueRouter({
             component: SignUpIndie,
             beforeEnter: isGuest,
             props: true
+        },
+        {
+            path: "/supplier/create/price",
+            component: CreatePrice,
         },
 
         //Ruta no registrada
