@@ -14,8 +14,13 @@ import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
 
-import { isElement } from "lodash";
+//import { isElement } from "lodash";
 
+//Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
+import EditProfile from "./pages/Worker/EditProfile.vue"; //Actualizar perfil solo es de trabajador
+
+//Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
+import Home from "./pages/Supplier/Home.vue";
 
 //Verifica si el visitante no posee id o es un cliente logeado
 const isUnique = (to, from, next) => {
@@ -37,6 +42,37 @@ const isGuest = (to, from, next) => {
     }
     next("/");
 };
+
+//Verifica si son proveedores son los usuarios entrantes
+const isSupplier = (to, from, next) => {
+    if (
+        localStorage.getItem("e_level") == "employee" || 
+        localStorage.getItem("e_level") == "enterprise"
+    ) {
+        if (
+            (localStorage.getItem("e_DNI") == undefined ||
+                localStorage.getItem("e_DNI") == "") &&
+            to.path != "/worker/profile/edit"
+        ) {
+            next("/worker/profile/edit");
+            return;
+            }
+        next();
+        return;
+    }
+    next("/login/employee");
+};
+
+//Verificador de usuario trabajador
+const isWorker = (to, from, next) => {
+    if (localStorage.getItem("e_level") == "employee") {
+        next();
+        return;
+    }
+    next("/login/employee");
+};
+
+
 
 Vue.use(VueRouter);
 
@@ -79,6 +115,20 @@ export default new VueRouter({
             beforeEnter: isGuest
         },
 
+        //Ruta solo para trabajador
+        {
+            path: "/worker/profile/edit",
+            component: EditProfile,
+            beforeEnter: isWorker
+        },
+
+        //Rutas de los proveedores
+        {
+            path: "/supplier",
+            component: Home,
+            beforeEnter: isSupplier
+        },
+        
         //Ruta no registrada
         {
             path: "*",
