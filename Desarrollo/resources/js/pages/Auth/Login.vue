@@ -70,7 +70,7 @@
                     id="password"
                     type="password"
                     required
-                    placeholder="Ingrese su contraseña"
+                    placeholder="Ingrese su contraseña."
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
@@ -195,7 +195,7 @@ export default {
         this.buttonLoading = false;
 
         let er = response.error.errors;
-        let mensaje = "Error desconocido";
+        let mensaje = "Error desconocido.";
 
         if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
         else if (er.hasOwnProperty("user")) mensaje = er.user[0];
@@ -211,12 +211,34 @@ export default {
 
       //Si todo esta correcto: 
       this.$toast.open({
-          message: "Bienvenido usuario",
+          message: "Bienvenido, usuario.",
           type: "success",
           duration: 8000,
           dismissible: true,
         });
-    },
+      
+
+      //Concedo nivel de acceso y enrutamiento dependiendo del usuario
+      if (this.identifier == "trabajador" || this.identifier == "empresa") {
+            //Sacamos nivel de acceso del usuario
+            if(this.identifier == "trabajador") localStorage.setItem('e_level', "employee");
+            if(this.identifier == "empresa") localStorage.setItem('e_level', "enterprise");
+
+            //Observamos que si es la primera vez de ingreso - si es asi se requiere actualizar datos
+            if (
+                localStorage.getItem('e_DNI') === "" ||
+                localStorage.getItem('e_DNI') === null ||
+                localStorage.getItem('e_DNI') === ""
+              )
+                this.$router.push("/worker/profile/edit");
+              else this.$router.push("/supplier");
+      } 
+      else{
+        localStorage.setItem('e_level', "customer");
+      }
+      },
+      
+    
     
     validateSubmit() {
       if(this.hasError == true) this.hasError = true;
@@ -235,7 +257,7 @@ export default {
         this.vacio_pass = "Campo obligatorio";
       } else if (this.password.length < 5) {
         this.hasError = true;
-        this.vacio_pass = "Su contraseña no cumple los parámetros";
+        this.vacio_pass = "Su contraseña no cumple los parámetros.";
       } else {
         this.vacio_pass = "";
       }
