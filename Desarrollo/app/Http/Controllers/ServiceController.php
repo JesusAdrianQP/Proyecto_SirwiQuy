@@ -13,4 +13,16 @@ class ServiceController extends Controller
     {
         return ServiceData::service_list($request);
     }
+    
+    //Funcion que actualiza los datos de cotizacion de un servicio
+    public function updateservice(Request $request)
+    {   
+        return ServiceData::update_service($request);
+    }
+
+    //Funcion que actualiza los datos de cotizacion de un servicio
+    public function updateprice(Request $request)
+    {   
+        return ServiceData::update_price($request);
+    }
 }
