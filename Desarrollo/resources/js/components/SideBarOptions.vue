@@ -51,24 +51,5 @@ export default {
     SideBarOption,
     IconSvg
   },
-  methods: {
-    async logout() {
-        this.remove();
-    },
-
-    async remove(){
-      //Condiciona que cuando salga, entre al login de trabajador o empresa
-      if(localStorage.getItem('e_level') == "employee")
-      {
-        localStorage.removeItem('e_level');
-        this.$router.push("/login/employee")
-      }
-      else
-      {
-        localStorage.removeItem('e_level');
-        this.$router.push("/login/enterprise");
-      }
-    }
-  }
 }
 </script>
