@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-
+import ServiceList from "./pages/Supplier/ServiceList.vue";
+import UpdateService from "./pages/Supplier/UpdateService.vue";
+import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
 //Importaciones generales
 import Index from "./pages/Index.vue";
 import NotFound from "./pages/NotFound.vue";
@@ -137,6 +139,20 @@ export default new VueRouter({
         {
             path: "*",
             component: NotFound
-        }
+        },
+        {
+            path: "/supplier/services",
+            component: ServiceList,            
+        },
+        {
+            path: "/supplier/:id/service/update",
+            component: UpdateService,
+            props: true
+        },
+        {
+            path: "/supplier/:id/price/update",
+            component: UpdatePrice,
+            props: true
+        },
     ]
 });
