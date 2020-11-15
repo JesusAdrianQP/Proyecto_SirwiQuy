@@ -10,16 +10,9 @@
           <div class="flex-shrink-0 flex items-center">
             <router-link to="/">
               <img
-                class="hidden lg:block h-10 w-auto"
-                src="../../assets/Sirwiyquy_b.png"
-                alt="Workflow logo"
-              />
-            </router-link>
-            <router-link to="/">
-              <img
-                class="block lg:hidden h-8 w-auto"
-                src="../../assets/Sirwiyquy_b.png"
-                alt="Workflow logo"
+                class="hidden lg:block h-16 w-auto"
+                src="../../assets/Logo_Sirwi_b.png"
+                alt="logo"
               />
             </router-link>
           </div>
