@@ -13,4 +13,10 @@ class ServiceController extends Controller
     {
         return ServiceData::service_list($request);
     }
+
+    //Funcion que crea la cotización perteneciente a un servicio
+    public function createprice(Request $request)
+    {
+        return ServiceData::register_price($request);
+    }
 }
