@@ -48,7 +48,7 @@
     </div>
 
     <!--Lógica de la paginación y de los filtros-->
-    <div class="w-full text-center mt-2">
+    <div class="hidden w-full text-center mt-2">
       <Pagination
         :type_pag="type_pagination"
         :title="title"
