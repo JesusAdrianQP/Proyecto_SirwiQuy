@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     setServices(services) {
-      this.services = services.services_paginate;
+      //this.services = services.services_paginate;
       this.loading = false;
     },
   },
