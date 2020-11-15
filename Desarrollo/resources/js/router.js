@@ -10,6 +10,7 @@ import JoinUs from "./pages/JoinUs.vue";
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
 import Login from "./pages/Auth/Login.vue";
 import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
+import CreateService from "./pages/Supplier/CreateService.vue";
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
@@ -126,6 +127,12 @@ export default new VueRouter({
             component: Home,
             beforeEnter: isSupplier
         },
+
+        {
+            path: "/supplier/service/create",
+            component: CreateService
+        },
+
         //Ruta no registrada
         {
             path: "*",
