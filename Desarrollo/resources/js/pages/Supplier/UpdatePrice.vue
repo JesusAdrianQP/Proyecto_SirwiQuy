@@ -8,30 +8,18 @@
           class="mt-1 sm:mt-5 sm:ml-8 grid-cols-1 col-gap-8 row-gap-2"
         >
           <div class="lg:flex">
-            <div class="lg:w-1/5">
+            <div class="lg:w-1/3">
               <label
                 for="input_max_price"
-                class="py-1 sm:py-2 block text-sm font-medium leading-5 text-gray-700"
+                class="py-1  my-4 sm:py-2 block text-sm font-medium leading-5 text-gray-700"
               >Precio de mano de obra</label>
             </div>
 
-            <div class="lg:w-3/5 mt-1 rounded-md shadow-sm">
-              <input
-                placeholder="Ingrese el precio de la mano de obra"
-                id="input_labor_price"
-                type="number"
-                :min="pmini"
-                :max="pmax"
-                v-model="labor_price"
-                class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-              />
-
-              <small v-if="error_lab" class="text-red-600">{{
-                error_lab
-              }}</small>
-              <small v-if="vacio_lab" class="text-yellow-600">{{
-                vacio_lab
-              }}</small>
+            <div class="lg:w-1/3 my-4 py-1">
+              <span v-if="formUpdate && idUpdate == index">
+                  <input v-model="priceUpdate" type="number" class="form-control" />
+                </span>
+                <span v-else>S/ 50</span>
             </div>
           </div>
 
@@ -39,139 +27,179 @@
             <h1 class="font-semibold">Datos de material</h1>
           </div> 
 
-          <!--Sección del input materiales-->
-          <div class="lg:flex">
-            <div class="lg:w-1/5">
-              <label
-                for="input_name"
-                class="pt-3 sm:py-3 block text-sm font-medium leading-5 text-gray-700"
-              >Material</label>
-            </div>
-            <div class="lg:w-3/5 mt-1 rounded-md shadow-sm">
-              <input
-                placeholder="Ingrese el material"
-                id="input_name"
-                type="text"
-                v-model= "name"
-                class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-              />
-              <small v-if="vacio_name" class="text-yellow-600">
-              {{
-              vacio_name
-              }}
-            </small>
-            </div> 
-          </div>
-          <!--Fin de la sección-->
-
-          <!--Sección de los precios correspondientes a los materiales-->
-          <div class="lg:flex">
-            <div class="lg:w-1/5">
-              <label
-                for="input_price"
-                class="sm:py-3 block text-sm font-medium leading-5 text-gray-700"
-              >Precio</label>
-            </div>
-            <div class="lg:w-3/5 mt-1 rounded-md shadow-sm">
-              <input
-                placeholder="Ingrese el precio unitario"
-                id="input_price"
-                type="number"
-                v-model= "price"
-                class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-              />
-              <small v-if="vacio_price" class="text-yellow-600">
-              {{
-              vacio_price
-              }}
+          <!-- materialPrice -->
+          <div class="sm:mt-2 grid grid-cols-1 row-gap-6 sm:col-gap-4 sm:grid-cols-6">
+    
+            <!--Sección del input materiales-->
+            <div class="lg:flex sm:col-span-2">
+              <div class="lg:w-1/4">
+                <label
+                  for="input_name"
+                  class="pt-3 sm:py-3 block text-sm font-medium leading-5 text-gray-700"
+                >Material</label>
+              </div>
+              <div class="lg:w-3/4 mt-1 rounded-md shadow-sm">
+                <input
+                  placeholder="Ingrese el material"
+                  id="input_name"
+                  type="text"
+                  @keyup.enter= "createMaterial"
+                  v-model= "name"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+                <small v-if="vacio_name" class="text-yellow-600">
+                {{
+                vacio_name
+                }}
               </small>
-            </div> 
-          </div>
-          
-          <!--Fin de la sección-->
-
-          <!--Boton de agregar - sirve para añadir los materiales-->
-          <div class="sm:col-span-2">
-            <div class="mt-2 flex items-center">
-              <span class="rounded-md shadow-sm">
-                <button
-                  @click= "createMaterial"
-                  type="button"
-                  class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                >Agregar</button>
-              </span>
+              </div> 
             </div>
-          </div>
-          <!--Fin de la sección-->
+            <!--Fin de la sección-->
 
-          <!-- Tabla donde se muestran los datos -->
-          <section class="mt-8 data sm:col-span-6">
-            <div>
-              <h1 class="font-semibold">Lista de materiales</h1>
-            </div> 
-            <table class="table-fixed">
-              <tbody class="divide-y">
-                <tr v-for="(material, index) in materiales"
-                    :key="material.index">
-                  <td class="w-2/4 pr-2 py-4">
-                    <span
-                      v-if="formActualizar && idActualizar == index">
-                      <!-- Formulario para actualizar -->
-                      <input v-model="nombreActualizar" type="text" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5">
-                    </span>
-                    <span v-else>
-                    <!-- Dato nombre -->
-                      {{ material.name }}
-                    </span>
-                  </td>
-                  <td>
-                    <span v-if="formActualizar && idActualizar == index">
-                      <!-- Formulario para actualizar -->
-                      <input v-model="precioActualizar" type="number" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5">
-                    </span>
-                    <span v-else>
-                      <!-- Dato precio -->
-                      {{ material.price }}
-                    </span>
-                  </td>
-                  <td>
-                    <!-- Botón para guardar la información actualizada -->
-                    <span v-if="formActualizar && idActualizar == index">
-                      <button @click="guardarActualizacion(index)" class="py-2 px-3 mx-4 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">
-                        Guardar</button>
-                    </span>
-                    <span v-else>
-                      <!-- Botón para mostrar el formulario de actualizar -->
-                      <button @click="verFormActualizar(index)" class="py-2 px-3 mx-4 border border-gray-300 rounded-md text-sm leading-4 font-medium text-white focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out bg-green-500">
-                        Actualizar</button>
-                      <!-- Botón para borrar -->
-                      <button @click="borrarMaterial(index)" class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-white focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out bg-red-500">
-                        Borrar</button>
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
+            <!--Sección de los precios correspondientes a los materiales-->
+            <div class="lg:flex sm:col-span-2">
+              <div class="lg:w-1/4">
+                <label
+                  for="input_price"
+                  class="sm:py-3 block text-sm font-medium leading-5 text-gray-700"
+                >Precio</label>
+              </div>
+              <div class="lg:w-3/4 mt-1 rounded-md shadow-sm">
+                <input
+                  placeholder="Ingrese el precio unitario"
+                  id="input_price"
+                  type="number"
+                  v-model= "price"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+                <small v-if="vacio_price" class="text-yellow-600">
+                {{
+                vacio_price
+                }}
+                </small>
+              </div> 
+            </div>
+            
+            <!--Fin de la sección-->
+
+            <!--Boton de agregar - sirve para añadir los materiales-->
+            <div class="sm:col-span-2">
+              <div class="mt-2 flex items-center">
+                <span class="rounded-md shadow-sm">
+                  <button
+                    @click= "createMaterial"
+                    type="button"
+                    class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                  >Agregar</button>
+                </span>
+              </div>
+            </div>
+            <!--Fin de la sección-->
+
+            <!-- Tabla donde se muestran los datos -->
+            <div class="data sm:col-span-6">
+              <div>
+                <h1 class="font-semibold">Lista de materiales</h1>
+              </div>  
+              
+              <table class="table-fixed">
+                <tbody class="divide-y divide-gray-400">
+                  <tr>
+                    <td class="w-2/4 pr-2 py-4">
+                      <span class="grid gap-1 lg:gap-16 lg:grid-cols-2">
+                        <span v-if="formUpdate && idUpdate == index">
+                          <input v-model="materialUpdate" type="text"/>
+                        </span>
+                        <span v-else>madera</span>
+                      
+                        <span v-if="formUpdate && idUpdate == index">
+                          <input v-model="priceUpdate" type="number" class="form-control" />
+                        </span>
+                        <span v-else>S/ 50</span>
+                      </span>
+                    </td>
+                    
+                  </tr>
+                  <tr v-for="(material, index) in materiales" :key="material.index">
+                    <td class="w-2/4 pr-2 py-4">
+                      <span class="grid gap-1 lg:gap-16 lg:grid-cols-2">
+                        <span v-if="formUpdate && idUpdate == index">
+                          <input v-model="materialUpdate" type="text"/>
+                        </span>
+                        <span v-else>{{material.name}}</span>
+                      
+                        <span v-if="formUpdate && idUpdate == index">
+                          <input v-model="priceUpdate" type="number" class="form-control" />
+                        </span>
+                        <span v-else>S/ {{material.price.toFixed(2)}}</span>
+                      </span>
+                    </td>
+                    
+                    <td class="w-1/4 py-4">
+                      <span v-if="formUpdate && idUpdate == index">
+                        <button
+                          @click="saveUpdate(index)"
+                          class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                        >Guardar</button>
+                      </span>
+                      
+                      <span v-else class="grid gap-1 lg:grid-cols-2">
+                        <!-- Botón para mostrar el formulario de actualizar -->
+                        <button
+                          @click="seeUpdateForm(index)"
+                          class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-white focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out bg-green-500"
+                        >Actualizar</button>
+                        <!-- Botón para borrar -->
+                        <button
+                          @click="borrarMaterial(index)"
+                          class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-white focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out bg-red-500"
+                        >Borrar</button>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div> 
+                  <!--Fin de la sección-->
 
         </div>
       </div>
       <!--Fin de la sección-->
 
-      <!--Sección donde recibira todo los datos de los componentes hijos-->
+      <!--Sección donde recibira todo los datos de los componentes hijos
       <div class="mx-auto text-center mt-6">
         <span class="ml-3 inline-flex rounded-md shadow-sm">
+          <button
+            @click= "createMaterial"
+            type="button"
+            class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+          >Agregar</button>
           <button
             type="submit"
             v-show="!buton"
             @click="submitForm"
             class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
           >
-            Guardar
+            Actualizar Precio
           </button>
         </span>
-      </div>
+      </div>-->
       <!--Fin de la sección-->
+      <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse .right-4">
+        <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
+        <button 
+            type="button"
+            class="py-2 px-6 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+          >Cancerlar</button>
+        </span>
+        <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
+        <button @click="updateOpen=false" 
+            type="button"
+            class="inline-flex justify-center py-2 px-8 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
+        >Actualizar Precio</button>
+        </span>
+    </div>
 
     </div>
   </SideBar>
@@ -182,13 +210,27 @@ import api from "../../api"
 
 import SideBar from "../../components/SideBar";
 
+
 export default {
   name: "UpdatePrice",
   components: {
     SideBar
+    
   },
   data: () => {
     return {
+      name: '',
+      price: '',
+      formUpdate: false,
+      idUpdate: -1,
+      materialUpdate: '',
+      priceUpdate: '',
+      materiales: [],
+
+      hasError: false,   
+      error_name: '',
+      error_price: ''
+      /*
       buttonLoading: false,
       hasError: false,
 
@@ -222,6 +264,7 @@ export default {
       
       error_lab: '',
       vacio_lab: ''
+      */
     };
   },
   props: {
@@ -231,6 +274,63 @@ export default {
     
   },
   methods: {
+
+    createMaterial: function () {
+
+      if(this.name!="" && this.price!=""){
+        this.materiales.push({
+        
+        name: this.name,
+        price: this.price
+        });
+        this.name = '';
+        this.price = '';
+        console.log(this.materiales);
+      }
+      else{
+        alert("Ingrese el nombre del material y precio");
+        //submitForm()
+      }
+      
+    },
+    seeUpdateForm: function (material_id){
+      this.idUpdate = material_id;
+      this.materialUpdate = this.materiales[material_id].name;
+      this.priceUpdate = this.materiales[material_id].price;
+
+      this.formUpdate = true;
+    },
+    borrarMaterial: function(material_id){
+      this.materiales.splice(material_id, 1);
+    },
+    guardarActualizacion: function (material_id){
+      this.formUpdate = false;
+
+      this.materiales[material_id].name = this.materialUpdate;
+      this.materiales[material_id].price = this.priceUpdate;
+    },/*
+    async submitForm() {
+      this.validateSubmit();
+      if (this.hasError) return;
+      let response = await api.post(`/set/price`, {
+        nombre: this.nombre,
+        precio: this.precio,
+      })
+    },*/
+    validateSubmit() {
+      this.hasError = false;
+      if (this.name == "") {
+        this.hasError = true;
+        this.error_name = "Campo obligatorio";
+      } else this.error_name = "";
+      if (this.price == "") {
+        this.hasError = true;
+        this.price = "Campo obligatorio";
+      } else this.price = "";
+      
+      
+    }
+
     /*async createMaterial() {
       this.validateSubmit();
       if (this.hasError) return;
