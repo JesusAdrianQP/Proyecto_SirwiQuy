@@ -6877,59 +6877,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_splice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.splice */ "./node_modules/core-js/modules/es.array.splice.js");
-/* harmony import */ var core_js_modules_es_array_splice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_SirwiyQuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
+/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
 
-
-
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -7105,193 +7057,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "UpdatePrice",
   components: {
-    SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_6__["default"]
+    SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
       name: '',
       price: '',
-      formUpdate: false,
-      idUpdate: -1,
-      materialUpdate: '',
-      priceUpdate: '',
-      materiales: [],
-      hasError: false,
-      error_name: '',
-      error_price: ''
-      /*
-      buttonLoading: false,
-      hasError: false,
-        //Ver o no ver el formulario de actualizar
-      formActualizar: false,
-      //La posición de tu lista donde te gustaría actualizar 
-      idActualizar: -1,
-        //Se guarda como un objeto los valores del precio y datos del servicio
-      price_details: '',
-      service_details: '',
-        sum: 0,
-        //Datos del componente laborprice
-      labor_price: 0,
-        //Datos del componente materialprice
-      materiales: [],
-      name: '',
-      price: 0,
-        //Input nombre dentro del formulario de actualizar
-      nombreActualizar: '',
-      //Input precio dentro del formulario de actualizar
-      precioActualizar: 0,
-        //Precio minimo y maximo
-      pmin: 0,
-      pmax: 0,
-      
-      error_lab: '',
-      vacio_lab: ''
-      */
-
+      materials: [{
+        name: 'madera',
+        price: 50
+      }, {
+        name: 'palo',
+        price: 10
+      }, {
+        name: 'cemento',
+        price: 50
+      }],
+      actualizarSalario: false,
+      salario: 10
     };
-  },
-  props: {
-    id: String
-  },
-  created: function created() {
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_SirwiyQuy_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }))();
   },
   methods: {
     createMaterial: function createMaterial() {
       if (this.name != "" && this.price != "") {
-        this.materiales.push({
+        this.materials.push({
           name: this.name,
           price: this.price
         });
         this.name = '';
         this.price = '';
-        console.log(this.materiales);
+        console.log(this.materials);
       } else {
-        alert("Ingrese el nombre del material y precio"); //submitForm()
+        alert("Ingrese el nombre y precio del materia"); //submitForm()
       }
-    },
-    seeUpdateForm: function seeUpdateForm(material_id) {
-      this.idUpdate = material_id;
-      this.materialUpdate = this.materiales[material_id].name;
-      this.priceUpdate = this.materiales[material_id].price;
-      this.formUpdate = true;
-    },
-    borrarMaterial: function borrarMaterial(material_id) {
-      this.materiales.splice(material_id, 1);
-    },
-    guardarActualizacion: function guardarActualizacion(material_id) {
-      this.formUpdate = false;
-      this.materiales[material_id].name = this.materialUpdate;
-      this.materiales[material_id].price = this.priceUpdate;
-    },
-
-    /*
-    async submitForm() {
-    this.validateSubmit();
-    if (this.hasError) return;
-    let response = await api.post(`/set/price`, {
-      nombre: this.nombre,
-      precio: this.precio,
-    })
-    },*/
-    validateSubmit: function validateSubmit() {
-      this.hasError = false;
-
-      if (this.name == "") {
-        this.hasError = true;
-        this.error_name = "Campo obligatorio";
-      } else this.error_name = "";
-
-      if (this.price == "") {
-        this.hasError = true;
-        this.price = "Campo obligatorio";
-      } else this.price = "";
     }
-    /*async createMaterial() {
-      this.validateSubmit();
-      if (this.hasError) return;
-        //Si cumple condicionales, se inserta campos en el arreglo general
-      this.materiales.push({
-        name: this.name,
-        price: parseFloat(this.price)
-      });
-     
-      //Después de cumplir su insercción, se liberan para insertar más materiales
-      this.name = '';
-      this.price = '';
-    },
-    verFormActualizar: function (material_id) {
-      //Antes de mostrar el formulario de actualizar, rellenamos sus campos
-      this.idActualizar = material_id;
-      this.nombreActualizar = this.materiales[material_id].name;
-      this.precioActualizar = this.materiales[material_id].price;
-      //Mostramos el formulario
-      this.formActualizar = true;
-    },
-    guardarActualizacion: function (material_id) {
-      // Ocultamos nuestro formulario de actualizar
-      this.formActualizar = false;
-      // Actualizamos los datos
-      this.materiales[material_id].name = this.nombreActualizar;
-      this.materiales[material_id].price = parseFloat(this.precioActualizar);
-    },
-    borrarMaterial: function (material_id) {
-      //Borramos de la lista
-      this.materiales.splice(material_id, 1);
-    },
-    validateSubmit() {
-      this.hasError = false;
-        //Condicionales del precio ingresado
-      if (this.labor_price > this.pmax){
-        this.hasError = true;
-        this.error_lab = "El precio ingresado es mayor a "+ this.pmax;
-        this.vacio_lab = "";
-      }
-      else if(this.labor_price > 0 && this.labor_price < this.pmin){
-        this.hasError = true;
-        this.error_lab = "El precio ingresado es menor a "+ this.pmin;
-        this.vacio_lab = "";
-      }
-      else if(this.labor_price == ""){
-        this.hasError = true;
-        this.error_lab = "";
-        this.vacio_lab = "Campo Necesario";
-      }
-      else{  
-        this.error_lab = "";
-        this.vacio_lab = "";
-      }
-    },
-    async submitForm() {
-      this.validateSubmit();
-      if (this.hasError) return;
-      
-      //Calculo de la nueva suma (si hubiera nueva suma)
-      for(let i = 0; i < this.materiales.length; i++){
-        this.sum = parseFloat(this.sum) + parseFloat(this.materiales[i].price);      
-      }
-        if(this.sum < parseInt(this.pmax)) this.sum = 0;
-      
-      //Conexión con la lógica de negocio
-      let response = await api.post(`/update_price`,{
-        laboral: parseInt(this.labor_price),
-        materials: this.materiales,
-        pmax: parseInt(this.sum),
-        id_service: this.id
-      })
-        this.$router.push("/supplier/services");
-    }*/
-
   }
 });
 
@@ -42319,7 +42118,7 @@ var render = function() {
                     "label",
                     {
                       staticClass:
-                        "py-1  my-4 sm:py-2 block text-sm font-medium leading-5 text-gray-700",
+                        "py-1  my-4 sm:py-2 block text-base font-medium leading-5 text-gray-700",
                       attrs: { for: "input_max_price" }
                     },
                     [_vm._v("Precio de mano de obra")]
@@ -42327,31 +42126,37 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "lg:w-1/3 my-4 py-1" }, [
-                  _vm.formUpdate && _vm.idUpdate == _vm.index
-                    ? _c("span", [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.priceUpdate,
-                              expression: "priceUpdate"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          attrs: { type: "number" },
-                          domProps: { value: _vm.priceUpdate },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.priceUpdate = $event.target.value
-                            }
+                  _vm.actualizarSalario
+                    ? _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.salario,
+                            expression: "salario"
                           }
-                        })
-                      ])
-                    : _c("span", [_vm._v("S/ 50")])
+                        ],
+                        staticClass:
+                          "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                        attrs: {
+                          placeholder: "Ingrese el precio de mano de obra",
+                          type: "number"
+                        },
+                        domProps: { value: _vm.salario },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.salario = $event.target.value
+                          }
+                        }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.actualizarSalario
+                    ? _c("span", [_vm._v("S/ " + _vm._s(_vm.salario))])
+                    : _vm._e()
                 ])
               ]),
               _vm._v(" "),
@@ -42374,8 +42179,7 @@ var render = function() {
                         "label",
                         {
                           staticClass:
-                            "pt-3 sm:py-3 block text-sm font-medium leading-5 text-gray-700",
-                          attrs: { for: "input_name" }
+                            "pt-3 sm:py-3 block text-base font-medium leading-5 text-gray-700"
                         },
                         [_vm._v("Material")]
                       )
@@ -42398,26 +42202,10 @@ var render = function() {
                             "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                           attrs: {
                             placeholder: "Ingrese el material",
-                            id: "input_name",
                             type: "text"
                           },
                           domProps: { value: _vm.name },
                           on: {
-                            keyup: function($event) {
-                              if (
-                                !$event.type.indexOf("key") &&
-                                _vm._k(
-                                  $event.keyCode,
-                                  "enter",
-                                  13,
-                                  $event.key,
-                                  "Enter"
-                                )
-                              ) {
-                                return null
-                              }
-                              return _vm.createMaterial($event)
-                            },
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
@@ -42425,17 +42213,7 @@ var render = function() {
                               _vm.name = $event.target.value
                             }
                           }
-                        }),
-                        _vm._v(" "),
-                        _vm.vacio_name
-                          ? _c("small", { staticClass: "text-yellow-600" }, [
-                              _vm._v(
-                                "\n              " +
-                                  _vm._s(_vm.vacio_name) +
-                                  "\n            "
-                              )
-                            ])
-                          : _vm._e()
+                        })
                       ]
                     )
                   ]),
@@ -42446,8 +42224,7 @@ var render = function() {
                         "label",
                         {
                           staticClass:
-                            "sm:py-3 block text-sm font-medium leading-5 text-gray-700",
-                          attrs: { for: "input_price" }
+                            "sm:py-3 block text-base font-medium leading-5 text-gray-700"
                         },
                         [_vm._v("Precio")]
                       )
@@ -42470,7 +42247,6 @@ var render = function() {
                             "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                           attrs: {
                             placeholder: "Ingrese el precio unitario",
-                            id: "input_price",
                             type: "number"
                           },
                           domProps: { value: _vm.price },
@@ -42482,17 +42258,7 @@ var render = function() {
                               _vm.price = $event.target.value
                             }
                           }
-                        }),
-                        _vm._v(" "),
-                        _vm.vacio_price
-                          ? _c("small", { staticClass: "text-yellow-600" }, [
-                              _vm._v(
-                                "\n              " +
-                                  _vm._s(_vm.vacio_price) +
-                                  "\n              "
-                              )
-                            ])
-                          : _vm._e()
+                        })
                       ]
                     )
                   ]),
@@ -42504,7 +42270,7 @@ var render = function() {
                           "button",
                           {
                             staticClass:
-                              "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                              "py-2 px-5 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
                             attrs: { type: "button" },
                             on: { click: _vm.createMaterial }
                           },
@@ -42521,214 +42287,146 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("table", { staticClass: "table-fixed" }, [
-                      _c(
-                        "tbody",
-                        { staticClass: "divide-y divide-gray-400" },
-                        [
-                          _c("tr", [
-                            _c("td", { staticClass: "w-2/4 pr-2 py-4" }, [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "grid gap-1 lg:gap-16 lg:grid-cols-2"
-                                },
-                                [
-                                  _vm.formUpdate && _vm.idUpdate == _vm.index
-                                    ? _c("span", [
-                                        _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.materialUpdate,
-                                              expression: "materialUpdate"
-                                            }
-                                          ],
-                                          attrs: { type: "text" },
-                                          domProps: {
-                                            value: _vm.materialUpdate
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.materialUpdate =
-                                                $event.target.value
-                                            }
-                                          }
-                                        })
-                                      ])
-                                    : _c("span", [_vm._v("madera")]),
-                                  _vm._v(" "),
-                                  _vm.formUpdate && _vm.idUpdate == _vm.index
-                                    ? _c("span", [
-                                        _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.priceUpdate,
-                                              expression: "priceUpdate"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          attrs: { type: "number" },
-                                          domProps: { value: _vm.priceUpdate },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.priceUpdate =
-                                                $event.target.value
-                                            }
-                                          }
-                                        })
-                                      ])
-                                    : _c("span", [_vm._v("S/ 50")])
-                                ]
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _vm._l(_vm.materiales, function(material, index) {
-                            return _c("tr", { key: material.index }, [
-                              _c("td", { staticClass: "w-2/4 pr-2 py-4" }, [
-                                _c(
-                                  "span",
+                    _c("table", { staticClass: "text-left w-full" }, [
+                      !_vm.actualizarSalario
+                        ? _c(
+                            "div",
+                            [
+                              _vm._l(_vm.materials, function(material, index) {
+                                return _c(
+                                  "tr",
                                   {
+                                    key: index,
                                     staticClass:
-                                      "grid gap-1 lg:gap-16 lg:grid-cols-2"
+                                      "sm:mt-2 grid grid-cols-1 row-gap-6 sm:col-gap-4 sm:grid-cols-6"
                                   },
                                   [
-                                    _vm.formUpdate && _vm.idUpdate == index
-                                      ? _c("span", [
-                                          _c("input", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value: _vm.materialUpdate,
-                                                expression: "materialUpdate"
-                                              }
-                                            ],
-                                            attrs: { type: "text" },
-                                            domProps: {
-                                              value: _vm.materialUpdate
-                                            },
-                                            on: {
-                                              input: function($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.materialUpdate =
-                                                  $event.target.value
-                                              }
-                                            }
-                                          })
-                                        ])
-                                      : _c("span", [
-                                          _vm._v(_vm._s(material.name))
-                                        ]),
-                                    _vm._v(" "),
-                                    _vm.formUpdate && _vm.idUpdate == index
-                                      ? _c("span", [
-                                          _c("input", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value: _vm.priceUpdate,
-                                                expression: "priceUpdate"
-                                              }
-                                            ],
-                                            staticClass: "form-control",
-                                            attrs: { type: "number" },
-                                            domProps: {
-                                              value: _vm.priceUpdate
-                                            },
-                                            on: {
-                                              input: function($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.priceUpdate =
-                                                  $event.target.value
-                                              }
-                                            }
-                                          })
-                                        ])
-                                      : _c("span", [
-                                          _vm._v(
-                                            "S/ " +
-                                              _vm._s(material.price.toFixed(2))
-                                          )
-                                        ])
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "w-1/4 py-4" }, [
-                                _vm.formUpdate && _vm.idUpdate == index
-                                  ? _c("span", [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
-                                          on: {
-                                            click: function($event) {
-                                              return _vm.saveUpdate(index)
-                                            }
-                                          }
-                                        },
-                                        [_vm._v("Guardar")]
-                                      )
-                                    ])
-                                  : _c(
-                                      "span",
-                                      {
-                                        staticClass: "grid gap-1 lg:grid-cols-2"
-                                      },
+                                    _c(
+                                      "td",
+                                      { staticClass: "lg:flex sm:col-span-2" },
                                       [
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass:
-                                              "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-white focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out bg-green-500",
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.seeUpdateForm(index)
-                                              }
-                                            }
-                                          },
-                                          [_vm._v("Actualizar")]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass:
-                                              "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-white focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out bg-red-500",
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.borrarMaterial(index)
-                                              }
-                                            }
-                                          },
-                                          [_vm._v("Borrar")]
+                                        _vm._v(
+                                          "\n                          " +
+                                            _vm._s(material.name) +
+                                            "\n                        "
                                         )
                                       ]
-                                    )
-                              ])
-                            ])
-                          })
-                        ],
-                        2
-                      )
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "td",
+                                      { staticClass: "lg:flex sm:col-span-2" },
+                                      [
+                                        _vm._v(
+                                          "\n                          " +
+                                            _vm._s(material.price) +
+                                            "\n                        "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("br")
+                                  ]
+                                )
+                              }),
+                              _vm._v(" "),
+                              _c("br")
+                            ],
+                            2
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.actualizarSalario
+                        ? _c(
+                            "div",
+                            _vm._l(_vm.materials, function(material, index) {
+                              return _c(
+                                "div",
+                                {
+                                  key: index,
+                                  staticClass:
+                                    "sm:mt-2 grid grid-cols-1 row-gap-6 sm:col-gap-4 sm:grid-cols-6"
+                                },
+                                [
+                                  _c(
+                                    "td",
+                                    { staticClass: "lg:flex sm:col-span-2" },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: material.name,
+                                            expression: "material.name"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                                        attrs: {
+                                          placeholder:
+                                            "Ingrese el nombre del material",
+                                          type: "text"
+                                        },
+                                        domProps: { value: material.name },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              material,
+                                              "name",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "td",
+                                    { staticClass: "lg:flex sm:col-span-2" },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: material.price,
+                                            expression: "material.price"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                                        attrs: {
+                                          placeholder:
+                                            "Ingrese el precio del material",
+                                          type: "number"
+                                        },
+                                        domProps: { value: material.price },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              material,
+                                              "price",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            }),
+                            0
+                          )
+                        : _vm._e()
                     ])
                   ])
                 ]
@@ -42748,14 +42446,41 @@ var render = function() {
                   "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
               },
               [
+                _c("router-link", { attrs: { to: "/supplier/services" } }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "py-2 px-6 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                      attrs: { type: "button" }
+                    },
+                    [_vm._v("Salir")]
+                  )
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+              },
+              [
                 _c(
                   "button",
                   {
                     staticClass:
-                      "py-2 px-6 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
-                    attrs: { type: "button" }
+                      "inline-flex justify-center py-2 px-6 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        _vm.actualizarSalario = false
+                      }
+                    }
                   },
-                  [_vm._v("Cancerlar")]
+                  [_vm._v("Guardar")]
                 )
               ]
             ),
@@ -42771,11 +42496,11 @@ var render = function() {
                   "button",
                   {
                     staticClass:
-                      "inline-flex justify-center py-2 px-8 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
+                      "mr-3 inline-flex justify-center py-2 px-8 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
                     attrs: { type: "button" },
                     on: {
                       click: function($event) {
-                        _vm.updateOpen = false
+                        _vm.actualizarSalario = true
                       }
                     }
                   },
@@ -62746,8 +62471,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, //Ruta solo para trabajador
   {
     path: "/worker/profile/edit",
-    component: _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
-    beforeEnter: isWorker
+    component: _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_14__["default"] //            beforeEnter: isWorker
+
   }, //Rutas de los proveedores
   {
     path: "/supplier",

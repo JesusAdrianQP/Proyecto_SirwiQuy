@@ -16,10 +16,12 @@ import CreateService from "./pages/Supplier/CreateService.vue";
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
+
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
+
 
 import CreatePrice from "./pages/Supplier/CreatePrice.vue";
 import { isElement } from "lodash";
@@ -121,7 +123,7 @@ export default new VueRouter({
         {
             path: "/worker/profile/edit",
             component: EditProfile,
-            beforeEnter: isWorker
+//            beforeEnter: isWorker
         },
         //Rutas de los proveedores
         {
@@ -154,5 +156,6 @@ export default new VueRouter({
             component: UpdatePrice,
             props: true
         },
+       
     ]
 });
