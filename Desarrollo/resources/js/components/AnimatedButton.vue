@@ -144,6 +144,12 @@ export default {
             "focus:shadow-outline-red": true,
             "active:bg-red-700": true,
           };
+        case "gradiente":
+          return {
+            "bg-gradient-to-r": true,
+            "from-teal-400": true,
+            "to-blue-500": true,
+          };
         default:
           return {
             "bg-primary-600": true,

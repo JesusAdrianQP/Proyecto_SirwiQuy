@@ -3,19 +3,24 @@
     NAVBAR: Cabecera principal del sistema
     Aquí se encuentra todos los datos principales del sistema
   -->
-  <nav class="bg-white border-b border-gray-200">
+  <nav class="bg-white border-b border-gray-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
       <div class="flex justify-between h-16">
         <!--Navbar en vista de laptop-->
         <div class="flex">
           <div class="flex-shrink-0 flex items-center">
-            <router-link to="/">
+            <a href="/">
               <img
                 class="hidden lg:block h-16 w-auto"
                 src="../../assets/Logo_Sirwi_b.png"
                 alt="logo"
               />
-            </router-link>
+              <img
+                class="block lg:hidden h-12 w-auto"
+                src="../../assets/Sirwiyquy_b_house.png"
+                alt="logo"
+              />
+            </a>
           </div>
 
           <div class="hidden sm:-my-px sm:ml-4 lg:flex">
@@ -61,14 +66,14 @@
                 v-on-clickaway="closeProfile"
               >
                 <!-- @click="profileOpen=!profileOpen": Es para constatar que se abra las opciones del menú de perfil-->
-                <img class="h-8 w-8 rounded-full" src="" alt="Perfil" />
+                <img class="h-8 w-8 object-cover rounded-full" :src="foto" alt="Perfil" />
                 <div class="ml-3">
                   <p
                     class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900"
                   >Bienvenido</p>
                   <p
                     class="text-xs leading-4 font-medium text-gray-500 group-hover:text-gray-700 group-focus:underline transition ease-in-out duration-150"
-                  >PRESIDENTE MERINO</p>
+                  >{{usuario}}</p>
                 </div>
                 <IconSvg :solid="false" icon="chevron-down" myClass="h-5 w-5 ml-2 mt-2" />
               </button>
@@ -117,38 +122,14 @@
         <!--Icono de la navbar con menu movil-->
         <div class="-mr-2 flex items-center lg:hidden">
           <button
-            @click="isOpen = !isOpen"
+            @click="isMenu()"
             class="inline-flex items-center justify-center p-2 rounded-md text-primary-500 hover:text-primary-300 hover:bg-primary-100 focus:outline-none focus:bg-primary-100 focus:text-primary-500 transition duration-1000 ease-in-out"
           >
-            <svg
-              :class="isOpen ? 'hidden' : 'block'"
-              class="h-8 w-8"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-            <!-- Menu open: "block", Menu closed: "hidden" -->
-            <svg
-              :class="isOpen ? 'block' : 'hidden'"
-              class="h-8 w-8"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <div class="wrapper-menu">
+              <div class="line-menu half start"></div>
+              <div class="line-menu"></div>
+              <div class="line-menu half end"></div>
+            </div> 
           </button>
         </div>
       </div>
@@ -157,43 +138,43 @@
     <!--
       Menu mobil | Open: "block", closed: "hidden"
     -->
-    <div :class="isOpen ? 'block' : 'hidden'" class="lg:hidden">
+    <div :class="isOpen ? 'block' : 'hidden'" class="lg:hidden ">
       <div class="pt-2 pb-3">
         <router-link
           to="/"
-          class="block pl-3 pr-4 py-2 border-l-4 border-primary-500 text-base font-medium text-primary-700 bg-primary-50 focus:outline-none focus:text-primary-800 focus:bg-primary-100 focus:border-primary-700 transition duration-150 ease-in-out"
+          class="block pl-3 pr-4 py-2 border-l-4 border-primary-500 text-md font-medium text-primary-700 bg-primary-50 focus:outline-none focus:text-primary-800 focus:bg-primary-100 focus:border-primary-700 transition duration-150 ease-in-out"
         >Inicio</router-link>
 
         <router-link
             v-if="!isCustomer"
           to="/join_us"
-          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
+          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-md font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Trabaja con Nosotros</router-link>
 
         <router-link
           v-if="isCustomer"
           to="/customer/blank"
-          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
+          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-md font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Mis servicios</router-link>
         
         <router-link
           to="/customer/blank"
-          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
+          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-md font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Ayuda</router-link>
       </div>
 
-      <div class="pt-4 pb-3 border-t border-gray-200">
+      <div class="pt-4 pb-3 border-t border-gray-300">
         <div class="mt-3" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
           <router-link
             v-if="!isCustomer"
             to="/login/customer"
-            class="mt-1 block px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
+            class="mt-1 block px-4 py-2 text-lg font-bold text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
             role="menuitem"
           >Ingresar</router-link>
           <router-link
               v-if="!isCustomer"
             to="/signup/indie/customer"
-            class="mt-1 block px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
+            class="mt-1 block px-4 py-2 text-lg font-bold text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
             role="menuitem"
           >Crear cuenta</router-link>
         </div>
@@ -201,28 +182,28 @@
         <div v-if="isCustomer">
           <div class="flex items-center px-4">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 rounded-full" src=" " alt="Perfil" />
+              <img class="h-10 w-10 object-cover rounded-full" :src="foto" alt="Perfil" />
             </div>
             <div class="ml-3">
-              <div class="text-base font-medium leading-6 text-gray-800">Bienvenido</div>
-              <div class="text-sm font-medium leading-5 text-gray-500">PRESIDENTE MERINO</div>
+              <div class="text-md font-medium leading-6 text-gray-800">Bienvenido</div>
+              <div class="text-base font-medium leading-5 text-gray-500">{{usuario}}</div>
             </div>
           </div>
 
           <div class="mt-3">
             <router-link
               to="/customer/blank"
-              class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
+              class="block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
             >Ver perfil</router-link>
 
             <router-link
               to="/customer/blank"
-              class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
+              class="block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
             >Cuenta</router-link>
 
             <a
               @click="logout"
-              class="mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
+              class="mt-1 block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
             >Cerrar sesión</a>
           </div>
         </div>
@@ -234,6 +215,7 @@
 <script>
 import IconSvg from "./IconSvg.vue";
 import NavBarOption from "./NavBarOption.vue";
+import api from "../api";
 import { mixin as clickaway } from "vue-clickaway";
 
 export default {
@@ -245,13 +227,34 @@ export default {
   data: () => {
     return {
       isOpen: false,
-      profileOpen: false,
-      isCustomer: localStorage.getItem("e_level") == "customer",
+      profileOpen: false
     };
   },
+  props: {
+    isCustomer: Boolean,
+    usuario: String,
+    foto: String
+  },
   methods: {
-    logout(){
+    isMenu(){
+      if(this.isOpen == false) this.isOpen = true;
+        else this.isOpen = false;
+
+      this.$el.querySelector('.wrapper-menu').classList.toggle("open");
+    },
+    closeProfile: function () {
+      if (this.profileOpen) this.profileOpen = false;
+    },
+    async logout(){
+      await api.post(`/changeAccess`, {
+        level: localStorage.getItem('e_level'),
+        token: localStorage.getItem('token')
+      });
+
+      localStorage.removeItem('token');
+      localStorage.removeItem('e_level');
       
+      window.location.reload();
     }
   },
 };

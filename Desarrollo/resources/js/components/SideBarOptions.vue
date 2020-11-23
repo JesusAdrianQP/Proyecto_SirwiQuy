@@ -7,7 +7,7 @@
     />
     <SideBarOption
       title="Notificaciones"
-      url="/supplier/notifications"
+      url="/supplier/blank"
       :icon="{ icon: 'bell', solid: false }"
     />
     <SideBarOption
@@ -22,12 +22,12 @@
     />
     <SideBarOption
       title="Clientes"
-      url="/supplier/list/service/status"
+      url="/supplier/blank"
       :icon="{ icon: 'users', solid: false }"
     />    
     <SideBarOption
       title="Reporte de Satisfacción"
-      url="/supplier/satisfaction/report"
+      url="/supplier/blank"
       :icon="{ icon: 'thumb-up', solid: false }"
     />
     <a
@@ -51,5 +51,19 @@ export default {
     SideBarOption,
     IconSvg
   },
+  methods: {
+    async logout(){
+      await api.post(`/changeAccess`, {
+        level: localStorage.getItem('e_level'),
+        token: localStorage.getItem('token')
+      });
+
+      localStorage.removeItem('token');
+      localStorage.removeItem('e_level');
+      localStorage.removeItem('e_DNI');
+        
+      window.location.reload();
+    },
+  }
 }
 </script>

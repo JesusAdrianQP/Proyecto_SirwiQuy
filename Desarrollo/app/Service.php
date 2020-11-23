@@ -10,7 +10,7 @@ class Service extends Eloquent
      *  * @var array
      */
     protected $fillable = [
-        'identity','id_worker','title', 'description', 'category', 'distrito', 'calificacion', 'precioMin', 'precioMax', 
+        'id','identity','token','title', 'description', 'category', 'distrito', 'calificacion', 'precio', 
         'file'
     ];
 

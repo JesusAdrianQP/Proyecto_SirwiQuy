@@ -140,17 +140,40 @@ export default {
           this.buttonLoading = false;
           return;
         }
-
-        //Calculo de la nueva suma (si hubiera nueva suma)
-        for(let i = 0; i < this.materials_prices.length; i++){
-          this.sum = this.sum + this.materials_prices[i].price;      
-        }
-
-        this.sum = this.sum + this.lab_price;//Sumamos la cantidad total
-
-        if(this.sum < localStorage.getItem('p_max')) this.sum = 0;
       }
-      
+
+      //Conexión con la lógica de negocio
+      let response = await api.post(`/create_service`,{
+        level: localStorage.getItem('e_level'),
+        id: localStorage.getItem('id'),
+        title: localStorage.getItem('e_title'),
+        description: localStorage.getItem('e_desc'),
+        category: localStorage.getItem('e_cate'),
+        district: localStorage.getItem('e_dist'),
+        photo: localStorage.getItem('e_file'),
+        price: parseInt(this.lab_price),
+        materials: this.materials_prices,
+      })
+
+      if (!response.ok) {
+        this.buttonLoading = false;
+        
+        return this.$toast.open({
+          message: response.error.errors.fail[0],
+          type: "error",
+          duration: 8000,
+          dismissible: true
+        });
+      }
+
+      this.$toast.open({
+        message: response.data.data.success,
+        type: "success",
+        duration: 8000,
+        dismissible: true
+      });
+
+      this.$router.push("/supplier");
     },
     setValues(obj){
       this.lab_price = obj.labor_price;

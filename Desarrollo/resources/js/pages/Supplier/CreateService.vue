@@ -3,8 +3,15 @@
   Muestra un formulario donde se solicita el titulo, descripción,
   categoría, departamento, provincia, distrito, precio minimo, precio
   máximo y una imagen del servicio a registrar. -->  
-  <SideBar title="Publicar Servicio">
-    <div class="bg-white overflow-hidden shadow rounded-lg">
+  <SideBar title="Publicar Servicio"
+    :user="username"
+    :image="img">
+
+       <Loader class="min-h-screen"
+            :load="loading"
+      />
+
+    <div v-show="!loading" class="bg-white overflow-hidden shadow rounded-lg">
       <div class="px-4 py-5 sm:p-6">
         <div class="sm:flex">
         <div class="sm:w-1/2 sm:pr-2">
@@ -14,7 +21,7 @@
           <div>
             <label
               for="input_title"
-              class="block text-sm font-medium leading-5 text-gray-700"
+              class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5 border-primary-600 "
             >
               Título
             </label>
@@ -204,7 +211,7 @@
 <script>
 import api from "../../api";
 
-
+import Loader from "../../components/Loader";
 import SideBar from "../../components/SideBar";
 import MyButton from "../../components/MyButton.vue";
 
@@ -212,10 +219,18 @@ export default {
   name: "CreateService",
   components: {
     SideBar,
-    MyButton
+    MyButton,
+    Loader
   },
   data: () => {
     return {
+      acceso: localStorage.getItem('e_level'),
+      token: localStorage.getItem('token'),
+      loading: true,
+      username: '',
+      img: '',
+      id: '',
+
       hasError: false,
       buttonLoading: false,
       title: "",
@@ -235,9 +250,20 @@ export default {
       vacio_category: "",
     }
   },
+  async created(){
+    let response = await api.get(`/services/level=${this.acceso}/token=${this.token}`)
+    let supplier = response.data.data;
+    
+    this.username = supplier.username;
+    this.img = supplier.file;
+    this.id = supplier._id;
 
+    let response2 = await api.post(`/dist`, {id: '1501'})
+    this.districts = response2.data.data.districts;
+
+    this.loading = false;
+  },
   methods: {
-   
     async submitForm() {
       this.validateSubmit();
       if (this.hasError) return;
@@ -248,13 +274,22 @@ export default {
         this.buttonLoading = false;
 
         return this.$toast.open({
-          message: 'La imagen es esencial según nuestras politicas! Por favor ingrese una ...',
+          message: 'Imagen requerida',
           type: "error",
           duration: 8000,
           dismissible: true
         });
       }
 
+      //Se guarda provisionalmente los datos
+      localStorage.setItem('e_title', this.title);
+      localStorage.setItem('e_desc', this.description);
+      localStorage.setItem('e_cate', this.category);
+      localStorage.setItem('e_dist', this.district);
+      localStorage.setItem('e_file', this.image);
+      localStorage.setItem('id', this.id);
+      
+      this.$router.push("/supplier/create/price");
     },
     validateSubmit() {
       this.hasError = false;
