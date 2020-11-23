@@ -1,15 +1,19 @@
 <template>
   <!-- SING UP ENTERPRISE: Vista de registro del usuario empresa-->
   <Visitor>
-    <main class="flex flex-col justify-center py-8 sm:px-6 lg:px-8">
-      <div class="sm:mx-auto">
-        <h2
-          class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900"
-        >Crear cuenta como Empresa</h2>
+    <main class="flex flex-col justify-center pt-2 pb-4 bg-gray-100">
+      <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
+         
+          <img class="h-48 sm:h-56 lg:h-48 px-6 w-auto mt-4" src="../../../assets/illustrations/sign-up-enterprise.png" alt="avatar" />
+          
+          <p class="uppercase px-5 mt-4 text-3xl md:text-4xl font-extrabold text-gray-900"
+          >Crear cuenta </p>
+        
+          <p class="px-5 text-sm">Esta cuenta sera creada para un usuario de tipo <b class="text-base2 italic">{{identifier}}</b></p>
       </div>
 
       <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-2xl">
-        <nav>
+        <nav class="mx-3 sm:mx-6">
           <ul class="bg-white shadow rounded-md divide-y divide-gray-300 md:flex md:divide-y-0">
             <li @click="step=0" class="group cursor-pointer relative md:flex-1 md:flex">
               <!-- Completed Step -->
@@ -30,7 +34,7 @@
 
               <div class="hidden md:block absolute top-0 right-0 h-full w-5">
                 <svg
-                  class="h-full w-full text-gray-300"
+                  class="h-full w-full text-gray-500"
                   viewBox="0 0 22 80"
                   fill="none"
                   preserveAspectRatio="none"
@@ -65,7 +69,7 @@
 
               <div class="hidden md:block absolute top-0 right-0 h-full w-5">
                 <svg
-                  class="h-full w-full text-gray-300"
+                  class="h-full w-full text-gray-500"
                   viewBox="0 0 22 80"
                   fill="none"
                   preserveAspectRatio="none"
@@ -101,9 +105,9 @@
           </ul>
         </nav>
 
-        <div class="mt-4 bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div class="pt-6 pb-4 mx-3 sm:mx-6 px-1 sm:px-10 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
           <div v-show="step==0">
-            <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-4">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
               <!-- Sección de ingreso de DNI.
               Solicita el DNI y lo valida.-->
               <div class="sm:col-span-2">
@@ -166,7 +170,8 @@
                   }}
                 </small>
               </div>
-              <div class="sm:col-span-2">
+
+              <div class="sm:col-span-4">
                 <label
                   for="input_cuenta_enterprise"
                   class="block text-sm font-medium leading-5 text-gray-700"
@@ -186,17 +191,18 @@
                   }}
                 </small>
               </div>
-              <div class="sm:col-span-2">
+              
+              <div class="sm:col-span-4">
                 <label
                   for="file_enterprise"
                   class="block text-sm leading-5 font-medium text-gray-700"
                 >Imagen de la empresa</label>
-                <div class="mt-2 flex items-center">
-                  <div v-if="!file_enterprise">
+                <div class="flex items-center w-full">
+                  <div class="mt-2" v-if="!file_enterprise">
                     <label
                       for="file_enterprise"
                       style="cursor: pointer"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                      class="w-full py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
                     >Seleccionar imagen</label>
 
                     <span class="file_enterprise">
@@ -210,17 +216,16 @@
                     </span>
                   </div>
 
-                  <div class="flex items-center" style="width: 100%;" v-else>
+                  <div class="flex items-center w-full" v-else>
                     <button
                       @click="removeImage($event, 'file_enterprise')"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                      style="width: 100%;"
+                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out w-full sm:w-1/2"
                     >Eliminar imagen</button>
 
-                    <div class="text-center" style="width: 100%;">
+                    <div class="text-center w-full">
                       <img
                         :src="file_enterprise"
-                        class="inline-block h-20 w-20 sm:h-32 sm:w-32 rounded-full"
+                        class="object-cover inline-block h-20 w-20 sm:h-40 sm:w-40 rounded-full"
                       />
                     </div>
                   </div>
@@ -230,10 +235,10 @@
           </div>
 
           <div v-show="step==1">
-            <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
               <!-- Sección de ingreso de DNI.
               Solicita el DNI y lo valida.-->
-              <div class="sm:col-span-3">
+              <div class="sm:col-span-2">
                 <label for="input_dni" class="block text-sm font-medium leading-5 text-gray-700">DNI</label>
                 <div class="mt-1 relative rounded-md shadow-sm">
                   <input
@@ -272,48 +277,7 @@
                 </small>
               </div>
 
-              <div class="sm:col-span-3">
-                <label
-                  for="photo"
-                  class="block text-sm leading-5 font-medium text-gray-700"
-                >Foto de Perfil</label>
-                <div class="mt-2 flex items-center">
-                  <div v-if="!file_admi">
-                    <label
-                      for="file_admi"
-                      style="cursor: pointer"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                    >Seleccionar imagen</label>
-
-                    <span class="file_admi">
-                      <input
-                        id="file_admi"
-                        type="file"
-                        style="display:none;"
-                        accept="image/png, .jpeg, .jpg"
-                        @change="onFileChange($event,'file_admi')"
-                      />
-                    </span>
-                  </div>
-
-                  <div class="flex items-center" style="width: 100%;" v-else>
-                    <button
-                      @click="removeImage($event,'file_admi')"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                      style="width: 100%;"
-                    >Eliminar imagen</button>
-
-                    <div class="text-center" style="width: 100%;">
-                      <img
-                        :src="file_admi"
-                        class="inline-block h-20 w-20 sm:h-32 sm:w-32 rounded-full"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="sm:col-span-6">
+              <div class="sm:col-span-2">
                 <label
                   for="input_name_admi"
                   class="block text-sm font-medium leading-5 text-gray-700"
@@ -334,7 +298,8 @@
                   }}
                 </small>
               </div>
-              <div class="sm:col-span-3">
+
+              <div class="sm:col-span-2">
                 <label
                   for="input_lastnamep_admi"
                   class="block text-sm font-medium leading-5 text-gray-700"
@@ -355,7 +320,7 @@
                 </small>
               </div>
 
-              <div class="sm:col-span-3">
+              <div class="sm:col-span-2">
                 <label
                   for="input_lastnamem_admi"
                   class="block text-sm font-medium leading-5 text-gray-700"
@@ -375,11 +340,51 @@
                   }}
                 </small>
               </div>
+
+              <div class="sm:col-span-4">
+                <label
+                  for="photo"
+                  class="block text-sm leading-5 font-medium text-gray-700"
+                >Foto de Perfil</label>
+                <div class="flex items-center w-full">
+                  <div class="mt-2" v-if="!file_admi">
+                    <label
+                      for="file_admi"
+                      style="cursor: pointer"
+                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                    >Seleccionar imagen</label>
+
+                    <span class="file_admi">
+                      <input
+                        id="file_admi"
+                        type="file"
+                        style="display:none;"
+                        accept="image/png, .jpeg, .jpg"
+                        @change="onFileChange($event,'file_admi')"
+                      />
+                    </span>
+                  </div>
+
+                  <div class="flex items-center w-full" v-else>
+                    <button
+                      @click="removeImage($event,'file_admi')"
+                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out w-full sm:w-1/2"
+                    >Eliminar imagen</button>
+
+                    <div class="text-center w-full">
+                      <img
+                        :src="file_admi"
+                        class="object-cover inline-block h-20 w-20 sm:h-40 sm:w-40 rounded-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div v-show="step==2">
-            <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-4">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
               <div class="sm:col-span-2">
                 <label
                   for="username"
@@ -392,7 +397,7 @@
                     placeholder="Ingrese un nombre de usuario"
                     type="text"
                     required
-                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
                 <small v-if="error_username" class="text-red-600">
@@ -419,7 +424,7 @@
                     placeholder="Ingrese un correo electronico"
                     type="email"
                     required
-                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
                 <small v-if="error_email" class="text-red-600">
@@ -449,7 +454,7 @@
                     v-model="password"
                     type="password"
                     required
-                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
                 <small v-if="error_password" class="text-red-600">
@@ -463,6 +468,8 @@
                   }}
                 </small>
               </div>
+               <!-- Fin de sección de password. -->
+
               <!-- Solicita repetir la contraseña y la valida. -->
               <div class="sm:col-span-2">
                 <label
@@ -476,7 +483,7 @@
                     placeholder="Verifique su contraseña"
                     type="password"
                     required
-                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
                 <small v-if="error_repeat_password" class="text-red-600">
@@ -491,20 +498,22 @@
                 </small>
               </div>
             </div>
+             <!-- Fin de sección de repetir pass. -->
+
             <div class="mt-4 flex text-center justify-between">
               <div class="text-sm leading-5">
                 <span
                   class="font-medium"
-                >Al registrarte estás aceptando los términos y condiciones de uso del servicio SirwiyQuy.</span>
+                >Al registrarte estás aceptando los términos y condiciones de <i>SirwiyQuy</i></span>
               </div>
             </div>
           </div>
 
-          <div class="flex flex-row-reverse mt-6">
+          <div class="flex flex-row-reverse mt-6 mr-5">
             <span class="ml-3 inline-flex rounded-md shadow-sm" v-show="step==2">
               <AnimatedButton
                 content="Completar registro"
-                color="primary"
+                 color="gradiente"
                 @onClick="submitSignup()"
                 :isLoading="buttonLoading"
               ></AnimatedButton>
@@ -515,26 +524,27 @@
               @click="step=step+1"
               class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
             >Siguiente</button>
+
             <button
               v-show="step>0"
               @click="step=step-1"
               type="button"
-              class="py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+              class="py-2 px-4 border border-gray-500 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
             >Anterior</button>
           </div>
 
           <!-- Sección de logeo.
-          Te redirige a la vista de logeo "Login".-->
-          <div class="mt-4 flex text-right justify-between">
-            <div class="text-base leading-5">
-              <span class="font-medium">¿Ya tienes cuenta?</span>
-              <router-link
-                to="/login/enterprise"
-                class="font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
-              >¡Inicia sesión!</router-link>
+            Te redirige a la vista de logeo "Login".-->
+            <div class="mt-6 mb-2 flex text-right justify-between mx-3">
+              <div class="text-base leading-5">
+                <span class="font-medium">¿Ya tienes cuenta?</span>
+                <router-link
+                  to="/login/enterprise"
+                  class="font-bold text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+                >¡Inicia sesión!</router-link>
+              </div>
             </div>
-          </div>
-          <!-- Fin de sección de logeo. -->
+            <!-- Fin de sección de logeo. -->
         </div>
       </div>
     </main>
@@ -608,11 +618,13 @@ export default {
     };
   },
   methods: {
-    //Validacion del DNI con la API
     async validateDNI() {
-      //Se comprueba longitud del campo apenas se llene
       if ((this.dni.length >= 0 && this.dni.length < 8) || (this.dni.length > 8)) {
         this.hasError = true;
+        this.dni_valid = false
+        this.name_admi = "";
+        this.lastnamep_admi = "";
+        this.lastnamem_admi = "";
         this.error_dni = "El DNI debe tener 8 dígitos";
         this.vacio_dni = "";
         return;
@@ -653,11 +665,12 @@ export default {
         dismissible: true
       });
     },
-    //Validacion del numero de RUC con la API
     async validateRUC() {
       //Se comprueba longitud del campo apenas se llene
       if ((this.ruc.length >= 0 && this.ruc.length < 11) || (this.ruc.length > 11)) {
         this.hasError = true;
+        this.ruc_valid = false;
+        this.name_enterprise = "";
         this.error_ruc = "El RUC debe tener 11 dígitos";
         this.vacio_ruc = "";
         return;
@@ -694,8 +707,6 @@ export default {
         dismissible: true,
       });
     },
-
-    //Funcion una vez llenado el formulario
     async submitSignup() {
       this.validateSubmit();
       if (this.hasError) return;
@@ -718,7 +729,7 @@ export default {
         this.buttonLoading = false;
         
         return this.$toast.open({
-          message: '¡La imagen es esencial según nuestras politicas! Por favor, ingrese una ...',
+          message: 'Imagen de la empresa requerida',
           type: "error",
           duration: 8000,
           dismissible: true
@@ -727,7 +738,7 @@ export default {
 
       //Se conecta con la lógica de negocio
       //RUC de  ejemplos en : http://www.sunat.gob.pe/descarga/BueCont/BueCont0.html
-    /*  let response = await api.post(`/signup`, {
+      let response = await api.post(`/signup`, {
         identity: this.identifier,
         username: this.username,
         email: this.email,
@@ -743,7 +754,6 @@ export default {
         DNI: this.dni,
       });
 
-      //Si hay algun error en la creacion del usuario
       if (!response.ok) {
         this.buttonLoading = false;
 
@@ -771,7 +781,6 @@ export default {
         dismissible : true,
       });
 
-      //Si se envia correo con exito
       this.$toast.open({
         message: response.data.data.success2.original.success[0],
         type: "info",
@@ -779,12 +788,12 @@ export default {
         dismissible: true,
       });
 
-      //Redireccionamiento de rutas
-      this.$router.push("/login/enterprise");*/
+      this.$router.push("/login/enterprise");
     },
     validateSubmit() {
       if(this.hasError == true) this.hasError = true;
         else this.hasError = false;
+
       //Validaciones del campo usuario
       if (this.username == "") {
         this.hasError = true;
