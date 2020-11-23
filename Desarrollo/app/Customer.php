@@ -17,8 +17,8 @@ class Customer extends Eloquent implements Authenticatable
      *  * @var array
      */
     protected $fillable = [
-        'username', 'DNI', 'edad', 'file', 'name', 'lastnamep', 'lastnamem', 'email', 'password', 
-        'departamento', 'provincia', 'distrito', 'adress', 'nro_piso','piso_dpto', 'recover'
+        'email', 'password', 'username', 'access', 'DNI', 'edad', 'file', 'name', 'lastnamep', 'lastnamem',
+        'departamento', 'provincia', 'distrito', 'adress', 'recover'
     ];
 
     protected $guarded = [];

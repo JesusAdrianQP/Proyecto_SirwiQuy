@@ -34,7 +34,7 @@
         </div>
         <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
           <div class="flex-shrink-0 flex items-center px-4">
-            <img class="h-12 w-auto" src="../../assets/Sirwiyquy_b.png" alt="Workflow" />
+            <img class="h-12 w-auto" src="../../assets/Logo_Sirwi_b.png" alt="Workflow" />
           </div>
           <nav class="mt-5 px-2">
             <SideBarOptions/>
@@ -42,14 +42,14 @@
         </div>
         <!--SOLO APARECE PARA TRABAJADORES INDEPENDIENTES-->
         <div v-if="acceso == 'employee'" class="flex-shrink-0 flex border-t border-gray-200 p-4">
-          <router-link to="/worker/profile/edit" class="flex-shrink-0 group block focus:outline-none">
+          <router-link to="/supplier/blank" class="flex-shrink-0 group block focus:outline-none">
             <div class="flex items-center">
               <div>
                 <img class="inline-block h-10 w-10 rounded-full" :src="image" alt="" />
               </div>
               <div class="ml-3">
                 <p class="text-base leading-6 font-medium text-gray-700 group-hover:text-gray-900">
-                  {{username}}
+                  {{user}}
                 </p>
                 <p class="text-sm leading-5 font-medium text-gray-500 group-hover:text-gray-700 group-focus:underline transition ease-in-out duration-150">
                   Ver perfil
@@ -64,11 +64,11 @@
         <div v-if="acceso == 'enterprise'" class="flex-shrink-0 border-t border-gray-200 p-4">
           <div class="flex items-center">
             <div>
-              <img class="inline-block h-9 w-9 rounded-full" :src="image_enter" alt="" />
+              <img class="inline-block h-10 w-10 rounded-full" :src="image" alt="" />
             </div>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900">
-                {{username}}
+                {{user}}
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@
     <div class="flex flex-col w-64 border-r border-gray-200 bg-white">
       <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
         <div class="flex items-center flex-shrink-0 px-4">
-          <img class="h-12 w-auto" src="../../assets/Sirwiyquy_b.png" alt="Workflow" />
+          <img class="h-12 w-auto" src="../../assets/Logo_Sirwi_b.png" alt="Workflow" />
         </div>
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <nav class="mt-5 flex-1 px-2 bg-white">
@@ -98,14 +98,14 @@
 
       <!--SOLO APARECE PARA TRABAJADORES INDEPENDIENTES-->
       <div v-if="acceso == 'employee'" class="flex-shrink-0 border-t border-gray-200 p-4">
-        <router-link to="/worker/profile/edit" class="flex-shrink-0 group block">
+        <router-link to="/supplier/blank" class="flex-shrink-0 group block">
           <div class="flex items-center">
             <div>
-              <img class="inline-block h-9 w-9 rounded-full" :src="image" alt="" />
+              <img class="inline-block h-10 w-10 rounded-full" :src="image" alt="" />
             </div>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900">
-                {{username}}
+                {{user}}
               </p>
               <p class="text-xs leading-4 font-medium text-gray-500 group-hover:text-gray-700 transition ease-in-out duration-150">
                 Ver perfil
@@ -120,11 +120,11 @@
       <div v-if="acceso == 'enterprise'" class="flex-shrink-0 border-t border-gray-200 p-4">
         <div class="flex items-center">
           <div>
-            <img class="inline-block h-9 w-9 rounded-full" :src="image_enter" alt="" />
+            <img class="inline-block h-10 w-10 object-cover rounded-full" :src="image" alt="" />
           </div>
           <div class="ml-3">
             <p class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900">
-              {{username}}
+              {{user}}
             </p>
           </div>
         </div>
@@ -168,15 +168,15 @@ export default {
     Footer,
   },
   props: {
-    title: String
+    title: String,
+    user: String,
+    image: String
   },
   data: () => {
     return {
       isOpen: false,
       acceso: localStorage.getItem("e_level"),
-      username: localStorage.getItem("e_username"),
-      image: localStorage.getItem("e_file"),
-      image_enter: localStorage.getItem("e_file_admi")
+      image: localStorage.getItem("e_img")
     }
   }
 }

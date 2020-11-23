@@ -17,7 +17,7 @@ class Employee extends Eloquent implements Authenticatable
      *  * @var array
      */
     protected $fillable = [
-        'username', 'DNI', 'edad', 'file', 'name', 'lastnamep', 'lastnamem', 'email', 'password', 
+        'email', 'password', 'username', 'access', 'DNI', 'edad', 'file', 'name', 'lastnamep', 'lastnamem', 
         'departamento', 'provincia', 'distrito', 'adress', 'cuenta', 'recover'
     ];
 
@@ -29,9 +29,4 @@ class Employee extends Eloquent implements Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function scopeEmployee($query, $id){
-        if($id) return $query->where('_id', '=', $id)
-                             ->select('email');
-    }
 }

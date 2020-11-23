@@ -3,12 +3,10 @@
   Solicita el correo electrónico de registro para
   cambiar la contraseña. --> 
   <Visitor>
-    <div class="text-center py-8">
-    
+    <div class="text-center py-8 min-h-screen flex items-center justify-center">
       <div>
-        <img class="rounded-lg max-h-96 mx-auto" src="../../../assets/illustrations/Construccion_woman.png" alt />
+        <img class="rounded-lg px-4 max-h-96 mx-auto" src="../../../assets/illustrations/under_construction.png" alt />
       </div>
-      <!--h1 class="text-2xl font-semibold text-gray-900">En construcción...</h1-->
     </div>
   </Visitor>
 </template>
@@ -18,7 +16,7 @@
 import Visitor from "../Layouts/Visitor";
 
 export default {
-  name: "BlanckCustomer",
+  name: "BlankCustomer",
   components: {
     Visitor,
   }

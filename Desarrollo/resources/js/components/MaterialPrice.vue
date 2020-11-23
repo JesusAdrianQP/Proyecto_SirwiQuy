@@ -136,50 +136,12 @@ export default {
       materialUpdate: '',
       priceUpdate: '',
       materiales: [],
-      
-      //Precio minimo y precio maximo obtenidos y convertidos a enteros
-      pmini: parseInt(localStorage.getItem('p_min')),
-      pmax: parseInt(localStorage.getItem('p_max')),
 
       vacio_name: '',
       vacio_price: ''
     };
   },
   methods: {
-    createMaterial: function () {
-
-      if(this.name!="" && this.price!=""){
-        this.materiales.push({
-        
-        name: this.name,
-        price: this.price
-        });
-        this.name = '';
-        this.price = '';
-        console.log(this.materiales);
-      }
-      else{
-        alert("Ingrese el nombre y promedio del estudiantes");
-        //submitForm()
-      }
-      
-    },
-    seeUpdateForm: function (material_id){
-      this.idUpdate = material_id;
-      this.materialUpdate = this.materiales[material_id].name;
-      this.priceUpdate = this.materiales[material_id].price;
-
-      this.formUpdate = true;
-    },
-    borrarMaterial: function(material_id){
-      this.materiales.splice(material_id, 1);
-    },
-    guardarActualizacion: function (material_id){
-      this.formUpdate = false;
-
-      this.materiales[material_id].name = this.materialUpdate;
-      this.materiales[material_id].price = this.priceUpdate;
-    },/*
     async createMaterial() {
       this.validateSubmit();
       if (this.hasError) return;
@@ -217,7 +179,7 @@ export default {
       //Se actualiza los nuevos materiales
       this.materiales[material_id].name = this.materialUpdate;
       this.materiales[material_id].price = parseFloat(this.priceUpdate);
-    },*/
+    },
     validateSubmit() {
       this.hasError = false;
 
