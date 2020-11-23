@@ -34,7 +34,7 @@
         </div>
         <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
           <div class="flex-shrink-0 flex items-center px-4">
-            <img class="h-12 w-auto" src="../../assets/Sirwiyquy_b.png" alt="Workflow" />
+            <img class="h-12 w-auto" src="../../assets/Logo_Sirwi_b.png" alt="Workflow" />
           </div>
           <nav class="mt-5 px-2">
             <SideBarOptions/>
@@ -88,7 +88,7 @@
     <div class="flex flex-col w-64 border-r border-gray-200 bg-white">
       <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
         <div class="flex items-center flex-shrink-0 px-4">
-          <img class="h-12 w-auto" src="../../assets/Sirwiyquy_b.png" alt="Workflow" />
+          <img class="h-12 w-auto" src="../../assets/Logo_Sirwi_b.png" alt="Workflow" />
         </div>
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <nav class="mt-5 flex-1 px-2 bg-white">
