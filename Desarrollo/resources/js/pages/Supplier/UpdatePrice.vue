@@ -11,13 +11,13 @@
             <div class="lg:w-1/3">
               <label
                 for="input_max_price"
-                class="py-1  my-4 sm:py-2 block text-base font-medium leading-5 text-gray-700"
+                class="py-1  my-4 sm:py-2 block text-sm font-medium leading-5 text-gray-700"
               >Precio de mano de obra</label>
             </div>
     
             <div class="lg:w-1/3 my-4 py-1">
               
-                  <input placeholder="Ingrese el precio de mano de obra" v-if="actualizarSalario" v-model="salario" type="number" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                  <input v-if="actualizarSalario" v-model="salario" type="number" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                 
                 <span v-if="!actualizarSalario">S/ {{salario}}</span>
             </div>
@@ -35,7 +35,7 @@
               <div class="lg:w-1/4">
                 <label
                   
-                  class="pt-3 sm:py-3 block text-base font-medium leading-5 text-gray-700"
+                  class="pt-3 sm:py-3 block text-sm font-medium leading-5 text-gray-700"
                 >Material</label>
               </div>
               <div class="lg:w-3/4 mt-1 rounded-md shadow-sm">
@@ -57,7 +57,7 @@
               <div class="lg:w-1/4">
                 <label
                   
-                  class="sm:py-3 block text-base font-medium leading-5 text-gray-700"
+                  class="sm:py-3 block text-sm font-medium leading-5 text-gray-700"
                 >Precio</label>
               </div>
               <div class="lg:w-3/4 mt-1 rounded-md shadow-sm">
@@ -81,7 +81,7 @@
                   <button
                     @click= "createMaterial"
                     type="button"
-                    class="py-2 px-5 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                    class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
                   >Agregar</button>
                 </span>
               </div>
@@ -95,37 +95,40 @@
               </div>  
               
               <table class="text-left w-full"> 
-
-                      <div  v-if="!actualizarSalario" >
-                        <tr class="sm:mt-2 grid grid-cols-1 row-gap-6 sm:col-gap-4 sm:grid-cols-6" v-for="(material, index) in materials" :key="index"
+                  <tr>
+                    <th class="sticky top-0 px-6 py-3 text-red-900 bg-red-300">Nombre</th>
+                    <th class="sticky top-0 px-6 py-3 text-red-900 bg-red-300">Precio</th>
+                  </tr>
+                  <tbody class="bg-grey-light flex flex-col items-center justify-between  w-full" >
+                    <tr class="flex w-full mb-4">
+                    <!--<td v-text="material.name"></td>
+                    <td v-text="material.price"></td>
+                    v-for="(material, index) in materials" :key="index"-->
+                    
+                      <div v-if="!actualizarSalario" >
+                        <span v-for="(material, index) in materials" :key="index"
                           >
-                          <td class="lg:flex sm:col-span-2">
+                          <td class="p-4 w-1/4">
                             {{ material.name }}
                           </td>
-                          <td class="lg:flex sm:col-span-2">
+                          <td class="p-4 w-1/4">
                             {{ material.price }}
                           </td>
                            <br
-                        /></tr>
+                        /></span>
                         <br />
                       </div>
 
-                      <div  v-if="actualizarSalario"  >
-                        <div v-for="(material, index) in materials" :key="index" class="sm:mt-2 grid grid-cols-1 row-gap-6 sm:col-gap-4 sm:grid-cols-6" >
-                          <td class="lg:flex sm:col-span-2">
-                            <input placeholder="Ingrese el nombre del material" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" type="text" v-model="material.name" />
-                          </td>
-                          <td class="lg:flex sm:col-span-2">
-                            <input placeholder="Ingrese el precio del material" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" type="number" v-model="material.price" />
-                          </td>
-                          
-                          
+                      <div v-if="actualizarSalario"  >
+                        <div v-for="(material, index) in materials" :key="index">
+                          <input class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" type="text" v-model="material.name" />
+                          <input class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" type="text" v-model="material.price" />
                         </div>
                       </div>
                     
                   
-                  <!--</tr>-->
-                  
+                  </tr>
+                  </tbody>
                   
                   
                 
@@ -140,27 +143,24 @@
 
       <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse .right-4">
         <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
-          <router-link to="/supplier/services">
-            <button  
-                type="button"
-                class="py-2 px-6 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-              >Salir</button>
-            </router-link>
+        <button @click="actualizarSalario=false" 
+            type="button"
+            class="py-2 px-6 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+          >Guardar</button>
         </span>
         <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
-        <button @click="actualizarSalario=false"
+        <button @click="actualizarSalario=true" 
             type="button"
-            class="inline-flex justify-center py-2 px-6 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
-        >Guardar</button>
-        </span>
-        <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
-          
-            <button @click="actualizarSalario=true" 
-            type="button"
-            class="mr-3 inline-flex justify-center py-2 px-8 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
+            class="inline-flex justify-center py-2 px-8 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
         >Actualizar Precio</button>
-          
-        
+        </span>
+        <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
+        <router-link to="/supplier/services">  
+        <button 
+            type="button"
+            class="inline-flex justify-center py-2 px-8 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
+        >sallir</button>
+        </router-link>
         </span>
       </div>
 
