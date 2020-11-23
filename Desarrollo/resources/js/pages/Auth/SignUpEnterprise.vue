@@ -621,6 +621,10 @@ export default {
     async validateDNI() {
       if ((this.dni.length >= 0 && this.dni.length < 8) || (this.dni.length > 8)) {
         this.hasError = true;
+        this.dni_valid = false
+        this.name_admi = "";
+        this.lastnamep_admi = "";
+        this.lastnamem_admi = "";
         this.error_dni = "El DNI debe tener 8 dígitos";
         this.vacio_dni = "";
         return;
@@ -665,6 +669,8 @@ export default {
       //Se comprueba longitud del campo apenas se llene
       if ((this.ruc.length >= 0 && this.ruc.length < 11) || (this.ruc.length > 11)) {
         this.hasError = true;
+        this.ruc_valid = false;
+        this.name_enterprise = "";
         this.error_ruc = "El RUC debe tener 11 dígitos";
         this.vacio_ruc = "";
         return;

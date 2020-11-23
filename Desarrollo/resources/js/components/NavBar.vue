@@ -66,14 +66,14 @@
                 v-on-clickaway="closeProfile"
               >
                 <!-- @click="profileOpen=!profileOpen": Es para constatar que se abra las opciones del menú de perfil-->
-                <img class="h-8 w-8 rounded-full" src="" alt="Perfil" />
+                <img class="h-8 w-8 object-cover rounded-full" :src="foto" alt="Perfil" />
                 <div class="ml-3">
                   <p
                     class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900"
                   >Bienvenido</p>
                   <p
                     class="text-xs leading-4 font-medium text-gray-500 group-hover:text-gray-700 group-focus:underline transition ease-in-out duration-150"
-                  >PRESIDENTE MERINO</p>
+                  >{{usuario}}</p>
                 </div>
                 <IconSvg :solid="false" icon="chevron-down" myClass="h-5 w-5 ml-2 mt-2" />
               </button>
@@ -182,11 +182,11 @@
         <div v-if="isCustomer">
           <div class="flex items-center px-4">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 rounded-full" src=" " alt="Perfil" />
+              <img class="h-10 w-10 object-cover rounded-full" :src="foto" alt="Perfil" />
             </div>
             <div class="ml-3">
               <div class="text-md font-medium leading-6 text-gray-800">Bienvenido</div>
-              <div class="text-base font-medium leading-5 text-gray-500">PRESIDENTE MERINO</div>
+              <div class="text-base font-medium leading-5 text-gray-500">{{usuario}}</div>
             </div>
           </div>
 
@@ -215,6 +215,7 @@
 <script>
 import IconSvg from "./IconSvg.vue";
 import NavBarOption from "./NavBarOption.vue";
+import api from "../api";
 import { mixin as clickaway } from "vue-clickaway";
 
 export default {
@@ -226,9 +227,13 @@ export default {
   data: () => {
     return {
       isOpen: false,
-      profileOpen: false,
-      isCustomer: localStorage.getItem("e_level") == "customer",
+      profileOpen: false
     };
+  },
+  props: {
+    isCustomer: Boolean,
+    usuario: String,
+    foto: String
   },
   methods: {
     isMenu(){
@@ -237,8 +242,19 @@ export default {
 
       this.$el.querySelector('.wrapper-menu').classList.toggle("open");
     },
-    logout(){
-      //Code para cerrar sesión de un cliente
+    closeProfile: function () {
+      if (this.profileOpen) this.profileOpen = false;
+    },
+    async logout(){
+      await api.post(`/changeAccess`, {
+        level: localStorage.getItem('e_level'),
+        token: localStorage.getItem('token')
+      });
+
+      localStorage.removeItem('token');
+      localStorage.removeItem('e_level');
+      
+      window.location.reload();
     }
   },
 };

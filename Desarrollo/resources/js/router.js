@@ -18,6 +18,7 @@ import CreatePrice from "./pages/Supplier/CreatePrice.vue";
 import ServiceList from "./pages/Supplier/ServiceList.vue";
 import UpdateService from "./pages/Supplier/UpdateService.vue";
 import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
+import SuppliersBlank from "./pages/Supplier/Blank.vue";
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
@@ -30,7 +31,7 @@ import { isElement } from "lodash";
 //Verifica si el visitante no posee id o es un cliente logeado
 const isUnique = (to, from, next) => {
     if (
-        localStorage.getItem("e_id") == null ||
+        localStorage.getItem("e_level") == null ||
         localStorage.getItem("e_level") == "customer"
     ) {
         next();
@@ -41,7 +42,7 @@ const isUnique = (to, from, next) => {
 
 //Verifica si un usuario esta como visitante
 const isGuest = (to, from, next) => {
-    if (localStorage.getItem("e_id") == null) {
+    if (localStorage.getItem("e_level") == null) {
         next();
         return;
     }
@@ -51,8 +52,7 @@ const isGuest = (to, from, next) => {
 //Verifica si son proveedores son los usuarios entrantes
 const isSupplier = (to, from, next) => {
     if (
-        localStorage.getItem("e_level") == "employee" || 
-        localStorage.getItem("e_level") == "enterprise"
+        localStorage.getItem("e_level") == "employee"
     ) {
         if (
             (localStorage.getItem("e_DNI") == undefined ||
@@ -62,6 +62,11 @@ const isSupplier = (to, from, next) => {
             next("/worker/profile/edit");
             return;
             }
+        next();
+        return;
+    }else if(
+        localStorage.getItem("e_level") == "enterprise"
+    ){
         next();
         return;
     }
@@ -122,25 +127,35 @@ export default new VueRouter({
         },
         {
             path: "/supplier/service/create",
-            component: CreateService
+            component: CreateService,
+            beforeEnter: isSupplier
         },
         {
             path: "/supplier/create/price",
             component: CreatePrice,
+            beforeEnter: isSupplier
         },
         {
             path: "/supplier/services",
-            component: ServiceList,            
+            component: ServiceList,    
+            beforeEnter: isSupplier        
         },
         {
             path: "/supplier/:id/service/update",
             component: UpdateService,
-            props: true
+            props: true,
+            beforeEnter: isSupplier
         },
         {
             path: "/supplier/:id/price/update",
             component: UpdatePrice,
-            props: true
+            props: true,
+            beforeEnter: isSupplier
+        },
+        {
+            path: "/supplier/blank",
+            component: SuppliersBlank,
+            beforeEnter: isSupplier
         },
         //Ruta solo para trabajador
         {

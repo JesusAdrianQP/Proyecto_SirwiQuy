@@ -1,6 +1,6 @@
 <template>
   <SideBar title="Actualización de Precio">
-    <div class="bg-white mx-4 px-6 py-5 sm:px-6 mx-2 overflow-hidden shadow rounded-lg">
+    <div class="bg-white mx-4 px-6 py-5 sm:px-6 overflow-hidden shadow rounded-lg">
       
       <!--Sección de mano de obra y materiales-->
       <div>

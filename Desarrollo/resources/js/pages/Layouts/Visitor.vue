@@ -4,7 +4,10 @@
       Se agrega la navbar y el landing footer como denominador comun 
       para todos las interfaces
     -->
-    <NavBar />
+    <NavBar
+      :isCustomer="isCustom"
+      :usuario="user"
+      :foto="photo" />
     <slot></slot>
     <LandingFooter/>
   </div>
@@ -19,6 +22,11 @@ export default {
   components: {
     NavBar,
     LandingFooter
+  },
+  props: {
+    isCustom: Boolean,
+    user: String,
+    photo: String
   }
 }
 </script>

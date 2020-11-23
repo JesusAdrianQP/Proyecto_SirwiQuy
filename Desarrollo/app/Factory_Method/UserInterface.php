@@ -14,5 +14,11 @@ interface UserInterface
 
     public static function getUser($parameter1, $parameter2);
 
+    public static function getToken($parameter1, $parameter2);
+
     public static function register($parameter);
+
+    public static function updatetoken($parameter);
+
+    public static function update($parameter);
 }

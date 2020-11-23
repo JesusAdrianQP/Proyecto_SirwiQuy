@@ -9,13 +9,20 @@ use App\DataBase\UserDataMaster;
 
 class LoginController extends Controller
 {
-    //Funcion que recibe credenciales para el acceso a la sesión correspondiente
     public function login(LoginFormRequest $request){
-        return UserDataMaster::into_sesion($request);    
+        if($request->identity == "manager") return UserDataMaster::openManager($request);
+        else return UserDataMaster::into_sesion($request);    
     }
 
-    //Funcion que recibe parametros de un usuario para insertarlo en la data
     public function signup(RegisterRequest $request){
         return UserDataMaster::create_sesion($request);
-    } 
+    }
+
+    public function getUser(Request $request){
+        return UserDataMaster::validate($request);
+    }
+
+    public function close(Request $request){
+        UserDataMaster::closesesion($request);
+    }
 }

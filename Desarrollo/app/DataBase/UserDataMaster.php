@@ -20,7 +20,7 @@ class UserDataMaster{
 
             if($user_valid::validationemail($user->loger)){
                 if($user_valid::validationpass($param, $user->loger, $user->password))
-                    return $user_valid::getUser($param, $user->loger);
+                    return $user_valid::getToken($param, $user->loger);
                 else 
                     return response()->json(['errors' => ['pass' => ['Contraseña incorrecta']]], 422);
             }
@@ -29,15 +29,20 @@ class UserDataMaster{
         else{
             $param = 2;
 
-            if ($user_valid::validationusername($user->loger)) 
-            {
+            if ($user_valid::validationusername($user->loger)){
                 if ($user_valid::validationpass($param, $user->loger, $user->password)) 
-                    return $user_valid::getUser($param, $user->loger);
+                    return $user_valid::getToken($param, $user->loger);
                 else
                     return response()->json(['errors' => ['pass' => ['Contraseña incorrecta']]], 422);
             } 
             else return response()->json(['errors' => ['user' => ['Su usuario no es válido']]], 422);
         }
+    }
+
+    public static function openManager($user){
+        //Lógica de la clase administrador
+        //Solo requiere de user y pass propiamente definido
+        //Admi - Admi
     }
 
     public static function create_sesion($user){
@@ -65,5 +70,62 @@ class UserDataMaster{
         for($i=0;$i < $longitud;$i++) $key .= $pattern{mt_rand(0,$max)};
          
         return $key;
+    }
+
+    public static function validate($user){
+        $level = UserDataMaster::getIdentity($user->level);
+
+        $user_valid = UserFactory::make($level);
+        $usercheck = $user_valid::getUser(3, $user->token);
+
+        if($usercheck){
+            return $usercheck;
+        }
+        else return response()->json(['errors' => ['false' => ['Error fatal']]], 422); ;
+    }
+
+    public static function getIdentity($id){
+        switch($id)
+        {
+            case "customer":
+                $identifier = "cliente";
+            break;
+
+            case "employee":
+                $identifier = "trabajador";
+            break;
+
+            case "enterprise":
+                $identifier = "empresa";
+            break;
+
+            default:
+                throw new Exception(
+                    "Error -> No se reconoce el identificador enviado"
+                );
+        };
+
+        return $identifier;
+    }
+
+    public static function closesesion($id){
+        $level = UserDataMaster::getIdentity($id->level);
+
+        $user_valid = UserFactory::make($level);
+        $user_valid::updatetoken($id->token);
+    }
+
+    public static function update_users($user){
+        $level = UserDataMaster::getIdentity($user->level);
+
+        $user_update = UserFactory::make($level);
+
+        return $user_update::update($user);
+    }
+
+    public static function details($user){
+        //$details = UserFactory::make($user->ide);
+
+        //return $details::list_details($user->id_provider);
     }
 }

@@ -4,6 +4,7 @@ namespace App\DataBase;
 
 use App\Service;
 use App\Price;
+use App\DataBase\UserDataMaster;
 use App\Http\Controllers\MailController;
 
 class ServiceData
@@ -16,6 +17,56 @@ class ServiceData
         return response()->json([
             'paginate' => $services
         ]);
+    }
+
+    public static function listid($id){
+        $services_id = Service::where('token', '=', $id->ide)->get();
+
+        return response()->json([
+            'servicios' => $services_id
+        ]);
+    }
+
+    public static function register($new_service){
+        //Verifico que mi usuario no haya publicado más de 3 anuncios
+        if(Service::where('token', '=', $new_service->id)->count()<3){
+            //Se crea una nueva colección
+            $service = new Service();
+            $access = new UserDataMaster();
+
+            $aux = $access->getCodigo(50);
+
+            //Guardo los datos en mi colección
+            $service->id = $aux;
+            $service->identity = $new_service->level;
+            $service->token = $new_service->id;
+            $service->title = $new_service->title;
+            $service->description = $new_service->description;
+            $service->category = $new_service->category;
+            $service->distrito = $new_service->district;
+            $service->calificacion = 0;
+            $service->precio = (int) $new_service->price;
+            $service->file = $new_service->photo;
+
+            $service->save();
+
+            ServiceData::register_price($aux, $new_service->price, $new_service->materials);
+
+            return response()->json([
+                'success' => 'Su servicio ha sido creado',
+            ], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['No se puede tener más de 3 servicios activos']]], 422);
+    }
+
+    public static function register_price($id_service, $price, $mat){
+        $price = new Price();
+
+        $price->price_mdo = $price;
+        $price->materials = $mat;
+        $price->id_service = $id_service;
+
+        $price->save();
     }
 
     //Funcion de actualizacion de datos de servicio
@@ -70,36 +121,5 @@ class ServiceData
 
             return response()->json(['success' => ['Cambios guardados']], 200);
         }else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
-    }
-
-    //Funcion de una cotización nueva perteneciente a un servicio
-    public static function register_price($new_price)
-    {
-        //Actualizamos el precio maximo solo si es necesario
-        if($new_price->pmax != 0)
-        {
-            $service = Service::find($new_price->id_service); //Encontramos el servicio
-            $service->precioMax = (int) $new_price->pmax; //Actualizamos
-            $service->save(); //Guardamos
-        } 
-
-        //Para evitar vulnerabilidades hacemos que la relacion sea uno con uno
-        if(!Price::where('id_service', '=', $new_price->id_service)->first())
-        {
-            //Se crea una nueva colección
-            $price = new Price();
-
-            $price->price_mdo = $new_price->laboral;
-            $price->materials = $new_price->materials;
-            $price->id_service = $new_price->id_service;
-
-             // Guardamos en base de datos
-            $price->save();
-
-            return response()->json([
-                'success' => 'Cotización generada con éxito',
-            ], 200);
-        }
-        else return response()->json(['errors' => ['fail' => ['Acceso Denegado!']]], 422);
     }
 }
