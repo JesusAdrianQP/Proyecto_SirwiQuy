@@ -19,7 +19,7 @@
         <meta property="og:url" content="https://"/>
         <meta property="og:site_name" content="SirwiyQuy"/>
     
-        <title>Hogar de Servicio | SirwiyQuy</title>
+        <title>SirwiyQuy | Hogar de Servicios</title>
         <link rel="shortcut icon" href="{{ asset('images/Sirwiyquy_b.ico') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/custom_app.css') }}">
@@ -27,7 +27,7 @@
 
     <body class="contenedor">
         <!--Pre carga de la página-->
-        <div id="loader" class="loading1 fixed top-0 right-0 h-screen w-screen z-50 flex justify-center items-center bg-primary-500">
+        <div id="loader" class="loading1 fixed top-0 right-0 h-screen w-screen z-50 flex justify-center items-center bg-primary-600">
             <svg class="w-40 md:w-64 lg:w-66 overflow-visible" viewBox="0 0 100 100">
                 <g class="points"> 
                     <circle class="ciw" cx="50" cy="50" r="50" fill="#fff"  />

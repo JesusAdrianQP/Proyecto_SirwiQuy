@@ -33,26 +33,26 @@
               </div>
               <div class="flex items-center mt-1 gap-2">
                 <p class="text-gray-900 font-bold leading-none">Rango de costo: </p>
-                <p class="text-gray-900 leading-none"> S/. {{min_price}} a S/. {{max_price}}</p>
+                <p class="text-gray-900 leading-none"> Desde s/ {{price}}</p>
               </div>
                     
             </div>
             <div class="inline-flex">
               <!--Boton de actualizar - sirve para actualizar precios-->
               <router-link :to="'/supplier/'+id+'/price/update'">
-                <span class="mx-2 text-sm text-center inline-flex rounded-md shadow-sm text-sm text-green-500 hover:text-green-800 hover:underline">
+                <span class="mx-2  text-center inline-flex rounded-md shadow-sm text-sm text-green-500 hover:text-green-800 hover:underline">
                   Actualizar precio
                 </span>
               </router-link>
             <!--Boton de actualizar - sirve para actualizar servicios-->
               <router-link :to="'/supplier/'+id+'/service/update'">
-                <span class="mx-2 text-sm text-center inline-flex rounded-md shadow-sm text-sm text-blue-500 hover:text-blue-800 hover:underline">
+                <span class="mx-2  text-center inline-flex rounded-md shadow-sm text-sm text-blue-500 hover:text-blue-800 hover:underline">
                   Actualizar servicio
                 </span>
               </router-link>
             <!--Boton de borrar - sirve para borrar servicios-->
               
-                <button @click="borrarServicio(id)" class="mx-2 text-sm text-center inline-flex rounded-md shadow-sm text-sm text-red-500 hover:text-red-800 hover:underline">
+                <button @click="borrarServicio(id)" class="mx-2 text-center inline-flex rounded-md shadow-sm text-sm text-red-500 hover:text-red-800 hover:underline">
                   Eliminar servicio
                 </button>
               
@@ -79,19 +79,12 @@ export default {
     title: String,
     description: String,
     address: String,
-    min_price: String,
-    max_price: String,
+    price: String,
 
-    servicios: [],
   },
   methods: {
     async borrarServicio(servicio_id){
-      //Se elimina solo un servicio desde la posición index
-      //this.servicios.splice(servicio_id, 1);
-
-      //Conexión con la lógica de borrado
-
-      
+     
     }
     
   }

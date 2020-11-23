@@ -3,160 +3,167 @@
   Solicita al usuario nuevo un nombre de usuario,
   un correo y una contraseña para poder registrarlo. hi-->
   <Visitor>
-    <main class="flex flex-col justify-center py-8 sm:px-6 lg:px-8">
-      <div class="sm:mx-auto">
-        <img class="mx-auto h-36 w-auto" src="../../../assets/Sirwiyquy_b.png" alt="Workflow" />
-        <h2
-          class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900"
-        >Crear cuenta como <br>{{identifier}}</h2>
-      </div>
-
-      <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-md">
-        <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <!-- Sección de ingreso de usuario.
-          Solicita un nombre de usuario y lo valida.-->
-          <div>
-            <label for="username" class="block text-sm font-medium leading-5 text-gray-700">Usuario</label>
-            <div class="mt-1 rounded-md shadow-sm">
-              <input
-                id="username"
-                v-model="username"
-                placeholder="Ingrese un nombre de usuario"
-                type="text"
-                required
-                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-              />
-            </div>
-            <small v-if="error_username" class="text-red-600">
-              {{
-              error_username
-              }}
-            </small>
-            <small v-if="vacio_username" class="text-yellow-600">
-              {{
-              vacio_username
-              }}
-            </small>
-          </div>
-          <!-- Fin de sección de ingreso de usuario. -->
-
-          <!-- Sección de ingreso de correo.
-          Solicita un correo electrónico y lo valida.-->
-          <div class="mt-2">
-            <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
-            <div class="mt-1 rounded-md shadow-sm">
-              <input
-                id="email"
-                v-model="email"
-                placeholder="Ingrese un correo electronico"
-                type="email"
-                required
-                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-              />
-            </div>
-            <small v-if="error_email" class="text-red-600">
-              {{
-              error_email
-              }}
-            </small>
-            <small v-if="vacio_email" class="text-yellow-600">
-              {{
-              vacio_email
-              }}
-            </small>
-          </div>
-          <!-- Fin de sección de ingreso de correo. -->
-
-          <!-- Sección de ingreso de contraseña.
-          Solicita una contraseña y la valida.-->
-          <div class="mt-2">
-            <label
-              for="password"
-              class="block text-sm font-medium leading-5 text-gray-700"
-            >Contraseña</label>
-            <div class="mt-1 rounded-md shadow-sm">
-              <input
-                id="password"
-                placeholder="Ingrese una contraseña"
-                v-model="password"
-                type="password"
-                required
-                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-              />
-            </div>
-            <small v-if="error_password" class="text-red-600">
-              {{
-              error_password
-              }}
-            </small>
-            <small v-if="vacio_pass" class="text-yellow-600">
-              {{
-              vacio_pass
-              }}
-            </small>
-          </div>
-          <!-- Solicita repetir la contraseña y la valida. -->
-          <div class="mt-2">
-            <label
-              for="repeat_password"
-              class="block text-sm font-medium leading-5 text-gray-700"
-            >Repetir Contraseña</label>
-            <div class="mt-1 rounded-md shadow-sm">
-              <input
-                id="repeat_password"
-                v-model="repeat_password"
-                placeholder="Verifique su contraseña"
-                type="password"
-                required
-                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-              />
-            </div>
-            <small v-if="error_repeat_password" class="text-red-600">
-              {{
-              error_repeat_password
-              }}
-            </small>
-            <small v-if="vacio_repeat_pass" class="text-yellow-600">
-              {{
-              vacio_repeat_pass
-              }}
-            </small>
-          </div>
-          <!-- Fin de sección de ingreso de contraseña. -->
-
-          <div class="mt-6">
-            <span class="block w-full rounded-md shadow-sm">
-              <AnimatedButton
-                content="Registrar"
-                color="primary"
-                @onClick="submitSignup()"
-                :isLoading="buttonLoading"
-              ></AnimatedButton>
-            </span>
-          </div>
-
-          <div class="mt-4 flex text-center justify-between">
-            <div class="text-sm leading-5">
-              <span
-                class="font-medium"
-              >Al registrarte estás aceptando los términos y condiciones de uso del servicio SirwiyQu.</span>
-            </div>
-          </div>
-
-          <!-- Sección de logeo.
-          Te redirige a la vista de logeo "Login".-->
-          <div class="mt-6 flex text-right justify-between">
-            <div class="text-base leading-5">
-              <span class="font-medium">¿Ya tienes cuenta?</span>
-              <router-link
-                :to="'/login/'+routes"
-                class="font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
-              >¡Inicia sesión!</router-link>
-            </div>
-          </div>
-          <!-- Fin de sección de logeo. -->
+    <main class="flex flex-col justify-center pt-2 pb-4 bg-gray-100">
+        <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
+         
+          <img class="h-50 sm:h-56 lg:h-48 px-6 w-auto mt-4" src="../../../assets/illustrations/sign-up.png" alt="avatar" />
+          
+          <p class="uppercase px-5 mt-4 text-3xl md:text-4xl font-extrabold text-gray-900"
+          >Crear cuenta </p>
+        
+          <p class="px-5 text-sm">Esta cuenta sera creada para un usuario de tipo <b class="text-base2 italic">{{identifier}}</b></p>
         </div>
-      </div>
+
+        <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8">
+          <div class="bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10">
+            <!-- Sección de ingreso de usuario.
+            Solicita un nombre de usuario y lo valida.-->
+            <div class="grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1">
+              <div class="sm:col-span-2">
+                <label for="username" class="block text-sm font-medium leading-5 text-gray-700">Usuario</label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    id="username"
+                    v-model="username"
+                    placeholder="Ingrese un nombre de usuario"
+                    type="text"
+                    required
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                </div>
+                <small v-if="error_username" class="text-red-600">
+                  {{
+                  error_username
+                  }}
+                </small>
+                <small v-if="vacio_username" class="text-yellow-600">
+                  {{
+                  vacio_username
+                  }}
+                </small>
+              </div>
+              <!-- Fin de sección de ingreso de usuario. -->
+
+              <!-- Sección de ingreso de correo.
+              Solicita un correo electrónico y lo valida.-->
+              <div class="sm:col-span-2">
+                <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    id="email"
+                    v-model="email"
+                    placeholder="Ingrese un correo electronico"
+                    type="email"
+                    required
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                </div>
+                <small v-if="error_email" class="text-red-600">
+                  {{
+                  error_email
+                  }}
+                </small>
+                <small v-if="vacio_email" class="text-yellow-600">
+                  {{
+                  vacio_email
+                  }}
+                </small>
+              </div>
+              <!-- Fin de sección de ingreso de correo. -->
+
+              <!-- Sección de ingreso de contraseña.
+              Solicita una contraseña y la valida.-->
+              <div class="sm:col-span-2">
+                <label
+                  for="password"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                >Contraseña</label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    id="password"
+                    placeholder="Ingrese una contraseña"
+                    v-model="password"
+                    type="password"
+                    required
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                </div>
+                <small v-if="error_password" class="text-red-600">
+                  {{
+                  error_password
+                  }}
+                </small>
+                <small v-if="vacio_pass" class="text-yellow-600">
+                  {{
+                  vacio_pass
+                  }}
+                </small>
+              </div>
+              <!-- Fin de sección ingresar contraseña. -->
+
+              <!-- Solicita repetir la contraseña y la valida. -->
+              <div class="sm:col-span-2">
+                <label
+                  for="repeat_password"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                >Repetir Contraseña</label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    id="repeat_password"
+                    v-model="repeat_password"
+                    placeholder="Verifique su contraseña"
+                    type="password"
+                    required
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                </div>
+                <small v-if="error_repeat_password" class="text-red-600">
+                  {{
+                  error_repeat_password
+                  }}
+                </small>
+                <small v-if="vacio_repeat_pass" class="text-yellow-600">
+                  {{
+                  vacio_repeat_pass
+                  }}
+                </small>
+              </div>
+              <!-- Fin de sección de ingreso de repet contraseña. -->
+            </div>
+
+            <div class="mt-8">
+              <span class="block w-2/3 mx-auto rounded-md shadow-sm">
+                <AnimatedButton
+                  content="Registrar"
+                  color="gradiente"
+                  @onClick="submitSignup()"
+                  :isLoading="buttonLoading"
+                ></AnimatedButton>
+              </span>
+            </div>
+
+            <div class="mt-4 flex text-center justify-between">
+              <div class="text-sm leading-5">
+                <span
+                  class="font-medium"
+                >Al registrarte estás aceptando los términos y condiciones de <i>SirwiyQuy</i></span>
+              </div>
+            </div>
+
+            <!-- Sección de logeo.
+            Te redirige a la vista de logeo "Login".-->
+            <div class="mt-6 mb-2 flex text-right justify-between mx-3">
+              <div class="text-base leading-5">
+                <span class="font-medium">¿Ya tienes cuenta?</span>
+                <router-link
+                  :to="'/login/' + routes"
+                  class="font-bold text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+                >¡Inicia sesión!</router-link>
+              </div>
+            </div>
+            <!-- Fin de sección de logeo. -->
+          </div>
+        </div>
     </main>
   </Visitor>
 </template>
@@ -200,21 +207,37 @@ export default {
   props: {
     identity: String, //Ruta de tipo de usuario traida en primer plano
   },
-  //Funcion que se implementa cuando se esta construyendo el componente
   async created() {
-    //Se crea condicionales para verificar de donde proviene
-    //Una vez cargado no se cambiara el valor hasta que se recarge o vaya a otra pestaña diferente
-    if (this.identity == "customer") {
-      this.identifier = "cliente";
-      this.routes = "customer";
-    } else if (this.identity == "employee") {
-      this.identifier = "trabajador";
-      this.routes = "employee";
-    } else this.$router.push("/login");
+    this.validateRouter(this.identity);
+  },
+  watch: { 
+    identity: function(newVal, oldVal) {
+      this.validateRouter(newVal);
+    },
   },
   methods: {
+    async validateRouter(id){
+      //Se crea condicionales para verificar de donde proviene
+      //Una vez cargado no se cambiara el valor hasta que se recarge o vaya a otra pestaña diferente
+      switch(id)
+      {
+        case "customer":
+          this.identifier = "cliente";
+          this.routes = "customer";
+        break;
+
+        case "employee":
+          this.identifier = "trabajador";
+          this.routes = "employee";
+        break;
+
+        default:
+          this.$router.push("/**"); 
+        break;
+      };
+    },
     async submitSignup() {
-      /*this.validateSubmit();
+      this.validateSubmit();
       if (this.hasError) return;
       this.buttonLoading = true;
 
@@ -267,11 +290,10 @@ export default {
 
       //Redireccionamiento de rutas
       if (this.identifier == "trabajador") this.$router.push("/login/employee");
-      else this.$router.push("/login/customer");*/
+      else this.$router.push("/login/customer");
     },
     validateSubmit() {
-      if(this.hasError == true) this.hasError = true;
-        else this.hasError = false;
+      this.hasError = false;
 
       //Validaciones del campo usuario
       if (this.username == "") {
