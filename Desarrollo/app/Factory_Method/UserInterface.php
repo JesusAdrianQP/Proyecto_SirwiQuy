@@ -14,4 +14,5 @@ interface UserInterface
 
     public static function getUser($parameter1, $parameter2);
 
+    public static function register($parameter);
 }

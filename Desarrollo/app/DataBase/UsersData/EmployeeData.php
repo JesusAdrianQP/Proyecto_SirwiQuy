@@ -2,54 +2,52 @@
 
 namespace App\DataBase\UsersData;
 
-use App\Notifications;
-use App\Service;
 use App\Factory_Method\UserInterface;
+use App\DataBase\UserDataMaster;
 use Illuminate\Http\Response;
 use App\Employee;
 use Illuminate\Support\Facades\Hash;
 
 class EmployeeData implements UserInterface
 {
-    //Funcion de validacion de mail
-    public static function validationemail($mail): Bool
-    {
-        //Se valida la existencia
+    public static function validationemail($mail): Bool{
         $response = Employee::where('email', '=', $mail)->first();
         
         if($response) return true;
         else return false;
     }
 
-    //Funcion de validacion de nombre de usuario
-    public static function validationusername($username): Bool
-    {
-        //Se valida la existencia
+    public static function validationusername($username): Bool{
         $response = Employee::where('username', '=', $username)->first();
         
         if($response) return true;
         else return false;
     }
 
-    //Funcion de validacion de password
-    public static function validationpass($param, $loger, $pass): Bool
-    {
-        //Obtengo el usuario
+    public static function validationpass($param, $loger, $pass): Bool{
         $worker = EmployeeData::getUser($param, $loger);    
 
-        //Se valida si esta correcto
         $response = Hash::check($pass, $worker->password);
         
         if($response) return true;
         else return false;
     }
 
-    //Funcion que obtiene el usuario
-    public static function getUser($par, $loger)
-    {
-        //Encuentro mi usuario
+    public static function getUser($par, $loger){
         if($par == 1) return Employee::where('email', '=', $loger)->first();
         else return Employee::where('username', '=', $loger)->first();
     }
 
+    public static function register($new_user)
+    {
+        $acess = new UserDataMaster();
+        $employee = new Employee();
+        
+        $employee->email = $new_user->email;
+        $employee->password = bcrypt($new_user->password);
+        $employee->username = $new_user->username;
+        $employee->acess = $acess->getCodigo(30);
+
+        $employee->save();
+    }
 }

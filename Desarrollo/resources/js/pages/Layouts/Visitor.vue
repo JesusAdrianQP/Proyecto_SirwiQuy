@@ -1,5 +1,9 @@
 <template>
-  <div id="app" class="bg-gray-100 relative min-h-screen">
+  <div id="app" class="bg-white relative min-h-screen">
+    <!--
+      Se agrega la navbar y el landing footer como denominador comun 
+      para todos las interfaces
+    -->
     <NavBar />
     <slot></slot>
     <LandingFooter/>

@@ -6,13 +6,11 @@
       <main class>
         <div class="bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
           <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <img class="mx-auto h-36 w-auto" src="../../../assets/Sirwiyquy_b.png" alt="Workflow" />
+            <img class="mx-auto h-28 w-auto" src="../../../assets/Sirwiyquy_b.png" alt="Workflow" />
             <h2
               class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900"
             >Ingresa a tu cuenta</h2>
-            <!--p
-              class="text-center text-3x1 leading-9 text-gray-900"
-            >Usted entrará como un(a): {{identifier}}</p-->
+            
           </div>
 
           <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-md">

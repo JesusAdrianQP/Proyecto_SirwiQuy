@@ -1,8 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import ServiceList from "./pages/Supplier/ServiceList.vue";
-import UpdateService from "./pages/Supplier/UpdateService.vue";
-import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
+
 //Importaciones generales
 import Index from "./pages/Index.vue";
 import NotFound from "./pages/NotFound.vue";
@@ -12,18 +10,22 @@ import JoinUs from "./pages/JoinUs.vue";
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
 import Login from "./pages/Auth/Login.vue";
 import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
-import CreateService from "./pages/Supplier/CreateService.vue";
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
+import CreateService from "./pages/Supplier/CreateService.vue";
+import CreatePrice from "./pages/Supplier/CreatePrice.vue";
+import ServiceList from "./pages/Supplier/ServiceList.vue";
+import UpdateService from "./pages/Supplier/UpdateService.vue";
+import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
+
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
+
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
 
-import CreatePrice from "./pages/Supplier/CreatePrice.vue";
 import { isElement } from "lodash";
-
 
 //Verifica si el visitante no posee id o es un cliente logeado
 const isUnique = (to, from, next) => {
@@ -108,37 +110,23 @@ export default new VueRouter({
             props: true
         },
         {
-            path: "/supplier/create/price",
-            component: CreatePrice,
-        },
-
-        {
             path: "/signup/enterprise",
             component: SignUpEnterprise,
             beforeEnter: isGuest
-        },
-        //Ruta solo para trabajador
-        {
-            path: "/worker/profile/edit",
-            component: EditProfile,
-            beforeEnter: isWorker
-        },
+        },        
         //Rutas de los proveedores
         {
             path: "/supplier",
             component: Home,
             beforeEnter: isSupplier
         },
-
         {
             path: "/supplier/service/create",
             component: CreateService
         },
-
-        //Ruta no registrada
         {
-            path: "*",
-            component: NotFound
+            path: "/supplier/create/price",
+            component: CreatePrice,
         },
         {
             path: "/supplier/services",
@@ -154,5 +142,17 @@ export default new VueRouter({
             component: UpdatePrice,
             props: true
         },
+        //Ruta solo para trabajador
+        {
+            path: "/worker/profile/edit",
+            component: EditProfile,
+            beforeEnter: isWorker
+        },
+        //Ruta no registrada
+        {
+            path: "*",
+            component: NotFound
+        },
+        
     ]
 });

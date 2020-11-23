@@ -1,5 +1,5 @@
 <template>
-  <footer class="bordredound inset-x-0 bottom-0 bg-primary-500 text-white pt-6 pb-4 px-4">
+  <footer class="inset-x-0 bottom-0 bg-primary-500 text-white pt-6 pb-4 px-4">
     <div class="mx-auto md:px-2 container overflow-hidden flex flex-col md:flex-row justify-between">
       <!--Logotipo-->
       <a href="/" class="md:mt-8 lg:mt-1 lg:ml-1 md:ml-4 block mr-4 w-full lg:w-1/3">

@@ -4,14 +4,8 @@
   -->
   <Visitor>
     <main>
-      <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <ServiceList 
-          :title="title"
-          :district="district"
-          :category="category"
-          :prices="prices"
-          :value="value"
-        />
+      <div class="max-w-7xl mx-auto">
+        <ServiceList/>
       </div>
     </main>
   </Visitor>
@@ -26,18 +20,6 @@ export default {
   components: {
     ServiceList,
     Visitor
-  },
-  data: () => {
-    return {
-      title: '',
-      district: '',
-      category: 'all',
-      prices: {
-        pmin : '',
-        pmax : ''
-      },
-      value: null
-    }
   },
 }
 </script>
