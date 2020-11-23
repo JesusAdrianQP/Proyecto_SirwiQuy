@@ -12,8 +12,6 @@
         placeholder="Ingrese el precio de la mano de obra"
         id="input_labor_price"
         type="number"
-        :min="pmini"
-        :max="pmax"
         v-model="labor_price"
         @change="getValue_labprice"
         class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
@@ -40,10 +38,6 @@ export default {
       hasError: false,
       labor_price: '',
       
-      //Precio minimo y precio maximo obtenidos y convertidos a enteros
-      pmini: parseInt(localStorage.getItem('p_min')),
-      pmax: parseInt(localStorage.getItem('p_max')),
-      
       error_lab: '',
       vacio_lab: ''
     };
@@ -61,18 +55,7 @@ export default {
     validateSubmit() {
         this.hasError = false;
 
-        //Condicionales del precio ingresado
-        if (this.labor_price > this.pmax){
-          this.hasError = true;
-          this.error_lab = "El precio ingresado es mayor a "+ this.pmax;
-          this.vacio_lab = "";
-        }
-        else if(this.labor_price > 0 && this.labor_price < this.pmini){
-          this.hasError = true;
-          this.error_lab = "El precio ingresado es menor a "+ this.pmini;
-          this.vacio_lab = "";
-        }
-        else if(this.labor_price == ""){
+       if(this.labor_price == ""){
           this.hasError = true;
           this.error_lab = "";
           this.vacio_lab = "Campo Necesario";

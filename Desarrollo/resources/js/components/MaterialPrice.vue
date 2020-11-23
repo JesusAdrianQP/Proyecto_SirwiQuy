@@ -136,10 +136,6 @@ export default {
       materialUpdate: '',
       priceUpdate: '',
       materiales: [],
-      
-      //Precio minimo y precio maximo obtenidos y convertidos a enteros
-      pmini: parseInt(localStorage.getItem('p_min')),
-      pmax: parseInt(localStorage.getItem('p_max')),
 
       vacio_name: '',
       vacio_price: ''
