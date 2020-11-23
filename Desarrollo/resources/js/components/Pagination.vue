@@ -48,14 +48,7 @@ import api from "../api";
 
 export default {
   props: {
-    //Se hereda del componente padre
     type_pag: String,
-    title: String,
-    department: String,
-    category: String,
-    prices: Object,
-    calification: Boolean,
-    filter:String,
   },
   data: () => {
     return {
@@ -69,9 +62,7 @@ export default {
       },
       services: [],
       offset: 3,
-      pmin: '',
-      pmax: '',
-      value: 0
+      loading: true,
     }
   },
   async mounted() {
@@ -103,8 +94,6 @@ export default {
   methods: {
     async getPagesIndex(page){
 
-      this.$emit('setLoading')
-
       //Se llama a toda la lista de servicios
       let response = await api.get(`/services/page=${page}`)
        
@@ -118,9 +107,10 @@ export default {
     },
     async changePage(page){
       this.pagination.current_page = page;
-
-      if(this.type_pag == 'index') 
+      
+      if(this.type_pag == 'index') {
         this.getPagesIndex(page);
+      }
     },
   }
 };

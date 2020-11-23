@@ -16,7 +16,7 @@ class RegisterCheck extends Mailable
     public $email;
     public $pass;
 
-    public $subject = 'Registro de usuario - Sistema KUSAWASI';
+    public $subject = '[SIRWIYQUY] - Registro de usuario';
     /**
      * Create a new message instance.
      *

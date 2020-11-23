@@ -17,8 +17,8 @@ class Enterprise extends Eloquent implements Authenticatable
      *  * @var array
      */
     protected $fillable = [
-        'username', 'name_enterprise', 'RUC', 'file_enterprise', 'cuenta_enterprise',
-        'file_admi', 'name_admi', 'lastnamep_admi', 'lastnamem_admi', 'DNI', 'email', 'password', 'recover'
+        'email', 'password', 'username', 'access', 'society', 'RUC', 'file_enterprise', 'cuenta',
+        'file', 'name', 'lastnamep', 'lastnamem', 'DNI', 'recover'
     ];
 
     protected $guarded = [];
@@ -29,9 +29,4 @@ class Enterprise extends Eloquent implements Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function scopeEnteprise($query, $id){
-        if($id) return $query->where('_id', '=', $id)
-                             ->select('email');
-    }
 }
