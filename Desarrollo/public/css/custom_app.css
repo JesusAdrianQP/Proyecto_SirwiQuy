@@ -1,0 +1,192 @@
+/*Clases para la barra scroll - solo disponible en algunos navegadores*/
+.contenedor::-webkit-scrollbar {
+    width: 11px;
+    background-color: #f1eeee;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background-color: #B6C4DB;
+    border-radius: 5px;
+}
+ /*Clases para la pre carga principal de la página*/
+*,
+*:before,
+*:after {
+  --higru:#3F70BD;
+}
+
+.loading1{
+    clip-path: circle(100% at 50% 50%);
+   transition: clip-path 1.5s ease-in-out;
+}
+.loading2{
+    clip-path: circle(0% at 50% 50%);
+}
+.ci1 {
+    fill: var(--higru);
+    animation: toBig 3s infinite -1.5s;
+    transform-box: fill-box;
+    transform-origin:50% 50%;
+}
+.ciw {
+    transform-box: fill-box;
+    transform-origin:50% 50%;
+    animation: breath 3s infinite;
+}
+.ci2 {
+    fill: var(--higru);
+    animation: toBig2 3s infinite;
+    transform-box: fill-box;
+    transform-origin:50% 50%;
+}
+.points {
+    animation: rot 3s infinite;
+    transform-box: fill-box;
+    transform-origin:50% 50%;
+}
+
+@keyframes rot {
+  0%    {  transform:  rotate(0deg);}
+  30%   { transform:  rotate(360deg);}
+  50%   { transform:  rotate(360deg);}
+  80%   { transform:  rotate(0deg);}
+  100%  { transform:  rotate(0deg);}
+}
+@keyframes toBig {
+  0%    { transform:  scale(1) translateX(0px);}
+  30%   { transform:  scale(1) translateX(0px);}
+  50%   { transform:  scale(10) translateX(-4.5px);}
+  80%   { transform:  scale(10) translateX(-4.5px);}
+  100%  { transform:  scale(1) translateX(0px);}
+}
+@keyframes toBig2  {
+  0%    { transform:  scale(1) translateX(0px);}
+  30%   { transform:  scale(1) translateX(0px);}
+  50%   { transform:  scale(10) translateX(4.5px);}
+  80%   { transform:  scale(10) translateX(4.5px);}
+  100%  { transform:  scale(1) translateX(0px);}
+}
+@keyframes breath {
+  15% { transform:  scale(1) ;}
+  40% { transform:  scale(1.1) ;}  
+  65% { transform:  scale(1) ;}
+  90% { transform:  scale(1.1) ;}
+}
+
+/*Clase para bordes redondeados*/
+@media screen and (max-width:767px){
+  .bordredound{
+    border-radius: 0px 180px 0px 0px;
+    -moz-border-radius: 0px 180px 0px 0px;
+    -webkit-border-radius: 0px 180px 0px 0px;
+    border: 0px solid #000000;
+  }
+}
+
+/*Espaciado del titulo*/
+.titulo{
+  overflow: hidden; 
+  text-overflow: ellipsis;  
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/*Espaciado de descripcion*/
+.description{
+  overflow: hidden; 
+  text-overflow: ellipsis;  
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/*Menu navbar mobil*/
+.wrapper-menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+  transform: rotate(-45deg);  
+}
+
+.line-menu {
+  background-color: #467CD2;
+  border-radius: 5px;
+  width: 100%;
+  height: 6px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
+
+/*Carga secundaria de los datos*/
+.loader-dots div {
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.loader-dots div:nth-child(1) {
+  left: 8px;
+  animation: loader-dots1 0.6s infinite;
+}
+.loader-dots div:nth-child(2) {
+  left: 8px;
+  animation: loader-dots2 0.6s infinite;
+}
+.loader-dots div:nth-child(3) {
+  left: 32px;
+  animation: loader-dots2 0.6s infinite;
+}
+.loader-dots div:nth-child(4) {
+  left: 56px;
+  animation: loader-dots3 0.6s infinite;
+}
+@keyframes loader-dots1 {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+@keyframes loader-dots3 {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(0);
+  }
+}
+@keyframes loader-dots2 {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(24px, 0);
+  }
+}
