@@ -53,7 +53,7 @@
         "express": "^4.17.1",
         "google-maps": "^4.3.2",
         "laravel-echo": "^1.8.1",
-        "laravel-mix-postcss-config": "^1.0.4",
+        "laravel-mix-postcss-config": "^1.4.0",
         "mongoose": "^5.9.27",
         "postcss-cli": "^7.1.1",
         "pusher-js": "^7.0.0",
