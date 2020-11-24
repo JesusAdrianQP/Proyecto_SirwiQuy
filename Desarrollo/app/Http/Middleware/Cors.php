@@ -16,7 +16,7 @@ class Cors
     public function handle($request, Closure $next)
     {
         return $next($request)
-        ->header('Access-Controll-Allow-Origin',"http://127.0.0.1:8000")
+        ->header('Access-Controll-Allow-Origin',"https://sirwiyquy-area-prueba.herokuapp.com/")
         ->header('Access-Controll-Allow-Methods',"GET,POST,PUT,DELETE,OPTIONS");
     }
 }
