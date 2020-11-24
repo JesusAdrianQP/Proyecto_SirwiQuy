@@ -21,7 +21,7 @@
           <div>
             <label
               for="input_title"
-              class="block text-sm font-medium leading-5 text-gray-700"
+              class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5 border-primary-600 "
             >
               Título
             </label>
