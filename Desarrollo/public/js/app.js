@@ -2179,11 +2179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -2272,11 +2268,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     borrarServicio: function borrarServicio(servicio_id) {
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2287,6 +2279,274 @@ __webpack_require__.r(__webpack_exports__);
           }
         }, _callee);
       }))();
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategorySelector.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategorySelector.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      chosenCategory: 'all',
+      chosenCalification: 'all',
+      priceOpen: false,
+      hasError: false,
+      pmin: '',
+      pmax: '',
+      vacio_pmin: '',
+      vacio_pmax: '',
+      value: false,
+      select: 'all'
+    };
+  },
+  methods: {
+    onCategorySelected: function onCategorySelected() {
+      this.$emit('onCategorySelected', {
+        category: this.chosenCategory
+      });
+    },
+    onPriceSelected: function onPriceSelected() {
+      this.validateSubmit();
+      if (this.hasError) return;
+      this.$emit('onPriceSelected', {
+        pmin: this.pmin,
+        pmax: this.pmax
+      });
+      this.select = 'all';
+      this.priceOpen = false;
+      this.hasError = false;
+      this.vacio_pmax = '';
+      this.vacio_pmin = '';
+      this.pmin = '';
+      this.pmax = '';
+    },
+    onCalificationSelected: function onCalificationSelected() {
+      this.value = true;
+      this.$emit('onCalificationSelected', {
+        value: this.value
+      });
+      this.value = false;
+    },
+    Modal: function Modal() {
+      var _this = this;
+
+      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (_this.select == 'priceOpen') _this.priceOpen = true;else if (_this.select == 'calificationOpen') _this.onCalificationSelected();
+
+              case 1:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    validateSubmit: function validateSubmit() {
+      this.hasError = false; //Validacion de error para el precio minimo
+
+      if (this.pmin == '') {
+        this.hasError = true;
+        this.vacio_pmin = "Campo Necesario";
+      } else this.vacio_pmin = "";
+
+      if (this.pmax == '') {
+        this.hasError = true;
+        this.vacio_pmax = "Campo Necesario";
+      } else this.vacio_pmax = "";
     }
   }
 });
@@ -2338,11 +2598,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 
 
 
@@ -2393,11 +2649,7 @@ __webpack_require__.r(__webpack_exports__);
     getValue_labprice: function getValue_labprice() {
       var _this = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2498,11 +2750,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 
 
 
@@ -2651,11 +2899,7 @@ __webpack_require__.r(__webpack_exports__);
     createMaterial: function createMaterial() {
       var _this = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2696,11 +2940,7 @@ __webpack_require__.r(__webpack_exports__);
     seeUpdateForm: function seeUpdateForm(material_id) {
       var _this2 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -2722,11 +2962,7 @@ __webpack_require__.r(__webpack_exports__);
     borrarMaterial: function borrarMaterial(material_id) {
       var _this3 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -2745,11 +2981,7 @@ __webpack_require__.r(__webpack_exports__);
     saveUpdate: function saveUpdate(material_id) {
       var _this4 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -3201,11 +3433,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -3258,7 +3486,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    type_pag: String
+    type_pag: String,
+    calification: Boolean
   },
   data: function data() {
     return {
@@ -3272,22 +3501,19 @@ __webpack_require__.r(__webpack_exports__);
       },
       services: [],
       offset: 3,
-      loading: true
+      loading: true,
+      value: 0
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-<<<<<<< Updated upstream
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-=======
     return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
->>>>>>> Stashed changes
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              if (_this.type_pag == 'index') _this.getPagesIndex(1);
+              if (_this.type_pag == 'index') _this.getPagesIndex(1, 0);
 
             case 1:
             case "end":
@@ -3296,6 +3522,12 @@ __webpack_require__.r(__webpack_exports__);
         }
       }, _callee);
     }))();
+  },
+  watch: {
+    calification: function calification(newVal, oldVal) {
+      if (newVal == true) this.value = 1;else this.value = 0;
+      this.getPagesIndex(1, this.value);
+    }
   },
   computed: {
     //Lógica de la paginación
@@ -3319,21 +3551,17 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    getPagesIndex: function getPagesIndex(page) {
+    getPagesIndex: function getPagesIndex(page, value) {
       var _this2 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
->>>>>>> Stashed changes
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return _api__WEBPACK_IMPORTED_MODULE_3__["default"].get("/services/page=".concat(page));
+                return _api__WEBPACK_IMPORTED_MODULE_3__["default"].get("/services/OrderByvalue=".concat(value));
 
               case 2:
                 response = _context2.sent;
@@ -3356,11 +3584,7 @@ __webpack_require__.r(__webpack_exports__);
     changePage: function changePage(page) {
       var _this3 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -3368,7 +3592,7 @@ __webpack_require__.r(__webpack_exports__);
                 _this3.pagination.current_page = page;
 
                 if (_this3.type_pag == 'index') {
-                  _this3.getPagesIndex(page);
+                  _this3.getPagesIndex(page, _this3.value);
                 }
 
               case 2:
@@ -3836,10 +4060,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-<<<<<<< Updated upstream
 //
-=======
->>>>>>> Stashed changes
 //
 //
 //
@@ -3916,11 +4137,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< Updated upstream
 
-=======
-//
->>>>>>> Stashed changes
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4029,6 +4246,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -4038,6 +4256,10 @@ __webpack_require__.r(__webpack_exports__);
     ServiceCard: _components_ServiceCard__WEBPACK_IMPORTED_MODULE_0__["default"],
     Pagination: _components_Pagination__WEBPACK_IMPORTED_MODULE_1__["default"],
     Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  props: {
+    //Se hereda del componente padre
+    value: Boolean
   },
   data: function data() {
     return {
@@ -4070,11 +4292,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -4274,11 +4492,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< Updated upstream
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-=======
     return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
->>>>>>> Stashed changes
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -4302,11 +4516,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRouter: function validateRouter(id) {
       var _this2 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -4506,11 +4716,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -5138,11 +5344,7 @@ __webpack_require__.r(__webpack_exports__);
     validateDNI: function validateDNI() {
       var _this = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
->>>>>>> Stashed changes
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -5216,11 +5418,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRUC: function validateRUC() {
       var _this2 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
->>>>>>> Stashed changes
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -5287,11 +5485,7 @@ __webpack_require__.r(__webpack_exports__);
     submitSignup: function submitSignup() {
       var _this3 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
->>>>>>> Stashed changes
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -5554,11 +5748,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -5773,11 +5963,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< Updated upstream
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
-=======
     return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
->>>>>>> Stashed changes
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -5801,11 +5987,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRouter: function validateRouter(id) {
       var _this2 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -6039,7 +6221,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _containers_ServiceList_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/ServiceList.vue */ "./resources/js/containers/ServiceList.vue");
 /* harmony import */ var _Layouts_Visitor_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Layouts/Visitor.vue */ "./resources/js/pages/Layouts/Visitor.vue");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
+/* harmony import */ var _components_CategorySelector_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/CategorySelector.vue */ "./resources/js/components/CategorySelector.vue");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
 
@@ -6060,6 +6243,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 
@@ -6067,6 +6256,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "IndexPage",
   components: {
     ServiceList: _containers_ServiceList_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    CategorySelector: _components_CategorySelector_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
     Visitor: _Layouts_Visitor_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
   data: function data() {
@@ -6075,7 +6265,8 @@ __webpack_require__.r(__webpack_exports__);
       level: localStorage.getItem('e_level'),
       isCustomer: false,
       username: '',
-      file: ' '
+      file: ' ',
+      value: null
     };
   },
   created: function created() {
@@ -6099,7 +6290,7 @@ __webpack_require__.r(__webpack_exports__);
             case 4:
               _this.isCustomer = true;
               _context.next = 7;
-              return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/services/level=".concat(_this.level, "/token=").concat(_this.token));
+              return _api__WEBPACK_IMPORTED_MODULE_7__["default"].get("/services/level=".concat(_this.level, "/token=").concat(_this.token));
 
             case 7:
               response = _context.sent;
@@ -6119,6 +6310,11 @@ __webpack_require__.r(__webpack_exports__);
         }
       }, _callee);
     }))();
+  },
+  methods: {
+    orderByCalification: function orderByCalification(obj) {
+      this.value = obj.value;
+    }
   }
 });
 
@@ -7783,19 +7979,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/MyButton.vue */ "./resources/js/components/MyButton.vue");
-
-
-
-
-
-
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
@@ -7807,7 +7990,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
->>>>>>> Stashed changes
 //
 //
 //
@@ -8090,21 +8272,13 @@ __webpack_require__.r(__webpack_exports__);
       actualizarServicio: false,
       titulo: 'Gaasito',
       descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-<<<<<<< Updated upstream
-    }, Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "category", 'daia'), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "district", 'San Bartolo'), _ref;
-=======
     }, Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "category", 'daia'), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "district", 'San Bartolo'), _ref;
->>>>>>> Stashed changes
   },
   methods: {
     submitForm: function submitForm() {
       var _this = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
->>>>>>> Stashed changes
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -8802,11 +8976,7 @@ __webpack_require__.r(__webpack_exports__);
     submitForm: function submitForm() {
       var _this5 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
-=======
       return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
->>>>>>> Stashed changes
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
           while (1) {
@@ -36178,6 +36348,527 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategorySelector.vue?vue&type=template&id=62ec02e8&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategorySelector.vue?vue&type=template&id=62ec02e8& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "text-center" }, [
+    _c("div", { staticClass: "sm:hidden px-2 py-1" }, [
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.select,
+              expression: "select"
+            }
+          ],
+          staticClass:
+            "form-select block w-full pl-3 pr-10 py-2 text-base leading-6 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5",
+          on: {
+            click: _vm.Modal,
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.select = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        [
+          _c("option", { attrs: { value: "all", selected: "" } }, [
+            _vm._v("Ordenar por")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "calificationOpen" } }, [
+            _vm._v("Los mejores evaluados")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "priceOpen" } }, [_vm._v("Precios")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "sm:hidden px-2 py-1" }, [
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.chosenCategory,
+              expression: "chosenCategory"
+            }
+          ],
+          staticClass: "form-select block w-full",
+          attrs: { "aria-label": "Selected tab" },
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.chosenCategory = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              function($event) {
+                return _vm.onCategorySelected()
+              }
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { value: "all", selected: "" } }, [
+            _vm._v("Todos")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "Gasfitero" } }, [
+            _vm._v("Gasfitero")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "Electricista" } }, [
+            _vm._v("Electricista")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "Carpintero" } }, [
+            _vm._v("Carpintero")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "Cerrajero" } }, [_vm._v("Cerrajero")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "hidden sm:block" }, [
+      _c("nav", { staticClass: "flex justify-center" }, [
+        _c("div", [
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.select,
+                  expression: "select"
+                }
+              ],
+              staticClass:
+                "form-select block w-full pl-3 pr-10 py-2 text-base leading-6 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5",
+              on: {
+                click: _vm.Modal,
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.select = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "all", selected: "" } }, [
+                _vm._v("Ordenar por")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "calificationOpen" } }, [
+                _vm._v("Los mejores evaluados")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "priceOpen" } }, [
+                _vm._v("Precios")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md focus:outline-none",
+            class:
+              _vm.chosenCategory == "all"
+                ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
+                : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
+            on: {
+              click: function($event) {
+                _vm.chosenCategory = "all"
+                _vm.onCategorySelected()
+              }
+            }
+          },
+          [_vm._v("Todos")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none",
+            class:
+              _vm.chosenCategory == "Gasfitero"
+                ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
+                : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
+            on: {
+              click: function($event) {
+                _vm.chosenCategory = "Gasfitero"
+                _vm.onCategorySelected()
+              }
+            }
+          },
+          [_vm._v("Gasfitero")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none",
+            class:
+              _vm.chosenCategory == "Electricista"
+                ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
+                : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
+            attrs: { "aria-current": "page" },
+            on: {
+              click: function($event) {
+                _vm.chosenCategory = "Electricista"
+                _vm.onCategorySelected()
+              }
+            }
+          },
+          [_vm._v("Electricista")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none",
+            class:
+              _vm.chosenCategory == "Carpintero"
+                ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
+                : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
+            on: {
+              click: function($event) {
+                _vm.chosenCategory = "Carpintero"
+                _vm.onCategorySelected()
+              }
+            }
+          },
+          [_vm._v("Carpintero")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none",
+            class:
+              _vm.chosenCategory == "Cerrajero"
+                ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
+                : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
+            on: {
+              click: function($event) {
+                _vm.chosenCategory = "Cerrajero"
+                _vm.onCategorySelected()
+              }
+            }
+          },
+          [_vm._v("Cerrajero")]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.priceOpen,
+            expression: "priceOpen"
+          }
+        ],
+        staticClass:
+          "fixed inset-x-0 z-50 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "fixed inset-0 transition-opacity",
+            on: {
+              click: function($event) {
+                _vm.priceOpen = false
+                _vm.select = "all"
+                _vm.hasError = false
+                _vm.error_pmax = ""
+                _vm.vacio_pmax = ""
+                _vm.vacio_pmin = ""
+                _vm.pmin = ""
+                _vm.pmax = ""
+              }
+            }
+          },
+          [
+            _c("div", {
+              staticClass: "absolute inset-0 bg-gray-500 opacity-75"
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6",
+            attrs: {
+              role: "dialog",
+              "aria-modal": "true",
+              "aria-labelledby": "modal-headline"
+            }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
+                    attrs: { type: "button", "aria-label": "Close" },
+                    on: {
+                      click: function($event) {
+                        _vm.priceOpen = false
+                        _vm.select = "all"
+                        _vm.hasError = false
+                        _vm.error_pmax = ""
+                        _vm.vacio_pmax = ""
+                        _vm.vacio_pmin = ""
+                        _vm.pmin = ""
+                        _vm.pmax = ""
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-6 w-6",
+                        attrs: {
+                          fill: "none",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            "stroke-width": "2",
+                            d: "M6 18L18 6M6 6l12 12"
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 flex flex-wrap "
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "mt-1 rounded-md w-full md:w-2/5" },
+                    [
+                      _c("div", { staticClass: "shadow-sm" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.pmin,
+                              expression: "pmin"
+                            }
+                          ],
+                          staticClass:
+                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                          attrs: {
+                            id: "input_pmin",
+                            min: "0",
+                            placeholder: "Ingrese su precio mínimo",
+                            type: "number"
+                          },
+                          domProps: { value: _vm.pmin },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.pmin = $event.target.value
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _vm.vacio_pmin
+                        ? _c("small", { staticClass: "text-yellow-600" }, [
+                            _vm._v(_vm._s(_vm.vacio_pmin))
+                          ])
+                        : _vm._e()
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "mt-1 rounded-md w-full md:w-2/5" },
+                    [
+                      _c("div", { staticClass: "shadow-sm" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.pmax,
+                              expression: "pmax"
+                            }
+                          ],
+                          staticClass:
+                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                          attrs: {
+                            id: "input_pmax",
+                            min: "0",
+                            placeholder: "Ingrese su precio máximo",
+                            type: "number"
+                          },
+                          domProps: { value: _vm.pmax },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.pmax = $event.target.value
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _vm.vacio_pmax
+                        ? _c("small", { staticClass: "text-yellow-600" }, [
+                            _vm._v(_vm._s(_vm.vacio_pmax))
+                          ])
+                        : _vm._e()
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "justify-center mt-6 " }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
+                  attrs: { type: "submit" },
+                  on: { click: _vm.onPriceSelected }
+                },
+                [_vm._v("\n          Buscar\n        ")]
+              )
+            ])
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sm:flex sm:items-start justify-center" }, [
+      _c(
+        "h2",
+        {
+          staticClass: "text-lg leading-6 font-medium text-gray-900 ",
+          attrs: { id: "modal-headline" }
+        },
+        [_vm._v("Rango de precio")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full py-3 md:w-1/5 justify-center all:justify-center text-center"
+      },
+      [_c("h3", [_vm._v("a")])]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/IconSvg.vue?vue&type=template&id=43f32710&":
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/IconSvg.vue?vue&type=template&id=43f32710& ***!
@@ -39008,7 +39699,7 @@ var render = function() {
       { staticClass: "w-full text-center mb-6 sm:mt-3 md:mt-5" },
       [
         _c("Pagination", {
-          attrs: { type_pag: _vm.type_pagination },
+          attrs: { type_pag: _vm.type_pagination, calification: _vm.value },
           on: { getServices: _vm.setServices }
         })
       ],
@@ -41400,7 +42091,22 @@ var render = function() {
     },
     [
       _c("main", [
-        _c("div", { staticClass: "max-w-7xl mx-auto" }, [_c("ServiceList")], 1)
+        _c(
+          "div",
+          { staticClass: "max-w-7xl mx-auto" },
+          [
+            _c("CategorySelector", {
+              on: {
+                onCategorySelected: _vm.filterByCategory,
+                onPriceSelected: _vm.filterByPrice,
+                onCalificationSelected: _vm.orderByCalification
+              }
+            }),
+            _vm._v(" "),
+            _c("ServiceList", { attrs: { value: _vm.value } })
+          ],
+          1
+        )
       ])
     ]
   )
@@ -60860,11 +61566,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< Updated upstream
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
 /* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Stashed changes
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants.js */ "./resources/js/constants.js");
@@ -60879,11 +61581,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   get: function get(url) {
-<<<<<<< Updated upstream
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-=======
     return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
->>>>>>> Stashed changes
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -60939,11 +61637,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
     }))();
   },
   post: function post(url, body) {
-<<<<<<< Updated upstream
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-=======
     return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
->>>>>>> Stashed changes
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
@@ -61188,6 +61882,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardEdit_vue_vue_type_template_id_d55d84b6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardEdit_vue_vue_type_template_id_d55d84b6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/CategorySelector.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/CategorySelector.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CategorySelector_vue_vue_type_template_id_62ec02e8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategorySelector.vue?vue&type=template&id=62ec02e8& */ "./resources/js/components/CategorySelector.vue?vue&type=template&id=62ec02e8&");
+/* harmony import */ var _CategorySelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategorySelector.vue?vue&type=script&lang=js& */ "./resources/js/components/CategorySelector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CategorySelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CategorySelector_vue_vue_type_template_id_62ec02e8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CategorySelector_vue_vue_type_template_id_62ec02e8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CategorySelector.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/CategorySelector.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/CategorySelector.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategorySelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CategorySelector.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategorySelector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategorySelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CategorySelector.vue?vue&type=template&id=62ec02e8&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/CategorySelector.vue?vue&type=template&id=62ec02e8& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategorySelector_vue_vue_type_template_id_62ec02e8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CategorySelector.vue?vue&type=template&id=62ec02e8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategorySelector.vue?vue&type=template&id=62ec02e8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategorySelector_vue_vue_type_template_id_62ec02e8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategorySelector_vue_vue_type_template_id_62ec02e8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -63755,13 +64518,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< Updated upstream
-__webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
 __webpack_require__(/*! C:\Users\sophia\Desktop\DAYANA\SAN MARCOS\VIII CICLO\GESTION DE CONFIGURACION Y MANTENIMIENTO\PROYECTO\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\sophia\Desktop\DAYANA\SAN MARCOS\VIII CICLO\GESTION DE CONFIGURACION Y MANTENIMIENTO\PROYECTO\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> Stashed changes
 
 
 /***/ })

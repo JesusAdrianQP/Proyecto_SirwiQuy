@@ -17,4 +17,16 @@ class Service extends Eloquent
     /**
      * @var array
      */
+    public function scopeCalificacion($query, $value){
+        if($value == 0) return $query->orderBy('created_at', 'DESC');
+            else if($value == 1) return $query->orderBy('calificacion', 'DESC');
+    }
+    /*
+    public function scopePmin($query, $pmin, $pmax){
+        if($pmin && $pmin!='all') return $query->where('precio','>=', $pmin);
+     }
+ 
+     public function scopePmax($query, $pmax){
+         if($pmax && $pmax!='all') return $query->where('precio', '<=', $pmax);
+     }*/
 }

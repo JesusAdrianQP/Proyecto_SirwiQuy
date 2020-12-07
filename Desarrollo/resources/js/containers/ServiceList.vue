@@ -38,6 +38,7 @@
     <div class="w-full text-center mb-6 sm:mt-3 md:mt-5">
       <Pagination
         :type_pag="type_pagination"
+        :calification="value"
         @getServices="setServices"
       />
     </div>
@@ -56,6 +57,12 @@ export default {
     ServiceCard,
     Pagination,
     Loader
+  },
+  props: {
+    //Se hereda del componente padre
+    
+    value: Boolean,
+    
   },
   data: () => {
     return {

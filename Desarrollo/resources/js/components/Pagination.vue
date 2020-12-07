@@ -49,6 +49,8 @@ import api from "../api";
 export default {
   props: {
     type_pag: String,
+    calification: Boolean,
+    
   },
   data: () => {
     return {
@@ -63,11 +65,20 @@ export default {
       services: [],
       offset: 3,
       loading: true,
+      value: 0
     }
   },
   async mounted() {
     if(this.type_pag == 'index')
-      this.getPagesIndex(1);
+      this.getPagesIndex(1, 0);
+  },
+  watch: {
+    calification: function(newVal, oldVal){
+      if(newVal == true) this.value = 1;
+        else this.value = 0;
+
+      this.getPagesIndex(1, this.value)
+    }
   },
   computed: {
     //Lógica de la paginación
@@ -92,10 +103,11 @@ export default {
     }
   },
   methods: {
-    async getPagesIndex(page){
+    async getPagesIndex(page, value){
+
 
       //Se llama a toda la lista de servicios
-      let response = await api.get(`/services/page=${page}`)
+      let response = await api.get(`/services/OrderByvalue=${value}`)
        
       this.services = response.data.data.paginate.data || []
       this.pagination = response.data.data.paginate //Se extrae los datos paginados 
@@ -109,7 +121,7 @@ export default {
       this.pagination.current_page = page;
       
       if(this.type_pag == 'index') {
-        this.getPagesIndex(page);
+        this.getPagesIndex(page, this.value);
       }
     },
   }
