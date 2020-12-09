@@ -22,6 +22,7 @@ import SuppliersBlank from "./pages/Supplier/Blank.vue";
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
+import ServiceCost from "./pages/Customer/ServiceCost.vue";
 
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
@@ -94,6 +95,11 @@ export default new VueRouter({
         {
             path: "/customer/blank",
             component: CustomerBlank,
+            beforeEnter: isUnique
+        },
+        {
+            path: "/service/cost",
+            component: ServiceCost,
             beforeEnter: isUnique
         },
         //Ruta para clientes y trabajador no logueados
