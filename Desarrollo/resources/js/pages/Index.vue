@@ -12,6 +12,7 @@
         @onPriceSelected="filterByPrice" 
         @onCalificationSelected="orderByCalification"/>
         <ServiceList
+        :prices="prices"
         :value="value"
         />
       </div>
@@ -40,6 +41,10 @@ export default {
       isCustomer: false,
       username: '',
       file: ' ',
+      prices: {
+        pmin : '',
+        pmax : ''
+      },
       value: null
     }
   },
@@ -57,6 +62,10 @@ export default {
     }
   },
   methods: {
+    filterByPrice(obj){
+      this.prices.pmin = obj.pmin;
+      this.prices.pmax = obj.pmax;
+    },
     orderByCalification(obj){
       this.value = obj.value;
     }

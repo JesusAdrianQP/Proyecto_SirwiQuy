@@ -49,6 +49,7 @@ import api from "../api";
 export default {
   props: {
     type_pag: String,
+    prices: Object,
     calification: Boolean,
     
   },
@@ -65,19 +66,22 @@ export default {
       services: [],
       offset: 3,
       loading: true,
+      pmin: '',
+      pmax: '',
       value: 0
     }
   },
   async mounted() {
     if(this.type_pag == 'index')
-      this.getPagesIndex(1, 0);
+      this.getPagesIndex(1, 'all', 'all');
   },
   watch: {
-    calification: function(newVal, oldVal){
-      if(newVal == true) this.value = 1;
-        else this.value = 0;
-
-      this.getPagesIndex(1, this.value)
+    'prices.pmin': function(newVal, oldVal) {
+      this.pmin = newVal;
+    },
+    'prices.pmax': function(newVal, oldVal){
+      this.pmax = newVal;
+      this.getPagesIndex(1, this.pmin, this.pmax)
     }
   },
   computed: {
@@ -103,11 +107,13 @@ export default {
     }
   },
   methods: {
-    async getPagesIndex(page, value){
+    async getPagesIndex(page, pmin, pmax){
 
+      if(pmin == '') pmin = 'all';
+      if(pmax == '') pmax = 'all';
 
       //Se llama a toda la lista de servicios
-      let response = await api.get(`/services/OrderByvalue=${value}`)
+      let response = await api.get(`/services/pmin=${pmin}&pmax=${pmax}`)
        
       this.services = response.data.data.paginate.data || []
       this.pagination = response.data.data.paginate //Se extrae los datos paginados 
@@ -121,7 +127,7 @@ export default {
       this.pagination.current_page = page;
       
       if(this.type_pag == 'index') {
-        this.getPagesIndex(page, this.value);
+        this.getPagesIndex(page, this.pmin, this.pmax);
       }
     },
   }

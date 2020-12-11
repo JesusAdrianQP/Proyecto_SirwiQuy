@@ -12,13 +12,13 @@ class ServiceData
     //Función que lista todos los servicios
     public static function service_list($new_page)
     {
-        //$pmin = (int) $new_page->pmin;
-        //$pmax = (int) $new_page->pmax;
+        $pmin = (int) $new_page->pmin;
+        $pmax = (int) $new_page->pmax;
 
-        $services = Service::calificacion($new_page->value)
+        $services = Service::pmin($pmin)
+                    ->pmax($pmax)
                     ->paginate(6, ['*'], 'services', $new_page->page);
-        //pmin($pmin)
-          //          ->pmax($pmax)
+                    
             //        ->paginate(6, ['*'], 'services', $new_page->page);
         
         return response()->json([

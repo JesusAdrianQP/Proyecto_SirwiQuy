@@ -28,4 +28,4 @@ Route::get('services/page={page}', 'ServiceController@serviceall'); //Ruta de lo
 Route::post('create_service', 'ServiceController@createservice');//Ruta de creacion de servicios
 Route::get('services/id={ide}', 'ServiceController@serviceid');//Ruta de creacion de servicios
 //Route::get('services/page={page}/pmin={pmin}&pmax={pmax}', 'ServiceController@serviceall');//Ruta de los servicios paginados
-Route::get('services/OrderByvalue={value}', 'ServiceController@serviceall');//Ruta de los servicios paginados
+Route::get('services/pmin={pmin}&pmax={pmax}', 'ServiceController@serviceall');//Ruta de los servicios paginados

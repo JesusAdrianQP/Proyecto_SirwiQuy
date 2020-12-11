@@ -2474,6 +2474,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3429,12 +3437,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
+/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
+
 
 
 
@@ -3487,6 +3498,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     type_pag: String,
+    prices: Object,
     calification: Boolean
   },
   data: function data() {
@@ -3502,18 +3514,20 @@ __webpack_require__.r(__webpack_exports__);
       services: [],
       offset: 3,
       loading: true,
+      pmin: '',
+      pmax: '',
       value: 0
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              if (_this.type_pag == 'index') _this.getPagesIndex(1, 0);
+              if (_this.type_pag == 'index') _this.getPagesIndex(1, 'all', 'all');
 
             case 1:
             case "end":
@@ -3524,9 +3538,12 @@ __webpack_require__.r(__webpack_exports__);
     }))();
   },
   watch: {
-    calification: function calification(newVal, oldVal) {
-      if (newVal == true) this.value = 1;else this.value = 0;
-      this.getPagesIndex(1, this.value);
+    'prices.pmin': function pricesPmin(newVal, oldVal) {
+      this.pmin = newVal;
+    },
+    'prices.pmax': function pricesPmax(newVal, oldVal) {
+      this.pmax = newVal;
+      this.getPagesIndex(1, this.pmin, this.pmax);
     }
   },
   computed: {
@@ -3551,19 +3568,22 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    getPagesIndex: function getPagesIndex(page, value) {
+    getPagesIndex: function getPagesIndex(page, pmin, pmax) {
       var _this2 = this;
 
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
-                return _api__WEBPACK_IMPORTED_MODULE_3__["default"].get("/services/OrderByvalue=".concat(value));
+                if (pmin == '') pmin = 'all';
+                if (pmax == '') pmax = 'all'; //Se llama a toda la lista de servicios
 
-              case 2:
+                _context2.next = 4;
+                return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/services/pmin=".concat(pmin, "&pmax=").concat(pmax));
+
+              case 4:
                 response = _context2.sent;
                 _this2.services = response.data.data.paginate.data || [];
                 _this2.pagination = response.data.data.paginate; //Se extrae los datos paginados 
@@ -3573,7 +3593,7 @@ __webpack_require__.r(__webpack_exports__);
                   services_paginate: _this2.services
                 });
 
-              case 6:
+              case 8:
               case "end":
                 return _context2.stop();
             }
@@ -3584,15 +3604,15 @@ __webpack_require__.r(__webpack_exports__);
     changePage: function changePage(page) {
       var _this3 = this;
 
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
                 _this3.pagination.current_page = page;
 
                 if (_this3.type_pag == 'index') {
-                  _this3.getPagesIndex(page, _this3.value);
+                  _this3.getPagesIndex(page, _this3.pmin, _this3.pmax);
                 }
 
               case 2:
@@ -4247,6 +4267,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -4259,6 +4280,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     //Se hereda del componente padre
+    prices: Object,
     value: Boolean
   },
   data: function data() {
@@ -6248,6 +6270,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -6266,6 +6289,10 @@ __webpack_require__.r(__webpack_exports__);
       isCustomer: false,
       username: '',
       file: ' ',
+      prices: {
+        pmin: '',
+        pmax: ''
+      },
       value: null
     };
   },
@@ -6312,6 +6339,10 @@ __webpack_require__.r(__webpack_exports__);
     }))();
   },
   methods: {
+    filterByPrice: function filterByPrice(obj) {
+      this.prices.pmin = obj.pmin;
+      this.prices.pmax = obj.pmax;
+    },
     orderByCalification: function orderByCalification(obj) {
       this.value = obj.value;
     }
@@ -36363,7 +36394,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "text-center" }, [
+  return _c("div", { staticClass: "text-center pt-4" }, [
     _c("div", { staticClass: "sm:hidden px-2 py-1" }, [
       _c(
         "select",
@@ -36824,7 +36855,22 @@ var render = function() {
                   attrs: { type: "submit" },
                   on: { click: _vm.onPriceSelected }
                 },
-                [_vm._v("\n          Buscar\n        ")]
+                [_vm._v("Buscar")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "inline-flex justify-center border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium rounded-md text-gray-700  hover:text-gray-500 focus:outline-none  focus:border-blue-300 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      _vm.priceOpen = false
+                    }
+                  }
+                },
+                [_vm._v("Cancelar")]
               )
             ])
           ]
@@ -39646,7 +39692,7 @@ var render = function() {
   return _c("div", { staticClass: "w-full px-4 lg:px-4" }, [
     _c(
       "div",
-      { staticClass: "flex flex-wrap mt-6" },
+      { staticClass: "flex flex-wrap mt-4" },
       [
         _c("Loader", {
           staticClass: "min-h-screen",
@@ -39699,7 +39745,11 @@ var render = function() {
       { staticClass: "w-full text-center mb-6 sm:mt-3 md:mt-5" },
       [
         _c("Pagination", {
-          attrs: { type_pag: _vm.type_pagination, calification: _vm.value },
+          attrs: {
+            type_pag: _vm.type_pagination,
+            prices: _vm.prices,
+            calification: _vm.value
+          },
           on: { getServices: _vm.setServices }
         })
       ],
@@ -42103,7 +42153,9 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("ServiceList", { attrs: { value: _vm.value } })
+            _c("ServiceList", {
+              attrs: { prices: _vm.prices, value: _vm.value }
+            })
           ],
           1
         )

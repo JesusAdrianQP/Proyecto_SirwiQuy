@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="text-center pt-4">
     
     <div class="sm:hidden px-2 py-1">
       <select
@@ -156,14 +156,22 @@
         </div>
         
         <div class="justify-center mt-6 ">
-          <button
+          
+          <button 
             @click="onPriceSelected"
             type="submit"
             class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
-          >
-            Buscar
-          </button>
-        </div>
+          >Buscar</button>
+         
+          
+          <button @click="priceOpen=false" 
+              type="button"
+            class="inline-flex justify-center border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium rounded-md text-gray-700  hover:text-gray-500 focus:outline-none  focus:border-blue-300 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
+              
+          >Cancelar</button>
+          
+      </div>
+
       </div>
     </div>
     <!--Fin de la seccion-->
