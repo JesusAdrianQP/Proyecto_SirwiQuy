@@ -2,7 +2,9 @@
 /*
 /Rutas de conexión entre Front End y Back End
 */
-
+Route::get('landing', function() {
+    return view('landing');
+});
 Route::view('/', 'app') -> name('index');
 
 //Rutas de las sesiones
