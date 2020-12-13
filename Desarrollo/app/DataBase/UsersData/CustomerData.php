@@ -36,6 +36,7 @@ class CustomerData implements UserInterface
     public static function getUser($par, $loger){
         if($par == 1) return Customer::where('email', '=', $loger)->first();
             else if($par == 2) return Customer::where('username', '=', $loger)->first();
+            else if($par == 3) return Customer::where('_id', '=', $loger)->first();
                 else return Customer::where('access', '=', $loger)->first();
     }
 

@@ -8,7 +8,13 @@
    :photo="file">
     <main>
       <div class="max-w-7xl mx-auto">
-        <ServiceList/>
+        <CategorySelector @onCategorySelected="filterByCategory"
+        @onPriceSelected="filterByPrice" 
+        @onCalificationSelected="orderByCalification"/>
+        <ServiceList
+        :prices="prices"
+        :value="value"
+        />
       </div>
     </main>
   </Visitor>
@@ -17,6 +23,7 @@
 <script>
 import ServiceList from '../containers/ServiceList.vue'
 import Visitor from './Layouts/Visitor.vue'
+import CategorySelector from "../components/CategorySelector.vue";
 
 import api from "../api";
 
@@ -24,6 +31,7 @@ export default {
   name: "IndexPage",
   components: {
     ServiceList,
+    CategorySelector,
     Visitor
   },
   data: () => {
@@ -32,7 +40,12 @@ export default {
       level: localStorage.getItem('e_level'),
       isCustomer: false,
       username: '',
-      file: ' '
+      file: ' ',
+      prices: {
+        pmin : '',
+        pmax : ''
+      },
+      value: null
     }
   },
   async created() {
@@ -48,5 +61,14 @@ export default {
       if(customer.file != '' || this.file == null){this.file = customer.file };
     }
   },
+  methods: {
+    filterByPrice(obj){
+      this.prices.pmin = obj.pmin;
+      this.prices.pmax = obj.pmax;
+    },
+    orderByCalification(obj){
+      this.value = obj.value;
+    }
+  }
 }
 </script>
