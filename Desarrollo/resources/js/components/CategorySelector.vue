@@ -21,6 +21,9 @@
         <option value="Electricista">Electricista</option>
         <option value="Carpintero">Carpintero</option>
         <option value="Cerrajero">Cerrajero</option>
+        <option value="Vidriero">Vidriero</option>
+        <option value="Jardinero">Jardinero</option>
+        <option value="Fumigador">Fumigador</option>
       </select>
     </div>
     <!--Fin de sección-->
@@ -66,6 +69,21 @@
           :class="chosenCategory=='Cerrajero'?'text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200':'text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50'"
           class="cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none"
         >Cerrajero</a>
+        <a
+          @click="chosenCategory='Vidrieria';onCategorySelected();"
+          :class="chosenCategory=='Vidrieria'?'text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200':'text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50'"
+          class="cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none"
+        >Vidrieria</a>
+        <a
+          @click="chosenCategory='Jardineria';onCategorySelected();"
+          :class="chosenCategory=='Jardineria'?'text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200':'text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50'"
+          class="cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none"
+        >Jardineria</a>
+        <a
+          @click="chosenCategory='Fumigación';onCategorySelected();"
+          :class="chosenCategory=='Fumigación'?'text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200':'text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50'"
+          class="cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none"
+        >Fumigación</a>
         <!--Fin de sección-->
       </nav>
     </div>

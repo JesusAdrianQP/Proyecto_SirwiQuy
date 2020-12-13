@@ -1,0 +1,55 @@
+
+
+/*----------------------------------------PORTADA DE LANDING PAGE------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*Cover*/
+#cover-responsive{background-image: url(../images/portada3.jpg);}
+
+/*Responsive personalizado*/
+@media screen and (max-width:768px){
+    #cover-responsive{background-image: url(../images/portada.jpg);}
+}
+
+/*Animacion del cover*/
+@keyframes cambiar {
+    0%{ margin-top: 0;}    
+    20%{ margin-top: 0;}
+
+    25%{ margin-top: -2.8rem;}    
+    50%{ margin-top: -2.8rem;} 
+
+    55%{ margin-top: -5.65rem;}    
+    80%{ margin-top: -5.65rem;}
+    
+    85%{ margin-top: -2.8rem;}
+    95%{ margin-top: -2.8rem;}
+
+    100%{ margin-top: 0;}
+}
+
+@media screen and (max-width:1024px){
+    @keyframes cambiar {
+        0%{ margin-top: 0;}    
+        20%{ margin-top: 0;}
+
+        25%{ margin-top: -1.75rem;}    
+        50%{ margin-top: -1.75rem;} 
+
+        55%{ margin-top: -3.45rem;}    
+        80%{ margin-top: -3.45rem;} 
+
+        85%{ margin-top: -1.75rem;}
+        95%{ margin-top: -1.75rem;}
+
+        100%{ margin-top: 0;}
+    }
+}
+
+.overlay{
+    width: 100%;
+    background:linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4));
+    position: absolute;
+    
+}
+
+
