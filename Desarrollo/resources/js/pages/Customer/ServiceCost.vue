@@ -200,7 +200,7 @@ export default {
         this.$router.push("/login/customer");
         
         return this.$toast.open({
-          message: "Por favor! Ingrese a su sesión para continuar",
+          message: "Por favor, ¡ingrese a su sesión para continuar!",
           type: "info",
           duration: 8000,
           dismissible: true,

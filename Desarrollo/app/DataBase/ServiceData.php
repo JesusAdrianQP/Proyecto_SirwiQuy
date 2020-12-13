@@ -12,7 +12,15 @@ class ServiceData
     //Función que lista todos los servicios
     public static function service_list($new_page)
     {
-        $services = Service::paginate(6, ['*'], 'services', $new_page->page);
+        $pmin = (int) $new_page->pmin;
+        $pmax = (int) $new_page->pmax;
+
+        $services = Service::pmin($pmin)
+                    ->pmax($pmax)
+                    ->calificacion($new_page->value)
+                    ->paginate(6, ['*'], 'services', $new_page->page);
+                    
+            //        ->paginate(6, ['*'], 'services', $new_page->page);
         
         return response()->json([
             'paginate' => $services
@@ -24,6 +32,14 @@ class ServiceData
 
         return response()->json([
             'servicios' => $services_id
+        ]);
+    }
+    
+    public static function listiddetails($id){
+        $services_id = Service::where('_id', '=', $id->service_id)->get();
+
+        return response()->json([
+            'serv_details' => $services_id
         ]);
     }
 
@@ -54,6 +70,8 @@ class ServiceData
 
             return response()->json([
                 'success' => 'Su servicio ha sido creado',
+                //'pmin' => $service->precioMin,
+                //'pmax' => $service->precioMax
             ], 200);
         }
         else return response()->json(['errors' => ['fail' => ['No se puede tener más de 3 servicios activos']]], 422);

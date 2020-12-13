@@ -36,6 +36,7 @@ class EnterpriseData implements UserInterface
     public static function getUser($par, $loger){
         if($par == 1) return Enterprise::where('email', '=', $loger)->first();
             else if($par == 2) return Enterprise::where('username', '=', $loger)->first();
+            else if($par == 3) return Enterprise::where('_id', '=', $loger)->first();
                 else return Enterprise::where('access', '=', $loger)->first();
     }
 
