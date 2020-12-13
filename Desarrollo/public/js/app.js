@@ -6681,7 +6681,7 @@ __webpack_require__.r(__webpack_exports__);
                 _this3.$router.push("/login/customer");
 
                 return _context3.abrupt("return", _this3.$toast.open({
-                  message: "Por favor! Ingrese a su sesión para continuar",
+                  message: "Por favor, ¡ingrese a su sesión para continuar!",
                   type: "info",
                   duration: 8000,
                   dismissible: true
@@ -69966,9 +69966,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _pages_Customer_Blank_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
     beforeEnter: isUnique
   }, {
-    path: "/service/cost",
+    path: "/service/:service_id/cost",
     component: _pages_Customer_ServiceCost_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
-    beforeEnter: isUnique
+    beforeEnter: isUnique,
+    props: true
   }, {
     path: "/service/:service_id",
     component: _pages_Customer_ServiceDetails_vue__WEBPACK_IMPORTED_MODULE_17__["default"],

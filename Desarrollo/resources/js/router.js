@@ -99,9 +99,10 @@ export default new VueRouter({
             beforeEnter: isUnique
         },
         {
-            path: "/service/cost",
+            path: "/service/:service_id/cost",
             component: ServiceCost,
-            beforeEnter: isUnique
+            beforeEnter: isUnique,
+            props: true
         },
         {
             path: "/service/:service_id",
