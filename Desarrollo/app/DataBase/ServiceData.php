@@ -17,6 +17,7 @@ class ServiceData
 
         $services = Service::pmin($pmin)
                     ->pmax($pmax)
+                    ->calificacion($new_page->value)
                     ->paginate(6, ['*'], 'services', $new_page->page);
                     
             //        ->paginate(6, ['*'], 'services', $new_page->page);

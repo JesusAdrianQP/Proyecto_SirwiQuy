@@ -73,7 +73,7 @@ export default {
   },
   async mounted() {
     if(this.type_pag == 'index')
-      this.getPagesIndex(1, 'all', 'all');
+      this.getPagesIndex(1, 'all', 'all',0);
   },
   watch: {
     'prices.pmin': function(newVal, oldVal) {
@@ -82,7 +82,13 @@ export default {
     'prices.pmax': function(newVal, oldVal){
       this.pmax = newVal;
       this.getPagesIndex(1, this.pmin, this.pmax)
-    }
+    },
+    calification: function(newVal, oldVal){
+      if(newVal == true) this.value = 1;
+        else this.value = 0;
+
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value)
+    },
   },
   computed: {
     //Lógica de la paginación
@@ -107,13 +113,13 @@ export default {
     }
   },
   methods: {
-    async getPagesIndex(page, pmin, pmax){
+    async getPagesIndex(page, pmin, pmax,value){
 
       if(pmin == '') pmin = 'all';
       if(pmax == '') pmax = 'all';
 
       //Se llama a toda la lista de servicios
-      let response = await api.get(`/services/pmin=${pmin}&pmax=${pmax}`)
+      let response = await api.get(`/services/pmin=${pmin}&pmax=${pmax}/OrderByvalue=${value}`)
        
       this.services = response.data.data.paginate.data || []
       this.pagination = response.data.data.paginate //Se extrae los datos paginados 
@@ -127,7 +133,7 @@ export default {
       this.pagination.current_page = page;
       
       if(this.type_pag == 'index') {
-        this.getPagesIndex(page, this.pmin, this.pmax);
+        this.getPagesIndex(page, this.pmin, this.pmax,this.value);
       }
     },
   }
