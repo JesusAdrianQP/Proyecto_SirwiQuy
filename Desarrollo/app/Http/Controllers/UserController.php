@@ -16,4 +16,10 @@ class UserController extends Controller
     public function update(Request $request){   
         return UserDataMaster::update_users($request);
     }
+
+    //Funcion que trae la lista de los detalles del usuario trabajador / empresa
+    public function providerdetails(Request $request)
+    {
+        return UserDataMaster::details($request);
+    }
 }

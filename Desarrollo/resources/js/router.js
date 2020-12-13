@@ -104,9 +104,10 @@ export default new VueRouter({
             beforeEnter: isUnique
         },
         {
-            path: "/service/details",
+            path: "/service/:service_id",
             component: ServiceDetails,
-            beforeEnter: isUnique
+            beforeEnter: isUnique,
+            props: true
         },
         //Ruta para clientes y trabajador no logueados
         {

@@ -76,7 +76,7 @@ class UserDataMaster{
         $level = UserDataMaster::getIdentity($user->level);
 
         $user_valid = UserFactory::make($level);
-        $usercheck = $user_valid::getUser(3, $user->token);
+        $usercheck = $user_valid::getUser(4, $user->token);
 
         if($usercheck){
             return $usercheck;
@@ -123,9 +123,11 @@ class UserDataMaster{
         return $user_update::update($user);
     }
 
-    public static function details($user){
-        //$details = UserFactory::make($user->ide);
+    public static function details($user)
+    {
+        //Se crea el objeto a usar
+        $details = UserFactory::make($user->ide);
 
-        //return $details::list_details($user->id_provider);
+        return $details::getUser(3, $user->id_provider);
     }
 }

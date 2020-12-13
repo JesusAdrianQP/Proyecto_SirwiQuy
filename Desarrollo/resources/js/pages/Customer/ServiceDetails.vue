@@ -75,12 +75,8 @@
                   
                     <div class="flex items-center mt-2 justify-between">
                       <div class="flex items-center mt-2">
-                        <IconSvg :solid="true" icon="star" class="h-5 w-5 text-yellow-400" />
-                        <div class="text-sm ml-1">
-                          <p
-                            class="text-gray-900 font-semibold leading-none"
-                          >Calificación: {{ calification }}</p>
-                        </div>
+                        <svg v-for="star in 5" v-bind:key="star.id" class="w-4 h-4 mx-px fill-current" :class="{'text-yellow-500': (star <= calification), 'text-gray-900':!(star <= calification)}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                       <path d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z" /></svg>
                       </div>
                       <router-link
                         class="inline-flex rounded-md shadow-sm ml-2"
@@ -112,12 +108,16 @@
                       <div class="text-sm ml-1">
                         <p
                           class="text-gray-900 font-semibold leading-none"
-                        >{{ department }} - {{ province }}, {{ district }}</p>
+                        >{{ district }}</p>
                       </div>
                   </div>
                   
                   <div class="mt-3 flex items-center w-full h-56">
-
+                    <Maps 
+                      :route="type"
+                      :lati="lat"
+                      :longi="lng"
+                    />
                   </div>
                 </div>
               </div>
@@ -171,7 +171,7 @@
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-        <iframe width="600" height="400" src="https://www.youtube.com/embed/Ui4pk1aBSgQ"></iframe>
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/EbZGm6VpTlA"></iframe>
         </div>
       </div>
       <!-- Fin de sección de video de guía. -->
@@ -183,7 +183,7 @@
 <script>
 import api from "../../api";
 
-//import Maps from "../../components/Maps";
+import Maps from "../../components/Maps";
 import IconSvg from "../../components/IconSvg";
 import Visitor from "../Layouts/Visitor";
 
@@ -192,7 +192,7 @@ export default {
   components: {
     IconSvg,
     Visitor,
-    //Maps
+    Maps
   },
   data: ()=>{
     return {
@@ -205,14 +205,12 @@ export default {
       category: '',
       title: '',
       description: '',
-      department: '',
-      province: '',
       district: '',
-      min_price: '',
-      max_price: '',
       identity: '',
       ide: '',
       calification: '',
+      start: 1,
+      price: '',
 
       //Se requiere para encontrar el proveedor exacto
       id_provider: '',
@@ -234,34 +232,29 @@ export default {
   },
   props: {
     service_id: String,
-  }
-  /*async mounted() {
+  },
+  async mounted() {
     //Se traen los datos del servicio filtrado por id
-    let response = await api.get(`/service/${this.service_id}`);
-    
+    let response = await api.get(`/service_details/${this.service_id}`);
+    console.log(response)
     //Si es que introducen rutas erroneas inexistentes
     if(response.ok == true)
     {
-      this.service_details = response.data.data.serv_details;
+      this.service_details = response.data.data.serv_details[0];
 
       //Extraigo datos del servicio correspondiente
       this.title = this.service_details.title;
       this.category = this.service_details.category;
       this.identity = this.service_details.identity;
-      this.id_provider = this.service_details.id_worker;
+      this.id_provider = this.service_details.token;
       this.description = this.service_details.description;
-      this.department = this.service_details.departamento;
-      this.province = this.service_details.provincia;
       this.calification = this.service_details.calificacion;
       this.district = this.service_details.distrito;
-      this.min_price = this.service_details.precioMin;
-      this.max_price = this.service_details.precioMax;
+      this.price = this.service_details.precio;
       this.image_url = this.service_details.file;
 
       //Inserto a mi objeto
-      this.apidate = this.district.replace(/ /g, "+") + ',' +
-                      this.province.replace(/ /g, "+") + ',' + 
-                      this.department.replace(/ /g, "+")
+      this.apidate = this.district.replace(/ /g, "+");
 
       //Se redirige para obtener los datos del proveedor
       if(this.identity == 'employee') this.ide = 'trabajador';
@@ -269,7 +262,7 @@ export default {
 
       //Se trae los datos por la id correspondiente
       let response2 = await api.get(`/details/provider/${this.ide}/${this.id_provider}`)
-      this.provider_details = response2.data.data.provider;
+      this.provider_details = response2.data.data;
 
       //Extraigo los datos del proveedor
       if(this.identity == 'employee'){
@@ -289,6 +282,6 @@ export default {
       this.lng = response3.data.data[0].results[0].geometry.location.lng;
     }
     else this.$router.push("/NotFound");
-  }*/
+  }
 };
 </script>
