@@ -33,4 +33,9 @@ class Service extends Eloquent
      public function scopePmax($query, $pmax){
          if($pmax && $pmax!='all') return $query->where('precio', '<=', $pmax);
      }*/
+
+     public function scopeCalificacion($query, $value){
+        if($value == 0) return $query->orderBy('created_at', 'DESC');
+            else if($value == 1) return $query->orderBy('calificacion', 'DESC');
+    }
 }

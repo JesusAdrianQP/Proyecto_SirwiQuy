@@ -17,6 +17,7 @@ class ServiceData
 
         $services = Service::pmin($pmin)
                     ->pmax($pmax)
+                    ->calificacion($new_page->value)
                     ->paginate(6, ['*'], 'services', $new_page->page);
                     
             //        ->paginate(6, ['*'], 'services', $new_page->page);
@@ -31,6 +32,14 @@ class ServiceData
 
         return response()->json([
             'servicios' => $services_id
+        ]);
+    }
+    
+    public static function listiddetails($id){
+        $services_id = Service::where('_id', '=', $id->service_id)->get();
+
+        return response()->json([
+            'serv_details' => $services_id
         ]);
     }
 
