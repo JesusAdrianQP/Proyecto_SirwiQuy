@@ -34,6 +34,14 @@ class ServiceData
             'servicios' => $services_id
         ]);
     }
+    
+    public static function listiddetails($id){
+        $services_id = Service::where('_id', '=', $id->service_id)->get();
+
+        return response()->json([
+            'serv_details' => $services_id
+        ]);
+    }
 
     public static function register($new_service){
         //Verifico que mi usuario no haya publicado más de 3 anuncios

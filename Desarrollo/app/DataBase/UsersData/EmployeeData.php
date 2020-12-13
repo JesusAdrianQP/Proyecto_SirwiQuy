@@ -36,7 +36,8 @@ class EmployeeData implements UserInterface
     public static function getUser($par, $loger){
         if($par == 1) return Employee::where('email', '=', $loger)->first();
             else if($par == 2) return Employee::where('username', '=', $loger)->first();
-             else return Employee::where('access', '=', $loger)->first();
+            else if($par == 3) return Employee::where('_id', '=', $loger)->first();
+            else return Employee::where('access', '=', $loger)->first();
     }
 
     public static function getToken($par, $loger){
