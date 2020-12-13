@@ -12,7 +12,8 @@ class typeAPI
     //Retorna la clase a ser instancia
     protected $API = [
         'DNI' => DNIapi::class,
-        'RUC' => RUCapi::class
+        'RUC' => RUCapi::class,
+        'Gmap' => MAPapi::class
     ];
     
     //Funcion que ejecuta el tipo de api que es y retorna el valor obtenido
