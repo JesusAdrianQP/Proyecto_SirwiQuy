@@ -51,6 +51,7 @@ export default {
       file: ' ',
       title: '',
       district: '',
+      category: 'all',
       prices: {
         pmin : '',
         pmax : ''
@@ -76,6 +77,13 @@ export default {
       this.title = obj.search;
       this.district = obj.district;
     },
+     filterByCategory(obj){
+      this.category=obj.category;
+    },
+    /* filterByCategory(obj){
+      this.category=obj.category;
+    }, */
+
     filterByPrice(obj){
       this.prices.pmin = obj.pmin;
       this.prices.pmax = obj.pmax;

@@ -49,6 +49,8 @@ import api from "../api";
 export default {
   props: {
     type_pag: String,
+    category: String,
+    /* category: String, */
     prices: Object,
     calification: Boolean,
     title: String,
@@ -139,7 +141,7 @@ export default {
     },
     async changePage(page){
       this.pagination.current_page = page;
-      
+
       if(this.type_pag == 'index') {
         this.getPagesIndex(page, this.pmin, this.pmax, this.value, this.title, this.district);
       }
