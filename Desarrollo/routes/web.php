@@ -2,10 +2,8 @@
 /*
 /Rutas de conexión entre Front End y Back End
 */
-Route::get('landing', function() {
-    return view('landing');
-});
 Route::view('/', 'app') -> name('index');
+Route::view('landing', 'landing');
 
 //Rutas de las sesiones
 Route::post('login', 'LoginController@login'); //Ruta de inicio de sesión
@@ -31,5 +29,4 @@ Route::post('create_service', 'ServiceController@createservice');//Ruta de creac
 Route::get('services/id={ide}', 'ServiceController@serviceid');//Ruta de creacion de servicios 
 Route::get('service_details/{service_id}', 'ServiceController@serviceiddetails');//Ruta de detalle de servicios 
 Route::get('service/{service_id}/cost', 'ServiceController@pricesdetails');//Ruta de los detalles de los precios 
-//Route::get('services/page={page}/pmin={pmin}&pmax={pmax}', 'ServiceController@serviceall');//Ruta de los servicios paginados
-Route::get('services/pmin={pmin}&pmax={pmax}/OrderByvalue={value}', 'ServiceController@serviceall');//Ruta de los servicios paginados
+Route::get('services/page={page}/pmin{pmin}&pmax={pmax}/OrderByvalue={value}/title={title}/district={district}/category={category}', 'ServiceController@serviceall');//Ruta de los servicios paginados
