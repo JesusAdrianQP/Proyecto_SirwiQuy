@@ -68826,7 +68826,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 module.exports = {
-  API_URL: 'https://sirwiyquy-area-prueba.herokuapp.com/'
+  API_URL: 'https://sirwiyquy-area-prueba.herokuapp.com'
 };
 
 /***/ }),
