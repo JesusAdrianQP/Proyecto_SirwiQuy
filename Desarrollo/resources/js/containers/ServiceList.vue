@@ -40,6 +40,7 @@
         :type_pag="type_pagination"
         :title="title"
         :district="district"
+        :category="category"
         :prices="prices"
         :calification="value"
         @getServices="setServices"
@@ -65,6 +66,7 @@ export default {
     //Se hereda del componente padre
     title: String,
     district: String,
+    category: String,
     prices: Object,
     value: Boolean,
   },

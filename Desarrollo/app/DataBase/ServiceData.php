@@ -17,6 +17,7 @@ class ServiceData
 
         $services = Service::title($new_page->title)
                     ->localizacion($new_page->district)
+                    ->category($new_page->category)
                     ->pmin($pmin)
                     ->pmax($pmax)
                     ->calificacion($new_page->value)

@@ -3711,6 +3711,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     type_pag: String,
+    category: String,
     prices: Object,
     calification: Boolean,
     title: String,
@@ -3742,7 +3743,7 @@ __webpack_require__.r(__webpack_exports__);
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              if (_this.type_pag == 'index') _this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all');
+              if (_this.type_pag == 'index') _this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all', 'all');
 
             case 1:
             case "end":
@@ -3754,21 +3755,24 @@ __webpack_require__.r(__webpack_exports__);
   },
   watch: {
     title: function title(newVal, oldVal) {
-      this.getPagesIndex(1, this.pmin, this.pmax, this.value, newVal, this.district);
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, newVal, this.district, this.category);
     },
     district: function district(newVal, oldVal) {
-      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, newVal);
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, newVal, this.category);
+    },
+    category: function category(newVal, oldVal) {
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, newVal);
     },
     'prices.pmin': function pricesPmin(newVal, oldVal) {
       this.pmin = newVal;
     },
     'prices.pmax': function pricesPmax(newVal, oldVal) {
       this.pmax = newVal;
-      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district);
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, this.category);
     },
     calification: function calification(newVal, oldVal) {
       if (newVal == true) this.value = 1;else this.value = 0;
-      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district);
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, this.category);
     }
   },
   computed: {
@@ -3793,7 +3797,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    getPagesIndex: function getPagesIndex(page, pmin, pmax, value, title, district) {
+    getPagesIndex: function getPagesIndex(page, pmin, pmax, value, title, district, category) {
       var _this2 = this;
 
       return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
@@ -3804,13 +3808,14 @@ __webpack_require__.r(__webpack_exports__);
               case 0:
                 if (title == '') title = 'all';
                 if (district == '') district = 'all';
+                if (category == '') category = 'all';
                 if (pmin == '') pmin = 'all';
                 if (pmax == '') pmax = 'all'; //Se llama a toda la lista de servicios
 
-                _context2.next = 6;
-                return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/services/page=".concat(page, "/pmin=").concat(pmin, "&pmax=").concat(pmax, "/OrderByvalue=").concat(value, "/title=").concat(title, "/district=").concat(district));
+                _context2.next = 7;
+                return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/services/page=".concat(page, "/pmin=").concat(pmin, "&pmax=").concat(pmax, "/OrderByvalue=").concat(value, "/title=").concat(title, "/district=").concat(district, "/category=").concat(category));
 
-              case 6:
+              case 7:
                 response = _context2.sent;
                 _this2.services = response.data.data.paginate.data || [];
                 _this2.pagination = response.data.data.paginate; //Se extrae los datos paginados 
@@ -3820,7 +3825,7 @@ __webpack_require__.r(__webpack_exports__);
                   services_paginate: _this2.services
                 });
 
-              case 10:
+              case 11:
               case "end":
                 return _context2.stop();
             }
@@ -3839,7 +3844,7 @@ __webpack_require__.r(__webpack_exports__);
                 _this3.pagination.current_page = page;
 
                 if (_this3.type_pag == 'index') {
-                  _this3.getPagesIndex(page, _this3.pmin, _this3.pmax, _this3.value, _this3.title, _this3.district);
+                  _this3.getPagesIndex(page, _this3.pmin, _this3.pmax, _this3.value, _this3.title, _this3.district, _this3.category);
                 }
 
               case 2:
@@ -4624,6 +4629,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -4638,6 +4644,7 @@ __webpack_require__.r(__webpack_exports__);
     //Se hereda del componente padre
     title: String,
     district: String,
+    category: String,
     prices: Object,
     value: Boolean
   },
@@ -7299,6 +7306,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -7321,6 +7329,7 @@ __webpack_require__.r(__webpack_exports__);
       file: ' ',
       title: '',
       district: '',
+      category: 'all',
       prices: {
         pmin: '',
         pmax: ''
@@ -7374,6 +7383,9 @@ __webpack_require__.r(__webpack_exports__);
     filterBySearch: function filterBySearch(obj) {
       this.title = obj.search;
       this.district = obj.district;
+    },
+    filterByCategory: function filterByCategory(obj) {
+      this.category = obj.category;
     },
     filterByPrice: function filterByPrice(obj) {
       this.prices.pmin = obj.pmin;
@@ -38670,12 +38682,12 @@ var render = function() {
             staticClass:
               "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none",
             class:
-              _vm.chosenCategory == "Vidrieria"
+              _vm.chosenCategory == "Vidriero"
                 ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
                 : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
             on: {
               click: function($event) {
-                _vm.chosenCategory = "Vidrieria"
+                _vm.chosenCategory = "Vidriero"
                 _vm.onCategorySelected()
               }
             }
@@ -38689,12 +38701,12 @@ var render = function() {
             staticClass:
               "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none",
             class:
-              _vm.chosenCategory == "Jardineria"
+              _vm.chosenCategory == "Jardinero"
                 ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
                 : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
             on: {
               click: function($event) {
-                _vm.chosenCategory = "Jardineria"
+                _vm.chosenCategory = "Jardinero"
                 _vm.onCategorySelected()
               }
             }
@@ -38708,12 +38720,12 @@ var render = function() {
             staticClass:
               "cursor-pointer ml-4 px-3 py-2 font-medium text-sm leading-5 rounded-md  focus:outline-none",
             class:
-              _vm.chosenCategory == "Fumigación"
+              _vm.chosenCategory == "Fumiguero"
                 ? "text-primary-700 bg-primary-200 focus:text-primary-800 focus:bg-primary-200"
                 : "text-gray-500 hover:text-gray-700 focus:text-primary-600 focus:bg-primary-50",
             on: {
               click: function($event) {
-                _vm.chosenCategory = "Fumigación"
+                _vm.chosenCategory = "Fumiguero"
                 _vm.onCategorySelected()
               }
             }
@@ -42091,6 +42103,7 @@ var render = function() {
             type_pag: _vm.type_pagination,
             title: _vm.title,
             district: _vm.district,
+            category: _vm.category,
             prices: _vm.prices,
             calification: _vm.value
           },
@@ -45394,7 +45407,8 @@ var render = function() {
                 prices: _vm.prices,
                 value: _vm.value,
                 title: _vm.title,
-                district: _vm.district
+                district: _vm.district,
+                category: _vm.category
               }
             })
           ],

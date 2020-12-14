@@ -25,6 +25,10 @@ class Service extends Eloquent
         if($district && $district!='all') return $query->where('distrito', 'LIKE', "%$district%");
     }
 
+    public function scopeCategory($query, $category){
+        if($category && $category!='all') return $query->where('category', 'LIKE', "%$category%");
+    }
+
     public function scopePmin($query, $pmin){
         if($pmin && $pmin!='all') return $query->where('precio','>=', $pmin);
     }

@@ -20,6 +20,7 @@
         :value="value"
         :title="title"
         :district="district"
+        :category="category"
         />
       </div>
     </main>
@@ -80,10 +81,6 @@ export default {
      filterByCategory(obj){
       this.category=obj.category;
     },
-    /* filterByCategory(obj){
-      this.category=obj.category;
-    }, */
-
     filterByPrice(obj){
       this.prices.pmin = obj.pmin;
       this.prices.pmax = obj.pmax;
