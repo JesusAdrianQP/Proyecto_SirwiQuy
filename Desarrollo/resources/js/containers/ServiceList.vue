@@ -38,6 +38,9 @@
     <div class="w-full text-center mb-6 sm:mt-3 md:mt-5">
       <Pagination
         :type_pag="type_pagination"
+        :title="title"
+        :district="district"
+        :category="category"
         :prices="prices"
         :calification="value"
         @getServices="setServices"
@@ -61,9 +64,11 @@ export default {
   },
   props: {
     //Se hereda del componente padre
+    title: String,
+    district: String,
+    category: String,
     prices: Object,
     value: Boolean,
-    
   },
   data: () => {
     return {

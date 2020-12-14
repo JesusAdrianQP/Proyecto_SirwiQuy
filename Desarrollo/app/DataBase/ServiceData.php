@@ -15,12 +15,13 @@ class ServiceData
         $pmin = (int) $new_page->pmin;
         $pmax = (int) $new_page->pmax;
 
-        $services = Service::pmin($pmin)
+        $services = Service::title($new_page->title)
+                    ->localizacion($new_page->district)
+                    ->category($new_page->category)
+                    ->pmin($pmin)
                     ->pmax($pmax)
                     ->calificacion($new_page->value)
                     ->paginate(6, ['*'], 'services', $new_page->page);
-                    
-            //        ->paginate(6, ['*'], 'services', $new_page->page);
         
         return response()->json([
             'paginate' => $services
