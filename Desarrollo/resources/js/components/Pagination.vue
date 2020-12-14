@@ -51,7 +51,8 @@ export default {
     type_pag: String,
     prices: Object,
     calification: Boolean,
-    
+    title: String,
+    district: String,
   },
   data: () => {
     return {
@@ -73,21 +74,27 @@ export default {
   },
   async mounted() {
     if(this.type_pag == 'index')
-      this.getPagesIndex(1, 'all', 'all',0);
+      this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all');
   },
   watch: {
+    title: function(newVal, oldVal) {
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, newVal, this.district)
+    },
+    district: function(newVal, oldVal) {
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, newVal)
+    },
     'prices.pmin': function(newVal, oldVal) {
       this.pmin = newVal;
     },
     'prices.pmax': function(newVal, oldVal){
       this.pmax = newVal;
-      this.getPagesIndex(1, this.pmin, this.pmax)
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district)
     },
     calification: function(newVal, oldVal){
       if(newVal == true) this.value = 1;
         else this.value = 0;
 
-      this.getPagesIndex(1, this.pmin, this.pmax, this.value)
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district)
     },
   },
   computed: {
@@ -113,13 +120,14 @@ export default {
     }
   },
   methods: {
-    async getPagesIndex(page, pmin, pmax,value){
-
+    async getPagesIndex(page, pmin, pmax, value, title, district){
+      if(title == '') title = 'all';
+      if(district == '') district = 'all';
       if(pmin == '') pmin = 'all';
       if(pmax == '') pmax = 'all';
-
+      
       //Se llama a toda la lista de servicios
-      let response = await api.get(`/services/pmin=${pmin}&pmax=${pmax}/OrderByvalue=${value}`)
+      let response = await api.get(`/services/page=${page}/pmin=${pmin}&pmax=${pmax}/OrderByvalue=${value}/title=${title}/district=${district}`)
        
       this.services = response.data.data.paginate.data || []
       this.pagination = response.data.data.paginate //Se extrae los datos paginados 
@@ -133,7 +141,7 @@ export default {
       this.pagination.current_page = page;
       
       if(this.type_pag == 'index') {
-        this.getPagesIndex(page, this.pmin, this.pmax,this.value);
+        this.getPagesIndex(page, this.pmin, this.pmax, this.value, this.title, this.district);
       }
     },
   }
