@@ -43,19 +43,28 @@ class ServiceData
         ]);
     }
 
+    //Funcion que trae los detalles de la estimacion de precios del servicio
+    public static function pridetails($id)
+    {
+        $exist = Price::where('id_service', '=', $id->service_id)->first();
+
+        if($exist){
+            return response()->json([
+                'pri_details' => $exist
+            ], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Cotización no encontrada!']]], 422);
+    }
+
     public static function register($new_service){
         //Verifico que mi usuario no haya publicado más de 3 anuncios
         if(Service::where('token', '=', $new_service->id)->count()<3){
             //Se crea una nueva colección
             $service = new Service();
-            $access = new UserDataMaster();
-
-            $aux = $access->getCodigo(50);
 
             //Guardo los datos en mi colección
-            $service->id = $aux;
             $service->identity = $new_service->level;
-            $service->token = $new_service->id;
+            $service->token = $new_service->id; /*Codigo del proveedor*/
             $service->title = $new_service->title;
             $service->description = $new_service->description;
             $service->category = $new_service->category;
@@ -66,7 +75,7 @@ class ServiceData
 
             $service->save();
 
-            ServiceData::register_price($aux, $new_service->price, $new_service->materials);
+            ServiceData::register_price($service->_id, $new_service->price, $new_service->materials);
 
             return response()->json([
                 'success' => 'Su servicio ha sido creado',
@@ -77,10 +86,10 @@ class ServiceData
         else return response()->json(['errors' => ['fail' => ['No se puede tener más de 3 servicios activos']]], 422);
     }
 
-    public static function register_price($id_service, $price, $mat){
+    public static function register_price($id_service, $pricemdo, $mat){
         $price = new Price();
 
-        $price->price_mdo = $price;
+        $price->price_mdo = $pricemdo;
         $price->materials = $mat;
         $price->id_service = $id_service;
 
