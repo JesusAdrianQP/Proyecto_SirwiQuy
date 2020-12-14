@@ -169,7 +169,25 @@ export default {
   props: {
     service_id: String,
   },
+  // async created() {
+  //   let response = await api.get(`/service/${this.service_id}/cost`);
+      
+  //   //Si es que introducen rutas erroneas inexistentes
+  //   if(response.ok == true){
+  //     localStorage.setItem('exist_service',this.service_id); //Se guarda una id de servicio para no perder 
+  //                                                         //lo actual y seguir despues de estar logeado
+  //     this.price_details = response.data.data.pri_details;
 
+  //     //Se le asigna los valores correspondientes
+  //     this.workforce = this.price_details.price_mdo;
+  //     this.prices = this.price_details.materials;
+
+  //     this.suma = this.workforce;
+
+  //     if(this.prices.length == 0) this.vacio_material = 'No existen materiales disponibles en este servicio';
+  //   }
+  //   else this.$router.push("/NotFound");
+  // },
   methods: {
     async Validation(){
       if(this.includeMaterials1 == 'only_workforce') this.request_prices = [];

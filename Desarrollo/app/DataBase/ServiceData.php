@@ -43,6 +43,19 @@ class ServiceData
         ]);
     }
 
+    //Funcion que trae los detalles de la estimacion de precios del servicio
+    public static function pridetails($id)
+    {
+        $exist = Price::where('id_service', '=', $id->service_id)->first();
+
+        if($exist){
+            return response()->json([
+                'pri_details' => $exist
+            ], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Cotización no encontrada!']]], 422);
+    }
+    
     public static function register($new_service){
         //Verifico que mi usuario no haya publicado más de 3 anuncios
         if(Service::where('token', '=', $new_service->id)->count()<3){
