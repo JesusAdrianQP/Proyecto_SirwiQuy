@@ -24,6 +24,11 @@ class ServiceController extends Controller
         return ServiceData::listiddetails($request);
     }
 
+    public function pricesdetails(Request $request) 
+    {
+        return ServiceData::pridetails($request);
+    }
+    
     public function updateservice(Request $request)
     {   
         return ServiceData::update_service($request);

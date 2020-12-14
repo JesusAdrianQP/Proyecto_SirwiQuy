@@ -44,7 +44,7 @@
                       class="form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out"
                     />
                   </div>
-                  <div class="pl-7 text-sm leading-5 mb-4">
+                  <div class="pl-8 text-sm leading-5 mb-4">
                     <label for="workforce" class="text-gray-700">S/ {{workforce.toFixed(2)}}</label>
                   </div>    
                 </div>
@@ -87,7 +87,7 @@
                         </div>
                           
                         <div class="flex pl-7 text-sm py-2 w-full">
-                          <label :for="price.name" class="w-2/4 text-gray-700">{{price.name}}</label>
+                          <label :for="price.name" class="w-2/4 text-gray-700 ml-6">{{price.name}}</label>
                           <label :for="price.name" class="w-2/4 text-center sm:pr-3 text-gray-700">S/ {{price.price.toFixed(2)}}</label>
                         </div>
                       </div>
@@ -169,7 +169,25 @@ export default {
   props: {
     service_id: String,
   },
+  async created() {
+     let response = await api.get(`/service/${this.service_id}/cost`);
+      
+     //Si es que introducen rutas erroneas inexistentes
+     if(response.ok == true){
+       localStorage.setItem('exist_service',this.service_id); //Se guarda una id de servicio para no perder 
+                                                          //lo actual y seguir despues de estar logeado
+       this.price_details = response.data.data.pri_details;
 
+       //Se le asigna los valores correspondientes
+       this.workforce = this.price_details.price_mdo;
+       this.prices = this.price_details.materials;
+
+       this.suma = this.workforce;
+
+       if(this.prices.length == 0) this.vacio_material = 'No existen materiales disponibles en este servicio';
+     }
+     else this.$router.push("/NotFound");
+  },
   methods: {
     async Validation(){
       if(this.includeMaterials1 == 'only_workforce') this.request_prices = [];
