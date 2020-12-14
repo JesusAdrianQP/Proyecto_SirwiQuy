@@ -1,6 +1,6 @@
 <template>
   <div class="w-full px-4 lg:px-4">
-    <div class="flex flex-wrap mt-6">
+    <div class="flex flex-wrap mt-4">
       <!--Componente de carga para los servicios respectivos-->
       <Loader class="min-h-screen"
         :load="loading"
@@ -38,6 +38,11 @@
     <div class="w-full text-center mb-6 sm:mt-3 md:mt-5">
       <Pagination
         :type_pag="type_pagination"
+        :title="title"
+        :district="district"
+        :category="category"
+        :prices="prices"
+        :calification="value"
         @getServices="setServices"
       />
     </div>
@@ -56,6 +61,14 @@ export default {
     ServiceCard,
     Pagination,
     Loader
+  },
+  props: {
+    //Se hereda del componente padre
+    title: String,
+    district: String,
+    category: String,
+    prices: Object,
+    value: Boolean,
   },
   data: () => {
     return {

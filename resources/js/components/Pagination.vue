@@ -49,6 +49,11 @@ import api from "../api";
 export default {
   props: {
     type_pag: String,
+    category: String,
+    prices: Object,
+    calification: Boolean,
+    title: String,
+    district: String,
   },
   data: () => {
     return {
@@ -63,11 +68,38 @@ export default {
       services: [],
       offset: 3,
       loading: true,
+      pmin: '',
+      pmax: '',
+      value: 0
     }
   },
   async mounted() {
     if(this.type_pag == 'index')
-      this.getPagesIndex(1);
+      this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all', 'all');
+  },
+  watch: {
+    title: function(newVal, oldVal) {
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, newVal, this.district, this.category)
+    },
+    district: function(newVal, oldVal) {
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, newVal, this.category)
+    },
+     category: function(newVal, oldVal) {
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, newVal)
+    },
+    'prices.pmin': function(newVal, oldVal) {
+      this.pmin = newVal;
+    },
+    'prices.pmax': function(newVal, oldVal){
+      this.pmax = newVal;
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, this.category)
+    },
+    calification: function(newVal, oldVal){
+      if(newVal == true) this.value = 1;
+        else this.value = 0;
+
+      this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, this.category)
+    },
   },
   computed: {
     //Lógica de la paginación
@@ -92,10 +124,15 @@ export default {
     }
   },
   methods: {
-    async getPagesIndex(page){
-
+    async getPagesIndex(page, pmin, pmax, value, title, district, category){
+      if(title == '') title = 'all';
+      if(district == '') district = 'all';
+      if(category == '') category = 'all';
+      if(pmin == '') pmin = 'all';
+      if(pmax == '') pmax = 'all';
+      
       //Se llama a toda la lista de servicios
-      let response = await api.get(`/services/page=${page}`)
+      let response = await api.get(`/services/page=${page}/pmin=${pmin}&pmax=${pmax}/OrderByvalue=${value}/title=${title}/district=${district}/category=${category}`)
        
       this.services = response.data.data.paginate.data || []
       this.pagination = response.data.data.paginate //Se extrae los datos paginados 
@@ -107,9 +144,9 @@ export default {
     },
     async changePage(page){
       this.pagination.current_page = page;
-      
+
       if(this.type_pag == 'index') {
-        this.getPagesIndex(page);
+        this.getPagesIndex(page, this.pmin, this.pmax, this.value, this.title, this.district, this.category);
       }
     },
   }
