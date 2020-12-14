@@ -17,6 +17,14 @@ class Service extends Eloquent
     /**
      * @var array
      */
+    public function scopeCategory($query,$category){
+        if($category && $category!='all') return $query->where('category','LIKE',"%$category%");
+   }
+
+   /* public function scopeCategory($query,$category){
+         if($category && $category!='all') return $query->where('category','LIKE',"%$category%");
+    } */
+
     public function scopePmin($query, $pmin){
         if($pmin && $pmin!='all') return $query->where('precio','>=', $pmin);
     }

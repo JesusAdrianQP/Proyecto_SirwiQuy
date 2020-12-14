@@ -49,6 +49,8 @@ import api from "../api";
 export default {
   props: {
     type_pag: String,
+    category: String,
+    /* category: String, */
     prices: Object,
     calification: Boolean,
     
@@ -76,6 +78,14 @@ export default {
       this.getPagesIndex(1, 'all', 'all',0);
   },
   watch: {
+    'category': function(newVal,oldVal){
+      this.getPagesIndex(1,this.category)
+    },
+
+    /* 'category': function(newVal,oldVal){
+      this.getPagesIndex(1,this.category)
+    }, */
+
     'prices.pmin': function(newVal, oldVal) {
       this.pmin = newVal;
     },
@@ -87,7 +97,8 @@ export default {
       if(newVal == true) this.value = 1;
         else this.value = 0;
 
-      this.getPagesIndex(1, this.pmin, this.pmax, this.value)
+      this.getPagesIndex(1,this.category, this.pmin, this.pmax, this.value)
+      /* this.category */
     },
   },
   computed: {
@@ -114,6 +125,8 @@ export default {
   },
   methods: {
     async getPagesIndex(page, pmin, pmax,value){
+      if(category=='') category='all';
+      /* if(category=='') category='all'; */
 
       if(pmin == '') pmin = 'all';
       if(pmax == '') pmax = 'all';
@@ -131,9 +144,10 @@ export default {
     },
     async changePage(page){
       this.pagination.current_page = page;
-      
+
       if(this.type_pag == 'index') {
-        this.getPagesIndex(page, this.pmin, this.pmax,this.value);
+        this.getPagesIndex(page, this.category, this.pmin, this.pmax, this.value);
+        /* this.category */
       }
     },
   }

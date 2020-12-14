@@ -41,6 +41,7 @@ export default {
       isCustomer: false,
       username: '',
       file: ' ',
+      category: 'all',
       prices: {
         pmin : '',
         pmax : ''
@@ -62,6 +63,13 @@ export default {
     }
   },
   methods: {
+     filterByCategory(obj){
+      this.category=obj.category;
+    },
+    /* filterByCategory(obj){
+      this.category=obj.category;
+    }, */
+
     filterByPrice(obj){
       this.prices.pmin = obj.pmin;
       this.prices.pmax = obj.pmax;
