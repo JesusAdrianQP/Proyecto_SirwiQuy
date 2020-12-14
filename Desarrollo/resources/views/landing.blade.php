@@ -22,7 +22,7 @@
         <title>SirwiyQuy | Hogar de Servicios</title>
 
         <!--Estilos provistos por el framework Tailwindcss-->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/app.css">
 
         <!--JQuery-->
         <script src="js/jquery.min.js"></script>

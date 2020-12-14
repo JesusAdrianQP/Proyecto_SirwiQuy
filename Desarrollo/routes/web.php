@@ -30,6 +30,6 @@ Route::get('services/page={page}', 'ServiceController@serviceall'); //Ruta de lo
 Route::post('create_service', 'ServiceController@createservice');//Ruta de creacion de servicios
 Route::get('services/id={ide}', 'ServiceController@serviceid');//Ruta de creacion de servicios 
 Route::get('service_details/{service_id}', 'ServiceController@serviceiddetails');//Ruta de detalle de servicios 
-Route::get('service_details/{service_id}', 'ServiceController@serviceiddetails');//Ruta de detalle de servicios 
+Route::get('service/{service_id}/cost', 'ServiceController@pricesdetails');//Ruta de los detalles de los precios 
 //Route::get('services/page={page}/pmin={pmin}&pmax={pmax}', 'ServiceController@serviceall');//Ruta de los servicios paginados
 Route::get('services/pmin={pmin}&pmax={pmax}/OrderByvalue={value}', 'ServiceController@serviceall');//Ruta de los servicios paginados
