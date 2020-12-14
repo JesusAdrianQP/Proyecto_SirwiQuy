@@ -17,13 +17,17 @@ class Service extends Eloquent
     /**
      * @var array
      */
-    public function scopeCategory($query,$category){
-        if($category && $category!='all') return $query->where('category','LIKE',"%$category%");
-   }
+    public function scopeTitle($query, $title){
+        if($title && $title!='all') return $query->where('title', 'LIKE', "%$title%");
+    }
 
-   /* public function scopeCategory($query,$category){
-         if($category && $category!='all') return $query->where('category','LIKE',"%$category%");
-    } */
+    public function scopeLocalizacion($query, $district){
+        if($district && $district!='all') return $query->where('distrito', 'LIKE', "%$district%");
+    }
+
+    public function scopeCategory($query, $category){
+        if($category && $category!='all') return $query->where('category', 'LIKE', "%$category%");
+    }
 
     public function scopePmin($query, $pmin){
         if($pmin && $pmin!='all') return $query->where('precio','>=', $pmin);
@@ -31,17 +35,8 @@ class Service extends Eloquent
  
      public function scopePmax($query, $pmax){
          if($pmax && $pmax!='all') return $query->where('precio', '<=', $pmax);
-    }
-
-    /*
-    public function scopePmin($query, $pmin, $pmax){
-        if($pmin && $pmin!='all') return $query->where('precio','>=', $pmin);
      }
- 
-     public function scopePmax($query, $pmax){
-         if($pmax && $pmax!='all') return $query->where('precio', '<=', $pmax);
-     }*/
-
+     
      public function scopeCalificacion($query, $value){
         if($value == 0) return $query->orderBy('created_at', 'DESC');
             else if($value == 1) return $query->orderBy('calificacion', 'DESC');
