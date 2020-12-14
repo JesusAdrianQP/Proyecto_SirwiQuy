@@ -254,7 +254,7 @@ export default {
       this.image_url = this.service_details.file;
 
       //Inserto a mi objeto
-      this.apidate = this.district.replace(/ /g, "+");
+      this.apidate = this.district.replace(/ /g, "+")
 
       //Se redirige para obtener los datos del proveedor
       if(this.identity == 'employee') this.ide = 'trabajador';

@@ -6632,62 +6632,54 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     service_id: String
   },
-  // async created() {
-  //   let response = await api.get(`/service/${this.service_id}/cost`);
-  //   //Si es que introducen rutas erroneas inexistentes
-  //   if(response.ok == true){
-  //     localStorage.setItem('exist_service',this.service_id); //Se guarda una id de servicio para no perder 
-  //                                                         //lo actual y seguir despues de estar logeado
-  //     this.price_details = response.data.data.pri_details;
-  //     //Se le asigna los valores correspondientes
-  //     this.workforce = this.price_details.price_mdo;
-  //     this.prices = this.price_details.materials;
-  //     this.suma = this.workforce;
-  //     if(this.prices.length == 0) this.vacio_material = 'No existen materiales disponibles en este servicio';
-  //   }
-  //   else this.$router.push("/NotFound");
-  // },
+  created: function created() {
+    var _this = this;
+
+    return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+      var response;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/service/".concat(_this.service_id, "/cost"));
+
+            case 2:
+              response = _context.sent;
+
+              //Si es que introducen rutas erroneas inexistentes
+              if (response.ok == true) {
+                localStorage.setItem('exist_service', _this.service_id); //Se guarda una id de servicio para no perder 
+                //lo actual y seguir despues de estar logeado
+
+                _this.price_details = response.data.data.pri_details; //Se le asigna los valores correspondientes
+
+                _this.workforce = _this.price_details.price_mdo;
+                _this.prices = _this.price_details.materials;
+                _this.suma = _this.workforce;
+                if (_this.prices.length == 0) _this.vacio_material = 'No existen materiales disponibles en este servicio';
+              } else _this.$router.push("/NotFound");
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
+  },
   methods: {
     Validation: function Validation() {
-      var _this = this;
-
-      return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (_this.includeMaterials1 == 'only_workforce') _this.request_prices = [];
-
-              case 1:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    TotalSum: function TotalSum() {
       var _this2 = this;
 
       return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-        var i;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _this2.suma = _this2.workforce;
+                if (_this2.includeMaterials1 == 'only_workforce') _this2.request_prices = [];
 
-                if (_this2.request_prices.length > 0) {
-                  for (i = 0; i < _this2.request_prices.length; i++) {
-                    if (_this2.request_prices[i].name != null && _this2.request_prices[i].cant == null) {
-                      _this2.request_prices[i].cant = 1;
-                    }
-
-                    _this2.suma = _this2.suma + _this2.request_prices[i].price * _this2.request_prices[i].cant;
-                  }
-                }
-
-              case 2:
+              case 1:
               case "end":
                 return _context2.stop();
             }
@@ -6695,25 +6687,54 @@ __webpack_require__.r(__webpack_exports__);
         }, _callee2);
       }))();
     },
-    Submit: function Submit() {
+    TotalSum: function TotalSum() {
       var _this3 = this;
 
       return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+        var i;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                localStorage.setItem('worforce', _this3.workforce);
-                localStorage.setItem('request', JSON.stringify(_this3.request_prices)); //Convierto mi json en string
+                _this3.suma = _this3.workforce;
+
+                if (_this3.request_prices.length > 0) {
+                  for (i = 0; i < _this3.request_prices.length; i++) {
+                    if (_this3.request_prices[i].name != null && _this3.request_prices[i].cant == null) {
+                      _this3.request_prices[i].cant = 1;
+                    }
+
+                    _this3.suma = _this3.suma + _this3.request_prices[i].price * _this3.request_prices[i].cant;
+                  }
+                }
+
+              case 2:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }))();
+    },
+    Submit: function Submit() {
+      var _this4 = this;
+
+      return Object(C_Users_urpi_proyecto_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                localStorage.setItem('worforce', _this4.workforce);
+                localStorage.setItem('request', JSON.stringify(_this4.request_prices)); //Convierto mi json en string
 
                 if (!(localStorage.getItem("e_level") == null)) {
-                  _context3.next = 7;
+                  _context4.next = 7;
                   break;
                 }
 
-                _this3.$router.push("/login/customer");
+                _this4.$router.push("/login/customer");
 
-                return _context3.abrupt("return", _this3.$toast.open({
+                return _context4.abrupt("return", _this4.$toast.open({
                   message: "Por favor, ¡ingrese a su sesión para continuar!",
                   type: "info",
                   duration: 8000,
@@ -6721,14 +6742,14 @@ __webpack_require__.r(__webpack_exports__);
                 }));
 
               case 7:
-                _this3.$router.push("/request/form/service");
+                _this4.$router.push("/request/form/service");
 
               case 8:
               case "end":
-                return _context3.stop();
+                return _context4.stop();
             }
           }
-        }, _callee3);
+        }, _callee4);
       }))();
     }
   }
@@ -44201,7 +44222,7 @@ var render = function() {
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "pl-7 text-sm leading-5 mb-4" },
+                          { staticClass: "pl-8 text-sm leading-5 mb-4" },
                           [
                             _c(
                               "label",
@@ -44368,7 +44389,7 @@ var render = function() {
                                               "label",
                                               {
                                                 staticClass:
-                                                  "w-2/4 text-gray-700",
+                                                  "w-2/4 text-gray-700 ml-6",
                                                 attrs: { for: price.name }
                                               },
                                               [_vm._v(_vm._s(price.name))]
