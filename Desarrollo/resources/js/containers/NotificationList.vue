@@ -1,6 +1,6 @@
 <template>
   <div class="py-4">
-    <!--NOTIFICATION LIST: Aqui se genera la iteraccion de las notificaciones con sus respectivos datos-->
+    <!--NOTIFICATION LIST: Aqui se genera la interacción de las notificaciones con sus respectivos datos-->
     <div class="bg-white shadow overflow-hidden sm:rounded-md">
       <div
         v-show="loading && notifications.length == 0"
@@ -26,7 +26,7 @@
         v-show="!loading && notifications.length == 0"
         class="rounded-lg py-3 text-center items-center justify-center"
       >
-        <span class="text-xl text-gray-900 w-full">¡Bandeja de Notificaciones vacía!</span>
+        <span class="text-xl text-gray-900 w-full">La bandeja de notificaciones está vacía.</span>
         <div class="w-full sm:px-10">
           <img class="h-56 sm:h-64 w-full object-contain" src="../../assets/empty_2.png">
         </div>
@@ -83,11 +83,11 @@
               <h3
                 class="text-lg leading-6 font-medium text-gray-900"
                 id="modal-headline"
-              >¿Desea eliminar?</h3>
+              >¿Desea eliminarla?</h3>
               <div class="mt-2">
                 <p
                   class="text-sm leading-5 text-gray-500"
-                >Está seguro que desea eliminar esta notificación.</p>
+                >¿Está seguro que desea eliminar esta notificación?</p>
               </div>
             </div>
           </div>

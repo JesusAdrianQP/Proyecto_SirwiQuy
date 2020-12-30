@@ -63,19 +63,9 @@
 
         <dl class="grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-3">
           <div class="sm:col-span-1">
-            <dd class="mt-1 text-sm leading-5 text-gray-900">Departamento</dd>
-            <dt class="text-base leading-5 font-medium text-gray-500">{{departamento}}</dt>
-          </div>
-
-          <div class="sm:col-span-1">
-            <dd class="mt-1 text-sm leading-5 text-gray-900">Provincia</dd>
-            <dt class="text-base leading-5 font-medium text-gray-500">{{provincia}}</dt>
-          </div>
-
-          <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Distrito</dd>
             <dt class="text-base leading-5 font-medium text-gray-500">{{distrito}}</dt>
-          </div>
+          </div> 
 
           <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Dirección exacta</dd>
@@ -84,7 +74,7 @@
          
           <div class="sm:col-span-3">
             <div>
-              <dd class="mt-1 text-sm leading-5 text-blue-500">La siguiente ubicación es una referencia del rango de su dirección</dd>
+              <dd class="mt-1 text-sm leading-5 text-blue-500">La siguiente ubicación es una referencia respecto del rango de su dirección</dd>
             </div>
             
             <div id="map" style="height: 20rem">
@@ -198,7 +188,7 @@
 
                   <div class="px-4 py-3 text-xs leading-5">
                     <span class="font-medium text-green-500"
-                    >Se agrega S/ {{workforce.toFixed(2)}} al total de su lista por la mano de obra</span>
+                    >Se agrega S/ {{workforce.toFixed(2)}} al total de su lista por la mano de obra.</span>
                   </div>
                 </div>
               </div>
@@ -274,7 +264,7 @@
               <label
                 for="remember_me"
                 class="ml-2 block text-sm leading-5 text-gray-900"
-              >Acepto los términos y condiciones de uso del servicio KusaWasi.</label>
+              >Acepto los términos y condiciones de uso del servicio SirwiQuy.</label>
             </div>
 
             <div class="flex items-center mt-2">
@@ -288,7 +278,7 @@
               <label
                 for="remember_me2"
                 class="ml-2 block text-sm leading-5 text-gray-900"
-              >Acepto las politicas del servicio Kusawasi.</label>
+              >Acepto las politicas del servicio SirwiQuy.</label>
             </div>
             
             <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -364,8 +354,6 @@ export default {
       id_service:'',
       title: '',
       category: '',
-      departamento: '',
-      provincia: '',
       distrito: '',
 
       id_customer: '',
@@ -405,8 +393,6 @@ export default {
     this.id_service = this.service._id;
     this.title = this.service.title;
     this.category = this.service.category;
-    this.departamento = this.service.departamento;
-    this.provincia = this.service.provincia;
     this.distrito = this.service.distrito;
 
     this.id_customer = this.customer._id;
@@ -535,7 +521,7 @@ export default {
 
       //Si se envia correo con exito
       this.$toast.open({
-        message: 'Correo enviado con éxito',
+        message: 'Correo enviado con éxito.',
         type: "info",
         duration: 10000,
         dismissible: true,

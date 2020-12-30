@@ -9463,16 +9463,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -9504,8 +9494,6 @@ __webpack_require__.r(__webpack_exports__);
       id_service: '',
       title: '',
       category: '',
-      departamento: '',
-      provincia: '',
       distrito: '',
       id_customer: '',
       username: '',
@@ -9552,8 +9540,6 @@ __webpack_require__.r(__webpack_exports__);
               _this.id_service = _this.service._id;
               _this.title = _this.service.title;
               _this.category = _this.service.category;
-              _this.departamento = _this.service.departamento;
-              _this.provincia = _this.service.provincia;
               _this.distrito = _this.service.distrito;
               _this.id_customer = _this.customer._id;
               _this.username = _this.customer.username;
@@ -9580,19 +9566,19 @@ __webpack_require__.r(__webpack_exports__);
               _this.suma();
 
               if (!(_this.showWorker == 'enterprise')) {
-                _context.next = 40;
+                _context.next = 38;
                 break;
               }
 
-              _context.next = 37;
+              _context.next = 35;
               return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/subemployee/list/simple&1/".concat(localStorage.getItem('e_id')));
 
-            case 37:
+            case 35:
               response2 = _context.sent;
               _this.subemployee = response2.data.data.subemployees;
               _this.showSelectWorker = true;
 
-            case 40:
+            case 38:
             case "end":
               return _context.stop();
           }
@@ -9736,7 +9722,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
                 _this3.$toast.open({
-                  message: 'Correo enviado con éxito',
+                  message: 'Correo enviado con éxito.',
                   type: "info",
                   duration: 10000,
                   dismissible: true
@@ -43746,7 +43732,7 @@ var render = function() {
           },
           [
             _c("span", { staticClass: "text-xl text-gray-900 w-full" }, [
-              _vm._v("¡Bandeja de Notificaciones vacía!")
+              _vm._v("La bandeja de notificaciones está vacía.")
             ]),
             _vm._v(" "),
             _vm._m(0)
@@ -43960,12 +43946,12 @@ var staticRenderFns = [
             staticClass: "text-lg leading-6 font-medium text-gray-900",
             attrs: { id: "modal-headline" }
           },
-          [_vm._v("¿Desea eliminar?")]
+          [_vm._v("¿Desea eliminarla?")]
         ),
         _vm._v(" "),
         _c("div", { staticClass: "mt-2" }, [
           _c("p", { staticClass: "text-sm leading-5 text-gray-500" }, [
-            _vm._v("Está seguro que desea eliminar esta notificación.")
+            _vm._v("¿Está seguro que desea eliminar esta notificación?")
           ])
         ])
       ]
@@ -49255,38 +49241,6 @@ var render = function() {
                 _c(
                   "dd",
                   { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Departamento")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.departamento))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Provincia")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.provincia))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
                   [_vm._v("Distrito")]
                 ),
                 _vm._v(" "),
@@ -49322,7 +49276,7 @@ var render = function() {
                     { staticClass: "mt-1 text-sm leading-5 text-blue-500" },
                     [
                       _vm._v(
-                        "La siguiente ubicación es una referencia del rango de su dirección"
+                        "La siguiente ubicación es una referencia respecto del rango de su dirección"
                       )
                     ]
                   )
@@ -49643,7 +49597,7 @@ var render = function() {
                                     _vm._v(
                                       "Se agrega S/ " +
                                         _vm._s(_vm.workforce.toFixed(2)) +
-                                        " al total de su lista por la mano de obra"
+                                        " al total de su lista por la mano de obra."
                                     )
                                   ]
                                 )
@@ -49916,7 +49870,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "Acepto los términos y condiciones de uso del servicio KusaWasi."
+                          "Acepto los términos y condiciones de uso del servicio SirwiQuy."
                         )
                       ]
                     )
@@ -49973,7 +49927,7 @@ var render = function() {
                           "ml-2 block text-sm leading-5 text-gray-900",
                         attrs: { for: "remember_me2" }
                       },
-                      [_vm._v("Acepto las politicas del servicio Kusawasi.")]
+                      [_vm._v("Acepto las politicas del servicio SirwiQuy.")]
                     )
                   ]),
                   _vm._v(" "),
@@ -73931,15 +73885,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: "/signup/enterprise",
     component: _pages_Auth_SignUpEnterprise_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
     beforeEnter: isGuest
-  }, {
-    path: "/supplier/notifications",
-    component: _pages_Supplier_Notifications_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
-    beforeEnter: isSupplier
-  }, {
-    path: "/supplier/notifications/details/:notification_id",
-    component: _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
-    beforeEnter: isSupplier,
-    props: true
   }, //Rutas de los proveedores
   {
     path: "/supplier",
@@ -73971,6 +73916,15 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: "/supplier/blank",
     component: _pages_Supplier_Blank_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
     beforeEnter: isSupplier
+  }, {
+    path: "/supplier/notifications",
+    component: _pages_Supplier_Notifications_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
+    beforeEnter: isSupplier
+  }, {
+    path: "/supplier/notifications/details/:notification_id",
+    component: _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
+    beforeEnter: isSupplier,
+    props: true
   }, //Ruta solo para trabajador
   {
     path: "/worker/profile/edit",
