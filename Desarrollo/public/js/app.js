@@ -6655,6 +6655,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6668,7 +6689,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      stars: this.grade
+      stars: this.grade,
+      error_comment: " ",
+      vacio_comment: " "
     };
   },
   methods: {
@@ -45556,16 +45579,26 @@ var render = function() {
           [_vm._v("\n        Calificar Servicio\n      ")]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "bg-gray-100 text-center py-8" }, [
+        _c("div", { staticClass: "bg-white text-center py-8" }, [
           _c("div", { staticClass: "flex justify-center items-center" }, [
             _c(
               "div",
               { staticClass: "flex items-center pt-15 mb-4" },
               _vm._l(5, function(star) {
                 return _c(
-                  "span",
+                  "svg",
                   {
-                    key: star.stars,
+                    key: star.starts,
+                    staticClass:
+                      "h-15 w-15 text-gray-300 sm:h-20 sm:w-20 hover:text-yellow-300 active:text-yellow-300 fill-current",
+                    class: {
+                      "text-yellow-500": star <= _vm.stars,
+                      "text-gray-500": !(star <= _vm.stars)
+                    },
+                    attrs: {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 14 14"
+                    },
                     on: {
                       click: function($event) {
                         return _vm.rate(star)
@@ -45573,13 +45606,13 @@ var render = function() {
                     }
                   },
                   [
-                    _c("IconSvg", {
-                      staticClass:
-                        "h-15 w-15 text-gray-300 sm:h-20 sm:w-20 hover:text-yellow-300 active:text-yellow-300  ",
-                      attrs: { solid: true, icon: "star" }
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z"
+                      }
                     })
-                  ],
-                  1
+                  ]
                 )
               }),
               0
@@ -45619,6 +45652,55 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
+          _c("div", { staticClass: "mx-auto text-center mt-6" }, [
+            _c("label", { attrs: { for: "input_comment" } }),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "mt-1 rounded-md shadow-sm lg:px-20 sm:px-5" },
+              [
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.comment,
+                      expression: "comment"
+                    }
+                  ],
+                  staticClass:
+                    "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                  attrs: {
+                    id: "input_comment",
+                    rows: "4",
+                    placeholder: "Comentar..."
+                  },
+                  domProps: { value: _vm.comment },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.comment = $event.target.value
+                    }
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _vm.error_comment
+              ? _c("small", { staticClass: "text-red-600" }, [
+                  _vm._v(_vm._s(_vm.error_comment))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.vacio_comment
+              ? _c("small", { staticClass: "text-yellow-600" }, [
+                  _vm._v(_vm._s(_vm.vacio_comment))
+                ])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
           _c(
             "div",
             { staticClass: "mx-auto text-center mt-6" },
@@ -45634,7 +45716,7 @@ var render = function() {
                     "button",
                     {
                       staticClass:
-                        "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:border-gray-700 focus:shadow-outline-primary active:bg-primary-700 transition ease-in-out duration-150",
+                        "inline-flex items-center px-3 py-4 border border-gray-400 text-sm leading-4 font-medium rounded-md text-black bg-gray-200 hover:bg-gray-300 focus:outline-none focus:border-gray-700 focus:shadow-outline-primary active:bg-primary-700 transition ease-in-out duration-150",
                       attrs: { type: "button" }
                     },
                     [
@@ -45658,7 +45740,7 @@ var render = function() {
                     "button",
                     {
                       staticClass:
-                        "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-primary-700 transition ease-in-out duration-150",
+                        "inline-flex items-center px-3 py-4 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-primary-700 transition ease-in-out duration-150",
                       attrs: { type: "button" }
                     },
                     [
