@@ -25,7 +25,7 @@
                 <div  class="mx-auto text-center mt-6">
                     <div class="inline-flex items-center p-4 ">
                         <h2 class="mt-6 text-center  font-bold text-gray-900"> 
-                            Usted a valorizado este servicio en {{ stars }} estrella(s) este servicio</h2>
+                            Usted a valorizado este servicio en {{ stars }} estrella(s)</h2>
                     </div>
                 </div>
                 <div class="mx-auto text-center mt-6">

@@ -45645,7 +45645,7 @@ var render = function() {
                   _vm._v(
                     " \n                        Usted a valorizado este servicio en " +
                       _vm._s(_vm.stars) +
-                      " estrella(s) este servicio"
+                      " estrella(s)"
                   )
                 ]
               )
