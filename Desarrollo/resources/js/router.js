@@ -24,6 +24,8 @@ import SuppliersBlank from "./pages/Supplier/Blank.vue";
 import CustomerBlank from "./pages/Customer/Blank.vue";
 import ServiceCost from "./pages/Customer/ServiceCost.vue";
 import ServiceDetails from "./pages/Customer/ServiceDetails.vue";
+import ServiceForm from "./pages/Customer/ServiceForm.vue";
+import RateService from "./pages/Customer/RateService.vue";
 
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
@@ -132,7 +134,20 @@ export default new VueRouter({
             path: "/signup/enterprise",
             component: SignUpEnterprise,
             beforeEnter: isGuest
-        },        
+        },
+        
+        //Rutas del cliente logeado
+        {
+            path: "/request/form/service",
+            component: ServiceForm
+            // beforeEnter: isCustomer
+        },
+        {
+            path: "/customer/rate/service",
+            component: RateService
+            // beforeEnter: isCustomer
+        },
+        
         //Rutas de los proveedores
         {
             path: "/supplier",
