@@ -30,3 +30,7 @@ Route::get('services/id={ide}', 'ServiceController@serviceid');//Ruta de creacio
 Route::get('service_details/{service_id}', 'ServiceController@serviceiddetails');//Ruta de detalle de servicios 
 Route::get('service/{service_id}/cost', 'ServiceController@pricesdetails');//Ruta de los detalles de los precios 
 Route::get('services/page={page}/pmin{pmin}&pmax={pmax}/OrderByvalue={value}/title={title}/district={district}/category={category}', 'ServiceController@serviceall');//Ruta de los servicios paginados
+
+//Ruta de Notificaciones
+Route::get('create_notification', 'NotificationController@createnotification');//Ruta de creacion de nptificacion
+Route::get('notification_details/{notification_id}', 'NotificationController@idnotification');//Ruta de detalle de servicios
