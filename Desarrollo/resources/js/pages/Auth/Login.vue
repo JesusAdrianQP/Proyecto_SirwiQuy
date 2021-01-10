@@ -273,9 +273,9 @@ export default {
           dismissible: true,
         });
       }
-
+      
       //Guardo token de acceso
-      localStorage.setItem('token', response.data.data);
+      localStorage.setItem('token', response.data.data.replace(/ /g, ""));
       
       //Si todo esta correcto: 
       this.$toast.open({

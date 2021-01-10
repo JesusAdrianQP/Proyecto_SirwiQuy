@@ -1,4 +1,10 @@
-/*Clases para la barra scroll - solo disponible en algunos navegadores*/
+/*--------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+                          Estilos CSS - SirwyQuy - Derecho corporativo                        
+----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------*/
+
+/*Barra Scroll - NOTA: solo disponible en algunos navegadores*/
 .contenedor::-webkit-scrollbar {
     width: 11px;
     background-color: #f1eeee;
@@ -8,7 +14,8 @@
     background-color: #B6C4DB;
     border-radius: 5px;
 }
- /*Clases para la pre carga principal de la página*/
+
+ /*Pre-carga de la landing page*/
 *,
 *:before,
 *:after {
@@ -73,17 +80,7 @@
   90% { transform:  scale(1.1) ;}
 }
 
-/*Clase para bordes redondeados*/
-@media screen and (max-width:767px){
-  .bordredound{
-    border-radius: 0px 180px 0px 0px;
-    -moz-border-radius: 0px 180px 0px 0px;
-    -webkit-border-radius: 0px 180px 0px 0px;
-    border: 0px solid #000000;
-  }
-}
-
-/*Espaciado del titulo*/
+/*Titulo y Descripcion - Espaciado y ...*/
 .titulo{
   overflow: hidden; 
   text-overflow: ellipsis;  
@@ -92,7 +89,6 @@
   -webkit-box-orient: vertical;
 }
 
-/*Espaciado de descripcion*/
 .description{
   overflow: hidden; 
   text-overflow: ellipsis;  
@@ -146,7 +142,7 @@
   transform: rotate(-90deg) translateX(-3px);
 }
 
-/*Carga secundaria de los datos*/
+/*Pre-carga de datos establecido*/
 .loader-dots div {
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
@@ -190,3 +186,4 @@
       transform: translate(24px, 0);
   }
 }
+
