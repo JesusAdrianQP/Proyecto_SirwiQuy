@@ -226,14 +226,33 @@ export default {
   },
   data: () => {
     return {
+      token: localStorage.getItem('token'),
+      level: localStorage.getItem('e_level'),
+      isCustomer: false,
       isOpen: false,
-      profileOpen: false
+      profileOpen: false,
+      usuario: '',
+      foto: '',
+      id: ''
     };
   },
-  props: {
-    isCustomer: Boolean,
-    usuario: String,
-    foto: String
+  async created() {
+    if((this.token == null || this.token == '') && (this.level == '' || this.level == null)){
+      this.isCustomer = false;
+    }
+    else{
+      this.isCustomer = true;
+      let response = await api.get(`/level=${this.level}/token=${this.token}`)
+      let customer = response.data.data;
+
+      this.usuario = customer.username;
+      this.id = customer._id;
+      if(customer.file != '' || this.file == null){this.foto = customer.file };
+
+      this.$emit('onCustomerId', {
+        _id: this.id
+      });
+    }
   },
   methods: {
     isMenu(){
@@ -253,6 +272,9 @@ export default {
 
       localStorage.removeItem('token');
       localStorage.removeItem('e_level');
+      localStorage.removeItem('request');
+      localStorage.removeItem('suma');
+      localStorage.removeItem('exist_service');
       
       window.location.reload();
     }

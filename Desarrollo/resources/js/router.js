@@ -77,6 +77,15 @@ const isSupplier = (to, from, next) => {
     next("/login/employee");
 };
 
+//Verificador de usuario cliente
+const isCustomer = (to, from, next) => {
+    if (localStorage.getItem("e_level") == "customer") {
+        next();
+        return;
+    }
+    next("/login/customer");
+};
+
 //Verificador de usuario trabajador
 const isWorker = (to, from, next) => {
     if (localStorage.getItem("e_level") == "employee") {
@@ -139,8 +148,8 @@ export default new VueRouter({
         //Rutas del cliente logeado
         {
             path: "/request/form/service",
-            component: ServiceForm
-            // beforeEnter: isCustomer
+            component: ServiceForm,
+            beforeEnter: isCustomer
         },
         {
             path: "/customer/rate/service",

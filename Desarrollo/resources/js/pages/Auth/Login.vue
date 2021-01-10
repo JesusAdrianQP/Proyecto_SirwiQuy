@@ -299,7 +299,9 @@ export default {
       } 
       else{
         localStorage.setItem('e_level', "customer");
-        this.$router.push("/");
+
+        if(localStorage.getItem('suma')!=null) this.$router.push("/request/form/service");
+        else{this.$router.push("/")}
       }
     },
     validateSubmit() {

@@ -93,7 +93,7 @@ export default {
         zoomControl: true, // Establece el control de zoom del mapa
         mapTypeControl: false, // Oculta el control de tipos de mapas
         scaleControl: false, //  Oculta el control de escala del mapa
-        streetViewControl: false, // Oculta el control de StreeView del mapa
+        streetViewControl: true, // Oculta el control de StreeView del mapa
         fullscreenControl: true // Establce el control full screen para ver el mapa a pantalla completa
       },
     }
