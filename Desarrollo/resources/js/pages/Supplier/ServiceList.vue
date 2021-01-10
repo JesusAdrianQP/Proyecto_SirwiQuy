@@ -39,7 +39,7 @@ export default {
     };
   },
   async created(){
-    let response = await api.get(`/services/level=${this.acceso}/token=${this.token}`)
+    let response = await api.get(`/level=${this.acceso}/token=${this.token}`)//Corregir para sidebar
     let supplier = response.data.data;
     
     this.username = supplier.username;

@@ -27,14 +27,6 @@ class ServiceData
             'paginate' => $services
         ]);
     }
-
-    public static function listid($id){
-        $services_id = Service::where('token', '=', $id->ide)->get();
-
-        return response()->json([
-            'servicios' => $services_id
-        ]);
-    }
     
     public static function listiddetails($id){
         $services_id = Service::where('_id', '=', $id->service_id)->get();

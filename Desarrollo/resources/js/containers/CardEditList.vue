@@ -100,8 +100,8 @@ export default {
   },
   async created(){
     //Se llama a toda la lista de servicios
-      let response = await api.get(`/services/id=${this.ide}`)
-      this.services = response.data.data.servicios;
+      /*let response = await api.get(`/services/id=${this.ide}`)
+      this.services = response.data.data.servicios;*/
 
       this.$emit('getLoading', {})
   }

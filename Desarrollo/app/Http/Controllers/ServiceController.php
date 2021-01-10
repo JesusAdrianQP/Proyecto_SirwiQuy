@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateRequest;
 use Illuminate\Http\Request;
 use App\DataBase\ServiceData;
 
@@ -14,10 +13,6 @@ class ServiceController extends Controller
 
     public function createservice(Request $request){
         return ServiceData::register($request); 
-    }
-    
-    public function serviceid(Request $request){
-        return ServiceData::listid($request);
     }
 
     public function serviceiddetails(Request $request){
