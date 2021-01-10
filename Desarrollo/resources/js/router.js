@@ -24,6 +24,7 @@ import SuppliersBlank from "./pages/Supplier/Blank.vue";
 import CustomerBlank from "./pages/Customer/Blank.vue";
 import ServiceCost from "./pages/Customer/ServiceCost.vue";
 import ServiceDetails from "./pages/Customer/ServiceDetails.vue";
+import ServiceReport from "./pages/Customer/ServiceReport.vue";
 
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
@@ -82,6 +83,15 @@ const isWorker = (to, from, next) => {
         return;
     }
     next("/login/employee");
+};
+
+//Verificador de usuario cliente
+const isCustomer = (to, from, next) => {
+    if (localStorage.getItem("e_level") == "customer") {
+        next();
+        return;
+    }
+    next("/login/customer");
 };
 
 Vue.use(VueRouter);
@@ -177,6 +187,13 @@ export default new VueRouter({
             component: EditProfile,
             beforeEnter: isWorker
         },
+        //Ruta solo para cliente logeado
+        {
+            path: "/customer/report/service",
+            component: ServiceReport,
+            beforeEnter: isCustomer
+        },
+
         //Ruta no registrada
         {
             path: "*",
