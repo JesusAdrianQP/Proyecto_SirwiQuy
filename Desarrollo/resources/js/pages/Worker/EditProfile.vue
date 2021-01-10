@@ -400,14 +400,15 @@ export default {
   },
   async created() {
     let response = await api.get(`/services/level=${this.level}/token=${this.token}`)
+    
     let supplier = response.data.data;
 
     this.username = supplier.username;
     this.image = supplier.file;
     this.dni = supplier.DNI;
 
-    if(this.DNI != null || this.DNI != '') {
-       localStorage.setItem('e_DNI', this.dni);
+    if(this.dni != undefined) {
+      localStorage.setItem('e_DNI', this.dni);
       this.$router.push("/supplier");
     }
 

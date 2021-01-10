@@ -1,10 +1,14 @@
 <?php
-/*
-/Rutas de conexión entre Front End y Back End
-*/
-Route::view('/', 'app') -> name('index');
-Route::view('landing', 'landing');
+/*--------------------------------------------------------------------------------------
+                            Rutas de conexión principales
+/*------------------------------------------------------------------------------------*/
+Route::view('/', 'landing') -> name('landing');/*Landing Page de SirwiyQuy*/
 
+Route::view('/home', 'app') -> name('home');/*Inicio de carga SPA*/
+
+/*------------------------------------------------------------------------------------
+                      Rutas de conexión entre Front End y Back End
+/-------------------------------------------------------------------------------------*/
 //Rutas de las sesiones
 Route::post('login', 'LoginController@login'); //Ruta de inicio de sesión
 Route::post('signup', 'LoginController@signup'); //Ruta de crear sesión

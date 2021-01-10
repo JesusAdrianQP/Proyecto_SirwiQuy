@@ -81,7 +81,7 @@ class UserDataMaster{
         if($usercheck){
             return $usercheck;
         }
-        else return response()->json(['errors' => ['false' => ['Error fatal']]], 422); ;
+        else return response()->json(['errors' => ['false' => ['Error fatal']]], 422);
     }
 
     public static function getIdentity($id){

@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; ISO-8859-1" />
-        <meta name="DC.language" content="es-ES" />
-        <meta name="description" content="Plataforma webapp de servicios de asistencia al hogar. Brindamos la tecnología para facilitar la comunicación entre un cliente y un proveedor de servicios." />
-        <meta name="keywords" content="SirwiyQuy, servicios al hogar, Cuidado del medio ambiente">
-        <meta name="DC.creator" content="Oficina de Desarrollo SirwiyQuy" />
-        <meta name="copyright" content="SirwiyQuy S.A.C" />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        
-        <!---Etiquetas open graph añadidas para mostrar en redes sociales-->
-        <meta property="og:locale" content="es_ES" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="SirwiyQuy | Hogar de Servicios" />
-        <meta property="og:description" content="Plataforma webapp de servicios de asistencia al hogar. Brindamos la tecnología para facilitar la comunicación entre un cliente y un proveedor de servicios." />
-        <meta property="og:url" content="https://"/>
-        <meta property="og:site_name" content="SirwiyQuy"/>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; ISO-8859-1" />
+    <meta name="DC.language" content="es-ES" />
+    <meta name="description" content="Plataforma webapp de servicios de asistencia al hogar. Brindamos la tecnología para facilitar la comunicación entre un cliente y un proveedor de servicios." />
+    <meta name="keywords" content="SirwiyQuy, servicios al hogar, Cuidado del medio ambiente">
+    <meta name="DC.creator" content="Oficina de Desarrollo SirwiyQuy" />
+    <meta name="copyright" content="SirwiyQuy S.A.C" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     
-        <title>SirwiyQuy | Hogar de Servicios</title>
+    <!---Etiquetas open graph añadidas para mostrar en redes sociales-->
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SirwiyQuy | Hogar de Servicios" />
+    <meta property="og:description" content="Plataforma webapp de servicios de asistencia al hogar. Brindamos la tecnología para facilitar la comunicación entre un cliente y un proveedor de servicios." />
+    <meta property="og:url" content="https://"/>
+    <meta property="og:site_name" content="SirwiyQuy"/>
 
-        <!--Estilos provistos por el framework Tailwindcss-->
-        <link rel="stylesheet" href="css/app.css">
+    <title>SirwiyQuy | Hogar de Servicios</title>
+    <link rel="shortcut icon" href="{{ asset('images/Sirwiyquy_b.ico') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom_app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-sirwiyquy.css') }}">
+  </head>
 
-        <!--JQuery-->
-        <script src="js/jquery.min.js"></script>
+  <body class="contenedor">
+    
+    <!--Pre carga de la página-->
+    <div id="loader" class="loading1 fixed top-0 right-0 h-screen w-screen z-50 flex justify-center items-center bg-primary-600">
+      <svg class="w-40 md:w-64 lg:w-66 overflow-visible" viewBox="0 0 100 100">
+        <g class="points"> 
+          <circle class="ciw" cx="50" cy="50" r="50" fill="#fff"  />
+          <circle class="ci2" cx="5" cy="50" r="4" />
+          <circle class="ci1" cx="95" cy="50" r="4" />
+        </g>
+      </svg>
+    </div>
 
-        <!--Estilos personalizados-->
-        <link rel="stylesheet" href="css/style-sirwiyquy.css">
-        
-        <!--Estilos de letras-->
-        <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
-
-    </head>
-
-    <body class="contenedor">
-    <!-- 
-    NAVBAR: Cabecera principal del sistema
-    Aquí se encuentra todos los datos principales del sistema
-  -->
-  <nav class="bg-white border-b border-gray-400">
+    <nav class="bg-white border-b border-gray-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
       <div class="flex justify-between h-16">
         <!--Navbar en vista de laptop-->
@@ -70,7 +68,7 @@
         <div class="hidden sm:ml-4 lg:flex sm:items-center">
           <a       
             v-if="!isCustomer"     
-            href="http://127.0.0.1:8000/#/login/customer"
+            href="http://127.0.0.1:8000/home#/login/customer"
             class="flex w-full rounded-md shadow-sm sm:w-auto"
           >
             <button
@@ -81,7 +79,7 @@
 
           <a            
             v-if="!isCustomer"
-            href="http://127.0.0.1:8000/#/signup/indie/customer"
+            href="http://127.0.0.1:8000/home#/signup/indie/customer"
             class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:ml-2 sm:w-auto"
           >
             <button
@@ -121,18 +119,18 @@
 
         <a
             v-if="!isCustomer"
-          href="http://127.0.0.1:8000/#/join_us"
+          href="http://127.0.0.1:8000/home#/join_us"
           class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-md font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Trabaja con Nosotros</a>
 
         <a
           v-if="isCustomer"
-          href="http://127.0.0.1:8000/#/customer/blank"
+          href="http://127.0.0.1:8000/home#/customer/blank"
           class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-md font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Mis servicios</a>
         
         <a
-          href="http://127.0.0.1:8000/#/customer/blank"
+          href="http://127.0.0.1:8000/home#/customer/blank"
           class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-md font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Ayuda</a>
       </div>
@@ -190,7 +188,7 @@
                             <p class="m-0 text-gray-900 font-light" style="font-family: 'Roboto', sans-serif;">Encuentra los servicios ideales para el mantenimiento de tu hogar</p>
                             
                         </div>
-                        <a href="http://127.0.0.1:8000/#/">
+                        <a href="http://127.0.0.1:8000/home#/">
                           <button
                               class="mt-20 inline-flex justify-center w-auto  border-solid border-2 rounded-full py-3 px-10 border-gray-800 lg:text-xl leading-6 font-medium text-white shadow-sm  bg-primary-800 hover:text-black hover:bg-white focus:outline-none focus:border-primary-300 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5"
                               >COMENZAR
@@ -319,7 +317,7 @@
                 </div>
             </div>
             <div class="flex justify-center items-center lg:pb-10 md:pb-10 bg-gray-200">
-                <a href="http://127.0.0.1:8000/#" class="mt-0 mb-2 inline-flex items-center py-3 px-10  lg:text-xl leading-5 font-medium text-primary-500 shadow-sm  hover:underline hover:text-black sm:text-sm " >
+                <a href="http://127.0.0.1:8000/home#/" class="mt-0 mb-2 inline-flex items-center py-3 px-10  lg:text-xl leading-5 font-medium text-primary-500 shadow-sm  hover:underline hover:text-black sm:text-sm " >
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                     VER SERVICIOS
                 </a>
@@ -417,5 +415,8 @@
         </div>
         </div>
     </footer> 
-    </body>
+    
+    <script src="{{ asset('js/custom_app.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+  </body>
 </html>
