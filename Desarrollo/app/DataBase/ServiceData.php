@@ -142,4 +142,81 @@ class ServiceData
             return response()->json(['success' => ['Cambios guardados']], 200);
         }else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
     }
+
+    
+//Función que borra una notificacion
+public static function delete_request($not)
+{
+    $exist = Request::find($not->id); //Encuentro la solicitud
+
+    if($exist){
+        if($not->status == 'No respondido'){
+            //Configuro mis datos a devolver
+            $value_service = Service::servicesupplier($exist->id_service)->first();
+            $customer = Customer::where('_id', '=', $exist->id_customer)->first();
+
+            $exist->delete(); //Borro la solicitud
+
+            //Envio un mensaje al cliente que su solicitud ha sido rechazada
+            $message = new MailController;
+            $message->message_deny($value_service, $customer, $not->date);
+
+            return response()->json([
+                'info' => 'La solicitud fue eliminada con éxito'
+            ], 200);
+        }
+        else{
+            $exist->delete(); //Borro la solicitud
+            
+            return response()->json([
+                'info' => 'La solicitud fue eliminada con éxito',
+            ], 200);
+        }
+    }
+    else return response()->json(['errors' => ['fail' => ['La solicitud no existe!']]], 422) ;       
+}
+
+
+//Función que trae todos mis notificaciones (solicitudes) correspondientes a mi proveedor
+public static function list_not($request)
+{
+    //Traigo mis servicios correspondientes, solo requiero las id's
+    $num_services = Service::listsupplier($request->id)->get();
+    $array_services = [];
+    //Guardo en un array todas las id's obtenidas
+    for($i = 0; $i < count($num_services); $i++){
+        $array_services[$i] = $num_services[$i]->_id;
+    }
+    //Selecciono todas mis solicitudes correspondidas a esa id
+    $request = Request::whereIn('id_service', $array_services)
+                        ->orderBy('created_at', 'DESC')
+                        ->statusnot($request->filter)
+                        ->paginate(5, ['*'], 'requests', $request->page);
+
+    return response()->json([
+        'paginate' => $request
+    ], 200);
+}
+
+//Función que trae los detalles de mis notificaciones (solicitudes)
+public static function notdetails($id)
+{
+    //Encontramos los detalles de la solicitud
+    $request = Request::find($id->id); 
+
+    if($request){
+        //Encuentro mi servicio correspondiente
+        $service = ServiceData::servdetails($request->id_service, 2);
+        //Encuentro a quién pertenece mi solicitud
+        $customer = Customer::where('_id', '=', $request->id_customer)->first();
+
+        return response()->json([
+            'request_details' => $request,
+            'service_details' => $service,
+            'customer_details' => $customer
+        ], 200);
+    }
+    else return response()->json(['errors' => ['fail' => ['Solicitud no encontrada!']]], 422);
+}
+
 }

@@ -27,7 +27,7 @@
             <NavBarOption title="Inicio" url="/" :icon="{ icon: 'home', solid: true }" />
             <NavBarOption  v-if="!isCustomer" title="Trabaja con Nosotros" url="/join_us" :icon="{ icon: 'briefcase', solid: true }"/>
             <NavBarOption title="Ayuda" url="/customer/blank" :icon="{ icon: 'question-mark-circle', solid: true }"/>
-            <NavBarOption  v-if="isCustomer" title="Mis servicios" url="/customer/blank" :icon="{ icon: 'briefcase', solid: true }"/>
+            <NavBarOption  v-if="isCustomer" title="Mis servicios" url="/customer/report/service" :icon="{ icon: 'briefcase', solid: true }"/>
           </div>
         </div>
 
@@ -153,7 +153,7 @@
 
         <router-link
           v-if="isCustomer"
-          to="/customer/blank"
+          to="/customer/report/service"
           class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-md font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
         >Mis servicios</router-link>
         
