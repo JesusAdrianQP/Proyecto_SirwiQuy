@@ -4,10 +4,7 @@
       Se agrega la navbar y el landing footer como denominador comun 
       para todos las interfaces
     -->
-    <NavBar
-      :isCustomer="isCustom"
-      :usuario="user"
-      :foto="photo" />
+    <NavBar @onCustomerId="getCustomerId"/>
     <slot></slot>
     <LandingFooter/>
   </div>
@@ -23,10 +20,14 @@ export default {
     NavBar,
     LandingFooter
   },
-  props: {
-    isCustom: Boolean,
-    user: String,
-    photo: String
+  methods: {
+    getCustomerId(obj) {
+      let id = obj._id;
+
+      this.$emit('onCustomerIdForm', {
+        idCustomer: id
+      });
+    },
   }
 }
 </script>

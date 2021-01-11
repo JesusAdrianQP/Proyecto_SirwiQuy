@@ -154,7 +154,7 @@ export default {
   },
   data: () => {
     return {
-      includeMaterials1: 'include_materials',
+      includeMaterials1: 'only_workforce',
       //Se guarda como un objeto los valores de precios del servicio
       price_details: '',
 
@@ -210,7 +210,7 @@ export default {
       }
     },
     async Submit(){
-      localStorage.setItem('worforce', this.workforce);
+      localStorage.setItem('suma', this.suma);
       localStorage.setItem('request',  JSON.stringify(this.request_prices));//Convierto mi json en string
 
       if(localStorage.getItem("e_level") == null)

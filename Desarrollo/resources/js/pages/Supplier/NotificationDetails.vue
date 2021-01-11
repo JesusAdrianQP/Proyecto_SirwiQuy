@@ -2,16 +2,20 @@
   <!--NOTIFICATION DETAILS: Se observa la notificación seleccionada con sus datos correspondientes
   y el mapa de google maps señalando la ubicación exacta-->
   <SideBar title="Detalles de la notificación">
-    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+    <Loader class="min-h-screen"
+            :load="loading"
+    />
+
+    <div v-show="!loading" class="bg-white shadow overflow-hidden sm:rounded-lg">
       <div class="px-4 py-5 border-b border-gray-200 sm:px-6">
         <h3 class="text-lg leading-6 font-medium text-gray-900">
           <strong>Servicio:</strong>
-          {{title}}
+          {{ title }}
         </h3>
 
         <dl class="grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2">
           <div class="sm:col-span-1">
-            <dd class="mt-1 text-sm leading-5 text-gray-900">Categoría: {{category}}</dd>
+            <dd class="mt-1 text-sm leading-5 text-gray-900"><strong>Categoría:</strong> {{category}}</dd>
           </div>
         </dl>
       </div>
@@ -28,21 +32,9 @@
           </div>
 
           <div class="sm:col-span-1">
-            <dd class="mt-1 text-sm leading-5 text-gray-900">DNI</dd>
-            <dt class="text-base leading-5 font-medium text-gray-500">{{DNI}}</dt>
-          </div>
-
-          <div class="sm:col-span-1">
-            <dd class="mt-1 text-sm leading-5 text-gray-900">Edad</dd>
-            <dt class="text-base leading-5 font-medium text-gray-500">{{age}}</dt>
-          </div>
-
-          <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Nombre(s)</dd>
             <dt class="text-base leading-5 font-medium text-gray-500">{{name}}</dt>
           </div>
-
-          <div class="hidden sm:block sm sm:col-span-1"></div>
 
           <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Apellido paterno</dd>
@@ -53,6 +45,11 @@
             <dd class="mt-1 text-sm leading-5 text-gray-900">Apellido materno</dd>
             <dt class="text-base leading-5 font-medium text-gray-500">{{lastnamem}}</dt>
           </div>
+
+          <div class="sm:col-span-1">
+            <dd class="mt-1 text-sm leading-5 text-gray-900">Edad</dd>
+            <dt class="text-base leading-5 font-medium text-gray-500">{{age}}</dt>
+          </div>
         </dl>
         
         <div class="h-px w-full bg-gray-200 mt-4 sm:mt-8"></div>
@@ -61,20 +58,20 @@
           <strong>Datos del servicio</strong>
         </h3>
 
-        <dl class="grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-3">
+        <dl class="grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2">
           <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Distrito</dd>
             <dt class="text-base leading-5 font-medium text-gray-500">{{distrito}}</dt>
-          </div> 
+          </div>
 
           <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Dirección exacta</dd>
             <dt class="text-base leading-5 font-medium text-gray-500">{{adress}}</dt>
           </div>
-         
+
           <div class="sm:col-span-3">
             <div>
-              <dd class="mt-1 text-sm leading-5 text-blue-500">La siguiente ubicación es una referencia respecto del rango de su dirección</dd>
+              <dd class="mt-1 text-sm leading-5 text-blue-500">La siguiente ubicación es una referencia del rango de su dirección</dd>
             </div>
             
             <div id="map" style="height: 20rem">
@@ -103,8 +100,8 @@
           </div>
 
           <div class="sm:col-span-3">
-            <dt class="text-sm leading-5 font-medium text-gray-500">Mensaje</dt>
-            <dd class="mt-1 text-base leading-5 text-gray-900">{{message}}</dd>
+            <dt class="text-sm leading-5 font-medium text-gray-900">Mensaje</dt>
+            <dd class="mt-1 text-base leading-5 text-gray-500">{{message}}</dd>
           </div>
 
           <div class="sm:col-span-1">
@@ -188,7 +185,7 @@
 
                   <div class="px-4 py-3 text-xs leading-5">
                     <span class="font-medium text-green-500"
-                    >Se agrega S/ {{workforce.toFixed(2)}} al total de su lista por la mano de obra.</span>
+                    >Se agrega S/ {{workforce.toFixed(2)}} al total de su lista por la mano de obra</span>
                   </div>
                 </div>
               </div>
@@ -235,7 +232,7 @@
               <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"></div>
             </div>
 
-            <div v-show="showSelectWorker" class="my-4">
+            <!--<div v-show="showSelectWorker" class="my-4">
               <label
                 for="selectWorker"
                 class="block text-sm leading-5 font-medium text-gray-700"
@@ -251,7 +248,7 @@
               <small v-if="vacio" class="text-yellow-600">{{
                       vacio
               }}</small>
-            </div>
+            </div>-->
 
             <div class="flex items-center">
               <input
@@ -264,7 +261,7 @@
               <label
                 for="remember_me"
                 class="ml-2 block text-sm leading-5 text-gray-900"
-              >Acepto los términos y condiciones de uso del servicio SirwiQuy.</label>
+              >Acepto los términos y condiciones de uso del servicio SirwiyQuy.</label>
             </div>
 
             <div class="flex items-center mt-2">
@@ -278,7 +275,7 @@
               <label
                 for="remember_me2"
                 class="ml-2 block text-sm leading-5 text-gray-900"
-              >Acepto las politicas del servicio SirwiQuy.</label>
+              >Acepto las politicas del servicio SirwiyQuy.</label>
             </div>
             
             <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -321,9 +318,10 @@
 <script>
 import api from "../../api";
 
-import Maps from "../../components/Maps.vue"
+import Maps from "../../components/Maps"
 import SideBar from "../../components/SideBar";
-import MyButton from "../../components/MyButton.vue";
+import MyButton from "../../components/MyButton";
+import Loader from "../../components/Loader";
 
 export default {
   name: "NotificationDetails",
@@ -331,39 +329,32 @@ export default {
     SideBar,
     Maps,
     MyButton,
+    Loader
   },
   data: () => {
     return {
+      loading: true,
       quotationOpen: false,
       confirmOpen: false,
       buttonLoading: false,
       type: '',
-      showSelectWorker: false, //si debe mostrar el selector de trabajadores
-      showWorker: localStorage.getItem('e_level'),
+      //showSelectWorker: false,
+      //showWorker: localStorage.getItem('e_level'),
       Select1: false,
       Select2: false,
 
-      subemployee: [],
-      request: [],
-      service: [],
-      customer: [],
+      request:'',
+      customer:'',
+      service:'',
 
-      vacio: '',
-      employee: '',
-
-      id_service:'',
       title: '',
       category: '',
       distrito: '',
-
-      id_customer: '',
       username: '',
-      
+      email:'',
       coti_personal: [],
       workforce: 0,
       sumtotal: 0,
- 
-      DNI: '',
       name: '',
       lastnamep: '',
       lastnamem: '',
@@ -375,89 +366,80 @@ export default {
       message: '',
       lat: 0,
       lng: 0,
-      status: '',
-      fecharequest: '',
-      fechaact: ''
+      status: ''
     }
   },
   props: {
     notification_id: String
   },
   async created() {
-    //Traigo la información necesaria de mi solicitud
-    let response = await api.get(`/notifications/${this.notification_id}`)
-    this.request = response.data.data.request_details;
-    this.service = response.data.data.service_details.original.serv_details;
-    this.customer = response.data.data.customer_details;
+    let response = await api.get(`/notification_details/${this.notification_id}`);    
 
-    this.id_service = this.service._id;
-    this.title = this.service.title;
-    this.category = this.service.category;
-    this.distrito = this.service.distrito;
+    //Si es que introducen rutas erroneas inexistentes
+    if(response.ok == true){
+      this.loading = false;
 
-    this.id_customer = this.customer._id;
-    this.username = this.customer.username;
+      this.request = response.data.data.request_details;
+      this.customer = response.data.data.customer_details;
+      this.service = response.data.data.service_details;
 
-    this.DNI = this.request.DNI;
-    this.age = this.request.age;
-    this.name = this.request.name;
-    this.lastnamep = this.request.lastnamep;
-    this.lastnamem = this.request.lastnamem;
-    this.date = this.request.date;
-    this.timemin = this.request.timemin;
-    this.timemax = this.request.timemax;
-    this.message = this.request.message;
-    this.coti_personal = this.request.cotizacion_personal;
-    this.workforce = this.request.worforce;
-    this.type = 'Form3';
-    this.lat = this.request.new_lat;
-    this.lng = this.request.new_lng;
-    this.adress = this.request.addres;
-    this.status = this.request.status;
+      this.id_request = this.request._id;
+      var dateact = this.request.created_at.slice(0,-9).split('-').reverse().join('/');
+      this.now = dateact;
+      this.id_service = this.service._id;
+      this.id_customer = this.customer._id;
+      this.title = this.service.title;
+      this.category = this.service.category;
+      this.distrito = this.service.distrito;
+      this.username = this.customer.username;
+      this.email = this.customer.email;
+      this.age = this.request.age;
+      this.name = this.request.name;
+      this.lastnamep = this.request.lastnamep;
+      this.lastnamem = this.request.lastnamem;
+      this.date = this.request.date;
+      this.timemin = this.request.timemin;
+      this.timemax = this.request.timemax;
+      this.message = this.request.message;
 
-    
-    this.fechaact = this.request.created_at;
-    var fecha = this.fechaact.slice(0,-9).split('-').reverse().join('/');
-    this.fecharequest = fecha;
+      this.coti_personal = this.request.cotizacion_personal;
+      this.sumtotal = this.request.sumaTotal;
+      this.suma();
 
-    this.suma();
-
-    if(this.showWorker == 'enterprise')
-    { 
-      let response2 = await api.get(`/subemployee/list/simple&1/${localStorage.getItem('e_id')}`)
-      this.subemployee = response2.data.data.subemployees;
-      this.showSelectWorker = true;
+      this.type = 'Form3';
+      this.lat = this.request.new_lat;
+      this.lng = this.request.new_lng;
+      this.adress = this.request.addres;
+      this.status = this.request.status;
     }
+    else this.$router.push("/NotFound");
   },
   methods:{
     suma(){
-      if(this.coti_personal.length == 0) this.sumtotal = this.workforce;
+      if(this.coti_personal.length == 0) this.workforce = this.sumtotal;
         else{
+          var sumArray = 0;
+
           for(var i = 0; i < this.coti_personal.length; i++)
           {
-            this.sumtotal = this.sumtotal + (this.coti_personal[i].price * parseInt(this.coti_personal[i].cant));
+            sumArray = sumArray + (this.coti_personal[i].price * parseInt(this.coti_personal[i].cant));
           }
 
-          this.sumtotal = this.sumtotal + this.workforce;
+          this.workforce = this.sumtotal - sumArray;
         }
     },
     async SubmitAcept(){
-      if(this.showWorker == 'enterprise'){
-        this.validateSubmit();
-        if (this.hasError) return;
-      }
-
       this.confirmOpen = false;
       this.buttonLoading = true;
       //Respondo actualizando estado
       this.Response();
+
       //Envio correo positivo si acepto solicitud
       let response3 = await api.post(`/mail_acept`, {
-        employee: this.employee,
+        id_provider: localStorage.getItem('e_id'),
+        identity: localStorage.getItem('e_level'),
         id_service: this.id_service,
         id_customer: this.id_customer,
-        fecharequest: this.fecharequest,
-        DNI: this.DNI,
         age: this.age,
         name: this.name,
         lastnamep: this.lastnamep,
@@ -467,14 +449,13 @@ export default {
         timemax: this.timemax,
         message: this.message,
         cotizacion: this.coti_personal,
+        sumtotal: this.sumtotal,
         work: this.workforce,
         lat: this.lat,
         lng: this.lng,    
-        adress: this.adress,
-        suma: this.sumtotal
+        adress: this.adress
       })
       
-      //Si existe errores
       if (!response3.ok) {
         this.buttonLoading = false;
 
@@ -493,10 +474,8 @@ export default {
         });
       }
 
-      //Redireccionamiento de rutas
       this.$router.push("/supplier/notifications");
 
-      //Si se envia correo con exito
       this.$toast.open({
         message: response3.data.data.success[0],
         type: "info",
@@ -510,18 +489,34 @@ export default {
       //Respondo actualizando estado
       this.Response();
       //Envio correo negativo si rechazo solicitud
-      let response2 = await api.post(`/mail_deny`, {
-        id_service: this.id_service,
-        fecharequest: this.fecharequest,
-        id_customer: this.id_customer
+      let response2 = await api.post(`/delete/notification`, {
+        id: this.id_request,
+        status:'En proceso',
+        date: this.now
       })
 
-      //Redireccionamiento de rutas
+      if (!response2.ok) {
+        this.buttonLoading = false;
+
+        let er = response2.error.errors;
+        let mensaje = "Error desconocido";
+
+        if(er.hasOwnProperty('fail')){
+          mensaje = er.fail[0];
+        }
+
+        return this.$toast.open({
+          message: mensaje,
+          type: "error",
+          duration: 8000,
+          dismissible: true
+        });
+      }
+
       this.$router.push("/supplier/notifications");
 
-      //Si se envia correo con exito
       this.$toast.open({
-        message: 'Correo enviado con éxito.',
+        message: response2.data.data.success[0],
         type: "info",
         duration: 10000,
         dismissible: true,
@@ -529,12 +524,11 @@ export default {
     },
     async Response(){
       let response = await api.post(`/updatestatus`, {
-        is: "request",
+        typeNot: 'request',
         id: this.notification_id,
         status: 'Respondido',
       })
 
-      //Si existe errores en la actualización de datos - no se comunica con la data
       if (!response.ok) {
         this.buttonLoading = false;
 
@@ -564,15 +558,6 @@ export default {
       if(this.status == 'No respondido') this.confirmOpen = true;
         else this.confirmOpen = false;
     },
-    validateSubmit(){
-      this.hasError = false;
-
-      //Comprobacion de trabajador
-      if (this.employee_sub == "") {
-        this.hasError = true;
-        this.vacio = "Campo necesario";
-      } else this.vacio = "";
-    }
   }
 };
 </script>
