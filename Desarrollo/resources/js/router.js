@@ -13,6 +13,7 @@ import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
+import NotificationDetails from "./pages/Supplier/NotificationDetails.vue";
 import CreateService from "./pages/Supplier/CreateService.vue";
 import CreatePrice from "./pages/Supplier/CreatePrice.vue";
 import ServiceList from "./pages/Supplier/ServiceList.vue";
@@ -197,6 +198,12 @@ export default new VueRouter({
             component: UpdatePrice,
             props: true,
             beforeEnter: isSupplier
+        },
+        {
+            path: "/supplier/notifications/details/:notification_id",
+            component: NotificationDetails,
+            //beforeEnter: isSupplier,
+            props: true
         },
         {
             path: "/supplier/blank",

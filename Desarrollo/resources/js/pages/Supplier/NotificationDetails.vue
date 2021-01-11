@@ -6,7 +6,7 @@
       <div class="px-4 py-5 border-b border-gray-200 sm:px-6">
         <h3 class="text-lg leading-6 font-medium text-gray-900">
           <strong>Servicio:</strong>
-          {{title}}
+          {{ title }}
         </h3>
 
         <dl class="grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2">
@@ -61,20 +61,22 @@
           <strong>Datos del servicio</strong>
         </h3>
 
-        <dl class="grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-3">
+        <dl class="grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2">
           <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Distrito</dd>
             <dt class="text-base leading-5 font-medium text-gray-500">{{distrito}}</dt>
-          </div> 
+          </div>
 
           <div class="sm:col-span-1">
             <dd class="mt-1 text-sm leading-5 text-gray-900">Dirección exacta</dd>
             <dt class="text-base leading-5 font-medium text-gray-500">{{adress}}</dt>
           </div>
+
+          
          
           <div class="sm:col-span-3">
             <div>
-              <dd class="mt-1 text-sm leading-5 text-blue-500">La siguiente ubicación es una referencia respecto del rango de su dirección</dd>
+              <dd class="mt-1 text-sm leading-5 text-blue-500">La siguiente ubicación es una referencia del rango de su dirección</dd>
             </div>
             
             <div id="map" style="height: 20rem">
@@ -188,7 +190,7 @@
 
                   <div class="px-4 py-3 text-xs leading-5">
                     <span class="font-medium text-green-500"
-                    >Se agrega S/ {{workforce.toFixed(2)}} al total de su lista por la mano de obra.</span>
+                    >Se agrega S/ {{workforce.toFixed(2)}} al total de su lista por la mano de obra</span>
                   </div>
                 </div>
               </div>
@@ -264,7 +266,7 @@
               <label
                 for="remember_me"
                 class="ml-2 block text-sm leading-5 text-gray-900"
-              >Acepto los términos y condiciones de uso del servicio SirwiQuy.</label>
+              >Acepto los términos y condiciones de uso del servicio KusaWasi.</label>
             </div>
 
             <div class="flex items-center mt-2">
@@ -278,7 +280,7 @@
               <label
                 for="remember_me2"
                 class="ml-2 block text-sm leading-5 text-gray-900"
-              >Acepto las politicas del servicio SirwiQuy.</label>
+              >Acepto las politicas del servicio Kusawasi.</label>
             </div>
             
             <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -321,9 +323,9 @@
 <script>
 import api from "../../api";
 
-import Maps from "../../components/Maps.vue"
+import Maps from "../../components/Maps"
 import SideBar from "../../components/SideBar";
-import MyButton from "../../components/MyButton.vue";
+import MyButton from "../../components/MyButton";
 
 export default {
   name: "NotificationDetails",
@@ -343,9 +345,12 @@ export default {
       Select1: false,
       Select2: false,
 
+      //Para guardar los datos de la notificacion
+      notificacion: '',
+
       subemployee: [],
       request: [],
-      service: [],
+      service: '',
       customer: [],
 
       vacio: '',
@@ -385,16 +390,25 @@ export default {
   },
   async created() {
     //Traigo la información necesaria de mi solicitud
-    let response = await api.get(`/notifications/${this.notification_id}`)
-    this.request = response.data.data.request_details;
-    this.service = response.data.data.service_details.original.serv_details;
-    this.customer = response.data.data.customer_details;
+    //let response = await api.get(`/notification_details/${this.notification_id}`);
+    //PARA PROBAR
+    let response = await api.get(`/notification_details/5ffa2168ef620000940015f2`);
+    
+    this.notificacion = response.data.data.not_details;
+    
+    //this.service = this.notificacion.id_service;
+    //this.customer = this.notificacion.id_customer;
 
-    this.id_service = this.service._id;
+    let response2 = await api.get(`/service_details/${this.notificacion.id_service}`);
+    this.service = response2.data.data.serv_details[0];
+    console.log(this.service.title);
     this.title = this.service.title;
     this.category = this.service.category;
     this.distrito = this.service.distrito;
 
+    let response3 = await api.get(`/details/provider/cliente/${this.notificacion.id_customer}`);
+    this.customer = response3.data.data.customer_details[0];
+    console.log(this.customer.username);
     this.id_customer = this.customer._id;
     this.username = this.customer.username;
 
@@ -414,8 +428,7 @@ export default {
     this.lng = this.request.new_lng;
     this.adress = this.request.addres;
     this.status = this.request.status;
-
-    
+    /*
     this.fechaact = this.request.created_at;
     var fecha = this.fechaact.slice(0,-9).split('-').reverse().join('/');
     this.fecharequest = fecha;
@@ -424,11 +437,11 @@ export default {
 
     if(this.showWorker == 'enterprise')
     { 
-      let response2 = await api.get(`/subemployee/list/simple&1/${localStorage.getItem('e_id')}`)
-      this.subemployee = response2.data.data.subemployees;
+      let response3 = await api.get(`/subemployee/list/simple&1/${localStorage.getItem('e_id')}`)
+      this.subemployee = response3.data.data.subemployees;
       this.showSelectWorker = true;
-    }
-  },
+    }*/
+  }/*,
   methods:{
     suma(){
       if(this.coti_personal.length == 0) this.sumtotal = this.workforce;
@@ -521,7 +534,7 @@ export default {
 
       //Si se envia correo con exito
       this.$toast.open({
-        message: 'Correo enviado con éxito.',
+        message: 'Correo enviado con éxito',
         type: "info",
         duration: 10000,
         dismissible: true,
@@ -573,6 +586,6 @@ export default {
         this.vacio = "Campo necesario";
       } else this.vacio = "";
     }
-  }
+  }*/
 };
 </script>
