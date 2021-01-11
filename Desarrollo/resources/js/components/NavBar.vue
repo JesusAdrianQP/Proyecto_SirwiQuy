@@ -66,7 +66,7 @@
                 v-on-clickaway="closeProfile"
               >
                 <!-- @click="profileOpen=!profileOpen": Es para constatar que se abra las opciones del menú de perfil-->
-                <img class="h-8 w-8 object-cover rounded-full" :src="foto" alt="Perfil" />
+                <img class="h-8 w-8 object-cover rounded-full" src="../../assets/illustrations/user_icono.png" alt="Perfil" />
                 <div class="ml-3">
                   <p
                     class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900"
@@ -182,7 +182,7 @@
         <div v-if="isCustomer">
           <div class="flex items-center px-4">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 object-cover rounded-full" :src="foto" alt="Perfil" />
+              <img class="h-10 w-10 object-cover rounded-full" src="../../assets/illustrations/user_icono.png" alt="Perfil" />
             </div>
             <div class="ml-3">
               <div class="text-md font-medium leading-6 text-gray-800">Bienvenido</div>
@@ -226,14 +226,35 @@ export default {
   },
   data: () => {
     return {
+      token: localStorage.getItem('token'),
+      level: localStorage.getItem('e_level'),
+      isCustomer: false,
       isOpen: false,
-      profileOpen: false
+      profileOpen: false,
+      usuario: '',
+      foto: '',
+      id: ''
     };
   },
-  props: {
-    isCustomer: Boolean,
-    usuario: String,
-    foto: String
+  async created() {
+    if((this.token == null || this.token == '') && (this.level == '' || this.level == null)){
+      this.isCustomer = false;
+    }
+    else{
+      this.isCustomer = true;
+      let response = await api.get(`/level=${this.level}/token=${this.token}`)
+      let customer = response.data.data;
+
+      this.usuario = customer.username;
+      this.id = customer._id;
+      if(customer.file != '' || this.file == null){this.foto = customer.file };
+
+      localStorage.setItem('e_id_customer', this.id);
+
+      this.$emit('onCustomerId', {
+        _id: this.id
+      });
+    }
   },
   methods: {
     isMenu(){
@@ -253,6 +274,12 @@ export default {
 
       localStorage.removeItem('token');
       localStorage.removeItem('e_level');
+      localStorage.removeItem('request');
+      localStorage.removeItem('suma');
+      localStorage.removeItem('exist_service');
+      localStorage.removeItem('e_response');
+      localStorage.removeItem('e_link');
+      localStorage.removeItem('e_id_customer');
       
       window.location.reload();
     }

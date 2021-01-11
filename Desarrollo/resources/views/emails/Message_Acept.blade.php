@@ -6,7 +6,7 @@
   <meta name="x-apple-disable-message-reformatting"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta content="telephone=no" name="format-detection"> 
-  <title>Welcome-SirwiyQuy</title> 
+  <title>Mensaje Aceptado -SirwiyQuy</title> 
   <!--[if (mso 16)]>
     <style type="text/css">
     a {text-decoration: none;}
@@ -125,7 +125,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:580px"> 
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0px"><img src="https://hzenhp.stripocdn.email/content/guids/CABINET_934907afa6a767cd37e33ade97bb5f76/images/45111606069320472.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="400" height="129"></td> 
+                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0px"><img src="https://hzenhp.stripocdn.email/content/guids/CABINET_49be48eaeec5c52bf2ff5bc0c6c28724/images/45111606069320472.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="400"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -145,13 +145,13 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px"> 
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFFFFF;border-radius:4px" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px"><h1 style="Margin:0;line-height:55px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:46px;font-style:normal;font-weight:normal;color:#111111">Bienvenido a SIRWIYQUY!</h1></td> 
+                      <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px"><h1 style="Margin:0;line-height:55px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:46px;font-style:normal;font-weight:normal;color:#111111">¡Servicio Aceptado!</h1></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td bgcolor="#ffffff" align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;font-size:0"> 
                        <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                          <tr style="border-collapse:collapse"> 
-                          <td style="padding:0;Margin:0;border-bottom:1px solid #FFFFFF;background:#FFFFFFnone repeat scroll 0% 0%;height:1px;width:100%;margin:0px"></td> 
+                          <td style="padding:0;Margin:0;border-bottom:1px solid #FFFFFF;background:#FFFFFF none repeat scroll 0% 0%;height:1px;width:100%;margin:0px"></td> 
                          </tr> 
                        </table></td> 
                      </tr> 
@@ -172,22 +172,17 @@ a[x-apple-data-detectors] {
                  <tr style="border-collapse:collapse"> 
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px"> 
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:4px;background-color:#FFFFFF" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation"> 
-                     <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="padding:0;Margin:0;padding-left:30px;padding-right:30px;padding-top:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">¡Hola,&nbsp; un gusto tenerlo como usuario de nuestro sistema!<br>Aquí tenemos información de tu<strong>&nbsp;<span style="color:#000080">cuenta</span></strong>:</p></td> 
+                     <tr class="es-mobile-hidden" style="border-collapse:collapse"> 
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://hzenhp.stripocdn.email/content/guids/CABINET_e02e2f634cfc43821b14cf164c0c1c8c/images/56821600957986001.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="145"></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" bgcolor="#3F70BD" align="left" style="Margin:0;padding-top:20px;padding-bottom:20px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#FFFFFF"><span style="background-color:null">Nombre de usuario: <strong><em>{{$user}}</em></strong></span><br><span style="background-color:null">Correo: <strong><em>{{$email}}</em></strong></span><br><span style="background-color:null">Password: <strong><em>{{$pass}}</em></strong></span></p></td> 
+                      <td class="es-m-txt-l" bgcolor="#ffffff" align="center" style="padding:0;Margin:0;padding-left:30px;padding-right:30px;padding-top:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">¡Hola! El proveedor respondió a su solicitud ...</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:20px;Margin:0;font-size:0"> 
-                       <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                         <tr style="border-collapse:collapse"> 
-                          <td style="padding:0;Margin:0;border-bottom:1px solid #CCCCCC;background:none;height:1px;width:100%;margin:0px"></td> 
-                         </tr> 
-                       </table></td> 
+                      <td class="es-m-txt-l" bgcolor="#ffffff" align="center" style="padding:0;Margin:0;padding-left:30px;padding-right:30px;padding-top:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:22px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:33px;color:#000000">Estimado cliente:</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#467CD2;border-width:0px;display:inline-block;border-radius:24px;width:auto"><a href="https://127.0.0.1:8000/home#/" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#467CD2;border-width:15px 30px;display:inline-block;background:#467CD2;border-radius:24px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center">Descubre SIRWIYQUY</a></span></td> 
+                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="padding:0;Margin:0;padding-top:40px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">El servicio solicitado para el {{$response->date}} de {{$response->timemin}} a {{$response->timemax}} con un importe total de s/. {{$response->sumaTotal}} ha sido aceptado.<br>El servicio esta requerido para la siguiente dirección: {{$response->addres}}<br>Muchas gracias por confiar en nosotros! Solo le falta un paso para completar el proceso de negocio, entre al link y page por ¡PayPal!</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:20px;Margin:0;font-size:0"> 
@@ -198,13 +193,18 @@ a[x-apple-data-detectors] {
                        </table></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:30px;padding-right:30px"><h2 style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:24px;font-style:normal;font-weight:normal;color:#008000">TU CUENTA AHORA ESTA ACTIVA</h2></td> 
+                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#467CD2;border-width:0px;display:inline-block;border-radius:24px;width:auto"><a href="{{asset('http://127.0.0.1:8000/home#/customer/payment/link='.$response->linkPayPal.'/response='.$response->_id)}}" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#467CD2;border-width:15px 30px;display:inline-block;background:#467CD2;border-radius:24px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center">Ir al Pago</a></span></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" style="Margin:0;padding-top:15px;padding-bottom:15px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;text-align:justify">Al registrarte a la plataforma SIRWIYQUY, usted esta aceptando todos los términos y políticas descritas en nuestro sistema.<br><br>Te mantedremos informado de cualquier novedad o actualización, gracias por unirte!<br><br>SirwiyQuy, tu mejor opción!</p></td> 
+                      <td align="center" style="padding:20px;Margin:0;font-size:0"> 
+                       <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
+                         <tr style="border-collapse:collapse"> 
+                          <td style="padding:0;Margin:0;border-bottom:1px solid #CCCCCC;background:none;height:1px;width:100%;margin:0px"></td> 
+                         </tr> 
+                       </table></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">Oficina de desarrollo,</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">SIRWIYQUY CENTRAL</p></td> 
+                      <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">SirwiyQuy le invita a leer sus políticas y términos de contrato de un servicio! Gracias por confiar en nosotros.<br><br>Oficina de desarrollo,</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">SIRWIYQUY CENTRAL</p></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -227,7 +227,7 @@ a[x-apple-data-detectors] {
                       <td align="center" style="Margin:0;padding-top:10px;padding-bottom:20px;padding-left:20px;padding-right:20px;font-size:0"> 
                        <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                          <tr style="border-collapse:collapse"> 
-                          <td style="padding:0;Margin:0;border-bottom:1px solid #F4F4F4;background:#FFFFFFnone repeat scroll 0% 0%;height:1px;width:100%;margin:0px"></td> 
+                          <td style="padding:0;Margin:0;border-bottom:1px solid #F4F4F4;background:#FFFFFF none repeat scroll 0% 0%;height:1px;width:100%;margin:0px"></td> 
                          </tr> 
                        </table></td> 
                      </tr> 
@@ -249,7 +249,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px"> 
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFECD1;border-radius:4px" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffecd1" role="presentation"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://hzenhp.stripocdn.email/content/guids/CABINET_934907afa6a767cd37e33ade97bb5f76/images/66971606069917462.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="260" height="96"></td> 
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://hzenhp.stripocdn.email/content/guids/CABINET_49be48eaeec5c52bf2ff5bc0c6c28724/images/66971606069917462.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="260"></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0"> 
