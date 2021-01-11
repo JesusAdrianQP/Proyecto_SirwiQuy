@@ -177,26 +177,7 @@ public static function delete_request($not)
 }
 
 
-//Función que trae todos mis notificaciones (solicitudes) correspondientes a mi proveedor
-public static function list_not($request)
-{
-    //Traigo mis servicios correspondientes, solo requiero las id's
-    $num_services = Service::listsupplier($request->id)->get();
-    $array_services = [];
-    //Guardo en un array todas las id's obtenidas
-    for($i = 0; $i < count($num_services); $i++){
-        $array_services[$i] = $num_services[$i]->_id;
-    }
-    //Selecciono todas mis solicitudes correspondidas a esa id
-    $request = Request::whereIn('id_service', $array_services)
-                        ->orderBy('created_at', 'DESC')
-                        ->statusnot($request->filter)
-                        ->paginate(5, ['*'], 'requests', $request->page);
 
-    return response()->json([
-        'paginate' => $request
-    ], 200);
-}
 
 //Función que trae los detalles de mis notificaciones (solicitudes)
 public static function notdetails($id)

@@ -19,7 +19,6 @@ import ServiceList from "./pages/Supplier/ServiceList.vue";
 import UpdateService from "./pages/Supplier/UpdateService.vue";
 import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
 import SuppliersBlank from "./pages/Supplier/Blank.vue";
-
 import NotificationDetails from "./pages/Supplier/NotificationDetails.vue";
 import Notifications from "./pages/Supplier/Notifications.vue";
 
@@ -27,12 +26,9 @@ import Notifications from "./pages/Supplier/Notifications.vue";
 import CustomerBlank from "./pages/Customer/Blank.vue";
 import ServiceCost from "./pages/Customer/ServiceCost.vue";
 import ServiceDetails from "./pages/Customer/ServiceDetails.vue";
-<<<<<<< HEAD
 import ServiceReport from "./pages/Customer/ServiceReport.vue";
-=======
 import ServiceForm from "./pages/Customer/ServiceForm.vue";
 import RateService from "./pages/Customer/RateService.vue";
->>>>>>> Mabel
 
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
@@ -82,15 +78,6 @@ const isSupplier = (to, from, next) => {
         return;
     }
     next("/login/employee");
-};
-
-//Verificador de usuario cliente
-const isCustomer = (to, from, next) => {
-    if (localStorage.getItem("e_level") == "customer") {
-        next();
-        return;
-    }
-    next("/login/customer");
 };
 
 //Verificador de usuario trabajador
@@ -161,9 +148,12 @@ export default new VueRouter({
             beforeEnter: isGuest
         },
         
-        },
-        
         //Rutas del cliente logeado
+        {
+            path: "/customer/report/service",
+            component: ServiceReport,
+            beforeEnter: isCustomer
+        },
         {
             path: "/request/form/service",
             component: ServiceForm,
@@ -230,13 +220,6 @@ export default new VueRouter({
             component: EditProfile,
             beforeEnter: isWorker
         },
-        //Ruta solo para cliente logeado
-        {
-            path: "/customer/report/service",
-            component: ServiceReport,
-            beforeEnter: isCustomer
-        },
-
         //Ruta no registrada
         {
             path: "*",

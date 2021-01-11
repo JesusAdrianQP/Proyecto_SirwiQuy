@@ -7,9 +7,7 @@
     <Loader class="min-h-screen"
           :load="loading"
         />
-    <SideBar v-show="!loading" title="Actualización de Datos"
-    :user="username"
-    :image="image">
+    <SideBar v-show="!loading" title="Actualización de Datos">
       <div class="bg-white overflow-hidden shadow rounded-lg">
         
 
@@ -358,10 +356,9 @@ export default {
   data: () => {
     return {
       loading: true,
+      dni_validate: '',
       token: localStorage.getItem('token'),
       level: localStorage.getItem('e_level'),
-      username: '',
-      image: '',
 
       hasError: false,
       dni_valid: false,
@@ -398,23 +395,21 @@ export default {
       vacio_bank_account: "",
     }
   },
-  async created() {
-    let response = await api.get(`/services/level=${this.level}/token=${this.token}`)
-    
+  async mounted() {
+    let response = await api.get(`/level=${this.level}/token=${this.token}`)
     let supplier = response.data.data;
 
-    this.username = supplier.username;
-    this.image = supplier.file;
-    this.dni = supplier.DNI;
+    this.dni_validate = supplier.DNI;
 
-    if(this.dni != undefined) {
-      localStorage.setItem('e_DNI', this.dni);
-      this.$router.push("/supplier");
+    if(this.dni_validate != undefined || this.dni_validate != null || this.dni_validate != '') 
+    {
+      localStorage.setItem('e_DNI', this.dni_validate);
+      this.$router.push('/supplier');
     }
 
     let response2 = await api.get(`/dep`)
     this.departments = response2.data.data.departments;
-
+    
     this.loading = false;
   },
   methods: {

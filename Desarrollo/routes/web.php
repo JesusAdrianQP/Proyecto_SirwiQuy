@@ -36,3 +36,5 @@ Route::get('services/page={page}/pmin{pmin}&pmax={pmax}/OrderByvalue={value}/tit
 
 /*--------------------------Comunicación - Request y Response ----------------------*/
 Route::post('request', 'CommunicationController@requestService');/*Solicitud de Servicio*/
+Route::get('notifications/page={page}/id={id}&filter={filter}', 'CommunicationController@notifications_id');/*Listado de Notificaciones*/
+Route::post('delete/notification', 'CommunicationController@deleterequests');/*Borrar solicitudes*/

@@ -145,7 +145,7 @@ export default {
       //Conexión con la lógica de negocio
       let response = await api.post(`/create_service`,{
         level: localStorage.getItem('e_level'),
-        id: localStorage.getItem('id'),
+        id: localStorage.getItem('e_id'),
         title: localStorage.getItem('e_title'),
         description: localStorage.getItem('e_desc'),
         category: localStorage.getItem('e_cate'),
@@ -172,6 +172,12 @@ export default {
         duration: 8000,
         dismissible: true
       });
+
+      localStorage.removeItem('e_title');
+      localStorage.removeItem('e_desc');
+      localStorage.removeItem('e_cate');
+      localStorage.removeItem('e_dist');
+      localStorage.removeItem('e_file');
 
       this.$router.push("/supplier");
     },

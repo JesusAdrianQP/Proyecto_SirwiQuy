@@ -34,12 +34,7 @@ class ServiceController extends Controller
         return ServiceData::update_price($request);
     }
 
-    //Función que lista todas las notificaciones de mi trabajador
-    public function notifications_id(Request $request)
-    {
-        return ServiceData::list_not($request);
-    }
-
+    
 
     //Función que trae los detalles de mis solicitudes
     public function notificationsdetails(Request $request)
