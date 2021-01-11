@@ -42,3 +42,4 @@ Route::get('notification_details/{notification_id}', 'CommunicationController@de
 Route::post('updatestatus', 'CommunicationController@update_status');/**Actualización del status - response o request */
 Route::post('mail_acept', 'CommunicationController@acept');/**Aceptar solicitud */
 Route::get('paypal/{linkPaypal}/{id_response}', 'CommunicationController@responsedetails');/**PayPal */
+Route::get('responses/page={page}/id={id}', 'CommunicationController@list_response');/**Lista de solicitudes respondidas */

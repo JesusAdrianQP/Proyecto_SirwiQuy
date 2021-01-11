@@ -63,7 +63,7 @@ class ServiceData
             $service->category = $new_service->category;
             $service->distrito = $new_service->district;
             $service->calificacion = 0;
-            $service->precio = (int) $new_service->price;
+            $service->precio = (float) $new_service->price;
             $service->file = $new_service->photo;
 
             $service->save();

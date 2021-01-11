@@ -151,7 +151,7 @@ export default {
         category: localStorage.getItem('e_cate'),
         district: localStorage.getItem('e_dist'),
         photo: localStorage.getItem('e_file'),
-        price: parseInt(this.lab_price),
+        price: parseFloat(this.lab_price),
         materials: this.materials_prices,
       })
 

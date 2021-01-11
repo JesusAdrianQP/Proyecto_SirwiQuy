@@ -162,8 +162,8 @@ export default new VueRouter({
         },
         {
             path: "/customer/rate/service",
-            component: RateService
-            // beforeEnter: isCustomer
+            component: RateService,
+            beforeEnter: isCustomer
         },
         {
             path: "/customer/payment/link=:id_link/response=:id_response",

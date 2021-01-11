@@ -148,6 +148,12 @@ class CommunicationData
                     $message = new MailController;
                     $message->message_pay($statu->email1, $statu->email2, $statu->pay);
                 }
+                else if($statu->status == 'Completado'){
+                    $response->status = 'Completado';
+                }
+                else if($statu->status == 'No completado'){
+                    $response->status = 'No completado';
+                }
                   
                 $response->save();
   
@@ -183,7 +189,7 @@ class CommunicationData
             $response->status = 'Por pagar';
             $response->cotizacion_personal = $info->cotizacion;
             $response->sumaTotal = (float) $info->sumtotal;
-            $response->work = (int) $info->work;
+            $response->work = (float) $info->work;
             $response->linkPayPal = $access->getCodigo(50);
 
             $response->save();
@@ -218,5 +224,16 @@ class CommunicationData
             ], 200);
         }
         else return response()->json(['errors' => ['fail' => ['Respuesta no encontrada!']]], 422);
-     }
+    }
+
+    public static function listResponse($value)
+    {
+        $response = Response::where('id_customer', '=', $value->id)
+                            ->orderBy('created_at', 'DESC')
+                            ->paginate(8, ['*'], 'requests', $value->page);
+
+        return response()->json([
+            'paginate' => $response
+        ], 200);
+    }
 }

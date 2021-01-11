@@ -33,7 +33,7 @@
     
       <div
         v-show="modalOpen"
-        class="fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
+        class="fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center z-30"
       >
         <div @click="modalOpen = false" class="fixed inset-0 transition-opacity">
           <div class="absolute inset-0 bg-gray-500 opacity-75"></div>

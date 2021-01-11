@@ -41,4 +41,9 @@ class CommunicationController extends Controller
     {
         return CommunicationData::response_details($request);
     }
+
+    public function list_response(Request $request)
+    {
+        return CommunicationData::listResponse($request);
+    }
 }
