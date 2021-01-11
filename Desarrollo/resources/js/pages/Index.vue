@@ -2,10 +2,7 @@
   <!-- INDEX: Vista principal de los datos del sistema.
   Muestra todos los servicios publicados en la plataforma. 
   -->
-  <Visitor
-   :isCustom="isCustomer"
-   :user="username"
-   :photo="file">
+  <Visitor>
     <main>
       <div class="max-w-5xl mx-auto py-4 px-4 sm:px-6 lg:px-10 rounded-b-lg">
         <SearchBar 
@@ -45,9 +42,6 @@ export default {
   },
   data: () => {
     return {
-      token: localStorage.getItem('token'),
-      level: localStorage.getItem('e_level'),
-      isCustomer: false,
       username: '',
       file: ' ',
       title: '',
@@ -58,19 +52,6 @@ export default {
         pmax : ''
       },
       value: null
-    }
-  },
-  async created() {
-    if((this.token == null || this.token == '') && (this.level == '' || this.level == null)){
-      this.isCustomer = false;
-    }
-    else{
-      this.isCustomer = true;
-      let response = await api.get(`/services/level=${this.level}/token=${this.token}`)
-      let customer = response.data.data;
-
-      this.username = customer.username;
-      if(customer.file != '' || this.file == null){this.file = customer.file };
     }
   },
   methods: {

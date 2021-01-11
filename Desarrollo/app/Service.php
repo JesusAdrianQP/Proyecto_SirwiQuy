@@ -12,6 +12,9 @@ class Service extends Eloquent
     protected $fillable = [
         'identity','token','title', 'description', 'category', 'distrito', 'calificacion', 'precio', 
         'file'
+        //_id = id del servicio
+        //identity = tipo de proveedor
+        //token = id del proveedor
     ];
 
     /**

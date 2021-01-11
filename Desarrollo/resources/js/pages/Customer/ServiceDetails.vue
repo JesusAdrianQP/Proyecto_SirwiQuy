@@ -236,7 +236,7 @@ export default {
   async mounted() {
     //Se traen los datos del servicio filtrado por id
     let response = await api.get(`/service_details/${this.service_id}`);
-    console.log(response)
+   
     //Si es que introducen rutas erroneas inexistentes
     if(response.ok == true)
     {
