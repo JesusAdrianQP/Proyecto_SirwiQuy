@@ -10,7 +10,7 @@ class MAPapi implements StrategyInterface
     public function execute($api)
     {
         //Token usado para acceder a google maps
-        $token = 'AIzaSyBY5EBnrcArkgAZqd1o0TeEqYDgZe0985I';
+        $token = 'AIzaSyAU0hG5XwO-j6cV7EG9KULziR9LCSmwrKo';
         //URL construida en base a la direcciones enviadas
         $url = 'https://maps.googleapis.com/maps/api/geocode/json?address=Distrito+'.$api.'+Lima,Lima,Peru&key='.$token;
         $json = file_get_contents($url);//Se obtiene en un archivo los datos obtenidos

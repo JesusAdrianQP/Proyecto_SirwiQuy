@@ -13,22 +13,23 @@ import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
+import NotificationDetails from "./pages/Supplier/NotificationDetails.vue";
 import CreateService from "./pages/Supplier/CreateService.vue";
 import CreatePrice from "./pages/Supplier/CreatePrice.vue";
 import ServiceList from "./pages/Supplier/ServiceList.vue";
 import UpdateService from "./pages/Supplier/UpdateService.vue";
 import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
 import SuppliersBlank from "./pages/Supplier/Blank.vue";
-
-import NotificationDetails from "./pages/Supplier/NotificationDetails.vue";
 import Notifications from "./pages/Supplier/Notifications.vue";
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
 import ServiceCost from "./pages/Customer/ServiceCost.vue";
 import ServiceDetails from "./pages/Customer/ServiceDetails.vue";
+import ServiceReport from "./pages/Customer/ServiceReport.vue";
 import ServiceForm from "./pages/Customer/ServiceForm.vue";
 import RateService from "./pages/Customer/RateService.vue";
+import Payment from "./pages/Customer/Payment.vue";
 
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
@@ -89,10 +90,20 @@ const isWorker = (to, from, next) => {
     next("/login/employee");
 };
 
+//Verificador de usuario cliente
+const isCustomer = (to, from, next) => {
+    if (localStorage.getItem("e_level") == "customer") {
+        next();
+        return;
+    }
+    next("/login/customer");
+};
+
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
+        //Ruta para clientes y trabajador no logueados
         {
             path: "/",
             component: Index,
@@ -115,7 +126,6 @@ export default new VueRouter({
             beforeEnter: isUnique,
             props: true
         },
-        //Ruta para clientes y trabajador no logueados
         {
             path: "/join_us",
             component: JoinUs,
@@ -139,20 +149,28 @@ export default new VueRouter({
             beforeEnter: isGuest
         },
         
-        },
-        
         //Rutas del cliente logeado
         {
+            path: "/customer/report/service",
+            component: ServiceReport,
+            beforeEnter: isCustomer
+        },
+        {
             path: "/request/form/service",
-            component: ServiceForm
-            // beforeEnter: isCustomer
+            component: ServiceForm,
+            beforeEnter: isCustomer
         },
         {
             path: "/customer/rate/service",
-            component: RateService
-            // beforeEnter: isCustomer
+            component: RateService,
+            beforeEnter: isCustomer
         },
-        
+        {
+            path: "/customer/payment/link=:id_link/response=:id_response",
+            component: Payment,
+            props: true
+        },
+
         //Rutas de los proveedores
         {
             path: "/supplier",
@@ -202,12 +220,14 @@ export default new VueRouter({
             beforeEnter: isSupplier,
             props: true
         },
+
         //Ruta solo para trabajador
         {
             path: "/worker/profile/edit",
             component: EditProfile,
             beforeEnter: isWorker
         },
+
         //Ruta no registrada
         {
             path: "*",

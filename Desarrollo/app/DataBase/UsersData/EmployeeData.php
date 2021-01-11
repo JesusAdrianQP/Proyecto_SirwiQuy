@@ -69,7 +69,7 @@ class EmployeeData implements UserInterface
     }
 
     public static function update($user){
-        $employee = EmployeeData::getUser(3, $user->token);
+        $employee = EmployeeData::getUser(4, $user->token);
  
         if($employee){
             $employee->DNI = $user->dni;

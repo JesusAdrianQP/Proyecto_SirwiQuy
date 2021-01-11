@@ -1,27 +1,11 @@
 <template>
   <div class="py-4">
     <!--NOTIFICATION LIST: Aqui se genera la interacción de las notificaciones con sus respectivos datos-->
-    <div class="bg-white shadow overflow-hidden sm:rounded-md">
-      <div
-        v-show="loading && notifications.length == 0"
-        class="h-56 rounded-lg p-6 flex items-center justify-center"
-      >
-        <span class="text-xl text-gray-900">Cargando contenido...</span>
-        <svg
-          class="animate-spin ml-6 h-6 w-6 text-primary-800"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
-          <path
-            class="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          />
-        </svg>
-      </div>
-      
+    <Loader class="min-h-screen"
+            :load="loading"
+    />
+    
+    <div>
       <div
         v-show="!loading && notifications.length == 0"
         class="rounded-lg py-3 text-center items-center justify-center"
@@ -32,7 +16,7 @@
         </div>
       </div>
 
-      <ul v-for="notification in notifications" v-bind:key="notification._id">
+      <ul v-for="notification in notifications" v-bind:key="notification._id" class="bg-white my-4 shadow overflow-hidden sm:rounded-md">
         <!--Aquí es una tarjeta de notificación simplificada
         Se muestra los elementos que heredaran al componente hijo Notification-->
         <Notification
@@ -49,7 +33,7 @@
     
       <div
         v-show="modalOpen"
-        class="fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
+        class="fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center z-30"
       >
         <div @click="modalOpen = false" class="fixed inset-0 transition-opacity">
           <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -114,7 +98,7 @@
       <Pagination
         :type_pag="type_pagination"
         :filter="select"
-        :id_notification="id"
+        :idProvider="id"
         @getNotifications="setNotifications"
         @setLoading="loading=true"
       />
@@ -128,12 +112,14 @@ import api from "../api"
 
 import Pagination from "../components/Pagination.vue"
 import Notification from "../components/Notification.vue";
+import Loader from "../components/Loader";
 
 export default {
   name: "NotificationList",
   components: {
     Notification,
-    Pagination
+    Pagination,
+    Loader
   },
   props: {
     select: String
@@ -184,7 +170,7 @@ export default {
       });
 
       this.modalOpen = false;
-      location.reload();
+      window.location.reload();
     },
     setNotifications(notifications) {
       this.notifications = notifications.notification_paginate;

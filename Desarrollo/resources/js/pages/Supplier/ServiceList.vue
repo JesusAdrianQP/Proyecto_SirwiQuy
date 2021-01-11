@@ -1,7 +1,5 @@
 <template>
-  <SideBar title="Editar Publicación"
-    :user="username"
-    :image="img">
+  <SideBar title="Editar Publicación">
 
     <Loader class="min-h-screen"
             :load="loading"
@@ -34,19 +32,9 @@ export default {
       loading: true,
       username: '',
       img: '',
-      id: '',
+      id: '212121valor por defectoosflke',
       category: "" 
     };
-  },
-  async created(){
-    let response = await api.get(`/services/level=${this.acceso}/token=${this.token}`)
-    let supplier = response.data.data;
-    
-    this.username = supplier.username;
-    this.img = supplier.file;
-    this.id = supplier._id;
-
-    localStorage.setItem('id', this.id);
   },
    methods: {
     setLoading() {

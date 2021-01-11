@@ -3,9 +3,7 @@
   Muestra un formulario donde se solicita el titulo, descripción,
   categoría, departamento, provincia, distrito, precio minimo, precio
   máximo y una imagen del servicio a registrar. -->  
-  <SideBar title="Publicar Servicio"
-    :user="username"
-    :image="img">
+  <SideBar title="Publicar Servicio">
 
        <Loader class="min-h-screen"
             :load="loading"
@@ -250,16 +248,10 @@ export default {
       vacio_category: "",
     }
   },
-  async created(){
-    let response = await api.get(`/services/level=${this.acceso}/token=${this.token}`)
-    let supplier = response.data.data;
-    
-    this.username = supplier.username;
-    this.img = supplier.file;
-    this.id = supplier._id;
-
-    let response2 = await api.post(`/dist`, {id: '1501'})
-    this.districts = response2.data.data.districts;
+  async created()
+  {
+    let response = await api.post(`/dist`, {id: '1501'})
+    this.districts = response.data.data.districts;
 
     this.loading = false;
   },
@@ -287,7 +279,6 @@ export default {
       localStorage.setItem('e_cate', this.category);
       localStorage.setItem('e_dist', this.district);
       localStorage.setItem('e_file', this.image);
-      localStorage.setItem('id', this.id);
       
       this.$router.push("/supplier/create/price");
     },
@@ -328,43 +319,11 @@ export default {
         this.vacio_category = "Campo necesario";
       } else this.vacio_category = "";
 
-      // //Comprobacion de departamento
-      // if (this.department == "") {
-      //   this.hasError = true;
-      //   this.vacio_department = "Campo necesario";
-      // } else this.vacio_department = "";
-
-      // //Comprobacion de provincias
-      // if (this.province == "") {
-      //   this.hasError = true;
-      //   this.vacio_province = "Campo necesario";
-      // } else this.vacio_province = "";
-
       //Comprobacion de distritos
       if (this.district == "") {
         this.hasError = true;
         this.vacio_district = "Campo necesario";
       } else this.vacio_district = "";
-        
-      //Comprobacion de precios mínimos        
-      // if (this.min_price == "") {
-      //   this.hasError = true;
-      //   this.vacio_min_price = "Campo necesario";
-      //   this.error_min_price = "";
-      // } else if (this.min_price < 70) {
-      //   this.hasError = true;
-      //   this.error_min_price = "Precio mínimo igual a 71";
-      //   this.vacio_min_price = "";
-      // } else{
-      //   this.error_min_price = "";
-      //   this.vacio_min_price = "";
-      // }
-
-      //Comprobacion de precio máximo
-      // if (this.max_price == "") {
-      //   this.hasError = true;
-      //   this.vacio_max_price = "Campo necesario";
-      // } else this.vacio_max_price = "";   
     },
     //Funciones para ubicar imagen
     onFileChange(e) {
