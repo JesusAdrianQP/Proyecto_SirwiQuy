@@ -2,7 +2,7 @@
   <!-- SERVICE FORM: Vista de formulario para registro de datos del usuario.
   Valida los nombres y apellidos del usuario con el DNI, además
   solicita edad, dirección, departamento, provincia y distrito. -->  
-  <Visitor>
+  <Visitor @onCustomerIdForm="getCustomerIdForm">
     <div class="bg-gray-100 min-h-screen">
       <main class>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
@@ -353,13 +353,15 @@ export default {
   },
   data() {
     return {
+      identity: '',
+      id_provider: '',
+      id_customer: '',
       hasError: false,
     
       buttonLoading: false,
       isType:'',
       type:'',
 
-    
       age: '',
       department: '',
       province: '',
@@ -377,7 +379,7 @@ export default {
       end_time: '',
       message: '',
       coti_personal: '',
-      mano_obra: '',
+      sumatotal: '',
 
       error_age: '',
       error_mensaje: '',
@@ -398,34 +400,35 @@ export default {
     };
   },
   async created(){
-    this.coti_personal = JSON.parse(localStorage.getItem('request'));
-    this.mano_obra = localStorage.getItem('worforce');
-    
-    let response = await api.get(`/service/${localStorage.getItem('exist_service')}`)
+    if(localStorage.getItem('exist_service') != null || localStorage.getItem('exist_service') != '')
+    {
+      this.coti_personal = JSON.parse(localStorage.getItem('request'));
+      this.sumatotal = localStorage.getItem('suma');
+      
+      let response = await api.get(`/service_details/${localStorage.getItem('exist_service')}`)
+      
+      this.district = response.data.data.serv_details[0].distrito;
+      this.identity = response.data.data.serv_details[0].identity;
+      this.id_provider = response.data.data.serv_details[0].token;/*id del proveedor - receptor*/
 
-    // this.department = response.data.data.serv_details.departamento;
-    // this.province = response.data.data.serv_details.provincia;
-    this.district = response.data.data.serv_details.distrito;
+      //Dibujo el rango en el mapa para una mejor guía
+      this.type = 'Form1';
+      this.isType = 'Gmap';
 
-    // Establecer departamento y provincia
-    this.department = 'Lima';
-    this.province = 'Lima';
-    
-    //Dibujo el rango en el mapa para una mejor guía
-    this.type = 'Form1';
-    this.isType = 'Gmap';
-    //Inserto a mi objeto
-    this.apidate = this.district.replace(/ /g, "+") + ',' +
-                    this.province.replace(/ /g, "+") + ',' + 
-                    this.department.replace(/ /g, "+")
+      //Inserto a mi objeto
+      this.apidate = this.district.replace(/ /g, "+")
 
-    //Se extrae las coordenadas centrales de la localización de donde se da el servicio
-    let response2 = await api.get(`/validate/${this.isType}/${this.apidate}`)
-        this.lat = response2.data.data[0].results[0].geometry.location.lat;
-        this.lng = response2.data.data[0].results[0].geometry.location.lng;
+      //Se extrae las coordenadas centrales de la localización de donde se da el servicio
+      let response2 = await api.get(`/validate/${this.isType}/${this.apidate}`)
+          this.lat = response2.data.data[0].results[0].geometry.location.lat;
+          this.lng = response2.data.data[0].results[0].geometry.location.lng;
+    }
+    else{this.$router.push("/")}
   },
   methods: {
-     
+    getCustomerIdForm(obj) {
+      this.id_customer = obj.idCustomer;
+    },
     setNewCoordinates(obj){
       this.new_lat = obj.lat;
       this.new_lng = obj.lng;
@@ -435,12 +438,14 @@ export default {
       if (this.hasError) return;
       this.buttonLoading = true;
       
-      let response4 = await api.post(`/request/provider`, {
+      let response4 = await api.post(`/request`, {
+        id_provider: this.id_provider,
         id_service: localStorage.getItem('exist_service'),
+        identity: this.identity,
         lati: this.new_lat,
         longi: this.new_lng,
         exactly: this.addres_exactly,
-        id_customer: localStorage.getItem('e_id'),
+        id_customer: this.id_customer,
         name: this.first_name,
         last_name_p: this.last_name_p,
         last_name_m: this.last_name_m,
@@ -450,7 +455,7 @@ export default {
         timemax: this.end_time,
         message: this.message,
         coti_personal: this.coti_personal,
-        mano_obra: this.mano_obra
+        suma: this.sumatotal
       });
       
       if (!response4.ok) {
@@ -473,7 +478,7 @@ export default {
 
       localStorage.removeItem('exist_service');
       localStorage.removeItem('request');
-      localStorage.removeItem('worforce');
+      localStorage.removeItem('suma');
 
       this.$router.push("/");
     },

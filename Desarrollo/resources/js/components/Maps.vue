@@ -69,7 +69,7 @@ export default {
         this.zoom = 13.4;
         this.radius = 2500;
       }
-      else if(this.route == 'Form3'){
+      else if(newVal == 'Form3'){
         this.zoom = 15;
         this.radius = 500;
         this.options.streetViewControl = true;
@@ -93,7 +93,7 @@ export default {
         zoomControl: true, // Establece el control de zoom del mapa
         mapTypeControl: false, // Oculta el control de tipos de mapas
         scaleControl: false, //  Oculta el control de escala del mapa
-        streetViewControl: false, // Oculta el control de StreeView del mapa
+        streetViewControl: true, // Oculta el control de StreeView del mapa
         fullscreenControl: true // Establce el control full screen para ver el mapa a pantalla completa
       },
     }

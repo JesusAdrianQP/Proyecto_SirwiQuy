@@ -3,7 +3,6 @@
   Muestra un listado de notificaciones del trabajador independiente.-->
   <SideBar title="Notificaciones">
     <div class="flex flex-col items-end">
-      
       <div class=" my-2">
         <label for="option" class="block text-sm leading-5 font-medium text-gray-700">Filtrar</label>
         <select
