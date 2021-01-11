@@ -55,7 +55,8 @@ export default {
     title: String,
     district: String,
     filter:String,
-    idProvider: String
+    idProvider: String,
+    idCustomer: String
   },
   data: () => {
     return {
@@ -69,6 +70,7 @@ export default {
       },
       services: [],
       notifications: [],
+      historyResponses: [],
       offset: 3,
       loading: true,
       pmin: '',
@@ -81,6 +83,8 @@ export default {
       this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all', 'all');
     else if(this.type_pag == 'notifications')
       this.getPagesNot(1, this.idProvider, 'all');
+    else if(this.type_pag == 'historial_solicitud')
+      this.getPagesHistoyResponse(1, this.idCustomer);
   },
   watch: {
     title: function(newVal, oldVal) {
@@ -165,6 +169,17 @@ export default {
         notification_paginate: this.notifications,
       })
     },
+    async getPagesHistoyResponse(page, id){
+      let response3 = await api.get(`/responses/page=${page}/id=${id}`)
+      
+      this.historyResponses = response3.data.data.paginate.data || []
+      this.pagination = response3.data.data.paginate //Se extrae los datos paginados
+
+      //Evento que el componente padre oira para obtener valores
+      this.$emit('getResponses', {
+        response_paginate: this.historyResponses,
+      })
+    },
     async changePage(page){
       this.pagination.current_page = page;
 
@@ -172,6 +187,8 @@ export default {
         this.getPagesIndex(page, this.pmin, this.pmax, this.value, this.title, this.district, this.category);
       else if(this.type_pag == 'notifications')
         this.getPagesNot(page, this.idProvider, this.filter);
+      else if(this.type_pag == 'historial_solicitud')
+        this.getPagesHistoyResponse(1, this.idCustomer);
     },
   }
 };

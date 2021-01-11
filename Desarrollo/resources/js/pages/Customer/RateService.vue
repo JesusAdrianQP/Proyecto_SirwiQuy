@@ -59,7 +59,7 @@
                     </button>
                     </router-link>
                     
-                    <router-link class="inline-flex rounded-md shadow-sm sm:ml-8 mt-2 sm:mt-0" to="#">
+                    <router-link class="inline-flex rounded-md shadow-sm sm:ml-8 mt-2 sm:mt-0" to="/customer/report/service">
                     <button type="button" class="inline-flex items-center px-3 py-4 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-primary-700 transition ease-in-out duration-150">
                         Enviar Valoración
                     </button>

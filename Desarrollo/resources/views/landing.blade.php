@@ -23,7 +23,6 @@
     <link rel="shortcut icon" href="{{ asset('images/Sirwiyquy_b.ico') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom_app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style-sirwiyquy.css') }}">
   </head>
 
   <body class="contenedor">
