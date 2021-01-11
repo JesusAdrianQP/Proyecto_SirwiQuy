@@ -54,6 +54,8 @@ export default {
     calification: Boolean,
     title: String,
     district: String,
+    filter:String,
+    idProvider: String
   },
   data: () => {
     return {
@@ -66,6 +68,7 @@ export default {
         'to': 0
       },
       services: [],
+      notifications: [],
       offset: 3,
       loading: true,
       pmin: '',
@@ -76,6 +79,8 @@ export default {
   async mounted() {
     if(this.type_pag == 'index')
       this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all', 'all');
+    else if(this.type_pag == 'notifications')
+      this.getPagesNot(1, this.idProvider, 'all');
   },
   watch: {
     title: function(newVal, oldVal) {
@@ -100,6 +105,9 @@ export default {
 
       this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, this.category)
     },
+    filter: function(newVal, oldVal){
+      this.getPagesNot(1, this.idProvider, newVal)
+    }
   },
   computed: {
     //Lógica de la paginación
@@ -142,12 +150,28 @@ export default {
         services_paginate: this.services,
       })
     },
+     async getPagesNot(page, id, filter){
+      if(filter == '') filter = 'all';
+
+      this.$emit('setLoading')
+
+      let response2 = await api.get(`/notifications/page=${page}/id=${id}&filter=${filter}`)
+      
+      this.notifications = response2.data.data.paginate.data || []
+      this.pagination = response2.data.data.paginate //Se extrae los datos paginados
+
+      //Evento que el componente padre oira para obtener valores
+      this.$emit('getNotifications', {
+        notification_paginate: this.notifications,
+      })
+    },
     async changePage(page){
       this.pagination.current_page = page;
 
-      if(this.type_pag == 'index') {
+      if(this.type_pag == 'index')
         this.getPagesIndex(page, this.pmin, this.pmax, this.value, this.title, this.district, this.category);
-      }
+      else if(this.type_pag == 'notifications')
+        this.getPagesNot(page, this.idProvider, this.filter);
     },
   }
 };

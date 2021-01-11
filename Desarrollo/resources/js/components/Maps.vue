@@ -69,7 +69,7 @@ export default {
         this.zoom = 13.4;
         this.radius = 2500;
       }
-      else if(this.route == 'Form3'){
+      else if(newVal == 'Form3'){
         this.zoom = 15;
         this.radius = 500;
         this.options.streetViewControl = true;

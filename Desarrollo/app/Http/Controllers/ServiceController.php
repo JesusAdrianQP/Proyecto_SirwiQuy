@@ -33,4 +33,19 @@ class ServiceController extends Controller
     {   
         return ServiceData::update_price($request);
     }
+
+    
+
+    //Función que trae los detalles de mis solicitudes
+    public function notificationsdetails(Request $request)
+    {
+        return ServiceData::notdetails($request);
+    }
+
+    //Función que borra una solicitud específica cuando no se requiere (sea respondida o no respondida)
+    public function deleterequests(Request $request)
+    {
+        return ServiceData::delete_request($request);
+    }
+   
 }

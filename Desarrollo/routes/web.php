@@ -36,3 +36,9 @@ Route::get('services/page={page}/pmin{pmin}&pmax={pmax}/OrderByvalue={value}/tit
 
 /*--------------------------Comunicación - Request y Response ----------------------*/
 Route::post('request', 'CommunicationController@requestService');/*Solicitud de Servicio*/
+Route::get('notifications/page={page}/id={id}&filter={filter}', 'CommunicationController@notifications_id');/*Listado de Notificaciones*/
+Route::post('delete/notification', 'CommunicationController@deleterequests');/*Borrar solicitudes - Negar solicitud*/
+Route::get('notification_details/{notification_id}', 'CommunicationController@details');/**Detalles por id de la solicitud*/
+Route::post('updatestatus', 'CommunicationController@update_status');/**Actualización del status - response o request */
+Route::post('mail_acept', 'CommunicationController@acept');/**Aceptar solicitud */
+Route::get('paypal/{linkPaypal}/{id_response}', 'CommunicationController@responsedetails');/**PayPal */

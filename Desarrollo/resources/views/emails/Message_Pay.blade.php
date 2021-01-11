@@ -6,7 +6,7 @@
   <meta name="x-apple-disable-message-reformatting"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta content="telephone=no" name="format-detection"> 
-  <title>Mensaje Nuevo-SirwiyQuy</title> 
+  <title>Copia de Welcome-SirwiyQuy</title> 
   <!--[if (mso 16)]>
     <style type="text/css">
     a {text-decoration: none;}
@@ -125,7 +125,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:580px"> 
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0px"><img src="https://hzenhp.stripocdn.email/content/guids/CABINET_6f95aadee0dfdfb02a2b21ff86b8c252/images/45111606069320472.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="400"></td> 
+                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0px"><img src="https://hzenhp.stripocdn.email/content/guids/CABINET_df66a9d7e78ee4572423a37d9e811abe/images/45111606069320472.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="400"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -145,7 +145,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px"> 
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFFFFF;border-radius:4px" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px"><h1 style="Margin:0;line-height:55px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:46px;font-style:normal;font-weight:normal;color:#111111">Tiene 1 mensaje nuevo</h1></td> 
+                      <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px"><h1 style="Margin:0;line-height:55px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:46px;font-style:normal;font-weight:normal;color:#111111">¡Servicio Pagado!</h1></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td bgcolor="#ffffff" align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;font-size:0"> 
@@ -173,19 +173,10 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px"> 
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:4px;background-color:#FFFFFF" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;font-size:0px"><img class="adapt-img" src="https://hzenhp.stripocdn.email/content/guids/CABINET_6f95aadee0dfdfb02a2b21ff86b8c252/images/87071610324871121.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="140"></td> 
+                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-left:30px;padding-right:30px;padding-top:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;text-align:center">Hola! Su servicio ha sido confirmado correctamente ...</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="padding:0;Margin:0;padding-top:30px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">¡Hola! Usted tiene una nueva notificación en su buzón de entrada.</p></td> 
-                     </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" bgcolor="#ffffff" align="center" style="padding:0;Margin:0;padding-left:30px;padding-right:30px;padding-top:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:22px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:33px;color:#000000">Estimado proveedor:</p></td> 
-                     </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="padding:0;Margin:0;padding-top:40px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">Necesito su servicio con la id: {{$request->id_service}} y lo requiero para el día {{$request->date}}, donde estaré disponible de {{$request->timemin}} a {{$request->timemax}}.<br>Adjunto mensaje personal:<br>{{$request->message}}</p></td> 
-                     </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="padding:0;Margin:0;padding-top:5px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{$request->name}} {{$request->last_name_p}} {{$request->last_name_m}}</p></td> 
+                      <td class="es-m-txt-l" bgcolor="#3F70BD" align="left" style="Margin:0;padding-top:20px;padding-bottom:20px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#FFFFFF"><span style="background-color:null">Su servicio ha sido cancelado por el monto de S/. {{$pay}}.&nbsp;Gracias por confiar en nosotros, SIRWIYQUY&nbsp;le felicita por su pago ...</span></p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:20px;Margin:0;font-size:0"> 
@@ -196,18 +187,7 @@ a[x-apple-data-detectors] {
                        </table></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#467CD2;border-width:0px;display:inline-block;border-radius:24px;width:auto"><a href="http://127.0.0.1:8000/home#/supplier/notifications" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#467CD2;border-width:15px 30px;display:inline-block;background:#467CD2;border-radius:24px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center">Ver buzón de entrada</a></span></td> 
-                     </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:20px;Margin:0;font-size:0"> 
-                       <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                         <tr style="border-collapse:collapse"> 
-                          <td style="padding:0;Margin:0;border-bottom:1px solid #CCCCCC;background:none;height:1px;width:100%;margin:0px"></td> 
-                         </tr> 
-                       </table></td> 
-                     </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">Oficina de desarrollo,</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">SIRWIYQUY CENTRAL</p></td> 
+                      <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">SirwiyQuy le invita a leer los términos y usos del método de pago PayPal, cualquier consulta escribanos a <span style="color:#0000CD">sirwiyquy@gmail.com</span><br>Gracias por confiar en nosotros.<br><br>Oficina de desarrollo,</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">SIRWIYQUY CENTRAL</p></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -252,7 +232,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px"> 
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFECD1;border-radius:4px" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffecd1" role="presentation"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://hzenhp.stripocdn.email/content/guids/CABINET_6f95aadee0dfdfb02a2b21ff86b8c252/images/66971606069917462.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="260"></td> 
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://hzenhp.stripocdn.email/content/guids/CABINET_df66a9d7e78ee4572423a37d9e811abe/images/66971606069917462.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="260"></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0"> 

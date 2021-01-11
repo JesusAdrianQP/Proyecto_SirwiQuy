@@ -160,6 +160,7 @@
 <script>
 import SideBarOptions from './SideBarOptions'
 import Footer from "../containers/Footer";
+import api from "../api";
 
 export default {
   name: 'NavMenu',
@@ -169,15 +170,27 @@ export default {
   },
   props: {
     title: String,
-    user: String,
-    image: String
   },
   data: () => {
     return {
+      token: localStorage.getItem('token'),
+      acceso: localStorage.getItem('e_level'),
+
       isOpen: false,
-      acceso: localStorage.getItem("e_level"),
-      image: localStorage.getItem("e_img")
+      user: '',
+      image: '',
+      id_provider: ''
     }
+  },
+  async created(){
+    let response = await api.get(`/level=${this.acceso}/token=${this.token}`)
+    let supplier = response.data.data;
+
+    this.user = supplier.username;
+    this.image = supplier.file;
+    this.id_provider = supplier._id;
+
+    localStorage.setItem('e_id', this.id_provider);
   }
 }
 </script>

@@ -199,7 +199,7 @@ export default {
    watch: { 
     identity: function(newVal, oldVal) {
       this.validateRouter(newVal);
-    },
+    }
   },
   methods: {
     async validateRouter(id){
@@ -300,8 +300,18 @@ export default {
       else{
         localStorage.setItem('e_level', "customer");
 
-        if(localStorage.getItem('suma')!=null) this.$router.push("/request/form/service");
-        else{this.$router.push("/")}
+        if(localStorage.getItem('suma')!=null) 
+          this.$router.push("/request/form/service");
+        else if(localStorage.getItem('e_bandera')!=null)
+        {
+          localStorage.removeItem('e_bandera');
+          
+          this.$router.push("/customer/payment/link="
+          +localStorage.getItem('e_link')+"/response="
+          +localStorage.getItem('e_response'));
+        }
+        else
+          this.$router.push("/");
       }
     },
     validateSubmit() {
