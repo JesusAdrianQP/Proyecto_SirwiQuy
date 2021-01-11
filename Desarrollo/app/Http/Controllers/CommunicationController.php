@@ -36,4 +36,9 @@ class CommunicationController extends Controller
     {
         return CommunicationData::acept_request($request);
     }
+
+    public function responsedetails(Request $request)
+    {
+        return CommunicationData::response_details($request);
+    }
 }

@@ -11,7 +11,7 @@ class Request extends Eloquent
      */
     protected $fillable = [
         'id_service', 'id_customer', 'id_provider', 'identity', 'new_lat', 'new_lng', 
-        'adress', 'name','lastnamep','lastnamem',  'age', 'date','timemin','timemax', 'message',
+        'addres', 'name','lastnamep','lastnamem',  'age', 'date','timemin','timemax', 'message',
         'status', 'cotizacion_personal', 'sumaTotal'
     ];
 

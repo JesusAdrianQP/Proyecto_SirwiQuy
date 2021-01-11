@@ -275,6 +275,8 @@ export default {
       localStorage.removeItem('request');
       localStorage.removeItem('suma');
       localStorage.removeItem('exist_service');
+      localStorage.removeItem('e_response');
+      localStorage.removeItem('e_link');
       
       window.location.reload();
     }

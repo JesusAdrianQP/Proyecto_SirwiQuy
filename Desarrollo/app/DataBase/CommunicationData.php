@@ -137,21 +137,23 @@ class CommunicationData
             else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
         }
         else if($statu->typeNot == 'response'){
-            /*$response = Response::find($statu->id);
+            $response = Response::find($statu->id);
   
-            if($statu){
+            if($response){
                 $response->status = $statu->status;
-  
+                
                 if($statu->status == 'Pendiente'){
+                    $response->linkPayPal = '';
+
                     $message = new MailController;
-                    $message->message_pay($statu->email, $statu->pay);
+                    $message->message_pay($statu->email1, $statu->email2, $statu->pay);
                 }
                   
                 $response->save();
   
                 return response()->json(['success' => ['Estado actualizado']], 200);
             }
-            else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);*/
+            else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
         }
     }
 
@@ -195,4 +197,26 @@ class CommunicationData
         }
         else return response()->json(['errors' => ['fail' => ['El servicio no existe!']]], 422);
     }
+
+    public static function response_details($value)
+    {
+        $response = Response::find($value->id_response); 
+ 
+        if($response && $response->linkPayPal==$value->linkPaypal)
+        {
+            $service = Service::find($response->id_service);
+            $customer = Customer::find($response->id_customer);
+
+            if($response->identity == 'employee') $supplier = Employee::find($response->id_provider);
+              else $supplier = Enterprise::find($response->id_provider);
+
+            return response()->json([
+                'response' => $response,
+                'service' => $service,
+                'supplier' => $supplier,
+                'customer' => $customer
+            ], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Respuesta no encontrada!']]], 422);
+     }
 }

@@ -3641,9 +3641,11 @@ __webpack_require__.r(__webpack_exports__);
                 localStorage.removeItem('request');
                 localStorage.removeItem('suma');
                 localStorage.removeItem('exist_service');
+                localStorage.removeItem('e_response');
+                localStorage.removeItem('e_link');
                 window.location.reload();
 
-              case 8:
+              case 10:
               case "end":
                 return _context2.stop();
             }
@@ -5642,9 +5644,11 @@ __webpack_require__.r(__webpack_exports__);
                   }
                 } else {
                   localStorage.setItem('e_level', "customer");
-                  if (localStorage.getItem('suma') != null) _this4.$router.push("/request/form/service");else {
-                    _this4.$router.push("/");
-                  }
+                  if (localStorage.getItem('suma') != null) _this4.$router.push("/request/form/service");else if (localStorage.getItem('e_bandera') != null) {
+                    localStorage.removeItem('e_bandera');
+
+                    _this4.$router.push("/customer/payment/link=" + localStorage.getItem('e_link') + "/response=" + localStorage.getItem('e_response'));
+                  } else _this4.$router.push("/");
                 }
 
               case 16:
@@ -7182,6 +7186,547 @@ __webpack_require__.r(__webpack_exports__);
   name: "BlankCustomer",
   components: {
     Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Customer/Payment.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Customer/Payment.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_number_to_fixed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.number.to-fixed */ "./node_modules/core-js/modules/es.number.to-fixed.js");
+/* harmony import */ var core_js_modules_es_number_to_fixed__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
+/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
+/* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/IconSvg */ "./resources/js/components/IconSvg.vue");
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Payment",
+  components: {
+    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_8__["default"],
+    IconSvg: _components_IconSvg__WEBPACK_IMPORTED_MODULE_9__["default"],
+    Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_7__["default"]
+  },
+  data: function data() {
+    return {
+      isSelect1: 'terms',
+      isSelect2: 'policy',
+      emailCusto: '',
+      emailProv: '',
+      response_id: '',
+      loading: true,
+      identity: '',
+      name: '',
+      lastnamem: '',
+      lastnamep: '',
+      razonsocial: '',
+      title: '',
+      distrito: '',
+      address: '',
+      date: '',
+      timemini: 0,
+      timemax: 0,
+      account: '',
+      paymentTotal: 0,
+      paypalDolar: 0,
+      response: '',
+      service: '',
+      supplier: '',
+      customer: ''
+    };
+  },
+  props: {
+    id_link: String,
+    id_response: String
+  },
+  created: function created() {
+    var _this = this;
+
+    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+      var response;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _this.loading = true;
+              localStorage.setItem('e_link', _this.id_link);
+              localStorage.setItem('e_response', _this.id_response);
+
+              if (!(localStorage.getItem('e_level') !== 'customer')) {
+                _context.next = 8;
+                break;
+              }
+
+              _this.$toast.open({
+                message: "Inicie sesión para consultar por el pago...",
+                type: "info",
+                duration: 8000,
+                dismissible: true
+              });
+
+              localStorage.setItem('e_bandera', 'bandera');
+
+              _this.$router.push("/login/customer");
+
+              return _context.abrupt("return");
+
+            case 8:
+              _context.next = 10;
+              return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/paypal/".concat(localStorage.getItem('e_link'), "/").concat(localStorage.getItem('e_response')));
+
+            case 10:
+              response = _context.sent;
+
+              if (response.ok) {
+                _context.next = 18;
+                break;
+              }
+
+              _this.$toast.open({
+                message: "Enlace caducado...",
+                type: "error",
+                duration: 8000,
+                dismissible: true
+              });
+
+              localStorage.setItem('e_bandera2', 'bandera2');
+              localStorage.removeItem('e_response');
+              localStorage.removeItem('e_link');
+
+              _this.$router.push("/");
+
+              return _context.abrupt("return");
+
+            case 18:
+              _this.customer = response.data.data.customer;
+              _this.service = response.data.data.service;
+              _this.supplier = response.data.data.supplier;
+              _this.response = response.data.data.response;
+
+              if (!(_this.customer.access != localStorage.getItem('token'))) {
+                _context.next = 29;
+                break;
+              }
+
+              _this.$toast.open({
+                message: "Enlace no válido para su usuario...",
+                type: "error",
+                duration: 8000,
+                dismissible: true
+              });
+
+              localStorage.setItem('e_bandera2', 'bandera2');
+              localStorage.removeItem('e_response');
+              localStorage.removeItem('e_link');
+
+              _this.$router.push("/");
+
+              return _context.abrupt("return");
+
+            case 29:
+              _this.emailProv = _this.supplier.email;
+              _this.emailCusto = _this.customer.email;
+              _this.response_id = _this.response._id;
+              _this.title = _this.service.title;
+              _this.distrito = _this.service.distrito;
+              _this.identity = _this.response.identity;
+
+              if (_this.identity == 'employee') {
+                _this.name = _this.supplier.name;
+                _this.lastnamep = _this.supplier.lastnamep;
+                _this.lastnamem = _this.supplier.lastnamem;
+                _this.account = _this.supplier.cuenta;
+              } else {
+                _this.razonsocial = _this.supplier.name_enterprise;
+                _this.account = _this.supplier.cuenta_enterprise;
+              }
+
+              _this.address = _this.response.addres;
+              _this.date = _this.response.date;
+              _this.timemini = _this.response.timemin;
+              _this.timemax = _this.response.timemax;
+              _this.paymentTotal = _this.response.sumaTotal;
+              _this.paypalDolar = (_this.paymentTotal / 3.64).toFixed(2);
+              _this.loading = false;
+
+            case 43:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
+  },
+  mounted: function mounted() {
+    var _this2 = this;
+
+    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              if (!(localStorage.getItem('e_bandera') == 'bandera' || localStorage.getItem('e_bandera2') == 'bandera2')) {
+                _context3.next = 3;
+                break;
+              }
+
+              localStorage.removeItem('e_bandera2');
+              return _context3.abrupt("return");
+
+            case 3:
+              window.paypal.Buttons({
+                createOrder: function createOrder(data, actions) {
+                  /**Funcion que realiza el envio de los datos a pagar */
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: _this2.title,
+                      amount: {
+                        currency_code: "USD",
+                        value: _this2.paypalDolar
+                      }
+                    }]
+                  });
+                },
+                onApprove: function () {
+                  var _onApprove = Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2(data, actions, resp) {
+                    var order;
+                    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
+                      while (1) {
+                        switch (_context2.prev = _context2.next) {
+                          case 0:
+                            _context2.next = 2;
+                            return actions.order.capture();
+
+                          case 2:
+                            order = _context2.sent;
+                            _this2.data;
+                            _this2.paidFor = true;
+                            _this2.loading = false;
+
+                            _this2.UpdateStatus();
+                            /**Funcion que recupera datos - Posible reporte de transaccion */
+
+
+                          case 7:
+                          case "end":
+                            return _context2.stop();
+                        }
+                      }
+                    }, _callee2);
+                  }));
+
+                  function onApprove(_x, _x2, _x3) {
+                    return _onApprove.apply(this, arguments);
+                  }
+
+                  return onApprove;
+                }(),
+                onError: function onError(err) {
+                  console.log(err);
+                }
+              }).render('#paypal-button-container');
+
+            case 4:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }))();
+  },
+  methods: {
+    UpdateStatus: function UpdateStatus() {
+      var _this3 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
+        var response, er, mensaje;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _context4.next = 2;
+                return _api__WEBPACK_IMPORTED_MODULE_6__["default"].post("/updatestatus", {
+                  typeNot: 'response',
+                  id: _this3.response_id,
+                  status: 'Pendiente',
+                  email1: _this3.emailProv,
+                  email2: _this3.emailCusto,
+                  pay: _this3.paymentTotal
+                });
+
+              case 2:
+                response = _context4.sent;
+
+                if (response.ok) {
+                  _context4.next = 9;
+                  break;
+                }
+
+                _this3.buttonLoading = false;
+                er = response.error.errors;
+                mensaje = "Error desconocido";
+
+                if (er.hasOwnProperty('fail')) {
+                  mensaje = er.fail[0];
+                }
+
+                return _context4.abrupt("return", _this3.$toast.open({
+                  message: mensaje,
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 9:
+                _this3.$toast.open({
+                  message: "Pago Exitoso - " + response.data.data.success[0],
+                  type: "success",
+                  duration: 8000,
+                  dismissible: true
+                });
+
+                localStorage.removeItem('e_response');
+                localStorage.removeItem('e_link');
+
+                _this3.$router.push("/");
+
+              case 13:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }))();
+    }
   }
 });
 
@@ -14730,6 +15275,32 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/string-repeat.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/internals/string-repeat.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+
+// `String.prototype.repeat` method implementation
+// https://tc39.github.io/ecma262/#sec-string.prototype.repeat
+module.exports = ''.repeat || function repeat(count) {
+  var str = String(requireObjectCoercible(this));
+  var result = '';
+  var n = toInteger(count);
+  if (n < 0 || n == Infinity) throw RangeError('Wrong number of repetitions');
+  for (;n > 0; (n >>>= 1) && (str += str)) if (n & 1) result += str;
+  return result;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/string-trim.js":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/internals/string-trim.js ***!
@@ -14764,6 +15335,27 @@ module.exports = {
   // `String.prototype.trim` method
   // https://tc39.github.io/ecma262/#sec-string.prototype.trim
   trim: createMethod(3)
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/this-number-value.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/internals/this-number-value.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
+
+// `thisNumberValue` abstract operation
+// https://tc39.github.io/ecma262/#sec-thisnumbervalue
+module.exports = function (value) {
+  if (typeof value != 'number' && classof(value) != 'Number') {
+    throw TypeError('Incorrect invocation');
+  }
+  return +value;
 };
 
 
@@ -15465,6 +16057,144 @@ if (isForced(NUMBER, !NativeNumber(' 0o1') || !NativeNumber('0b1') || NativeNumb
   NumberPrototype.constructor = NumberWrapper;
   redefine(global, NUMBER, NumberWrapper);
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.number.to-fixed.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.number.to-fixed.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
+var thisNumberValue = __webpack_require__(/*! ../internals/this-number-value */ "./node_modules/core-js/internals/this-number-value.js");
+var repeat = __webpack_require__(/*! ../internals/string-repeat */ "./node_modules/core-js/internals/string-repeat.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+var nativeToFixed = 1.0.toFixed;
+var floor = Math.floor;
+
+var pow = function (x, n, acc) {
+  return n === 0 ? acc : n % 2 === 1 ? pow(x, n - 1, acc * x) : pow(x * x, n / 2, acc);
+};
+
+var log = function (x) {
+  var n = 0;
+  var x2 = x;
+  while (x2 >= 4096) {
+    n += 12;
+    x2 /= 4096;
+  }
+  while (x2 >= 2) {
+    n += 1;
+    x2 /= 2;
+  } return n;
+};
+
+var FORCED = nativeToFixed && (
+  0.00008.toFixed(3) !== '0.000' ||
+  0.9.toFixed(0) !== '1' ||
+  1.255.toFixed(2) !== '1.25' ||
+  1000000000000000128.0.toFixed(0) !== '1000000000000000128'
+) || !fails(function () {
+  // V8 ~ Android 4.3-
+  nativeToFixed.call({});
+});
+
+// `Number.prototype.toFixed` method
+// https://tc39.github.io/ecma262/#sec-number.prototype.tofixed
+$({ target: 'Number', proto: true, forced: FORCED }, {
+  // eslint-disable-next-line max-statements
+  toFixed: function toFixed(fractionDigits) {
+    var number = thisNumberValue(this);
+    var fractDigits = toInteger(fractionDigits);
+    var data = [0, 0, 0, 0, 0, 0];
+    var sign = '';
+    var result = '0';
+    var e, z, j, k;
+
+    var multiply = function (n, c) {
+      var index = -1;
+      var c2 = c;
+      while (++index < 6) {
+        c2 += n * data[index];
+        data[index] = c2 % 1e7;
+        c2 = floor(c2 / 1e7);
+      }
+    };
+
+    var divide = function (n) {
+      var index = 6;
+      var c = 0;
+      while (--index >= 0) {
+        c += data[index];
+        data[index] = floor(c / n);
+        c = (c % n) * 1e7;
+      }
+    };
+
+    var dataToString = function () {
+      var index = 6;
+      var s = '';
+      while (--index >= 0) {
+        if (s !== '' || index === 0 || data[index] !== 0) {
+          var t = String(data[index]);
+          s = s === '' ? t : s + repeat.call('0', 7 - t.length) + t;
+        }
+      } return s;
+    };
+
+    if (fractDigits < 0 || fractDigits > 20) throw RangeError('Incorrect fraction digits');
+    // eslint-disable-next-line no-self-compare
+    if (number != number) return 'NaN';
+    if (number <= -1e21 || number >= 1e21) return String(number);
+    if (number < 0) {
+      sign = '-';
+      number = -number;
+    }
+    if (number > 1e-21) {
+      e = log(number * pow(2, 69, 1)) - 69;
+      z = e < 0 ? number * pow(2, -e, 1) : number / pow(2, e, 1);
+      z *= 0x10000000000000;
+      e = 52 - e;
+      if (e > 0) {
+        multiply(0, z);
+        j = fractDigits;
+        while (j >= 7) {
+          multiply(1e7, 0);
+          j -= 7;
+        }
+        multiply(pow(10, j, 1), 0);
+        j = e - 1;
+        while (j >= 23) {
+          divide(1 << 23);
+          j -= 23;
+        }
+        divide(1 << j);
+        multiply(1, 1);
+        divide(2);
+        result = dataToString();
+      } else {
+        multiply(0, z);
+        multiply(1 << -e, 0);
+        result = dataToString() + repeat.call('0', fractDigits);
+      }
+    }
+    if (fractDigits > 0) {
+      k = result.length;
+      result = sign + (k <= fractDigits
+        ? '0.' + repeat.call('0', fractDigits - k) + result
+        : result.slice(0, k - fractDigits) + '.' + result.slice(k - fractDigits));
+    } else {
+      result = sign + result;
+    } return result;
+  }
+});
 
 
 /***/ }),
@@ -47835,6 +48565,480 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Customer/Payment.vue?vue&type=template&id=822a2084&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Customer/Payment.vue?vue&type=template&id=822a2084& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "Visitor",
+    [
+      _c("Loader", {
+        staticClass: "min-h-screen",
+        attrs: { load: _vm.loading }
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: !_vm.loading,
+              expression: "!loading"
+            }
+          ],
+          staticClass: "bg-gray-100 min-h-screen pb-6"
+        },
+        [
+          _c("div", { staticClass: "max-w-6xl mx-auto py-8" }, [
+            _c("div", { staticClass: "text-center my-4 font-bold" }, [
+              _c("h1", { staticClass: "text-2xl" }, [_vm._v("MÉTODO DE PAGO")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-4 grid grid-cols-2 gap-6" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-span-2 sm:col-span-1 bg-white overflow-hidden shadow rounded-lg sm:mr-2"
+                },
+                [
+                  _c("div", { staticClass: "px-4 py-5 sm:p-4 text-left" }, [
+                    _c("div", [
+                      _c(
+                        "p",
+                        {
+                          staticClass:
+                            "text-lg leading-5 font-semibold text-gray-700"
+                        },
+                        [
+                          _vm._v(
+                            "\n                Datos del pago\n              "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.identity == "employee"
+                        ? _c("h3", { staticClass: "font-semibold mt-3" }, [
+                            _vm._v("Nombre")
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.identity == "employee"
+                        ? _c("p", { staticClass: "sm:text-justify" }, [
+                            _c(
+                              "span",
+                              {
+                                staticStyle: {
+                                  "white-space": "pre-wrap",
+                                  "word-wrap": "break-word",
+                                  "font-family": "inherit"
+                                }
+                              },
+                              [_vm._v(_vm._s(_vm.name))]
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.identity != "employee"
+                        ? _c("h3", { staticClass: "font-semibold mt-3" }, [
+                            _vm._v("Razón Social")
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.identity != "employee"
+                        ? _c("p", { staticClass: "sm:text-justify" }, [
+                            _c(
+                              "span",
+                              {
+                                staticStyle: {
+                                  "white-space": "pre-wrap",
+                                  "word-wrap": "break-word",
+                                  "font-family": "inherit"
+                                }
+                              },
+                              [_vm._v(_vm._s(_vm.razonsocial))]
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.identity == "employee"
+                        ? _c("h3", { staticClass: "font-semibold mt-2" }, [
+                            _vm._v("Apellidos")
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.identity == "employee"
+                        ? _c("p", { staticClass: "sm:text-justify" }, [
+                            _c(
+                              "span",
+                              {
+                                staticStyle: {
+                                  "white-space": "pre-wrap",
+                                  "word-wrap": "break-word",
+                                  "font-family": "inherit"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.lastnamep) +
+                                    " " +
+                                    _vm._s(_vm.lastnamem)
+                                )
+                              ]
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "font-semibold mt-2" }, [
+                        _vm._v("Servicio")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "sm:text-justify" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "white-space": "pre-wrap",
+                              "word-wrap": "break-word",
+                              "font-family": "inherit"
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm.title))]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "font-semibold mt-2" }, [
+                        _vm._v("Dirección exacta")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "sm:text-justify" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "white-space": "pre-wrap",
+                              "word-wrap": "break-word",
+                              "font-family": "inherit"
+                            }
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(_vm.distrito) + " - " + _vm._s(_vm.address)
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "font-semibold mt-2" }, [
+                        _vm._v("Fecha de la cita")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "sm:text-justify" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "white-space": "pre-wrap",
+                              "word-wrap": "break-word",
+                              "font-family": "inherit"
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm.date))]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "font-semibold mt-2" }, [
+                        _vm._v("Hora de inicio / Hora de fin:")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "sm:text-justify" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "white-space": "pre-wrap",
+                              "word-wrap": "break-word",
+                              "font-family": "inherit"
+                            }
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(_vm.timemini) + " a " + _vm._s(_vm.timemax)
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "font-semibold mt-2" }, [
+                        _vm._v("Cuenta a pagar:")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "sm:text-justify" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "white-space": "pre-wrap",
+                              "word-wrap": "break-word",
+                              "font-family": "inherit"
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm.account))]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "font-semibold mt-2" }, [
+                        _vm._v("Total a pagar:")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "sm:text-justify" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "white-space": "pre-wrap",
+                              "word-wrap": "break-word",
+                              "font-family": "inherit"
+                            }
+                          },
+                          [_vm._v("SOL " + _vm._s(_vm.paymentTotal.toFixed(2)))]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "font-semibold mt-2" }, [
+                        _vm._v("Total a pagar (USD):")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "sm:text-justify" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "white-space": "pre-wrap",
+                              "word-wrap": "break-word",
+                              "font-family": "inherit"
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "USD " +
+                                _vm._s((_vm.paymentTotal / 3.64).toFixed(2))
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "flex items-center my-2 mt-4" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.isSelect1,
+                                expression: "isSelect1"
+                              }
+                            ],
+                            staticClass:
+                              "form-checkbox h-4 w-4 text-primary-500 transition duration-150 ease-in-out",
+                            attrs: {
+                              id: "terms",
+                              type: "checkbox",
+                              value: "terms",
+                              disabled: ""
+                            },
+                            domProps: {
+                              checked: Array.isArray(_vm.isSelect1)
+                                ? _vm._i(_vm.isSelect1, "terms") > -1
+                                : _vm.isSelect1
+                            },
+                            on: {
+                              change: function($event) {
+                                var $$a = _vm.isSelect1,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = "terms",
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 &&
+                                      (_vm.isSelect1 = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.isSelect1 = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.isSelect1 = $$c
+                                }
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "label",
+                            {
+                              staticClass:
+                                "ml-2 block text-sm leading-5 text-gray-900",
+                              attrs: { for: "terms" }
+                            },
+                            [
+                              _vm._v(
+                                "\n                  Acepto los términos y condiciones de uso del servicio KusaWasi.\n                "
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "flex items-center" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.isSelect2,
+                              expression: "isSelect2"
+                            }
+                          ],
+                          staticClass:
+                            "form-checkbox h-4 w-4 text-primary-500 transition duration-150 ease-in-out",
+                          attrs: {
+                            id: "policy",
+                            type: "checkbox",
+                            value: "policy",
+                            disabled: ""
+                          },
+                          domProps: {
+                            checked: Array.isArray(_vm.isSelect2)
+                              ? _vm._i(_vm.isSelect2, "policy") > -1
+                              : _vm.isSelect2
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$a = _vm.isSelect2,
+                                $$el = $event.target,
+                                $$c = $$el.checked ? true : false
+                              if (Array.isArray($$a)) {
+                                var $$v = "policy",
+                                  $$i = _vm._i($$a, $$v)
+                                if ($$el.checked) {
+                                  $$i < 0 && (_vm.isSelect2 = $$a.concat([$$v]))
+                                } else {
+                                  $$i > -1 &&
+                                    (_vm.isSelect2 = $$a
+                                      .slice(0, $$i)
+                                      .concat($$a.slice($$i + 1)))
+                                }
+                              } else {
+                                _vm.isSelect2 = $$c
+                              }
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "ml-2 block text-sm leading-5 text-gray-900",
+                            attrs: { for: "policy" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                  Acepto las politicas del servicio SirwiyQuy.\n                "
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-span-2 sm:col-span-1 mt-4 sm:mt-0" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "bg-white overflow-hidden shadow rounded-lg"
+                    },
+                    [
+                      _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                        _c(
+                          "p",
+                          {
+                            staticClass:
+                              "text-lg leading-5 font-semibold text-gray-700"
+                          },
+                          [
+                            _vm._v(
+                              "\n                Realizar Pago\n              "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "px-2 mt-6" }, [
+                          _c("div", {
+                            attrs: { id: "paypal-button-container" }
+                          })
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-8" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "w-full flex justify-center items-center"
+                      },
+                      [
+                        _c("img", {
+                          staticStyle: { height: "20rem" },
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../assets/illustrations/paypal.png */ "./resources/assets/illustrations/paypal.png"),
+                            alt: "paypal"
+                          }
+                        })
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Customer/RateService.vue?vue&type=template&id=6bbc13ed&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Customer/RateService.vue?vue&type=template&id=6bbc13ed& ***!
@@ -73216,6 +74420,17 @@ module.exports = "/images/404.png?c023b83ff01e495ea6086007cb9dfaa2";
 
 /***/ }),
 
+/***/ "./resources/assets/illustrations/paypal.png":
+/*!***************************************************!*\
+  !*** ./resources/assets/illustrations/paypal.png ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/paypal.png?289e868c5c7558e163c80fbdb5fdc51d";
+
+/***/ }),
+
 /***/ "./resources/assets/illustrations/search.png":
 /*!***************************************************!*\
   !*** ./resources/assets/illustrations/search.png ***!
@@ -75569,6 +76784,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/Customer/Payment.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/pages/Customer/Payment.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Payment_vue_vue_type_template_id_822a2084___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Payment.vue?vue&type=template&id=822a2084& */ "./resources/js/pages/Customer/Payment.vue?vue&type=template&id=822a2084&");
+/* harmony import */ var _Payment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Payment.vue?vue&type=script&lang=js& */ "./resources/js/pages/Customer/Payment.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Payment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Payment_vue_vue_type_template_id_822a2084___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Payment_vue_vue_type_template_id_822a2084___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/Customer/Payment.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/Customer/Payment.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/pages/Customer/Payment.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Payment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Payment.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Customer/Payment.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Payment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/Customer/Payment.vue?vue&type=template&id=822a2084&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/pages/Customer/Payment.vue?vue&type=template&id=822a2084& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Payment_vue_vue_type_template_id_822a2084___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Payment.vue?vue&type=template&id=822a2084& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Customer/Payment.vue?vue&type=template&id=822a2084&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Payment_vue_vue_type_template_id_822a2084___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Payment_vue_vue_type_template_id_822a2084___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/Customer/RateService.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/pages/Customer/RateService.vue ***!
@@ -76931,9 +78215,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Customer_ServiceReport_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/Customer/ServiceReport.vue */ "./resources/js/pages/Customer/ServiceReport.vue");
 /* harmony import */ var _pages_Customer_ServiceForm_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/Customer/ServiceForm.vue */ "./resources/js/pages/Customer/ServiceForm.vue");
 /* harmony import */ var _pages_Customer_RateService_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/Customer/RateService.vue */ "./resources/js/pages/Customer/RateService.vue");
-/* harmony import */ var _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/Worker/EditProfile.vue */ "./resources/js/pages/Worker/EditProfile.vue");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _pages_Customer_Payment_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/Customer/Payment.vue */ "./resources/js/pages/Customer/Payment.vue");
+/* harmony import */ var _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/Worker/EditProfile.vue */ "./resources/js/pages/Worker/EditProfile.vue");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_25__);
 
  //Importaciones generales
 
@@ -76954,6 +78239,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  //Importaciones de la carpeta cliente
+
 
 
 
@@ -77024,7 +78310,8 @@ var isCustomer = function isCustomer(to, from, next) {
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
-  routes: [{
+  routes: [//Ruta para clientes y trabajador no logueados
+  {
     path: "/",
     component: _pages_Index_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     beforeEnter: isUnique
@@ -77042,8 +78329,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _pages_Customer_ServiceDetails_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
     beforeEnter: isUnique,
     props: true
-  }, //Ruta para clientes y trabajador no logueados
-  {
+  }, {
     path: "/join_us",
     component: _pages_JoinUs_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     beforeEnter: isGuest
@@ -77074,6 +78360,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: "/customer/rate/service",
     component: _pages_Customer_RateService_vue__WEBPACK_IMPORTED_MODULE_22__["default"] // beforeEnter: isCustomer
 
+  }, {
+    path: "/customer/payment/link=:id_link/response=:id_response",
+    component: _pages_Customer_Payment_vue__WEBPACK_IMPORTED_MODULE_23__["default"],
+    props: true
   }, //Rutas de los proveedores
   {
     path: "/supplier",
@@ -77117,7 +78407,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, //Ruta solo para trabajador
   {
     path: "/worker/profile/edit",
-    component: _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_23__["default"],
+    component: _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_24__["default"],
     beforeEnter: isWorker
   }, //Ruta no registrada
   {

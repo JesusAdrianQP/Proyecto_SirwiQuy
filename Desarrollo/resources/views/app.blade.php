@@ -23,6 +23,8 @@
     <link rel="shortcut icon" href="{{ asset('images/Sirwiyquy_b.ico') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom_app.css') }}">
+
+    <script src = "https://www.paypal.com/sdk/js?client-id=AUUaTizn2dse8gdYpltMY43jFIESVVnOMOQ6CM-bn1Sj0-9oQ-W3U4ffOJIpuiMXREfYFP57EEwDOwwN"></script>
   </head>
 
   <body class="contenedor">

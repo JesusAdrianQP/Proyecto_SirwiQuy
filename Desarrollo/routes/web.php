@@ -41,3 +41,4 @@ Route::post('delete/notification', 'CommunicationController@deleterequests');/*B
 Route::get('notification_details/{notification_id}', 'CommunicationController@details');/**Detalles por id de la solicitud*/
 Route::post('updatestatus', 'CommunicationController@update_status');/**Actualización del status - response o request */
 Route::post('mail_acept', 'CommunicationController@acept');/**Aceptar solicitud */
+Route::get('paypal/{linkPaypal}/{id_response}', 'CommunicationController@responsedetails');/**PayPal */

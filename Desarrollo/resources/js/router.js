@@ -29,6 +29,7 @@ import ServiceDetails from "./pages/Customer/ServiceDetails.vue";
 import ServiceReport from "./pages/Customer/ServiceReport.vue";
 import ServiceForm from "./pages/Customer/ServiceForm.vue";
 import RateService from "./pages/Customer/RateService.vue";
+import Payment from "./pages/Customer/Payment.vue";
 
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
@@ -102,6 +103,7 @@ Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
+        //Ruta para clientes y trabajador no logueados
         {
             path: "/",
             component: Index,
@@ -124,7 +126,6 @@ export default new VueRouter({
             beforeEnter: isUnique,
             props: true
         },
-        //Ruta para clientes y trabajador no logueados
         {
             path: "/join_us",
             component: JoinUs,
@@ -164,7 +165,12 @@ export default new VueRouter({
             component: RateService
             // beforeEnter: isCustomer
         },
-        
+        {
+            path: "/customer/payment/link=:id_link/response=:id_response",
+            component: Payment,
+            props: true
+        },
+
         //Rutas de los proveedores
         {
             path: "/supplier",
@@ -214,12 +220,14 @@ export default new VueRouter({
             beforeEnter: isSupplier,
             props: true
         },
+
         //Ruta solo para trabajador
         {
             path: "/worker/profile/edit",
             component: EditProfile,
             beforeEnter: isWorker
         },
+
         //Ruta no registrada
         {
             path: "*",
