@@ -20,7 +20,6 @@ import ServiceList from "./pages/Supplier/ServiceList.vue";
 import UpdateService from "./pages/Supplier/UpdateService.vue";
 import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
 import SuppliersBlank from "./pages/Supplier/Blank.vue";
-import NotificationDetails from "./pages/Supplier/NotificationDetails.vue";
 import Notifications from "./pages/Supplier/Notifications.vue";
 
 //Importaciones de la carpeta cliente
@@ -198,12 +197,6 @@ export default new VueRouter({
             component: UpdatePrice,
             props: true,
             beforeEnter: isSupplier
-        },
-        {
-            path: "/supplier/notifications/details/:notification_id",
-            component: NotificationDetails,
-            //beforeEnter: isSupplier,
-            props: true
         },
         {
             path: "/supplier/blank",

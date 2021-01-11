@@ -21,4 +21,19 @@ class CommunicationController extends Controller
     {
         return CommunicationData::delete_request($request);
     }
+
+    public function details(Request $request)
+    {
+        return CommunicationData::notiddetails($request); 
+    }
+
+    public function update_status(Request $request)
+    {
+        return CommunicationData::status($request);
+    }
+
+    public function acept(Request $request)
+    {
+        return CommunicationData::acept_request($request);
+    }
 }

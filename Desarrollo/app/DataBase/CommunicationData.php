@@ -3,6 +3,7 @@
 namespace App\DataBase;
 
 use App\Request;
+use App\Response;
 use App\Service;
 use App\Customer;
 use App\Employee;
@@ -31,12 +32,12 @@ class CommunicationData
             $notification->lastnamem = $request->last_name_m;
             $notification->age =  (int) $request->age;
             $notification->date = $request->date;
-            $notification->timemin = (float) $request->timemin;
-            $notification->timemax = (float) $request->timemax;
+            $notification->timemin = $request->timemin;
+            $notification->timemax = $request->timemax;
             $notification->message = $request->message;
             $notification->status = 'No respondido';
             $notification->cotizacion_personal = $request->coti_personal;
-            $notification->sumaTotal = (int) $request->suma;
+            $notification->sumaTotal = (float) $request->suma;
 
             $notification->save();
             
@@ -70,11 +71,11 @@ class CommunicationData
         $exist = Request::find($not->id);
 
         if($exist){
+            $service = Service::where('_id', '=', $exist->id_service)->first();
+            $customer = Customer::where('_id', '=', $exist->id_customer)->first();
+
             if($not->status == 'No respondido')
             {
-                $service = Service::where('_id', '=', $exist->id_service)->first();
-                $customer = Customer::where('_id', '=', $exist->id_customer)->first();
-
                 $exist->delete();
 
                 $message = new MailController;
@@ -83,6 +84,14 @@ class CommunicationData
                 return response()->json([
                     'info' => 'La solicitud fue eliminada con éxito'
                 ], 200);
+            }
+            if($not->status == 'En proceso')
+            {
+                /**No borra solicitud - la mantiene pero negada */
+                $message = new MailController;
+                $message->message_deny($service, $customer, $not->date);
+
+                return response()->json(['success' => ['Respuesta enviada exitosamente']], 200);   
             }
             else{
                 $exist->delete();
@@ -93,5 +102,97 @@ class CommunicationData
             }
         }
         else return response()->json(['errors' => ['fail' => ['La solicitud no existe!']]], 422) ;       
+    }
+
+    public static function notiddetails($request){
+        $request_id = Request::where('_id', '=', $request->notification_id)->first();
+
+        if($request_id)
+        {
+            $service = Service::where('_id', '=', $request_id->id_service)->first();
+            $customer = Customer::where('_id', '=', $request_id->id_customer)->first();
+    
+            return response()->json([
+                'request_details' => $request_id,
+                'service_details' => $service,
+                'customer_details' => $customer
+            ], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Solicitud no encontrada!']]], 422);
+    }
+
+    //Funcion que sige el progreso de tu estado
+    public static function status($statu)
+    {
+        if($statu->typeNot == 'request'){
+            $request = Request::find($statu->id);
+  
+            if($request){
+                $request->status = $statu->status;
+  
+                $request->save();
+  
+                return response()->json(['success' => ['Estado actualizado']], 200);
+            }
+            else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
+        }
+        else if($statu->typeNot == 'response'){
+            /*$response = Response::find($statu->id);
+  
+            if($statu){
+                $response->status = $statu->status;
+  
+                if($statu->status == 'Pendiente'){
+                    $message = new MailController;
+                    $message->message_pay($statu->email, $statu->pay);
+                }
+                  
+                $response->save();
+  
+                return response()->json(['success' => ['Estado actualizado']], 200);
+            }
+            else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);*/
+        }
+    }
+
+    public static function acept_request($info)
+    {
+        $exist = Service::find($info->id_service);
+        $access = new UserDataMaster();
+
+        if($exist){
+            $response = new Response();
+            
+            $response->id_provider = $info->id_provider;
+            $response->id_service = $info->id_service;
+            $response->identity = $info->identity;
+            $response->new_lat = (float) $info->lat;
+            $response->new_lng = (float) $info->long;
+            $response->addres = $info->adress;
+            $response->id_customer = $info->id_customer;
+            $response->name = $info->name;
+            $response->lastnamep = $info->lastnamep;
+            $response->lastnamem = $info->lastnamem;
+            $response->age =  (int) $info->age;
+            $response->date = $info->date;
+            $response->timemin = $info->timemin;
+            $response->timemax = $info->timemax;
+            $response->message = $info->message;
+            $response->status = 'Por pagar';
+            $response->cotizacion_personal = $info->cotizacion;
+            $response->sumaTotal = (float) $info->sumtotal;
+            $response->work = (int) $info->work;
+            $response->linkPayPal = $access->getCodigo(50);
+
+            $response->save();
+
+            $customer = Customer::where('_id', '=', $info->id_customer)->first();
+
+            $message = new MailController;
+            $message->message_acept($response, $customer->email);
+
+            return response()->json(['success' => ['Respuesta enviada exitosamente']], 200);          
+        }
+        else return response()->json(['errors' => ['fail' => ['El servicio no existe!']]], 422);
     }
 }

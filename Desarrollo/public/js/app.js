@@ -2179,11 +2179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -2272,11 +2268,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     borrarServicio: function borrarServicio(servicio_id) {
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2306,11 +2298,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 
 
 
@@ -2558,11 +2546,7 @@ __webpack_require__.r(__webpack_exports__);
     Modal: function Modal() {
       var _this = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2640,11 +2624,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 
 
 
@@ -2695,11 +2675,7 @@ __webpack_require__.r(__webpack_exports__);
     getValue_labprice: function getValue_labprice() {
       var _this = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2796,11 +2772,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 
 
 
@@ -2873,7 +2845,7 @@ __webpack_require__.r(__webpack_exports__);
       if (newVal == 'Form1') {
         this.zoom = 13.4;
         this.radius = 2500;
-      } else if (this.route == 'Form3') {
+      } else if (newVal == 'Form3') {
         this.zoom = 15;
         this.radius = 500;
         this.options.streetViewControl = true;
@@ -2916,11 +2888,7 @@ __webpack_require__.r(__webpack_exports__);
     addMarker: function addMarker(lat, lng) {
       var _this = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
->>>>>>> Dayana
         var marker;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -3003,11 +2971,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 
 
 
@@ -3156,11 +3120,7 @@ __webpack_require__.r(__webpack_exports__);
     createMaterial: function createMaterial() {
       var _this = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -3201,11 +3161,7 @@ __webpack_require__.r(__webpack_exports__);
     seeUpdateForm: function seeUpdateForm(material_id) {
       var _this2 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -3227,11 +3183,7 @@ __webpack_require__.r(__webpack_exports__);
     borrarMaterial: function borrarMaterial(material_id) {
       var _this3 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -3250,11 +3202,7 @@ __webpack_require__.r(__webpack_exports__);
     saveUpdate: function saveUpdate(material_id) {
       var _this4 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -3368,7 +3316,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
@@ -3382,18 +3329,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_clickaway__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-clickaway */ "./node_modules/vue-clickaway/dist/vue-clickaway.common.js");
 /* harmony import */ var vue_clickaway__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vue_clickaway__WEBPACK_IMPORTED_MODULE_7__);
 
-=======
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _IconSvg_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IconSvg.vue */ "./resources/js/components/IconSvg.vue");
-/* harmony import */ var _NavBarOption_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavBarOption.vue */ "./resources/js/components/NavBarOption.vue");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
-/* harmony import */ var vue_clickaway__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-clickaway */ "./node_modules/vue-clickaway/dist/vue-clickaway.common.js");
-/* harmony import */ var vue_clickaway__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_clickaway__WEBPACK_IMPORTED_MODULE_6__);
->>>>>>> Dayana
 
 
 
@@ -3689,13 +3624,8 @@ __webpack_require__.r(__webpack_exports__);
       if (this.profileOpen) this.profileOpen = false;
     },
     logout: function logout() {
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
->>>>>>> Dayana
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -3928,7 +3858,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
-<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.filter */ "./node_modules/core-js/modules/es.array.filter.js");
 /* harmony import */ var core_js_modules_es_array_filter__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
@@ -3938,14 +3867,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
-=======
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
->>>>>>> Dayana
 
 
 
@@ -4029,13 +3950,8 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
->>>>>>> Dayana
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -4099,11 +4015,7 @@ __webpack_require__.r(__webpack_exports__);
     getPagesIndex: function getPagesIndex(page, pmin, pmax, value, title, district, category) {
       var _this2 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
->>>>>>> Dayana
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -4139,14 +4051,9 @@ __webpack_require__.r(__webpack_exports__);
     getPagesNot: function getPagesNot(page, id, filter) {
       var _this3 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
         var response2;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
->>>>>>> Dayana
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -4159,7 +4066,6 @@ __webpack_require__.r(__webpack_exports__);
 
               case 4:
                 response2 = _context3.sent;
-                console.log(response2);
                 _this3.notifications = response2.data.data.paginate.data || [];
                 _this3.pagination = response2.data.data.paginate; //Se extrae los datos paginados
                 //Evento que el componente padre oira para obtener valores
@@ -4168,7 +4074,7 @@ __webpack_require__.r(__webpack_exports__);
                   notification_paginate: _this3.notifications
                 });
 
-              case 9:
+              case 8:
               case "end":
                 return _context3.stop();
             }
@@ -4217,11 +4123,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -4295,11 +4197,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
->>>>>>> Dayana
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -4804,11 +4702,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 /* harmony import */ var _SideBarOption__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SideBarOption */ "./resources/js/components/SideBarOption.vue");
 /* harmony import */ var _IconSvg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./IconSvg */ "./resources/js/components/IconSvg.vue");
@@ -4867,11 +4761,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     logout: function logout() {
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -4915,11 +4805,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 /* harmony import */ var _components_CardEdit_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/CardEdit.vue */ "./resources/js/components/CardEdit.vue");
 /* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/IconSvg */ "./resources/js/components/IconSvg.vue");
@@ -5026,12 +4912,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-      var response;
->>>>>>> Dayana
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -5384,7 +5265,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
 /* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -5399,16 +5279,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
 
 
-=======
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
-/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
->>>>>>> Dayana
 
 
 
@@ -5605,13 +5475,8 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
->>>>>>> Dayana
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -5634,13 +5499,8 @@ __webpack_require__.r(__webpack_exports__);
     validateRouter: function validateRouter(id) {
       var _this2 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
->>>>>>> Dayana
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -5684,13 +5544,8 @@ __webpack_require__.r(__webpack_exports__);
     change: function change() {
       var _this3 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
->>>>>>> Dayana
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -5713,11 +5568,7 @@ __webpack_require__.r(__webpack_exports__);
     submitLogin: function submitLogin() {
       var _this4 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
->>>>>>> Dayana
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -5849,11 +5700,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -6481,11 +6328,7 @@ __webpack_require__.r(__webpack_exports__);
     validateDNI: function validateDNI() {
       var _this = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
->>>>>>> Dayana
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -6559,11 +6402,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRUC: function validateRUC() {
       var _this2 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
->>>>>>> Dayana
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -6630,11 +6469,7 @@ __webpack_require__.r(__webpack_exports__);
     submitSignup: function submitSignup() {
       var _this3 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
->>>>>>> Dayana
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -6897,11 +6732,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -7116,11 +6947,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
->>>>>>> Dayana
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -7144,11 +6971,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRouter: function validateRouter(id) {
       var _this2 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -7186,11 +7009,7 @@ __webpack_require__.r(__webpack_exports__);
     submitSignup: function submitSignup() {
       var _this3 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
->>>>>>> Dayana
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -7498,11 +7317,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 
@@ -7680,11 +7495,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
->>>>>>> Dayana
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -7721,11 +7532,7 @@ __webpack_require__.r(__webpack_exports__);
     Validation: function Validation() {
       var _this2 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -7743,11 +7550,7 @@ __webpack_require__.r(__webpack_exports__);
     TotalSum: function TotalSum() {
       var _this3 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
->>>>>>> Dayana
         var i;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -7776,11 +7579,7 @@ __webpack_require__.r(__webpack_exports__);
     Submit: function Submit() {
       var _this4 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
->>>>>>> Dayana
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -7843,11 +7642,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Maps__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/Maps */ "./resources/js/components/Maps.vue");
 /* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/IconSvg */ "./resources/js/components/IconSvg.vue");
@@ -8089,11 +7884,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
->>>>>>> Dayana
       var response, response2, response3;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -8178,7 +7969,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
-<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.join */ "./node_modules/core-js/modules/es.array.join.js");
 /* harmony import */ var core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_array_reverse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.reverse */ "./node_modules/core-js/modules/es.array.reverse.js");
@@ -8205,22 +7995,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-=======
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _components_SearchBar_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/SearchBar.vue */ "./resources/js/components/SearchBar.vue");
-/* harmony import */ var _containers_ServiceList_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../containers/ServiceList.vue */ "./resources/js/containers/ServiceList.vue");
-/* harmony import */ var _Layouts_Visitor_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Layouts/Visitor.vue */ "./resources/js/pages/Layouts/Visitor.vue");
-/* harmony import */ var _components_CategorySelector_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/CategorySelector.vue */ "./resources/js/components/CategorySelector.vue");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
->>>>>>> Dayana
 
 
 
@@ -8256,112 +8030,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-=======
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "IndexPage",
-  components: {
-    SearchBar: _components_SearchBar_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    ServiceList: _containers_ServiceList_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    CategorySelector: _components_CategorySelector_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
-    Visitor: _Layouts_Visitor_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
-  },
-  data: function data() {
-    return {
-      token: localStorage.getItem('token'),
-      level: localStorage.getItem('e_level'),
-      isCustomer: false,
-      username: '',
-      file: ' ',
-      title: '',
-      district: '',
-      category: 'all',
-      prices: {
-        pmin: '',
-        pmax: ''
-      },
-      value: null
-    };
-  },
-  created: function created() {
-    var _this = this;
-
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
-      var response, customer;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              if (!((_this.token == null || _this.token == '') && (_this.level == '' || _this.level == null))) {
-                _context.next = 4;
-                break;
-              }
-
-              _this.isCustomer = false;
-              _context.next = 12;
-              break;
-
-            case 4:
-              _this.isCustomer = true;
-              _context.next = 7;
-              return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/services/level=".concat(_this.level, "/token=").concat(_this.token));
-
-            case 7:
-              response = _context.sent;
-              customer = response.data.data;
-              _this.username = customer.username;
-
-              if (customer.file != '' || _this.file == null) {
-                _this.file = customer.file;
-              }
-
-              ;
-
-            case 12:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }))();
-  },
-  methods: {
-    filterBySearch: function filterBySearch(obj) {
-      this.title = obj.search;
-      this.district = obj.district;
-    },
-    filterByCategory: function filterByCategory(obj) {
-      this.category = obj.category;
-    },
-    filterByPrice: function filterByPrice(obj) {
-      this.prices.pmin = obj.pmin;
-      this.prices.pmax = obj.pmax;
-    },
-    orderByCalification: function orderByCalification(obj) {
-      this.value = obj.value;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/JoinUs.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/JoinUs.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/IconSvg */ "./resources/js/components/IconSvg.vue");
-/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
->>>>>>> Dayana
 //
 //
 //
@@ -8486,43 +8154,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-=======
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "App",
-  components: {
-    NavBar: _components_NavBar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    LandingFooter: _containers_LandingFooter_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  },
-  props: {
-    isCustom: Boolean,
-    user: String,
-    photo: String
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/NotFound.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/NotFound.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-
-
-
->>>>>>> Dayana
 //
 //
 //
@@ -8542,49 +8173,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-=======
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      url: localStorage.getItem('e_level')
-    };
-  },
-  methods: {
-    submit: function submit() {
-      var _this = this;
-
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (_this.url == "employee" || _this.url == "enterprise") _this.$router.push("/supplier");else _this.$router.push("/");
-
-              case 1:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Supplier/Blank.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Supplier/Blank.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
->>>>>>> Dayana
 //
 //
 //
@@ -8595,7 +8183,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
 //
 //
 //
@@ -8662,43 +8249,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-=======
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "SuppliersBlank",
-  components: {
-    SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Supplier/CreatePrice.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Supplier/CreatePrice.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_LaborPrice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/LaborPrice */ "./resources/js/components/LaborPrice.vue");
-/* harmony import */ var _components_MaterialPrice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/MaterialPrice */ "./resources/js/components/MaterialPrice.vue");
-/* harmony import */ var _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/MyButton.vue */ "./resources/js/components/MyButton.vue");
-
-
-
-
->>>>>>> Dayana
 //
 //
 //
@@ -8849,7 +8399,6 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
       var response, response2;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
@@ -8860,17 +8409,6 @@ __webpack_require__.r(__webpack_exports__);
                 _context.next = 19;
                 break;
               }
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _this.vacio_1 = "";
-                _this.vacio_2 = "";
-                _this.buttonLoading = true; //Compruebo mi seleccion y valido las entradas:
->>>>>>> Dayana
 
               _this.coti_personal = JSON.parse(localStorage.getItem('request'));
               _this.sumatotal = localStorage.getItem('suma');
@@ -9127,7 +8665,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
@@ -9135,26 +8672,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_ServiceItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/ServiceItem */ "./resources/js/components/ServiceItem.vue");
-=======
-/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
-/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/MyButton.vue */ "./resources/js/components/MyButton.vue");
-
-
-
->>>>>>> Dayana
 
 
 
@@ -9430,14 +8947,8 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
-      var response, supplier, response2;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
->>>>>>> Dayana
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -9470,16 +8981,7 @@ __webpack_require__.r(__webpack_exports__);
   }
 });
 
-<<<<<<< HEAD
 /***/ }),
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _this2.validateSubmit();
->>>>>>> Dayana
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Index.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************!*\
@@ -9583,29 +9085,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/IconSvg */ "./resources/js/components/IconSvg.vue");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
-=======
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/IconSvg */ "./resources/js/components/IconSvg.vue");
-/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
-
-
-
-
-
->>>>>>> Dayana
 //
 //
 //
@@ -10010,7 +9491,6 @@ __webpack_require__.r(__webpack_exports__);
     submitForm: function submitForm() {
       var _this = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
@@ -10020,16 +9500,6 @@ __webpack_require__.r(__webpack_exports__);
                 _this.vacio_1 = "";
                 _this.vacio_2 = "";
                 _this.buttonLoading = true; //Compruebo mi seleccion y valido las entradas:
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
-      var response, supplier;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return _api__WEBPACK_IMPORTED_MODULE_5__["default"].get("/services/level=".concat(_this.acceso, "/token=").concat(_this.token));
->>>>>>> Dayana
 
                 if (!(_this.includeMaterials1 == 'only_workforce')) {
                   _context.next = 10;
@@ -10124,636 +9594,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Supplier/CreateService.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Supplier/CreateService.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************************/
-=======
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Supplier/NotificationDetails.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Supplier/NotificationDetails.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_Maps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Maps */ "./resources/js/components/Maps.vue");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_MyButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/MyButton */ "./resources/js/components/MyButton.vue");
-
-
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "NotificationDetails",
-  components: {
-    SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_6__["default"],
-    Maps: _components_Maps__WEBPACK_IMPORTED_MODULE_5__["default"],
-    MyButton: _components_MyButton__WEBPACK_IMPORTED_MODULE_7__["default"]
-  },
-  data: function data() {
-    return {
-      quotationOpen: false,
-      confirmOpen: false,
-      buttonLoading: false,
-      type: '',
-      showSelectWorker: false,
-      //si debe mostrar el selector de trabajadores
-      showWorker: localStorage.getItem('e_level'),
-      Select1: false,
-      Select2: false,
-      //Para guardar los datos de la notificacion
-      notificacion: '',
-      subemployee: [],
-      request: [],
-      service: '',
-      customer: [],
-      vacio: '',
-      employee: '',
-      id_service: '',
-      title: '',
-      category: '',
-      distrito: '',
-      id_customer: '',
-      username: '',
-      coti_personal: [],
-      workforce: 0,
-      sumtotal: 0,
-      DNI: '',
-      name: '',
-      lastnamep: '',
-      lastnamem: '',
-      age: '',
-      adress: '',
-      date: '',
-      timemin: '',
-      timemax: '',
-      message: '',
-      lat: 0,
-      lng: 0,
-      status: '',
-      fecharequest: '',
-      fechaact: ''
-    };
-  },
-  props: {
-    notification_id: String
-  },
-  created: function created() {
-    var _this = this;
-
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-      var response, response2, response3;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/notification_details/5ffa2168ef620000940015f2");
-
-            case 2:
-              response = _context.sent;
-              _this.notificacion = response.data.data.not_details; //this.service = this.notificacion.id_service;
-              //this.customer = this.notificacion.id_customer;
-
-              _context.next = 6;
-              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/service_details/".concat(_this.notificacion.id_service));
-
-            case 6:
-              response2 = _context.sent;
-              _this.service = response2.data.data.serv_details[0];
-              console.log(_this.service.title);
-              _this.title = _this.service.title;
-              _this.category = _this.service.category;
-              _this.distrito = _this.service.distrito;
-              _context.next = 14;
-              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/details/provider/cliente/".concat(_this.notificacion.id_customer));
-
-            case 14:
-              response3 = _context.sent;
-              _this.customer = response3.data.data.customer_details[0];
-              console.log(_this.customer.username);
-              _this.id_customer = _this.customer._id;
-              _this.username = _this.customer.username;
-              _this.DNI = _this.request.DNI;
-              _this.age = _this.request.age;
-              _this.name = _this.request.name;
-              _this.lastnamep = _this.request.lastnamep;
-              _this.lastnamem = _this.request.lastnamem;
-              _this.date = _this.request.date;
-              _this.timemin = _this.request.timemin;
-              _this.timemax = _this.request.timemax;
-              _this.message = _this.request.message;
-              _this.coti_personal = _this.request.cotizacion_personal;
-              _this.workforce = _this.request.worforce;
-              _this.type = 'Form3';
-              _this.lat = _this.request.new_lat;
-              _this.lng = _this.request.new_lng;
-              _this.adress = _this.request.addres;
-              _this.status = _this.request.status;
-              /*
-              this.fechaact = this.request.created_at;
-              var fecha = this.fechaact.slice(0,-9).split('-').reverse().join('/');
-              this.fecharequest = fecha;
-                this.suma();
-                if(this.showWorker == 'enterprise')
-              { 
-                let response3 = await api.get(`/subemployee/list/simple&1/${localStorage.getItem('e_id')}`)
-                this.subemployee = response3.data.data.subemployees;
-                this.showSelectWorker = true;
-              }*/
-
-            case 35:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }))();
-  }
-  /*,
-  methods:{
-   suma(){
-     if(this.coti_personal.length == 0) this.sumtotal = this.workforce;
-       else{
-         for(var i = 0; i < this.coti_personal.length; i++)
-         {
-           this.sumtotal = this.sumtotal + (this.coti_personal[i].price * parseInt(this.coti_personal[i].cant));
-         }
-           this.sumtotal = this.sumtotal + this.workforce;
-       }
-   },
-   async SubmitAcept(){
-     if(this.showWorker == 'enterprise'){
-       this.validateSubmit();
-       if (this.hasError) return;
-     }
-       this.confirmOpen = false;
-     this.buttonLoading = true;
-     //Respondo actualizando estado
-     this.Response();
-     //Envio correo positivo si acepto solicitud
-     let response3 = await api.post(`/mail_acept`, {
-       employee: this.employee,
-       id_service: this.id_service,
-       id_customer: this.id_customer,
-       fecharequest: this.fecharequest,
-       DNI: this.DNI,
-       age: this.age,
-       name: this.name,
-       lastnamep: this.lastnamep,
-       lastnamem: this.lastnamem,
-       date: this.date,
-       timemin: this.timemin,
-       timemax: this.timemax,
-       message: this.message,
-       cotizacion: this.coti_personal,
-       work: this.workforce,
-       lat: this.lat,
-       lng: this.lng,    
-       adress: this.adress,
-       suma: this.sumtotal
-     })
-     
-     //Si existe errores
-     if (!response3.ok) {
-       this.buttonLoading = false;
-         let er = response3.error.errors;
-       let mensaje = "Error desconocido";
-         if(er.hasOwnProperty('fail')){
-         mensaje = er.fail[0];
-       }
-         return this.$toast.open({
-         message: mensaje,
-         type: "error",
-         duration: 8000,
-         dismissible: true
-       });
-     }
-       //Redireccionamiento de rutas
-     this.$router.push("/supplier/notifications");
-       //Si se envia correo con exito
-     this.$toast.open({
-       message: response3.data.data.success[0],
-       type: "info",
-       duration: 10000,
-       dismissible: true,
-     });
-   },
-   async SubmitDeny(){
-     this.confirmOpen = false;
-     this.buttonLoading = true;
-     //Respondo actualizando estado
-     this.Response();
-     //Envio correo negativo si rechazo solicitud
-     let response2 = await api.post(`/mail_deny`, {
-       id_service: this.id_service,
-       fecharequest: this.fecharequest,
-       id_customer: this.id_customer
-     })
-       //Redireccionamiento de rutas
-     this.$router.push("/supplier/notifications");
-       //Si se envia correo con exito
-     this.$toast.open({
-       message: 'Correo enviado con éxito',
-       type: "info",
-       duration: 10000,
-       dismissible: true,
-     });
-   },
-   async Response(){
-     let response = await api.post(`/updatestatus`, {
-       is: "request",
-       id: this.notification_id,
-       status: 'Respondido',
-     })
-       //Si existe errores en la actualización de datos - no se comunica con la data
-     if (!response.ok) {
-       this.buttonLoading = false;
-         let er = response.error.errors;
-       let mensaje = "Error desconocido";
-         if(er.hasOwnProperty('fail')){
-         mensaje = er.fail[0];
-       }
-         return this.$toast.open({
-         message: mensaje,
-         type: "error",
-         duration: 8000,
-         dismissible: true
-       });
-     }
-       this.$toast.open({
-       message: response.data.data.success[0],
-       type: "success",
-       duration: 8000,
-       dismissible: true
-     });
-   },
-   validate(){
-     if(this.status == 'No respondido') this.confirmOpen = true;
-       else this.confirmOpen = false;
-   },
-   validateSubmit(){
-     this.hasError = false;
-       //Comprobacion de trabajador
-     if (this.employee_sub == "") {
-       this.hasError = true;
-       this.vacio = "Campo necesario";
-     } else this.vacio = "";
-   }
-  }*/
-
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Supplier/ServiceList.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Supplier/ServiceList.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
->>>>>>> Dayana
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
@@ -10768,19 +9617,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
 /* harmony import */ var _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/MyButton.vue */ "./resources/js/components/MyButton.vue");
 
-=======
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _containers_CardEditList_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../containers/CardEditList.vue */ "./resources/js/containers/CardEditList.vue");
->>>>>>> Dayana
 
 
 
@@ -10800,7 +9636,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
 //
 //
 //
@@ -10824,81 +9659,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-=======
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "ServiceList",
-  components: {
-    SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_6__["default"],
-    CardEditList: _containers_CardEditList_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_5__["default"]
-  },
-  data: function data() {
-    return {
-      acceso: localStorage.getItem('e_level'),
-      token: localStorage.getItem('token'),
-      loading: true,
-      username: '',
-      img: '',
-      id: '',
-      category: ""
-    };
-  },
-  created: function created() {
-    var _this = this;
-
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-      var response, supplier;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/services/level=".concat(_this.acceso, "/token=").concat(_this.token));
-
-            case 2:
-              response = _context.sent;
-              supplier = response.data.data;
-              _this.username = supplier.username;
-              _this.img = supplier.file;
-              _this.id = supplier._id;
-              localStorage.setItem('id', _this.id);
-
-            case 8:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }))();
-  },
-  methods: {
-    setLoading: function setLoading() {
-      this.loading = false;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Supplier/UpdatePrice.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Supplier/UpdatePrice.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-
->>>>>>> Dayana
 //
 //
 //
@@ -11268,20 +10028,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
 /* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/IconSvg */ "./resources/js/components/IconSvg.vue");
 /* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/MyButton.vue */ "./resources/js/components/MyButton.vue");
-
->>>>>>> Dayana
 
 
 
@@ -11534,7 +10285,6 @@ __webpack_require__.r(__webpack_exports__);
     Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_8__["default"]
   },
   data: function data() {
-<<<<<<< HEAD
     return {
       acceso: localStorage.getItem('e_level'),
       token: localStorage.getItem('token'),
@@ -11558,58 +10308,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     var _this = this;
-=======
-    var _ref;
-
-    return _ref = {
-      hasError: false,
-      buttonLoading: false,
-      title: "",
-      description: "",
-      category: "",
-      district: "",
-      image: "",
-      districts: [{
-        name: 'madera'
-      }, {
-        name: 'palo'
-      }, {
-        name: 'cemento'
-      }],
-      categories: [{
-        name: 'gaa'
-      }, {
-        name: 'gaasito'
-      }, {
-        name: 'gaasote'
-      }],
-      error_title: "",
-      error_description: "",
-      vacio_title: "",
-      vacio_district: "",
-      vacio_description: "",
-      vacio_category: "",
-      actualizarServicio: false,
-      titulo: 'Gaasito',
-      descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-    }, Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "category", 'daia'), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "district", 'San Bartolo'), _ref;
-  },
-  methods: {
-    submitForm: function submitForm() {
-      var _this = this;
-
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _this.validateSubmit();
-
-                if (!_this.hasError) {
-                  _context.next = 3;
-                  break;
-                }
->>>>>>> Dayana
 
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       var response, supplier;
@@ -11663,7 +10361,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.join */ "./node_modules/core-js/modules/es.array.join.js");
 /* harmony import */ var core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_reverse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.reverse */ "./node_modules/core-js/modules/es.array.reverse.js");
@@ -11684,29 +10381,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _components_Maps_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/Maps.vue */ "./resources/js/components/Maps.vue");
+/* harmony import */ var _components_Maps__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/Maps */ "./resources/js/components/Maps.vue");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/MyButton.vue */ "./resources/js/components/MyButton.vue");
+/* harmony import */ var _components_MyButton__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/MyButton */ "./resources/js/components/MyButton.vue");
+/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
 
 
 
 
 
-=======
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../functions */ "./resources/js/functions.js");
-/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/IconSvg.vue */ "./resources/js/components/IconSvg.vue");
->>>>>>> Dayana
 
 
 
@@ -12029,9 +10712,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
+
 
 
 
@@ -12040,37 +10721,32 @@ __webpack_require__.r(__webpack_exports__);
   name: "NotificationDetails",
   components: {
     SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_12__["default"],
-    Maps: _components_Maps_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
-    MyButton: _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+    Maps: _components_Maps__WEBPACK_IMPORTED_MODULE_11__["default"],
+    MyButton: _components_MyButton__WEBPACK_IMPORTED_MODULE_13__["default"],
+    Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_14__["default"]
   },
   data: function data() {
     return {
+      loading: true,
       quotationOpen: false,
       confirmOpen: false,
       buttonLoading: false,
       type: '',
-      showSelectWorker: false,
-      //si debe mostrar el selector de trabajadores
-      showWorker: localStorage.getItem('e_level'),
+      //showSelectWorker: false,
+      //showWorker: localStorage.getItem('e_level'),
       Select1: false,
       Select2: false,
-      subemployee: [],
-      request: [],
-      service: [],
-      customer: [],
-      vacio: '',
-      employee: '',
-      id_service: '',
+      request: '',
+      customer: '',
+      service: '',
       title: '',
       category: '',
       distrito: '',
-      id_customer: '',
       username: '',
-<<<<<<< HEAD
+      email: '',
       coti_personal: [],
       workforce: 0,
       sumtotal: 0,
-      DNI: '',
       name: '',
       lastnamep: '',
       lastnamem: '',
@@ -12082,88 +10758,64 @@ __webpack_require__.r(__webpack_exports__);
       message: '',
       lat: 0,
       lng: 0,
-      status: '',
-      fecharequest: '',
-      fechaact: ''
+      status: ''
     };
   },
   props: {
     notification_id: String
-=======
-      image: '',
-      hasError: false,
-      dni_valid: false,
-      isType: "",
-      dni: "",
-      age: ""
-    }, Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "image", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "first_name", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "last_name_p", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "last_name_m", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "department", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "province", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "district", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "address", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "bank_account", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "departments", []), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "districts", []), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "provinces", []), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "error_dni", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "error_age", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_dni", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_age", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_first_name", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_last_name_m", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_last_name_p", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_department", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_province", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_district", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_address", ""), Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_bank_account", ""), _ref;
->>>>>>> Dayana
   },
   created: function created() {
     var _this = this;
 
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
-      var response, fecha, response2;
+      var response, dateact;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-      var response, supplier, response2;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
->>>>>>> Dayana
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/notifications/".concat(_this.notification_id));
+              return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/notification_details/".concat(_this.notification_id));
 
             case 2:
               response = _context.sent;
-              _this.request = response.data.data.request_details;
-              _this.service = response.data.data.service_details.original.serv_details;
-              _this.customer = response.data.data.customer_details;
-              _this.id_service = _this.service._id;
-              _this.title = _this.service.title;
-              _this.category = _this.service.category;
-              _this.distrito = _this.service.distrito;
-              _this.id_customer = _this.customer._id;
-              _this.username = _this.customer.username;
-              _this.DNI = _this.request.DNI;
-              _this.age = _this.request.age;
-              _this.name = _this.request.name;
-              _this.lastnamep = _this.request.lastnamep;
-              _this.lastnamem = _this.request.lastnamem;
-              _this.date = _this.request.date;
-              _this.timemin = _this.request.timemin;
-              _this.timemax = _this.request.timemax;
-              _this.message = _this.request.message;
-              _this.coti_personal = _this.request.cotizacion_personal;
-              _this.workforce = _this.request.worforce;
-              _this.type = 'Form3';
-              _this.lat = _this.request.new_lat;
-              _this.lng = _this.request.new_lng;
-              _this.adress = _this.request.addres;
-              _this.status = _this.request.status;
-              _this.fechaact = _this.request.created_at;
-              fecha = _this.fechaact.slice(0, -9).split('-').reverse().join('/');
-              _this.fecharequest = fecha;
 
-              _this.suma();
+              //Si es que introducen rutas erroneas inexistentes
+              if (response.ok == true) {
+                _this.loading = false;
+                _this.request = response.data.data.request_details;
+                _this.customer = response.data.data.customer_details;
+                _this.service = response.data.data.service_details;
+                _this.id_request = _this.request._id;
+                dateact = _this.request.created_at.slice(0, -9).split('-').reverse().join('/');
+                _this.now = dateact;
+                _this.id_service = _this.service._id;
+                _this.id_customer = _this.customer._id;
+                _this.title = _this.service.title;
+                _this.category = _this.service.category;
+                _this.distrito = _this.service.distrito;
+                _this.username = _this.customer.username;
+                _this.email = _this.customer.email;
+                _this.age = _this.request.age;
+                _this.name = _this.request.name;
+                _this.lastnamep = _this.request.lastnamep;
+                _this.lastnamem = _this.request.lastnamem;
+                _this.date = _this.request.date;
+                _this.timemin = _this.request.timemin;
+                _this.timemax = _this.request.timemax;
+                _this.message = _this.request.message;
+                _this.coti_personal = _this.request.cotizacion_personal;
+                _this.sumtotal = _this.request.sumaTotal;
 
-              if (!(_this.showWorker == 'enterprise')) {
-                _context.next = 38;
-                break;
-              }
+                _this.suma();
 
-              _context.next = 35;
-              return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/subemployee/list/simple&1/".concat(localStorage.getItem('e_id')));
+                _this.type = 'Form3';
+                _this.lat = _this.request.new_lat;
+                _this.lng = _this.request.new_lng;
+                _this.adress = _this.request.addres;
+                _this.status = _this.request.status;
+              } else _this.$router.push("/NotFound");
 
-            case 35:
-              response2 = _context.sent;
-              _this.subemployee = response2.data.data.subemployees;
-              _this.showSelectWorker = true;
-
-            case 38:
+            case 4:
             case "end":
               return _context.stop();
           }
@@ -12173,57 +10825,37 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     suma: function suma() {
-      if (this.coti_personal.length == 0) this.sumtotal = this.workforce;else {
+      if (this.coti_personal.length == 0) this.workforce = this.sumtotal;else {
+        var sumArray = 0;
+
         for (var i = 0; i < this.coti_personal.length; i++) {
-          this.sumtotal = this.sumtotal + this.coti_personal[i].price * parseInt(this.coti_personal[i].cant);
+          sumArray = sumArray + this.coti_personal[i].price * parseInt(this.coti_personal[i].cant);
         }
 
-        this.sumtotal = this.sumtotal + this.workforce;
+        this.workforce = this.sumtotal - sumArray;
       }
     },
     SubmitAcept: function SubmitAcept() {
       var _this2 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2() {
         var response3, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
->>>>>>> Dayana
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (!(_this2.showWorker == 'enterprise')) {
-                  _context2.next = 4;
-                  break;
-                }
-
-                _this2.validateSubmit();
-
-                if (!_this2.hasError) {
-                  _context2.next = 4;
-                  break;
-                }
-
-                return _context2.abrupt("return");
-
-              case 4:
                 _this2.confirmOpen = false;
                 _this2.buttonLoading = true; //Respondo actualizando estado
 
                 _this2.Response(); //Envio correo positivo si acepto solicitud
 
 
-                _context2.next = 9;
+                _context2.next = 5;
                 return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/mail_acept", {
-                  employee: _this2.employee,
+                  id_provider: localStorage.getItem('e_id'),
+                  identity: localStorage.getItem('e_level'),
                   id_service: _this2.id_service,
                   id_customer: _this2.id_customer,
-                  fecharequest: _this2.fecharequest,
-                  DNI: _this2.DNI,
                   age: _this2.age,
                   name: _this2.name,
                   lastnamep: _this2.lastnamep,
@@ -12233,18 +10865,18 @@ __webpack_require__.r(__webpack_exports__);
                   timemax: _this2.timemax,
                   message: _this2.message,
                   cotizacion: _this2.coti_personal,
+                  sumtotal: _this2.sumtotal,
                   work: _this2.workforce,
                   lat: _this2.lat,
                   lng: _this2.lng,
-                  adress: _this2.adress,
-                  suma: _this2.sumtotal
+                  adress: _this2.adress
                 });
 
-              case 9:
+              case 5:
                 response3 = _context2.sent;
 
                 if (response3.ok) {
-                  _context2.next = 16;
+                  _context2.next = 12;
                   break;
                 }
 
@@ -12263,10 +10895,8 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 }));
 
-              case 16:
-                //Redireccionamiento de rutas
-                _this2.$router.push("/supplier/notifications"); //Si se envia correo con exito
-
+              case 12:
+                _this2.$router.push("/supplier/notifications");
 
                 _this2.$toast.open({
                   message: response3.data.data.success[0],
@@ -12275,7 +10905,7 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 });
 
-              case 18:
+              case 14:
               case "end":
                 return _context2.stop();
             }
@@ -12286,15 +10916,9 @@ __webpack_require__.r(__webpack_exports__);
     SubmitDeny: function SubmitDeny() {
       var _this3 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3() {
-        var response2;
+        var response2, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
->>>>>>> Dayana
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -12305,27 +10929,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
                 _context3.next = 5;
-                return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/mail_deny", {
-                  id_service: _this3.id_service,
-                  fecharequest: _this3.fecharequest,
-                  id_customer: _this3.id_customer
+                return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/delete/notification", {
+                  id: _this3.id_request,
+                  status: 'En proceso',
+                  date: _this3.now
                 });
 
               case 5:
                 response2 = _context3.sent;
 
-                //Redireccionamiento de rutas
-                _this3.$router.push("/supplier/notifications"); //Si se envia correo con exito
+                if (response2.ok) {
+                  _context3.next = 12;
+                  break;
+                }
 
+                _this3.buttonLoading = false;
+                er = response2.error.errors;
+                mensaje = "Error desconocido";
+
+                if (er.hasOwnProperty('fail')) {
+                  mensaje = er.fail[0];
+                }
+
+                return _context3.abrupt("return", _this3.$toast.open({
+                  message: mensaje,
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 12:
+                _this3.$router.push("/supplier/notifications");
 
                 _this3.$toast.open({
-                  message: 'Correo enviado con éxito.',
+                  message: response2.data.data.success[0],
                   type: "info",
                   duration: 10000,
                   dismissible: true
                 });
 
-              case 8:
+              case 14:
               case "end":
                 return _context3.stop();
             }
@@ -12336,91 +10979,21 @@ __webpack_require__.r(__webpack_exports__);
     Response: function Response() {
       var _this4 = this;
 
-<<<<<<< HEAD
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee4$(_context4) {
-=======
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
->>>>>>> Dayana
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
                 _context4.next = 2;
                 return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/updatestatus", {
-                  is: "request",
+                  typeNot: 'request',
                   id: _this4.notification_id,
                   status: 'Respondido'
                 });
 
               case 2:
                 response = _context4.sent;
-<<<<<<< HEAD
-=======
-                _this4.districts = response.data.data.districts;
-
-              case 4:
-              case "end":
-                return _context4.stop();
-            }
-          }
-        }, _callee4);
-      }))();
-    },
-    submitForm: function submitForm() {
-      var _this5 = this;
-
-      return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
-        var response, er, mensaje;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                _this5.validateSubmit();
-
-                if (!_this5.hasError) {
-                  _context5.next = 3;
-                  break;
-                }
-
-                return _context5.abrupt("return");
-
-              case 3:
-                if (!(_this5.image === '' | _this5.image === "" | _this5.image === null)) {
-                  _context5.next = 5;
-                  break;
-                }
-
-                return _context5.abrupt("return", _this5.$toast.open({
-                  message: 'Imagen requerida',
-                  type: "error",
-                  duration: 8000,
-                  dismissible: true
-                }));
-
-              case 5:
-                _context5.next = 7;
-                return _api__WEBPACK_IMPORTED_MODULE_5__["default"].post("/edit_data", {
-                  level: _this5.level,
-                  token: _this5.token,
-                  dni: _this5.dni,
-                  age: _this5.age,
-                  photo: _this5.image,
-                  first_name: _this5.first_name,
-                  last_name_p: _this5.last_name_p,
-                  last_name_m: _this5.last_name_m,
-                  department: _this5.department,
-                  province: _this5.province,
-                  district: _this5.district,
-                  address: _this5.address,
-                  bank_account: _this5.bank_account
-                });
-
-              case 7:
-                response = _context5.sent;
->>>>>>> Dayana
 
                 if (response.ok) {
                   _context4.next = 9;
@@ -12460,14 +11033,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     validate: function validate() {
       if (this.status == 'No respondido') this.confirmOpen = true;else this.confirmOpen = false;
-    },
-    validateSubmit: function validateSubmit() {
-      this.hasError = false; //Comprobacion de trabajador
-
-      if (this.employee_sub == "") {
-        this.hasError = true;
-        this.vacio = "Campo necesario";
-      } else this.vacio = "";
     }
   }
 });
@@ -53449,22 +52014,175 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("SideBar", { attrs: { title: "Detalles de la notificación" } }, [
-    _c(
-      "div",
-      { staticClass: "bg-white shadow overflow-hidden sm:rounded-lg" },
-      [
-        _c(
-          "div",
-          { staticClass: "px-4 py-5 border-b border-gray-200 sm:px-6" },
-          [
+  return _c(
+    "SideBar",
+    { attrs: { title: "Detalles de la notificación" } },
+    [
+      _c("Loader", {
+        staticClass: "min-h-screen",
+        attrs: { load: _vm.loading }
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: !_vm.loading,
+              expression: "!loading"
+            }
+          ],
+          staticClass: "bg-white shadow overflow-hidden sm:rounded-lg"
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "px-4 py-5 border-b border-gray-200 sm:px-6" },
+            [
+              _c(
+                "h3",
+                { staticClass: "text-lg leading-6 font-medium text-gray-900" },
+                [
+                  _c("strong", [_vm._v("Servicio:")]),
+                  _vm._v("\n        " + _vm._s(_vm.title) + "\n      ")
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "dl",
+                {
+                  staticClass:
+                    "grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2"
+                },
+                [
+                  _c("div", { staticClass: "sm:col-span-1" }, [
+                    _c(
+                      "dd",
+                      { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                      [
+                        _c("strong", [_vm._v("Categoría:")]),
+                        _vm._v(" " + _vm._s(_vm.category))
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "px-4 py-5 sm:px-6" }, [
             _c(
               "h3",
-              { staticClass: "text-lg leading-6 font-medium text-gray-900" },
+              {
+                staticClass: "text-lg mb-4 leading-6 font-medium text-gray-900"
+              },
+              [_c("strong", [_vm._v("Datos del cliente")])]
+            ),
+            _vm._v(" "),
+            _c(
+              "dl",
+              {
+                staticClass:
+                  "grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2"
+              },
               [
-                _c("strong", [_vm._v("Servicio:")]),
-                _vm._v("\n        " + _vm._s(_vm.title) + "\n      ")
+                _c("div", { staticClass: "sm:col-span-2" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Mensaje enviado por el solicitante")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.username))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Nombre(s)")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.name))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Apellido paterno")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.lastnamep))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Apellido materno")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.lastnamem))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Edad")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.age))]
+                  )
+                ])
               ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "h-px w-full bg-gray-200 mt-4 sm:mt-8" }),
+            _vm._v(" "),
+            _c(
+              "h3",
+              {
+                staticClass: "text-lg my-4 leading-6 font-medium text-gray-900"
+              },
+              [_c("strong", [_vm._v("Datos del servicio")])]
             ),
             _vm._v(" "),
             _c(
@@ -53478,924 +52196,720 @@ var render = function() {
                   _c(
                     "dd",
                     { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                    [_vm._v("Categoría: " + _vm._s(_vm.category))]
-                  )
-                ])
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "px-4 py-5 sm:px-6" }, [
-          _c(
-            "h3",
-            { staticClass: "text-lg mb-4 leading-6 font-medium text-gray-900" },
-            [_c("strong", [_vm._v("Datos del cliente")])]
-          ),
-          _vm._v(" "),
-          _c(
-            "dl",
-            {
-              staticClass: "grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2"
-            },
-            [
-              _c("div", { staticClass: "sm:col-span-2" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Mensaje enviado por el solicitante")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.username))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("DNI")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.DNI))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Edad")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.age))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Nombre(s)")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.name))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "hidden sm:block sm sm:col-span-1" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Apellido paterno")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.lastnamep))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Apellido materno")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.lastnamem))]
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-px w-full bg-gray-200 mt-4 sm:mt-8" }),
-          _vm._v(" "),
-          _c(
-            "h3",
-            { staticClass: "text-lg my-4 leading-6 font-medium text-gray-900" },
-            [_c("strong", [_vm._v("Datos del servicio")])]
-          ),
-          _vm._v(" "),
-          _c(
-            "dl",
-            {
-              staticClass: "grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-3"
-            },
-            [
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Distrito")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.distrito))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Dirección exacta")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.adress))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-3" }, [
-                _c("div", [
+                    [_vm._v("Distrito")]
+                  ),
+                  _vm._v(" "),
                   _c(
-                    "dd",
-                    { staticClass: "mt-1 text-sm leading-5 text-blue-500" },
-                    [
-                      _vm._v(
-                        "La siguiente ubicación es una referencia respecto del rango de su dirección"
-                      )
-                    ]
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.distrito))]
                   )
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticStyle: { height: "20rem" }, attrs: { id: "map" } },
-                  [
-                    _c("Maps", {
-                      attrs: { route: _vm.type, lati: _vm.lat, longi: _vm.lng }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Fecha")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.date))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Hora mínima (HH:MM)")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.timemin))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Hora máxima (HH:MM)")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.timemax))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-3" }, [
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-sm leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v("Mensaje")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-base leading-5 text-gray-900" },
-                  [_vm._v(_vm._s(_vm.message))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  {
-                    staticClass:
-                      "mt-1 text-sm leading-5 text-primary-500 hover:text-primary-700 hover:underline cursor-pointer",
-                    on: {
-                      click: function($event) {
-                        _vm.quotationOpen = true
-                      }
-                    }
-                  },
-                  [_vm._v("Ver detalle de cotización")]
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.quotationOpen,
-                  expression: "quotationOpen"
-                }
-              ],
-              staticClass:
-                "fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "fixed inset-0 transition-opacity",
-                  on: {
-                    click: function($event) {
-                      _vm.quotationOpen = false
-                    }
-                  }
-                },
-                [
-                  _c("div", {
-                    staticClass: "absolute inset-0 bg-gray-500 opacity-75"
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "relative bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6",
-                  attrs: {
-                    role: "dialog",
-                    "aria-modal": "true",
-                    "aria-labelledby": "modal-headline"
-                  }
-                },
-                [
+                _c("div", { staticClass: "sm:col-span-1" }, [
                   _c(
-                    "div",
-                    {
-                      staticClass:
-                        "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
-                    },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass:
-                            "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
-                          attrs: { type: "button", "aria-label": "Close" },
-                          on: {
-                            click: function($event) {
-                              _vm.quotationOpen = false
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "h-6 w-6",
-                              attrs: {
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Dirección exacta")]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "sm:flex sm:items-start" }, [
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.adress))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-3" }, [
+                  _c("div", [
                     _c(
-                      "h3",
-                      {
-                        staticClass:
-                          "text-lg leading-6 font-medium text-gray-900",
-                        attrs: { id: "modal-headline" }
-                      },
-                      [_vm._v("Detalle de cotización")]
+                      "dd",
+                      { staticClass: "mt-1 text-sm leading-5 text-blue-500" },
+                      [
+                        _vm._v(
+                          "La siguiente ubicación es una referencia del rango de su dirección"
+                        )
+                      ]
                     )
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "mt-4" }, [
+                  _c(
+                    "div",
+                    { staticStyle: { height: "20rem" }, attrs: { id: "map" } },
+                    [
+                      _c("Maps", {
+                        attrs: {
+                          route: _vm.type,
+                          lati: _vm.lat,
+                          longi: _vm.lng
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Fecha")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.date))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Hora mínima (HH:MM)")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.timemin))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
+                    [_vm._v("Hora máxima (HH:MM)")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dt",
+                    {
+                      staticClass:
+                        "text-base leading-5 font-medium text-gray-500"
+                    },
+                    [_vm._v(_vm._s(_vm.timemax))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-3" }, [
+                  _c(
+                    "dt",
+                    {
+                      staticClass: "text-sm leading-5 font-medium text-gray-900"
+                    },
+                    [_vm._v("Mensaje")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "dd",
+                    { staticClass: "mt-1 text-base leading-5 text-gray-500" },
+                    [_vm._v(_vm._s(_vm.message))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sm:col-span-1" }, [
+                  _c(
+                    "dd",
+                    {
+                      staticClass:
+                        "mt-1 text-sm leading-5 text-primary-500 hover:text-primary-700 hover:underline cursor-pointer",
+                      on: {
+                        click: function($event) {
+                          _vm.quotationOpen = true
+                        }
+                      }
+                    },
+                    [_vm._v("Ver detalle de cotización")]
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.quotationOpen,
+                    expression: "quotationOpen"
+                  }
+                ],
+                staticClass:
+                  "fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "fixed inset-0 transition-opacity",
+                    on: {
+                      click: function($event) {
+                        _vm.quotationOpen = false
+                      }
+                    }
+                  },
+                  [
+                    _c("div", {
+                      staticClass: "absolute inset-0 bg-gray-500 opacity-75"
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6",
+                    attrs: {
+                      role: "dialog",
+                      "aria-modal": "true",
+                      "aria-labelledby": "modal-headline"
+                    }
+                  },
+                  [
                     _c(
                       "div",
                       {
                         staticClass:
-                          "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+                          "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
                       },
                       [
                         _c(
-                          "div",
+                          "button",
                           {
                             staticClass:
-                              "align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
+                              "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
+                            attrs: { type: "button", "aria-label": "Close" },
+                            on: {
+                              click: function($event) {
+                                _vm.quotationOpen = false
+                              }
+                            }
                           },
                           [
                             _c(
-                              "table",
+                              "svg",
                               {
-                                staticClass:
-                                  "min-w-full divide-y divide-gray-200"
+                                staticClass: "h-6 w-6",
+                                attrs: {
+                                  fill: "none",
+                                  viewBox: "0 0 24 24",
+                                  stroke: "currentColor"
+                                }
                               },
                               [
-                                _c("thead", [
-                                  _c("tr", [
-                                    _c(
-                                      "th",
-                                      {
-                                        staticClass:
-                                          "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
-                                      },
-                                      [_vm._v("Material")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "th",
-                                      {
-                                        staticClass:
-                                          "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
-                                      },
-                                      [_vm._v("Cantidad")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "th",
-                                      {
-                                        staticClass:
-                                          "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
-                                      },
-                                      [_vm._v("Total")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "tbody",
-                                  {
-                                    staticClass:
-                                      "bg-white divide-y divide-gray-200"
-                                  },
-                                  _vm._l(_vm.coti_personal, function(
-                                    cotizacion
-                                  ) {
-                                    return _c("tr", { key: cotizacion.index }, [
-                                      _c(
-                                        "td",
-                                        {
-                                          staticClass:
-                                            "px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900"
-                                        },
-                                        [_vm._v(_vm._s(cotizacion.name))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        {
-                                          staticClass:
-                                            "px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
-                                        },
-                                        [
-                                          _vm._v(
-                                            _vm._s(cotizacion.cant) +
-                                              "\n                      "
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        {
-                                          staticClass:
-                                            "px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "S/ " +
-                                              _vm._s(
-                                                cotizacion.price.toFixed(2)
-                                              )
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  }),
-                                  0
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "px-4 py-3 text-xs leading-5" },
-                              [
-                                _c(
-                                  "span",
-                                  { staticClass: "font-medium text-green-500" },
-                                  [
-                                    _vm._v(
-                                      "Se agrega S/ " +
-                                        _vm._s(_vm.workforce.toFixed(2)) +
-                                        " al total de su lista por la mano de obra."
-                                    )
-                                  ]
-                                )
+                                _c("path", {
+                                  attrs: {
+                                    "stroke-linecap": "round",
+                                    "stroke-linejoin": "round",
+                                    "stroke-width": "2",
+                                    d: "M6 18L18 6M6 6l12 12"
+                                  }
+                                })
                               ]
                             )
                           ]
                         )
                       ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "mt-5 sm:mt-4 sm:flex sm:flex-row-reverse" },
-                    [
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sm:flex sm:items-start" }, [
                       _c(
-                        "span",
+                        "h3",
                         {
                           staticClass:
-                            "text-base leading-5 font-medium text-gray-900 ml-2"
+                            "text-lg leading-6 font-medium text-gray-900",
+                          attrs: { id: "modal-headline" }
                         },
-                        [_vm._v("S/ " + _vm._s(_vm.sumtotal.toFixed(2)))]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "text-base leading-5 text-gray-800" },
-                        [_vm._v("TOTAL:")]
+                        [_vm._v("Detalle de cotización")]
                       )
-                    ]
-                  )
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.confirmOpen,
-                  expression: "confirmOpen"
-                }
-              ],
-              staticClass:
-                "fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "fixed inset-0 transition-opacity",
-                  on: {
-                    click: function($event) {
-                      _vm.confirmOpen = false
-                    }
-                  }
-                },
-                [
-                  _c("div", {
-                    staticClass: "absolute inset-0 bg-gray-500 opacity-75"
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "relative bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6",
-                  attrs: {
-                    role: "dialog",
-                    "aria-modal": "true",
-                    "aria-labelledby": "modal-headline"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
-                    },
-                    [
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-4" }, [
                       _c(
-                        "button",
+                        "div",
                         {
                           staticClass:
-                            "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
-                          attrs: { type: "button", "aria-label": "Close" },
-                          on: {
-                            click: function($event) {
-                              _vm.confirmOpen = false
-                            }
-                          }
+                            "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
                         },
                         [
                           _c(
-                            "svg",
+                            "div",
                             {
-                              staticClass: "h-6 w-6",
-                              attrs: {
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor"
-                              }
+                              staticClass:
+                                "align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
                             },
                             [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
+                              _c(
+                                "table",
+                                {
+                                  staticClass:
+                                    "min-w-full divide-y divide-gray-200"
+                                },
+                                [
+                                  _c("thead", [
+                                    _c("tr", [
+                                      _c(
+                                        "th",
+                                        {
+                                          staticClass:
+                                            "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
+                                        },
+                                        [_vm._v("Material")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "th",
+                                        {
+                                          staticClass:
+                                            "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
+                                        },
+                                        [_vm._v("Cantidad")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "th",
+                                        {
+                                          staticClass:
+                                            "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
+                                        },
+                                        [_vm._v("Total")]
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "tbody",
+                                    {
+                                      staticClass:
+                                        "bg-white divide-y divide-gray-200"
+                                    },
+                                    _vm._l(_vm.coti_personal, function(
+                                      cotizacion
+                                    ) {
+                                      return _c(
+                                        "tr",
+                                        { key: cotizacion.index },
+                                        [
+                                          _c(
+                                            "td",
+                                            {
+                                              staticClass:
+                                                "px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900"
+                                            },
+                                            [_vm._v(_vm._s(cotizacion.name))]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "td",
+                                            {
+                                              staticClass:
+                                                "px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(cotizacion.cant) +
+                                                  "\n                      "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "td",
+                                            {
+                                              staticClass:
+                                                "px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "S/ " +
+                                                  _vm._s(
+                                                    cotizacion.price.toFixed(2)
+                                                  )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    }),
+                                    0
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "px-4 py-3 text-xs leading-5" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: "font-medium text-green-500"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Se agrega S/ " +
+                                          _vm._s(_vm.workforce.toFixed(2)) +
+                                          " al total de su lista por la mano de obra"
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
                             ]
                           )
                         ]
                       )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-4" }, [
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "mt-5 sm:mt-4 sm:flex sm:flex-row-reverse"
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "text-base leading-5 font-medium text-gray-900 ml-2"
+                          },
+                          [_vm._v("S/ " + _vm._s(_vm.sumtotal.toFixed(2)))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          { staticClass: "text-base leading-5 text-gray-800" },
+                          [_vm._v("TOTAL:")]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.confirmOpen,
+                    expression: "confirmOpen"
+                  }
+                ],
+                staticClass:
+                  "fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "fixed inset-0 transition-opacity",
+                    on: {
+                      click: function($event) {
+                        _vm.confirmOpen = false
+                      }
+                    }
+                  },
+                  [
                     _c("div", {
-                      staticClass:
-                        "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+                      staticClass: "absolute inset-0 bg-gray-500 opacity-75"
                     })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.showSelectWorker,
-                          expression: "showSelectWorker"
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6",
+                    attrs: {
+                      role: "dialog",
+                      "aria-modal": "true",
+                      "aria-labelledby": "modal-headline"
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
+                            attrs: { type: "button", "aria-label": "Close" },
+                            on: {
+                              click: function($event) {
+                                _vm.confirmOpen = false
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "h-6 w-6",
+                                attrs: {
+                                  fill: "none",
+                                  viewBox: "0 0 24 24",
+                                  stroke: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "stroke-linecap": "round",
+                                    "stroke-linejoin": "round",
+                                    "stroke-width": "2",
+                                    d: "M6 18L18 6M6 6l12 12"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-4" }, [
+                      _c("div", {
+                        staticClass:
+                          "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "flex items-center" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.Select1,
+                            expression: "Select1"
+                          }
+                        ],
+                        staticClass:
+                          "form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out",
+                        attrs: { id: "remember_me", type: "checkbox" },
+                        domProps: {
+                          checked: Array.isArray(_vm.Select1)
+                            ? _vm._i(_vm.Select1, null) > -1
+                            : _vm.Select1
+                        },
+                        on: {
+                          click: function($event) {
+                            _vm.Select1 = true
+                          },
+                          change: function($event) {
+                            var $$a = _vm.Select1,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 && (_vm.Select1 = $$a.concat([$$v]))
+                              } else {
+                                $$i > -1 &&
+                                  (_vm.Select1 = $$a
+                                    .slice(0, $$i)
+                                    .concat($$a.slice($$i + 1)))
+                              }
+                            } else {
+                              _vm.Select1 = $$c
+                            }
+                          }
                         }
-                      ],
-                      staticClass: "my-4"
-                    },
-                    [
+                      }),
+                      _vm._v(" "),
                       _c(
                         "label",
                         {
                           staticClass:
-                            "block text-sm leading-5 font-medium text-gray-700",
-                          attrs: { for: "selectWorker" }
-                        },
-                        [_vm._v("Seleccionar Trabajador")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.employee,
-                              expression: "employee"
-                            }
-                          ],
-                          staticClass:
-                            "mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5",
-                          attrs: { id: "selectWorker" },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.employee = $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            }
-                          }
+                            "ml-2 block text-sm leading-5 text-gray-900",
+                          attrs: { for: "remember_me" }
                         },
                         [
-                          _c(
-                            "option",
-                            {
-                              attrs: { selected: "", disabled: "", value: "" }
-                            },
-                            [_vm._v("Trabajador")]
-                          ),
-                          _vm._v(" "),
-                          _vm._l(_vm.subemployee, function(employee) {
-                            return _c("option", { key: employee.id }, [
-                              _vm._v(
-                                _vm._s(employee.name) +
-                                  " " +
-                                  _vm._s(employee.lastnamep) +
-                                  " " +
-                                  _vm._s(employee.lastnamem)
-                              )
-                            ])
-                          })
-                        ],
-                        2
-                      ),
-                      _vm._v(" "),
-                      _vm.vacio
-                        ? _c("small", { staticClass: "text-yellow-600" }, [
-                            _vm._v(_vm._s(_vm.vacio))
-                          ])
-                        : _vm._e()
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex items-center" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.Select1,
-                          expression: "Select1"
-                        }
-                      ],
-                      staticClass:
-                        "form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out",
-                      attrs: { id: "remember_me", type: "checkbox" },
-                      domProps: {
-                        checked: Array.isArray(_vm.Select1)
-                          ? _vm._i(_vm.Select1, null) > -1
-                          : _vm.Select1
-                      },
-                      on: {
-                        click: function($event) {
-                          _vm.Select1 = true
-                        },
-                        change: function($event) {
-                          var $$a = _vm.Select1,
-                            $$el = $event.target,
-                            $$c = $$el.checked ? true : false
-                          if (Array.isArray($$a)) {
-                            var $$v = null,
-                              $$i = _vm._i($$a, $$v)
-                            if ($$el.checked) {
-                              $$i < 0 && (_vm.Select1 = $$a.concat([$$v]))
-                            } else {
-                              $$i > -1 &&
-                                (_vm.Select1 = $$a
-                                  .slice(0, $$i)
-                                  .concat($$a.slice($$i + 1)))
-                            }
-                          } else {
-                            _vm.Select1 = $$c
-                          }
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      {
-                        staticClass:
-                          "ml-2 block text-sm leading-5 text-gray-900",
-                        attrs: { for: "remember_me" }
-                      },
-                      [
-                        _vm._v(
-                          "Acepto los términos y condiciones de uso del servicio SirwiQuy."
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex items-center mt-2" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.Select2,
-                          expression: "Select2"
-                        }
-                      ],
-                      staticClass:
-                        "form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out",
-                      attrs: { id: "remember_me2", type: "checkbox" },
-                      domProps: {
-                        checked: Array.isArray(_vm.Select2)
-                          ? _vm._i(_vm.Select2, null) > -1
-                          : _vm.Select2
-                      },
-                      on: {
-                        click: function($event) {
-                          _vm.Select2 = true
-                        },
-                        change: function($event) {
-                          var $$a = _vm.Select2,
-                            $$el = $event.target,
-                            $$c = $$el.checked ? true : false
-                          if (Array.isArray($$a)) {
-                            var $$v = null,
-                              $$i = _vm._i($$a, $$v)
-                            if ($$el.checked) {
-                              $$i < 0 && (_vm.Select2 = $$a.concat([$$v]))
-                            } else {
-                              $$i > -1 &&
-                                (_vm.Select2 = $$a
-                                  .slice(0, $$i)
-                                  .concat($$a.slice($$i + 1)))
-                            }
-                          } else {
-                            _vm.Select2 = $$c
-                          }
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      {
-                        staticClass:
-                          "ml-2 block text-sm leading-5 text-gray-900",
-                        attrs: { for: "remember_me2" }
-                      },
-                      [_vm._v("Acepto las politicas del servicio SirwiQuy.")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "mt-5 sm:mt-4 sm:flex sm:flex-row-reverse" },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
-                        },
-                        [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-primary-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5",
-                              attrs: {
-                                type: "button",
-                                disabled:
-                                  _vm.Select1 == true && _vm.Select2 == true
-                                    ? false
-                                    : true
-                              },
-                              on: {
-                                click: function($event) {
-                                  return _vm.SubmitAcept()
-                                }
-                              }
-                            },
-                            [_vm._v("Aceptar contrato")]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
-                        },
-                        [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.SubmitDeny()
-                                }
-                              }
-                            },
-                            [_vm._v("No aceptar contrato")]
+                          _vm._v(
+                            "Acepto los términos y condiciones de uso del servicio SirwiyQuy."
                           )
                         ]
                       )
-                    ]
-                  )
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "text-center mt-4" }, [
-            _c(
-              "span",
-              { staticClass: "inline-flex rounded-md shadow-sm" },
-              [
-                _c("MyButton", {
-                  attrs: {
-                    content: "Dar respuesta",
-                    color: "primary",
-                    isLoading: _vm.buttonLoading
-                  },
-                  on: {
-                    onClick: function($event) {
-                      return _vm.validate()
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "flex items-center mt-2" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.Select2,
+                            expression: "Select2"
+                          }
+                        ],
+                        staticClass:
+                          "form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out",
+                        attrs: { id: "remember_me2", type: "checkbox" },
+                        domProps: {
+                          checked: Array.isArray(_vm.Select2)
+                            ? _vm._i(_vm.Select2, null) > -1
+                            : _vm.Select2
+                        },
+                        on: {
+                          click: function($event) {
+                            _vm.Select2 = true
+                          },
+                          change: function($event) {
+                            var $$a = _vm.Select2,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 && (_vm.Select2 = $$a.concat([$$v]))
+                              } else {
+                                $$i > -1 &&
+                                  (_vm.Select2 = $$a
+                                    .slice(0, $$i)
+                                    .concat($$a.slice($$i + 1)))
+                              }
+                            } else {
+                              _vm.Select2 = $$c
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "ml-2 block text-sm leading-5 text-gray-900",
+                          attrs: { for: "remember_me2" }
+                        },
+                        [_vm._v("Acepto las politicas del servicio SirwiyQuy.")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "mt-5 sm:mt-4 sm:flex sm:flex-row-reverse"
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-primary-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                attrs: {
+                                  type: "button",
+                                  disabled:
+                                    _vm.Select1 == true && _vm.Select2 == true
+                                      ? false
+                                      : true
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.SubmitAcept()
+                                  }
+                                }
+                              },
+                              [_vm._v("Aceptar contrato")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                attrs: { type: "button" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.SubmitDeny()
+                                  }
+                                }
+                              },
+                              [_vm._v("No aceptar contrato")]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "text-center mt-4" }, [
+              _c(
+                "span",
+                { staticClass: "inline-flex rounded-md shadow-sm" },
+                [
+                  _c("MyButton", {
+                    attrs: {
+                      content: "Dar respuesta",
+                      color: "primary",
+                      isLoading: _vm.buttonLoading
+                    },
+                    on: {
+                      onClick: function($event) {
+                        return _vm.validate()
+                      }
                     }
-                  }
-                })
-              ],
-              1
-            )
+                  })
+                ],
+                1
+              )
+            ])
           ])
-        ])
-      ]
-    )
-  ])
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -54485,976 +52999,6 @@ var render = function() {
     ],
     1
   )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Supplier/NotificationDetails.vue?vue&type=template&id=3e660006&":
-/*!**************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Supplier/NotificationDetails.vue?vue&type=template&id=3e660006& ***!
-  \**************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("SideBar", { attrs: { title: "Detalles de la notificación" } }, [
-    _c(
-      "div",
-      { staticClass: "bg-white shadow overflow-hidden sm:rounded-lg" },
-      [
-        _c(
-          "div",
-          { staticClass: "px-4 py-5 border-b border-gray-200 sm:px-6" },
-          [
-            _c(
-              "h3",
-              { staticClass: "text-lg leading-6 font-medium text-gray-900" },
-              [
-                _c("strong", [_vm._v("Servicio:")]),
-                _vm._v("\n        " + _vm._s(_vm.title) + "\n      ")
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "dl",
-              {
-                staticClass:
-                  "grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2"
-              },
-              [
-                _c("div", { staticClass: "sm:col-span-1" }, [
-                  _c(
-                    "dd",
-                    { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                    [_vm._v("Categoría: " + _vm._s(_vm.category))]
-                  )
-                ])
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "px-4 py-5 sm:px-6" }, [
-          _c(
-            "h3",
-            { staticClass: "text-lg mb-4 leading-6 font-medium text-gray-900" },
-            [_c("strong", [_vm._v("Datos del cliente")])]
-          ),
-          _vm._v(" "),
-          _c(
-            "dl",
-            {
-              staticClass: "grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2"
-            },
-            [
-              _c("div", { staticClass: "sm:col-span-2" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Mensaje enviado por el solicitante")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.username))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("DNI")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.DNI))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Edad")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.age))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Nombre(s)")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.name))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "hidden sm:block sm sm:col-span-1" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Apellido paterno")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.lastnamep))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Apellido materno")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.lastnamem))]
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-px w-full bg-gray-200 mt-4 sm:mt-8" }),
-          _vm._v(" "),
-          _c(
-            "h3",
-            { staticClass: "text-lg my-4 leading-6 font-medium text-gray-900" },
-            [_c("strong", [_vm._v("Datos del servicio")])]
-          ),
-          _vm._v(" "),
-          _c(
-            "dl",
-            {
-              staticClass: "grid grid-cols-1 col-gap-4 row-gap-8 sm:grid-cols-2"
-            },
-            [
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Distrito")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.distrito))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Dirección exacta")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.adress))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-3" }, [
-                _c("div", [
-                  _c(
-                    "dd",
-                    { staticClass: "mt-1 text-sm leading-5 text-blue-500" },
-                    [
-                      _vm._v(
-                        "La siguiente ubicación es una referencia del rango de su dirección"
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticStyle: { height: "20rem" }, attrs: { id: "map" } },
-                  [
-                    _c("Maps", {
-                      attrs: { route: _vm.type, lati: _vm.lat, longi: _vm.lng }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Fecha")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.date))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Hora mínima (HH:MM)")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.timemin))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-sm leading-5 text-gray-900" },
-                  [_vm._v("Hora máxima (HH:MM)")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-base leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v(_vm._s(_vm.timemax))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-3" }, [
-                _c(
-                  "dt",
-                  {
-                    staticClass: "text-sm leading-5 font-medium text-gray-500"
-                  },
-                  [_vm._v("Mensaje")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "dd",
-                  { staticClass: "mt-1 text-base leading-5 text-gray-900" },
-                  [_vm._v(_vm._s(_vm.message))]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sm:col-span-1" }, [
-                _c(
-                  "dd",
-                  {
-                    staticClass:
-                      "mt-1 text-sm leading-5 text-primary-500 hover:text-primary-700 hover:underline cursor-pointer",
-                    on: {
-                      click: function($event) {
-                        _vm.quotationOpen = true
-                      }
-                    }
-                  },
-                  [_vm._v("Ver detalle de cotización")]
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.quotationOpen,
-                  expression: "quotationOpen"
-                }
-              ],
-              staticClass:
-                "fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "fixed inset-0 transition-opacity",
-                  on: {
-                    click: function($event) {
-                      _vm.quotationOpen = false
-                    }
-                  }
-                },
-                [
-                  _c("div", {
-                    staticClass: "absolute inset-0 bg-gray-500 opacity-75"
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "relative bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6",
-                  attrs: {
-                    role: "dialog",
-                    "aria-modal": "true",
-                    "aria-labelledby": "modal-headline"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
-                    },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass:
-                            "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
-                          attrs: { type: "button", "aria-label": "Close" },
-                          on: {
-                            click: function($event) {
-                              _vm.quotationOpen = false
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "h-6 w-6",
-                              attrs: {
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sm:flex sm:items-start" }, [
-                    _c(
-                      "h3",
-                      {
-                        staticClass:
-                          "text-lg leading-6 font-medium text-gray-900",
-                        attrs: { id: "modal-headline" }
-                      },
-                      [_vm._v("Detalle de cotización")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-4" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
-                          },
-                          [
-                            _c(
-                              "table",
-                              {
-                                staticClass:
-                                  "min-w-full divide-y divide-gray-200"
-                              },
-                              [
-                                _c("thead", [
-                                  _c("tr", [
-                                    _c(
-                                      "th",
-                                      {
-                                        staticClass:
-                                          "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
-                                      },
-                                      [_vm._v("Material")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "th",
-                                      {
-                                        staticClass:
-                                          "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
-                                      },
-                                      [_vm._v("Cantidad")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "th",
-                                      {
-                                        staticClass:
-                                          "px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"
-                                      },
-                                      [_vm._v("Total")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "tbody",
-                                  {
-                                    staticClass:
-                                      "bg-white divide-y divide-gray-200"
-                                  },
-                                  _vm._l(_vm.coti_personal, function(
-                                    cotizacion
-                                  ) {
-                                    return _c("tr", { key: cotizacion.index }, [
-                                      _c(
-                                        "td",
-                                        {
-                                          staticClass:
-                                            "px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900"
-                                        },
-                                        [_vm._v(_vm._s(cotizacion.name))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        {
-                                          staticClass:
-                                            "px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
-                                        },
-                                        [
-                                          _vm._v(
-                                            _vm._s(cotizacion.cant) +
-                                              "\n                      "
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        {
-                                          staticClass:
-                                            "px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "S/ " +
-                                              _vm._s(
-                                                cotizacion.price.toFixed(2)
-                                              )
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  }),
-                                  0
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "px-4 py-3 text-xs leading-5" },
-                              [
-                                _c(
-                                  "span",
-                                  { staticClass: "font-medium text-green-500" },
-                                  [
-                                    _vm._v(
-                                      "Se agrega S/ " +
-                                        _vm._s(_vm.workforce.toFixed(2)) +
-                                        " al total de su lista por la mano de obra"
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "mt-5 sm:mt-4 sm:flex sm:flex-row-reverse" },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "text-base leading-5 font-medium text-gray-900 ml-2"
-                        },
-                        [_vm._v("S/ " + _vm._s(_vm.sumtotal.toFixed(2)))]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "text-base leading-5 text-gray-800" },
-                        [_vm._v("TOTAL:")]
-                      )
-                    ]
-                  )
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.confirmOpen,
-                  expression: "confirmOpen"
-                }
-              ],
-              staticClass:
-                "fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "fixed inset-0 transition-opacity",
-                  on: {
-                    click: function($event) {
-                      _vm.confirmOpen = false
-                    }
-                  }
-                },
-                [
-                  _c("div", {
-                    staticClass: "absolute inset-0 bg-gray-500 opacity-75"
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "relative bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6",
-                  attrs: {
-                    role: "dialog",
-                    "aria-modal": "true",
-                    "aria-labelledby": "modal-headline"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
-                    },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass:
-                            "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
-                          attrs: { type: "button", "aria-label": "Close" },
-                          on: {
-                            click: function($event) {
-                              _vm.confirmOpen = false
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "h-6 w-6",
-                              attrs: {
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-4" }, [
-                    _c("div", {
-                      staticClass:
-                        "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.showSelectWorker,
-                          expression: "showSelectWorker"
-                        }
-                      ],
-                      staticClass: "my-4"
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "block text-sm leading-5 font-medium text-gray-700",
-                          attrs: { for: "selectWorker" }
-                        },
-                        [_vm._v("Seleccionar Trabajador")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.employee,
-                              expression: "employee"
-                            }
-                          ],
-                          staticClass:
-                            "mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5",
-                          attrs: { id: "selectWorker" },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.employee = $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "option",
-                            {
-                              attrs: { selected: "", disabled: "", value: "" }
-                            },
-                            [_vm._v("Trabajador")]
-                          ),
-                          _vm._v(" "),
-                          _vm._l(_vm.subemployee, function(employee) {
-                            return _c("option", { key: employee.id }, [
-                              _vm._v(
-                                _vm._s(employee.name) +
-                                  " " +
-                                  _vm._s(employee.lastnamep) +
-                                  " " +
-                                  _vm._s(employee.lastnamem)
-                              )
-                            ])
-                          })
-                        ],
-                        2
-                      ),
-                      _vm._v(" "),
-                      _vm.vacio
-                        ? _c("small", { staticClass: "text-yellow-600" }, [
-                            _vm._v(_vm._s(_vm.vacio))
-                          ])
-                        : _vm._e()
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex items-center" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.Select1,
-                          expression: "Select1"
-                        }
-                      ],
-                      staticClass:
-                        "form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out",
-                      attrs: { id: "remember_me", type: "checkbox" },
-                      domProps: {
-                        checked: Array.isArray(_vm.Select1)
-                          ? _vm._i(_vm.Select1, null) > -1
-                          : _vm.Select1
-                      },
-                      on: {
-                        click: function($event) {
-                          _vm.Select1 = true
-                        },
-                        change: function($event) {
-                          var $$a = _vm.Select1,
-                            $$el = $event.target,
-                            $$c = $$el.checked ? true : false
-                          if (Array.isArray($$a)) {
-                            var $$v = null,
-                              $$i = _vm._i($$a, $$v)
-                            if ($$el.checked) {
-                              $$i < 0 && (_vm.Select1 = $$a.concat([$$v]))
-                            } else {
-                              $$i > -1 &&
-                                (_vm.Select1 = $$a
-                                  .slice(0, $$i)
-                                  .concat($$a.slice($$i + 1)))
-                            }
-                          } else {
-                            _vm.Select1 = $$c
-                          }
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      {
-                        staticClass:
-                          "ml-2 block text-sm leading-5 text-gray-900",
-                        attrs: { for: "remember_me" }
-                      },
-                      [
-                        _vm._v(
-                          "Acepto los términos y condiciones de uso del servicio KusaWasi."
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex items-center mt-2" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.Select2,
-                          expression: "Select2"
-                        }
-                      ],
-                      staticClass:
-                        "form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out",
-                      attrs: { id: "remember_me2", type: "checkbox" },
-                      domProps: {
-                        checked: Array.isArray(_vm.Select2)
-                          ? _vm._i(_vm.Select2, null) > -1
-                          : _vm.Select2
-                      },
-                      on: {
-                        click: function($event) {
-                          _vm.Select2 = true
-                        },
-                        change: function($event) {
-                          var $$a = _vm.Select2,
-                            $$el = $event.target,
-                            $$c = $$el.checked ? true : false
-                          if (Array.isArray($$a)) {
-                            var $$v = null,
-                              $$i = _vm._i($$a, $$v)
-                            if ($$el.checked) {
-                              $$i < 0 && (_vm.Select2 = $$a.concat([$$v]))
-                            } else {
-                              $$i > -1 &&
-                                (_vm.Select2 = $$a
-                                  .slice(0, $$i)
-                                  .concat($$a.slice($$i + 1)))
-                            }
-                          } else {
-                            _vm.Select2 = $$c
-                          }
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      {
-                        staticClass:
-                          "ml-2 block text-sm leading-5 text-gray-900",
-                        attrs: { for: "remember_me2" }
-                      },
-                      [_vm._v("Acepto las politicas del servicio Kusawasi.")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "mt-5 sm:mt-4 sm:flex sm:flex-row-reverse" },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
-                        },
-                        [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-primary-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5",
-                              attrs: {
-                                type: "button",
-                                disabled:
-                                  _vm.Select1 == true && _vm.Select2 == true
-                                    ? false
-                                    : true
-                              },
-                              on: {
-                                click: function($event) {
-                                  return _vm.SubmitAcept()
-                                }
-                              }
-                            },
-                            [_vm._v("Aceptar contrato")]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
-                        },
-                        [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.SubmitDeny()
-                                }
-                              }
-                            },
-                            [_vm._v("No aceptar contrato")]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "text-center mt-4" }, [
-            _c(
-              "span",
-              { staticClass: "inline-flex rounded-md shadow-sm" },
-              [
-                _c("MyButton", {
-                  attrs: {
-                    content: "Dar respuesta",
-                    color: "primary",
-                    isLoading: _vm.buttonLoading
-                  },
-                  on: {
-                    onClick: function($event) {
-                      return _vm.validate()
-                    }
-                  }
-                })
-              ],
-              1
-            )
-          ])
-        ])
-      ]
-    )
-  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -75753,11 +73297,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants.js */ "./resources/js/constants.js");
@@ -75772,11 +73312,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   get: function get(url) {
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
->>>>>>> Dayana
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -75832,11 +73368,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
     }))();
   },
   post: function post(url, body) {
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
->>>>>>> Dayana
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
@@ -77655,11 +75187,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< HEAD
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-=======
-/* harmony import */ var C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
->>>>>>> Dayana
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api */ "./resources/js/api.js");
 
 
@@ -77669,11 +75197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   //Funcion que obtiene provincias
   getProv: function getProv(department, departments) {
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
->>>>>>> Dayana
       var i, id_depa, response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -77720,11 +75244,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   //Funcion que obtiene distritos
   getDist: function getDist(province, provinces) {
-<<<<<<< HEAD
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-=======
-    return Object(C_Users_sophia_Desktop_DAYANA_SAN_MARCOS_VIII_CICLO_GESTION_DE_CONFIGURACION_Y_MANTENIMIENTO_PROYECTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
->>>>>>> Dayana
       var i, id_prov, response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
@@ -79033,7 +76553,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./resources/js/pages/Supplier/Notifications.vue":
 /*!*******************************************************!*\
   !*** ./resources/js/pages/Supplier/Notifications.vue ***!
@@ -79103,8 +76622,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-=======
->>>>>>> Dayana
 /***/ "./resources/js/pages/Supplier/ServiceList.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/pages/Supplier/ServiceList.vue ***!
@@ -79400,14 +76917,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Auth_Login_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/Auth/Login.vue */ "./resources/js/pages/Auth/Login.vue");
 /* harmony import */ var _pages_Auth_SignUpEnterprise_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/Auth/SignUpEnterprise.vue */ "./resources/js/pages/Auth/SignUpEnterprise.vue");
 /* harmony import */ var _pages_Supplier_Home_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Supplier/Home.vue */ "./resources/js/pages/Supplier/Home.vue");
-<<<<<<< HEAD
-/* harmony import */ var _pages_Supplier_CreateService_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Supplier/CreateService.vue */ "./resources/js/pages/Supplier/CreateService.vue");
-/* harmony import */ var _pages_Supplier_CreatePrice_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/Supplier/CreatePrice.vue */ "./resources/js/pages/Supplier/CreatePrice.vue");
-/* harmony import */ var _pages_Supplier_ServiceList_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/Supplier/ServiceList.vue */ "./resources/js/pages/Supplier/ServiceList.vue");
-/* harmony import */ var _pages_Supplier_UpdateService_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/Supplier/UpdateService.vue */ "./resources/js/pages/Supplier/UpdateService.vue");
-/* harmony import */ var _pages_Supplier_UpdatePrice_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/Supplier/UpdatePrice.vue */ "./resources/js/pages/Supplier/UpdatePrice.vue");
-/* harmony import */ var _pages_Supplier_Blank_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/Supplier/Blank.vue */ "./resources/js/pages/Supplier/Blank.vue");
-/* harmony import */ var _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/Supplier/NotificationDetails.vue */ "./resources/js/pages/Supplier/NotificationDetails.vue");
+/* harmony import */ var _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Supplier/NotificationDetails.vue */ "./resources/js/pages/Supplier/NotificationDetails.vue");
+/* harmony import */ var _pages_Supplier_CreateService_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/Supplier/CreateService.vue */ "./resources/js/pages/Supplier/CreateService.vue");
+/* harmony import */ var _pages_Supplier_CreatePrice_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/Supplier/CreatePrice.vue */ "./resources/js/pages/Supplier/CreatePrice.vue");
+/* harmony import */ var _pages_Supplier_ServiceList_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/Supplier/ServiceList.vue */ "./resources/js/pages/Supplier/ServiceList.vue");
+/* harmony import */ var _pages_Supplier_UpdateService_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/Supplier/UpdateService.vue */ "./resources/js/pages/Supplier/UpdateService.vue");
+/* harmony import */ var _pages_Supplier_UpdatePrice_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/Supplier/UpdatePrice.vue */ "./resources/js/pages/Supplier/UpdatePrice.vue");
+/* harmony import */ var _pages_Supplier_Blank_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/Supplier/Blank.vue */ "./resources/js/pages/Supplier/Blank.vue");
 /* harmony import */ var _pages_Supplier_Notifications_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/Supplier/Notifications.vue */ "./resources/js/pages/Supplier/Notifications.vue");
 /* harmony import */ var _pages_Customer_Blank_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/Customer/Blank.vue */ "./resources/js/pages/Customer/Blank.vue");
 /* harmony import */ var _pages_Customer_ServiceCost_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/Customer/ServiceCost.vue */ "./resources/js/pages/Customer/ServiceCost.vue");
@@ -79418,21 +76934,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/Worker/EditProfile.vue */ "./resources/js/pages/Worker/EditProfile.vue");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_24__);
-=======
-/* harmony import */ var _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Supplier/NotificationDetails.vue */ "./resources/js/pages/Supplier/NotificationDetails.vue");
-/* harmony import */ var _pages_Supplier_CreateService_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/Supplier/CreateService.vue */ "./resources/js/pages/Supplier/CreateService.vue");
-/* harmony import */ var _pages_Supplier_CreatePrice_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/Supplier/CreatePrice.vue */ "./resources/js/pages/Supplier/CreatePrice.vue");
-/* harmony import */ var _pages_Supplier_ServiceList_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/Supplier/ServiceList.vue */ "./resources/js/pages/Supplier/ServiceList.vue");
-/* harmony import */ var _pages_Supplier_UpdateService_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/Supplier/UpdateService.vue */ "./resources/js/pages/Supplier/UpdateService.vue");
-/* harmony import */ var _pages_Supplier_UpdatePrice_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/Supplier/UpdatePrice.vue */ "./resources/js/pages/Supplier/UpdatePrice.vue");
-/* harmony import */ var _pages_Supplier_Blank_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/Supplier/Blank.vue */ "./resources/js/pages/Supplier/Blank.vue");
-/* harmony import */ var _pages_Customer_Blank_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/Customer/Blank.vue */ "./resources/js/pages/Customer/Blank.vue");
-/* harmony import */ var _pages_Customer_ServiceCost_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/Customer/ServiceCost.vue */ "./resources/js/pages/Customer/ServiceCost.vue");
-/* harmony import */ var _pages_Customer_ServiceDetails_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/Customer/ServiceDetails.vue */ "./resources/js/pages/Customer/ServiceDetails.vue");
-/* harmony import */ var _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/Worker/EditProfile.vue */ "./resources/js/pages/Worker/EditProfile.vue");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_20__);
->>>>>>> Dayana
 
  //Importaciones generales
 
@@ -79451,10 +76952,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> Dayana
  //Importaciones de la carpeta cliente
 
 
@@ -79532,28 +77030,16 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     beforeEnter: isUnique
   }, {
     path: "/customer/blank",
-<<<<<<< HEAD
     component: _pages_Customer_Blank_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
     beforeEnter: isUnique
   }, {
     path: "/service/:service_id/cost",
     component: _pages_Customer_ServiceCost_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
-=======
-    component: _pages_Customer_Blank_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
-    beforeEnter: isUnique
-  }, {
-    path: "/service/:service_id/cost",
-    component: _pages_Customer_ServiceCost_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
->>>>>>> Dayana
     beforeEnter: isUnique,
     props: true
   }, {
     path: "/service/:service_id",
-<<<<<<< HEAD
     component: _pages_Customer_ServiceDetails_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
-=======
-    component: _pages_Customer_ServiceDetails_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
->>>>>>> Dayana
     beforeEnter: isUnique,
     props: true
   }, //Ruta para clientes y trabajador no logueados
@@ -79616,11 +77102,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     props: true,
     beforeEnter: isSupplier
   }, {
-    path: "/supplier/notifications/details/:notification_id",
-    component: _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
-    //beforeEnter: isSupplier,
-    props: true
-  }, {
     path: "/supplier/blank",
     component: _pages_Supplier_Blank_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
     beforeEnter: isSupplier
@@ -79630,17 +77111,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     beforeEnter: isSupplier
   }, {
     path: "/supplier/notifications/details/:notification_id",
-    component: _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
+    component: _pages_Supplier_NotificationDetails_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
     beforeEnter: isSupplier,
     props: true
   }, //Ruta solo para trabajador
   {
     path: "/worker/profile/edit",
-<<<<<<< HEAD
     component: _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_23__["default"],
-=======
-    component: _pages_Worker_EditProfile_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
->>>>>>> Dayana
     beforeEnter: isWorker
   }, //Ruta no registrada
   {
@@ -79669,13 +77146,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! C:\Users\sophia\Desktop\DAYANA\SAN MARCOS\VIII CICLO\GESTION DE CONFIGURACION Y MANTENIMIENTO\PROYECTO\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\sophia\Desktop\DAYANA\SAN MARCOS\VIII CICLO\GESTION DE CONFIGURACION Y MANTENIMIENTO\PROYECTO\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> Dayana
 
 
 /***/ })

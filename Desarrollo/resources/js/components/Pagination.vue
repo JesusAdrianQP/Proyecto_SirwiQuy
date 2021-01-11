@@ -156,7 +156,7 @@ export default {
       this.$emit('setLoading')
 
       let response2 = await api.get(`/notifications/page=${page}/id=${id}&filter=${filter}`)
-      console.log(response2)
+      
       this.notifications = response2.data.data.paginate.data || []
       this.pagination = response2.data.data.paginate //Se extrae los datos paginados
 
