@@ -3,13 +3,13 @@
     <!--SECCIÓN DE LA TARJETA DE SERVICIO (DETALLES GENERALES)-->
     <div class="h-full">
       <div class="max-w-md sm:max-w-2xl lg:max-w-lg2 m-auto sm:mx-auto">
-        <div style="border-radius: 0.7rem;" class="bg-white shadow-xl overflow-hidden sm:flex sm:h-58 md:h-59 lg:h-57 border-gray-400 border-t border-b">
+        <div style="border-radius: 0.7rem;" class="bg-white shadow-xl overflow-hidden sm:flex sm:h-58 md:h-59 lg:h-56 border-gray-400 border-t border-b">
           <!--Image de la tarjeta-->
           <div class="bg-cover h-40 sm:h-auto sm:w-1/3" :style="{backgroundImage: 'url(\''+file+'\')'}">
           </div>
           <!--Detalles resumidos del servicio dado-->
           <div class="w-full sm:w-2/3">
-            <div class="p-4 sm:py-2 md:px-5 md:pt-3 md:pb-2">
+            <div class="p-4 sm:py-2 md:px-5 md:pt-3 md:pb-2 h-28">
               <p class="titulo font-bold text-xl mb-2 md:mb-1 md:text-2xl">{{title}}</p>
               <p class="whitespace-pre-line description text-gray-700 text-sm">{{description}}</p>
             </div>

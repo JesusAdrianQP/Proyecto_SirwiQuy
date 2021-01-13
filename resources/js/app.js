@@ -19,7 +19,7 @@ Vue.use(VueGeolocation);
 Vue.use(VueToast);
 Vue.use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyBY5EBnrcArkgAZqd1o0TeEqYDgZe0985I',
+        key: 'AIzaSyAU0hG5XwO-j6cV7EG9KULziR9LCSmwrKo',
         libraries: "places"
     }
 })

@@ -7,7 +7,7 @@
     />
     <SideBarOption
       title="Notificaciones"
-      url="/supplier/blank"
+      url="/supplier/notifications"
       :icon="{ icon: 'bell', solid: false }"
     />
     <SideBarOption
@@ -60,6 +60,7 @@ export default {
 
       localStorage.removeItem('token');
       localStorage.removeItem('e_level');
+      localStorage.removeItem('e_id');
       localStorage.removeItem('e_DNI');
         
       window.location.reload();

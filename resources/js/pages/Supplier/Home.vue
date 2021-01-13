@@ -2,9 +2,7 @@
   <!-- HOME: Vista de inicio del proveedor.
   Se muestra los datos del proveedor junto con un resumen
   estadístico de clientes, servicios, evaluaciones y ganancias. --> 
-  <SideBar   title="Inicio"
-      :user="username"
-      :image="image">
+  <SideBar   title="Inicio">
       <Loader class="min-h-screen"
             :load="loading"
       />
@@ -276,18 +274,16 @@ export default {
     }
   },
   async created(){
-    let response = await api.get(`/services/level=${this.acceso}/token=${this.token}`)
+    let response = await api.get(`/level=${this.acceso}/token=${this.token}`)
     let supplier = response.data.data;
     
-    this.username = supplier.username;
-    this.image = supplier.file;
-
-    this.dni = supplier.DNI;
+    this.dni = localStorage.getItem('e_DNI');
     this.name = supplier.name;
     this.lastnamep = supplier.lastnamep;
     this.lastnamem = supplier.lastnamem;
 
     if(this.acceso == 'employee'){
+      this.image = supplier.file;
       this.depa = supplier.departamento;
       this.prov = supplier.provincia;
       this.dist = supplier.distrito;

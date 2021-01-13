@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateRequest;
 use Illuminate\Http\Request;
 use App\DataBase\ServiceData;
 
@@ -14,10 +13,6 @@ class ServiceController extends Controller
 
     public function createservice(Request $request){
         return ServiceData::register($request); 
-    }
-    
-    public function serviceid(Request $request){
-        return ServiceData::listid($request);
     }
 
     public function serviceiddetails(Request $request){
@@ -38,4 +33,19 @@ class ServiceController extends Controller
     {   
         return ServiceData::update_price($request);
     }
+
+    
+
+    //Función que trae los detalles de mis solicitudes
+    public function notificationsdetails(Request $request)
+    {
+        return ServiceData::notdetails($request);
+    }
+
+    //Función que borra una solicitud específica cuando no se requiere (sea respondida o no respondida)
+    public function deleterequests(Request $request)
+    {
+        return ServiceData::delete_request($request);
+    }
+   
 }

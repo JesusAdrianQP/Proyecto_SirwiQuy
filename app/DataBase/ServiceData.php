@@ -27,14 +27,6 @@ class ServiceData
             'paginate' => $services
         ]);
     }
-
-    public static function listid($id){
-        $services_id = Service::where('token', '=', $id->ide)->get();
-
-        return response()->json([
-            'servicios' => $services_id
-        ]);
-    }
     
     public static function listiddetails($id){
         $services_id = Service::where('_id', '=', $id->service_id)->get();
@@ -71,7 +63,7 @@ class ServiceData
             $service->category = $new_service->category;
             $service->distrito = $new_service->district;
             $service->calificacion = 0;
-            $service->precio = (int) $new_service->price;
+            $service->precio = (float) $new_service->price;
             $service->file = $new_service->photo;
 
             $service->save();

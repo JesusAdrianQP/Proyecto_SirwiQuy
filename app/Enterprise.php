@@ -29,4 +29,9 @@ class Enterprise extends Eloquent implements Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function scopeEnteprise($query, $id){
+        if($id) return $query->where('_id', '=', $id)
+                             ->select('email');
+    }
 }
