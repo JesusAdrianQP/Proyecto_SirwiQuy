@@ -405,6 +405,7 @@ export default {
     {
       localStorage.setItem('e_DNI', this.dni_validate);
       this.$router.push('/supplier');
+      return;
     }
 
     let response2 = await api.get(`/dep`)

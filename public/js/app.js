@@ -5817,7 +5817,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
                 if (_this4.identifier == "trabajador" || _this4.identifier == "empresa") {
-                  //Sacamos nivel de acceso del usuario
+                  localStorage.removeItem('request');
+                  localStorage.removeItem('suma');
+                  localStorage.removeItem('exist_service'); //Sacamos nivel de acceso del usuario
+
                   if (_this4.identifier == "trabajador") {
                     localStorage.setItem('e_level', "employee");
 
@@ -10391,7 +10394,6 @@ __webpack_require__.r(__webpack_exports__);
       loading: true,
       username: '',
       img: '',
-      id: '',
       hasError: false,
       buttonLoading: false,
       title: "",
@@ -12803,21 +12805,27 @@ __webpack_require__.r(__webpack_exports__);
               supplier = response.data.data;
               _this.dni_validate = supplier.DNI;
 
-              if (_this.dni_validate != undefined || _this.dni_validate != null || _this.dni_validate != '') {
-                localStorage.setItem('e_DNI', _this.dni_validate);
-
-                _this.$router.push('/supplier');
+              if (!(_this.dni_validate != undefined || _this.dni_validate != null || _this.dni_validate != '')) {
+                _context.next = 9;
+                break;
               }
 
-              _context.next = 8;
+              localStorage.setItem('e_DNI', _this.dni_validate);
+
+              _this.$router.push('/supplier');
+
+              return _context.abrupt("return");
+
+            case 9:
+              _context.next = 11;
               return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/dep");
 
-            case 8:
+            case 11:
               response2 = _context.sent;
               _this.departments = response2.data.data.departments;
               _this.loading = false;
 
-            case 11:
+            case 14:
             case "end":
               return _context.stop();
           }
@@ -74329,10 +74337,12 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.prev = 0;
-              _context2.next = 3;
+              console.log(url);
+              console.log(body);
+              _context2.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_4___default.a.post("".concat(_constants_js__WEBPACK_IMPORTED_MODULE_5__["API_URL"]).concat(url), body);
 
-            case 3:
+            case 5:
               response = _context2.sent;
               console.log(response);
               return _context2.abrupt("return", {
@@ -74340,12 +74350,12 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
                 data: response
               });
 
-            case 8:
-              _context2.prev = 8;
+            case 10:
+              _context2.prev = 10;
               _context2.t0 = _context2["catch"](0);
 
               if (!_context2.t0.response) {
-                _context2.next = 16;
+                _context2.next = 18;
                 break;
               }
 
@@ -74356,25 +74366,25 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
                 error: _context2.t0.response.data
               });
 
-            case 16:
+            case 18:
               if (_context2.t0.request) {
                 console.log(_context2.t0.request);
               } else {
                 console.log('Error', _context2.t0.message);
               }
 
-            case 17:
+            case 19:
               return _context2.abrupt("return", {
                 ok: false,
                 error: 'Ocurrió un error, vuelva a intentarlo'
               });
 
-            case 18:
+            case 20:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2, null, [[0, 8]]);
+      }, _callee2, null, [[0, 10]]);
     }))();
   }
 });

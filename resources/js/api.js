@@ -35,6 +35,8 @@ export default {
   },
   async post(url, body) {
     try {
+      console.log(url);
+      console.log(body);
       let response = await axios.post(`${API_URL}${url}`, body)
       console.log(response)
       return {

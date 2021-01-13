@@ -227,7 +227,6 @@ export default {
       loading: true,
       username: '',
       img: '',
-      id: '',
 
       hasError: false,
       buttonLoading: false,

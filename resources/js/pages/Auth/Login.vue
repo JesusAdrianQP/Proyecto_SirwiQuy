@@ -287,6 +287,10 @@ export default {
       
       //Concedo nivel de acceso y enrutamiento dependiendo del usuario
       if (this.identifier == "trabajador" || this.identifier == "empresa") {
+        localStorage.removeItem('request');
+        localStorage.removeItem('suma');
+        localStorage.removeItem('exist_service');
+
         //Sacamos nivel de acceso del usuario
         if(this.identifier == "trabajador"){
           localStorage.setItem('e_level', "employee");
