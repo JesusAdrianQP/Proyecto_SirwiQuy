@@ -2179,7 +2179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -2268,7 +2268,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     borrarServicio: function borrarServicio(servicio_id) {
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2298,7 +2298,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -2546,7 +2546,7 @@ __webpack_require__.r(__webpack_exports__);
     Modal: function Modal() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2624,7 +2624,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -2675,7 +2675,7 @@ __webpack_require__.r(__webpack_exports__);
     getValue_labprice: function getValue_labprice() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -2772,7 +2772,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -2888,7 +2888,7 @@ __webpack_require__.r(__webpack_exports__);
     addMarker: function addMarker(lat, lng) {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
         var marker;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -2971,7 +2971,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -3120,7 +3120,7 @@ __webpack_require__.r(__webpack_exports__);
     createMaterial: function createMaterial() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -3161,7 +3161,7 @@ __webpack_require__.r(__webpack_exports__);
     seeUpdateForm: function seeUpdateForm(material_id) {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -3183,7 +3183,7 @@ __webpack_require__.r(__webpack_exports__);
     borrarMaterial: function borrarMaterial(material_id) {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -3202,7 +3202,7 @@ __webpack_require__.r(__webpack_exports__);
     saveUpdate: function saveUpdate(material_id) {
       var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -3322,7 +3322,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _IconSvg_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./IconSvg.vue */ "./resources/js/components/IconSvg.vue");
 /* harmony import */ var _NavBarOption_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavBarOption.vue */ "./resources/js/components/NavBarOption.vue");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
@@ -3571,7 +3571,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response, customer;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -3625,7 +3625,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.profileOpen) this.profileOpen = false;
     },
     logout: function logout() {
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -3722,7 +3722,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -3821,7 +3821,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_5___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_5___default.a.mark(function _callee() {
       var date;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_5___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -3868,7 +3868,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -3956,7 +3956,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -4021,7 +4021,7 @@ __webpack_require__.r(__webpack_exports__);
     getPagesIndex: function getPagesIndex(page, pmin, pmax, value, title, district, category) {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -4057,7 +4057,7 @@ __webpack_require__.r(__webpack_exports__);
     getPagesNot: function getPagesNot(page, id, filter) {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
         var response2;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -4091,7 +4091,7 @@ __webpack_require__.r(__webpack_exports__);
     getPagesHistoyResponse: function getPagesHistoyResponse(page, id) {
       var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
         var response3;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -4121,7 +4121,7 @@ __webpack_require__.r(__webpack_exports__);
     changePage: function changePage(page) {
       var _this5 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee5() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee5() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
@@ -4159,7 +4159,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -4233,7 +4233,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -4380,7 +4380,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 
 
@@ -4439,7 +4439,7 @@ __webpack_require__.r(__webpack_exports__);
     onServiceCompletedTap: function onServiceCompletedTap() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -4496,7 +4496,7 @@ __webpack_require__.r(__webpack_exports__);
     onServiceIncompleteTap: function onServiceIncompleteTap() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -4570,7 +4570,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _SideBarOptions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SideBarOptions */ "./resources/js/components/SideBarOptions.vue");
 /* harmony import */ var _containers_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../containers/Footer */ "./resources/js/containers/Footer.vue");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
@@ -4762,7 +4762,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response, supplier;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -4844,7 +4844,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 /* harmony import */ var _SideBarOption__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SideBarOption */ "./resources/js/components/SideBarOption.vue");
 /* harmony import */ var _IconSvg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./IconSvg */ "./resources/js/components/IconSvg.vue");
@@ -4903,7 +4903,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     logout: function logout() {
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -4947,7 +4947,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 /* harmony import */ var _components_CardEdit_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/CardEdit.vue */ "./resources/js/components/CardEdit.vue");
 /* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/IconSvg */ "./resources/js/components/IconSvg.vue");
@@ -5054,7 +5054,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -5090,7 +5090,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Pagination_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Pagination.vue */ "./resources/js/components/Pagination.vue");
 /* harmony import */ var _components_Notification_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Notification.vue */ "./resources/js/components/Notification.vue");
@@ -5246,7 +5246,7 @@ __webpack_require__.r(__webpack_exports__);
     submitDelete: function submitDelete() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -5415,7 +5415,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -5617,7 +5617,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -5641,7 +5641,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRouter: function validateRouter(id) {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -5686,7 +5686,7 @@ __webpack_require__.r(__webpack_exports__);
     change: function change() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -5710,7 +5710,7 @@ __webpack_require__.r(__webpack_exports__);
     submitLogin: function submitLogin() {
       var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -5844,7 +5844,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -6472,7 +6472,7 @@ __webpack_require__.r(__webpack_exports__);
     validateDNI: function validateDNI() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -6546,7 +6546,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRUC: function validateRUC() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -6613,7 +6613,7 @@ __webpack_require__.r(__webpack_exports__);
     submitSignup: function submitSignup() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -6876,7 +6876,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
@@ -7091,7 +7091,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -7115,7 +7115,7 @@ __webpack_require__.r(__webpack_exports__);
     validateRouter: function validateRouter(id) {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -7153,7 +7153,7 @@ __webpack_require__.r(__webpack_exports__);
     submitSignup: function submitSignup() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -7350,7 +7350,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
@@ -7611,7 +7611,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -7729,7 +7729,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this2 = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
@@ -7757,7 +7757,7 @@ __webpack_require__.r(__webpack_exports__);
                   });
                 },
                 onApprove: function () {
-                  var _onApprove = Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2(data, actions, resp) {
+                  var _onApprove = Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2(data, actions, resp) {
                     var order;
                     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
                       while (1) {
@@ -7807,7 +7807,7 @@ __webpack_require__.r(__webpack_exports__);
     UpdateStatus: function UpdateStatus() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -8002,7 +8002,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
 
@@ -8180,7 +8180,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -8217,7 +8217,7 @@ __webpack_require__.r(__webpack_exports__);
     Validation: function Validation() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -8235,7 +8235,7 @@ __webpack_require__.r(__webpack_exports__);
     TotalSum: function TotalSum() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
         var i;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -8264,7 +8264,7 @@ __webpack_require__.r(__webpack_exports__);
     Submit: function Submit() {
       var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -8327,7 +8327,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Maps__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/Maps */ "./resources/js/components/Maps.vue");
 /* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/IconSvg */ "./resources/js/components/IconSvg.vue");
@@ -8569,7 +8569,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
       var response, response2, response3;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -8670,7 +8670,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Maps__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/Maps */ "./resources/js/components/Maps.vue");
 /* harmony import */ var _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/IconSvg.vue */ "./resources/js/components/IconSvg.vue");
@@ -9084,7 +9084,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
       var response, response2;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -9145,7 +9145,7 @@ __webpack_require__.r(__webpack_exports__);
     submitForm: function submitForm() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2() {
         var response4;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -9761,7 +9761,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 
 
 
@@ -9794,7 +9794,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -9859,7 +9859,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
 /* harmony import */ var _components_LaborPrice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/LaborPrice */ "./resources/js/components/LaborPrice.vue");
@@ -9988,7 +9988,7 @@ __webpack_require__.r(__webpack_exports__);
     submitForm: function submitForm() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -10108,7 +10108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
@@ -10364,7 +10364,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -10392,7 +10392,7 @@ __webpack_require__.r(__webpack_exports__);
     submitForm: function submitForm() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -10525,7 +10525,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
 /* harmony import */ var _components_IconSvg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/IconSvg */ "./resources/js/components/IconSvg.vue");
@@ -10806,7 +10806,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
       var response, supplier;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -10876,7 +10876,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Maps__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/Maps */ "./resources/js/components/Maps.vue");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
@@ -11264,7 +11264,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
       var response, dateact;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -11335,7 +11335,7 @@ __webpack_require__.r(__webpack_exports__);
     SubmitAcept: function SubmitAcept() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2() {
         var response3, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -11413,7 +11413,7 @@ __webpack_require__.r(__webpack_exports__);
     SubmitDeny: function SubmitDeny() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3() {
         var response2, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -11476,7 +11476,7 @@ __webpack_require__.r(__webpack_exports__);
     Response: function Response() {
       var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -11602,7 +11602,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _containers_CardEditList_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../containers/CardEditList.vue */ "./resources/js/containers/CardEditList.vue");
+/* harmony import */ var _components_PricingPlan__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/PricingPlan */ "./resources/js/components/PricingPlan.vue");
+/* harmony import */ var _containers_CardEditList_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../containers/CardEditList.vue */ "./resources/js/containers/CardEditList.vue");
 //
 //
 //
@@ -11616,6 +11617,51 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -11624,23 +11670,28 @@ __webpack_require__.r(__webpack_exports__);
   name: "ServiceList",
   components: {
     SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"],
-    CardEditList: _containers_CardEditList_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_1__["default"]
+    CardEditList: _containers_CardEditList_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_1__["default"],
+    PricingPlan: _components_PricingPlan__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   data: function data() {
     return {
       acceso: localStorage.getItem('e_level'),
       token: localStorage.getItem('token'),
-      loading: true,
+      loading: false,
       username: '',
       img: '',
       id: '212121valor por defectoosflke',
-      category: ""
+      category: "",
+      modalOpen: false
     };
   },
   methods: {
     setLoading: function setLoading() {
       this.loading = false;
+    },
+    modal: function modal() {
+      this.modalOpen = true;
     }
   }
 });
@@ -11892,8 +11943,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
 /* harmony import */ var _components_MyButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/MyButton.vue */ "./resources/js/components/MyButton.vue");
@@ -12185,13 +12236,13 @@ __webpack_require__.r(__webpack_exports__);
       actualizarServicio: false,
       titulo: 'Gaasito',
       descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-    }, Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "category", 'daia'), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "district", 'San Bartolo'), _ref;
+    }, Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "category", 'daia'), Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, "district", 'San Bartolo'), _ref;
   },
   methods: {
     submitForm: function submitForm() {
       var _this = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -12340,7 +12391,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../functions */ "./resources/js/functions.js");
 /* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
@@ -12742,7 +12793,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response, supplier, response2;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -12782,7 +12833,7 @@ __webpack_require__.r(__webpack_exports__);
     validateDNI: function validateDNI() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -12856,7 +12907,7 @@ __webpack_require__.r(__webpack_exports__);
     Changeprov: function Changeprov() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -12880,7 +12931,7 @@ __webpack_require__.r(__webpack_exports__);
     Changedist: function Changedist() {
       var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -12904,7 +12955,7 @@ __webpack_require__.r(__webpack_exports__);
     submitForm: function submitForm() {
       var _this5 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
+      return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
         var response, er, mensaje;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
           while (1) {
@@ -16969,7 +17020,7 @@ hiddenKeys[HIDDEN] = true;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@-webkit-keyframes fadeOut{\n  from{\n    opacity:1\n  }\n\n  to{\n    opacity:0\n  }\n}\n\n@keyframes fadeOut{\n  from{\n    opacity:1\n  }\n\n  to{\n    opacity:0\n  }\n}\n\n.fadeOut{\n  -webkit-animation-name:fadeOut;\n  animation-name:fadeOut\n}\n\n@-webkit-keyframes fadeInDown{\n  from{\n    opacity:0;\n    transform:translate3d(0, -100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n@keyframes fadeInDown{\n  from{\n    opacity:0;\n    transform:translate3d(0, -100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n.fadeInDown{\n  -webkit-animation-name:fadeInDown;\n  animation-name:fadeInDown\n}\n\n@-webkit-keyframes fadeInUp{\n  from{\n    opacity:0;\n    transform:translate3d(0, 100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n@keyframes fadeInUp{\n  from{\n    opacity:0;\n    transform:translate3d(0, 100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n.fadeInUp{\n  -webkit-animation-name:fadeInUp;\n  animation-name:fadeInUp\n}\n\n.fade-enter-active,.fade-leave-active{\n  transition:opacity 150ms ease-out\n}\n\n.fade-enter,.fade-leave-to{\n  opacity:0\n}\n\n.notices{\n  position:fixed;\n  display:flex;\n  top:0;\n  bottom:0;\n  left:0;\n  right:0;\n  padding:2em;\n  overflow:hidden;\n  z-index:1052;\n  pointer-events:none\n}\n\n.notices .toast{\n  display:inline-flex;\n  align-items:center;\n  -webkit-animation-duration:150ms;\n  animation-duration:150ms;\n  margin:.5em 0;\n  box-shadow:0 1px 4px rgba(0,0,0,.12),0 0 6px rgba(0,0,0,.04);\n  border-radius:.25em;\n  pointer-events:auto;\n  opacity:.92;\n  color:#fff;\n  min-height:3em;\n  cursor:pointer\n}\n\n.notices .toast .toast-text{\n  margin:0;\n  padding:.5em 1em;\n  word-break:break-word\n}\n\n.notices .toast .toast-icon{\n  display:none\n}\n\n.notices .toast-success{\n  background-color:#47d78a\n}\n\n.notices .toast-info{\n  background-color:#1c85d5\n}\n\n.notices .toast-warning{\n  background-color:#febc22\n}\n\n.notices .toast-error{\n  background-color:#f7471c\n}\n\n.notices .toast-default{\n  background-color:#343a40\n}\n\n.notices .toast.is-top,.notices .toast.is-bottom{\n  align-self:center\n}\n\n.notices .toast.is-top-right,.notices .toast.is-bottom-right{\n  align-self:flex-end\n}\n\n.notices .toast.is-top-left,.notices .toast.is-bottom-left{\n  align-self:flex-start\n}\n\n.notices.is-top{\n  flex-direction:column\n}\n\n.notices.is-bottom{\n  flex-direction:column-reverse\n}\n\n.notices.is-custom-parent{\n  position:absolute\n}\n\n@media screen and (max-width: 768px){\n  .notices{\n    padding:0;\n    position:fixed !important\n  }\n}\n\n.notices .toast{\n  opacity:1;\n  min-height:4em\n}\n\n.notices .toast .toast-text{\n  padding:1.5em 1em\n}\n\n.notices .toast .toast-icon{\n  display:block;\n  width:27px;\n  min-width:27px;\n  height:27px;\n  margin-left:1em;\n  background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45.999 45.999'%3E %3Cpath fill='%23fff' d='M39.264 6.736c-8.982-8.981-23.545-8.982-32.528 0-8.982 8.982-8.981 23.545 0 32.528 8.982 8.98 23.545 8.981 32.528 0 8.981-8.983 8.98-23.545 0-32.528zM25.999 33a3 3 0 11-6 0V21a3 3 0 116 0v12zm-3.053-17.128c-1.728 0-2.88-1.224-2.844-2.735-.036-1.584 1.116-2.771 2.879-2.771 1.764 0 2.88 1.188 2.917 2.771-.001 1.511-1.152 2.735-2.952 2.735z'/%3E %3C/svg%3E\") no-repeat\n}\n\n.notices .toast.toast-success .toast-icon{\n  background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E %3Cpath fill='%23fff' d='M26 0C11.664 0 0 11.663 0 26s11.664 26 26 26 26-11.663 26-26S40.336 0 26 0zm14.495 17.329l-16 18a1.997 1.997 0 01-2.745.233l-10-8a2 2 0 012.499-3.124l8.517 6.813L37.505 14.67a2.001 2.001 0 012.99 2.659z'/%3E %3C/svg%3E\") no-repeat\n}\n\n.notices .toast.toast-error .toast-icon{\n  background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 51.976 51.976'%3E %3Cpath fill='%23fff' d='M44.373 7.603c-10.137-10.137-26.632-10.138-36.77 0-10.138 10.138-10.137 26.632 0 36.77s26.632 10.138 36.77 0c10.137-10.138 10.137-26.633 0-36.77zm-8.132 28.638a2 2 0 01-2.828 0l-7.425-7.425-7.778 7.778a2 2 0 11-2.828-2.828l7.778-7.778-7.425-7.425a2 2 0 112.828-2.828l7.425 7.425 7.071-7.071a2 2 0 112.828 2.828l-7.071 7.071 7.425 7.425a2 2 0 010 2.828z'/%3E %3C/svg%3E\") no-repeat\n}\n\n.notices .toast.toast-warning .toast-icon{\n  background:url(\"data:image/svg+xml,%3Csvg viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill='%23fff' d='M49.466 41.26L29.216 6.85c-.69-1.16-1.89-1.85-3.22-1.85-1.32 0-2.53.69-3.21 1.85L2.536 41.26c-.71 1.2-.72 2.64-.03 3.85.68 1.18 1.89 1.89 3.24 1.89h40.51c1.35 0 2.56-.71 3.23-1.89.7-1.21.69-2.65-.02-3.85zm-25.53-21.405h3.381v3.187l-.724 8.92H24.66l-.725-8.92v-3.187zm2.97 17.344a1.712 1.712 0 01-1.267.543c-.491 0-.914-.181-1.268-.543a1.788 1.788 0 01-.531-1.297c0-.502.176-.935.53-1.297a1.712 1.712 0 011.269-.544c.49 0 .914.181 1.268.544s.53.795.53 1.297c0 .503-.176.934-.53 1.297z'/%3E %3C/svg%3E\") no-repeat\n}\n", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeOut{\n  from{\n    opacity:1\n  }\n\n  to{\n    opacity:0\n  }\n}\n\n@keyframes fadeOut{\n  from{\n    opacity:1\n  }\n\n  to{\n    opacity:0\n  }\n}\n\n.fadeOut{\n  -webkit-animation-name:fadeOut;\n  animation-name:fadeOut\n}\n\n@-webkit-keyframes fadeInDown{\n  from{\n    opacity:0;\n    transform:translate3d(0, -100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n@keyframes fadeInDown{\n  from{\n    opacity:0;\n    transform:translate3d(0, -100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n.fadeInDown{\n  -webkit-animation-name:fadeInDown;\n  animation-name:fadeInDown\n}\n\n@-webkit-keyframes fadeInUp{\n  from{\n    opacity:0;\n    transform:translate3d(0, 100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n@keyframes fadeInUp{\n  from{\n    opacity:0;\n    transform:translate3d(0, 100%, 0)\n  }\n\n  to{\n    opacity:1;\n    transform:none\n  }\n}\n\n.fadeInUp{\n  -webkit-animation-name:fadeInUp;\n  animation-name:fadeInUp\n}\n\n.fade-enter-active,.fade-leave-active{\n  transition:opacity 150ms ease-out\n}\n\n.fade-enter,.fade-leave-to{\n  opacity:0\n}\n\n.notices{\n  position:fixed;\n  display:flex;\n  top:0;\n  bottom:0;\n  left:0;\n  right:0;\n  padding:2em;\n  overflow:hidden;\n  z-index:1052;\n  pointer-events:none\n}\n\n.notices .toast{\n  display:inline-flex;\n  align-items:center;\n  -webkit-animation-duration:150ms;\n  animation-duration:150ms;\n  margin:.5em 0;\n  box-shadow:0 1px 4px rgba(0,0,0,.12),0 0 6px rgba(0,0,0,.04);\n  border-radius:.25em;\n  pointer-events:auto;\n  opacity:.92;\n  color:#fff;\n  min-height:3em;\n  cursor:pointer\n}\n\n.notices .toast .toast-text{\n  margin:0;\n  padding:.5em 1em;\n  word-break:break-word\n}\n\n.notices .toast .toast-icon{\n  display:none\n}\n\n.notices .toast-success{\n  background-color:#47d78a\n}\n\n.notices .toast-info{\n  background-color:#1c85d5\n}\n\n.notices .toast-warning{\n  background-color:#febc22\n}\n\n.notices .toast-error{\n  background-color:#f7471c\n}\n\n.notices .toast-default{\n  background-color:#343a40\n}\n\n.notices .toast.is-top,.notices .toast.is-bottom{\n  align-self:center\n}\n\n.notices .toast.is-top-right,.notices .toast.is-bottom-right{\n  align-self:flex-end\n}\n\n.notices .toast.is-top-left,.notices .toast.is-bottom-left{\n  align-self:flex-start\n}\n\n.notices.is-top{\n  flex-direction:column\n}\n\n.notices.is-bottom{\n  flex-direction:column-reverse\n}\n\n.notices.is-custom-parent{\n  position:absolute\n}\n\n@media screen and (max-width: 768px){\n  .notices{\n    padding:0;\n    position:fixed !important\n  }\n}\n\n.notices .toast{\n  opacity:1;\n  min-height:4em\n}\n\n.notices .toast .toast-text{\n  padding:1.5em 1em\n}\n\n.notices .toast .toast-icon{\n  display:block;\n  width:27px;\n  min-width:27px;\n  height:27px;\n  margin-left:1em;\n  background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45.999 45.999'%3E %3Cpath fill='%23fff' d='M39.264 6.736c-8.982-8.981-23.545-8.982-32.528 0-8.982 8.982-8.981 23.545 0 32.528 8.982 8.98 23.545 8.981 32.528 0 8.981-8.983 8.98-23.545 0-32.528zM25.999 33a3 3 0 11-6 0V21a3 3 0 116 0v12zm-3.053-17.128c-1.728 0-2.88-1.224-2.844-2.735-.036-1.584 1.116-2.771 2.879-2.771 1.764 0 2.88 1.188 2.917 2.771-.001 1.511-1.152 2.735-2.952 2.735z'/%3E %3C/svg%3E\") no-repeat\n}\n\n.notices .toast.toast-success .toast-icon{\n  background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E %3Cpath fill='%23fff' d='M26 0C11.664 0 0 11.663 0 26s11.664 26 26 26 26-11.663 26-26S40.336 0 26 0zm14.495 17.329l-16 18a1.997 1.997 0 01-2.745.233l-10-8a2 2 0 012.499-3.124l8.517 6.813L37.505 14.67a2.001 2.001 0 012.99 2.659z'/%3E %3C/svg%3E\") no-repeat\n}\n\n.notices .toast.toast-error .toast-icon{\n  background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 51.976 51.976'%3E %3Cpath fill='%23fff' d='M44.373 7.603c-10.137-10.137-26.632-10.138-36.77 0-10.138 10.138-10.137 26.632 0 36.77s26.632 10.138 36.77 0c10.137-10.138 10.137-26.633 0-36.77zm-8.132 28.638a2 2 0 01-2.828 0l-7.425-7.425-7.778 7.778a2 2 0 11-2.828-2.828l7.778-7.778-7.425-7.425a2 2 0 112.828-2.828l7.425 7.425 7.071-7.071a2 2 0 112.828 2.828l-7.071 7.071 7.425 7.425a2 2 0 010 2.828z'/%3E %3C/svg%3E\") no-repeat\n}\n\n.notices .toast.toast-warning .toast-icon{\n  background:url(\"data:image/svg+xml,%3Csvg viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill='%23fff' d='M49.466 41.26L29.216 6.85c-.69-1.16-1.89-1.85-3.22-1.85-1.32 0-2.53.69-3.21 1.85L2.536 41.26c-.71 1.2-.72 2.64-.03 3.85.68 1.18 1.89 1.89 3.24 1.89h40.51c1.35 0 2.56-.71 3.23-1.89.7-1.21.69-2.65-.02-3.85zm-25.53-21.405h3.381v3.187l-.724 8.92H24.66l-.725-8.92v-3.187zm2.97 17.344a1.712 1.712 0 01-1.267.543c-.491 0-.914-.181-1.268-.543a1.788 1.788 0 01-.531-1.297c0-.502.176-.935.53-1.297a1.712 1.712 0 011.269-.544c.49 0 .914.181 1.268.544s.53.795.53 1.297c0 .503-.176.934-.53 1.297z'/%3E %3C/svg%3E\") no-repeat\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -16987,7 +17038,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".vue-map-container {\n  position: relative;\n}\n.vue-map-container .vue-map {\n  left: 0; right: 0; top: 0; bottom: 0;\n  position: absolute;\n}\n.vue-map-hidden {\n  display: none;\n}\n", ""]);
+exports.push([module.i, ".vue-map-container {\n  position: relative;\n}\n.vue-map-container .vue-map {\n  left: 0; right: 0; top: 0; bottom: 0;\n  position: absolute;\n}\n.vue-map-hidden {\n  display: none;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -17005,7 +17056,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".vue-street-view-pano-container {\n  position: relative;\n}\n.vue-street-view-pano-container .vue-street-view-pano {\n  left: 0; right: 0; top: 0; bottom: 0;\n  position: absolute;\n}\n", ""]);
+exports.push([module.i, ".vue-street-view-pano-container {\n  position: relative;\n}\n.vue-street-view-pano-container .vue-street-view-pano {\n  left: 0; right: 0; top: 0; bottom: 0;\n  position: absolute;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -43920,6 +43971,268 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " max-w-full px-6" }, [
+      _c(
+        "h1",
+        {
+          staticClass:
+            "text-center text-2xl text-black font-medium leading-snug tracking-wider pt-5"
+        },
+        [_vm._v("\r\n        Elige el servicio a tu medida\r\n      ")]
+      ),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-center text-md text-gray-700 mt-1 px-6" }, [
+        _vm._v(
+          "\r\n        Genera más ganancias teniendo un alcance mayor con la cantidad de\r\n        publicaciones de servicio.\r\n      "
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "h-1 mx-auto bg-indigo-200 w-24 opacity-75 mt-4 rounded"
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "max-w-full md:max-w-6xl mx-auto my-3 md:px-8" },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "relative block flex flex-col md:flex-row items-center grid grid-cols-1 sm:grid-cols-2 gap-20"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    " w-full sm:my-5 my-8 relative z-0 rounded-lg shadow-none md:-mr-4 px-20-"
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "bg-white mx-5 text-black rounded-lg shadow-xl shadow-lg overflow-hidden "
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "text-sm leading-none rounded-t-lg bg-blue-100 text-black font-semibold uppercase py-4 text-center tracking-wide border-dashed border-2 border-light-blue-500"
+                        },
+                        [
+                          _vm._v(
+                            "\r\n                Más popular\r\n              "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "block text-center text-sm max-w-sm mx-auto mt-2 text-black px-8 lg:px-6 "
+                        },
+                        [
+                          _c(
+                            "h1",
+                            {
+                              staticClass:
+                                "text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide"
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                  PLAN BÁSICO\r\n                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "h2",
+                            {
+                              staticClass:
+                                "text-sm text-gray-500 text-center pb-6"
+                            },
+                            [
+                              _c("span", { staticClass: "text-3xl" }, [
+                                _vm._v("CINCO")
+                              ]),
+                              _vm._v(" PUBLICACIONES\r\n                ")
+                            ]
+                          ),
+                          _vm._v(
+                            "\r\n\r\n                Recomendamos a todos los trabajadores que van a publicar\r\n                servicios por primera vez, empezar por la prueba gratuita de 15\r\n                días y 3 publicaciones con la opción de migrar a un plan mayor\r\n                de ser necesario.\r\n              "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "block text-center text-5xl max-w-sm mx-auto mt-2 text-gray-700 px-8 lg:px-6"
+                        },
+                        [
+                          _vm._v(
+                            "\r\n                    S/ 50.00\r\n                "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "block flex items-center p-8 uppercase"
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "mt-3 text-lg font-semibold bg-blue-700 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700"
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                  COMPRAR\r\n                "
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "w-full sm:my-5 my-8 relative z-0 rounded-lg shadow-none md:-ml-4 "
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "bg-white mx-5 text-black rounded-lg shadow-xl shadow-lg overflow-hidden"
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "block text-center text-sm max-w-sm mx-auto mt-2 text-black px-8 lg:px-6"
+                        },
+                        [
+                          _c(
+                            "h1",
+                            {
+                              staticClass:
+                                "text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide"
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                  PLAN AVANZADO\r\n                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "h2",
+                            {
+                              staticClass:
+                                "text-sm text-gray-500 text-center pb-6"
+                            },
+                            [
+                              _c("span", { staticClass: "text-3xl" }, [
+                                _vm._v("QUINCE")
+                              ]),
+                              _vm._v(" PUBLICACIONES\r\n                  ")
+                            ]
+                          ),
+                          _vm._v(
+                            "\r\n\r\n                Si necesitas mayor tiempo de publicación de servicio puedes\r\n                migrar al siguiente plan que permite 15 publicaciones. Los días\r\n                de publicación van de acuerdo con la cantidad de servicios que\r\n                desee publicar.\r\n              "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "flex flex-wrap mt-3 px-6" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "block text-center text-5xl max-w-sm mx-auto mt-2 text-gray-700 px-8 lg:px-6"
+                          },
+                          [
+                            _vm._v(
+                              "\r\n                    S/ 120.00\r\n                "
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "block flex items-center p-8 uppercase"
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "mt-3 text-lg font-semibold bg-blue-700 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700"
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                  COMPRAR\r\n                "
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SearchBar.vue?vue&type=template&id=6849e9f0&":
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SearchBar.vue?vue&type=template&id=6849e9f0& ***!
@@ -48863,7 +49176,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                  Acepto los términos y condiciones de uso del servicio KusaWasi.\n                "
+                                "\n                  Acepto los términos y condiciones de uso del servicio SirwiyQuy.\n                "
                               )
                             ]
                           )
@@ -53911,6 +54224,27 @@ var render = function() {
     "SideBar",
     { attrs: { title: "Editar Publicación" } },
     [
+      _c(
+        "button",
+        {
+          staticClass:
+            "mt-3 text-lg font-semibold bg-gray-700 bg-opacity-50 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700",
+          on: {
+            click: function($event) {
+              $event.preventDefault()
+              return _vm.modal()
+            }
+          }
+        },
+        [
+          _vm._v(
+            "\n    Consigue publicar más servicios desde solo S/ 50.00 | Las rebajas terminan el 03 de febrero. "
+          ),
+          _c("br"),
+          _vm._v("\n    ¡Quedan pocos días!\n  ")
+        ]
+      ),
+      _vm._v(" "),
       _c("Loader", {
         staticClass: "min-h-screen",
         attrs: { load: _vm.loading }
@@ -53927,7 +54261,104 @@ var render = function() {
         ],
         attrs: { category: _vm.category, ide: _vm.id },
         on: { getLoading: _vm.setLoading }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.modalOpen,
+              expression: "modalOpen"
+            }
+          ],
+          staticClass:
+            "fixed inset-x-0 z-50 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "fixed inset-0 transition-opacity",
+              on: {
+                click: function($event) {
+                  _vm.modalOpen = false
+                }
+              }
+            },
+            [
+              _c("div", {
+                staticClass: "absolute inset-0 bg-gray-500 opacity-75"
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                " bg-white rounded-lg px-4 pt-2 pb-1 overflow-hidden shadow-xl transform transition-all sm:max-w-5xl sm:w-full ",
+              attrs: {
+                role: "dialog",
+                "aria-modal": "true",
+                "aria-labelledby": "modal-headline"
+              }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "hidden sm:block absolute top-0 right-0 pt-4 pr-4"
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
+                      attrs: { type: "button", "aria-label": "Close" },
+                      on: {
+                        click: function($event) {
+                          _vm.modalOpen = false
+                        }
+                      }
+                    },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "h-6 w-6",
+                          attrs: {
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d: "M6 18L18 6M6 6l12 12"
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("PricingPlan")
+            ],
+            1
+          )
+        ]
+      )
     ],
     1
   )
@@ -74204,7 +74635,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants.js */ "./resources/js/constants.js");
@@ -74219,7 +74650,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   get: function get(url) {
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -74275,7 +74706,7 @@ axios__WEBPACK_IMPORTED_MODULE_4___default.a.defaults.headers.post['Content-Type
     }))();
   },
   post: function post(url, body) {
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
@@ -75339,6 +75770,59 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/PricingPlan.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/PricingPlan.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PricingPlan.vue?vue&type=template&id=7e24b118& */ "./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PricingPlan.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./PricingPlan.vue?vue&type=template&id=7e24b118& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/SearchBar.vue":
 /*!***********************************************!*\
   !*** ./resources/js/components/SearchBar.vue ***!
@@ -76094,7 +76578,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api */ "./resources/js/api.js");
 
 
@@ -76104,7 +76588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   //Funcion que obtiene provincias
   getProv: function getProv(department, departments) {
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var i, id_depa, response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
@@ -76151,7 +76635,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   //Funcion que obtiene distritos
   getDist: function getDist(province, provinces) {
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+    return Object(C_Users_Mabel_Documents_GCM_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
       var i, id_prov, response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
         while (1) {
@@ -78128,8 +78612,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\UNMSM BASE 17\CICLO 8\GESTIÓN DE CONFIGURACIÓN Y MANTENIMIENTO\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Mabel\Documents\GCM\Proyecto_Gestion\Desarrollo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Mabel\Documents\GCM\Proyecto_Gestion\Desarrollo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
