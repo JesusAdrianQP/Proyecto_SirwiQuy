@@ -21,6 +21,7 @@ import UpdateService from "./pages/Supplier/UpdateService.vue";
 import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
 import SuppliersBlank from "./pages/Supplier/Blank.vue";
 import Notifications from "./pages/Supplier/Notifications.vue";
+import SatisfactionReport from './pages/supplier/SatisfactionReport.vue';
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
@@ -219,6 +220,11 @@ export default new VueRouter({
             component: NotificationDetails,
             beforeEnter: isSupplier,
             props: true
+        },
+        {
+            path: '/supplier/satisfaction/report',
+            component: SatisfactionReport,
+            beforeEnter: isSupplier,  
         },
 
         //Ruta solo para trabajador
