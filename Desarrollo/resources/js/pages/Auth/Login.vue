@@ -118,13 +118,116 @@
 
               <!-- Sección de recuperación de contraseña.
               Te redirige a la vista de recuperación de contraseña "Blank".-->
-              <div class="mt-6 flex items-center justify-between mx-5 sm:mx-1">
+              <div class="mt-6 flex items-center justify-between">
                 <div class="text-sm leading-5">
                   <dd
+                    @click="openModal=true"
                     class="font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out cursor-pointer duration-150"
                   >¿Olvidaste tu contraseña? Haga click aquí</dd>
                 </div>
               </div>
+
+              <div
+                v-show="openModal"
+                class="fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
+              >
+                <div @click="openModal = false;  
+                      hasError = false;
+                      vacio_email2 = '';  email_recover='';
+                      error_email2 = '';" 
+                      class="fixed inset-0 transition-opacity">
+                  <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+                </div>
+                <div
+                  class="fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-xl sm:w-full sm:p-6"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="modal-headline"
+                >
+                  <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
+                    <button
+                      @click="openModal = false;  
+                      hasError = false;
+                      vacio_email2 = '';  email_recover='';
+                      error_email2 = '';"
+                      type="button"
+                      class="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150"
+                      aria-label="Close"
+                    >
+                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>  
+                    </button>  
+                  </div>
+
+                  <div class="sm:flex sm:items-start justify-center">
+                    <h2
+                      class="text-lg leading-6 font-medium text-gray-900 "
+                      id="modal-headline"
+                    >Recuperar sesión</h2>
+                  </div>
+                  
+                  <div class="mt-3">
+                    <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 flex flex-wrap" >
+                      <div class="mt-1 rounded-md w-full md:w-2/5">
+                        <label
+                          for="identifier"
+                          class="block text-sm font-medium leading-5 text-gray-700"
+                        >Recuperar como:</label>
+                        <select
+                          v-model="identifier"
+                          id="identifier"
+                          class="form-select block w-full pl-3 pr-10 py-2 text-base leading-6 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
+                        >
+                          <option value="cliente">Cliente</option>
+                          <option value="trabajador">Trabajador</option>
+                          <option value="empresa">Empresa</option>
+                        </select>
+                      </div>
+
+                      <div class="hidden md:block w-full py-3 md:w-1/5 justify-center all:justify-center text-center">
+                      </div>
+
+                      <div class="mt-3 md:mt-1 rounded-md w-full md:w-2/5">
+                        <div class="shadow-sm">
+                          <label
+                          for="email_recover"
+                          class="block text-sm font-medium leading-5 text-gray-700"
+                          >Correo:</label>
+                          <input
+                            id="email_recover"
+                            v-model="email_recover"
+                            placeholder="Ingrese su correo"
+                            class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                          />
+                        </div>
+                        <small v-if="vacio_email2" class="text-yellow-600">{{
+                            vacio_email2
+                        }}</small>
+                         <small v-if="error_email2" class="text-red-600">{{
+                            error_email2
+                        }}</small>
+                      </div>
+                    </div>
+                  </div> 
+                    
+                  <div class="justify-center mt-6 ">
+                    <button
+                      @click="ResetPass()"
+                      type="submit"
+                      class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
+                    >
+                      Enviar
+                    </button>
+                  </div>
+                </div>
+              </div>
+               <!-- Fin de sección de recuperación de contraseña. -->
 
               <div class="mt-8">
                 <span class="block w-2/3 mx-auto rounded-md shadow-sm">
@@ -177,6 +280,7 @@ export default {
   data: () => {
     return {
       hasError: false,
+      openModal: false,
       buttonLoading: false,
       isEnterprise: false,
 
@@ -186,8 +290,13 @@ export default {
       loger: "",
       password: "",
 
+      email_recover: '',
+
       vacio_loger: "",
       vacio_pass: "",
+
+      vacio_email2: '',
+      error_email2: ''
     };
   },
   props: {
@@ -314,6 +423,70 @@ export default {
           this.$router.push("/");
       }
     },
+
+    async ResetPass(){
+      //Valido campo correo
+      if(this.hasError == true) this.hasError = true;
+        else this.hasError = false;
+
+      //Validaciones del campo Email
+      if (this.email_recover == "") {
+        this.hasError = true;
+        this.vacio_email2 = "Campo necesario";
+        this.error_email2 = "";
+      } else if (
+        !this.email_recover.includes("@") ||
+        !this.email_recover.includes(".") ||
+        this.email_recover.length < 5
+      ) {
+        this.hasError = true;
+        this.vacio_email2 = "";
+        this.error_email2 = "Correo no válido";
+      } else {
+        this.error_email2 = "";
+        this.vacio_email2 = "";
+      }
+
+      this.openModal = false;
+      
+      //Post para verificar existencia y enviar correo
+      let response = await api.post(`/reset`, {
+        identity: this.identifier,
+        email: this.email_recover
+      });
+
+      this.vacio_email2 = '';
+      this.error_email2 = '';
+      this.email_recover = '';
+
+      //Si hay errores se identifica que tipo
+      if (!response.ok) {
+        this.openModal = false;
+        this.vacio_email2 = '';
+        this.error_email2 = '';
+        this.email_recover = '';
+
+        let er = response.error.errors;
+        let mensaje = "Error desconocido";
+
+        if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
+
+        return this.$toast.open({
+          message: mensaje,
+          type: "error",
+          duration: 8000,
+          dismissible: true,
+        });
+      }
+      
+      this.$toast.open({
+          message: response.data.data.info[0],
+          type: "info",
+          duration: 8000,
+          dismissible: true,
+      });
+    },
+    
     validateSubmit() {
       this.hasError = false;
       
