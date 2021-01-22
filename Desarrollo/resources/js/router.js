@@ -10,6 +10,7 @@ import JoinUs from "./pages/JoinUs.vue";
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
 import Login from "./pages/Auth/Login.vue";
 import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
+import RecoverSession from './pages/Auth/RecoverSession.vue';
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
@@ -148,6 +149,12 @@ export default new VueRouter({
             path: "/signup/enterprise",
             component: SignUpEnterprise,
             beforeEnter: isGuest
+        },
+        {
+            path: '/recover/session',
+            component: RecoverSession,
+            // beforeEnter: isGuest,
+            // props:true
         },
         
         //Rutas del cliente logeado
