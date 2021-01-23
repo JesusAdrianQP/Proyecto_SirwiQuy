@@ -7,6 +7,7 @@ use App\Service;
 use App\Customer;
 use App\Mail\RegisterCheck;
 use App\Mail\MessageCheck;
+use App\Mail\Message_Reset;
 use App\Mail\Message_Deny;
 use App\Mail\Message_Acept;
 use App\Mail\Message_Pay;
@@ -44,4 +45,10 @@ class MailController extends Controller
 
         Mail::to($email2)->send(new Message_Pay($pay));
     }
+
+     //Funcion que te indica la solicitud de cambio de contraseña
+     public function reset($obj, $ide)
+     {
+         Mail::to($obj->email)->send(new Message_Reset($obj, $ide));
+     }
 }

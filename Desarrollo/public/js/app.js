@@ -79905,10 +79905,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _pages_Auth_SignUpEnterprise_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
     beforeEnter: isGuest
   }, {
-    path: '/recover/session',
-    component: _pages_Auth_RecoverSession_vue__WEBPACK_IMPORTED_MODULE_8__["default"] // beforeEnter: isGuest,
-    // props:true
-
+    path: '/recover/session/identity=:ide&cod=:cod',
+    component: _pages_Auth_RecoverSession_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    beforeEnter: isGuest,
+    props: true
   }, //Rutas del cliente logeado
   {
     path: "/customer/report/service",
