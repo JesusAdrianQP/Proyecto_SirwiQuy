@@ -77,5 +77,39 @@ class EnterpriseData implements UserInterface
         }
     }
 
+     //Se actualiza el password del usuario
+     public static function updatepass($user)
+     {
+         $enterprise = Enterprise::where('email', '=', $user->email)
+                                   ->where('RUC', '=', $user->ruc)
+                                   ->first();
+  
+         if($enterprise){
+             $enterprise->password = bcrypt($user->password);
+             $enterprise->recover = null;
+             // Guardamos cambios
+             $enterprise->save();
+  
+             return response()->json(['success' => ['Contraseña actualizada']], 200);
+         }
+         else return response()->json(['errors' => ['fail' => ['Empresa no encontrada, chequee sus datos porfavor!']]], 422);
+     }
+
     public static function update($user){}
+
+    //Funcion de listado con email
+    public static function list_details_email($enterprise, $cod_reset)
+    {
+        $enter = Enterprise::where('email', '=', $enterprise)->first();
+        $enter->recover = $cod_reset;
+        $enter->save();
+
+        return $enter;
+    }
+
+    //Funcion que valida mi enlace
+    public static function validationreset($enterprise){
+        if(Enterprise::where('recover', '=', $enterprise)->first()) return 0;
+            else return 1;
+    }
 }

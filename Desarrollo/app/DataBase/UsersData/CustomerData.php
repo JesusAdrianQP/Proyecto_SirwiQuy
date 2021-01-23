@@ -88,4 +88,36 @@ class CustomerData implements UserInterface
             return response()->json(['success' => ['Cambios guardados']], 200);
         }else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
     }
+
+    //Se actualiza el password del usuario
+    public static function updatepass($user)
+    {
+        $customer = Customer::where('email', '=', $user->email)->first();
+
+        if($customer){
+            $customer->password = bcrypt($user->password);
+            $customer->recover = null;
+            // Guardamos cambios
+            $customer->save();
+
+            return response()->json(['success' => ['Contraseña actualizada']], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Cliente no encontrado, chequee sus datos porfavor!!']]], 422);
+    }
+
+    //Funcion de listado con email
+    public static function list_details_email($customer, $cod_reset)
+    {
+        $cust = Customer::where('email', '=', $customer)->first();
+        $cust->recover = $cod_reset;
+        $cust->save();
+
+        return $cust;
+    }
+
+    //Funcion que valida mi enlace
+    public static function validationreset($customer){
+        if(Customer::where('recover', '=', $customer)->first()) return 0;
+            else return 1;
+    }
 }

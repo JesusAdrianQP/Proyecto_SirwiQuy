@@ -151,10 +151,10 @@ export default new VueRouter({
             beforeEnter: isGuest
         },
         {
-            path: '/recover/session',
+            path: '/recover/session/identity=:ide&cod=:cod',
             component: RecoverSession,
-            // beforeEnter: isGuest,
-            // props:true
+            beforeEnter: isGuest,
+            props:true
         },
         
         //Rutas del cliente logeado

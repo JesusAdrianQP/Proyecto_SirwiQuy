@@ -68,6 +68,24 @@ class EmployeeData implements UserInterface
         }
     }
 
+    //Se actualiza el password del usuario
+    public static function updatepass($user)
+    {
+        $employee = Employee::where('email', '=', $user->email)
+                              ->where('DNI', '=', $user->dni)
+                              ->first();
+
+        if($employee){
+            $employee->password = bcrypt($user->password);
+            $employee->recover = null;
+            // Guardamos cambios
+            $employee->save();
+
+            return response()->json(['success' => ['Contraseña actualizada']], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Trabajador no encontrado, chequee sus datos porfavor!']]], 422);
+    }
+
     public static function update($user){
         $employee = EmployeeData::getUser(4, $user->token);
  
@@ -89,4 +107,21 @@ class EmployeeData implements UserInterface
             return response()->json(['success' => ['Cambios guardados']], 200);
         }else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
     }
+
+    //Funcion de listado con email
+    public static function list_details_email($employee, $cod_reset)
+    {
+        $emp = Employee::where('email', '=', $employee)->first();
+        $emp->recover = $cod_reset;
+        $emp->save();
+
+        return $emp;
+    }
+
+    //Funcion que valida mi enlace
+    public static function validationreset($employee){
+        if(Employee::where('recover', '=', $employee)->first()) return 0;
+            else return 1;
+    }
+    
 }
