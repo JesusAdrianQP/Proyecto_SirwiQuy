@@ -108,15 +108,20 @@
         <div class="pt-6 pb-4 mx-3 sm:mx-6 px-1 sm:px-10 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
           <div v-show="step==0">
             <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
-              <!-- Sección de ingreso de DNI.
-              Solicita el DNI y lo valida.-->
+              <!-- Sección de ingreso de RUC.
+              Solicita el RUC y lo valida.-->
               <div class="sm:col-span-2">
-                <label for="input_ruc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
+                <label for="rucDoc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
                 <div class="mt-1 relative rounded-md shadow-sm">
                   <input
                     placeholder="Ingrese su RUC"
-                    id="input_ruc"
+                    type="text"
+                    id="rucDoc"
                     v-model="ruc"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    maxlength="11"
+                    pattern="[0-9]*"
                     @change="validateRUC"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
@@ -151,39 +156,25 @@
 
               <div class="sm:col-span-2">
                 <label
-                  for="input_name_enterprise"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >Razón social</label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Digite su razón social"
-                    disabled="disabled"
-                    id="input_name_enterprise"
-                    type="text"
-                    v-model="name_enterprise"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="vacio_name_enterprise" class="text-yellow-600">
-                  {{
-                  vacio_name_enterprise
-                  }}
-                </small>
-              </div>
-
-              <div class="sm:col-span-4">
-                <label
-                  for="input_cuenta_enterprise"
+                  for="cardnumber"
                   class="block text-sm font-medium leading-5 text-gray-700"
                 >Cuenta bancaria</label>
-                <div class="mt-1 rounded-md shadow-sm">
+                <div class="mt-1 relative rounded-md shadow-sm">
                   <input
                     placeholder="Digite su Cuenta bancaria"
-                    id="input_cuenta_enterprise"
+                    id="cardnumber"
                     type="text"
+                    pattern="[0-9]*"
+                    maxlength="19"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                     v-model="cuenta_enterprise"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
+                  <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <svg id="ccicon" class="ccicon h-8" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    </svg>
+                  </div>
                 </div>
                 <small v-if="vacio_cuenta_enterprise" class="text-yellow-600">
                   {{
@@ -191,10 +182,25 @@
                   }}
                 </small>
               </div>
-              
+
               <div class="sm:col-span-4">
                 <label
-                  for="file_enterprise"
+                  for="input_name_enterprise"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                >Razón social</label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    disabled="disabled"
+                    id="input_name_enterprise"
+                    type="text"
+                    v-model="name_enterprise"
+                    class="bg-gray-100 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-4">
+                <label
                   class="block text-sm leading-5 font-medium text-gray-700"
                 >Imagen de la empresa</label>
                 <div class="flex items-center w-full">
@@ -245,6 +251,11 @@
                     placeholder="Ingrese su DNI"
                     id="input_dni"
                     v-model="dni"
+                    type="text"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    maxlength="8"
+                    pattern="[0-9]*"
                     @change="validateDNI"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
@@ -284,19 +295,13 @@
                 >Nombre(s)</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese sus nombres completos"
                     disabled="disabled"
                     id="input_name_admi"
                     v-model="name_admi"
                     type="text"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="bg-gray-100 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="vacio_name_admi" class="text-yellow-600">
-                  {{
-                  vacio_name_admi
-                  }}
-                </small>
               </div>
 
               <div class="sm:col-span-2">
@@ -306,18 +311,12 @@
                 >Apellido Paterno</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese su apellido paterno"
                     disabled="disabled"
                     id="input_lastnamep_admi"
                     v-model="lastnamep_admi"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="bg-gray-100  form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="vacio_lastnamep_admi" class="text-yellow-600">
-                  {{
-                  vacio_lastnamep_admi
-                  }}
-                </small>
               </div>
 
               <div class="sm:col-span-2">
@@ -327,18 +326,12 @@
                 >Apellido Materno</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese su apellido materno"
                     disabled="disabled"
                     id="input_lastnamem_admi"
                     v-model="lastnamem_admi"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="bg-gray-100 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="vacio_lastnamem_admi" class="text-yellow-600">
-                  {{
-                  vacio_lastnamem_admi
-                  }}
-                </small>
               </div>
 
               <div class="sm:col-span-4">
@@ -574,7 +567,6 @@ export default {
       isType: '',
 
       identifier: "empresa",
-
       step: 0,
 
       //Datos comunes de registro
@@ -600,7 +592,6 @@ export default {
       error_email: "",
       error_password: "",
       error_repeat_password: "",
-     
       error_dni: "",
       error_ruc: "",
     
@@ -608,18 +599,14 @@ export default {
       vacio_email: "",
       vacio_pass: "",
       vacio_repeat_pass: "",
-      vacio_name_enterprise: "",
       vacio_ruc: "",
       vacio_cuenta_enterprise: "", //Cuenta bancaria de la empresa
-      vacio_name_admi: "",
-      vacio_lastnamep_admi: "",
-      vacio_lastnamem_admi: "",
       vacio_dni: "",
     };
   },
   methods: {
     async validateDNI() {
-      if ((this.dni.length >= 0 && this.dni.length < 8) || (this.dni.length > 8)) {
+      if ((this.dni.length > 0 && this.dni.length < 8)) {
         this.hasError = true;
         this.dni_valid = false
         this.name_admi = "";
@@ -632,6 +619,7 @@ export default {
         this.hasError = false;
         this.error_dni = "";
         this.vacio_dni = "";
+        if(this.dni.length == 0){return;}
         this.isType = 'DNI';
       } 
 
@@ -667,17 +655,19 @@ export default {
     },
     async validateRUC() {
       //Se comprueba longitud del campo apenas se llene
-      if ((this.ruc.length >= 0 && this.ruc.length < 11) || (this.ruc.length > 11)) {
+      if ((this.ruc.length > 0 && this.ruc.length < 11)) {
         this.hasError = true;
         this.ruc_valid = false;
         this.name_enterprise = "";
         this.error_ruc = "El RUC debe tener 11 dígitos";
         this.vacio_ruc = "";
         return;
-      }else{
+      }
+      else{
         this.hasError = false;
         this.error_ruc = "";
         this.vacio_ruc = "";
+        if(this.ruc.length == 0){return;}
         this.isType = 'RUC';
       } 
 
@@ -746,7 +736,7 @@ export default {
         name_enterprise: this.name_enterprise,
         RUC: this.ruc,
         file_enterprise: this.file_enterprise,
-        cuenta_enterprise: this.cuenta_enterprise, 
+        cuenta_enterprise: this.cuenta_enterprise.replace(/ /g, ''), 
         file_admi: this.file_admi,
         name_admi: this.name_admi,
         lastnamep_admi: this.lastnamep_admi,
@@ -864,36 +854,14 @@ export default {
         this.error_dni = "";
         this.vacio_dni = "";
       } 
-       
-      //Comprobacion de nombres
-      if (this.name_admi == "") {
-        this.hasError = true;
-        this.vacio_name_admi = "Campo necesario";
-      } else this.vacio_name_admi = "";
-
-      //Comprobacion de apellido paterno
-      if (this.lastnamep_admi == "") {
-        this.hasError = true;
-        this.vacio_lastnamep_admi = "Campo necesario";
-      } else this.vacio_lastnamep_admi = "";
-
-      //Comprobacion de apellido materno
-      if (this.lastnamem_admi == "") {
-        this.hasError = true;
-        this.vacio_lastnamem_admi = "Campo necesario";
-      } else this.vacio_lastnamem_admi = "";
-     
-      //Comprobacion de razon social
-      if (this.name_enterprise == "") {
-        this.hasError = true;
-        this.vacio_name_enterprise = "Campo necesario";
-      } else this.vacio_name_enterprise = "";
-    
+            
       //Comprobacion de cuenta de empresa
       if (this.cuenta_enterprise == "") {
         this.hasError = true;
         this.vacio_cuenta_enterprise = "Campo necesario";
-      } else this.vacio_cuenta_enterprise = "";
+      } else{
+        this.vacio_cuenta_enterprise = "";
+      }
 
       //Comprobacion de RUC
       if(this.ruc.length==0){
