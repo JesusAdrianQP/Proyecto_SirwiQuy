@@ -105,7 +105,7 @@
           </ul>
         </nav>
 
-        <div class="pt-6 pb-4 mx-3 sm:mx-6 px-1 sm:px-10 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
+        <div class="pt-5 pb-4 mx-3 sm:mx-6 px-1 sm:px-10 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
           <div v-show="step==0">
             <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
               <!-- Sección de ingreso de RUC.
