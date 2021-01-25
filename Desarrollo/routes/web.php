@@ -14,6 +14,9 @@ Route::post('login', 'LoginController@login'); //Ruta de inicio de sesión
 Route::post('signup', 'LoginController@signup'); //Ruta de crear sesión
 Route::get('level={level}/token={token}', 'LoginController@getUser');//Ruta de obtención de datos
 Route::post('changeAccess', 'LoginController@close');//Ruta para cerrar sesión
+Route::post('reset', 'LoginController@reset'); //Ruta de generador de enlace de restauracion de sesion
+Route::get('reset/{cod}/{identifier}', 'LoginController@validatereset'); //Funcion que comprobara mi enlace
+Route::post('changepass', 'LoginController@changepass'); //Funcion para cambiar completamente el password
 
 //Ruta de las apis
 Route::get('validate/{isType}/{apidate}', 'UserController@getValidate'); //RuTa de obtencion de apis

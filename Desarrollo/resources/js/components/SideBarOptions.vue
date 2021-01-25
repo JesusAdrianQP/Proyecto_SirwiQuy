@@ -35,7 +35,7 @@
     
     <SideBarOption
       title="Reporte de Satisfacción"
-      url="/supplier/blank"
+      url="/supplier/satisfaction/report"
       :icon="{ icon: 'thumb-up', solid: false }"
     />
     <a

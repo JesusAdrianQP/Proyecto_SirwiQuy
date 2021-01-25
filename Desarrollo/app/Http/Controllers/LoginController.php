@@ -25,4 +25,22 @@ class LoginController extends Controller
     public function close(Request $request){
         UserDataMaster::closesesion($request);
     }
+
+    //Funcion que genera mi enlace
+    public function reset(ResetRequest $request)
+    {
+        return UserDataMaster::generatereset($request);
+    }
+ 
+    //Funcion que valida mi enlace de reseteo
+    public function validatereset(Request $request)
+    {
+        return UserDataMaster::validateres($request);
+    }
+ 
+    //Funcion que setea mi password
+    public function changepass(Request $request)
+    {
+        return UserDataMaster::change_pass($request);
+    }
 }

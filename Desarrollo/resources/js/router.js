@@ -10,6 +10,7 @@ import JoinUs from "./pages/JoinUs.vue";
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
 import Login from "./pages/Auth/Login.vue";
 import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
+import RecoverSession from './pages/Auth/RecoverSession.vue';
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
@@ -21,6 +22,7 @@ import UpdateService from "./pages/Supplier/UpdateService.vue";
 import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
 import SuppliersBlank from "./pages/Supplier/Blank.vue";
 import Notifications from "./pages/Supplier/Notifications.vue";
+import SatisfactionReport from './pages/supplier/SatisfactionReport.vue';
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
@@ -163,6 +165,12 @@ export default new VueRouter({
             component: SignUpEnterprise,
             beforeEnter: isGuest
         },
+        {
+            path: '/recover/session/identity=:ide&cod=:cod',
+            component: RecoverSession,
+            beforeEnter: isGuest,
+            props:true
+        },
         
         //Rutas del cliente logeado
         {
@@ -234,6 +242,11 @@ export default new VueRouter({
             component: NotificationDetails,
             beforeEnter: isSupplier,
             props: true
+        },
+        {
+            path: '/supplier/satisfaction/report',
+            component: SatisfactionReport,
+            beforeEnter: isSupplier,  
         },
 
         //Ruta solo para trabajador

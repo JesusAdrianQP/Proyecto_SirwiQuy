@@ -63,6 +63,28 @@ class UserDataMaster{
                 }
     }
 
+    public static function generatereset($user)
+    {
+        //Se crea fabrica
+        $user_reset = UserFactory::make($user->identity);
+
+        //Compruebo si existe el email en esa coleccion
+        if($user_reset::validationemail($user->email))
+        {
+            $cod_reset = UserDataMaster::getCodigo(24);//Genero codigo aleatorio
+            $obj = $user_reset::list_details_email($user->email, $cod_reset);//Obtengo usuario y actualizo campo
+            
+            //Se envia un correo solicitando su cambio de contraseña
+            $reseteo = new MailController;
+            $reseteo->reset($obj, $user->identity);
+
+            return response()->json([
+                'info' => ['Verifique su bandeja de entrada de su correo']
+            ], 200);
+        }
+        else return response()->json(['errors' => ['mail' => ['Su correo no existe en el sistema']]], 422);
+    }
+
     public static function getCodigo($longitud){
         $key = '';
         $pattern = '1234567890abcdefghijklmnopqrstuvwxyz';
@@ -72,6 +94,26 @@ class UserDataMaster{
         return $key;
     }
 
+    //Funcion que valida si el enlace sigue existiendo
+    public static function validateres($user)
+    {
+        //Se crea fabrica
+        $vreset = UserFactory::make($user->identifier);
+
+        $bool = $vreset::validationreset($user->cod);//Verifico existencia del enlace
+
+        if($bool == 1) return 1;
+            else return 0;
+    }
+
+    //Funcion que setea el password
+    public static function change_pass($user)
+    {
+        //Se crea fabrica
+        $pass = UserFactory::make($user->identity);    
+        return $pass::updatepass($user);  
+    }
+    
     public static function validate($user){
         $level = UserDataMaster::getIdentity($user->level);
 
