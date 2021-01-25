@@ -33,6 +33,11 @@ import ServiceForm from "./pages/Customer/ServiceForm.vue";
 import RateService from "./pages/Customer/RateService.vue";
 import Payment from "./pages/Customer/Payment.vue";
 
+//Importaciones de la carpeta empresa
+import ListWorker from "./pages/Enterprise/ListWorker.vue";
+import WorkerRegistrations from "./pages/Enterprise/WorkerRegistrations.vue";
+
+
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
 
@@ -100,6 +105,16 @@ const isCustomer = (to, from, next) => {
     }
     next("/login/customer");
 };
+
+//Verificador de usuario empresa
+const isEnterprise = (to, from, next) => {
+    if (localStorage.getItem("e_level") == "enterprise") {
+        next();
+        return;
+    }
+    next("/login/enterprise");
+};
+
 
 Vue.use(VueRouter);
 
@@ -239,6 +254,17 @@ export default new VueRouter({
             path: "/worker/profile/edit",
             component: EditProfile,
             beforeEnter: isWorker
+        },
+        //Ruta solo para empresa
+        {
+            path: '/enterpise/worker/registrations',
+            component: WorkerRegistrations,  
+            beforeEnter: isEnterprise
+        },
+        {
+            path: '/enterpise/list/worker',
+            component: ListWorker,  
+            beforeEnter: isEnterprise
         },
 
         //Ruta no registrada
