@@ -57,7 +57,7 @@ class EnterpriseData implements UserInterface
         $enterprise->society = $new_user->name_enterprise;
         $enterprise->RUC = $new_user->RUC;
         $enterprise->file_enterprise = $new_user->file_enterprise;
-        $enterprise->cuenta = $new_user->cuenta_enterprise;
+        $enterprise->cuenta = $new_user->cardNumber;
         $enterprise->file = $new_user->file_admi;
         $enterprise->name = $new_user->name_admi;
         $enterprise->lastnamep = $new_user->lastnamep_admi;

@@ -12,7 +12,7 @@
           <p class="px-5 text-sm">Esta cuenta sera creada para un usuario de tipo <b class="text-base2 italic">{{identifier}}</b></p>
       </div>
 
-      <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-2xl">
+      <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-2xll">
         <nav class="mx-3 sm:mx-6">
           <ul class="bg-white shadow rounded-md divide-y divide-gray-300 md:flex md:divide-y-0">
             <li @click="step=0" class="group cursor-pointer relative md:flex-1 md:flex">
@@ -105,9 +105,9 @@
           </ul>
         </nav>
 
-        <div class="pt-5 pb-4 mx-3 sm:mx-6 px-1 sm:px-10 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
+        <div class="pt-5 pb-4 mx-3 sm:mx-6 px-1 sm:px-8 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
           <div v-show="step==0">
-            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-8 sm:grid-cols-4">
               <!-- Sección de ingreso de RUC.
               Solicita el RUC y lo valida.-->
               <div class="sm:col-span-2">
@@ -158,17 +158,18 @@
                 <label
                   for="cardnumber"
                   class="block text-sm font-medium leading-5 text-gray-700"
-                >Cuenta bancaria</label>
+                >Cuenta interbancaria (CCI)</label>
                 <div class="mt-1 relative rounded-md shadow-sm">
                   <input
-                    placeholder="Digite su Cuenta bancaria"
+                    placeholder="Digite su N° de Cuenta"
                     id="cardnumber"
                     type="text"
                     pattern="[0-9]*"
-                    maxlength="19"
+                    maxlength="23"
                     inputmode="numeric"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                    v-model="cuenta_enterprise"
+                    v-model="cardNumber"
+                    @change="validateCardNumber()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                   <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
@@ -176,9 +177,14 @@
                     </svg>
                   </div>
                 </div>
-                <small v-if="vacio_cuenta_enterprise" class="text-yellow-600">
+                <small v-if="vacio_cardNumber" class="text-yellow-600">
                   {{
-                  vacio_cuenta_enterprise
+                  vacio_cardNumber
+                  }}
+                </small>
+                 <small v-if="error_cardNumber" class="text-red-600">
+                  {{
+                  error_cardNumber
                   }}
                 </small>
               </div>
@@ -203,37 +209,39 @@
                 <label
                   class="block text-sm leading-5 font-medium text-gray-700"
                 >Imagen de la empresa</label>
-                <div class="flex items-center w-full">
-                  <div class="mt-2" v-if="!file_enterprise">
-                    <label
-                      for="file_enterprise"
-                      style="cursor: pointer"
-                      class="w-full py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                    >Seleccionar imagen</label>
+                <div class="w-full sm:flex">
+                  <div class="flex items-center sm:w-1/4">
+                    <div class="mt-2" v-if="!file_enterprise">
+                      <label
+                        for="file_enterprise"
+                        style="cursor: pointer"
+                        class="w-full py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                      >Seleccionar imagen</label>
 
-                    <span class="file_enterprise">
-                      <input
-                        id="file_enterprise"
-                        type="file"
-                        style="display:none;"
-                        accept="image/png, .jpeg, .jpg"
-                        @change="onFileChange($event, 'file_enterprise')"
-                      />
-                    </span>
+                      <span class="file_enterprise">
+                        <input
+                          id="file_enterprise"
+                          type="file"
+                          style="display:none;"
+                          accept=".png,.jpeg,.jpg"
+                          @change="onFileChange($event, 'file_enterprise')"
+                        />
+                      </span>
+                    </div>
+
+                    <div class="flex items-center w-full mt-1" v-else>
+                      <button
+                        @click="removeImage($event, 'file_enterprise')"
+                        class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                      >Eliminar imagen</button>
+                    </div>
                   </div>
 
-                  <div class="flex items-center w-full" v-else>
-                    <button
-                      @click="removeImage($event, 'file_enterprise')"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out w-full sm:w-1/2"
-                    >Eliminar imagen</button>
-
-                    <div class="text-center w-full">
-                      <img
-                        :src="file_enterprise"
-                        class="object-cover inline-block h-20 w-20 sm:h-40 sm:w-40 rounded-full"
-                      />
-                    </div>
+                  <div class="mt-3 sm:mt-4 sm:w-3/4" v-if="file_enterprise">
+                    <img
+                      :src="file_enterprise"
+                      class="object-cover inline-block h-28 w-28 sm:h-40 sm:w-40 rounded-full"
+                    />
                   </div>
                 </div>
               </div>
@@ -241,7 +249,7 @@
           </div>
 
           <div v-show="step==1">
-            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-8 sm:grid-cols-4">
               <!-- Sección de ingreso de DNI.
               Solicita el DNI y lo valida.-->
               <div class="sm:col-span-2">
@@ -339,37 +347,39 @@
                   for="photo"
                   class="block text-sm leading-5 font-medium text-gray-700"
                 >Foto de Perfil</label>
-                <div class="flex items-center w-full">
-                  <div class="mt-2" v-if="!file_admi">
-                    <label
-                      for="file_admi"
-                      style="cursor: pointer"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                    >Seleccionar imagen</label>
+                <div class="w-full sm:flex">
+                  <div class="flex items-center sm:w-1/4">
+                    <div class="mt-2" v-if="!file_admi">
+                      <label
+                        for="file_admi"
+                        style="cursor: pointer"
+                        class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                      >Seleccionar imagen</label>
 
-                    <span class="file_admi">
-                      <input
-                        id="file_admi"
-                        type="file"
-                        style="display:none;"
-                        accept="image/png, .jpeg, .jpg"
-                        @change="onFileChange($event,'file_admi')"
-                      />
-                    </span>
+                      <span class="file_admi">
+                        <input
+                          id="file_admi"
+                          type="file"
+                          style="display:none;"
+                          accept="image/png, .jpeg, .jpg"
+                          @change="onFileChange($event,'file_admi')"
+                        />
+                      </span>
+                    </div>
+
+                    <div class="flex items-center w-full mt-1" v-else>
+                      <button
+                        @click="removeImage($event,'file_admi')"
+                        class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                      >Eliminar imagen</button>
+                    </div>                  
                   </div>
 
-                  <div class="flex items-center w-full" v-else>
-                    <button
-                      @click="removeImage($event,'file_admi')"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out w-full sm:w-1/2"
-                    >Eliminar imagen</button>
-
-                    <div class="text-center w-full">
-                      <img
-                        :src="file_admi"
-                        class="object-cover inline-block h-20 w-20 sm:h-40 sm:w-40 rounded-full"
-                      />
-                    </div>
+                  <div class="mt-3 sm:mt-4 sm:w-3/4" v-if="file_admi">
+                    <img
+                      :src="file_admi"
+                      class="object-cover inline-block h-28 w-28 sm:h-40 sm:w-40 rounded-full"
+                    />
                   </div>
                 </div>
               </div>
@@ -377,7 +387,7 @@
           </div>
 
           <div v-show="step==2">
-            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-8 sm:grid-cols-4">
               <div class="sm:col-span-2">
                 <label
                   for="username"
@@ -493,7 +503,7 @@
             </div>
              <!-- Fin de sección de repetir pass. -->
 
-            <div class="mt-4 flex text-center justify-between">
+            <div class="mt-4 mb-14 flex text-center justify-between">
               <div class="text-sm leading-5">
                 <span
                   class="font-medium"
@@ -550,26 +560,29 @@ import api from "../../api";
 import Visitor from "../Layouts/Visitor";
 import AnimatedButton from "../../components/AnimatedButton.vue";
 import IconSvg from "../../components/IconSvg.vue";
+import Format from "../../formatosBancarios";
 
 export default {
   name: "SignUpEnterprise",
-  components: {
+  components: 
+  {
     Visitor,
     AnimatedButton,
     IconSvg,
   },
-  data: () => {
+  data: () => 
+  {
     return {
       hasError: false,
       buttonLoading: false,
       dni_valid: false,
       ruc_valid: false,
       isType: '',
+      ccicon: '',
 
       identifier: "empresa",
       step: 0,
 
-      //Datos comunes de registro
       username: "",
       email: "",
       password: "",
@@ -579,8 +592,8 @@ export default {
       name_enterprise: "",//Razon social de la empresa
       ruc: "",
       file_enterprise: "", //Imagen de la empresa
-      cuenta_enterprise: "", //Cuenta bancaria de la empresa
-      
+      cardNumber: "", //Cuenta bancaria de la empresa
+
       //Nombre de los campos del admi de la empresa
       file_admi: "", //Imagen del administrador de la sesion que registra a la empresa
       name_admi: "",
@@ -594,18 +607,73 @@ export default {
       error_repeat_password: "",
       error_dni: "",
       error_ruc: "",
-    
+      error_cardNumber: "",
+
       vacio_username: "",
       vacio_email: "",
       vacio_pass: "",
       vacio_repeat_pass: "",
       vacio_ruc: "",
-      vacio_cuenta_enterprise: "", //Cuenta bancaria de la empresa
+      vacio_cardNumber: "", //Cuenta bancaria de la empresa
       vacio_dni: "",
     };
   },
+  async mounted()
+  {
+    this.ccicon = document.getElementById('ccicon');
+  },
   methods: {
-    async validateDNI() {
+    async validateCardNumber()
+    {
+      if((this.cardNumber.replace(/-/g, "").length > 0 && this.cardNumber.replace(/-/g, "").length < 20)
+          || this.cardNumber.replace(/-/g, "").length > 20)
+      {
+        this.hasError = true;
+        this.error_cardNumber = "La CCI debe tener 20 dígitos";
+        this.vacio_cardNumber = "";
+      }
+      else if(this.cardNumber.replace(/-/g, "").length == 20)
+      {
+        this.hasError = false;
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "";
+
+        this.cardNumber = this.cardNumber.replace(/\W/gi, '').replace(/\b(\d{3})(\d{3})(\d{12})(\d{2})\b/, '$1-$2-$3-$4').trim();
+      }
+      else
+      {
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "";
+      }
+
+      if(this.cardNumber.replace(/-/g, "").length >= 3)
+      {
+        switch(this.cardNumber.substr(0,3))
+        {
+          case '002':
+            this.ccicon.innerHTML = Format.Bank('bcp');
+            break;
+          case '003':
+            this.ccicon.innerHTML = Format.Bank('interbank');
+            break;
+          case '009':
+            this.ccicon.innerHTML = Format.Bank('scotiabank');
+            break;
+          case '011':
+            this.ccicon.innerHTML = Format.Bank('bbva');
+            break;
+          default:
+            this.ccicon.innerHTML = "";
+            break;
+        }
+      }
+      else if(this.cardNumber.replace(/-/g, "").length < 3)
+      {
+        this.ccicon.innerHTML = "";
+      }
+    },
+    async validateDNI() 
+    {
       if ((this.dni.length > 0 && this.dni.length < 8)) {
         this.hasError = true;
         this.dni_valid = false
@@ -653,7 +721,8 @@ export default {
         dismissible: true
       });
     },
-    async validateRUC() {
+    async validateRUC() 
+    {
       //Se comprueba longitud del campo apenas se llene
       if ((this.ruc.length > 0 && this.ruc.length < 11)) {
         this.hasError = true;
@@ -701,7 +770,7 @@ export default {
       this.validateSubmit();
       if (this.hasError) return;
       this.buttonLoading = true;
-
+    
       //Se condiciona la imagen de la empresa
        if(this.file_enterprise === '' | this.file_enterprise === "" | this.file_enterprise === null){
         this.buttonLoading = false;
@@ -736,7 +805,7 @@ export default {
         name_enterprise: this.name_enterprise,
         RUC: this.ruc,
         file_enterprise: this.file_enterprise,
-        cuenta_enterprise: this.cuenta_enterprise.replace(/ /g, ''), 
+        cardNumber: this.cardNumber, 
         file_admi: this.file_admi,
         name_admi: this.name_admi,
         lastnamep_admi: this.lastnamep_admi,
@@ -856,15 +925,17 @@ export default {
       } 
             
       //Comprobacion de cuenta de empresa
-      if (this.cuenta_enterprise == "") {
+      if (this.cardNumber == "") {
         this.hasError = true;
-        this.vacio_cuenta_enterprise = "Campo necesario";
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "Campo necesario";
       } else{
-        this.vacio_cuenta_enterprise = "";
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "";
       }
 
       //Comprobacion de RUC
-      if(this.ruc.length==0){
+      if(this.ruc.length == ""){
         this.hasError = true;
         this.error_ruc = "";
         this.vacio_ruc = "Campo necesario";
@@ -873,13 +944,23 @@ export default {
         this.vacio_ruc = "";
       } 
     },
-    onFileChange(e, name) {
+    onFileChange(e, name) 
+    {
       var files = e.target.files || e.dataTransfer.files;
       this[name] = files;
+      
       if (!files.length) return;
+      if(files[0].type != "image/jpeg" && files[0].type != "image/png") 
+      {
+        this.file_enterprise = '';
+        this.file_admi = '';
+        return;
+      }
+      
       this.createImage(files[0], name);
     },
-    createImage(file, name) {
+    createImage(file, name) 
+    {
       var image = new Image();
       var reader = new FileReader();
       var vm = this;
