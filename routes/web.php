@@ -9,13 +9,17 @@ Route::view('/home', 'app') -> name('home');/*Inicio de carga SPA*/
 /*------------------------------------------------------------------------------------
                       Rutas de conexión entre Front End y Back End
 /-------------------------------------------------------------------------------------*/
-//Rutas de las sesiones
-Route::post('login', 'LoginController@login'); //Ruta de inicio de sesión
-Route::post('signup', 'LoginController@signup'); //Ruta de crear sesión
-Route::get('level={level}/token={token}', 'LoginController@getUser');//Ruta de obtención de datos
-Route::post('changeAccess', 'LoginController@close');//Ruta para cerrar sesión
+/*-----------------------------Rutas de las sesiones------------------------------------*/
+Route::post('login', 'LoginController@login'); /*Ruta de inicio de sesión*/
+Route::post('signup', 'LoginController@signup'); /*Ruta de crear sesión*/
+Route::get('level={level}/token={token}', 'LoginController@getUser');/*Ruta de obtención de datos de los usuarios*/
+Route::post('changeAccess', 'LoginController@close');/*Ruta de cerrar sesión y cambiar token*/
+Route::post('reset', 'LoginController@reset'); /**Ruta para generar reseteo de password*/
 
-//Ruta de las apis
+Route::get('reset/{cod}/{identifier}', 'LoginController@validatereset'); //Funcion que comprobara mi enlace
+Route::post('changepass', 'LoginController@changepass'); //Funcion para cambiar completamente el password
+
+/*---------------------------------Ruta de las apis--------------------------------------*/
 Route::get('validate/{isType}/{apidate}', 'UserController@getValidate'); //RuTa de obtencion de apis
 
 //Rutas de las direcciones

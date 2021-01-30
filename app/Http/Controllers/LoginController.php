@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginFormRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\ResetRequest;
 use Illuminate\Http\Request;
 use App\DataBase\UserDataMaster;
 
@@ -24,5 +25,21 @@ class LoginController extends Controller
 
     public function close(Request $request){
         UserDataMaster::closesesion($request);
+    }
+
+    public function reset(ResetRequest $request){
+        return UserDataMaster::generatereset($request);
+    }
+ 
+    //Funcion que valida mi enlace de reseteo
+    public function validatereset(Request $request)
+    {
+        return UserDataMaster::validateres($request);
+    }
+ 
+    //Funcion que setea mi password
+    public function changepass(Request $request)
+    {
+        return UserDataMaster::change_pass($request);
     }
 }

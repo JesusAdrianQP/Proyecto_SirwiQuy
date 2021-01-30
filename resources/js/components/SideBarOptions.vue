@@ -20,14 +20,17 @@
       url="/supplier/services"
       :icon="{ icon: 'pencil-alt', solid: false }"
     />
-    <SideBarOption
-      title="Clientes"
-      url="/supplier/blank"
+    <div v-if="acceso == 'enterprise'">
+      <SideBarOption
+      title="Trabajadores"
+      url="/enterpise/worker/registrations"
       :icon="{ icon: 'users', solid: false }"
-    />    
+      />   
+    </div>
+    
     <SideBarOption
       title="Reporte de Satisfacción"
-      url="/supplier/blank"
+      url="/supplier/satisfaction/report"
       :icon="{ icon: 'thumb-up', solid: false }"
     />
     <a
@@ -50,6 +53,12 @@ export default {
   components: {
     SideBarOption,
     IconSvg
+  },
+  data: () => {
+    return {
+      acceso: localStorage.getItem("e_level"),
+      
+    }
   },
   methods: {
     async logout(){

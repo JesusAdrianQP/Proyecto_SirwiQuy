@@ -10,21 +10,24 @@ use Illuminate\Support\Facades\Hash;
 
 class CustomerData implements UserInterface
 {
-    public static function validationemail($mail): Bool{
+    public static function validationemail($mail): Bool
+    {
         $response = Customer::where('email', '=', $mail)->first();
         
         if($response) return true;
         else return false;
     }
 
-    public static function validationusername($username): Bool{
+    public static function validationusername($username): Bool
+    {
         $response = Customer::where('username', '=', $username)->first();
         
         if($response) return true;
         else return false;
     }
 
-    public static function validationpass($param, $loger, $pass): Bool{
+    public static function validationpass($param, $loger, $pass): Bool
+    {
         $customer = CustomerData::getUser($param, $loger);
 
         $response = Hash::check($pass, $customer->password);
@@ -33,20 +36,23 @@ class CustomerData implements UserInterface
         else return false;
     }
 
-    public static function getUser($par, $loger){
+    public static function getUser($par, $loger)
+    {
         if($par == 1) return Customer::where('email', '=', $loger)->first();
             else if($par == 2) return Customer::where('username', '=', $loger)->first();
             else if($par == 3) return Customer::where('_id', '=', $loger)->first();
                 else return Customer::where('access', '=', $loger)->first();
     }
 
-    public static function getToken($par, $loger){
+    public static function getToken($par, $loger)
+    {
         $token = CustomerData::getUser($par, $loger);
 
         return $token->access;
     }
 
-    public static function register($new_user){
+    public static function register($new_user)
+    {
         $access = new UserDataMaster();
         $customer = new Customer();
         
@@ -58,7 +64,8 @@ class CustomerData implements UserInterface
         $customer->save();
     }
 
-    public static function updatetoken($token){
+    public static function updatetoken($token)
+    {
         $access = new UserDataMaster();
         $user = CustomerData::getUser(3, $token);
 
@@ -68,7 +75,8 @@ class CustomerData implements UserInterface
         }
     }
 
-    public static function update($user){
+    public static function update($user)
+    {
         $customer = CustomerData::getUser(3, $user->token);
  
         if($customer){
@@ -88,4 +96,40 @@ class CustomerData implements UserInterface
             return response()->json(['success' => ['Cambios guardados']], 200);
         }else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
     }
+
+    public static function updateRecover($customer, $cod_reset)
+    {
+        $cust = Customer::where('email', '=', $customer)->first();
+        
+        if($cust)
+        {
+            $cust->recover = $cod_reset;
+            $cust->save();
+        }
+        
+        return $cust;
+    }
+
+
+    // public static function updatepass($user)
+    // {
+    //     $customer = Customer::where('email', '=', $user->email)->first();
+
+    //     if($customer){
+    //         $customer->password = bcrypt($user->password);
+    //         $customer->recover = null;
+    //         // Guardamos cambios
+    //         $customer->save();
+
+    //         return response()->json(['success' => ['Contraseña actualizada']], 200);
+    //     }
+    //     else return response()->json(['errors' => ['fail' => ['Cliente no encontrado, chequee sus datos porfavor!!']]], 422);
+    // }
+
+    
+    // public static function validationreset($customer)
+    // {
+    //     if(Customer::where('recover', '=', $customer)->first()) return 0;
+    //         else return 1;
+    // }
 }

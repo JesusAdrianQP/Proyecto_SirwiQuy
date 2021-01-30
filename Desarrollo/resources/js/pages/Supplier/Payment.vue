@@ -257,7 +257,7 @@ export default {
     localStorage.setItem('e_link', this.id_link);
     localStorage.setItem('e_response', this.id_response);
 
-    if(localStorage.getItem('e_level') !== 'customer') 
+    if(localStorage.getItem('e_level') !== 'supplier') 
     {
       this.$toast.open({
         message: "Inicie sesión para consultar por el pago...",
@@ -267,7 +267,7 @@ export default {
       });
     
       localStorage.setItem('e_bandera', 'bandera');
-      this.$router.push("/login/customer");
+      this.$router.push("/login/supplier");
       return;
     }
 
@@ -290,12 +290,12 @@ export default {
       return;
     }
     
-    this.customer = response.data.data.customer;
+    // this.customer = response.data.data.customer;
     this.service = response.data.data.service;
     this.supplier = response.data.data.supplier;
     this.response = response.data.data.response;
 
-    if(this.customer.access != localStorage.getItem('token'))
+    if(this.supplier.access != localStorage.getItem('token'))
     {
       this.$toast.open({
         message: "Enlace no válido para su usuario...",
