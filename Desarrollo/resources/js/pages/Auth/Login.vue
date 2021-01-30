@@ -2,19 +2,19 @@
   <!-- LOGIN: Vista de logeo del usuario.
   Valida el usuario o correo y contraseña para poder ingresar.-->
   <Visitor>
-    <main class="w-full flex ">
+    <main class="w-full flex sm:h-screen">
       <div class="w-1/2 hidden lg:flex  bg-gray-100">
-       <img style="clip-path: circle(67.9% at 28% 49%);" class="object-cover h-auto" alt="Portada" src="../../../assets/imgLogin.jpg">
+       <img style="clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);" class="object-cover h-auto" alt="Portada" src="../../../assets/imgLogin.jpg">
       </div>
 
-      <div class="w-full lg:w-1/2">
-        <div class="flex flex-col justify-center pt-2 pb-4 bg-gray-100">
-          <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center lg:mt-10">
-            <p class="uppercase px-5 mt-4 text-3xl md:text-4xl font-extrabold text-gray-900"
+      <div class="w-full lg:w-1/2 py-12 sm:py-0 bg-gray-100">
+        <div class="flex sm:h-screen flex-col justify-center pt-2 pb-4 bg-gray-100">
+          <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
+            <p class="uppercase px-5 text-3xl md:text-4xl font-extrabold text-gray-900"
             >Bienvenido</p>
           </div>
 
-          <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8 lg:mb-14">
+          <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4">
             <div class="bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10">
               <div class="grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1">
                 <div class="sm:col-span-2">
@@ -103,6 +103,7 @@
                       id="password"
                       type="password"
                       required
+                      @change="validatePassword()"
                       placeholder="Ingrese su contraseña."
                       class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                     />
@@ -112,13 +113,18 @@
                     vacio_pass
                     }}
                   </small>
+                  <small v-if="error_pass" class="text-red-600">
+                    {{
+                    error_pass
+                    }}
+                  </small>
                 </div>
                 <!-- Fin de sección de ingreso de contraseña. -->
               </div>
 
               <!-- Sección de recuperación de contraseña.
               Te redirige a la vista de recuperación de contraseña "Blank".-->
-              <div class="mt-6 flex items-center justify-between">
+              <div class="mt-2 ml-2 sm:ml-0 flex items-center justify-between">
                 <div class="text-sm leading-5">
                   <dd
                     @click="openModal=true"
@@ -139,7 +145,7 @@
                   <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
                 </div>
                 <div
-                  class="fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-xl sm:w-full sm:p-6"
+                  class="w-68 fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-xl sm:w-full sm:p-6"
                   role="dialog"
                   aria-modal="true"
                   aria-labelledby="modal-headline"
@@ -165,7 +171,7 @@
                     </button>  
                   </div>
 
-                  <div class="sm:flex sm:items-start justify-center">
+                  <div class="sm:flex sm:items-start">
                     <h2
                       class="text-lg leading-6 font-medium text-gray-900 "
                       id="modal-headline"
@@ -173,8 +179,8 @@
                   </div>
                   
                   <div class="mt-3">
-                    <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 flex flex-wrap" >
-                      <div class="mt-1 rounded-md w-full md:w-2/5">
+                    <div class="grid grid-cols-3 sm:gap-8 col-span-3 -my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8" >
+                      <div class="col-span-3 sm:col-span-1 mt-1 rounded-md w-full">
                         <label
                           for="identifier"
                           class="block text-sm font-medium leading-5 text-gray-700"
@@ -190,10 +196,7 @@
                         </select>
                       </div>
 
-                      <div class="hidden md:block w-full py-3 md:w-1/5 justify-center all:justify-center text-center">
-                      </div>
-
-                      <div class="mt-3 md:mt-1 rounded-md w-full md:w-2/5">
+                      <div class="col-span-3 sm:col-span-2 mt-3 md:mt-1 rounded-md w-full">
                         <div class="shadow-sm">
                           <label
                           for="email_recover"
@@ -203,6 +206,8 @@
                             id="email_recover"
                             v-model="email_recover"
                             placeholder="Ingrese su correo"
+                            type="text"
+                            @change="validateEmail()"
                             class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                           />
                         </div>
@@ -216,7 +221,7 @@
                     </div>
                   </div> 
                     
-                  <div class="justify-center mt-6 ">
+                  <div class="text-center sm:text-right mt-6">
                     <button
                       @click="ResetPass()"
                       type="submit"
@@ -273,13 +278,14 @@ import AnimatedButton from "../../components/AnimatedButton.vue";
 
 export default {
   name: "Login",
-  components: {
+  components: 
+  {
     Visitor,
     AnimatedButton,
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      hasError: false,
       openModal: false,
       buttonLoading: false,
       isEnterprise: false,
@@ -287,31 +293,36 @@ export default {
       routes: "",
       identifier: "",
 
-      loger: "",
-      password: "",
-
+      loger: '',
+      password: '',
       email_recover: '',
 
-      vacio_loger: "",
-      vacio_pass: "",
-
+      vacio_loger: '',
+      vacio_pass: '',
+      error_pass: '',
       vacio_email2: '',
       error_email2: ''
     };
   },
-  props: {
+  props: 
+  {
     identity: String,
   },
-  async created() {
+  async created() 
+  {
     this.validateRouter(this.identity);
   },
-   watch: { 
-    identity: function(newVal, oldVal) {
+   watch: 
+   { 
+    identity: function(newVal, oldVal) 
+    {
       this.validateRouter(newVal);
     }
   },
-  methods: {
-    async validateRouter(id){
+  methods: 
+  {
+    validateRouter(id)
+    {
       //Se crea condicionales para verificar de donde proviene
       //Una vez cargado no se cambiara el valor hasta que se recarge o vaya a otra pestaña diferente
       switch(id)
@@ -338,7 +349,8 @@ export default {
         break;
       };
     },
-    async change(){
+    change()
+    {
       if(this.identifier == "cliente"){
         this.validateRouter("customer");
       }
@@ -349,11 +361,52 @@ export default {
         this.validateRouter("enterprise");
       }
     },
-    async submitLogin() {
-      this.validateSubmit();
-      if (this.hasError) return;
-      this.buttonLoading = true;
+    validateEmail()
+    {
+      const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email_recover);
+      
+      if(this.email_recover == "")
+      { 
+        this.error_email2 = "";
+        this.vacio_email2 = "";
+        return;
+      }
 
+      if(correo(this.email_recover) == false)
+      {
+        this.error_email2 = "Correo no válido";
+        this.vacio_email2 = "";
+      }
+      else
+      {
+        this.error_email2 = "";
+        this.vacio_email2 = "";
+      }
+    },
+    async submitLogin() 
+    {
+      this.validatePassword();
+      var boolean = false;
+
+      if (this.loger == "") { this.vacio_loger = "Campo obligatorio"; boolean = true;} 
+      else { this.vacio_loger = ""; }
+
+      if(this.password == "" && this.error_pass == "" )
+      { 
+        this.vacio_pass = "Campo obligatorio";
+        this.error_pass = "";
+        boolean = true;
+      }
+      else if(this.password != "" && this.error_pass != "") { this.vacio_pass = ""; boolean = true;}
+      else if(this.password != "" && this.error_pass == "")
+      {
+        this.vacio_pass = "";
+        this.error_pass = "";
+      }
+
+      if(boolean == true) { return; }
+      this.buttonLoading = true;
+      
       //Conexión con la lógica de negocio
       //Se pasa como parametros el loger (usario o correo)
       //identity -> tipo de identificador para el usuario
@@ -423,26 +476,19 @@ export default {
           this.$router.push("/");
       }
     },
+    async ResetPass()
+    {
+      this.validateEmail();
 
-    async ResetPass(){
-      //Valido campo correo
-      if(this.hasError == true) this.hasError = true;
-        else this.hasError = false;
-
-      //Validaciones del campo Email
-      if (this.email_recover == "") {
-        this.hasError = true;
+      if (this.email_recover == "" && this.error_email2 == "") 
+      {
         this.vacio_email2 = "Campo necesario";
         this.error_email2 = "";
-      } else if (
-        !this.email_recover.includes("@") ||
-        !this.email_recover.includes(".") ||
-        this.email_recover.length < 5
-      ) {
-        this.hasError = true;
-        this.vacio_email2 = "";
-        this.error_email2 = "Correo no válido";
-      } else {
+        return;
+      }
+      else if(this.email_recover != "" && this.error_email2 != "") { this.vacio_email2 = ""; return; }
+      else if(this.email_recover != "" && this.error_email2 == "")
+      {
         this.error_email2 = "";
         this.vacio_email2 = "";
       }
@@ -454,23 +500,17 @@ export default {
         identity: this.identifier,
         email: this.email_recover
       });
-
+      
       this.vacio_email2 = '';
       this.error_email2 = '';
-      this.email_recover = '';
-
-      //Si hay errores se identifica que tipo
-      if (!response.ok) {
-        this.openModal = false;
-        this.vacio_email2 = '';
-        this.error_email2 = '';
-        this.email_recover = '';
-
+      this.email_recover = '';    
+      
+      if (!response.ok)
+      {        
         let er = response.error.errors;
         let mensaje = "Error desconocido";
 
         if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
-
         return this.$toast.open({
           message: mensaje,
           type: "error",
@@ -480,35 +520,47 @@ export default {
       }
       
       this.$toast.open({
-          message: response.data.data.info[0],
-          type: "info",
-          duration: 8000,
-          dismissible: true,
+        message: response.data.data.success[0],
+        type: "success",
+        duration: 8000,
+        dismissible: true,
       });
     },
-    
-    validateSubmit() {
-      this.hasError = false;
-      
-      //Validaciones de campo email vuejs
-      if (this.loger == "") {
-        this.hasError = true;
-        this.vacio_loger = "Campo obligatorio";
-      } else {
-        this.vacio_loger = "";
+    validatePassword() 
+    {
+      if(this.password.length == 0)
+      {
+        this.error_pass = "";
+        this.vacio_pass = "";
+        return;
       }
 
-      //Validaciones de campo pass vuejs
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo obligatorio";
-      } else if (this.password.length < 5) {
-        this.hasError = true;
-        this.vacio_pass = "Su contraseña no cumple los parámetros.";
-      } else {
+      if(this.password.length >= 8)
+			{	
+        this.vacio_pass = "";	
+				var mayuscula = false;
+				var minuscula = false;
+				var numero = false;
+				
+				for(var i = 0; i<this.password.length; i++)
+				{
+					if(this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) { mayuscula = true; }
+					else if(this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) { minuscula = true; }
+					else if(this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) { numero = true; }
+        }
+        
+        if(mayuscula == false) { this.error_pass = "Su contraseña debe tener al menos una letra mayuscula"; return;}
+        if(minuscula == false) { this.error_pass = "Su contraseña debe tener al menos una letra minuscula"; return;}
+        if(numero == false) { this.error_pass = "Su contraseña debe tener al menos un número"; return;}
+        
+        if(mayuscula == true && minuscula == true && numero == true) { this.error_pass = "" }
+			}
+      else if(this.password.length < 8 && this.password.length > 0)
+      { 
+        this.error_pass = "La longitud mínima es de 8 caracteres";
         this.vacio_pass = "";
       }
-    },
+    }
   },
 };
 </script>

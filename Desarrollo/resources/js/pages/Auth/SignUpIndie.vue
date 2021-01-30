@@ -4,166 +4,159 @@
   un correo y una contraseña para poder registrarlo. hi-->
   <Visitor>
     <main class="flex flex-col justify-center pt-2 pb-4 bg-gray-100">
-        <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
-         
-          <img class="h-50 sm:h-56 lg:h-48 px-6 w-auto mt-4" src="../../../assets/illustrations/sign-up.png" alt="avatar" />
-          
-          <p class="uppercase px-5 mt-4 text-3xl md:text-4xl font-extrabold text-gray-900"
-          >Crear cuenta </p>
-        
-          <p class="px-5 text-sm">Esta cuenta sera creada para un usuario de tipo <b class="text-base2 italic">{{identifier}}</b></p>
-        </div>
+      <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
+        <img class="h-50 sm:h-56 lg:h-48 px-6 w-auto mt-4" src="../../../assets/illustrations/sign-up.png" alt="avatar" />
+        <p class="uppercase px-5 mt-4 text-3xl md:text-4xl font-extrabold text-gray-900"
+        >Crear cuenta </p>
+        <p class="px-5 text-sm">Esta cuenta sera creada para un usuario de tipo <b class="text-base2 italic">{{identifier}}</b></p>
+      </div>
 
-        <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8">
-          <div class="bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10">
-            <!-- Sección de ingreso de usuario.
-            Solicita un nombre de usuario y lo valida.-->
-            <div class="grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1">
-              <div class="sm:col-span-2">
-                <label for="username" class="block text-sm font-medium leading-5 text-gray-700">Usuario</label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    id="username"
-                    v-model="username"
-                    placeholder="Ingrese un nombre de usuario"
-                    type="text"
-                    required
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="error_username" class="text-red-600">
-                  {{
-                  error_username
-                  }}
-                </small>
-                <small v-if="vacio_username" class="text-yellow-600">
-                  {{
-                  vacio_username
-                  }}
-                </small>
+      <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8">
+        <div class="bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10">
+          <!-- Sección de ingreso de usuario.
+          Solicita un nombre de usuario y lo valida.-->
+          <div class="grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1">
+            <div class="sm:col-span-2">
+              <label for="username" class="block text-sm font-medium leading-5 text-gray-700">Usuario</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  id="username"
+                  v-model="username"
+                  placeholder="Ingrese un nombre de usuario"
+                  type="text"
+                  required
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
               </div>
-              <!-- Fin de sección de ingreso de usuario. -->
-
-              <!-- Sección de ingreso de correo.
-              Solicita un correo electrónico y lo valida.-->
-              <div class="sm:col-span-2">
-                <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    id="email"
-                    v-model="email"
-                    placeholder="Ingrese un correo electronico"
-                    type="email"
-                    required
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="error_email" class="text-red-600">
-                  {{
-                  error_email
-                  }}
-                </small>
-                <small v-if="vacio_email" class="text-yellow-600">
-                  {{
-                  vacio_email
-                  }}
-                </small>
-              </div>
-              <!-- Fin de sección de ingreso de correo. -->
-
-              <!-- Sección de ingreso de contraseña.
-              Solicita una contraseña y la valida.-->
-              <div class="sm:col-span-2">
-                <label
-                  for="password"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >Contraseña</label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    id="password"
-                    placeholder="Ingrese una contraseña"
-                    v-model="password"
-                    type="password"
-                    required
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="error_password" class="text-red-600">
-                  {{
-                  error_password
-                  }}
-                </small>
-                <small v-if="vacio_pass" class="text-yellow-600">
-                  {{
-                  vacio_pass
-                  }}
-                </small>
-              </div>
-              <!-- Fin de sección ingresar contraseña. -->
-
-              <!-- Solicita repetir la contraseña y la valida. -->
-              <div class="sm:col-span-2">
-                <label
-                  for="repeat_password"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >Repetir Contraseña</label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    id="repeat_password"
-                    v-model="repeat_password"
-                    placeholder="Verifique su contraseña"
-                    type="password"
-                    required
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="error_repeat_password" class="text-red-600">
-                  {{
-                  error_repeat_password
-                  }}
-                </small>
-                <small v-if="vacio_repeat_pass" class="text-yellow-600">
-                  {{
-                  vacio_repeat_pass
-                  }}
-                </small>
-              </div>
-              <!-- Fin de sección de ingreso de repet contraseña. -->
+              <small v-if="error_username" class="text-red-600">
+                {{
+                error_username
+                }}
+              </small>
+              <small v-if="vacio_username" class="text-yellow-600">
+                {{
+                vacio_username
+                }}
+              </small>
             </div>
-
-            <div class="mt-8">
-              <span class="block w-2/3 mx-auto rounded-md shadow-sm">
-                <AnimatedButton
-                  content="Registrar"
-                  color="gradiente"
-                  @onClick="submitSignup()"
-                  :isLoading="buttonLoading"
-                ></AnimatedButton>
-              </span>
-            </div>
-
-            <div class="mt-4 flex text-center justify-between">
-              <div class="text-sm leading-5">
-                <span
-                  class="font-medium"
-                >Al registrarte estás aceptando los términos y condiciones de <i>SirwiyQuy</i></span>
+            <!-- Fin de sección de ingreso de usuario. -->
+            <!-- Sección de ingreso de correo.
+            Solicita un correo electrónico y lo valida.-->
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  id="email"
+                  v-model="email"
+                  placeholder="Ingrese un correo electronico"
+                  type="email"
+                  required
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
               </div>
+              <small v-if="error_email" class="text-red-600">
+                {{
+                error_email
+                }}
+              </small>
+              <small v-if="vacio_email" class="text-yellow-600">
+                {{
+                vacio_email
+                }}
+              </small>
             </div>
-
-            <!-- Sección de logeo.
-            Te redirige a la vista de logeo "Login".-->
-            <div class="mt-6 mb-2 flex text-right justify-between mx-3">
-              <div class="text-base leading-5">
-                <span class="font-medium">¿Ya tienes cuenta?</span>
-                <router-link
-                  :to="'/login/' + routes"
-                  class="font-bold text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
-                >¡Inicia sesión!</router-link>
+            <!-- Fin de sección de ingreso de correo. -->
+            <!-- Sección de ingreso de contraseña.
+            Solicita una contraseña y la valida.-->
+            <div class="sm:col-span-2">
+              <label
+                for="password"
+                class="block text-sm font-medium leading-5 text-gray-700"
+              >Contraseña</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  id="password"
+                  placeholder="Ingrese una contraseña"
+                  v-model="password"
+                  type="password"
+                  required
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
               </div>
+              <small v-if="error_password" class="text-red-600">
+                {{
+                error_password
+                }}
+              </small>
+              <small v-if="vacio_pass" class="text-yellow-600">
+                {{
+                vacio_pass
+                }}
+              </small>
             </div>
-            <!-- Fin de sección de logeo. -->
+            <!-- Fin de sección ingresar contraseña. -->
+            <!-- Solicita repetir la contraseña y la valida. -->
+            <div class="sm:col-span-2">
+              <label
+                for="repeat_password"
+                class="block text-sm font-medium leading-5 text-gray-700"
+              >Repetir Contraseña</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  id="repeat_password"
+                  v-model="repeat_password"
+                  placeholder="Verifique su contraseña"
+                  type="password"
+                  required
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+              </div>
+              <small v-if="error_repeat_password" class="text-red-600">
+                {{
+                error_repeat_password
+                }}
+              </small>
+              <small v-if="vacio_repeat_pass" class="text-yellow-600">
+                {{
+                vacio_repeat_pass
+                }}
+              </small>
+            </div>
+            <!-- Fin de sección de ingreso de repet contraseña. -->
           </div>
+
+          <div class="mt-8">
+            <span class="block w-2/3 mx-auto rounded-md shadow-sm">
+              <AnimatedButton
+                content="Registrar"
+                color="gradiente"
+                @onClick="submitSignup()"
+                :isLoading="buttonLoading"
+              ></AnimatedButton>
+            </span>
+          </div>
+
+          <div class="mt-4 flex text-center justify-between">
+            <div class="text-sm leading-5">
+              <span
+                class="font-medium"
+              >Al registrarte estás aceptando los términos y condiciones de <i>SirwiyQuy</i></span>
+            </div>
+          </div>
+          <!-- Sección de logeo.
+          Te redirige a la vista de logeo "Login".-->
+          <div class="mt-6 mb-2 flex text-right justify-between mx-3">
+            <div class="text-base leading-5">
+              <span class="font-medium">¿Ya tienes cuenta?</span>
+              <router-link
+                :to="'/login/' + routes"
+                class="font-bold text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+              >¡Inicia sesión!</router-link>
+            </div>
+          </div>
+          <!-- Fin de sección de logeo. -->
         </div>
+      </div>
     </main>
   </Visitor>
 </template>

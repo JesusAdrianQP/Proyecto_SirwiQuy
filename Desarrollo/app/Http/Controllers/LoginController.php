@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginFormRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\ResetRequest;
 use Illuminate\Http\Request;
 use App\DataBase\UserDataMaster;
 
@@ -26,9 +27,7 @@ class LoginController extends Controller
         UserDataMaster::closesesion($request);
     }
 
-    //Funcion que genera mi enlace
-    public function reset(ResetRequest $request)
-    {
+    public function reset(ResetRequest $request){
         return UserDataMaster::generatereset($request);
     }
  

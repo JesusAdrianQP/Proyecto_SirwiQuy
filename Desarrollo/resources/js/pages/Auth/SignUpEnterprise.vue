@@ -642,6 +642,7 @@ export default {
       }
       else
       {
+        this.hasError = false;
         this.error_cardNumber = "";
         this.vacio_cardNumber = "";
       }

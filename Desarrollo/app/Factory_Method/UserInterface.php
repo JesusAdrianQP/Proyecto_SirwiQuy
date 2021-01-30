@@ -18,7 +18,7 @@ interface UserInterface
 
     public static function register($parameter);
 
-    public static function list_details_email($parameter, $par2); 
+    public static function updateRecover($parameter, $par2); 
     
-    public static function validationreset($parameter);
+    // public static function validationreset($parameter);
 }

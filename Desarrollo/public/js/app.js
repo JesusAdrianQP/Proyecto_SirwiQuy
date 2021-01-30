@@ -4784,6 +4784,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -4898,11 +4901,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//
-//
-//
-//
-//
 //
 //
 //
@@ -5467,29 +5465,28 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
-/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
+/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
 
 
 
 
 
-
-
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5764,22 +5761,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Login",
   components: {
-    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_8__["default"],
-    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_6__["default"],
+    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   data: function data() {
     return {
-      hasError: false,
       openModal: false,
       buttonLoading: false,
       isEnterprise: false,
       routes: "",
       identifier: "",
-      loger: "",
-      password: "",
+      loger: '',
+      password: '',
       email_recover: '',
-      vacio_loger: "",
-      vacio_pass: "",
+      vacio_loger: '',
+      vacio_pass: '',
+      error_pass: '',
       vacio_email2: '',
       error_email2: ''
     };
@@ -5790,8 +5787,8 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee$(_context) {
+    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -5812,129 +5809,140 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     validateRouter: function validateRouter(id) {
+      //Se crea condicionales para verificar de donde proviene
+      //Una vez cargado no se cambiara el valor hasta que se recarge o vaya a otra pestaña diferente
+      switch (id) {
+        case "customer":
+          this.identifier = "cliente";
+          this.routes = "customer";
+          this.isEnterprise = false;
+          break;
+
+        case "employee":
+          this.identifier = "trabajador";
+          this.routes = "employee";
+          this.isEnterprise = false;
+          break;
+
+        case "enterprise":
+          this.identifier = "empresa";
+          this.isEnterprise = true;
+          break;
+
+        default:
+          this.$router.push("/**");
+          break;
+      }
+
+      ;
+    },
+    change: function change() {
+      if (this.identifier == "cliente") {
+        this.validateRouter("customer");
+      } else if (this.identifier == "trabajador") {
+        this.validateRouter("employee");
+      } else if (this.identifier == "empresa") {
+        this.validateRouter("enterprise");
+      }
+    },
+    validateEmail: function validateEmail() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee2$(_context2) {
+      var correo = function correo() {
+        return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this2.email_recover);
+      };
+
+      if (this.email_recover == "") {
+        this.error_email2 = "";
+        this.vacio_email2 = "";
+        return;
+      }
+
+      if (correo(this.email_recover) == false) {
+        this.error_email2 = "Correo no válido";
+        this.vacio_email2 = "";
+      } else {
+        this.error_email2 = "";
+        this.vacio_email2 = "";
+      }
+    },
+    submitLogin: function submitLogin() {
+      var _this3 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+        var _boolean, response, er, mensaje;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.t0 = id;
-                _context2.next = _context2.t0 === "customer" ? 3 : _context2.t0 === "employee" ? 7 : _context2.t0 === "enterprise" ? 11 : 14;
-                break;
+                _this3.validatePassword();
 
-              case 3:
-                _this2.identifier = "cliente";
-                _this2.routes = "customer";
-                _this2.isEnterprise = false;
-                return _context2.abrupt("break", 16);
+                _boolean = false;
 
-              case 7:
-                _this2.identifier = "trabajador";
-                _this2.routes = "employee";
-                _this2.isEnterprise = false;
-                return _context2.abrupt("break", 16);
-
-              case 11:
-                _this2.identifier = "empresa";
-                _this2.isEnterprise = true;
-                return _context2.abrupt("break", 16);
-
-              case 14:
-                _this2.$router.push("/**");
-
-                return _context2.abrupt("break", 16);
-
-              case 16:
-                ;
-
-              case 17:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
-    },
-    change: function change() {
-      var _this3 = this;
-
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee3() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                if (_this3.identifier == "cliente") {
-                  _this3.validateRouter("customer");
-                } else if (_this3.identifier == "trabajador") {
-                  _this3.validateRouter("employee");
-                } else if (_this3.identifier == "empresa") {
-                  _this3.validateRouter("enterprise");
+                if (_this3.loger == "") {
+                  _this3.vacio_loger = "Campo obligatorio";
+                  _boolean = true;
+                } else {
+                  _this3.vacio_loger = "";
                 }
 
-              case 1:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3);
-      }))();
-    },
-    submitLogin: function submitLogin() {
-      var _this4 = this;
+                if (_this3.password == "" && _this3.error_pass == "") {
+                  _this3.vacio_pass = "Campo obligatorio";
+                  _this3.error_pass = "";
+                  _boolean = true;
+                } else if (_this3.password != "" && _this3.error_pass != "") {
+                  _this3.vacio_pass = "";
+                  _boolean = true;
+                } else if (_this3.password != "" && _this3.error_pass == "") {
+                  _this3.vacio_pass = "";
+                  _this3.error_pass = "";
+                }
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee4() {
-        var response, er, mensaje;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                _this4.validateSubmit();
-
-                if (!_this4.hasError) {
-                  _context4.next = 3;
+                if (!(_boolean == true)) {
+                  _context2.next = 6;
                   break;
                 }
 
-                return _context4.abrupt("return");
+                return _context2.abrupt("return");
 
-              case 3:
-                _this4.buttonLoading = true; //Conexión con la lógica de negocio
+              case 6:
+                _this3.buttonLoading = true; //Conexión con la lógica de negocio
                 //Se pasa como parametros el loger (usario o correo)
                 //identity -> tipo de identificador para el usuario
                 //password -> contraseña
 
-                _context4.next = 6;
-                return _api__WEBPACK_IMPORTED_MODULE_7__["default"].post("/login", {
-                  identity: _this4.identifier,
-                  loger: _this4.loger,
-                  password: _this4.password
+                _context2.next = 9;
+                return _api__WEBPACK_IMPORTED_MODULE_5__["default"].post("/login", {
+                  identity: _this3.identifier,
+                  loger: _this3.loger,
+                  password: _this3.password
                 });
 
-              case 6:
-                response = _context4.sent;
+              case 9:
+                response = _context2.sent;
 
                 if (response.ok) {
-                  _context4.next = 13;
+                  _context2.next = 16;
                   break;
                 }
 
-                _this4.buttonLoading = false;
+                _this3.buttonLoading = false;
                 er = response.error.errors;
                 mensaje = "Error desconocido.";
                 if (er.hasOwnProperty("mail")) mensaje = er.mail[0];else if (er.hasOwnProperty("user")) mensaje = er.user[0];else mensaje = er.pass[0];
-                return _context4.abrupt("return", _this4.$toast.open({
+                return _context2.abrupt("return", _this3.$toast.open({
                   message: mensaje,
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
-              case 13:
+              case 16:
                 //Guardo token de acceso
                 localStorage.setItem('token', response.data.data.replace(/ /g, "")); //Si todo esta correcto: 
 
-                _this4.$toast.open({
+                _this3.$toast.open({
                   message: "Bienvenido a su sesión",
                   type: "success",
                   duration: 8000,
@@ -5942,128 +5950,160 @@ __webpack_require__.r(__webpack_exports__);
                 }); //Concedo nivel de acceso y enrutamiento dependiendo del usuario
 
 
-                if (_this4.identifier == "trabajador" || _this4.identifier == "empresa") {
+                if (_this3.identifier == "trabajador" || _this3.identifier == "empresa") {
                   //Sacamos nivel de acceso del usuario
-                  if (_this4.identifier == "trabajador") {
+                  if (_this3.identifier == "trabajador") {
                     localStorage.setItem('e_level', "employee");
 
-                    _this4.$router.push("/worker/profile/edit");
+                    _this3.$router.push("/worker/profile/edit");
                   }
 
-                  if (_this4.identifier == "empresa") {
+                  if (_this3.identifier == "empresa") {
                     localStorage.setItem('e_level', "enterprise");
 
-                    _this4.$router.push("/supplier");
+                    _this3.$router.push("/supplier");
                   }
                 } else {
                   localStorage.setItem('e_level', "customer");
-                  if (localStorage.getItem('suma') != null) _this4.$router.push("/request/form/service");else if (localStorage.getItem('e_bandera') != null) {
+                  if (localStorage.getItem('suma') != null) _this3.$router.push("/request/form/service");else if (localStorage.getItem('e_bandera') != null) {
                     localStorage.removeItem('e_bandera');
 
-                    _this4.$router.push("/customer/payment/link=" + localStorage.getItem('e_link') + "/response=" + localStorage.getItem('e_response'));
-                  } else _this4.$router.push("/");
+                    _this3.$router.push("/customer/payment/link=" + localStorage.getItem('e_link') + "/response=" + localStorage.getItem('e_response'));
+                  } else _this3.$router.push("/");
                 }
 
-              case 16:
+              case 19:
               case "end":
-                return _context4.stop();
+                return _context2.stop();
             }
           }
-        }, _callee4);
+        }, _callee2);
       }))();
     },
     ResetPass: function ResetPass() {
-      var _this5 = this;
+      var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee5() {
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
         var response, er, mensaje;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee5$(_context5) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context5.prev = _context5.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
-                //Valido campo correo
-                if (_this5.hasError == true) _this5.hasError = true;else _this5.hasError = false; //Validaciones del campo Email
+                _this4.validateEmail();
 
-                if (_this5.email_recover == "") {
-                  _this5.hasError = true;
-                  _this5.vacio_email2 = "Campo necesario";
-                  _this5.error_email2 = "";
-                } else if (!_this5.email_recover.includes("@") || !_this5.email_recover.includes(".") || _this5.email_recover.length < 5) {
-                  _this5.hasError = true;
-                  _this5.vacio_email2 = "";
-                  _this5.error_email2 = "Correo no válido";
-                } else {
-                  _this5.error_email2 = "";
-                  _this5.vacio_email2 = "";
-                }
-
-                _this5.openModal = false; //Post para verificar existencia y enviar correo
-
-                _context5.next = 5;
-                return _api__WEBPACK_IMPORTED_MODULE_7__["default"].post("/reset", {
-                  identity: _this5.identifier,
-                  email: _this5.email_recover
-                });
-
-              case 5:
-                response = _context5.sent;
-                _this5.vacio_email2 = '';
-                _this5.error_email2 = '';
-                _this5.email_recover = ''; //Si hay errores se identifica que tipo
-
-                if (response.ok) {
-                  _context5.next = 18;
+                if (!(_this4.email_recover == "" && _this4.error_email2 == "")) {
+                  _context3.next = 7;
                   break;
                 }
 
-                _this5.openModal = false;
-                _this5.vacio_email2 = '';
-                _this5.error_email2 = '';
-                _this5.email_recover = '';
+                _this4.vacio_email2 = "Campo necesario";
+                _this4.error_email2 = "";
+                return _context3.abrupt("return");
+
+              case 7:
+                if (!(_this4.email_recover != "" && _this4.error_email2 != "")) {
+                  _context3.next = 12;
+                  break;
+                }
+
+                _this4.vacio_email2 = "";
+                return _context3.abrupt("return");
+
+              case 12:
+                if (_this4.email_recover != "" && _this4.error_email2 == "") {
+                  _this4.error_email2 = "";
+                  _this4.vacio_email2 = "";
+                }
+
+              case 13:
+                _this4.openModal = false; //Post para verificar existencia y enviar correo
+
+                _context3.next = 16;
+                return _api__WEBPACK_IMPORTED_MODULE_5__["default"].post("/reset", {
+                  identity: _this4.identifier,
+                  email: _this4.email_recover
+                });
+
+              case 16:
+                response = _context3.sent;
+                _this4.vacio_email2 = '';
+                _this4.error_email2 = '';
+                _this4.email_recover = '';
+
+                if (response.ok) {
+                  _context3.next = 25;
+                  break;
+                }
+
                 er = response.error.errors;
                 mensaje = "Error desconocido";
                 if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
-                return _context5.abrupt("return", _this5.$toast.open({
+                return _context3.abrupt("return", _this4.$toast.open({
                   message: mensaje,
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
-              case 18:
-                _this5.$toast.open({
-                  message: response.data.data.info[0],
-                  type: "info",
+              case 25:
+                _this4.$toast.open({
+                  message: response.data.data.success[0],
+                  type: "success",
                   duration: 8000,
                   dismissible: true
                 });
 
-              case 19:
+              case 26:
               case "end":
-                return _context5.stop();
+                return _context3.stop();
             }
           }
-        }, _callee5);
+        }, _callee3);
       }))();
     },
-    validateSubmit: function validateSubmit() {
-      this.hasError = false; //Validaciones de campo email vuejs
+    validatePassword: function validatePassword() {
+      if (this.password.length == 0) {
+        this.error_pass = "";
+        this.vacio_pass = "";
+        return;
+      }
 
-      if (this.loger == "") {
-        this.hasError = true;
-        this.vacio_loger = "Campo obligatorio";
-      } else {
-        this.vacio_loger = "";
-      } //Validaciones de campo pass vuejs
+      if (this.password.length >= 8) {
+        this.vacio_pass = "";
+        var mayuscula = false;
+        var minuscula = false;
+        var numero = false;
 
+        for (var i = 0; i < this.password.length; i++) {
+          if (this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) {
+            mayuscula = true;
+          } else if (this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) {
+            minuscula = true;
+          } else if (this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) {
+            numero = true;
+          }
+        }
 
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo obligatorio";
-      } else if (this.password.length < 5) {
-        this.hasError = true;
-        this.vacio_pass = "Su contraseña no cumple los parámetros.";
-      } else {
+        if (mayuscula == false) {
+          this.error_pass = "Su contraseña debe tener al menos una letra mayuscula";
+          return;
+        }
+
+        if (minuscula == false) {
+          this.error_pass = "Su contraseña debe tener al menos una letra minuscula";
+          return;
+        }
+
+        if (numero == false) {
+          this.error_pass = "Su contraseña debe tener al menos un número";
+          return;
+        }
+
+        if (mayuscula == true && minuscula == true && numero == true) {
+          this.error_pass = "";
+        }
+      } else if (this.password.length < 8 && this.password.length > 0) {
+        this.error_pass = "La longitud mínima es de 8 caracteres";
         this.vacio_pass = "";
       }
     }
@@ -6101,9 +6141,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//
-//
-//
 //
 //
 //
@@ -7179,6 +7216,7 @@ __webpack_require__.r(__webpack_exports__);
                   _this2.vacio_cardNumber = "";
                   _this2.cardNumber = _this2.cardNumber.replace(/\W/gi, '').replace(/\b(\d{3})(\d{3})(\d{12})(\d{2})\b/, '$1-$2-$3-$4').trim();
                 } else {
+                  _this2.hasError = false;
                   _this2.error_cardNumber = "";
                   _this2.vacio_cardNumber = "";
                 }
@@ -7650,13 +7688,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -12019,27 +12050,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -46938,13 +46948,13 @@ var render = function() {
           "main",
           {
             staticClass:
-              "flex-1 relative z-0 overflow-y-auto focus:outline-none",
+              "flex-1 relative z-0 overflow-y-auto focus:outline-none contenedor",
             attrs: { tabindex: "0" }
           },
           [
             _c(
               "div",
-              { staticClass: "pt-2 relative min-h-full pb-12 md:pt-6" },
+              { staticClass: "pt-2 relative pb-12 md:pt-6 min-h-screen" },
               [
                 _c(
                   "div",
@@ -46961,14 +46971,14 @@ var render = function() {
                 _c(
                   "div",
                   { staticClass: "max-w-7xl mx-auto px-4 sm:px-6 md:px-8" },
-                  [_c("div", { staticClass: "py-4" }, [_vm._t("default")], 2)]
-                ),
-                _vm._v(" "),
-                _c("Footer")
-              ],
-              1
-            )
-          ]
+                  [_c("div", { staticClass: "py-8" }, [_vm._t("default")], 2)]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("Footer")
+          ],
+          1
         )
       ])
     ]
@@ -47090,14 +47100,6 @@ var render = function() {
           title: "Servicios",
           url: "/supplier/services",
           icon: { icon: "pencil-alt", solid: false }
-        }
-      }),
-      _vm._v(" "),
-      _c("SideBarOption", {
-        attrs: {
-          title: "Clientes",
-          url: "/supplier/blank",
-          icon: { icon: "users", solid: false }
         }
       }),
       _vm._v(" "),
@@ -47381,10 +47383,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
+      "footer",
       {
         staticClass:
-          "w-full bg-primary-600 text-white text-center h-12 sm:pt-3 pt-1 absolute bottom-0 left-0 right-0"
+          "w-full bg-primary-600 text-white text-center h-12 py-1 sm:py-3 inset-x-0 bottom-0"
       },
       [
         _c("p", { staticClass: "text-base" }, [
@@ -48222,11 +48224,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("Visitor", [
-    _c("main", { staticClass: "w-full flex " }, [
+    _c("main", { staticClass: "w-full flex sm:h-screen" }, [
       _c("div", { staticClass: "w-1/2 hidden lg:flex  bg-gray-100" }, [
         _c("img", {
           staticClass: "object-cover h-auto",
-          staticStyle: { "clip-path": "circle(67.9% at 28% 49%)" },
+          staticStyle: {
+            "clip-path": "polygon(0 0, 100% 0%, 95% 100%, 0% 100%)"
+          },
           attrs: {
             alt: "Portada",
             src: __webpack_require__(/*! ../../../assets/imgLogin.jpg */ "./resources/assets/imgLogin.jpg")
@@ -48234,23 +48238,26 @@ var render = function() {
         })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "w-full lg:w-1/2" }, [
+      _c("div", { staticClass: "w-full lg:w-1/2 py-12 sm:py-0 bg-gray-100" }, [
         _c(
           "div",
-          { staticClass: "flex flex-col justify-center pt-2 pb-4 bg-gray-100" },
+          {
+            staticClass:
+              "flex sm:h-screen flex-col justify-center pt-2 pb-4 bg-gray-100"
+          },
           [
             _c(
               "div",
               {
                 staticClass:
-                  "md:text-center md:flex-col md:flex md:justify-center md:items-center lg:mt-10"
+                  "md:text-center md:flex-col md:flex md:justify-center md:items-center"
               },
               [
                 _c(
                   "p",
                   {
                     staticClass:
-                      "uppercase px-5 mt-4 text-3xl md:text-4xl font-extrabold text-gray-900"
+                      "uppercase px-5 text-3xl md:text-4xl font-extrabold text-gray-900"
                   },
                   [_vm._v("Bienvenido")]
                 )
@@ -48259,10 +48266,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              {
-                staticClass:
-                  "sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8 lg:mb-14"
-              },
+              { staticClass: "sm:mx-auto sm:w-full sm:max-w-md mt-4" },
               [
                 _c(
                   "div",
@@ -48522,6 +48526,9 @@ var render = function() {
                                 },
                                 domProps: { value: _vm.password },
                                 on: {
+                                  change: function($event) {
+                                    return _vm.validatePassword()
+                                  },
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
@@ -48541,6 +48548,16 @@ var render = function() {
                                     "\n                "
                                 )
                               ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.error_pass
+                            ? _c("small", { staticClass: "text-red-600" }, [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(_vm.error_pass) +
+                                    "\n                "
+                                )
+                              ])
                             : _vm._e()
                         ])
                       ]
@@ -48548,7 +48565,10 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "mt-6 flex items-center justify-between" },
+                      {
+                        staticClass:
+                          "mt-2 ml-2 sm:ml-0 flex items-center justify-between"
+                      },
                       [
                         _c("div", { staticClass: "text-sm leading-5" }, [
                           _c(
@@ -48613,7 +48633,7 @@ var render = function() {
                           "div",
                           {
                             staticClass:
-                              "fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-xl sm:w-full sm:p-6",
+                              "w-68 fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-xl sm:w-full sm:p-6",
                             attrs: {
                               role: "dialog",
                               "aria-modal": "true",
@@ -48676,10 +48696,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              {
-                                staticClass:
-                                  "sm:flex sm:items-start justify-center"
-                              },
+                              { staticClass: "sm:flex sm:items-start" },
                               [
                                 _c(
                                   "h2",
@@ -48698,14 +48715,14 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 flex flex-wrap"
+                                    "grid grid-cols-3 sm:gap-8 col-span-3 -my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
                                 },
                                 [
                                   _c(
                                     "div",
                                     {
                                       staticClass:
-                                        "mt-1 rounded-md w-full md:w-2/5"
+                                        "col-span-3 sm:col-span-1 mt-1 rounded-md w-full"
                                     },
                                     [
                                       _c(
@@ -48778,16 +48795,11 @@ var render = function() {
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _c("div", {
-                                    staticClass:
-                                      "hidden md:block w-full py-3 md:w-1/5 justify-center all:justify-center text-center"
-                                  }),
-                                  _vm._v(" "),
                                   _c(
                                     "div",
                                     {
                                       staticClass:
-                                        "mt-3 md:mt-1 rounded-md w-full md:w-2/5"
+                                        "col-span-3 sm:col-span-2 mt-3 md:mt-1 rounded-md w-full"
                                     },
                                     [
                                       _c("div", { staticClass: "shadow-sm" }, [
@@ -48814,12 +48826,16 @@ var render = function() {
                                             "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                                           attrs: {
                                             id: "email_recover",
-                                            placeholder: "Ingrese su correo"
+                                            placeholder: "Ingrese su correo",
+                                            type: "text"
                                           },
                                           domProps: {
                                             value: _vm.email_recover
                                           },
                                           on: {
+                                            change: function($event) {
+                                              return _vm.validateEmail()
+                                            },
                                             input: function($event) {
                                               if ($event.target.composing) {
                                                 return
@@ -48852,26 +48868,30 @@ var render = function() {
                               )
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "justify-center mt-6 " }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
-                                  attrs: { type: "submit" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.ResetPass()
+                            _c(
+                              "div",
+                              { staticClass: "text-center sm:text-right mt-6" },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out",
+                                    attrs: { type: "submit" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.ResetPass()
+                                      }
                                     }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                    Enviar\n                  "
-                                  )
-                                ]
-                              )
-                            ])
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    Enviar\n                  "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
                           ]
                         )
                       ]
@@ -48978,52 +48998,65 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("Visitor", [
-    _c("div", { staticClass: "bg-gray-100" }, [
-      _c("main", {}, [
+    _c(
+      "main",
+      { staticClass: "flex flex-col justify-center pt-2 pb-4 bg-gray-100" },
+      [
         _c(
           "div",
           {
             staticClass:
-              "bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8"
+              "md:text-center md:flex-col md:flex md:justify-center md:items-center"
           },
           [
-            _c("div", { staticClass: "sm:mx-auto sm:w-full sm:max-w-md" }, [
-              _c("img", {
-                staticClass: "mx-auto h-36 w-auto",
-                attrs: {
-                  src: __webpack_require__(/*! ../../../assets/illustrations/sign-up.png */ "./resources/assets/illustrations/sign-up.png"),
-                  alt: "Workflow"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900"
-                },
-                [
-                  _vm._v(
-                    "\n            Recuperar Sesión como " +
-                      _vm._s(_vm.identifier)
-                  ),
-                  _c("br")
-                ]
-              )
-            ]),
+            _c("img", {
+              staticClass: "h-48 sm:h-56 px-6 w-auto mt-4",
+              attrs: {
+                src: __webpack_require__(/*! ../../../assets/illustrations/forgot-pass.png */ "./resources/assets/illustrations/forgot-pass.png"),
+                alt: "forgot-pass"
+              }
+            }),
             _vm._v(" "),
             _c(
+              "p",
+              {
+                staticClass:
+                  "uppercase px-5 mt-4 text-2xl md:text-3xl font-extrabold text-gray-900"
+              },
+              [_vm._v("Recuperar Sesión ")]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "px-5 text-sm" }, [
+              _vm._v("Estas recuperando sesión como "),
+              _c("b", { staticClass: "text-base2 italic" }, [
+                _vm._v(_vm._s(_vm.identifier))
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8"
+          },
+          [
+            _c(
               "div",
-              { staticClass: "mt-6 sm:mx-auto sm:w-full sm:max-w-md" },
+              {
+                staticClass:
+                  "bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10"
+              },
               [
                 _c(
                   "div",
                   {
                     staticClass:
-                      "bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10"
+                      "grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1"
                   },
                   [
-                    _c("div", { staticClass: "mt-2" }, [
+                    _c("div", { staticClass: "sm:col-span-2" }, [
                       _c(
                         "label",
                         {
@@ -49045,12 +49078,11 @@ var render = function() {
                             }
                           ],
                           staticClass:
-                            "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                           attrs: {
                             id: "email",
-                            placeholder: "Ingrese un correo electronico",
-                            type: "email",
-                            required: ""
+                            placeholder: "Ingrese su correo electronico",
+                            type: "text"
                           },
                           domProps: { value: _vm.email },
                           on: {
@@ -49069,7 +49101,7 @@ var render = function() {
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.error_email) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e(),
@@ -49079,14 +49111,14 @@ var render = function() {
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.vacio_email) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e()
                     ]),
                     _vm._v(" "),
                     _vm.identifier == "trabajador"
-                      ? _c("div", { staticClass: "mt-2" }, [
+                      ? _c("div", { staticClass: "sm:col-span-2" }, [
                           _c(
                             "label",
                             {
@@ -49094,14 +49126,12 @@ var render = function() {
                                 "block text-sm font-medium leading-5 text-gray-700",
                               attrs: { for: "input_dni" }
                             },
-                            [_vm._v("\n                DNI\n              ")]
+                            [_vm._v("DNI")]
                           ),
                           _vm._v(" "),
                           _c(
                             "div",
-                            {
-                              staticClass: "mt-1 relative rounded-md shadow-sm"
-                            },
+                            { staticClass: "mt-1 rounded-md shadow-sm" },
                             [
                               _c("input", {
                                 directives: [
@@ -49116,10 +49146,17 @@ var render = function() {
                                   "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                                 attrs: {
                                   placeholder: "Ingrese su DNI",
-                                  id: "input_dni"
+                                  id: "input_dni",
+                                  type: "text",
+                                  inputmode: "numeric",
+                                  onkeypress:
+                                    "return event.charCode >= 48 && event.charCode <= 57",
+                                  maxlength: "8",
+                                  pattern: "[0-9]*"
                                 },
                                 domProps: { value: _vm.dni },
                                 on: {
+                                  change: _vm.validateDNI,
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
@@ -49133,20 +49170,28 @@ var render = function() {
                           _vm._v(" "),
                           _vm.error_dni
                             ? _c("small", { staticClass: "text-red-600" }, [
-                                _vm._v(_vm._s(_vm.error_dni))
+                                _vm._v(
+                                  "\n            " +
+                                    _vm._s(_vm.error_dni) +
+                                    "\n            "
+                                )
                               ])
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.vacio_dni
                             ? _c("small", { staticClass: "text-yellow-600" }, [
-                                _vm._v(_vm._s(_vm.vacio_dni))
+                                _vm._v(
+                                  "\n            " +
+                                    _vm._s(_vm.vacio_dni) +
+                                    "\n            "
+                                )
                               ])
                             : _vm._e()
                         ])
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.identifier == "empresa"
-                      ? _c("div", { staticClass: "mt-2" }, [
+                      ? _c("div", { staticClass: "sm:col-span-2" }, [
                           _c(
                             "label",
                             {
@@ -49159,9 +49204,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "div",
-                            {
-                              staticClass: "mt-1 relative rounded-md shadow-sm"
-                            },
+                            { staticClass: "mt-1 rounded-md shadow-sm" },
                             [
                               _c("input", {
                                 directives: [
@@ -49176,10 +49219,17 @@ var render = function() {
                                   "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                                 attrs: {
                                   placeholder: "Ingrese su RUC",
-                                  id: "input_ruc"
+                                  type: "text",
+                                  id: "input_ruc",
+                                  inputmode: "numeric",
+                                  onkeypress:
+                                    "return event.charCode >= 48 && event.charCode <= 57",
+                                  maxlength: "11",
+                                  pattern: "[0-9]*"
                                 },
                                 domProps: { value: _vm.ruc },
                                 on: {
+                                  change: _vm.validateRUC,
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
@@ -49194,9 +49244,9 @@ var render = function() {
                           _vm.error_ruc
                             ? _c("small", { staticClass: "text-red-600" }, [
                                 _vm._v(
-                                  "\n                " +
+                                  "\n              " +
                                     _vm._s(_vm.error_ruc) +
-                                    "\n                "
+                                    "\n            "
                                 )
                               ])
                             : _vm._e(),
@@ -49204,16 +49254,16 @@ var render = function() {
                           _vm.vacio_ruc
                             ? _c("small", { staticClass: "text-yellow-600" }, [
                                 _vm._v(
-                                  "\n                " +
+                                  "\n              " +
                                     _vm._s(_vm.vacio_ruc) +
-                                    "\n                "
+                                    "\n            "
                                 )
                               ])
                             : _vm._e()
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    _c("div", { staticClass: "mt-2" }, [
+                    _c("div", { staticClass: "sm:col-span-2" }, [
                       _c(
                         "label",
                         {
@@ -49235,7 +49285,7 @@ var render = function() {
                             }
                           ],
                           staticClass:
-                            "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                           attrs: {
                             id: "password",
                             placeholder: "Ingrese una contraseña",
@@ -49244,6 +49294,9 @@ var render = function() {
                           },
                           domProps: { value: _vm.password },
                           on: {
+                            change: function($event) {
+                              return _vm.validatePassword()
+                            },
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
@@ -49259,7 +49312,7 @@ var render = function() {
                             _vm._v(
                               "\n                " +
                                 _vm._s(_vm.error_password) +
-                                "\n                "
+                                "\n              "
                             )
                           ])
                         : _vm._e(),
@@ -49269,13 +49322,13 @@ var render = function() {
                             _vm._v(
                               "\n                " +
                                 _vm._s(_vm.vacio_pass) +
-                                "\n                "
+                                "\n              "
                             )
                           ])
                         : _vm._e()
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "mt-2" }, [
+                    _c("div", { staticClass: "sm:col-span-2" }, [
                       _c(
                         "label",
                         {
@@ -49297,7 +49350,7 @@ var render = function() {
                             }
                           ],
                           staticClass:
-                            "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                           attrs: {
                             id: "repeat_password",
                             placeholder: "Verifique su contraseña",
@@ -49306,6 +49359,9 @@ var render = function() {
                           },
                           domProps: { value: _vm.repeat_password },
                           on: {
+                            change: function($event) {
+                              return _vm.validatePassword()
+                            },
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
@@ -49321,7 +49377,7 @@ var render = function() {
                             _vm._v(
                               "\n                " +
                                 _vm._s(_vm.error_repeat_password) +
-                                "\n                "
+                                "\n              "
                             )
                           ])
                         : _vm._e(),
@@ -49331,41 +49387,41 @@ var render = function() {
                             _vm._v(
                               "\n                " +
                                 _vm._s(_vm.vacio_repeat_pass) +
-                                "\n                "
+                                "\n              "
                             )
                           ])
                         : _vm._e()
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-6" }, [
-                      _c(
-                        "span",
-                        { staticClass: "block w-full rounded-md shadow-sm" },
-                        [
-                          _c("AnimatedButton", {
-                            attrs: {
-                              content: "Actualizar",
-                              color: "primary",
-                              isLoading: _vm.buttonLoading
-                            },
-                            on: {
-                              onClick: function($event) {
-                                return _vm.submitPass()
-                              }
-                            }
-                          })
-                        ],
-                        1
-                      )
                     ])
                   ]
-                )
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-8 mb-8" }, [
+                  _c(
+                    "span",
+                    { staticClass: "block w-2/3 mx-auto rounded-md shadow-sm" },
+                    [
+                      _c("AnimatedButton", {
+                        attrs: {
+                          content: "Actualizar",
+                          color: "gradiente",
+                          isLoading: _vm.buttonLoading
+                        },
+                        on: {
+                          onClick: function($event) {
+                            return _vm.submitPass()
+                          }
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ])
               ]
             )
           ]
         )
-      ])
-    ])
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -50961,9 +51017,9 @@ var render = function() {
                       _vm.error_username
                         ? _c("small", { staticClass: "text-red-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.error_username) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e(),
@@ -50971,9 +51027,9 @@ var render = function() {
                       _vm.vacio_username
                         ? _c("small", { staticClass: "text-yellow-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.vacio_username) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e()
@@ -51023,9 +51079,9 @@ var render = function() {
                       _vm.error_email
                         ? _c("small", { staticClass: "text-red-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.error_email) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e(),
@@ -51033,9 +51089,9 @@ var render = function() {
                       _vm.vacio_email
                         ? _c("small", { staticClass: "text-yellow-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.vacio_email) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e()
@@ -51085,9 +51141,9 @@ var render = function() {
                       _vm.error_password
                         ? _c("small", { staticClass: "text-red-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.error_password) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e(),
@@ -51095,9 +51151,9 @@ var render = function() {
                       _vm.vacio_pass
                         ? _c("small", { staticClass: "text-yellow-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.vacio_pass) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e()
@@ -51147,9 +51203,9 @@ var render = function() {
                       _vm.error_repeat_password
                         ? _c("small", { staticClass: "text-red-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.error_repeat_password) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e(),
@@ -51157,9 +51213,9 @@ var render = function() {
                       _vm.vacio_repeat_pass
                         ? _c("small", { staticClass: "text-yellow-600" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n              " +
                                 _vm._s(_vm.vacio_repeat_pass) +
-                                "\n              "
+                                "\n            "
                             )
                           ])
                         : _vm._e()
@@ -56738,13 +56794,13 @@ var render = function() {
                         { staticClass: "text-lg font-semibold text-center" },
                         [
                           _vm._v(
-                            "\n              " +
+                            "\n            " +
                               _vm._s(_vm.name) +
                               " " +
                               _vm._s(_vm.lastnamep) +
                               " " +
                               _vm._s(_vm.lastnamem) +
-                              "\n            "
+                              "\n          "
                           )
                         ]
                       ),
@@ -56821,9 +56877,9 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                " +
+                                "\n                  " +
                                   _vm._s(_vm.razon_social) +
-                                  "\n              "
+                                  "\n                "
                               )
                             ]
                           ),
@@ -56870,13 +56926,13 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                " +
+                                "\n                  " +
                                   _vm._s(_vm.name) +
                                   " " +
                                   _vm._s(_vm.lastnamep) +
                                   " " +
                                   _vm._s(_vm.lastnamem) +
-                                  "\n              "
+                                  "\n                "
                               )
                             ]
                           ),
@@ -56897,7 +56953,7 @@ var render = function() {
           _c(
             "h2",
             { staticClass: "text-xl font-semibold text-gray-900 mt-4" },
-            [_vm._v("\n        RESUMEN ESTADÍSTICO\n      ")]
+            [_vm._v("\n      RESUMEN ESTADÍSTICO\n    ")]
           ),
           _vm._v(" "),
           _c(
@@ -56943,7 +56999,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                    Clientes\n                  "
+                                  "\n                      Clientes\n                    "
                                 )
                               ]
                             ),
@@ -56957,7 +57013,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                      0\n                    "
+                                    "\n                        0\n                      "
                                   )
                                 ]
                               )
@@ -57011,7 +57067,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                    Servicios\n                  "
+                                  "\n                      Servicios\n                    "
                                 )
                               ]
                             ),
@@ -57025,9 +57081,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                      " +
+                                    "\n                        " +
                                       _vm._s(_vm.num_service) +
-                                      "\n                    "
+                                      "\n                      "
                                   )
                                 ]
                               )
@@ -57080,7 +57136,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                    Trabajadores\n                  "
+                                      "\n                      Trabajadores\n                    "
                                     )
                                   ]
                                 ),
@@ -57097,9 +57153,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                      " +
+                                          "\n                        " +
                                             _vm._s(_vm.num_subemployees) +
-                                            "\n                    "
+                                            "\n                      "
                                         )
                                       ]
                                     )
@@ -57151,7 +57207,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                    Evaluaciones\n                  "
+                                  "\n                      Evaluaciones\n                    "
                                 )
                               ]
                             ),
@@ -57165,7 +57221,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                      0\n                    "
+                                    "\n                        0\n                      "
                                   )
                                 ]
                               )
@@ -57215,7 +57271,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                    Ganancias\n                  "
+                                  "\n                      Ganancias\n                    "
                                 )
                               ]
                             ),
@@ -57229,7 +57285,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                      S/ 00.00\n                    "
+                                    "\n                        S/ 00.00\n                      "
                                   )
                                 ]
                               )
@@ -78843,6 +78899,17 @@ module.exports = "/images/404.png?c023b83ff01e495ea6086007cb9dfaa2";
 
 /***/ }),
 
+/***/ "./resources/assets/illustrations/forgot-pass.png":
+/*!********************************************************!*\
+  !*** ./resources/assets/illustrations/forgot-pass.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/forgot-pass.png?4b6d4099421db381b3ee39a670938fca";
+
+/***/ }),
+
 /***/ "./resources/assets/illustrations/paypal.png":
 /*!***************************************************!*\
   !*** ./resources/assets/illustrations/paypal.png ***!
@@ -78916,7 +78983,7 @@ module.exports = "/images/user_icono.png?ea6aca8e9188e42641a31629f79a9a87";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/imgLogin.jpg?6f7c77b451fa33acdeb0e2d21e1a0913";
+module.exports = "/images/imgLogin.jpg?e7e9afde1481a85edc8cf065e4703c75";
 
 /***/ }),
 

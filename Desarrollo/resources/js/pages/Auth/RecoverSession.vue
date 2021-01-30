@@ -1,176 +1,173 @@
 <template>
+  <!-- RECOVER SESSION: Vista de interfaz de recuperacion de sesion de los usuarios
+       Solo accesible por el enlace, y valido al correo enviado.-->
   <Visitor>
-    <div class="bg-gray-100">
-      <main class="">
-        <div
-          class="bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8"
-        >
-          <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <img
-              class="mx-auto h-36 w-auto"
-              src="../../../assets/illustrations/sign-up.png"
-              alt="Workflow"
-            />
-            <h2
-              class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900"
-            >
-              Recuperar Sesión como {{identifier}}<br>
-            </h2>
-          </div>
+    <main class="flex flex-col justify-center pt-2 pb-4 bg-gray-100">
+      <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
+        <img class="h-48 sm:h-56 px-6 w-auto mt-4" src="../../../assets/illustrations/forgot-pass.png" alt="forgot-pass" />
+        <p class="uppercase px-5 mt-4 text-2xl md:text-3xl font-extrabold text-gray-900"
+        >Recuperar Sesión </p>
+        <p class="px-5 text-sm">Estas recuperando sesión como <b class="text-base2 italic">{{identifier}}</b></p>
+      </div>
 
-          <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                            
-              <!-- Sección de ingreso de correo.
-              Solicita un correo electrónico y lo valida.-->
-              <div class="mt-2">
-                <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
-                  <div class="mt-1 rounded-md shadow-sm">
-                    <input
-                      id="email"
-                      v-model="email"
-                      placeholder="Ingrese un correo electronico"
-                      type="email"
-                      required
-                      class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                <small v-if="error_email" class="text-red-600">
+      <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8">
+        <div class="bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10">
+          <div class="grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1">
+            <!-- Sección de ingreso de correo.
+            Solicita un correo electrónico y lo valida.-->
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  id="email"
+                  v-model="email"
+                  placeholder="Ingrese su correo electronico"
+                  type="text"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+              </div>
+              <small v-if="error_email" class="text-red-600">
                 {{
                   error_email
                 }}
-                </small>
-                <small v-if="vacio_email" class="text-yellow-600">
+              </small>
+              <small v-if="vacio_email" class="text-yellow-600">
                 {{
                   vacio_email
                 }}
-                </small>
+              </small>
+            </div>
+            <!-- Fin de sección de ingreso de correo. -->
+                              
+            <!-- Sección de ingreso de DNI.
+            Solicita el DNI y lo valida. --> 
+            <div v-if="identifier == 'trabajador'" class="sm:col-span-2">
+              <label for="input_dni" class="block text-sm font-medium leading-5 text-gray-700">DNI</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  placeholder="Ingrese su DNI"
+                  id="input_dni"
+                  v-model="dni"
+                  type="text"
+                  inputmode="numeric"
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  maxlength="8"
+                  pattern="[0-9]*"
+                  @change="validateDNI"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
               </div>
-              <!-- Fin de sección de ingreso de correo. -->
-                            
-              <!-- Sección de ingreso de DNI.
-              Solicita el DNI y lo valida. --> 
-              <div v-if="identifier == 'trabajador'" class="mt-2">
-                <label
-                  for="input_dni"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  DNI
-                </label>
-                <div class="mt-1 relative rounded-md shadow-sm">
+              <small v-if="error_dni" class="text-red-600">
+              {{
+                error_dni
+              }}
+              </small>
+              <small v-if="vacio_dni" class="text-yellow-600">
+              {{
+                vacio_dni
+              }}
+              </small>
+            </div>
+
+            <!-- Sección de ingreso de RUC.
+            Solicita el RUC y lo valida.-->
+            <div v-if="identifier == 'empresa'" class="sm:col-span-2">
+              <label for="input_ruc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  placeholder="Ingrese su RUC"
+                  type="text"
+                  id="input_ruc"
+                  v-model="ruc"
+                  inputmode="numeric"
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  maxlength="11"
+                  pattern="[0-9]*"
+                  @change="validateRUC"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+              </div>
+              <small v-if="error_ruc" class="text-red-600">
+                {{
+                  error_ruc
+                }}
+              </small>
+              <small v-if="vacio_ruc" class="text-yellow-600">
+                {{
+                  vacio_ruc
+                }}
+              </small>
+            </div>
+
+            <!-- Sección de ingreso de contraseña.
+            Solicita una contraseña y la valida.-->
+            <div class="sm:col-span-2">
+              <label for="password" class="block text-sm font-medium leading-5 text-gray-700">Contraseña</label>
+                <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese su DNI"
-                    id="input_dni"
-                    v-model="dni"
+                    id="password"
+                    placeholder="Ingrese una contraseña"
+                    v-model="password"
+                    type="password"
+                    required
+                    @change="validatePassword()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="error_dni" class="text-red-600">{{
-                  error_dni
-                }}</small>
-                <small v-if="vacio_dni" class="text-yellow-600">{{
-                  vacio_dni
-                }}</small>
-              </div>
-
-              <!-- Sección de ingreso de RUC.
-              Solicita el RUC y lo valida.-->
-              <div v-if="identifier == 'empresa'" class="mt-2">
-                <label for="input_ruc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
-                  <div class="mt-1 relative rounded-md shadow-sm">
-                    <input
-                      placeholder="Ingrese su RUC"
-                      id="input_ruc"
-                      v-model="ruc"
-                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                  <small v-if="error_ruc" class="text-red-600">
-                  {{
-                    error_ruc
-                  }}
-                  </small>
-                  <small v-if="vacio_ruc" class="text-yellow-600">
-                  {{
-                    vacio_ruc
-                  }}
-                  </small>
-                </div>
-
-                <!-- Sección de ingreso de contraseña.
-                Solicita una contraseña y la valida.-->
-                <div class="mt-2">
-                  <label
-                    for="password"
-                    class="block text-sm font-medium leading-5 text-gray-700"
-                  >Contraseña</label>
-                  <div class="mt-1 rounded-md shadow-sm">
-                    <input
-                      id="password"
-                      placeholder="Ingrese una contraseña"
-                      v-model="password"
-                      type="password"
-                      required
-                      class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                  <small v-if="error_password" class="text-red-600">
+                <small v-if="error_password" class="text-red-600">
                   {{
                     error_password
                   }}
-                  </small>
-                  <small v-if="vacio_pass" class="text-yellow-600">
+                </small>
+                <small v-if="vacio_pass" class="text-yellow-600">
                   {{
                     vacio_pass
                   }}
-                  </small>
-                </div>
+                </small>
+            </div>
 
-                <!-- Solicita repetir la contraseña y la valida. -->
-                <div class="mt-2">
-                  <label
-                    for="repeat_password"
-                    class="block text-sm font-medium leading-5 text-gray-700"
-                    >Repetir Contraseña</label>
-                    <div class="mt-1 rounded-md shadow-sm">
-                    <input
-                      id="repeat_password"
-                        v-model="repeat_password"
-                        placeholder="Verifique su contraseña"
-                        type="password"
-                        required
-                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                  <small v-if="error_repeat_password" class="text-red-600">
+            <!-- Solicita repetir la contraseña y la valida. -->
+            <div class="sm:col-span-2">
+              <label for="repeat_password" class="block text-sm font-medium leading-5 text-gray-700">Repetir Contraseña</label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    id="repeat_password"
+                    v-model="repeat_password"
+                    placeholder="Verifique su contraseña"
+                    type="password"
+                    required
+                    @change="validatePassword()"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                </div>
+                <small v-if="error_repeat_password" class="text-red-600">
                   {{
                     error_repeat_password
                   }}
-                  </small>
-                  <small v-if="vacio_repeat_pass" class="text-yellow-600">
+                </small>
+                <small v-if="vacio_repeat_pass" class="text-yellow-600">
                   {{
                     vacio_repeat_pass
                   }}
-                  </small>
-                </div>
-                <!-- Fin de sección de ingreso de contraseña. -->
-
-                <div class="mt-6">
-                  <span class="block w-full rounded-md shadow-sm">
-                    <AnimatedButton
-                      content="Actualizar"
-                      color="primary"
-                      @onClick="submitPass()"
-                      :isLoading="buttonLoading"
-                    ></AnimatedButton>
-                  </span>
-                </div>
-              </div>
+                </small>
             </div>
+            <!-- Fin de sección de ingreso de contraseña. -->
           </div>
-        </main>
+
+          <div class="mt-8 mb-8">
+            <span class="block w-2/3 mx-auto rounded-md shadow-sm">
+              <AnimatedButton
+                content="Actualizar"
+                color="gradiente"
+                @onClick="submitPass()"
+                :isLoading="buttonLoading"
+              ></AnimatedButton>
+            </span>
+          </div>
+        </div>
       </div>
-    </Visitor>
+    </main>
+  </Visitor>
 </template>
 
 <script>
