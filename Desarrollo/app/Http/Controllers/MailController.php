@@ -15,25 +15,23 @@ use Illuminate\Http\Request;
 
 class MailController extends Controller
 {
-    public function welcome($user, $email, $pass){
+    public function welcome($user, $email, $pass)
+    {
         Mail::to($email)->send(new RegisterCheck($user, $email, $pass));
 
         return response()->json(['success' => ['Sus credenciales han sido mandadas al correo proporcionado']], 200);
     }
 
-    //Funcion que da un mensaje a nuestro proovedor indicandole interes en su servicio proporcionado
     public function message($request, $email)
     {
         Mail::to($email)->send(new MessageCheck($request));
     }
 
-    //Funcion que indica el rechazo de un servicio por parte de un proveedor
     public function message_deny($service, $customer, $date)
     {
         Mail::to($customer->email)->send(new Message_Deny($service, $date));
     }
 
-    //Funcion que indica la aceptación de un servicio por parte de un proveedor
     public function message_acept($response, $customer)
     {
         Mail::to($customer)->send(new Message_Acept($response));
@@ -46,9 +44,8 @@ class MailController extends Controller
         Mail::to($email2)->send(new Message_Pay($pay));
     }
 
-     //Funcion que te indica la solicitud de cambio de contraseña
-     public function reset($obj, $ide)
-     {
-         Mail::to($obj->email)->send(new Message_Reset($obj, $ide));
-     }
+    public function reset($objUser, $ide)
+    {
+        Mail::to($objUser->email)->send(new Message_Reset($objUser, $ide));
+    }
 }

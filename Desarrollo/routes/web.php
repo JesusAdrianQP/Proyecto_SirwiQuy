@@ -9,16 +9,16 @@ Route::view('/home', 'app') -> name('home');/*Inicio de carga SPA*/
 /*------------------------------------------------------------------------------------
                       Rutas de conexión entre Front End y Back End
 /-------------------------------------------------------------------------------------*/
-//Rutas de las sesiones
-Route::post('login', 'LoginController@login'); //Ruta de inicio de sesión
-Route::post('signup', 'LoginController@signup'); //Ruta de crear sesión
-Route::get('level={level}/token={token}', 'LoginController@getUser');//Ruta de obtención de datos
-Route::post('changeAccess', 'LoginController@close');//Ruta para cerrar sesión
-Route::post('reset', 'LoginController@reset'); //Ruta de generador de enlace de restauracion de sesion
-Route::get('reset/{cod}/{identifier}', 'LoginController@validatereset'); //Funcion que comprobara mi enlace
-Route::post('changepass', 'LoginController@changepass'); //Funcion para cambiar completamente el password
+/*-----------------------------Rutas de las sesiones------------------------------------*/
+Route::post('login', 'LoginController@login'); /*Ruta de inicio de sesión*/
+Route::post('signup', 'LoginController@signup'); /*Ruta de crear sesión*/
+Route::get('level={level}/token={token}', 'LoginController@getUser');/*Ruta de obtención de datos de los usuarios*/
+Route::post('changeAccess', 'LoginController@close');/*Ruta de cerrar sesión y cambiar token*/
+Route::post('reset', 'LoginController@reset'); /**Ruta para generar reseteo de password*/
+Route::get('reset/validate/{code}/{identifier}', 'LoginController@validatelink');/**Comprobación de link de reseteo */
+Route::post('changepass', 'LoginController@changepass'); /**Cambia contraseña en la data */
 
-//Ruta de las apis
+/*---------------------------------Ruta de las apis--------------------------------------*/
 Route::get('validate/{isType}/{apidate}', 'UserController@getValidate'); //RuTa de obtencion de apis
 
 //Rutas de las direcciones

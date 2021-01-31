@@ -166,7 +166,7 @@ export default new VueRouter({
             beforeEnter: isGuest
         },
         {
-            path: '/recover/session/identity=:ide&cod=:cod',
+            path: '/recover/session/identity=:identity&cod=:code',
             component: RecoverSession,
             beforeEnter: isGuest,
             props:true

@@ -1,199 +1,202 @@
 <template>
+  <!-- RECOVER SESSION: Vista de interfaz de recuperacion de sesion de los usuarios
+       Solo accesible por el enlace, y valido al correo enviado.-->
   <Visitor>
-    <div class="bg-gray-100">
-      <main class="">
-        <div
-          class="bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8"
-        >
-          <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <img
-              class="mx-auto h-36 w-auto"
-              src="../../../assets/illustrations/sign-up.png"
-              alt="Workflow"
-            />
-            <h2
-              class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900"
-            >
-              Recuperar Sesión como {{identifier}}<br>
-            </h2>
-          </div>
+    <Loader class="min-h-screen"
+            :load="loading"
+    />
+    
+    <main v-show="!loading" class="min-h-screen flex flex-col justify-center pt-2 pb-4 bg-gray-100">
+      <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
+        <img class="h-48 sm:h-56 px-6 w-auto mt-4" src="../../../assets/illustrations/forgot-pass.png" alt="forgot-pass" />
+        <p class="uppercase px-5 mt-4 text-2xl md:text-3xl font-extrabold text-gray-900"
+        >Recuperar Sesión </p>
+        <p class="px-5 text-sm">Estas recuperando sesión como <b class="text-base2 italic">{{identifier}}</b></p>
+      </div>
 
-          <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                            
-              <!-- Sección de ingreso de correo.
-              Solicita un correo electrónico y lo valida.-->
-              <div class="mt-2">
-                <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
-                  <div class="mt-1 rounded-md shadow-sm">
-                    <input
-                      id="email"
-                      v-model="email"
-                      placeholder="Ingrese un correo electronico"
-                      type="email"
-                      required
-                      class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                <small v-if="error_email" class="text-red-600">
+      <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8">
+        <div class="bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10">
+          <div class="grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1">
+            <!-- Sección de ingreso de correo.
+            Solicita un correo electrónico y lo valida.-->
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  id="email"
+                  v-model="email"
+                  placeholder="Ingrese su correo"
+                  type="text"
+                  @change="validateEmail()"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+              </div>
+              <small v-if="error_email" class="text-red-600">
                 {{
                   error_email
                 }}
-                </small>
-                <small v-if="vacio_email" class="text-yellow-600">
+              </small>
+              <small v-if="vacio_email" class="text-yellow-600">
                 {{
                   vacio_email
                 }}
-                </small>
+              </small>
+            </div>
+            <!-- Fin de sección de ingreso de correo. -->
+                              
+            <!-- Sección de ingreso de DNI.
+            Solicita el DNI y lo valida. --> 
+            <div v-if="identifier == 'trabajador'" class="sm:col-span-2">
+              <label for="input_dni" class="block text-sm font-medium leading-5 text-gray-700">DNI</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  placeholder="Ingrese su DNI"
+                  id="input_dni"
+                  v-model="dni"
+                  type="text"
+                  inputmode="numeric"
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  maxlength="8"
+                  pattern="[0-9]*"
+                  @change="validateDNI()"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
               </div>
-              <!-- Fin de sección de ingreso de correo. -->
-                            
-              <!-- Sección de ingreso de DNI.
-              Solicita el DNI y lo valida. --> 
-              <div v-if="identifier == 'trabajador'" class="mt-2">
-                <label
-                  for="input_dni"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  DNI
-                </label>
-                <div class="mt-1 relative rounded-md shadow-sm">
+              <small v-if="error_dni" class="text-red-600">
+              {{
+                error_dni
+              }}
+              </small>
+              <small v-if="vacio_dni" class="text-yellow-600">
+              {{
+                vacio_dni
+              }}
+              </small>
+            </div>
+
+            <!-- Sección de ingreso de RUC.
+            Solicita el RUC y lo valida.-->
+            <div v-if="identifier == 'empresa'" class="sm:col-span-2">
+              <label for="input_ruc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  placeholder="Ingrese su RUC"
+                  type="text"
+                  id="input_ruc"
+                  v-model="ruc"
+                  inputmode="numeric"
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  maxlength="11"
+                  pattern="[0-9]*"
+                  @change="validateRUC()"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+              </div>
+              <small v-if="error_ruc" class="text-red-600">
+                {{
+                  error_ruc
+                }}
+              </small>
+              <small v-if="vacio_ruc" class="text-yellow-600">
+                {{
+                  vacio_ruc
+                }}
+              </small>
+            </div>
+
+            <!-- Sección de ingreso de contraseña.
+            Solicita una contraseña y la valida.-->
+            <div class="sm:col-span-2">
+              <label for="password" class="block text-sm font-medium leading-5 text-gray-700">Contraseña</label>
+                <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese su DNI"
-                    id="input_dni"
-                    v-model="dni"
+                    id="password"
+                    placeholder="Ingrese una contraseña"
+                    v-model="password"
+                    type="password"
+                    required
+                    @change="validatePassword()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="error_dni" class="text-red-600">{{
-                  error_dni
-                }}</small>
-                <small v-if="vacio_dni" class="text-yellow-600">{{
-                  vacio_dni
-                }}</small>
-              </div>
-
-              <!-- Sección de ingreso de RUC.
-              Solicita el RUC y lo valida.-->
-              <div v-if="identifier == 'empresa'" class="mt-2">
-                <label for="input_ruc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
-                  <div class="mt-1 relative rounded-md shadow-sm">
-                    <input
-                      placeholder="Ingrese su RUC"
-                      id="input_ruc"
-                      v-model="ruc"
-                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                  <small v-if="error_ruc" class="text-red-600">
-                  {{
-                    error_ruc
-                  }}
-                  </small>
-                  <small v-if="vacio_ruc" class="text-yellow-600">
-                  {{
-                    vacio_ruc
-                  }}
-                  </small>
-                </div>
-
-                <!-- Sección de ingreso de contraseña.
-                Solicita una contraseña y la valida.-->
-                <div class="mt-2">
-                  <label
-                    for="password"
-                    class="block text-sm font-medium leading-5 text-gray-700"
-                  >Contraseña</label>
-                  <div class="mt-1 rounded-md shadow-sm">
-                    <input
-                      id="password"
-                      placeholder="Ingrese una contraseña"
-                      v-model="password"
-                      type="password"
-                      required
-                      class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                  <small v-if="error_password" class="text-red-600">
+                <small v-if="error_password" class="text-red-600">
                   {{
                     error_password
                   }}
-                  </small>
-                  <small v-if="vacio_pass" class="text-yellow-600">
+                </small>
+                <small v-if="vacio_pass" class="text-yellow-600">
                   {{
                     vacio_pass
                   }}
-                  </small>
-                </div>
+                </small>
+            </div>
 
-                <!-- Solicita repetir la contraseña y la valida. -->
-                <div class="mt-2">
-                  <label
-                    for="repeat_password"
-                    class="block text-sm font-medium leading-5 text-gray-700"
-                    >Repetir Contraseña</label>
-                    <div class="mt-1 rounded-md shadow-sm">
-                    <input
-                      id="repeat_password"
-                        v-model="repeat_password"
-                        placeholder="Verifique su contraseña"
-                        type="password"
-                        required
-                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-l-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                    />
-                  </div>
-                  <small v-if="error_repeat_password" class="text-red-600">
+            <!-- Solicita repetir la contraseña y la valida. -->
+            <div class="sm:col-span-2">
+              <label for="repeat_password" class="block text-sm font-medium leading-5 text-gray-700">Repetir Contraseña</label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    id="repeat_password"
+                    v-model="repeat_password"
+                    placeholder="Verifique su contraseña"
+                    type="password"
+                    required
+                    @change="validateRepeatPassword()"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                </div>
+                <small v-if="error_repeat_password" class="text-red-600">
                   {{
                     error_repeat_password
                   }}
-                  </small>
-                  <small v-if="vacio_repeat_pass" class="text-yellow-600">
+                </small>
+                <small v-if="vacio_repeat_pass" class="text-yellow-600">
                   {{
                     vacio_repeat_pass
                   }}
-                  </small>
-                </div>
-                <!-- Fin de sección de ingreso de contraseña. -->
-
-                <div class="mt-6">
-                  <span class="block w-full rounded-md shadow-sm">
-                    <AnimatedButton
-                      content="Actualizar"
-                      color="primary"
-                      @onClick="submitPass()"
-                      :isLoading="buttonLoading"
-                    ></AnimatedButton>
-                  </span>
-                </div>
-              </div>
+                </small>
             </div>
+            <!-- Fin de sección de ingreso de contraseña. -->
           </div>
-        </main>
+
+          <div class="mt-8 mb-8">
+            <span class="block w-2/3 mx-auto rounded-md shadow-sm">
+              <AnimatedButton
+                content="Actualizar"
+                color="gradiente"
+                @onClick="submitPass()"
+                :isLoading="buttonLoading"
+              ></AnimatedButton>
+            </span>
+          </div>
+        </div>
       </div>
-    </Visitor>
+    </main>
+  </Visitor>
 </template>
 
 <script>
 import api from "../../api";
 
 import Visitor from "../Layouts/Visitor";
+import Loader from "../../components/Loader.vue";
 import AnimatedButton from "../../components/AnimatedButton.vue";
 
 export default {
-    name: "RecoverSession",
-    components: {
-        Visitor,
-        AnimatedButton
+  name: "RecoverSession",
+  components: 
+  {
+    Visitor,
+    AnimatedButton,
+    Loader
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      hasError: false,
+      loading: false,
       buttonLoading: false,
-      errorPage: 0,
-
       identifier: "",
 
-     
       email: "",
       dni: "",
       ruc: "",
@@ -213,25 +216,236 @@ export default {
       vacio_repeat_pass: "",
     }
   },
-  props: {
-    cod: String,
-    ide: String
+  props: 
+  {
+    code: String,
+    identity: String
   },
-  async created() {
-    if(this.ide == 'cliente') this.identifier = 'cliente';
-      else if(this.ide == 'trabajador') this.identifier = 'trabajador';
-        else if(this.ide == 'empresa') this.identifier = 'empresa';
-         else this.$router.push("*");
-    
-    let response = await api.get(`/reset/${this.cod}/${this.identifier}`)
-    this.errorPage = response.data.data;
+  async created() 
+  {
+    this.loading = true;
 
-    if(this.errorPage == 1) this.$router.push("*");
+    if(this.identity == 'cliente') this.identifier = 'cliente';
+    else if(this.identity == 'trabajador') this.identifier = 'trabajador';
+    else if(this.identity == 'empresa') this.identifier = 'empresa';
+    else { this.$router.push("/**"); return; }
+    
+    let response = await api.get(`/reset/validate/${this.code}/${this.identifier}`)
+    if(response.data.data == 0)
+    {
+      this.$toast.open({
+        message: "Enlace no válido o caducado...",
+        type: "error",
+        duration: 8000,
+        dismissible: true,
+      });
+
+      this.$router.push("/");
+      return;
+    }
+
+    this.loading = false;
   },
-  methods: {
-    async submitPass() {
-      this.validateSubmit();
-      if (this.hasError) return;
+  methods: 
+  {
+    async validateEmail()
+    {
+      const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email);
+      
+      if(this.email == "")
+      { 
+        this.error_email = "";
+        this.vacio_email = "";
+        return;
+      }
+
+      if(correo(this.email) == false)
+      {
+        this.error_email = "Correo no válido";
+        this.vacio_email = "";
+      }
+      else
+      {
+        this.error_email = "";
+        this.vacio_email = "";
+      }
+    },
+    async validateDNI() 
+    {
+      if(this.dni == "")
+      { 
+        this.error_dni = "";
+        this.vacio_dni = "";
+        return;
+      }
+
+      if ((this.dni.length > 0 && this.dni.length < 8)) 
+      {
+        this.error_dni = "El DNI debe tener 8 dígitos";
+        this.vacio_dni = "";
+      }
+      else
+      {
+        this.error_dni = "";
+        this.vacio_dni = "";
+      }
+    },
+    async validateRUC() 
+    {
+      if(this.ruc == "")
+      { 
+        this.error_ruc = "";
+        this.vacio_ruc = "";
+        return;
+      }
+
+      if ((this.ruc.length > 0 && this.ruc.length < 11)) 
+      {
+        this.error_ruc = "El RUC debe tener 11 dígitos";
+        this.vacio_ruc = "";
+      }
+      else
+      {
+        this.error_ruc = "";
+        this.vacio_ruc = "";
+      }
+    },
+    async validatePassword()
+    {
+      if(this.password.length == 0)
+      {
+        this.error_password = "";
+        this.vacio_pass = "";
+        return;
+      }
+
+      if(this.password.length >= 8)
+			{	
+        this.vacio_pass = "";	
+				var mayuscula = false;
+				var minuscula = false;
+				var numero = false;
+				
+				for(var i = 0; i<this.password.length; i++)
+				{
+					if(this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) { mayuscula = true; }
+					else if(this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) { minuscula = true; }
+					else if(this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) { numero = true; }
+        }
+        
+        if(mayuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra mayuscula"; return;}
+        if(minuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra minuscula"; return;}
+        if(numero == false) { this.error_password = "Su contraseña debe tener al menos un número"; return;}
+        
+        if(mayuscula == true && minuscula == true && numero == true) { this.error_password = "" }
+			}
+      else if(this.password.length < 8 && this.password.length > 0)
+      { 
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
+      }
+    },
+    async validateRepeatPassword()
+    {
+      if(this.repeat_password.length == 0)
+      {
+        this.error_repeat_password = "";
+        this.vacio_repeat_pass = "";
+        return;
+      }
+
+      if(this.repeat_password != this.password)
+      {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+      else
+      {
+        this.error_repeat_password = "";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    async submitPass() 
+    {
+      this.validateEmail();
+      if(this.identifier == "empresa") { this.validateRUC(); }
+      if(this.identifier == "trabajador") { this.validateDNI(); }
+      this.validatePassword();
+      this.validateRepeatPassword();
+      var boolean = false;
+
+      if(this.email == "" && this.error_email == "" )
+      { 
+        this.vacio_email = "Campo obligatorio";
+        this.error_email = "";
+        boolean = true;
+      }
+      else if(this.email != "" && this.error_email != "") { this.vacio_email = ""; boolean = true;}
+      else if(this.email != "" && this.error_email == "")
+      {
+        this.vacio_email = "";
+        this.error_email = "";
+      }
+
+      if(this.identifier == "empresa")
+      {
+        if(this.ruc == "" && this.error_ruc == "" )
+        { 
+          this.vacio_ruc = "Campo obligatorio";
+          this.error_ruc = "";
+          boolean = true;
+        }
+        else if(this.ruc != "" && this.error_ruc != "") { this.vacio_ruc = ""; boolean = true;}
+        else if(this.ruc != "" && this.error_ruc == "")
+        {
+          this.vacio_ruc = "";
+          this.error_ruc = "";
+        }
+      }
+
+      if(this.identifier == "trabajador")
+      {
+        if(this.dni == "" && this.error_dni == "" )
+        { 
+          this.vacio_dni = "Campo obligatorio";
+          this.error_dni = "";
+          boolean = true;
+        }
+        else if(this.dni != "" && this.error_dni != "") { this.vacio_dni = ""; boolean = true;}
+        else if(this.dni != "" && this.error_dni == "")
+        {
+          this.vacio_dni = "";
+          this.error_dni = "";
+        }
+      }
+
+      if(this.password == "" && this.error_password == "" )
+      { 
+        this.vacio_pass = "Campo obligatorio";
+        this.error_password = "";
+        boolean = true;
+      }
+      else if(this.password != "" && this.error_password != "") { this.vacio_pass = ""; boolean = true;}
+      else if(this.password != "" && this.error_password == "")
+      {
+        this.vacio_pass = "";
+        this.error_password = "";
+      }
+
+      if(this.repeat_password == "" && this.error_repeat_password == "" )
+      { 
+        this.vacio_repeat_pass = "Campo obligatorio";
+        this.error_repeat_password = "";
+        boolean = true;
+      }
+      else if(this.repeat_password != "" && this.error_repeat_password != "") { this.vacio_repeat_pass = ""; boolean = true;}
+      else if(this.repeat_password != "" && this.error_repeat_password == "")
+      {
+        this.vacio_repeat_pass = "";
+        this.error_repeat_password = "";
+      }
+
+      if(boolean == true) { return; }
       this.buttonLoading = true;
 
       let response = await api.post(`/changepass`, {
@@ -242,7 +456,6 @@ export default {
         password: this.password
       });
 
-      //Si hay errores se identifica que tipo
       if (!response.ok) {
         this.buttonLoading = false;
 
@@ -259,7 +472,6 @@ export default {
         });
       }
 
-      //Si la operacion es exitosa
       this.$toast.open({
         message: response.data.data.success[0],
         type: "success",
@@ -267,90 +479,8 @@ export default {
         dismissible: true,
       });
 
-      //Redireccionamiento de rutas
       this.$router.push("/");
-    },
-    validateSubmit() {
-      this.hasError = false;
-
-      //Validaciones del campo Email
-      if (this.email == '') {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = '';
-      } else if (
-        !this.email.includes("@") ||
-        !this.email.includes(".") ||
-        this.email.length < 5
-      ) {
-        this.hasError = true;
-        this.vacio_email = '';
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = '';
-        this.vacio_email = '';
-      }
-
-      if(this.identifier == 'trabajador'){
-         //Validación del DNI
-        if ((this.dni.length > 0 && this.dni.length < 8) || (this.dni.length > 8)) {
-          this.hasError = true;
-          this.error_dni = "El DNI debe tener 8 dígitos";
-          this.vacio_dni = "";
-        } else if(this.dni == ''){
-          this.hasError = true;
-          this.error_dni = '';
-          this.vacio_dni = 'Campo necesario';
-        } else{
-          this.error_dni = '';
-          this.vacio_dni = '';
-        } 
-      }
-
-      if(this.identifier == 'empresa'){
-         //Validacion de RUC
-        if ((this.ruc.length > 0 && this.ruc.length < 11) || (this.ruc.length > 11)) {
-          this.hasError = true;
-          this.error_ruc = "El RUC debe tener 11 dígitos";
-          this.vacio_ruc = "";
-        }else if(this.ruc == ''){
-          this.hasError = true;
-          this.error_ruc = '';
-          this.vacio_ruc = 'Campo necesario';
-        }else{
-          this.error_ruc = "";
-          this.vacio_ruc = "";
-        }
-      }
-
-      //Validaciones del campo password
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      }
-
-      //Validaciones del campo repeat password
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      }
-    },
+    }
   },
 };
 </script>
