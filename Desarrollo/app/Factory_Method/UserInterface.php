@@ -20,5 +20,5 @@ interface UserInterface
 
     public static function updateRecover($parameter, $par2); 
     
-    // public static function validationreset($parameter);
+    public static function validationlink($parameter): Bool;
 }

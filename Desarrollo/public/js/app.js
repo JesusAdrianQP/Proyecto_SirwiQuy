@@ -6123,20 +6123,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
-/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
-
-
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
+/* harmony import */ var _components_Loader_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Loader.vue */ "./resources/js/components/Loader.vue");
+/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
 
 
 
@@ -6313,20 +6308,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RecoverSession",
   components: {
-    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__["default"],
-    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__["default"],
+    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    Loader: _components_Loader_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   data: function data() {
     return {
-      hasError: false,
+      loading: false,
       buttonLoading: false,
-      errorPage: 0,
       identifier: "",
       email: "",
       dni: "",
@@ -6346,28 +6347,81 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   props: {
-    cod: String,
-    ide: String
+    code: String,
+    identity: String
   },
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              if (_this.ide == 'cliente') _this.identifier = 'cliente';else if (_this.ide == 'trabajador') _this.identifier = 'trabajador';else if (_this.ide == 'empresa') _this.identifier = 'empresa';else _this.$router.push("*");
-              _context.next = 3;
-              return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/reset/".concat(_this.cod, "/").concat(_this.identifier));
+              _this.loading = true;
 
-            case 3:
+              if (!(_this.identity == 'cliente')) {
+                _context.next = 5;
+                break;
+              }
+
+              _this.identifier = 'cliente';
+              _context.next = 15;
+              break;
+
+            case 5:
+              if (!(_this.identity == 'trabajador')) {
+                _context.next = 9;
+                break;
+              }
+
+              _this.identifier = 'trabajador';
+              _context.next = 15;
+              break;
+
+            case 9:
+              if (!(_this.identity == 'empresa')) {
+                _context.next = 13;
+                break;
+              }
+
+              _this.identifier = 'empresa';
+              _context.next = 15;
+              break;
+
+            case 13:
+              _this.$router.push("/**");
+
+              return _context.abrupt("return");
+
+            case 15:
+              _context.next = 17;
+              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/reset/validate/".concat(_this.code, "/").concat(_this.identifier));
+
+            case 17:
               response = _context.sent;
-              _this.errorPage = response.data.data;
-              if (_this.errorPage == 1) _this.$router.push("*");
 
-            case 6:
+              if (!(response.data.data == 0)) {
+                _context.next = 22;
+                break;
+              }
+
+              _this.$toast.open({
+                message: "Enlace no válido o caducado...",
+                type: "error",
+                duration: 8000,
+                dismissible: true
+              });
+
+              _this.$router.push("/");
+
+              return _context.abrupt("return");
+
+            case 22:
+              _this.loading = false;
+
+            case 23:
             case "end":
               return _context.stop();
           }
@@ -6376,67 +6430,38 @@ __webpack_require__.r(__webpack_exports__);
     }))();
   },
   methods: {
-    submitPass: function submitPass() {
+    validateEmail: function validateEmail() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-        var response, er, mensaje;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+        var correo;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _this2.validateSubmit();
+                correo = function correo() {
+                  return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this2.email);
+                };
 
-                if (!_this2.hasError) {
-                  _context2.next = 3;
+                if (!(_this2.email == "")) {
+                  _context2.next = 5;
                   break;
                 }
 
+                _this2.error_email = "";
+                _this2.vacio_email = "";
                 return _context2.abrupt("return");
 
-              case 3:
-                _this2.buttonLoading = true;
-                _context2.next = 6;
-                return _api__WEBPACK_IMPORTED_MODULE_6__["default"].post("/changepass", {
-                  identity: _this2.identifier,
-                  email: _this2.email,
-                  dni: _this2.dni,
-                  ruc: _this2.ruc,
-                  password: _this2.password
-                });
-
-              case 6:
-                response = _context2.sent;
-
-                if (response.ok) {
-                  _context2.next = 13;
-                  break;
+              case 5:
+                if (correo(_this2.email) == false) {
+                  _this2.error_email = "Correo no válido";
+                  _this2.vacio_email = "";
+                } else {
+                  _this2.error_email = "";
+                  _this2.vacio_email = "";
                 }
 
-                _this2.buttonLoading = false;
-                er = response.error.errors;
-                mensaje = "Error desconocido";
-                if (er.hasOwnProperty("fail")) mensaje = er.fail[0];
-                return _context2.abrupt("return", _this2.$toast.open({
-                  message: mensaje,
-                  type: "error",
-                  duration: 8000,
-                  dismissible: true
-                }));
-
-              case 13:
-                //Si la operacion es exitosa
-                _this2.$toast.open({
-                  message: response.data.data.success[0],
-                  type: "success",
-                  duration: 10000,
-                  dismissible: true
-                }); //Redireccionamiento de rutas
-
-
-                _this2.$router.push("/");
-
-              case 15:
+              case 6:
               case "end":
                 return _context2.stop();
             }
@@ -6444,81 +6469,339 @@ __webpack_require__.r(__webpack_exports__);
         }, _callee2);
       }))();
     },
-    validateSubmit: function validateSubmit() {
-      this.hasError = false; //Validaciones del campo Email
+    validateDNI: function validateDNI() {
+      var _this3 = this;
 
-      if (this.email == '') {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = '';
-      } else if (!this.email.includes("@") || !this.email.includes(".") || this.email.length < 5) {
-        this.hasError = true;
-        this.vacio_email = '';
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = '';
-        this.vacio_email = '';
-      }
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                if (!(_this3.dni == "")) {
+                  _context3.next = 4;
+                  break;
+                }
 
-      if (this.identifier == 'trabajador') {
-        //Validación del DNI
-        if (this.dni.length > 0 && this.dni.length < 8 || this.dni.length > 8) {
-          this.hasError = true;
-          this.error_dni = "El DNI debe tener 8 dígitos";
-          this.vacio_dni = "";
-        } else if (this.dni == '') {
-          this.hasError = true;
-          this.error_dni = '';
-          this.vacio_dni = 'Campo necesario';
-        } else {
-          this.error_dni = '';
-          this.vacio_dni = '';
-        }
-      }
+                _this3.error_dni = "";
+                _this3.vacio_dni = "";
+                return _context3.abrupt("return");
 
-      if (this.identifier == 'empresa') {
-        //Validacion de RUC
-        if (this.ruc.length > 0 && this.ruc.length < 11 || this.ruc.length > 11) {
-          this.hasError = true;
-          this.error_ruc = "El RUC debe tener 11 dígitos";
-          this.vacio_ruc = "";
-        } else if (this.ruc == '') {
-          this.hasError = true;
-          this.error_ruc = '';
-          this.vacio_ruc = 'Campo necesario';
-        } else {
-          this.error_ruc = "";
-          this.vacio_ruc = "";
-        }
-      } //Validaciones del campo password
+              case 4:
+                if (_this3.dni.length > 0 && _this3.dni.length < 8) {
+                  _this3.error_dni = "El DNI debe tener 8 dígitos";
+                  _this3.vacio_dni = "";
+                } else {
+                  _this3.error_dni = "";
+                  _this3.vacio_dni = "";
+                }
 
+              case 5:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }))();
+    },
+    validateRUC: function validateRUC() {
+      var _this4 = this;
 
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      } //Validaciones del campo repeat password
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                if (!(_this4.ruc == "")) {
+                  _context4.next = 4;
+                  break;
+                }
 
+                _this4.error_ruc = "";
+                _this4.vacio_ruc = "";
+                return _context4.abrupt("return");
 
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      }
+              case 4:
+                if (_this4.ruc.length > 0 && _this4.ruc.length < 11) {
+                  _this4.error_ruc = "El RUC debe tener 11 dígitos";
+                  _this4.vacio_ruc = "";
+                } else {
+                  _this4.error_ruc = "";
+                  _this4.vacio_ruc = "";
+                }
+
+              case 5:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }))();
+    },
+    validatePassword: function validatePassword() {
+      var _this5 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
+        var mayuscula, minuscula, numero, i;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                if (!(_this5.password.length == 0)) {
+                  _context5.next = 4;
+                  break;
+                }
+
+                _this5.error_password = "";
+                _this5.vacio_pass = "";
+                return _context5.abrupt("return");
+
+              case 4:
+                if (!(_this5.password.length >= 8)) {
+                  _context5.next = 22;
+                  break;
+                }
+
+                _this5.vacio_pass = "";
+                mayuscula = false;
+                minuscula = false;
+                numero = false;
+
+                for (i = 0; i < _this5.password.length; i++) {
+                  if (_this5.password.charCodeAt(i) >= 65 && _this5.password.charCodeAt(i) <= 90) {
+                    mayuscula = true;
+                  } else if (_this5.password.charCodeAt(i) >= 97 && _this5.password.charCodeAt(i) <= 122) {
+                    minuscula = true;
+                  } else if (_this5.password.charCodeAt(i) >= 48 && _this5.password.charCodeAt(i) <= 57) {
+                    numero = true;
+                  }
+                }
+
+                if (!(mayuscula == false)) {
+                  _context5.next = 13;
+                  break;
+                }
+
+                _this5.error_password = "Su contraseña debe tener al menos una letra mayuscula";
+                return _context5.abrupt("return");
+
+              case 13:
+                if (!(minuscula == false)) {
+                  _context5.next = 16;
+                  break;
+                }
+
+                _this5.error_password = "Su contraseña debe tener al menos una letra minuscula";
+                return _context5.abrupt("return");
+
+              case 16:
+                if (!(numero == false)) {
+                  _context5.next = 19;
+                  break;
+                }
+
+                _this5.error_password = "Su contraseña debe tener al menos un número";
+                return _context5.abrupt("return");
+
+              case 19:
+                if (mayuscula == true && minuscula == true && numero == true) {
+                  _this5.error_password = "";
+                }
+
+                _context5.next = 23;
+                break;
+
+              case 22:
+                if (_this5.password.length < 8 && _this5.password.length > 0) {
+                  _this5.error_password = "La longitud mínima es de 8 caracteres";
+                  _this5.vacio_pass = "";
+                }
+
+              case 23:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5);
+      }))();
+    },
+    validateRepeatPassword: function validateRepeatPassword() {
+      var _this6 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
+          while (1) {
+            switch (_context6.prev = _context6.next) {
+              case 0:
+                if (!(_this6.repeat_password.length == 0)) {
+                  _context6.next = 4;
+                  break;
+                }
+
+                _this6.error_repeat_password = "";
+                _this6.vacio_repeat_pass = "";
+                return _context6.abrupt("return");
+
+              case 4:
+                if (_this6.repeat_password != _this6.password) {
+                  _this6.error_repeat_password = "Las contraseñas no coinciden";
+                  _this6.vacio_repeat_pass = "";
+                } else {
+                  _this6.error_repeat_password = "";
+                  _this6.vacio_repeat_pass = "";
+                }
+
+              case 5:
+              case "end":
+                return _context6.stop();
+            }
+          }
+        }, _callee6);
+      }))();
+    },
+    submitPass: function submitPass() {
+      var _this7 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7() {
+        var _boolean, response, er, mensaje;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee7$(_context7) {
+          while (1) {
+            switch (_context7.prev = _context7.next) {
+              case 0:
+                _this7.validateEmail();
+
+                if (_this7.identifier == "empresa") {
+                  _this7.validateRUC();
+                }
+
+                if (_this7.identifier == "trabajador") {
+                  _this7.validateDNI();
+                }
+
+                _this7.validatePassword();
+
+                _this7.validateRepeatPassword();
+
+                _boolean = false;
+
+                if (_this7.email == "" && _this7.error_email == "") {
+                  _this7.vacio_email = "Campo obligatorio";
+                  _this7.error_email = "";
+                  _boolean = true;
+                } else if (_this7.email != "" && _this7.error_email != "") {
+                  _this7.vacio_email = "";
+                  _boolean = true;
+                } else if (_this7.email != "" && _this7.error_email == "") {
+                  _this7.vacio_email = "";
+                  _this7.error_email = "";
+                }
+
+                if (_this7.identifier == "empresa") {
+                  if (_this7.ruc == "" && _this7.error_ruc == "") {
+                    _this7.vacio_ruc = "Campo obligatorio";
+                    _this7.error_ruc = "";
+                    _boolean = true;
+                  } else if (_this7.ruc != "" && _this7.error_ruc != "") {
+                    _this7.vacio_ruc = "";
+                    _boolean = true;
+                  } else if (_this7.ruc != "" && _this7.error_ruc == "") {
+                    _this7.vacio_ruc = "";
+                    _this7.error_ruc = "";
+                  }
+                }
+
+                if (_this7.identifier == "trabajador") {
+                  if (_this7.dni == "" && _this7.error_dni == "") {
+                    _this7.vacio_dni = "Campo obligatorio";
+                    _this7.error_dni = "";
+                    _boolean = true;
+                  } else if (_this7.dni != "" && _this7.error_dni != "") {
+                    _this7.vacio_dni = "";
+                    _boolean = true;
+                  } else if (_this7.dni != "" && _this7.error_dni == "") {
+                    _this7.vacio_dni = "";
+                    _this7.error_dni = "";
+                  }
+                }
+
+                if (_this7.password == "" && _this7.error_password == "") {
+                  _this7.vacio_pass = "Campo obligatorio";
+                  _this7.error_password = "";
+                  _boolean = true;
+                } else if (_this7.password != "" && _this7.error_password != "") {
+                  _this7.vacio_pass = "";
+                  _boolean = true;
+                } else if (_this7.password != "" && _this7.error_password == "") {
+                  _this7.vacio_pass = "";
+                  _this7.error_password = "";
+                }
+
+                if (_this7.repeat_password == "" && _this7.error_repeat_password == "") {
+                  _this7.vacio_repeat_pass = "Campo obligatorio";
+                  _this7.error_repeat_password = "";
+                  _boolean = true;
+                } else if (_this7.repeat_password != "" && _this7.error_repeat_password != "") {
+                  _this7.vacio_repeat_pass = "";
+                  _boolean = true;
+                } else if (_this7.repeat_password != "" && _this7.error_repeat_password == "") {
+                  _this7.vacio_repeat_pass = "";
+                  _this7.error_repeat_password = "";
+                }
+
+                if (!(_boolean == true)) {
+                  _context7.next = 13;
+                  break;
+                }
+
+                return _context7.abrupt("return");
+
+              case 13:
+                _this7.buttonLoading = true;
+                _context7.next = 16;
+                return _api__WEBPACK_IMPORTED_MODULE_4__["default"].post("/changepass", {
+                  identity: _this7.identifier,
+                  email: _this7.email,
+                  dni: _this7.dni,
+                  ruc: _this7.ruc,
+                  password: _this7.password
+                });
+
+              case 16:
+                response = _context7.sent;
+
+                if (response.ok) {
+                  _context7.next = 23;
+                  break;
+                }
+
+                _this7.buttonLoading = false;
+                er = response.error.errors;
+                mensaje = "Error desconocido";
+                if (er.hasOwnProperty("fail")) mensaje = er.fail[0];
+                return _context7.abrupt("return", _this7.$toast.open({
+                  message: mensaje,
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 23:
+                _this7.$toast.open({
+                  message: response.data.data.success[0],
+                  type: "success",
+                  duration: 10000,
+                  dismissible: true
+                });
+
+                _this7.$router.push("/");
+
+              case 25:
+              case "end":
+                return _context7.stop();
+            }
+          }
+        }, _callee7);
+      }))();
     }
   }
 });
@@ -48522,7 +48805,7 @@ var render = function() {
                                   id: "password",
                                   type: "password",
                                   required: "",
-                                  placeholder: "Ingrese su contraseña."
+                                  placeholder: "Ingrese su contraseña"
                                 },
                                 domProps: { value: _vm.password },
                                 on: {
@@ -48997,432 +49280,481 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Visitor", [
-    _c(
-      "main",
-      { staticClass: "flex flex-col justify-center pt-2 pb-4 bg-gray-100" },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "md:text-center md:flex-col md:flex md:justify-center md:items-center"
-          },
-          [
-            _c("img", {
-              staticClass: "h-48 sm:h-56 px-6 w-auto mt-4",
-              attrs: {
-                src: __webpack_require__(/*! ../../../assets/illustrations/forgot-pass.png */ "./resources/assets/illustrations/forgot-pass.png"),
-                alt: "forgot-pass"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass:
-                  "uppercase px-5 mt-4 text-2xl md:text-3xl font-extrabold text-gray-900"
-              },
-              [_vm._v("Recuperar Sesión ")]
-            ),
-            _vm._v(" "),
-            _c("p", { staticClass: "px-5 text-sm" }, [
-              _vm._v("Estas recuperando sesión como "),
-              _c("b", { staticClass: "text-base2 italic" }, [
-                _vm._v(_vm._s(_vm.identifier))
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8"
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1"
-                  },
-                  [
-                    _c("div", { staticClass: "sm:col-span-2" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "block text-sm font-medium leading-5 text-gray-700",
-                          attrs: { for: "email" }
-                        },
-                        [_vm._v("Correo")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "mt-1 rounded-md shadow-sm" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.email,
-                              expression: "email"
-                            }
-                          ],
-                          staticClass:
-                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                          attrs: {
-                            id: "email",
-                            placeholder: "Ingrese su correo electronico",
-                            type: "text"
-                          },
-                          domProps: { value: _vm.email },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.email = $event.target.value
-                            }
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _vm.error_email
-                        ? _c("small", { staticClass: "text-red-600" }, [
-                            _vm._v(
-                              "\n              " +
-                                _vm._s(_vm.error_email) +
-                                "\n            "
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.vacio_email
-                        ? _c("small", { staticClass: "text-yellow-600" }, [
-                            _vm._v(
-                              "\n              " +
-                                _vm._s(_vm.vacio_email) +
-                                "\n            "
-                            )
-                          ])
-                        : _vm._e()
-                    ]),
-                    _vm._v(" "),
-                    _vm.identifier == "trabajador"
-                      ? _c("div", { staticClass: "sm:col-span-2" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass:
-                                "block text-sm font-medium leading-5 text-gray-700",
-                              attrs: { for: "input_dni" }
-                            },
-                            [_vm._v("DNI")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "mt-1 rounded-md shadow-sm" },
-                            [
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.dni,
-                                    expression: "dni"
-                                  }
-                                ],
-                                staticClass:
-                                  "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                                attrs: {
-                                  placeholder: "Ingrese su DNI",
-                                  id: "input_dni",
-                                  type: "text",
-                                  inputmode: "numeric",
-                                  onkeypress:
-                                    "return event.charCode >= 48 && event.charCode <= 57",
-                                  maxlength: "8",
-                                  pattern: "[0-9]*"
-                                },
-                                domProps: { value: _vm.dni },
-                                on: {
-                                  change: _vm.validateDNI,
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.dni = $event.target.value
-                                  }
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _vm.error_dni
-                            ? _c("small", { staticClass: "text-red-600" }, [
-                                _vm._v(
-                                  "\n            " +
-                                    _vm._s(_vm.error_dni) +
-                                    "\n            "
-                                )
-                              ])
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.vacio_dni
-                            ? _c("small", { staticClass: "text-yellow-600" }, [
-                                _vm._v(
-                                  "\n            " +
-                                    _vm._s(_vm.vacio_dni) +
-                                    "\n            "
-                                )
-                              ])
-                            : _vm._e()
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.identifier == "empresa"
-                      ? _c("div", { staticClass: "sm:col-span-2" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass:
-                                "block text-sm font-medium leading-5 text-gray-700",
-                              attrs: { for: "input_ruc" }
-                            },
-                            [_vm._v("RUC")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "mt-1 rounded-md shadow-sm" },
-                            [
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.ruc,
-                                    expression: "ruc"
-                                  }
-                                ],
-                                staticClass:
-                                  "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                                attrs: {
-                                  placeholder: "Ingrese su RUC",
-                                  type: "text",
-                                  id: "input_ruc",
-                                  inputmode: "numeric",
-                                  onkeypress:
-                                    "return event.charCode >= 48 && event.charCode <= 57",
-                                  maxlength: "11",
-                                  pattern: "[0-9]*"
-                                },
-                                domProps: { value: _vm.ruc },
-                                on: {
-                                  change: _vm.validateRUC,
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.ruc = $event.target.value
-                                  }
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _vm.error_ruc
-                            ? _c("small", { staticClass: "text-red-600" }, [
-                                _vm._v(
-                                  "\n              " +
-                                    _vm._s(_vm.error_ruc) +
-                                    "\n            "
-                                )
-                              ])
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.vacio_ruc
-                            ? _c("small", { staticClass: "text-yellow-600" }, [
-                                _vm._v(
-                                  "\n              " +
-                                    _vm._s(_vm.vacio_ruc) +
-                                    "\n            "
-                                )
-                              ])
-                            : _vm._e()
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sm:col-span-2" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "block text-sm font-medium leading-5 text-gray-700",
-                          attrs: { for: "password" }
-                        },
-                        [_vm._v("Contraseña")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "mt-1 rounded-md shadow-sm" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.password,
-                              expression: "password"
-                            }
-                          ],
-                          staticClass:
-                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                          attrs: {
-                            id: "password",
-                            placeholder: "Ingrese una contraseña",
-                            type: "password",
-                            required: ""
-                          },
-                          domProps: { value: _vm.password },
-                          on: {
-                            change: function($event) {
-                              return _vm.validatePassword()
-                            },
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.password = $event.target.value
-                            }
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _vm.error_password
-                        ? _c("small", { staticClass: "text-red-600" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.error_password) +
-                                "\n              "
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.vacio_pass
-                        ? _c("small", { staticClass: "text-yellow-600" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.vacio_pass) +
-                                "\n              "
-                            )
-                          ])
-                        : _vm._e()
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sm:col-span-2" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "block text-sm font-medium leading-5 text-gray-700",
-                          attrs: { for: "repeat_password" }
-                        },
-                        [_vm._v("Repetir Contraseña")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "mt-1 rounded-md shadow-sm" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.repeat_password,
-                              expression: "repeat_password"
-                            }
-                          ],
-                          staticClass:
-                            "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                          attrs: {
-                            id: "repeat_password",
-                            placeholder: "Verifique su contraseña",
-                            type: "password",
-                            required: ""
-                          },
-                          domProps: { value: _vm.repeat_password },
-                          on: {
-                            change: function($event) {
-                              return _vm.validatePassword()
-                            },
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.repeat_password = $event.target.value
-                            }
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _vm.error_repeat_password
-                        ? _c("small", { staticClass: "text-red-600" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.error_repeat_password) +
-                                "\n              "
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.vacio_repeat_pass
-                        ? _c("small", { staticClass: "text-yellow-600" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.vacio_repeat_pass) +
-                                "\n              "
-                            )
-                          ])
-                        : _vm._e()
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-8 mb-8" }, [
-                  _c(
-                    "span",
-                    { staticClass: "block w-2/3 mx-auto rounded-md shadow-sm" },
-                    [
-                      _c("AnimatedButton", {
-                        attrs: {
-                          content: "Actualizar",
-                          color: "gradiente",
-                          isLoading: _vm.buttonLoading
-                        },
-                        on: {
-                          onClick: function($event) {
-                            return _vm.submitPass()
-                          }
-                        }
-                      })
-                    ],
-                    1
-                  )
+  return _c(
+    "Visitor",
+    [
+      _c("Loader", {
+        staticClass: "min-h-screen",
+        attrs: { load: _vm.loading }
+      }),
+      _vm._v(" "),
+      _c(
+        "main",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: !_vm.loading,
+              expression: "!loading"
+            }
+          ],
+          staticClass:
+            "min-h-screen flex flex-col justify-center pt-2 pb-4 bg-gray-100"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "md:text-center md:flex-col md:flex md:justify-center md:items-center"
+            },
+            [
+              _c("img", {
+                staticClass: "h-48 sm:h-56 px-6 w-auto mt-4",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../assets/illustrations/forgot-pass.png */ "./resources/assets/illustrations/forgot-pass.png"),
+                  alt: "forgot-pass"
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "uppercase px-5 mt-4 text-2xl md:text-3xl font-extrabold text-gray-900"
+                },
+                [_vm._v("Recuperar Sesión ")]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "px-5 text-sm" }, [
+                _vm._v("Estas recuperando sesión como "),
+                _c("b", { staticClass: "text-base2 italic" }, [
+                  _vm._v(_vm._s(_vm.identifier))
                 ])
-              ]
-            )
-          ]
-        )
-      ]
-    )
-  ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10"
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1"
+                    },
+                    [
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "email" }
+                          },
+                          [_vm._v("Correo")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.email,
+                                  expression: "email"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                id: "email",
+                                placeholder: "Ingrese su correo",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.email },
+                              on: {
+                                change: function($event) {
+                                  return _vm.validateEmail()
+                                },
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.email = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_email
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(_vm.error_email) +
+                                  "\n            "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_email
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(_vm.vacio_email) +
+                                  "\n            "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _vm.identifier == "trabajador"
+                        ? _c("div", { staticClass: "sm:col-span-2" }, [
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "block text-sm font-medium leading-5 text-gray-700",
+                                attrs: { for: "input_dni" }
+                              },
+                              [_vm._v("DNI")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "mt-1 rounded-md shadow-sm" },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.dni,
+                                      expression: "dni"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                                  attrs: {
+                                    placeholder: "Ingrese su DNI",
+                                    id: "input_dni",
+                                    type: "text",
+                                    inputmode: "numeric",
+                                    onkeypress:
+                                      "return event.charCode >= 48 && event.charCode <= 57",
+                                    maxlength: "8",
+                                    pattern: "[0-9]*"
+                                  },
+                                  domProps: { value: _vm.dni },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.validateDNI()
+                                    },
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.dni = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm.error_dni
+                              ? _c("small", { staticClass: "text-red-600" }, [
+                                  _vm._v(
+                                    "\n            " +
+                                      _vm._s(_vm.error_dni) +
+                                      "\n            "
+                                  )
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.vacio_dni
+                              ? _c(
+                                  "small",
+                                  { staticClass: "text-yellow-600" },
+                                  [
+                                    _vm._v(
+                                      "\n            " +
+                                        _vm._s(_vm.vacio_dni) +
+                                        "\n            "
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.identifier == "empresa"
+                        ? _c("div", { staticClass: "sm:col-span-2" }, [
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "block text-sm font-medium leading-5 text-gray-700",
+                                attrs: { for: "input_ruc" }
+                              },
+                              [_vm._v("RUC")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "mt-1 rounded-md shadow-sm" },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.ruc,
+                                      expression: "ruc"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                                  attrs: {
+                                    placeholder: "Ingrese su RUC",
+                                    type: "text",
+                                    id: "input_ruc",
+                                    inputmode: "numeric",
+                                    onkeypress:
+                                      "return event.charCode >= 48 && event.charCode <= 57",
+                                    maxlength: "11",
+                                    pattern: "[0-9]*"
+                                  },
+                                  domProps: { value: _vm.ruc },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.validateRUC()
+                                    },
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.ruc = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm.error_ruc
+                              ? _c("small", { staticClass: "text-red-600" }, [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(_vm.error_ruc) +
+                                      "\n            "
+                                  )
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.vacio_ruc
+                              ? _c(
+                                  "small",
+                                  { staticClass: "text-yellow-600" },
+                                  [
+                                    _vm._v(
+                                      "\n              " +
+                                        _vm._s(_vm.vacio_ruc) +
+                                        "\n            "
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "password" }
+                          },
+                          [_vm._v("Contraseña")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.password,
+                                  expression: "password"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                id: "password",
+                                placeholder: "Ingrese una contraseña",
+                                type: "password",
+                                required: ""
+                              },
+                              domProps: { value: _vm.password },
+                              on: {
+                                change: function($event) {
+                                  return _vm.validatePassword()
+                                },
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.password = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_password
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_password) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_pass
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_pass) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium leading-5 text-gray-700",
+                            attrs: { for: "repeat_password" }
+                          },
+                          [_vm._v("Repetir Contraseña")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.repeat_password,
+                                  expression: "repeat_password"
+                                }
+                              ],
+                              staticClass:
+                                "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+                              attrs: {
+                                id: "repeat_password",
+                                placeholder: "Verifique su contraseña",
+                                type: "password",
+                                required: ""
+                              },
+                              domProps: { value: _vm.repeat_password },
+                              on: {
+                                change: function($event) {
+                                  return _vm.validateRepeatPassword()
+                                },
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.repeat_password = $event.target.value
+                                }
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.error_repeat_password
+                          ? _c("small", { staticClass: "text-red-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.error_repeat_password) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.vacio_repeat_pass
+                          ? _c("small", { staticClass: "text-yellow-600" }, [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.vacio_repeat_pass) +
+                                  "\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-8 mb-8" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "block w-2/3 mx-auto rounded-md shadow-sm"
+                      },
+                      [
+                        _c("AnimatedButton", {
+                          attrs: {
+                            content: "Actualizar",
+                            color: "gradiente",
+                            isLoading: _vm.buttonLoading
+                          },
+                          on: {
+                            onClick: function($event) {
+                              return _vm.submitPass()
+                            }
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ])
+                ]
+              )
+            ]
+          )
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49800,7 +50132,9 @@ var render = function() {
                               },
                               domProps: { value: _vm.ruc },
                               on: {
-                                change: _vm.validateRUC,
+                                change: function($event) {
+                                  return _vm.validateRUC()
+                                },
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
@@ -50171,7 +50505,9 @@ var render = function() {
                               },
                               domProps: { value: _vm.dni },
                               on: {
-                                change: _vm.validateDNI,
+                                change: function($event) {
+                                  return _vm.validateDNI()
+                                },
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
@@ -83259,7 +83595,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _pages_Auth_SignUpEnterprise_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
     beforeEnter: isGuest
   }, {
-    path: '/recover/session/identity=:ide&cod=:cod',
+    path: '/recover/session/identity=:identity&cod=:code',
     component: _pages_Auth_RecoverSession_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
     beforeEnter: isGuest,
     props: true
