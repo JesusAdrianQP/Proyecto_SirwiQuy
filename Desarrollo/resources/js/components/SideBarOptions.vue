@@ -20,11 +20,6 @@
       url="/supplier/services"
       :icon="{ icon: 'pencil-alt', solid: false }"
     />
-    <SideBarOption
-      title="Clientes"
-      url="/supplier/blank"
-      :icon="{ icon: 'users', solid: false }"
-    />   
     <div v-if="acceso == 'enterprise'">
       <SideBarOption
       title="Trabajadores"

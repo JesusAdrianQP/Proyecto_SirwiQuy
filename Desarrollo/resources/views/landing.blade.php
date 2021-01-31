@@ -373,7 +373,7 @@
         </div>
     </footer> 
     
-    <script src="{{ asset('js/custom_app.js') }}"></script>
+    <script src="{{ asset('js/preLoadLanding.js') }}"></script>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
   </body>
 </html>

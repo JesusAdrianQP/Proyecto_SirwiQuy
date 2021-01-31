@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Database\DirectionsData;
+use App\DataBase\DirectionsData;
 
 class DirectionController extends Controller
 {
