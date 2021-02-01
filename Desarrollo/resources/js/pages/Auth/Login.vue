@@ -190,11 +190,8 @@
                         </select>
                       </div>
 
-                      <div class="hidden md:block w-full py-3 md:w-1/5 justify-center all:justify-center text-center">
-                      </div>
-
-                      <div class="mt-3 md:mt-1 rounded-md w-full md:w-2/5">
-                        <div class="shadow-sm">
+                      <div class="col-span-3 sm:col-span-2 mt-3 md:mt-1 rounded-md w-full">
+                        <div>
                           <label
                           for="email_recover"
                           class="block text-sm font-medium leading-5 text-gray-700"
@@ -349,9 +346,43 @@ export default {
         this.validateRouter("enterprise");
       }
     },
-    async submitLogin() {
-      this.validateSubmit();
-      if (this.hasError) return;
+    validateEmail()
+    {
+      const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email_recover);
+      
+      this.error_email2 = '';
+      this.vacio_email2 = '';
+
+      if(this.email_recover == '') {return;}
+
+      if(!correo(this.email_recover))
+      {
+        this.error_email2 = 'Correo no válido';
+        this.vacio_email2 = '';
+      }
+    },
+    async submitLogin() 
+    {
+      this.validatePassword();
+      var boolean = false;
+
+      if (this.loger == "") { this.vacio_loger = "Campo obligatorio"; boolean = true;} 
+      else { this.vacio_loger = ""; }
+
+      if(this.password == "" && this.error_pass == "" )
+      { 
+        this.vacio_pass = "Campo obligatorio";
+        this.error_pass = "";
+        boolean = true;
+      }
+      else if(this.password != "" && this.error_pass != "") { this.vacio_pass = ""; boolean = true;}
+      else if(this.password != "" && this.error_pass == "")
+      {
+        this.vacio_pass = "";
+        this.error_pass = "";
+      }
+
+      if(boolean == true) { return; }
       this.buttonLoading = true;
 
       //Conexión con la lógica de negocio
@@ -486,17 +517,12 @@ export default {
           dismissible: true,
       });
     },
-    
-    validateSubmit() {
-      this.hasError = false;
+    validatePassword() 
+    {
+      this.error_pass = "";
+      this.vacio_pass = "";
       
-      //Validaciones de campo email vuejs
-      if (this.loger == "") {
-        this.hasError = true;
-        this.vacio_loger = "Campo obligatorio";
-      } else {
-        this.vacio_loger = "";
-      }
+      if(this.password.length == 0){return;}
 
       //Validaciones de campo pass vuejs
       if (this.password == "") {

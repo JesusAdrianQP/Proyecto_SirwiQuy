@@ -228,10 +228,176 @@ export default {
 
     if(this.errorPage == 1) this.$router.push("*");
   },
-  methods: {
-    async submitPass() {
-      this.validateSubmit();
-      if (this.hasError) return;
+  methods: 
+  {
+    validateEmail()
+    {
+      const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email);
+      
+      this.error_email = '';
+      this.vacio_email = '';
+
+      if(this.email == '') {return;}
+
+      if(!correo(this.email))
+      {
+        this.error_email = 'Correo no válido';
+        this.vacio_email = '';
+      }
+    },
+    validateDNI() 
+    {
+      this.error_dni = '';
+      this.vacio_dni = '';
+
+      if(this.dni == ''){return;}
+
+      if ((this.dni.length > 0 && this.dni.length < 8)) 
+      {
+        this.error_dni = "El DNI debe tener 8 dígitos";
+        this.vacio_dni = "";
+      }
+    },
+    validateRUC() 
+    {
+      this.error_ruc = '';
+      this.vacio_ruc = '';
+      
+      if(this.ruc == ''){return;}
+
+      if ((this.ruc.length > 0 && this.ruc.length < 11)) 
+      {
+        this.error_ruc = 'El RUC debe tener 11 dígitos';
+        this.vacio_ruc = '';
+      }
+    },
+    validatePassword()
+    {
+      this.error_password = '';
+      this.vacio_pass = '';
+      
+      if(this.password.length == 0){return;}
+
+      if(this.password.length >= 8)
+			{	
+        this.vacio_pass = "";	
+				var mayuscula = false;
+				var minuscula = false;
+				var numero = false;
+				
+				for(var i = 0; i<this.password.length; i++)
+				{
+					if(this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) { mayuscula = true; }
+					else if(this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) { minuscula = true; }
+					else if(this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) { numero = true; }
+        }
+        
+        if(mayuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra mayuscula"; return;}
+        if(minuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra minuscula"; return;}
+        if(numero == false) { this.error_password = "Su contraseña debe tener al menos un número"; return;}
+        
+        if(mayuscula == true && minuscula == true && numero == true) { this.error_password = "" }
+			}
+      else if(this.password.length < 8 && this.password.length > 0)
+      { 
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
+      }
+    },
+    validateRepeatPassword()
+    {
+      this.error_repeat_password = '';
+      this.vacio_repeat_pass = '';
+      
+      if(this.repeat_password.length == 0){return;}
+
+      if(this.repeat_password != this.password)
+      {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    async submitPass() 
+    {
+      this.validateEmail();
+      if(this.identifier == "empresa") { this.validateRUC(); }
+      if(this.identifier == "trabajador") { this.validateDNI(); }
+      this.validatePassword();
+      this.validateRepeatPassword();
+      var boolean = false;
+
+      if(this.email == "" && this.error_email == "" )
+      { 
+        this.vacio_email = "Campo obligatorio";
+        this.error_email = "";
+        boolean = true;
+      }
+      else if(this.email != "" && this.error_email != "") { this.vacio_email = ""; boolean = true;}
+      else if(this.email != "" && this.error_email == "")
+      {
+        this.vacio_email = "";
+        this.error_email = "";
+      }
+
+      if(this.identifier == "empresa")
+      {
+        if(this.ruc == "" && this.error_ruc == "" )
+        { 
+          this.vacio_ruc = "Campo obligatorio";
+          this.error_ruc = "";
+          boolean = true;
+        }
+        else if(this.ruc != "" && this.error_ruc != "") { this.vacio_ruc = ""; boolean = true;}
+        else if(this.ruc != "" && this.error_ruc == "")
+        {
+          this.vacio_ruc = "";
+          this.error_ruc = "";
+        }
+      }
+
+      if(this.identifier == "trabajador")
+      {
+        if(this.dni == "" && this.error_dni == "" )
+        { 
+          this.vacio_dni = "Campo obligatorio";
+          this.error_dni = "";
+          boolean = true;
+        }
+        else if(this.dni != "" && this.error_dni != "") { this.vacio_dni = ""; boolean = true;}
+        else if(this.dni != "" && this.error_dni == "")
+        {
+          this.vacio_dni = "";
+          this.error_dni = "";
+        }
+      }
+
+      if(this.password == "" && this.error_password == "" )
+      { 
+        this.vacio_pass = "Campo obligatorio";
+        this.error_password = "";
+        boolean = true;
+      }
+      else if(this.password != "" && this.error_password != "") { this.vacio_pass = ""; boolean = true;}
+      else if(this.password != "" && this.error_password == "")
+      {
+        this.vacio_pass = "";
+        this.error_password = "";
+      }
+
+      if(this.repeat_password == "" && this.error_repeat_password == "" )
+      { 
+        this.vacio_repeat_pass = "Campo obligatorio";
+        this.error_repeat_password = "";
+        boolean = true;
+      }
+      else if(this.repeat_password != "" && this.error_repeat_password != "") { this.vacio_repeat_pass = ""; boolean = true;}
+      else if(this.repeat_password != "" && this.error_repeat_password == "")
+      {
+        this.vacio_repeat_pass = "";
+        this.error_repeat_password = "";
+      }
+
+      if(boolean == true) { return; }
       this.buttonLoading = true;
 
       let response = await api.post(`/changepass`, {
@@ -267,90 +433,13 @@ export default {
         dismissible: true,
       });
 
-      //Redireccionamiento de rutas
-      this.$router.push("/");
-    },
-    validateSubmit() {
-      this.hasError = false;
-
-      //Validaciones del campo Email
-      if (this.email == '') {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = '';
-      } else if (
-        !this.email.includes("@") ||
-        !this.email.includes(".") ||
-        this.email.length < 5
-      ) {
-        this.hasError = true;
-        this.vacio_email = '';
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = '';
-        this.vacio_email = '';
-      }
-
-      if(this.identifier == 'trabajador'){
-         //Validación del DNI
-        if ((this.dni.length > 0 && this.dni.length < 8) || (this.dni.length > 8)) {
-          this.hasError = true;
-          this.error_dni = "El DNI debe tener 8 dígitos";
-          this.vacio_dni = "";
-        } else if(this.dni == ''){
-          this.hasError = true;
-          this.error_dni = '';
-          this.vacio_dni = 'Campo necesario';
-        } else{
-          this.error_dni = '';
-          this.vacio_dni = '';
-        } 
-      }
-
-      if(this.identifier == 'empresa'){
-         //Validacion de RUC
-        if ((this.ruc.length > 0 && this.ruc.length < 11) || (this.ruc.length > 11)) {
-          this.hasError = true;
-          this.error_ruc = "El RUC debe tener 11 dígitos";
-          this.vacio_ruc = "";
-        }else if(this.ruc == ''){
-          this.hasError = true;
-          this.error_ruc = '';
-          this.vacio_ruc = 'Campo necesario';
-        }else{
-          this.error_ruc = "";
-          this.vacio_ruc = "";
-        }
-      }
-
-      //Validaciones del campo password
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      }
-
-      //Validaciones del campo repeat password
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      }
-    },
+      var user = null;
+      if(this.identifier == 'cliente') user = 'customer';
+      else if(this.identifier == 'trabajador') user = 'employee';
+      else user = 'enterprise';
+      
+      this.$router.push("/login/" + user);
+    }
   },
 };
 </script>
