@@ -4801,12 +4801,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      token: localStorage.getItem('token'),
-      acceso: localStorage.getItem('e_level'),
       isOpen: false,
+      acceso: localStorage.getItem('e_level'),
       user: '',
-      image: '',
-      id_provider: ''
+      image: ''
     };
   },
   created: function created() {
@@ -4818,18 +4816,46 @@ __webpack_require__.r(__webpack_exports__);
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.next = 2;
-              return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/level=".concat(_this.acceso, "/token=").concat(_this.token));
+              if (!(localStorage.getItem('e_user') != null)) {
+                _context.next = 6;
+                break;
+              }
 
-            case 2:
-              response = _context.sent;
-              supplier = response.data.data;
-              _this.user = supplier.username;
-              _this.image = supplier.file;
-              _this.id_provider = supplier._id;
-              localStorage.setItem('e_id', _this.id_provider);
+              _this.user = localStorage.getItem('e_user');
+
+              if (!(localStorage.getItem('e_image') == 'undefined')) {
+                _context.next = 4;
+                break;
+              }
+
+              return _context.abrupt("return");
+
+            case 4:
+              _this.image = localStorage.getItem('e_image');
+              return _context.abrupt("return");
+
+            case 6:
+              _context.next = 8;
+              return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/level=".concat(_this.acceso, "/token=").concat(localStorage.getItem('token')));
 
             case 8:
+              response = _context.sent;
+              supplier = response.data.data;
+              localStorage.setItem('e_user', supplier.username);
+              localStorage.setItem('e_image', supplier.file);
+              _this.user = localStorage.getItem('e_user');
+
+              if (!(localStorage.getItem('e_image') == 'undefined')) {
+                _context.next = 15;
+                break;
+              }
+
+              return _context.abrupt("return");
+
+            case 15:
+              _this.image = localStorage.getItem('e_image');
+
+            case 16:
             case "end":
               return _context.stop();
           }
@@ -4976,10 +5002,11 @@ __webpack_require__.r(__webpack_exports__);
                 localStorage.removeItem('token');
                 localStorage.removeItem('e_level');
                 localStorage.removeItem('e_id');
-                localStorage.removeItem('e_DNI');
+                localStorage.removeItem('e_user');
+                localStorage.removeItem('e_image');
                 window.location.reload();
 
-              case 7:
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -14238,17 +14265,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../functions */ "./resources/js/functions.js");
-/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
-/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
-/* harmony import */ var _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/IconSvg.vue */ "./resources/js/components/IconSvg.vue");
+/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../functions */ "./resources/js/functions.js");
+/* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Loader */ "./resources/js/components/Loader.vue");
+/* harmony import */ var _components_SideBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/SideBar */ "./resources/js/components/SideBar.vue");
+/* harmony import */ var _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/IconSvg.vue */ "./resources/js/components/IconSvg.vue");
 
 
 
 
-//
-//
+
 //
 //
 //
@@ -14595,48 +14622,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "EditProfile",
   components: {
-    SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_7__["default"],
-    IconSvg: _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-    Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_6__["default"]
+    SideBar: _components_SideBar__WEBPACK_IMPORTED_MODULE_8__["default"],
+    IconSvg: _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    Loader: _components_Loader__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   data: function data() {
-    return {
-      loading: true,
+    var _ref;
+
+    return _ref = {
+      loading: false,
       dni_validate: '',
       token: localStorage.getItem('token'),
       level: localStorage.getItem('e_level'),
+      supplierdata: [],
+      user: '',
+      image: '',
+      id_provider: '',
       hasError: false,
       dni_valid: false,
       isType: "",
       dni: "",
-      age: "",
-      image: "",
-      first_name: "",
-      last_name_p: "",
-      last_name_m: "",
-      department: "",
-      province: "",
-      district: "",
-      address: "",
-      bank_account: "",
-      departments: [],
-      districts: [],
-      provinces: [],
-      error_dni: "",
-      error_age: "",
-      vacio_dni: "",
-      vacio_age: "",
-      vacio_first_name: "",
-      vacio_last_name_m: "",
-      vacio_last_name_p: "",
-      vacio_department: "",
-      vacio_province: "",
-      vacio_district: "",
-      vacio_address: "",
-      vacio_bank_account: ""
-    };
+      age: ""
+    }, Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "image", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "first_name", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "last_name_p", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "last_name_m", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "department", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "province", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "district", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "address", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "bank_account", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "departments", []), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "districts", []), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "provinces", []), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "error_dni", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "error_age", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_dni", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_age", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_first_name", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_last_name_m", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_last_name_p", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_department", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_province", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_district", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_address", ""), Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, "vacio_bank_account", ""), _ref;
   },
-  mounted: function mounted() {
+  created: function created() {
     var _this = this;
 
     return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
@@ -14645,29 +14654,36 @@ __webpack_require__.r(__webpack_exports__);
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.next = 2;
-              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/level=".concat(_this.level, "/token=").concat(_this.token));
+              _this.loading = true;
+              _context.next = 3;
+              return _api__WEBPACK_IMPORTED_MODULE_5__["default"].get("/level=".concat(_this.level, "/token=").concat(_this.token));
 
-            case 2:
+            case 3:
               response = _context.sent;
               supplier = response.data.data;
+              _this.id_provider = supplier._id;
               _this.dni_validate = supplier.DNI;
+              localStorage.setItem('e_id', _this.id_provider);
 
-              if (_this.dni_validate != undefined || _this.dni_validate != null || _this.dni_validate != '') {
-                localStorage.setItem('e_DNI', _this.dni_validate);
-
-                _this.$router.push('/supplier');
+              if (!(_this.dni_validate != undefined)) {
+                _context.next = 11;
+                break;
               }
 
-              _context.next = 8;
-              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/dep");
+              _this.$router.push('/supplier');
 
-            case 8:
+              return _context.abrupt("return");
+
+            case 11:
+              _context.next = 13;
+              return _api__WEBPACK_IMPORTED_MODULE_5__["default"].get("/dep");
+
+            case 13:
               response2 = _context.sent;
               _this.departments = response2.data.data.departments;
               _this.loading = false;
 
-            case 11:
+            case 16:
             case "end":
               return _context.stop();
           }
@@ -14707,7 +14723,7 @@ __webpack_require__.r(__webpack_exports__);
 
               case 15:
                 _context2.next = 17;
-                return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/validate/".concat(_this2.isType, "/").concat(_this2.dni));
+                return _api__WEBPACK_IMPORTED_MODULE_5__["default"].get("/validate/".concat(_this2.isType, "/").concat(_this2.dni));
 
               case 17:
                 response = _context2.sent;
@@ -14760,7 +14776,7 @@ __webpack_require__.r(__webpack_exports__);
             switch (_context3.prev = _context3.next) {
               case 0:
                 _context3.next = 2;
-                return _functions__WEBPACK_IMPORTED_MODULE_5__["default"].getProv(_this3.department, _this3.departments);
+                return _functions__WEBPACK_IMPORTED_MODULE_6__["default"].getProv(_this3.department, _this3.departments);
 
               case 2:
                 response = _context3.sent;
@@ -14784,7 +14800,7 @@ __webpack_require__.r(__webpack_exports__);
             switch (_context4.prev = _context4.next) {
               case 0:
                 _context4.next = 2;
-                return _functions__WEBPACK_IMPORTED_MODULE_5__["default"].getDist(_this4.province, _this4.provinces);
+                return _functions__WEBPACK_IMPORTED_MODULE_6__["default"].getDist(_this4.province, _this4.provinces);
 
               case 2:
                 response = _context4.sent;
@@ -14831,7 +14847,7 @@ __webpack_require__.r(__webpack_exports__);
 
               case 5:
                 _context5.next = 7;
-                return _api__WEBPACK_IMPORTED_MODULE_4__["default"].post("/edit_data", {
+                return _api__WEBPACK_IMPORTED_MODULE_5__["default"].post("/edit_data", {
                   level: _this5.level,
                   token: _this5.token,
                   dni: _this5.dni,
@@ -59923,7 +59939,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "main",
+    "SideBar",
+    { attrs: { title: "Actualización de Datos" } },
     [
       _c("Loader", {
         staticClass: "min-h-screen",
@@ -59931,7 +59948,7 @@ var render = function() {
       }),
       _vm._v(" "),
       _c(
-        "SideBar",
+        "main",
         {
           directives: [
             {
@@ -59940,8 +59957,7 @@ var render = function() {
               value: !_vm.loading,
               expression: "!loading"
             }
-          ],
-          attrs: { title: "Actualización de Datos" }
+          ]
         },
         [
           _c(
@@ -59957,7 +59973,11 @@ var render = function() {
                         staticClass:
                           "text-lg leading-6 font-medium text-gray-900"
                       },
-                      [_vm._v("\n              Datos Personales\n            ")]
+                      [
+                        _vm._v(
+                          "\n                Datos Personales\n              "
+                        )
+                      ]
                     )
                   ]),
                   _vm._v(" "),
@@ -59976,7 +59996,7 @@ var render = function() {
                               "block text-sm font-medium leading-5 text-gray-700",
                             attrs: { for: "input_dni" }
                           },
-                          [_vm._v("\n                DNI\n              ")]
+                          [_vm._v("\n                  DNI\n                ")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -60077,7 +60097,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                Foto de Perfil\n              "
+                              "\n                  Foto de Perfil\n                "
                             )
                           ]
                         ),
@@ -60095,7 +60115,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                    Seleccionar imagen\n                  "
+                                      "\n                      Seleccionar imagen\n                    "
                                     )
                                   ]
                                 ),
@@ -60129,7 +60149,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                  Eliminar imagen\n                  "
+                                        "\n                    Eliminar imagen\n                    "
                                       )
                                     ]
                                   ),
@@ -60163,7 +60183,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                Nombre(s)\n              "
+                              "\n                  Nombre(s)\n                "
                             )
                           ]
                         ),
@@ -60217,7 +60237,7 @@ var render = function() {
                               "block text-sm font-medium leading-5 text-gray-700",
                             attrs: { for: "input_age" }
                           },
-                          [_vm._v("\n                Edad\n              ")]
+                          [_vm._v("\n                  Edad\n                ")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -60277,7 +60297,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                Apellido Paterno\n              "
+                              "\n                  Apellido Paterno\n                "
                             )
                           ]
                         ),
@@ -60332,7 +60352,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                Apellido Materno\n              "
+                              "\n                  Apellido Materno\n                "
                             )
                           ]
                         ),
@@ -60391,7 +60411,7 @@ var render = function() {
                           staticClass:
                             "text-lg leading-6 font-medium text-gray-900"
                         },
-                        [_vm._v("\n              Domicilio\n            ")]
+                        [_vm._v("\n                Domicilio\n              ")]
                       )
                     ]),
                     _vm._v(" "),
@@ -60412,7 +60432,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                Departamento\n              "
+                                "\n                  Departamento\n                "
                               )
                             ]
                           ),
@@ -60494,7 +60514,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                Provincia\n              "
+                                "\n                  Provincia\n                "
                               )
                             ]
                           ),
@@ -60574,7 +60594,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                Distrito\n              "
+                                "\n                  Distrito\n                "
                               )
                             ]
                           ),
@@ -60657,7 +60677,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                Dirección\n              "
+                                "\n                  Dirección\n                "
                               )
                             ]
                           ),
@@ -60712,7 +60732,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                Cuenta Bancaria\n              "
+                                "\n                  Cuenta Bancaria\n                "
                               )
                             ]
                           ),
@@ -60780,7 +60800,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                  Cancelar\n                "
+                                  "\n                    Cancelar\n                  "
                                 )
                               ]
                             )
@@ -60805,7 +60825,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                Guardar Cambios\n              "
+                                "\n                  Guardar Cambios\n                "
                               )
                             ]
                           )
@@ -83657,11 +83677,6 @@ var isGuest = function isGuest(to, from, next) {
 
 var isSupplier = function isSupplier(to, from, next) {
   if (localStorage.getItem("e_level") == "employee") {
-    if ((localStorage.getItem("e_DNI") == undefined || localStorage.getItem("e_DNI") == "") && to.path != "/worker/profile/edit") {
-      next("/worker/profile/edit");
-      return;
-    }
-
     next();
     return;
   } else if (localStorage.getItem("e_level") == "enterprise") {

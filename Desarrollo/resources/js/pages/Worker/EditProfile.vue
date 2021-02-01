@@ -1,341 +1,339 @@
 <template>
-  <!-- EDIT PROFILE: Vista de editar perfil del proveedor.
-  Muestra un formulario donde se pueden actualizar los datos del proveedor
-  como DNI, edad, foto, nombres, apellidos, departamento, provincia,
-  distrito, dirección y cuenta bancaria. --> 
-  <main>
-    <Loader class="min-h-screen"
+  <!-- EDIT PROFILE: Vista de editar perfil del proveedor.-->
+    <SideBar title="Actualización de Datos">
+      <Loader class="min-h-screen"
           :load="loading"
-        />
-    <SideBar v-show="!loading" title="Actualización de Datos">
-      <div class="bg-white overflow-hidden shadow rounded-lg">
-        
+      />
+      <main v-show="!loading">
+        <div class="bg-white overflow-hidden shadow rounded-lg">
+          
 
-        <div class="px-4 py-5 sm:p-6">
-          <div>
+          <div class="px-4 py-5 sm:p-6">
             <div>
-              <h3 class="text-lg leading-6 font-medium text-gray-900">
-                Datos Personales
-              </h3>
-            </div>
-            <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">  
-              <div class="sm:col-span-3">
-                <label
-                  for="input_dni"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  DNI
-                </label>
-                <div class="mt-1 relative rounded-md shadow-sm">
-                  <input
-                    placeholder="Ingrese su DNI"
-                    id="input_dni"
-                    v-model="dni"
-                    @change="validateDNI"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                  <div
-                    class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+              <div>
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                  Datos Personales
+                </h3>
+              </div>
+              <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">  
+                <div class="sm:col-span-3">
+                  <label
+                    for="input_dni"
+                    class="block text-sm font-medium leading-5 text-gray-700"
                   >
-                    <IconSvg v-show="!dni_valid" solid="solid" icon="exclamation-circle" myClass="h-5 w-5 text-red-500"/>
-                    <IconSvg
-                    v-show="dni_valid"
-                      solid="solid"
-                      icon="check-circle"
-                      myClass="h-5 w-5 text-green-500"
+                    DNI
+                  </label>
+                  <div class="mt-1 relative rounded-md shadow-sm">
+                    <input
+                      placeholder="Ingrese su DNI"
+                      id="input_dni"
+                      v-model="dni"
+                      @change="validateDNI"
+                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    />
+                    <div
+                      class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                    >
+                      <IconSvg v-show="!dni_valid" solid="solid" icon="exclamation-circle" myClass="h-5 w-5 text-red-500"/>
+                      <IconSvg
+                      v-show="dni_valid"
+                        solid="solid"
+                        icon="check-circle"
+                        myClass="h-5 w-5 text-green-500"
+                      />
+                    </div>
+                  </div>
+                  <small v-if="error_dni" class="text-red-600">{{
+                    error_dni
+                  }}</small>
+                  <small v-if="vacio_dni" class="text-yellow-600">{{
+                    vacio_dni
+                  }}</small>
+                </div>
+
+                <div class="sm:col-span-3">
+                  <label
+                    for="photo"
+                    class="block text-sm leading-5 font-medium text-gray-700"
+                  >
+                    Foto de Perfil
+                  </label>
+                  <div class="mt-2 flex items-center">
+                    <div v-if="!image">
+                      <label
+                        for="photo"
+                        style="cursor: pointer"
+                        class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">
+                        Seleccionar imagen
+                      </label>
+
+                      <span class="photo">
+                        <input
+                          id="photo"
+                          type="file"
+                          style="display:none;"
+                          accept="image/png, .jpeg, .jpg"
+                          @change="onFileChange"
+                          
+                        /> 
+                      </span>
+                    </div> 
+
+                    <div class="flex items-center" style="width: 100%;" v-else>
+                        <button @click="removeImage" class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                          style="width: 100%;">
+                      Eliminar imagen
+                      </button>
+
+                      <div class="text-center" style="width: 100%;">
+                        <img :src="image" class="inline-block h-20 w-20 sm:h-32 sm:w-32 rounded-full"/> 
+                      </div>               
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div class="sm:col-span-3">
+                  <label
+                    for="input_first_name"
+                    class="block text-sm font-medium leading-5 text-gray-700"
+                  >
+                    Nombre(s)
+                  </label>
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <input
+                      placeholder="Ingrese sus nombres completos"
+                      id="input_first_name"
+                      v-model="first_name"
+                      type="text"
+                      disabled="disabled"
+                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                     />
                   </div>
-                </div>
-                <small v-if="error_dni" class="text-red-600">{{
-                  error_dni
-                }}</small>
-                <small v-if="vacio_dni" class="text-yellow-600">{{
-                  vacio_dni
-                }}</small>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label
-                  for="photo"
-                  class="block text-sm leading-5 font-medium text-gray-700"
-                >
-                  Foto de Perfil
-                </label>
-                <div class="mt-2 flex items-center">
-                  <div v-if="!image">
-                    <label
-                      for="photo"
-                      style="cursor: pointer"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">
-                      Seleccionar imagen
-                    </label>
-
-                    <span class="photo">
-                      <input
-                        id="photo"
-                        type="file"
-                        style="display:none;"
-                        accept="image/png, .jpeg, .jpg"
-                        @change="onFileChange"
-                        
-                      /> 
-                    </span>
-                  </div> 
-
-                  <div class="flex items-center" style="width: 100%;" v-else>
-                      <button @click="removeImage" class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                        style="width: 100%;">
-                    Eliminar imagen
-                    </button>
-
-                    <div class="text-center" style="width: 100%;">
-                      <img :src="image" class="inline-block h-20 w-20 sm:h-32 sm:w-32 rounded-full"/> 
-                    </div>               
-                  </div>
-                  
-                </div>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label
-                  for="input_first_name"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Nombre(s)
-                </label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Ingrese sus nombres completos"
-                    id="input_first_name"
-                    v-model="first_name"
-                    type="text"
-                    disabled="disabled"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="vacio_first_name" class="text-yellow-600">{{
-                  vacio_first_name
-                }}</small>
-              </div>
-              
-              <div class="sm:col-span-3">
-                <label
-                  for="input_age"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Edad
-                </label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Digite su edad actual"
-                    id="input_age"
-                    type="number"
-                    max="90"
-                    v-model="age"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="error_age" class="text-red-600">{{
-                  error_age
-                }}</small>
-                <small v-if="vacio_age" class="text-yellow-600">{{
-                  vacio_age
-                }}</small>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label
-                  for="input_last_name_p"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Apellido Paterno
-                </label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Ingrese su apellido paterno"
-                    id="input_last_name_p"
-                    v-model="last_name_p"
-                    disabled="disabled"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="vacio_last_name_p" class="text-yellow-600">{{
-                  vacio_last_name_p
-                }}</small>
-              </div>
-
-              <div class="sm:col-span-3">
-                <label
-                  for="input_last_name_m"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Apellido Materno
-                </label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Ingrese su apellido materno"
-                    id="input_last_name_m"
-                    v-model="last_name_m"
-                    disabled="disabled"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="vacio_last_name_m" class="text-yellow-600">{{
-                  vacio_last_name_m
-                }}</small>
-              </div>
-            </div>
-          </div>
-          
-          <div class="mt-8 border-t border-gray-200 pt-6">
-            <div>
-              <h3 class="text-lg leading-6 font-medium text-gray-900">
-                Domicilio
-              </h3>
-            </div>
-            <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
-              <div class="sm:col-span-2">
-                <label
-                  for="select_department"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Departamento
-                </label>
-                <!--Solo si no se actualizo nada aun o se quiere volver a actualizar-->
-                <div class="mt-1 rounded-md shadow-sm">
-                  <select
-                    @change="Changeprov"
-                    id="select_department"
-                    v-model="department"
-                    class="form-select block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  >
-                    <option disabled="" value="">Seleccionar</option>
-                    <option v-for="department in departments" v-bind:key="department.id">{{department.name}}</option>
-                  </select>
-                </div>
-                <small v-if="vacio_department" class="text-yellow-600">{{
-                  vacio_department
-                }}</small>
-              </div>
-
-              <div class="sm:col-span-2">
-                <label
-                  for="select_province"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Provincia
-                </label>
-                <!--Solo si no se actualizo nada aun o se quiere volver a actualizar-->
-                <div class="mt-1 rounded-md shadow-sm">
-                  <select
-                    @change="Changedist"
-                    id="select_province"
-                    v-model="province"
-                    class="form-select block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  >
-                    <option disabled="" value="">Seleccionar</option>
-                    <option v-for="province in provinces" v-bind:key="province.id">{{province.name}}</option>
-                  </select>
+                  <small v-if="vacio_first_name" class="text-yellow-600">{{
+                    vacio_first_name
+                  }}</small>
                 </div>
                 
-                <small v-if="vacio_province" class="text-yellow-600">{{
-                  vacio_province
-                }}</small>
-              </div>
-
-              <div class="sm:col-span-2">
-                <label
-                  for="select_district"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Distrito
-                </label>
-                <!--Solo si no se actualizo nada aun o se quiere volver a actualizar-->
-                <div class="mt-1 rounded-md shadow-sm">
-                  <select
-                    id="select_district"
-                    v-model="district"
-                    class="form-select block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                <div class="sm:col-span-3">
+                  <label
+                    for="input_age"
+                    class="block text-sm font-medium leading-5 text-gray-700"
                   >
-                    <option selected="" disabled="" value="">Seleccionar</option>
-                    <option v-for="district in districts" v-bind:key="district.id">{{district.name}}</option>
-                  </select>
+                    Edad
+                  </label>
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <input
+                      placeholder="Digite su edad actual"
+                      id="input_age"
+                      type="number"
+                      max="90"
+                      v-model="age"
+                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    />
+                  </div>
+                  <small v-if="error_age" class="text-red-600">{{
+                    error_age
+                  }}</small>
+                  <small v-if="vacio_age" class="text-yellow-600">{{
+                    vacio_age
+                  }}</small>
                 </div>
-                <small v-if="vacio_district" class="text-yellow-600">{{
-                  vacio_district
-                }}</small>
-              </div>
 
-              <div class="sm:col-span-6">
-                <label
-                  for="input_address"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Dirección
-                </label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Ingrese su dirección de referencia"
-                    id="input_address"
-                  
-                    v-model="address"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
+                <div class="sm:col-span-3">
+                  <label
+                    for="input_last_name_p"
+                    class="block text-sm font-medium leading-5 text-gray-700"
+                  >
+                    Apellido Paterno
+                  </label>
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <input
+                      placeholder="Ingrese su apellido paterno"
+                      id="input_last_name_p"
+                      v-model="last_name_p"
+                      disabled="disabled"
+                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    />
+                  </div>
+                  <small v-if="vacio_last_name_p" class="text-yellow-600">{{
+                    vacio_last_name_p
+                  }}</small>
                 </div>
-                <small v-if="vacio_address" class="text-yellow-600">{{
-                  vacio_address
-                }}</small>
-              </div>
 
-              <div class="sm:col-span-6">
-                <label
-                  for="input_bank_account"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Cuenta Bancaria
-                </label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Ingrese su número de cuenta bancaria"
-                    id="input_bank_account"
-                    v-model="bank_account"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
+                <div class="sm:col-span-3">
+                  <label
+                    for="input_last_name_m"
+                    class="block text-sm font-medium leading-5 text-gray-700"
+                  >
+                    Apellido Materno
+                  </label>
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <input
+                      placeholder="Ingrese su apellido materno"
+                      id="input_last_name_m"
+                      v-model="last_name_m"
+                      disabled="disabled"
+                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    />
+                  </div>
+                  <small v-if="vacio_last_name_m" class="text-yellow-600">{{
+                    vacio_last_name_m
+                  }}</small>
                 </div>
-                <small v-if="vacio_bank_account" class="text-yellow-600">{{
-                  vacio_bank_account
-                }}</small>
               </div>
             </div>
-          </div>
-          
-          <div class="mt-8 border-t border-gray-200 pt-5">
-            <div class="flex justify-end">
-              <span class="inline-flex rounded-md shadow-sm">
-                <router-link to="/supplier">
-                  <button
-                    type="button"
-                    class="py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+            
+            <div class="mt-8 border-t border-gray-200 pt-6">
+              <div>
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                  Domicilio
+                </h3>
+              </div>
+              <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
+                <div class="sm:col-span-2">
+                  <label
+                    for="select_department"
+                    class="block text-sm font-medium leading-5 text-gray-700"
                   >
-                    Cancelar
+                    Departamento
+                  </label>
+                  <!--Solo si no se actualizo nada aun o se quiere volver a actualizar-->
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <select
+                      @change="Changeprov"
+                      id="select_department"
+                      v-model="department"
+                      class="form-select block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    >
+                      <option disabled="" value="">Seleccionar</option>
+                      <option v-for="department in departments" v-bind:key="department.id">{{department.name}}</option>
+                    </select>
+                  </div>
+                  <small v-if="vacio_department" class="text-yellow-600">{{
+                    vacio_department
+                  }}</small>
+                </div>
+
+                <div class="sm:col-span-2">
+                  <label
+                    for="select_province"
+                    class="block text-sm font-medium leading-5 text-gray-700"
+                  >
+                    Provincia
+                  </label>
+                  <!--Solo si no se actualizo nada aun o se quiere volver a actualizar-->
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <select
+                      @change="Changedist"
+                      id="select_province"
+                      v-model="province"
+                      class="form-select block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    >
+                      <option disabled="" value="">Seleccionar</option>
+                      <option v-for="province in provinces" v-bind:key="province.id">{{province.name}}</option>
+                    </select>
+                  </div>
+                  
+                  <small v-if="vacio_province" class="text-yellow-600">{{
+                    vacio_province
+                  }}</small>
+                </div>
+
+                <div class="sm:col-span-2">
+                  <label
+                    for="select_district"
+                    class="block text-sm font-medium leading-5 text-gray-700"
+                  >
+                    Distrito
+                  </label>
+                  <!--Solo si no se actualizo nada aun o se quiere volver a actualizar-->
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <select
+                      id="select_district"
+                      v-model="district"
+                      class="form-select block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    >
+                      <option selected="" disabled="" value="">Seleccionar</option>
+                      <option v-for="district in districts" v-bind:key="district.id">{{district.name}}</option>
+                    </select>
+                  </div>
+                  <small v-if="vacio_district" class="text-yellow-600">{{
+                    vacio_district
+                  }}</small>
+                </div>
+
+                <div class="sm:col-span-6">
+                  <label
+                    for="input_address"
+                    class="block text-sm font-medium leading-5 text-gray-700"
+                  >
+                    Dirección
+                  </label>
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <input
+                      placeholder="Ingrese su dirección de referencia"
+                      id="input_address"
+                    
+                      v-model="address"
+                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    />
+                  </div>
+                  <small v-if="vacio_address" class="text-yellow-600">{{
+                    vacio_address
+                  }}</small>
+                </div>
+
+                <div class="sm:col-span-6">
+                  <label
+                    for="input_bank_account"
+                    class="block text-sm font-medium leading-5 text-gray-700"
+                  >
+                    Cuenta Bancaria
+                  </label>
+                  <div class="mt-1 rounded-md shadow-sm">
+                    <input
+                      placeholder="Ingrese su número de cuenta bancaria"
+                      id="input_bank_account"
+                      v-model="bank_account"
+                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    />
+                  </div>
+                  <small v-if="vacio_bank_account" class="text-yellow-600">{{
+                    vacio_bank_account
+                  }}</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 border-t border-gray-200 pt-5">
+              <div class="flex justify-end">
+                <span class="inline-flex rounded-md shadow-sm">
+                  <router-link to="/supplier">
+                    <button
+                      type="button"
+                      class="py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                    >
+                      Cancelar
+                    </button>
+                  </router-link>
+                </span>
+                <span class="ml-3 inline-flex rounded-md shadow-sm">
+                  <button
+                    @click="submitForm"
+                    type="submit"
+                    class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
+                  >
+                    Guardar Cambios
                   </button>
-                </router-link>
-              </span>
-              <span class="ml-3 inline-flex rounded-md shadow-sm">
-                <button
-                  @click="submitForm"
-                  type="submit"
-                  class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
-                >
-                  Guardar Cambios
-                </button>
-              </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </SideBar>
-  </main>
+  
 </template>
 
 <script>
@@ -348,18 +346,21 @@ import IconSvg from "../../components/IconSvg.vue";
 
 export default {
   name: "EditProfile",
-  components: {
+  components: 
+  {
     SideBar,
     IconSvg,
     Loader
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      loading: true,
+      loading: false,
       dni_validate: '',
       token: localStorage.getItem('token'),
       level: localStorage.getItem('e_level'),
-
+      supplierdata: [],
+user:'',image:'', id_provider:'',
       hasError: false,
       dni_valid: false,
       isType:"",
@@ -395,24 +396,26 @@ export default {
       vacio_bank_account: "",
     }
   },
-  async mounted() {
+  async created() 
+  {
+    this.loading = true;
+
     let response = await api.get(`/level=${this.level}/token=${this.token}`)
     let supplier = response.data.data;
-
+        
+    this.id_provider = supplier._id;
     this.dni_validate = supplier.DNI;
-
-    if(this.dni_validate != undefined || this.dni_validate != null || this.dni_validate != '') 
-    {
-      localStorage.setItem('e_DNI', this.dni_validate);
-      this.$router.push('/supplier');
-    }
+    localStorage.setItem('e_id', this.id_provider);
+    
+    if(this.dni_validate != undefined) { this.$router.push('/supplier'); return; }
 
     let response2 = await api.get(`/dep`)
     this.departments = response2.data.data.departments;
     
     this.loading = false;
   },
-  methods: {
+  methods: 
+  {
     async validateDNI() {
       if ((this.dni.length >= 0 && this.dni.length < 8) || (this.dni.length > 8)) {
         this.hasError = true;

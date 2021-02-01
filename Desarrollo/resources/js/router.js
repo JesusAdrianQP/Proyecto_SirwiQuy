@@ -66,22 +66,12 @@ const isGuest = (to, from, next) => {
 
 //Verifica si son proveedores son los usuarios entrantes
 const isSupplier = (to, from, next) => {
-    if (
-        localStorage.getItem("e_level") == "employee"
-    ) {
-        if (
-            (localStorage.getItem("e_DNI") == undefined ||
-                localStorage.getItem("e_DNI") == "") &&
-            to.path != "/worker/profile/edit"
-        ) {
-            next("/worker/profile/edit");
-            return;
-            }
+    if (localStorage.getItem("e_level") == "employee") 
+    {
         next();
         return;
-    }else if(
-        localStorage.getItem("e_level") == "enterprise"
-    ){
+    }else if(localStorage.getItem("e_level") == "enterprise")
+    {
         next();
         return;
     }

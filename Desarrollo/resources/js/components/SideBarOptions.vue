@@ -70,8 +70,9 @@ export default {
       localStorage.removeItem('token');
       localStorage.removeItem('e_level');
       localStorage.removeItem('e_id');
-      localStorage.removeItem('e_DNI');
-        
+      localStorage.removeItem('e_user');
+      localStorage.removeItem('e_image');
+      
       window.location.reload();
     },
   }

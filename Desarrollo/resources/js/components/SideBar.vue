@@ -171,29 +171,38 @@ export default {
     SideBarOptions,
     Footer,
   },
-  props: {
+  props: 
+  {
     title: String,
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      token: localStorage.getItem('token'),
-      acceso: localStorage.getItem('e_level'),
-
       isOpen: false,
+      acceso: localStorage.getItem('e_level'),
       user: '',
-      image: '',
-      id_provider: ''
+      image: ''
     }
   },
-  async created(){
-    let response = await api.get(`/level=${this.acceso}/token=${this.token}`)
+  async created()
+  {
+    if(localStorage.getItem('e_user')!=null)
+    {
+      this.user = localStorage.getItem('e_user');
+      if(localStorage.getItem('e_image')=='undefined') { return; }
+      this.image = localStorage.getItem('e_image');
+      return;
+    }
+
+    let response = await api.get(`/level=${this.acceso}/token=${localStorage.getItem('token')}`)
     let supplier = response.data.data;
+   
+    localStorage.setItem('e_user', supplier.username);
+    localStorage.setItem('e_image', supplier.file);
 
-    this.user = supplier.username;
-    this.image = supplier.file;
-    this.id_provider = supplier._id;
-
-    localStorage.setItem('e_id', this.id_provider);
+    this.user = localStorage.getItem('e_user');
+    if(localStorage.getItem('e_image')=='undefined') { return; } 
+    this.image = localStorage.getItem('e_image');
   }
 }
 </script>
