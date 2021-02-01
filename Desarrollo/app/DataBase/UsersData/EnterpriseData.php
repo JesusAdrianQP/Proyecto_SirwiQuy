@@ -10,43 +10,50 @@ use Illuminate\Support\Facades\Hash;
 
 class EnterpriseData implements UserInterface
 {
-    public static function validationemail($mail): Bool{
-       $response = Enterprise::where('email', '=', $mail)->first();
-        
-        if($response) return true;
+    public static function validationemail($mail): Bool
+    {
+       if(Enterprise::where('email', '=', $mail)->first()) return true;
+       else return false;
+    }
+
+    public static function validationusername($username): Bool
+    {
+       if(Enterprise::where('username', '=', $username)->first()) return true;
         else return false;
     }
 
-    public static function validationusername($username): Bool{
-       $response = Enterprise::where('username', '=', $username)->first();
-        
-        if($response) return true;
-        else return false;
-    }
-
-    public static function validationpass($param, $loger, $pass): Bool{
+    public static function validationpass($param, $loger, $pass): Bool
+    {
         $enterprise = EnterpriseData::getUser($param, $loger);
-
         $response = Hash::check($pass, $enterprise->password);
         
         if($response) return true;
         else return false;
     }
 
-    public static function getUser($par, $loger){
+    public static function validationlink($link): Bool
+    {
+        if(Enterprise::where('recover', '=', $link)->first()) return true;
+        else return false;
+    }
+
+    public static function getUser($par, $loger)
+    {
         if($par == 1) return Enterprise::where('email', '=', $loger)->first();
             else if($par == 2) return Enterprise::where('username', '=', $loger)->first();
             else if($par == 3) return Enterprise::where('_id', '=', $loger)->first();
                 else return Enterprise::where('access', '=', $loger)->first();
     }
 
-    public static function getToken($par, $loger){
+    public static function getToken($par, $loger)
+    {
         $token = EnterpriseData::getUser($par, $loger);
 
         return $token->access;
     }
 
-    public static function register($new_user){
+    public static function register($new_user)
+    {
         $access = new UserDataMaster();
         $enterprise = new Enterprise();
         
@@ -67,7 +74,8 @@ class EnterpriseData implements UserInterface
         $enterprise->save();
     }
 
-    public static function updatetoken($token){
+    public static function updatetoken($token)
+    {
         $access = new UserDataMaster();
         $user = EnterpriseData::getUser(3, $token);
 
@@ -76,40 +84,37 @@ class EnterpriseData implements UserInterface
             $user->save();
         }
     }
-
-     //Se actualiza el password del usuario
-     public static function updatepass($user)
-     {
-         $enterprise = Enterprise::where('email', '=', $user->email)
-                                   ->where('RUC', '=', $user->ruc)
-                                   ->first();
-  
-         if($enterprise){
-             $enterprise->password = bcrypt($user->password);
-             $enterprise->recover = null;
-             // Guardamos cambios
-             $enterprise->save();
-  
-             return response()->json(['success' => ['Contraseña actualizada']], 200);
-         }
-         else return response()->json(['errors' => ['fail' => ['Empresa no encontrada, chequee sus datos porfavor!']]], 422);
-     }
-
+    
     public static function update($user){}
 
-    //Funcion de listado con email
-    public static function list_details_email($enterprise, $cod_reset)
+    public static function updateRecover($enterprise, $cod_reset)
     {
         $enter = Enterprise::where('email', '=', $enterprise)->first();
-        $enter->recover = $cod_reset;
-        $enter->save();
+
+        if($enter)
+        {
+            $enter->recover = $cod_reset;
+            $enter->save();
+        }
 
         return $enter;
     }
 
-    //Funcion que valida mi enlace
-    public static function validationreset($enterprise){
-        if(Enterprise::where('recover', '=', $enterprise)->first()) return 0;
-            else return 1;
+    public static function updatepass($user)
+    {
+        $enterprise = Enterprise::where('email', '=', $user->email)
+                                ->where('RUC', '=', $user->ruc)
+                                ->first();
+
+        if($enterprise)
+        {
+            $enterprise->password = bcrypt($user->password);
+            $enterprise->recover = null;
+            
+            $enterprise->save();
+
+            return response()->json(['success' => ['Contraseña actualizada']], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Empresa no encontrada, chequee tus datos porfavor!!']]], 422);
     }
 }

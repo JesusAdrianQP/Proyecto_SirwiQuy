@@ -11,18 +11,18 @@ class Message_Reset extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $obj;
+    public $objUser;
     public $ide;
 
-    public $subject = 'Cambio de contraseña - Servicios KUSAWASI';
+    public $subject = '[SIRWIYQUY] - Cambio de contraseña';
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($obj, $ide)
+    public function __construct($objUser, $ide)
     {
-        $this->obj = $obj;
+        $this->objUser = $objUser;
         $this->ide = $ide;
     }
 

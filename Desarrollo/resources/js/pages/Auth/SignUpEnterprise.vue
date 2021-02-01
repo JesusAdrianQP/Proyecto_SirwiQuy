@@ -122,7 +122,7 @@
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                     maxlength="11"
                     pattern="[0-9]*"
-                    @change="validateRUC"
+                    @change="validateRUC()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                   <div
@@ -277,7 +277,7 @@
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                     maxlength="8"
                     pattern="[0-9]*"
-                    @change="validateDNI"
+                    @change="validateDNI()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                   <div
