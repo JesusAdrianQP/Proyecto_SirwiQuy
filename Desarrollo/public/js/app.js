@@ -5755,9 +5755,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -5843,7 +5840,6 @@ __webpack_require__.r(__webpack_exports__);
               case 14:
                 _this2.$router.push("/**");
 
-<<<<<<< Updated upstream
                 return _context2.abrupt("break", 16);
 
               case 16:
@@ -5856,19 +5852,6 @@ __webpack_require__.r(__webpack_exports__);
           }
         }, _callee2);
       }))();
-=======
-      this.error_email2 = '';
-      this.vacio_email2 = '';
-
-      if (this.email_recover == '') {
-        return;
-      }
-
-      if (!correo(this.email_recover)) {
-        this.error_email2 = 'Correo no válido';
-        this.vacio_email2 = '';
-      }
->>>>>>> Stashed changes
     },
     change: function change() {
       var _this3 = this;
@@ -5894,61 +5877,102 @@ __webpack_require__.r(__webpack_exports__);
         }, _callee3);
       }))();
     },
-    submitLogin: function submitLogin() {
+    validateEmail: function validateEmail() {
       var _this4 = this;
 
+      var correo = function correo() {
+        return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this4.email_recover);
+      };
+
+      this.error_email2 = '';
+      this.vacio_email2 = '';
+
+      if (this.email_recover == '') {
+        return;
+      }
+
+      if (!correo(this.email_recover)) {
+        this.error_email2 = 'Correo no válido';
+        this.vacio_email2 = '';
+      }
+    },
+    submitLogin: function submitLogin() {
+      var _this5 = this;
+
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee4() {
-        var response, er, mensaje;
+        var _boolean, response, er, mensaje;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
-                _this4.validateSubmit();
+                _this5.validatePassword();
 
-                if (!_this4.hasError) {
-                  _context4.next = 3;
+                _boolean = false;
+
+                if (_this5.loger == "") {
+                  _this5.vacio_loger = "Campo obligatorio";
+                  _boolean = true;
+                } else {
+                  _this5.vacio_loger = "";
+                }
+
+                if (_this5.password == "" && _this5.error_pass == "") {
+                  _this5.vacio_pass = "Campo obligatorio";
+                  _this5.error_pass = "";
+                  _boolean = true;
+                } else if (_this5.password != "" && _this5.error_pass != "") {
+                  _this5.vacio_pass = "";
+                  _boolean = true;
+                } else if (_this5.password != "" && _this5.error_pass == "") {
+                  _this5.vacio_pass = "";
+                  _this5.error_pass = "";
+                }
+
+                if (!(_boolean == true)) {
+                  _context4.next = 6;
                   break;
                 }
 
                 return _context4.abrupt("return");
 
-              case 3:
-                _this4.buttonLoading = true; //Conexión con la lógica de negocio
+              case 6:
+                _this5.buttonLoading = true; //Conexión con la lógica de negocio
                 //Se pasa como parametros el loger (usario o correo)
                 //identity -> tipo de identificador para el usuario
                 //password -> contraseña
 
-                _context4.next = 6;
+                _context4.next = 9;
                 return _api__WEBPACK_IMPORTED_MODULE_7__["default"].post("/login", {
-                  identity: _this4.identifier,
-                  loger: _this4.loger,
-                  password: _this4.password
+                  identity: _this5.identifier,
+                  loger: _this5.loger,
+                  password: _this5.password
                 });
 
-              case 6:
+              case 9:
                 response = _context4.sent;
 
                 if (response.ok) {
-                  _context4.next = 13;
+                  _context4.next = 16;
                   break;
                 }
 
-                _this4.buttonLoading = false;
+                _this5.buttonLoading = false;
                 er = response.error.errors;
                 mensaje = "Error desconocido.";
                 if (er.hasOwnProperty("mail")) mensaje = er.mail[0];else if (er.hasOwnProperty("user")) mensaje = er.user[0];else mensaje = er.pass[0];
-                return _context4.abrupt("return", _this4.$toast.open({
+                return _context4.abrupt("return", _this5.$toast.open({
                   message: mensaje,
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
-              case 13:
+              case 16:
                 //Guardo token de acceso
                 localStorage.setItem('token', response.data.data.replace(/ /g, "")); //Si todo esta correcto: 
 
-                _this4.$toast.open({
+                _this5.$toast.open({
                   message: "Bienvenido a su sesión",
                   type: "success",
                   duration: 8000,
@@ -5956,29 +5980,29 @@ __webpack_require__.r(__webpack_exports__);
                 }); //Concedo nivel de acceso y enrutamiento dependiendo del usuario
 
 
-                if (_this4.identifier == "trabajador" || _this4.identifier == "empresa") {
+                if (_this5.identifier == "trabajador" || _this5.identifier == "empresa") {
                   //Sacamos nivel de acceso del usuario
-                  if (_this4.identifier == "trabajador") {
+                  if (_this5.identifier == "trabajador") {
                     localStorage.setItem('e_level', "employee");
 
-                    _this4.$router.push("/worker/profile/edit");
+                    _this5.$router.push("/worker/profile/edit");
                   }
 
-                  if (_this4.identifier == "empresa") {
+                  if (_this5.identifier == "empresa") {
                     localStorage.setItem('e_level', "enterprise");
 
-                    _this4.$router.push("/supplier");
+                    _this5.$router.push("/supplier");
                   }
                 } else {
                   localStorage.setItem('e_level', "customer");
-                  if (localStorage.getItem('suma') != null) _this4.$router.push("/request/form/service");else if (localStorage.getItem('e_bandera') != null) {
+                  if (localStorage.getItem('suma') != null) _this5.$router.push("/request/form/service");else if (localStorage.getItem('e_bandera') != null) {
                     localStorage.removeItem('e_bandera');
 
-                    _this4.$router.push("/customer/payment/link=" + localStorage.getItem('e_link') + "/response=" + localStorage.getItem('e_response'));
-                  } else _this4.$router.push("/");
+                    _this5.$router.push("/customer/payment/link=" + localStorage.getItem('e_link') + "/response=" + localStorage.getItem('e_response'));
+                  } else _this5.$router.push("/");
                 }
 
-              case 16:
+              case 19:
               case "end":
                 return _context4.stop();
             }
@@ -5987,7 +6011,7 @@ __webpack_require__.r(__webpack_exports__);
       }))();
     },
     ResetPass: function ResetPass() {
-      var _this5 = this;
+      var _this6 = this;
 
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee5() {
         var response, er, mensaje;
@@ -5996,48 +6020,48 @@ __webpack_require__.r(__webpack_exports__);
             switch (_context5.prev = _context5.next) {
               case 0:
                 //Valido campo correo
-                if (_this5.hasError == true) _this5.hasError = true;else _this5.hasError = false; //Validaciones del campo Email
+                if (_this6.hasError == true) _this6.hasError = true;else _this6.hasError = false; //Validaciones del campo Email
 
-                if (_this5.email_recover == "") {
-                  _this5.hasError = true;
-                  _this5.vacio_email2 = "Campo necesario";
-                  _this5.error_email2 = "";
-                } else if (!_this5.email_recover.includes("@") || !_this5.email_recover.includes(".") || _this5.email_recover.length < 5) {
-                  _this5.hasError = true;
-                  _this5.vacio_email2 = "";
-                  _this5.error_email2 = "Correo no válido";
+                if (_this6.email_recover == "") {
+                  _this6.hasError = true;
+                  _this6.vacio_email2 = "Campo necesario";
+                  _this6.error_email2 = "";
+                } else if (!_this6.email_recover.includes("@") || !_this6.email_recover.includes(".") || _this6.email_recover.length < 5) {
+                  _this6.hasError = true;
+                  _this6.vacio_email2 = "";
+                  _this6.error_email2 = "Correo no válido";
                 } else {
-                  _this5.error_email2 = "";
-                  _this5.vacio_email2 = "";
+                  _this6.error_email2 = "";
+                  _this6.vacio_email2 = "";
                 }
 
-                _this5.openModal = false; //Post para verificar existencia y enviar correo
+                _this6.openModal = false; //Post para verificar existencia y enviar correo
 
                 _context5.next = 5;
                 return _api__WEBPACK_IMPORTED_MODULE_7__["default"].post("/reset", {
-                  identity: _this5.identifier,
-                  email: _this5.email_recover
+                  identity: _this6.identifier,
+                  email: _this6.email_recover
                 });
 
               case 5:
                 response = _context5.sent;
-                _this5.vacio_email2 = '';
-                _this5.error_email2 = '';
-                _this5.email_recover = ''; //Si hay errores se identifica que tipo
+                _this6.vacio_email2 = '';
+                _this6.error_email2 = '';
+                _this6.email_recover = ''; //Si hay errores se identifica que tipo
 
                 if (response.ok) {
                   _context5.next = 18;
                   break;
                 }
 
-                _this5.openModal = false;
-                _this5.vacio_email2 = '';
-                _this5.error_email2 = '';
-                _this5.email_recover = '';
+                _this6.openModal = false;
+                _this6.vacio_email2 = '';
+                _this6.error_email2 = '';
+                _this6.email_recover = '';
                 er = response.error.errors;
                 mensaje = "Error desconocido";
                 if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
-                return _context5.abrupt("return", _this5.$toast.open({
+                return _context5.abrupt("return", _this6.$toast.open({
                   message: mensaje,
                   type: "error",
                   duration: 8000,
@@ -6045,7 +6069,7 @@ __webpack_require__.r(__webpack_exports__);
                 }));
 
               case 18:
-                _this5.$toast.open({
+                _this6.$toast.open({
                   message: response.data.data.info[0],
                   type: "info",
                   duration: 8000,
@@ -6060,45 +6084,12 @@ __webpack_require__.r(__webpack_exports__);
         }, _callee5);
       }))();
     },
-<<<<<<< Updated upstream
-    validateSubmit: function validateSubmit() {
-      this.hasError = false; //Validaciones de campo email vuejs
-=======
     validatePassword: function validatePassword() {
       this.error_pass = "";
       this.vacio_pass = "";
 
       if (this.password.length == 0) {
         return;
-      }
-
-      if (this.password.length >= 8) {
-        this.vacio_pass = "";
-        var mayuscula = false;
-        var minuscula = false;
-        var numero = false;
-
-        for (var i = 0; i < this.password.length; i++) {
-          if (this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) {
-            mayuscula = true;
-          } else if (this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) {
-            minuscula = true;
-          } else if (this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) {
-            numero = true;
-          }
-        }
-
-        if (mayuscula == false) {
-          this.error_pass = "Su contraseña debe tener al menos una letra mayuscula";
-          return;
-        }
->>>>>>> Stashed changes
-
-      if (this.loger == "") {
-        this.hasError = true;
-        this.vacio_loger = "Campo obligatorio";
-      } else {
-        this.vacio_loger = "";
       } //Validaciones de campo pass vuejs
 
 
@@ -6128,20 +6119,14 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
-/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
-
-
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
+/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
 
 
 
@@ -6327,8 +6312,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RecoverSession",
   components: {
-    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_7__["default"],
-    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__["default"],
+    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   data: function data() {
     return {
@@ -6360,15 +6345,15 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
       var response;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               if (_this.ide == 'cliente') _this.identifier = 'cliente';else if (_this.ide == 'trabajador') _this.identifier = 'trabajador';else if (_this.ide == 'empresa') _this.identifier = 'empresa';else _this.$router.push("*");
               _context.next = 3;
-              return _api__WEBPACK_IMPORTED_MODULE_6__["default"].get("/reset/".concat(_this.cod, "/").concat(_this.identifier));
+              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/reset/".concat(_this.cod, "/").concat(_this.identifier));
 
             case 3:
               response = _context.sent;
@@ -6384,50 +6369,9 @@ __webpack_require__.r(__webpack_exports__);
     }))();
   },
   methods: {
-    submitPass: function submitPass() {
+    validateEmail: function validateEmail() {
       var _this2 = this;
 
-<<<<<<< Updated upstream
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-        var response, er, mensaje;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _this2.validateSubmit();
-
-                if (!_this2.hasError) {
-                  _context2.next = 3;
-                  break;
-                }
-
-                return _context2.abrupt("return");
-
-              case 3:
-                _this2.buttonLoading = true;
-                _context2.next = 6;
-                return _api__WEBPACK_IMPORTED_MODULE_6__["default"].post("/changepass", {
-                  identity: _this2.identifier,
-                  email: _this2.email,
-                  dni: _this2.dni,
-                  ruc: _this2.ruc,
-                  password: _this2.password
-                });
-
-              case 6:
-                response = _context2.sent;
-
-                if (response.ok) {
-                  _context2.next = 13;
-                  break;
-                }
-
-                _this2.buttonLoading = false;
-                er = response.error.errors;
-                mensaje = "Error desconocido";
-                if (er.hasOwnProperty("fail")) mensaje = er.fail[0];
-                return _context2.abrupt("return", _this2.$toast.open({
-=======
       var correo = function correo() {
         return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this2.email);
       };
@@ -6651,122 +6595,33 @@ __webpack_require__.r(__webpack_exports__);
                 mensaje = "Error desconocido";
                 if (er.hasOwnProperty("fail")) mensaje = er.fail[0];
                 return _context2.abrupt("return", _this3.$toast.open({
->>>>>>> Stashed changes
                   message: mensaje,
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
-<<<<<<< Updated upstream
-              case 13:
-                //Si la operacion es exitosa
-                _this2.$toast.open({
-=======
               case 23:
+                //Si la operacion es exitosa
                 _this3.$toast.open({
->>>>>>> Stashed changes
                   message: response.data.data.success[0],
                   type: "success",
                   duration: 10000,
                   dismissible: true
-                }); //Redireccionamiento de rutas
+                });
 
-<<<<<<< Updated upstream
-
-                _this2.$router.push("/");
-
-              case 15:
-=======
                 user = null;
                 if (_this3.identifier == 'cliente') user = 'customer';else if (_this3.identifier == 'trabajador') user = 'employee';else user = 'enterprise';
 
                 _this3.$router.push("/login/" + user);
 
               case 27:
->>>>>>> Stashed changes
               case "end":
                 return _context2.stop();
             }
           }
         }, _callee2);
       }))();
-    },
-    validateSubmit: function validateSubmit() {
-      this.hasError = false; //Validaciones del campo Email
-
-      if (this.email == '') {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = '';
-      } else if (!this.email.includes("@") || !this.email.includes(".") || this.email.length < 5) {
-        this.hasError = true;
-        this.vacio_email = '';
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = '';
-        this.vacio_email = '';
-      }
-
-      if (this.identifier == 'trabajador') {
-        //Validación del DNI
-        if (this.dni.length > 0 && this.dni.length < 8 || this.dni.length > 8) {
-          this.hasError = true;
-          this.error_dni = "El DNI debe tener 8 dígitos";
-          this.vacio_dni = "";
-        } else if (this.dni == '') {
-          this.hasError = true;
-          this.error_dni = '';
-          this.vacio_dni = 'Campo necesario';
-        } else {
-          this.error_dni = '';
-          this.vacio_dni = '';
-        }
-      }
-
-      if (this.identifier == 'empresa') {
-        //Validacion de RUC
-        if (this.ruc.length > 0 && this.ruc.length < 11 || this.ruc.length > 11) {
-          this.hasError = true;
-          this.error_ruc = "El RUC debe tener 11 dígitos";
-          this.vacio_ruc = "";
-        } else if (this.ruc == '') {
-          this.hasError = true;
-          this.error_ruc = '';
-          this.vacio_ruc = 'Campo necesario';
-        } else {
-          this.error_ruc = "";
-          this.vacio_ruc = "";
-        }
-      } //Validaciones del campo password
-
-
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      } //Validaciones del campo repeat password
-
-
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      }
     }
   }
 });
@@ -7471,49 +7326,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     validateCardNumber: function validateCardNumber() {
-<<<<<<< Updated upstream
-      var _this2 = this;
-
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                if (_this2.cardNumber.replace(/-/g, "").length > 0 && _this2.cardNumber.replace(/-/g, "").length < 20 || _this2.cardNumber.replace(/-/g, "").length > 20) {
-                  _this2.hasError = true;
-                  _this2.error_cardNumber = "La CCI debe tener 20 dígitos";
-                  _this2.vacio_cardNumber = "";
-                } else if (_this2.cardNumber.replace(/-/g, "").length == 20) {
-                  _this2.hasError = false;
-                  _this2.error_cardNumber = "";
-                  _this2.vacio_cardNumber = "";
-                  _this2.cardNumber = _this2.cardNumber.replace(/\W/gi, '').replace(/\b(\d{3})(\d{3})(\d{12})(\d{2})\b/, '$1-$2-$3-$4').trim();
-                } else {
-                  _this2.error_cardNumber = "";
-                  _this2.vacio_cardNumber = "";
-                }
-
-                if (!(_this2.cardNumber.replace(/-/g, "").length >= 3)) {
-                  _context2.next = 17;
-                  break;
-                }
-
-                _context2.t0 = _this2.cardNumber.substr(0, 3);
-                _context2.next = _context2.t0 === '002' ? 5 : _context2.t0 === '003' ? 7 : _context2.t0 === '009' ? 9 : _context2.t0 === '011' ? 11 : 13;
-                break;
-
-              case 5:
-                _this2.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__["default"].Bank('bcp');
-                return _context2.abrupt("break", 15);
-
-              case 7:
-                _this2.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__["default"].Bank('interbank');
-                return _context2.abrupt("break", 15);
-
-              case 9:
-                _this2.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__["default"].Bank('scotiabank');
-                return _context2.abrupt("break", 15);
-=======
       if (this.cardNumber.replace(/-/g, "").length > 0 && this.cardNumber.replace(/-/g, "").length < 20 || this.cardNumber.replace(/-/g, "").length > 20) {
         this.error_cardNumber = 'La CCI debe tener 20 dígitos';
         this.vacio_cardNumber = '';
@@ -7525,7 +7337,6 @@ __webpack_require__.r(__webpack_exports__);
         this.error_cardNumber = "";
         this.vacio_cardNumber = "";
       }
->>>>>>> Stashed changes
 
       if (this.cardNumber.replace(/-/g, "").length >= 3) {
         switch (this.cardNumber.substr(0, 3)) {
@@ -7562,8 +7373,23 @@ __webpack_require__.r(__webpack_exports__);
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                _this2.error_dni = '';
+                _this2.vacio_dni = '';
+
+                if (!(_this2.dni == '')) {
+                  _context2.next = 8;
+                  break;
+                }
+
+                _this2.dni_valid = false;
+                _this2.name_admi = '';
+                _this2.lastnamep_admi = '';
+                _this2.lastnamem_admi = '';
+                return _context2.abrupt("return");
+
+              case 8:
                 if (!(_this2.dni.length > 0 && _this2.dni.length < 8)) {
-                  _context2.next = 10;
+                  _context2.next = 16;
                   break;
                 }
 
@@ -7575,34 +7401,12 @@ __webpack_require__.r(__webpack_exports__);
                 _this2.vacio_dni = '';
                 return _context2.abrupt("return");
 
-              case 10:
-                _this2.error_dni = '';
-                _this2.vacio_dni = '';
-
-                if (!(_this2.dni.length == 0)) {
-                  _context2.next = 15;
-                  break;
-                }
-
-                _this2.dni_valid = false;
-                return _context2.abrupt("return");
-
-              case 15:
-                if (!_this2.dni_valid) {
-                  _context2.next = 17;
-                  break;
-                }
-
-                return _context2.abrupt("return");
-
-              case 17:
+              case 16:
                 _this2.isType = 'DNI';
-
-              case 18:
-                _context2.next = 20;
+                _context2.next = 19;
                 return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/validate/".concat(_this2.isType, "/").concat(_this2.dni));
 
-              case 20:
+              case 19:
                 response = _context2.sent;
 
                 if (response.ok) {
@@ -7611,11 +7415,12 @@ __webpack_require__.r(__webpack_exports__);
                 }
 
                 _this2.dni_valid = false;
+                _this2.error_dni = 'DNI no válido';
                 _this2.name_admi = '';
                 _this2.lastnamep_admi = '';
                 _this2.lastnamem_admi = '';
                 return _context2.abrupt("return", _this2.$toast.open({
-                  message: "El sistema detectó que el DNI no es válido",
+                  message: "DNI no válido",
                   type: "error",
                   duration: 8000,
                   dismissible: true
@@ -7652,8 +7457,21 @@ __webpack_require__.r(__webpack_exports__);
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
+                _this3.error_ruc = '';
+                _this3.vacio_ruc = '';
+
+                if (!(_this3.ruc == '')) {
+                  _context3.next = 6;
+                  break;
+                }
+
+                _this3.ruc_valid = false;
+                _this3.name_enterprise = '';
+                return _context3.abrupt("return");
+
+              case 6:
                 if (!(_this3.ruc.length > 0 && _this3.ruc.length < 11)) {
-                  _context3.next = 8;
+                  _context3.next = 12;
                   break;
                 }
 
@@ -7663,51 +7481,30 @@ __webpack_require__.r(__webpack_exports__);
                 _this3.vacio_ruc = '';
                 return _context3.abrupt("return");
 
-              case 8:
-                _this3.error_ruc = '';
-                _this3.vacio_ruc = '';
-
-                if (!(_this3.ruc.length == 0)) {
-                  _context3.next = 13;
-                  break;
-                }
-
-                _this3.ruc_valid = false;
-                return _context3.abrupt("return");
-
-              case 13:
-                if (!_this3.ruc_valid) {
-                  _context3.next = 15;
-                  break;
-                }
-
-                return _context3.abrupt("return");
-
-              case 15:
+              case 12:
                 _this3.isType = 'RUC';
-
-              case 16:
-                _context3.next = 18;
+                _context3.next = 15;
                 return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/validate/".concat(_this3.isType, "/").concat(_this3.ruc));
 
-              case 18:
+              case 15:
                 response = _context3.sent;
 
                 if (response.ok) {
-                  _context3.next = 23;
+                  _context3.next = 21;
                   break;
                 }
 
                 _this3.ruc_valid = false;
+                _this3.error_ruc = 'RUC no válido';
                 _this3.name_enterprise = '';
                 return _context3.abrupt("return", _this3.$toast.open({
-                  message: "El sistema detecto que el RUC no es válido",
+                  message: "RUC no válido",
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
-              case 23:
+              case 21:
                 _this3.ruc_valid = true;
                 _this3.name_enterprise = response.data.data[0].razonSocial;
 
@@ -7718,7 +7515,7 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 });
 
-              case 26:
+              case 24:
               case "end":
                 return _context3.stop();
             }
@@ -7889,10 +7686,6 @@ __webpack_require__.r(__webpack_exports__);
               case 0:
                 _this5.validateCardNumber();
 
-                _this5.validateDNI();
-
-                _this5.validateRUC();
-
                 _this5.validateUser();
 
                 _this5.validateEmail();
@@ -8012,17 +7805,17 @@ __webpack_require__.r(__webpack_exports__);
                 }
 
                 if (!(_boolean == true)) {
-                  _context4.next = 19;
+                  _context4.next = 17;
                   break;
                 }
 
                 return _context4.abrupt("return");
 
-              case 19:
+              case 17:
                 _this5.buttonLoading = true; //Se conecta con la lógica de negocio
                 //RUC de  ejemplos en : http://www.sunat.gob.pe/descarga/BueCont/BueCont0.html
 
-                _context4.next = 22;
+                _context4.next = 20;
                 return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/signup", {
                   identity: _this5.identifier,
                   username: _this5.username,
@@ -8039,11 +7832,11 @@ __webpack_require__.r(__webpack_exports__);
                   DNI: _this5.dni
                 });
 
-              case 22:
+              case 20:
                 response = _context4.sent;
 
                 if (response.ok) {
-                  _context4.next = 29;
+                  _context4.next = 27;
                   break;
                 }
 
@@ -8064,7 +7857,7 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 }));
 
-              case 29:
+              case 27:
                 _this5.$toast.open({
                   message: response.data.data.success1[0],
                   type: "success",
@@ -8081,7 +7874,7 @@ __webpack_require__.r(__webpack_exports__);
 
                 _this5.$router.push("/login/enterprise");
 
-              case 32:
+              case 30:
               case "end":
                 return _context4.stop();
             }
@@ -49248,16 +49041,11 @@ var render = function() {
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _c("div", {
-                                    staticClass:
-                                      "hidden md:block w-full py-3 md:w-1/5 justify-center all:justify-center text-center"
-                                  }),
-                                  _vm._v(" "),
                                   _c(
                                     "div",
                                     {
                                       staticClass:
-                                        "mt-3 md:mt-1 rounded-md w-full md:w-2/5"
+                                        "col-span-3 sm:col-span-2 mt-3 md:mt-1 rounded-md w-full"
                                     },
                                     [
                                       _c("div", [
