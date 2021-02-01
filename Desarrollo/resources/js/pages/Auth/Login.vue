@@ -312,8 +312,8 @@ export default {
   {
     this.validateRouter(this.identity);
   },
-   watch: 
-   { 
+  watch: 
+  { 
     identity: function(newVal, oldVal) 
     {
       this.validateRouter(newVal);

@@ -1111,7 +1111,7 @@ export default {
 
       this.$toast.open({
         message: response.data.data.success2.original.success[0],
-        type: "info",
+        type: "success",
         duration: 10000,
         dismissible: true,
       });
