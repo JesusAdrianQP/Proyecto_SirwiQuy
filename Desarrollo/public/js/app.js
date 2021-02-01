@@ -5852,18 +5852,16 @@ __webpack_require__.r(__webpack_exports__);
         return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this2.email_recover);
       };
 
-      if (this.email_recover == "") {
-        this.error_email2 = "";
-        this.vacio_email2 = "";
+      this.error_email2 = '';
+      this.vacio_email2 = '';
+
+      if (this.email_recover == '') {
         return;
       }
 
-      if (correo(this.email_recover) == false) {
-        this.error_email2 = "Correo no válido";
-        this.vacio_email2 = "";
-      } else {
-        this.error_email2 = "";
-        this.vacio_email2 = "";
+      if (!correo(this.email_recover)) {
+        this.error_email2 = 'Correo no válido';
+        this.vacio_email2 = '';
       }
     },
     submitLogin: function submitLogin() {
@@ -6062,9 +6060,10 @@ __webpack_require__.r(__webpack_exports__);
       }))();
     },
     validatePassword: function validatePassword() {
+      this.error_pass = "";
+      this.vacio_pass = "";
+
       if (this.password.length == 0) {
-        this.error_pass = "";
-        this.vacio_pass = "";
         return;
       }
 
@@ -6433,352 +6432,229 @@ __webpack_require__.r(__webpack_exports__);
     validateEmail: function validateEmail() {
       var _this2 = this;
 
+      var correo = function correo() {
+        return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this2.email);
+      };
+
+      this.error_email = '';
+      this.vacio_email = '';
+
+      if (this.email == '') {
+        return;
+      }
+
+      if (!correo(this.email)) {
+        this.error_email = 'Correo no válido';
+        this.vacio_email = '';
+      }
+    },
+    validateDNI: function validateDNI() {
+      this.error_dni = '';
+      this.vacio_dni = '';
+
+      if (this.dni == '') {
+        return;
+      }
+
+      if (this.dni.length > 0 && this.dni.length < 8) {
+        this.error_dni = "El DNI debe tener 8 dígitos";
+        this.vacio_dni = "";
+      }
+    },
+    validateRUC: function validateRUC() {
+      this.error_ruc = '';
+      this.vacio_ruc = '';
+
+      if (this.ruc == '') {
+        return;
+      }
+
+      if (this.ruc.length > 0 && this.ruc.length < 11) {
+        this.error_ruc = 'El RUC debe tener 11 dígitos';
+        this.vacio_ruc = '';
+      }
+    },
+    validatePassword: function validatePassword() {
+      this.error_password = '';
+      this.vacio_pass = '';
+
+      if (this.password.length == 0) {
+        return;
+      }
+
+      if (this.password.length >= 8) {
+        this.vacio_pass = "";
+        var mayuscula = false;
+        var minuscula = false;
+        var numero = false;
+
+        for (var i = 0; i < this.password.length; i++) {
+          if (this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) {
+            mayuscula = true;
+          } else if (this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) {
+            minuscula = true;
+          } else if (this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) {
+            numero = true;
+          }
+        }
+
+        if (mayuscula == false) {
+          this.error_password = "Su contraseña debe tener al menos una letra mayuscula";
+          return;
+        }
+
+        if (minuscula == false) {
+          this.error_password = "Su contraseña debe tener al menos una letra minuscula";
+          return;
+        }
+
+        if (numero == false) {
+          this.error_password = "Su contraseña debe tener al menos un número";
+          return;
+        }
+
+        if (mayuscula == true && minuscula == true && numero == true) {
+          this.error_password = "";
+        }
+      } else if (this.password.length < 8 && this.password.length > 0) {
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
+      }
+    },
+    validateRepeatPassword: function validateRepeatPassword() {
+      this.error_repeat_password = '';
+      this.vacio_repeat_pass = '';
+
+      if (this.repeat_password.length == 0) {
+        return;
+      }
+
+      if (this.repeat_password != this.password) {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    submitPass: function submitPass() {
+      var _this3 = this;
+
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-        var correo;
+        var _boolean, response, er, mensaje, user;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                correo = function correo() {
-                  return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this2.email);
-                };
+                _this3.validateEmail();
 
-                if (!(_this2.email == "")) {
-                  _context2.next = 5;
-                  break;
+                if (_this3.identifier == "empresa") {
+                  _this3.validateRUC();
                 }
 
-                _this2.error_email = "";
-                _this2.vacio_email = "";
-                return _context2.abrupt("return");
-
-              case 5:
-                if (correo(_this2.email) == false) {
-                  _this2.error_email = "Correo no válido";
-                  _this2.vacio_email = "";
-                } else {
-                  _this2.error_email = "";
-                  _this2.vacio_email = "";
+                if (_this3.identifier == "trabajador") {
+                  _this3.validateDNI();
                 }
 
-              case 6:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
-    },
-    validateDNI: function validateDNI() {
-      var _this3 = this;
+                _this3.validatePassword();
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                if (!(_this3.dni == "")) {
-                  _context3.next = 4;
-                  break;
-                }
-
-                _this3.error_dni = "";
-                _this3.vacio_dni = "";
-                return _context3.abrupt("return");
-
-              case 4:
-                if (_this3.dni.length > 0 && _this3.dni.length < 8) {
-                  _this3.error_dni = "El DNI debe tener 8 dígitos";
-                  _this3.vacio_dni = "";
-                } else {
-                  _this3.error_dni = "";
-                  _this3.vacio_dni = "";
-                }
-
-              case 5:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3);
-      }))();
-    },
-    validateRUC: function validateRUC() {
-      var _this4 = this;
-
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                if (!(_this4.ruc == "")) {
-                  _context4.next = 4;
-                  break;
-                }
-
-                _this4.error_ruc = "";
-                _this4.vacio_ruc = "";
-                return _context4.abrupt("return");
-
-              case 4:
-                if (_this4.ruc.length > 0 && _this4.ruc.length < 11) {
-                  _this4.error_ruc = "El RUC debe tener 11 dígitos";
-                  _this4.vacio_ruc = "";
-                } else {
-                  _this4.error_ruc = "";
-                  _this4.vacio_ruc = "";
-                }
-
-              case 5:
-              case "end":
-                return _context4.stop();
-            }
-          }
-        }, _callee4);
-      }))();
-    },
-    validatePassword: function validatePassword() {
-      var _this5 = this;
-
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
-        var mayuscula, minuscula, numero, i;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                if (!(_this5.password.length == 0)) {
-                  _context5.next = 4;
-                  break;
-                }
-
-                _this5.error_password = "";
-                _this5.vacio_pass = "";
-                return _context5.abrupt("return");
-
-              case 4:
-                if (!(_this5.password.length >= 8)) {
-                  _context5.next = 22;
-                  break;
-                }
-
-                _this5.vacio_pass = "";
-                mayuscula = false;
-                minuscula = false;
-                numero = false;
-
-                for (i = 0; i < _this5.password.length; i++) {
-                  if (_this5.password.charCodeAt(i) >= 65 && _this5.password.charCodeAt(i) <= 90) {
-                    mayuscula = true;
-                  } else if (_this5.password.charCodeAt(i) >= 97 && _this5.password.charCodeAt(i) <= 122) {
-                    minuscula = true;
-                  } else if (_this5.password.charCodeAt(i) >= 48 && _this5.password.charCodeAt(i) <= 57) {
-                    numero = true;
-                  }
-                }
-
-                if (!(mayuscula == false)) {
-                  _context5.next = 13;
-                  break;
-                }
-
-                _this5.error_password = "Su contraseña debe tener al menos una letra mayuscula";
-                return _context5.abrupt("return");
-
-              case 13:
-                if (!(minuscula == false)) {
-                  _context5.next = 16;
-                  break;
-                }
-
-                _this5.error_password = "Su contraseña debe tener al menos una letra minuscula";
-                return _context5.abrupt("return");
-
-              case 16:
-                if (!(numero == false)) {
-                  _context5.next = 19;
-                  break;
-                }
-
-                _this5.error_password = "Su contraseña debe tener al menos un número";
-                return _context5.abrupt("return");
-
-              case 19:
-                if (mayuscula == true && minuscula == true && numero == true) {
-                  _this5.error_password = "";
-                }
-
-                _context5.next = 23;
-                break;
-
-              case 22:
-                if (_this5.password.length < 8 && _this5.password.length > 0) {
-                  _this5.error_password = "La longitud mínima es de 8 caracteres";
-                  _this5.vacio_pass = "";
-                }
-
-              case 23:
-              case "end":
-                return _context5.stop();
-            }
-          }
-        }, _callee5);
-      }))();
-    },
-    validateRepeatPassword: function validateRepeatPassword() {
-      var _this6 = this;
-
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
-          while (1) {
-            switch (_context6.prev = _context6.next) {
-              case 0:
-                if (!(_this6.repeat_password.length == 0)) {
-                  _context6.next = 4;
-                  break;
-                }
-
-                _this6.error_repeat_password = "";
-                _this6.vacio_repeat_pass = "";
-                return _context6.abrupt("return");
-
-              case 4:
-                if (_this6.repeat_password != _this6.password) {
-                  _this6.error_repeat_password = "Las contraseñas no coinciden";
-                  _this6.vacio_repeat_pass = "";
-                } else {
-                  _this6.error_repeat_password = "";
-                  _this6.vacio_repeat_pass = "";
-                }
-
-              case 5:
-              case "end":
-                return _context6.stop();
-            }
-          }
-        }, _callee6);
-      }))();
-    },
-    submitPass: function submitPass() {
-      var _this7 = this;
-
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7() {
-        var _boolean, response, er, mensaje;
-
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee7$(_context7) {
-          while (1) {
-            switch (_context7.prev = _context7.next) {
-              case 0:
-                _this7.validateEmail();
-
-                if (_this7.identifier == "empresa") {
-                  _this7.validateRUC();
-                }
-
-                if (_this7.identifier == "trabajador") {
-                  _this7.validateDNI();
-                }
-
-                _this7.validatePassword();
-
-                _this7.validateRepeatPassword();
+                _this3.validateRepeatPassword();
 
                 _boolean = false;
 
-                if (_this7.email == "" && _this7.error_email == "") {
-                  _this7.vacio_email = "Campo obligatorio";
-                  _this7.error_email = "";
+                if (_this3.email == "" && _this3.error_email == "") {
+                  _this3.vacio_email = "Campo obligatorio";
+                  _this3.error_email = "";
                   _boolean = true;
-                } else if (_this7.email != "" && _this7.error_email != "") {
-                  _this7.vacio_email = "";
+                } else if (_this3.email != "" && _this3.error_email != "") {
+                  _this3.vacio_email = "";
                   _boolean = true;
-                } else if (_this7.email != "" && _this7.error_email == "") {
-                  _this7.vacio_email = "";
-                  _this7.error_email = "";
+                } else if (_this3.email != "" && _this3.error_email == "") {
+                  _this3.vacio_email = "";
+                  _this3.error_email = "";
                 }
 
-                if (_this7.identifier == "empresa") {
-                  if (_this7.ruc == "" && _this7.error_ruc == "") {
-                    _this7.vacio_ruc = "Campo obligatorio";
-                    _this7.error_ruc = "";
+                if (_this3.identifier == "empresa") {
+                  if (_this3.ruc == "" && _this3.error_ruc == "") {
+                    _this3.vacio_ruc = "Campo obligatorio";
+                    _this3.error_ruc = "";
                     _boolean = true;
-                  } else if (_this7.ruc != "" && _this7.error_ruc != "") {
-                    _this7.vacio_ruc = "";
+                  } else if (_this3.ruc != "" && _this3.error_ruc != "") {
+                    _this3.vacio_ruc = "";
                     _boolean = true;
-                  } else if (_this7.ruc != "" && _this7.error_ruc == "") {
-                    _this7.vacio_ruc = "";
-                    _this7.error_ruc = "";
+                  } else if (_this3.ruc != "" && _this3.error_ruc == "") {
+                    _this3.vacio_ruc = "";
+                    _this3.error_ruc = "";
                   }
                 }
 
-                if (_this7.identifier == "trabajador") {
-                  if (_this7.dni == "" && _this7.error_dni == "") {
-                    _this7.vacio_dni = "Campo obligatorio";
-                    _this7.error_dni = "";
+                if (_this3.identifier == "trabajador") {
+                  if (_this3.dni == "" && _this3.error_dni == "") {
+                    _this3.vacio_dni = "Campo obligatorio";
+                    _this3.error_dni = "";
                     _boolean = true;
-                  } else if (_this7.dni != "" && _this7.error_dni != "") {
-                    _this7.vacio_dni = "";
+                  } else if (_this3.dni != "" && _this3.error_dni != "") {
+                    _this3.vacio_dni = "";
                     _boolean = true;
-                  } else if (_this7.dni != "" && _this7.error_dni == "") {
-                    _this7.vacio_dni = "";
-                    _this7.error_dni = "";
+                  } else if (_this3.dni != "" && _this3.error_dni == "") {
+                    _this3.vacio_dni = "";
+                    _this3.error_dni = "";
                   }
                 }
 
-                if (_this7.password == "" && _this7.error_password == "") {
-                  _this7.vacio_pass = "Campo obligatorio";
-                  _this7.error_password = "";
+                if (_this3.password == "" && _this3.error_password == "") {
+                  _this3.vacio_pass = "Campo obligatorio";
+                  _this3.error_password = "";
                   _boolean = true;
-                } else if (_this7.password != "" && _this7.error_password != "") {
-                  _this7.vacio_pass = "";
+                } else if (_this3.password != "" && _this3.error_password != "") {
+                  _this3.vacio_pass = "";
                   _boolean = true;
-                } else if (_this7.password != "" && _this7.error_password == "") {
-                  _this7.vacio_pass = "";
-                  _this7.error_password = "";
+                } else if (_this3.password != "" && _this3.error_password == "") {
+                  _this3.vacio_pass = "";
+                  _this3.error_password = "";
                 }
 
-                if (_this7.repeat_password == "" && _this7.error_repeat_password == "") {
-                  _this7.vacio_repeat_pass = "Campo obligatorio";
-                  _this7.error_repeat_password = "";
+                if (_this3.repeat_password == "" && _this3.error_repeat_password == "") {
+                  _this3.vacio_repeat_pass = "Campo obligatorio";
+                  _this3.error_repeat_password = "";
                   _boolean = true;
-                } else if (_this7.repeat_password != "" && _this7.error_repeat_password != "") {
-                  _this7.vacio_repeat_pass = "";
+                } else if (_this3.repeat_password != "" && _this3.error_repeat_password != "") {
+                  _this3.vacio_repeat_pass = "";
                   _boolean = true;
-                } else if (_this7.repeat_password != "" && _this7.error_repeat_password == "") {
-                  _this7.vacio_repeat_pass = "";
-                  _this7.error_repeat_password = "";
+                } else if (_this3.repeat_password != "" && _this3.error_repeat_password == "") {
+                  _this3.vacio_repeat_pass = "";
+                  _this3.error_repeat_password = "";
                 }
 
                 if (!(_boolean == true)) {
-                  _context7.next = 13;
+                  _context2.next = 13;
                   break;
                 }
 
-                return _context7.abrupt("return");
+                return _context2.abrupt("return");
 
               case 13:
-                _this7.buttonLoading = true;
-                _context7.next = 16;
+                _this3.buttonLoading = true;
+                _context2.next = 16;
                 return _api__WEBPACK_IMPORTED_MODULE_4__["default"].post("/changepass", {
-                  identity: _this7.identifier,
-                  email: _this7.email,
-                  dni: _this7.dni,
-                  ruc: _this7.ruc,
-                  password: _this7.password
+                  identity: _this3.identifier,
+                  email: _this3.email,
+                  dni: _this3.dni,
+                  ruc: _this3.ruc,
+                  password: _this3.password
                 });
 
               case 16:
-                response = _context7.sent;
+                response = _context2.sent;
 
                 if (response.ok) {
-                  _context7.next = 23;
+                  _context2.next = 23;
                   break;
                 }
 
-                _this7.buttonLoading = false;
+                _this3.buttonLoading = false;
                 er = response.error.errors;
                 mensaje = "Error desconocido";
                 if (er.hasOwnProperty("fail")) mensaje = er.fail[0];
-                return _context7.abrupt("return", _this7.$toast.open({
+                return _context2.abrupt("return", _this3.$toast.open({
                   message: mensaje,
                   type: "error",
                   duration: 8000,
@@ -6786,21 +6662,24 @@ __webpack_require__.r(__webpack_exports__);
                 }));
 
               case 23:
-                _this7.$toast.open({
+                _this3.$toast.open({
                   message: response.data.data.success[0],
                   type: "success",
                   duration: 10000,
                   dismissible: true
                 });
 
-                _this7.$router.push("/");
+                user = null;
+                if (_this3.identifier == 'cliente') user = 'customer';else if (_this3.identifier == 'trabajador') user = 'employee';else user = 'enterprise';
 
-              case 25:
+                _this3.$router.push("/login/" + user);
+
+              case 27:
               case "end":
-                return _context7.stop();
+                return _context2.stop();
             }
           }
-        }, _callee7);
+        }, _callee2);
       }))();
     }
   }
@@ -6821,24 +6700,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
 /* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
-/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
-/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
-/* harmony import */ var _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/IconSvg.vue */ "./resources/js/components/IconSvg.vue");
-/* harmony import */ var _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../formatosBancarios */ "./resources/js/formatosBancarios.js");
+/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
+/* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
+/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
+/* harmony import */ var _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/IconSvg.vue */ "./resources/js/components/IconSvg.vue");
+/* harmony import */ var _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../formatosBancarios */ "./resources/js/formatosBancarios.js");
 
 
 
@@ -6848,6 +6729,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7412,13 +7315,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SignUpEnterprise",
   components: {
-    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_10__["default"],
-    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
-    IconSvg: _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
+    Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_11__["default"],
+    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
+    IconSvg: _components_IconSvg_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
   },
   data: function data() {
     return {
-      hasError: false,
       buttonLoading: false,
       dni_valid: false,
       ruc_valid: false,
@@ -7426,47 +7328,48 @@ __webpack_require__.r(__webpack_exports__);
       ccicon: '',
       identifier: "empresa",
       step: 0,
-      username: "",
-      email: "",
-      password: "",
-      repeat_password: "",
-      //Nombre de los campos de empresa
-      name_enterprise: "",
+      name_enterprise: '',
       //Razon social de la empresa
-      ruc: "",
-      file_enterprise: "",
+      ruc: '',
+      file_enterprise: '',
       //Imagen de la empresa
-      cardNumber: "",
+      cardNumber: '',
       //Cuenta bancaria de la empresa
-      //Nombre de los campos del admi de la empresa
-      file_admi: "",
+      file_admi: '',
       //Imagen del administrador de la sesion que registra a la empresa
-      name_admi: "",
-      lastnamep_admi: "",
-      lastnamem_admi: "",
-      dni: "",
-      error_username: "",
-      error_email: "",
-      error_password: "",
-      error_repeat_password: "",
-      error_dni: "",
-      error_ruc: "",
-      error_cardNumber: "",
-      vacio_username: "",
-      vacio_email: "",
-      vacio_pass: "",
-      vacio_repeat_pass: "",
-      vacio_ruc: "",
-      vacio_cardNumber: "",
-      //Cuenta bancaria de la empresa
-      vacio_dni: ""
+      name_admi: '',
+      lastnamep_admi: '',
+      lastnamem_admi: '',
+      dni: '',
+      username: '',
+      email: '',
+      password: '',
+      repeat_password: '',
+      error_ruc: '',
+      error_cardNumber: '',
+      error_fileE: '',
+      error_dni: '',
+      error_fileA: '',
+      error_username: '',
+      error_email: '',
+      error_password: '',
+      error_repeat_password: '',
+      vacio_ruc: '',
+      vacio_cardNumber: '',
+      vacio_fileE: '',
+      vacio_dni: '',
+      vacio_fileA: '',
+      vacio_username: '',
+      vacio_email: '',
+      vacio_pass: '',
+      vacio_repeat_pass: ''
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
+    return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -7482,67 +7385,127 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     validateCardNumber: function validateCardNumber() {
+      if (this.cardNumber.replace(/-/g, "").length > 0 && this.cardNumber.replace(/-/g, "").length < 20 || this.cardNumber.replace(/-/g, "").length > 20) {
+        this.error_cardNumber = 'La CCI debe tener 20 dígitos';
+        this.vacio_cardNumber = '';
+      } else if (this.cardNumber.replace(/-/g, "").length == 20) {
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "";
+        this.cardNumber = this.cardNumber.replace(/\W/gi, '').replace(/\b(\d{3})(\d{3})(\d{12})(\d{2})\b/, '$1-$2-$3-$4').trim();
+      } else {
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "";
+      }
+
+      if (this.cardNumber.replace(/-/g, "").length >= 3) {
+        switch (this.cardNumber.substr(0, 3)) {
+          case '002':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('bcp');
+            break;
+
+          case '003':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('interbank');
+            break;
+
+          case '009':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('scotiabank');
+            break;
+
+          case '011':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('bbva');
+            break;
+
+          default:
+            this.ccicon.innerHTML = "";
+            break;
+        }
+      } else if (this.cardNumber.replace(/-/g, "").length < 3) {
+        this.ccicon.innerHTML = "";
+      }
+    },
+    validateDNI: function validateDNI() {
       var _this2 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (_this2.cardNumber.replace(/-/g, "").length > 0 && _this2.cardNumber.replace(/-/g, "").length < 20 || _this2.cardNumber.replace(/-/g, "").length > 20) {
-                  _this2.hasError = true;
-                  _this2.error_cardNumber = "La CCI debe tener 20 dígitos";
-                  _this2.vacio_cardNumber = "";
-                } else if (_this2.cardNumber.replace(/-/g, "").length == 20) {
-                  _this2.hasError = false;
-                  _this2.error_cardNumber = "";
-                  _this2.vacio_cardNumber = "";
-                  _this2.cardNumber = _this2.cardNumber.replace(/\W/gi, '').replace(/\b(\d{3})(\d{3})(\d{12})(\d{2})\b/, '$1-$2-$3-$4').trim();
-                } else {
-                  _this2.hasError = false;
-                  _this2.error_cardNumber = "";
-                  _this2.vacio_cardNumber = "";
+                if (!(_this2.dni.length > 0 && _this2.dni.length < 8)) {
+                  _context2.next = 10;
+                  break;
                 }
 
-                if (!(_this2.cardNumber.replace(/-/g, "").length >= 3)) {
+                _this2.dni_valid = false;
+                _this2.name_admi = '';
+                _this2.lastnamep_admi = '';
+                _this2.lastnamem_admi = '';
+                _this2.error_dni = 'El DNI debe tener 8 dígitos';
+                _this2.vacio_dni = '';
+                return _context2.abrupt("return");
+
+              case 10:
+                _this2.error_dni = '';
+                _this2.vacio_dni = '';
+
+                if (!(_this2.dni.length == 0)) {
+                  _context2.next = 15;
+                  break;
+                }
+
+                _this2.dni_valid = false;
+                return _context2.abrupt("return");
+
+              case 15:
+                if (!_this2.dni_valid) {
                   _context2.next = 17;
                   break;
                 }
 
-                _context2.t0 = _this2.cardNumber.substr(0, 3);
-                _context2.next = _context2.t0 === '002' ? 5 : _context2.t0 === '003' ? 7 : _context2.t0 === '009' ? 9 : _context2.t0 === '011' ? 11 : 13;
-                break;
-
-              case 5:
-                _this2.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__["default"].Bank('bcp');
-                return _context2.abrupt("break", 15);
-
-              case 7:
-                _this2.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__["default"].Bank('interbank');
-                return _context2.abrupt("break", 15);
-
-              case 9:
-                _this2.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__["default"].Bank('scotiabank');
-                return _context2.abrupt("break", 15);
-
-              case 11:
-                _this2.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_13__["default"].Bank('bbva');
-                return _context2.abrupt("break", 15);
-
-              case 13:
-                _this2.ccicon.innerHTML = "";
-                return _context2.abrupt("break", 15);
-
-              case 15:
-                _context2.next = 18;
-                break;
+                return _context2.abrupt("return");
 
               case 17:
-                if (_this2.cardNumber.replace(/-/g, "").length < 3) {
-                  _this2.ccicon.innerHTML = "";
-                }
+                _this2.isType = 'DNI';
 
               case 18:
+                _context2.next = 20;
+                return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/validate/".concat(_this2.isType, "/").concat(_this2.dni));
+
+              case 20:
+                response = _context2.sent;
+
+                if (response.ok) {
+                  _context2.next = 27;
+                  break;
+                }
+
+                _this2.dni_valid = false;
+                _this2.name_admi = '';
+                _this2.lastnamep_admi = '';
+                _this2.lastnamem_admi = '';
+                return _context2.abrupt("return", _this2.$toast.open({
+                  message: "El sistema detectó que el DNI no es válido",
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 27:
+                //Si todo esta correcto obtengo datos del DNI, solo los más relevantes
+                _this2.name_admi = response.data.data[0].nombres;
+                _this2.lastnamep_admi = response.data.data[0].apellidoPaterno;
+                _this2.lastnamem_admi = response.data.data[0].apellidoMaterno;
+                _this2.dni_valid = true;
+
+                _this2.$toast.open({
+                  message: response.data.data.success,
+                  type: "success",
+                  duration: 8000,
+                  dismissible: true
+                });
+
+              case 32:
               case "end":
                 return _context2.stop();
             }
@@ -7550,73 +7513,73 @@ __webpack_require__.r(__webpack_exports__);
         }, _callee2);
       }))();
     },
-    validateDNI: function validateDNI() {
+    validateRUC: function validateRUC() {
       var _this3 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee3() {
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3() {
         var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee3$(_context3) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                if (!(_this3.dni.length > 0 && _this3.dni.length < 8)) {
-                  _context3.next = 11;
+                if (!(_this3.ruc.length > 0 && _this3.ruc.length < 11)) {
+                  _context3.next = 8;
                   break;
                 }
 
-                _this3.hasError = true;
-                _this3.dni_valid = false;
-                _this3.name_admi = "";
-                _this3.lastnamep_admi = "";
-                _this3.lastnamem_admi = "";
-                _this3.error_dni = "El DNI debe tener 8 dígitos";
-                _this3.vacio_dni = "";
+                _this3.ruc_valid = false;
+                _this3.name_enterprise = '';
+                _this3.error_ruc = 'El RUC debe tener 11 dígitos';
+                _this3.vacio_ruc = '';
                 return _context3.abrupt("return");
 
-              case 11:
-                _this3.hasError = false;
-                _this3.error_dni = "";
-                _this3.vacio_dni = "";
+              case 8:
+                _this3.error_ruc = '';
+                _this3.vacio_ruc = '';
 
-                if (!(_this3.dni.length == 0)) {
-                  _context3.next = 16;
+                if (!(_this3.ruc.length == 0)) {
+                  _context3.next = 13;
+                  break;
+                }
+
+                _this3.ruc_valid = false;
+                return _context3.abrupt("return");
+
+              case 13:
+                if (!_this3.ruc_valid) {
+                  _context3.next = 15;
                   break;
                 }
 
                 return _context3.abrupt("return");
+
+              case 15:
+                _this3.isType = 'RUC';
 
               case 16:
-                _this3.isType = 'DNI';
+                _context3.next = 18;
+                return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/validate/".concat(_this3.isType, "/").concat(_this3.ruc));
 
-              case 17:
-                _context3.next = 19;
-                return _api__WEBPACK_IMPORTED_MODULE_9__["default"].get("/validate/".concat(_this3.isType, "/").concat(_this3.dni));
-
-              case 19:
+              case 18:
                 response = _context3.sent;
 
                 if (response.ok) {
-                  _context3.next = 26;
+                  _context3.next = 23;
                   break;
                 }
 
-                _this3.dni_valid = false;
-                _this3.name_admi = "";
-                _this3.lastnamep_admi = "";
-                _this3.lastnamem_admi = "";
+                _this3.ruc_valid = false;
+                _this3.name_enterprise = '';
                 return _context3.abrupt("return", _this3.$toast.open({
-                  message: "El sistema detectó que el DNI no es válido",
+                  message: "El sistema detecto que el RUC no es válido",
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
-              case 26:
-                //Si todo esta correcto obtengo datos del DNI, solo los más relevantes
-                _this3.name_admi = response.data.data[0].nombres;
-                _this3.lastnamep_admi = response.data.data[0].apellidoPaterno;
-                _this3.lastnamem_admi = response.data.data[0].apellidoMaterno;
-                _this3.dni_valid = true;
+              case 23:
+                _this3.ruc_valid = true;
+                _this3.name_enterprise = response.data.data[0].razonSocial;
 
                 _this3.$toast.open({
                   message: response.data.data.success,
@@ -7625,7 +7588,7 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 });
 
-              case 31:
+              case 26:
               case "end":
                 return _context3.stop();
             }
@@ -7633,133 +7596,304 @@ __webpack_require__.r(__webpack_exports__);
         }, _callee3);
       }))();
     },
-    validateRUC: function validateRUC() {
+    validateUser: function validateUser() {
+      this.error_username = '';
+      this.vacio_username = '';
+
+      if (this.username == '') {
+        return;
+      }
+
+      if (this.username.includes('@') || this.username.includes('.')) {
+        this.vacio_username = '';
+        this.error_username = 'El usuario no debe de incluir @ ó .';
+        return;
+      }
+    },
+    validateEmail: function validateEmail() {
       var _this4 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee4() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                if (!(_this4.ruc.length > 0 && _this4.ruc.length < 11)) {
-                  _context4.next = 9;
-                  break;
-                }
+      var correo = function correo() {
+        return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this4.email);
+      };
 
-                _this4.hasError = true;
-                _this4.ruc_valid = false;
-                _this4.name_enterprise = "";
-                _this4.error_ruc = "El RUC debe tener 11 dígitos";
-                _this4.vacio_ruc = "";
-                return _context4.abrupt("return");
+      this.error_email = '';
+      this.vacio_email = '';
 
-              case 9:
-                _this4.hasError = false;
-                _this4.error_ruc = "";
-                _this4.vacio_ruc = "";
+      if (this.email == '') {
+        return;
+      }
 
-                if (!(_this4.ruc.length == 0)) {
-                  _context4.next = 14;
-                  break;
-                }
+      if (!correo(this.email)) {
+        this.error_email = 'Correo no válido';
+        this.vacio_email = '';
+      }
+    },
+    validatePassword: function validatePassword() {
+      this.error_password = '';
+      this.vacio_pass = '';
 
-                return _context4.abrupt("return");
+      if (this.password.length == 0) {
+        return;
+      }
 
-              case 14:
-                _this4.isType = 'RUC';
+      if (this.password.length >= 8) {
+        this.vacio_pass = "";
+        var mayuscula = false;
+        var minuscula = false;
+        var numero = false;
 
-              case 15:
-                _context4.next = 17;
-                return _api__WEBPACK_IMPORTED_MODULE_9__["default"].get("/validate/".concat(_this4.isType, "/").concat(_this4.ruc));
-
-              case 17:
-                response = _context4.sent;
-
-                if (response.ok) {
-                  _context4.next = 22;
-                  break;
-                }
-
-                _this4.ruc_valid = false;
-                _this4.name_enterprise = "";
-                return _context4.abrupt("return", _this4.$toast.open({
-                  message: "El sistema detecto que el RUC no es válido",
-                  type: "error",
-                  duration: 8000,
-                  dismissible: true
-                }));
-
-              case 22:
-                _this4.ruc_valid = true;
-                _this4.name_enterprise = response.data.data[0].razonSocial;
-
-                _this4.$toast.open({
-                  message: response.data.data.success,
-                  type: "success",
-                  duration: 8000,
-                  dismissible: true
-                });
-
-              case 25:
-              case "end":
-                return _context4.stop();
-            }
+        for (var i = 0; i < this.password.length; i++) {
+          if (this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) {
+            mayuscula = true;
+          } else if (this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) {
+            minuscula = true;
+          } else if (this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) {
+            numero = true;
           }
-        }, _callee4);
-      }))();
+        }
+
+        if (mayuscula == false) {
+          this.error_password = "Su contraseña debe tener al menos una letra mayuscula";
+          return;
+        }
+
+        if (minuscula == false) {
+          this.error_password = "Su contraseña debe tener al menos una letra minuscula";
+          return;
+        }
+
+        if (numero == false) {
+          this.error_password = "Su contraseña debe tener al menos un número";
+          return;
+        }
+
+        if (mayuscula == true && minuscula == true && numero == true) {
+          this.error_password = "";
+        }
+      } else if (this.password.length < 8 && this.password.length > 0) {
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
+      }
+    },
+    validateRepeatPassword: function validateRepeatPassword() {
+      this.error_repeat_password = '';
+      this.vacio_repeat_pass = '';
+
+      if (this.repeat_password.length == 0) {
+        return;
+      }
+
+      if (this.repeat_password != this.password) {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    onFileChangeFileE: function onFileChangeFileE(e, name) {
+      var filesE = e.target.files || e.dataTransfer.files;
+      this[name] = filesE;
+
+      if (!filesE.length || !/\.(jpg|png|jpeg)$/i.test(filesE[0].name)) {
+        this.file_enterprise = '';
+        this.error_fileE = '';
+        this.vacio_fileE = '';
+        return;
+      }
+
+      if (filesE[0].size > 10000) {
+        this.file_enterprise = '';
+        this.error_fileE = 'El peso de la imagen no puede exceder los 10kb';
+        this.vacio_fileE = '';
+        return;
+      }
+
+      this.error_fileE = '';
+      this.vacio_fileE = '';
+      this.createImage(filesE[0], name);
+    },
+    onFileChangeFileA: function onFileChangeFileA(e, name) {
+      var filesA = e.target.files || e.dataTransfer.files;
+      this[name] = filesA;
+
+      if (!filesA.length || !/\.(jpg|png|jpeg)$/i.test(filesA[0].name)) {
+        this.file_admi = '';
+        this.error_fileA = '';
+        this.vacio_fileA = '';
+        return;
+      }
+
+      if (filesA[0].size > 10000) {
+        this.file_admi = '';
+        this.error_fileA = 'El peso de la imagen no puede exceder los 10kb';
+        this.vacio_fileA = '';
+        return;
+      }
+
+      this.error_fileA = '';
+      this.vacio_fileA = '';
+      this.createImage(filesA[0], name);
+    },
+    createImage: function createImage(file, name) {
+      var image = new Image();
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = function (e) {
+        vm[name] = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    },
+    removeImage: function removeImage(e, name) {
+      this[name] = "";
     },
     submitSignup: function submitSignup() {
       var _this5 = this;
 
-      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee5() {
-        var response, er, mensaje;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee5$(_context5) {
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4() {
+        var _boolean, response, er, mensaje;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee4$(_context4) {
           while (1) {
-            switch (_context5.prev = _context5.next) {
+            switch (_context4.prev = _context4.next) {
               case 0:
-                _this5.validateSubmit();
+                _this5.validateCardNumber();
 
-                if (!_this5.hasError) {
-                  _context5.next = 3;
+                _this5.validateDNI();
+
+                _this5.validateRUC();
+
+                _this5.validateUser();
+
+                _this5.validateEmail();
+
+                _this5.validatePassword();
+
+                _this5.validatePassword();
+
+                _boolean = false;
+
+                if (_this5.cardNumber == '' && _this5.error_cardNumber == '') {
+                  _this5.vacio_cardNumber = 'Campo obligatorio';
+                  _this5.error_cardNumber = '';
+                  _boolean = true;
+                } else if (_this5.cardNumber != '' && _this5.error_cardNumber != '') {
+                  _this5.vacio_cardNumber = '';
+                  _boolean = true;
+                } else if (_this5.cardNumber != '' && _this5.error_cardNumber == '') {
+                  _this5.vacio_cardNumber = '';
+                  _this5.error_cardNumber = '';
+                }
+
+                if (_this5.ruc == '' && _this5.error_ruc == '') {
+                  _this5.vacio_ruc = 'Campo obligatorio';
+                  _this5.error_ruc = '';
+                  _boolean = true;
+                } else if (_this5.ruc != '' && _this5.error_ruc != '') {
+                  _this5.vacio_ruc = '';
+                  _boolean = true;
+                } else if (_this5.ruc != '' && _this5.error_ruc == '') {
+                  _this5.vacio_ruc = '';
+                  _this5.error_ruc = '';
+                }
+
+                if (_this5.file_enterprise == '' && _this5.error_fileE == '') {
+                  _this5.vacio_fileE = 'Campo obligatorio';
+                  _this5.error_fileE = '';
+                  _boolean = true;
+                } else if (_this5.file_enterprise != '' && _this5.error_fileE != '') {
+                  _this5.vacio_fileE = '';
+                  _boolean = true;
+                } else if (_this5.file_enterprise != '' && _this5.error_fileE == '') {
+                  _this5.vacio_fileE = '';
+                  _this5.error_fileE = '';
+                }
+
+                if (_this5.dni == '' && _this5.error_dni == '') {
+                  _this5.vacio_dni = 'Campo obligatorio';
+                  _this5.error_dni = '';
+                  _boolean = true;
+                } else if (_this5.dni != '' && _this5.error_dni != '') {
+                  _this5.vacio_dni = '';
+                  _boolean = true;
+                } else if (_this5.dni != '' && _this5.error_dni == '') {
+                  _this5.vacio_dni = '';
+                  _this5.error_dni = '';
+                }
+
+                if (_this5.file_admi == '' && _this5.error_fileA == '') {
+                  _this5.vacio_fileA = 'Campo obligatorio';
+                  _this5.error_fileA = '';
+                  _boolean = true;
+                } else if (_this5.file_admi != '' && _this5.error_fileA != '') {
+                  _this5.vacio_fileA = '';
+                  _boolean = true;
+                } else if (_this5.file_admi != '' && _this5.error_fileA == '') {
+                  _this5.vacio_fileA = '';
+                  _this5.error_fileA = '';
+                }
+
+                if (_this5.username == '' && _this5.error_username == '') {
+                  _this5.vacio_username = 'Campo obligatorio';
+                  _this5.error_username = '';
+                  _boolean = true;
+                } else if (_this5.username != '' && _this5.error_username != '') {
+                  _this5.vacio_username = '';
+                  _boolean = true;
+                } else if (_this5.username != '' && _this5.error_username == '') {
+                  _this5.vacio_username = '';
+                  _this5.error_username = '';
+                }
+
+                if (_this5.email == '' && _this5.error_email == '') {
+                  _this5.vacio_email = 'Campo obligatorio';
+                  _this5.error_email = '';
+                  _boolean = true;
+                } else if (_this5.email != '' && _this5.error_email != '') {
+                  _this5.vacio_email = '';
+                  _boolean = true;
+                } else if (_this5.email != '' && _this5.error_email == '') {
+                  _this5.vacio_email = '';
+                  _this5.error_email = '';
+                }
+
+                if (_this5.password == '' && _this5.error_password == '') {
+                  _this5.vacio_pass = 'Campo obligatorio';
+                  _this5.error_password = '';
+                  _boolean = true;
+                } else if (_this5.password != '' && _this5.error_password != '') {
+                  _this5.vacio_pass = '';
+                  _boolean = true;
+                } else if (_this5.password != '' && _this5.error_password == '') {
+                  _this5.vacio_pass = '';
+                  _this5.error_password = '';
+                }
+
+                if (_this5.repeat_password == '' && _this5.error_repeat_password == '') {
+                  _this5.vacio_repeat_pass = 'Campo obligatorio';
+                  _this5.error_repeat_password = '';
+                  _boolean = true;
+                } else if (_this5.repeat_password != '' && _this5.error_repeat_password != '') {
+                  _this5.vacio_repeat_pass = '';
+                  _boolean = true;
+                } else if (_this5.repeat_password != '' && _this5.error_repeat_password == '') {
+                  _this5.vacio_repeat_pass = '';
+                  _this5.error_repeat_password = '';
+                }
+
+                if (!(_boolean == true)) {
+                  _context4.next = 19;
                   break;
                 }
 
-                return _context5.abrupt("return");
+                return _context4.abrupt("return");
 
-              case 3:
-                _this5.buttonLoading = true; //Se condiciona la imagen de la empresa
+              case 19:
+                _this5.buttonLoading = true; //Se conecta con la lógica de negocio
+                //RUC de  ejemplos en : http://www.sunat.gob.pe/descarga/BueCont/BueCont0.html
 
-                if (!(_this5.file_enterprise === '' | _this5.file_enterprise === "" | _this5.file_enterprise === null)) {
-                  _context5.next = 7;
-                  break;
-                }
-
-                _this5.buttonLoading = false;
-                return _context5.abrupt("return", _this5.$toast.open({
-                  message: 'Imagen de la empresa requerida',
-                  type: "error",
-                  duration: 8000,
-                  dismissible: true
-                }));
-
-              case 7:
-                if (!(_this5.file_admi === '' | _this5.file_admi === "" | _this5.file_admi === null)) {
-                  _context5.next = 10;
-                  break;
-                }
-
-                _this5.buttonLoading = false;
-                return _context5.abrupt("return", _this5.$toast.open({
-                  message: 'Imagen de la empresa requerida',
-                  type: "error",
-                  duration: 8000,
-                  dismissible: true
-                }));
-
-              case 10:
-                _context5.next = 12;
-                return _api__WEBPACK_IMPORTED_MODULE_9__["default"].post("/signup", {
+                _context4.next = 22;
+                return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/signup", {
                   identity: _this5.identifier,
                   username: _this5.username,
                   email: _this5.email,
@@ -7775,11 +7909,11 @@ __webpack_require__.r(__webpack_exports__);
                   DNI: _this5.dni
                 });
 
-              case 12:
-                response = _context5.sent;
+              case 22:
+                response = _context4.sent;
 
                 if (response.ok) {
-                  _context5.next = 19;
+                  _context4.next = 29;
                   break;
                 }
 
@@ -7793,14 +7927,14 @@ __webpack_require__.r(__webpack_exports__);
                   mensaje = er.email[0];
                 }
 
-                return _context5.abrupt("return", _this5.$toast.open({
+                return _context4.abrupt("return", _this5.$toast.open({
                   message: mensaje,
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
-              case 19:
+              case 29:
                 _this5.$toast.open({
                   message: response.data.data.success1[0],
                   type: "success",
@@ -7817,128 +7951,13 @@ __webpack_require__.r(__webpack_exports__);
 
                 _this5.$router.push("/login/enterprise");
 
-              case 22:
+              case 32:
               case "end":
-                return _context5.stop();
+                return _context4.stop();
             }
           }
-        }, _callee5);
+        }, _callee4);
       }))();
-    },
-    validateSubmit: function validateSubmit() {
-      if (this.hasError == true) this.hasError = true;else this.hasError = false; //Validaciones del campo usuario
-
-      if (this.username == "") {
-        this.hasError = true;
-        this.vacio_username = "Campo necesario";
-        this.error_username = "";
-      } else if (this.username.includes("@") || this.username.includes(".")) {
-        this.hasError = true;
-        this.vacio_username = "";
-        this.error_username = "Usuario no válido, el usuario no debe de incluir @ o .";
-      } else {
-        this.error_username = "";
-        this.vacio_username = "";
-      } //Validaciones del campo Email
-
-
-      if (this.email == "") {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = "";
-      } else if (!this.email.includes("@") || !this.email.includes(".") || this.email.length < 5) {
-        this.hasError = true;
-        this.vacio_email = "";
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = "";
-        this.vacio_email = "";
-      } //Validaciones del campo password
-
-
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      } //Validaciones del campo repeat password
-
-
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      } //Validacion del DNI
-
-
-      if (this.dni.length == 0) {
-        this.hasError = true;
-        this.error_dni = "";
-        this.vacio_dni = "Campo necesario";
-      } else {
-        this.error_dni = "";
-        this.vacio_dni = "";
-      } //Comprobacion de cuenta de empresa
-
-
-      if (this.cardNumber == "") {
-        this.hasError = true;
-        this.error_cardNumber = "";
-        this.vacio_cardNumber = "Campo necesario";
-      } else {
-        this.error_cardNumber = "";
-        this.vacio_cardNumber = "";
-      } //Comprobacion de RUC
-
-
-      if (this.ruc.length == "") {
-        this.hasError = true;
-        this.error_ruc = "";
-        this.vacio_ruc = "Campo necesario";
-      } else {
-        this.error_ruc = "";
-        this.vacio_ruc = "";
-      }
-    },
-    onFileChange: function onFileChange(e, name) {
-      var files = e.target.files || e.dataTransfer.files;
-      this[name] = files;
-      if (!files.length) return;
-
-      if (files[0].type != "image/jpeg" && files[0].type != "image/png") {
-        this.file_enterprise = '';
-        this.file_admi = '';
-        return;
-      }
-
-      this.createImage(files[0], name);
-    },
-    createImage: function createImage(file, name) {
-      var image = new Image();
-      var reader = new FileReader();
-      var vm = this;
-
-      reader.onload = function (e) {
-        vm[name] = e.target.result;
-      };
-
-      reader.readAsDataURL(file);
-    },
-    removeImage: function removeImage(e, name) {
-      this[name] = "";
     }
   }
 });
@@ -49085,7 +49104,7 @@ var render = function() {
                                         "col-span-3 sm:col-span-2 mt-3 md:mt-1 rounded-md w-full"
                                     },
                                     [
-                                      _c("div", { staticClass: "shadow-sm" }, [
+                                      _c("div", [
                                         _c(
                                           "label",
                                           {
@@ -50359,12 +50378,10 @@ var render = function() {
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "w-full sm:flex" }, [
-                          _c(
-                            "div",
-                            { staticClass: "flex items-center sm:w-1/4" },
-                            [
-                              !_vm.file_enterprise
-                                ? _c("div", { staticClass: "mt-2" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            !_vm.file_enterprise
+                              ? _c("div", { staticClass: "mt-2 w-full" }, [
+                                  _c("div", [
                                     _c(
                                       "label",
                                       {
@@ -50389,7 +50406,7 @@ var render = function() {
                                           },
                                           on: {
                                             change: function($event) {
-                                              return _vm.onFileChange(
+                                              return _vm.onFileChangeFileE(
                                                 $event,
                                                 "file_enterprise"
                                               )
@@ -50398,39 +50415,68 @@ var render = function() {
                                         })
                                       ]
                                     )
-                                  ])
-                                : _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "flex items-center w-full mt-1"
-                                    },
-                                    [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
-                                          on: {
-                                            click: function($event) {
-                                              return _vm.removeImage(
-                                                $event,
-                                                "file_enterprise"
-                                              )
-                                            }
-                                          }
-                                        },
-                                        [_vm._v("Eliminar imagen")]
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm.error_fileE
+                                    ? _c(
+                                        "small",
+                                        { staticClass: "text-red-600" },
+                                        [
+                                          _vm._v(
+                                            "\n                      " +
+                                              _vm._s(_vm.error_fileE) +
+                                              "\n                    "
+                                          )
+                                        ]
                                       )
-                                    ]
-                                  )
-                            ]
-                          ),
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _vm.vacio_fileE
+                                    ? _c(
+                                        "small",
+                                        { staticClass: "text-yellow-600" },
+                                        [
+                                          _vm._v(
+                                            "\n                      " +
+                                              _vm._s(_vm.vacio_fileE) +
+                                              "\n                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ])
+                              : _c(
+                                  "div",
+                                  {
+                                    staticClass: "flex items-center w-full mt-1"
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.removeImage(
+                                              $event,
+                                              "file_enterprise"
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Eliminar imagen")]
+                                    )
+                                  ]
+                                )
+                          ]),
                           _vm._v(" "),
                           _vm.file_enterprise
                             ? _c(
                                 "div",
-                                { staticClass: "mt-3 sm:mt-4 sm:w-3/4" },
+                                {
+                                  staticClass: "mt-3 sm:mt-4 sm:pl-10 sm:w-3/4"
+                                },
                                 [
                                   _c("img", {
                                     staticClass:
@@ -50727,12 +50773,10 @@ var render = function() {
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "w-full sm:flex" }, [
-                          _c(
-                            "div",
-                            { staticClass: "flex items-center sm:w-1/4" },
-                            [
-                              !_vm.file_admi
-                                ? _c("div", { staticClass: "mt-2" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            !_vm.file_admi
+                              ? _c("div", { staticClass: "mt-2" }, [
+                                  _c("div", [
                                     _c(
                                       "label",
                                       {
@@ -50754,7 +50798,7 @@ var render = function() {
                                         },
                                         on: {
                                           change: function($event) {
-                                            return _vm.onFileChange(
+                                            return _vm.onFileChangeFileA(
                                               $event,
                                               "file_admi"
                                             )
@@ -50762,39 +50806,68 @@ var render = function() {
                                         }
                                       })
                                     ])
-                                  ])
-                                : _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "flex items-center w-full mt-1"
-                                    },
-                                    [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
-                                          on: {
-                                            click: function($event) {
-                                              return _vm.removeImage(
-                                                $event,
-                                                "file_admi"
-                                              )
-                                            }
-                                          }
-                                        },
-                                        [_vm._v("Eliminar imagen")]
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm.error_fileA
+                                    ? _c(
+                                        "small",
+                                        { staticClass: "text-red-600" },
+                                        [
+                                          _vm._v(
+                                            "\n                      " +
+                                              _vm._s(_vm.error_fileA) +
+                                              "\n                    "
+                                          )
+                                        ]
                                       )
-                                    ]
-                                  )
-                            ]
-                          ),
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _vm.vacio_fileA
+                                    ? _c(
+                                        "small",
+                                        { staticClass: "text-yellow-600" },
+                                        [
+                                          _vm._v(
+                                            "\n                      " +
+                                              _vm._s(_vm.vacio_fileA) +
+                                              "\n                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ])
+                              : _c(
+                                  "div",
+                                  {
+                                    staticClass: "flex items-center w-full mt-1"
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.removeImage(
+                                              $event,
+                                              "file_admi"
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Eliminar imagen")]
+                                    )
+                                  ]
+                                )
+                          ]),
                           _vm._v(" "),
                           _vm.file_admi
                             ? _c(
                                 "div",
-                                { staticClass: "mt-3 sm:mt-4 sm:w-3/4" },
+                                {
+                                  staticClass: "mt-3 sm:mt-4 sm:pl-10 sm:w-3/4"
+                                },
                                 [
                                   _c("img", {
                                     staticClass:
@@ -50865,6 +50938,9 @@ var render = function() {
                               },
                               domProps: { value: _vm.username },
                               on: {
+                                change: function($event) {
+                                  return _vm.validateUser()
+                                },
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
@@ -50925,12 +51001,15 @@ var render = function() {
                                 "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                               attrs: {
                                 id: "email",
-                                placeholder: "Ingrese un correo electronico",
-                                type: "email",
+                                placeholder: "Ingrese un correo",
+                                type: "text",
                                 required: ""
                               },
                               domProps: { value: _vm.email },
                               on: {
+                                change: function($event) {
+                                  return _vm.validateEmail()
+                                },
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
@@ -50997,6 +51076,9 @@ var render = function() {
                               },
                               domProps: { value: _vm.password },
                               on: {
+                                change: function($event) {
+                                  return _vm.validatePassword()
+                                },
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
@@ -51063,6 +51145,9 @@ var render = function() {
                               },
                               domProps: { value: _vm.repeat_password },
                               on: {
+                                change: function($event) {
+                                  return _vm.validateRepeatPassword()
+                                },
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
