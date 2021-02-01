@@ -91,20 +91,20 @@
                 aria-labelledby="user-menu"
               >
                 <router-link
-                  to="/customer/blank"
+                  to="/customer/update/data"
                   class="flex items-center cursor-pointer px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   <IconSvg :solid="false" icon="cog" class="h-6 w-6 mr-2 text-gray-400" />Ver perfil
                 </router-link>
-
+                <!-- Menu: cuenta
                 <router-link
                   to="/customer/blank"
                   class="flex items-center cursor-pointer px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   <IconSvg :solid="false" icon="cog" class="h-6 w-6 mr-2 text-gray-400" />Cuenta
-                </router-link>
+                </router-link> -->
 
                 <a
                   @click="logout"
@@ -192,14 +192,15 @@
 
           <div class="mt-3">
             <router-link
-              to="/customer/blank"
+              to="/customer/update/data"
               class="block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
             >Ver perfil</router-link>
-
+            <!--
             <router-link
               to="/customer/blank"
               class="block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
-            >Cuenta</router-link>
+            >Cuenta</router-link> -->
+            
 
             <a
               @click="logout"

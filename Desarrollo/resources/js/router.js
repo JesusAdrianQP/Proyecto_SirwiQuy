@@ -32,6 +32,8 @@ import ServiceReport from "./pages/Customer/ServiceReport.vue";
 import ServiceForm from "./pages/Customer/ServiceForm.vue";
 import RateService from "./pages/Customer/RateService.vue";
 import Payment from "./pages/Customer/Payment.vue";
+import UpdateData from "./pages/Customer/UpdateData.vue";
+
 
 //Importaciones de la carpeta empresa
 import ListWorker from "./pages/Enterprise/ListWorker.vue";
@@ -183,6 +185,12 @@ export default new VueRouter({
             component: Payment,
             props: true
         },
+        {
+            path: "/customer/update/data",
+            component: UpdateData,
+            beforeEnter: isCustomer
+        },
+        
 
         //Rutas de los proveedores
         {
