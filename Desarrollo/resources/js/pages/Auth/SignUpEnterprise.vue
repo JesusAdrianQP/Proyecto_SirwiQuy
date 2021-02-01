@@ -694,6 +694,18 @@ export default {
     },
     async validateDNI() 
     {
+      this.error_dni = '';
+      this.vacio_dni = '';
+
+      if(this.dni == '')
+      {
+        this.dni_valid = false; 
+        this.name_admi = ''; 
+        this.lastnamep_admi = ''; 
+        this.lastnamem_admi = ''; 
+        return;
+      }
+        
       if ((this.dni.length > 0 && this.dni.length < 8)) 
       {
         this.dni_valid = false;
@@ -704,26 +716,19 @@ export default {
         this.vacio_dni = '';
         return;
       }
-      else
-      {
-        this.error_dni = '';
-        this.vacio_dni = '';
-        if(this.dni.length == 0){this.dni_valid = false; return;}
-        if(this.dni_valid) {return;}
-        this.isType = 'DNI';
-      } 
 
+      this.isType = 'DNI';
       let response = await api.get(`/validate/${this.isType}/${this.dni}`)
       
       if (!response.ok) {
         this.dni_valid = false
-
+        this.error_dni = 'DNI no válido'
         this.name_admi = '';
         this.lastnamep_admi = '';
         this.lastnamem_admi = '';
            
         return this.$toast.open({
-          message: "El sistema detectó que el DNI no es válido",
+          message: "DNI no válido",
           type: "error",
           duration: 8000,
           dismissible: true
@@ -745,7 +750,16 @@ export default {
     },
     async validateRUC() 
     {
-      //Se comprueba longitud del campo apenas se llene
+      this.error_ruc = '';
+      this.vacio_ruc = '';
+
+      if(this.ruc == '')
+      {
+        this.ruc_valid = false; 
+        this.name_enterprise = ''; 
+        return;
+      }
+      
       if ((this.ruc.length > 0 && this.ruc.length < 11)) 
       {
         this.ruc_valid = false;
@@ -754,24 +768,17 @@ export default {
         this.vacio_ruc = '';
         return;
       }
-      else
-      {
-        this.error_ruc = '';
-        this.vacio_ruc = '';
-        if(this.ruc.length == 0){this.ruc_valid = false; return;}
-        if(this.ruc_valid) {return;}
-        this.isType = 'RUC';
-      } 
 
+      this.isType = 'RUC';
       let response = await api.get(`/validate/${this.isType}/${this.ruc}`)
       
       if (!response.ok) {
         this.ruc_valid = false;
-
+        this.error_ruc = 'RUC no válido'
         this.name_enterprise = '';
 
         return this.$toast.open({
-          message:"El sistema detecto que el RUC no es válido",
+          message:"RUC no válido",
           type: "error",
           duration: 8000,
           dismissible: true,
@@ -931,8 +938,6 @@ export default {
     async submitSignup() 
     {
       this.validateCardNumber();
-      this.validateDNI();
-      this.validateRUC();
       this.validateUser();
       this.validateEmail();
       this.validatePassword();

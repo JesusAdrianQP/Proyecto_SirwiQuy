@@ -5747,6 +5747,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -5755,6 +5756,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+=======
+>>>>>>> Bugs
 
 
 
@@ -5876,6 +5879,7 @@ __webpack_require__.r(__webpack_exports__);
               case 0:
                 _this3.validatePassword();
 
+<<<<<<< HEAD
                 _boolean = false;
 
                 if (_this3.loger == "") {
@@ -5899,17 +5903,86 @@ __webpack_require__.r(__webpack_exports__);
 
                 if (!(_boolean == true)) {
                   _context2.next = 6;
+=======
+              case 1:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }))();
+    },
+    validateEmail: function validateEmail() {
+      var _this4 = this;
+
+      var correo = function correo() {
+        return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this4.email_recover);
+      };
+
+      this.error_email2 = '';
+      this.vacio_email2 = '';
+
+      if (this.email_recover == '') {
+        return;
+      }
+
+      if (!correo(this.email_recover)) {
+        this.error_email2 = 'Correo no válido';
+        this.vacio_email2 = '';
+      }
+    },
+    submitLogin: function submitLogin() {
+      var _this5 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee4() {
+        var _boolean, response, er, mensaje;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _this5.validatePassword();
+
+                _boolean = false;
+
+                if (_this5.loger == "") {
+                  _this5.vacio_loger = "Campo obligatorio";
+                  _boolean = true;
+                } else {
+                  _this5.vacio_loger = "";
+                }
+
+                if (_this5.password == "" && _this5.error_pass == "") {
+                  _this5.vacio_pass = "Campo obligatorio";
+                  _this5.error_pass = "";
+                  _boolean = true;
+                } else if (_this5.password != "" && _this5.error_pass != "") {
+                  _this5.vacio_pass = "";
+                  _boolean = true;
+                } else if (_this5.password != "" && _this5.error_pass == "") {
+                  _this5.vacio_pass = "";
+                  _this5.error_pass = "";
+                }
+
+                if (!(_boolean == true)) {
+                  _context4.next = 6;
+>>>>>>> Bugs
                   break;
                 }
 
                 return _context2.abrupt("return");
 
               case 6:
+<<<<<<< HEAD
                 _this3.buttonLoading = true; //Conexión con la lógica de negocio
+=======
+                _this5.buttonLoading = true; //Conexión con la lógica de negocio
+>>>>>>> Bugs
                 //Se pasa como parametros el loger (usario o correo)
                 //identity -> tipo de identificador para el usuario
                 //password -> contraseña
 
+<<<<<<< HEAD
                 _context2.next = 9;
                 return _api__WEBPACK_IMPORTED_MODULE_5__["default"].post("/login", {
                   identity: _this3.identifier,
@@ -5930,6 +6003,28 @@ __webpack_require__.r(__webpack_exports__);
                 mensaje = "Error desconocido.";
                 if (er.hasOwnProperty("mail")) mensaje = er.mail[0];else if (er.hasOwnProperty("user")) mensaje = er.user[0];else mensaje = er.pass[0];
                 return _context2.abrupt("return", _this3.$toast.open({
+=======
+                _context4.next = 9;
+                return _api__WEBPACK_IMPORTED_MODULE_7__["default"].post("/login", {
+                  identity: _this5.identifier,
+                  loger: _this5.loger,
+                  password: _this5.password
+                });
+
+              case 9:
+                response = _context4.sent;
+
+                if (response.ok) {
+                  _context4.next = 16;
+                  break;
+                }
+
+                _this5.buttonLoading = false;
+                er = response.error.errors;
+                mensaje = "Error desconocido.";
+                if (er.hasOwnProperty("mail")) mensaje = er.mail[0];else if (er.hasOwnProperty("user")) mensaje = er.user[0];else mensaje = er.pass[0];
+                return _context4.abrupt("return", _this5.$toast.open({
+>>>>>>> Bugs
                   message: mensaje,
                   type: "error",
                   duration: 8000,
@@ -5940,7 +6035,11 @@ __webpack_require__.r(__webpack_exports__);
                 //Guardo token de acceso
                 localStorage.setItem('token', response.data.data.replace(/ /g, "")); //Si todo esta correcto: 
 
+<<<<<<< HEAD
                 _this3.$toast.open({
+=======
+                _this5.$toast.open({
+>>>>>>> Bugs
                   message: "Bienvenido a su sesión",
                   type: "success",
                   duration: 8000,
@@ -5948,6 +6047,7 @@ __webpack_require__.r(__webpack_exports__);
                 }); //Concedo nivel de acceso y enrutamiento dependiendo del usuario
 
 
+<<<<<<< HEAD
                 if (_this3.identifier == "trabajador" || _this3.identifier == "empresa") {
                   //Sacamos nivel de acceso del usuario
                   if (_this3.identifier == "trabajador") {
@@ -5968,6 +6068,28 @@ __webpack_require__.r(__webpack_exports__);
 
                     _this3.$router.push("/customer/payment/link=" + localStorage.getItem('e_link') + "/response=" + localStorage.getItem('e_response'));
                   } else _this3.$router.push("/");
+=======
+                if (_this5.identifier == "trabajador" || _this5.identifier == "empresa") {
+                  //Sacamos nivel de acceso del usuario
+                  if (_this5.identifier == "trabajador") {
+                    localStorage.setItem('e_level', "employee");
+
+                    _this5.$router.push("/worker/profile/edit");
+                  }
+
+                  if (_this5.identifier == "empresa") {
+                    localStorage.setItem('e_level', "enterprise");
+
+                    _this5.$router.push("/supplier");
+                  }
+                } else {
+                  localStorage.setItem('e_level', "customer");
+                  if (localStorage.getItem('suma') != null) _this5.$router.push("/request/form/service");else if (localStorage.getItem('e_bandera') != null) {
+                    localStorage.removeItem('e_bandera');
+
+                    _this5.$router.push("/customer/payment/link=" + localStorage.getItem('e_link') + "/response=" + localStorage.getItem('e_response'));
+                  } else _this5.$router.push("/");
+>>>>>>> Bugs
                 }
 
               case 19:
@@ -5979,7 +6101,11 @@ __webpack_require__.r(__webpack_exports__);
       }))();
     },
     ResetPass: function ResetPass() {
+<<<<<<< HEAD
       var _this4 = this;
+=======
+      var _this6 = this;
+>>>>>>> Bugs
 
       return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
         var response, er, mensaje;
@@ -5987,6 +6113,7 @@ __webpack_require__.r(__webpack_exports__);
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
+<<<<<<< HEAD
                 _this4.validateEmail();
 
                 if (!(_this4.email_recover == "" && _this4.error_email2 == "")) {
@@ -6027,26 +6154,75 @@ __webpack_require__.r(__webpack_exports__);
                 _this4.vacio_email2 = '';
                 _this4.error_email2 = '';
                 _this4.email_recover = '';
+=======
+                //Valido campo correo
+                if (_this6.hasError == true) _this6.hasError = true;else _this6.hasError = false; //Validaciones del campo Email
+
+                if (_this6.email_recover == "") {
+                  _this6.hasError = true;
+                  _this6.vacio_email2 = "Campo necesario";
+                  _this6.error_email2 = "";
+                } else if (!_this6.email_recover.includes("@") || !_this6.email_recover.includes(".") || _this6.email_recover.length < 5) {
+                  _this6.hasError = true;
+                  _this6.vacio_email2 = "";
+                  _this6.error_email2 = "Correo no válido";
+                } else {
+                  _this6.error_email2 = "";
+                  _this6.vacio_email2 = "";
+                }
+
+                _this6.openModal = false; //Post para verificar existencia y enviar correo
+
+                _context5.next = 5;
+                return _api__WEBPACK_IMPORTED_MODULE_7__["default"].post("/reset", {
+                  identity: _this6.identifier,
+                  email: _this6.email_recover
+                });
+
+              case 5:
+                response = _context5.sent;
+                _this6.vacio_email2 = '';
+                _this6.error_email2 = '';
+                _this6.email_recover = ''; //Si hay errores se identifica que tipo
+>>>>>>> Bugs
 
                 if (response.ok) {
                   _context3.next = 25;
                   break;
                 }
 
+<<<<<<< HEAD
                 er = response.error.errors;
                 mensaje = "Error desconocido";
                 if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
                 return _context3.abrupt("return", _this4.$toast.open({
+=======
+                _this6.openModal = false;
+                _this6.vacio_email2 = '';
+                _this6.error_email2 = '';
+                _this6.email_recover = '';
+                er = response.error.errors;
+                mensaje = "Error desconocido";
+                if (er.hasOwnProperty("mail")) mensaje = er.mail[0];
+                return _context5.abrupt("return", _this6.$toast.open({
+>>>>>>> Bugs
                   message: mensaje,
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
+<<<<<<< HEAD
               case 25:
                 _this4.$toast.open({
                   message: response.data.data.success[0],
                   type: "success",
+=======
+              case 18:
+                _this6.$toast.open({
+                  message: response.data.data.info[0],
+                  type: "info",
+>>>>>>> Bugs
                   duration: 8000,
                   dismissible: true
                 });
@@ -6065,7 +6241,11 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.password.length == 0) {
         return;
+<<<<<<< HEAD
       }
+=======
+      } //Validaciones de campo pass vuejs
+>>>>>>> Bugs
 
       if (this.password.length >= 8) {
         this.vacio_pass = "";
@@ -6129,8 +6309,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api */ "./resources/js/api.js");
 /* harmony import */ var _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Layouts/Visitor */ "./resources/js/pages/Layouts/Visitor.vue");
+<<<<<<< HEAD
 /* harmony import */ var _components_Loader_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Loader.vue */ "./resources/js/components/Loader.vue");
 /* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
+=======
+/* harmony import */ var _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/AnimatedButton.vue */ "./resources/js/components/AnimatedButton.vue");
+>>>>>>> Bugs
 
 
 
@@ -6320,8 +6504,12 @@ __webpack_require__.r(__webpack_exports__);
   name: "RecoverSession",
   components: {
     Visitor: _Layouts_Visitor__WEBPACK_IMPORTED_MODULE_5__["default"],
+<<<<<<< HEAD
     AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
     Loader: _components_Loader_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+=======
+    AnimatedButton: _components_AnimatedButton_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+>>>>>>> Bugs
   },
   data: function data() {
     return {
@@ -6358,7 +6546,13 @@ __webpack_require__.r(__webpack_exports__);
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
+<<<<<<< HEAD
               _this.loading = true;
+=======
+              if (_this.ide == 'cliente') _this.identifier = 'cliente';else if (_this.ide == 'trabajador') _this.identifier = 'trabajador';else if (_this.ide == 'empresa') _this.identifier = 'empresa';else _this.$router.push("*");
+              _context.next = 3;
+              return _api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/reset/".concat(_this.cod, "/").concat(_this.identifier));
+>>>>>>> Bugs
 
               if (!(_this.identity == 'cliente')) {
                 _context.next = 5;
@@ -6662,6 +6856,10 @@ __webpack_require__.r(__webpack_exports__);
                 }));
 
               case 23:
+<<<<<<< HEAD
+=======
+                //Si la operacion es exitosa
+>>>>>>> Bugs
                 _this3.$toast.open({
                   message: response.data.data.success[0],
                   type: "success",
@@ -7396,6 +7594,41 @@ __webpack_require__.r(__webpack_exports__);
         this.error_cardNumber = "";
         this.vacio_cardNumber = "";
       }
+<<<<<<< HEAD
+
+      if (this.cardNumber.replace(/-/g, "").length >= 3) {
+        switch (this.cardNumber.substr(0, 3)) {
+          case '002':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('bcp');
+            break;
+
+          case '003':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('interbank');
+            break;
+
+          case '009':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('scotiabank');
+            break;
+
+          case '011':
+            this.ccicon.innerHTML = _formatosBancarios__WEBPACK_IMPORTED_MODULE_14__["default"].Bank('bbva');
+            break;
+
+          default:
+            this.ccicon.innerHTML = "";
+            break;
+        }
+      } else if (this.cardNumber.replace(/-/g, "").length < 3) {
+        this.ccicon.innerHTML = "";
+      }
+    },
+    validateDNI: function validateDNI() {
+      var _this2 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
+=======
 
       if (this.cardNumber.replace(/-/g, "").length >= 3) {
         switch (this.cardNumber.substr(0, 3)) {
@@ -7432,6 +7665,92 @@ __webpack_require__.r(__webpack_exports__);
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                _this2.error_dni = '';
+                _this2.vacio_dni = '';
+
+                if (!(_this2.dni == '')) {
+                  _context2.next = 8;
+                  break;
+                }
+
+                _this2.dni_valid = false;
+                _this2.name_admi = '';
+                _this2.lastnamep_admi = '';
+                _this2.lastnamem_admi = '';
+                return _context2.abrupt("return");
+
+              case 8:
+                if (!(_this2.dni.length > 0 && _this2.dni.length < 8)) {
+                  _context2.next = 16;
+                  break;
+                }
+
+                _this2.dni_valid = false;
+                _this2.name_admi = '';
+                _this2.lastnamep_admi = '';
+                _this2.lastnamem_admi = '';
+                _this2.error_dni = 'El DNI debe tener 8 dígitos';
+                _this2.vacio_dni = '';
+                return _context2.abrupt("return");
+
+              case 16:
+                _this2.isType = 'DNI';
+                _context2.next = 19;
+                return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/validate/".concat(_this2.isType, "/").concat(_this2.dni));
+
+              case 19:
+                response = _context2.sent;
+
+                if (response.ok) {
+                  _context2.next = 27;
+                  break;
+                }
+
+                _this2.dni_valid = false;
+                _this2.error_dni = 'DNI no válido';
+                _this2.name_admi = '';
+                _this2.lastnamep_admi = '';
+                _this2.lastnamem_admi = '';
+                return _context2.abrupt("return", _this2.$toast.open({
+                  message: "DNI no válido",
+                  type: "error",
+                  duration: 8000,
+                  dismissible: true
+                }));
+
+              case 27:
+                //Si todo esta correcto obtengo datos del DNI, solo los más relevantes
+                _this2.name_admi = response.data.data[0].nombres;
+                _this2.lastnamep_admi = response.data.data[0].apellidoPaterno;
+                _this2.lastnamem_admi = response.data.data[0].apellidoMaterno;
+                _this2.dni_valid = true;
+
+                _this2.$toast.open({
+                  message: response.data.data.success,
+                  type: "success",
+                  duration: 8000,
+                  dismissible: true
+                });
+
+              case 32:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    },
+    validateRUC: function validateRUC() {
+      var _this3 = this;
+
+      return Object(D_UNMSM_BASE_17_CICLO_8_GESTI_N_DE_CONFIGURACI_N_Y_MANTENIMIENTO_Proyecto_Gestion_Desarrollo_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
+>>>>>>> Bugs
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+<<<<<<< HEAD
                 if (!(_this2.dni.length > 0 && _this2.dni.length < 8)) {
                   _context2.next = 10;
                   break;
@@ -7486,17 +7805,67 @@ __webpack_require__.r(__webpack_exports__);
                 _this2.lastnamem_admi = '';
                 return _context2.abrupt("return", _this2.$toast.open({
                   message: "El sistema detectó que el DNI no es válido",
+=======
+                _this3.error_ruc = '';
+                _this3.vacio_ruc = '';
+
+                if (!(_this3.ruc == '')) {
+                  _context3.next = 6;
+                  break;
+                }
+
+                _this3.ruc_valid = false;
+                _this3.name_enterprise = '';
+                return _context3.abrupt("return");
+
+              case 6:
+                if (!(_this3.ruc.length > 0 && _this3.ruc.length < 11)) {
+                  _context3.next = 12;
+                  break;
+                }
+
+                _this3.ruc_valid = false;
+                _this3.name_enterprise = '';
+                _this3.error_ruc = 'El RUC debe tener 11 dígitos';
+                _this3.vacio_ruc = '';
+                return _context3.abrupt("return");
+
+              case 12:
+                _this3.isType = 'RUC';
+                _context3.next = 15;
+                return _api__WEBPACK_IMPORTED_MODULE_10__["default"].get("/validate/".concat(_this3.isType, "/").concat(_this3.ruc));
+
+              case 15:
+                response = _context3.sent;
+
+                if (response.ok) {
+                  _context3.next = 21;
+                  break;
+                }
+
+                _this3.ruc_valid = false;
+                _this3.error_ruc = 'RUC no válido';
+                _this3.name_enterprise = '';
+                return _context3.abrupt("return", _this3.$toast.open({
+                  message: "RUC no válido",
+>>>>>>> Bugs
                   type: "error",
                   duration: 8000,
                   dismissible: true
                 }));
 
+<<<<<<< HEAD
               case 27:
                 //Si todo esta correcto obtengo datos del DNI, solo los más relevantes
                 _this2.name_admi = response.data.data[0].nombres;
                 _this2.lastnamep_admi = response.data.data[0].apellidoPaterno;
                 _this2.lastnamem_admi = response.data.data[0].apellidoMaterno;
                 _this2.dni_valid = true;
+=======
+              case 21:
+                _this3.ruc_valid = true;
+                _this3.name_enterprise = response.data.data[0].razonSocial;
+>>>>>>> Bugs
 
                 _this2.$toast.open({
                   message: response.data.data.success,
@@ -7505,7 +7874,11 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 });
 
+<<<<<<< HEAD
               case 32:
+=======
+              case 24:
+>>>>>>> Bugs
               case "end":
                 return _context2.stop();
             }
@@ -7513,6 +7886,7 @@ __webpack_require__.r(__webpack_exports__);
         }, _callee2);
       }))();
     },
+<<<<<<< HEAD
     validateRUC: function validateRUC() {
       var _this3 = this;
 
@@ -7595,6 +7969,158 @@ __webpack_require__.r(__webpack_exports__);
           }
         }, _callee3);
       }))();
+=======
+    validateUser: function validateUser() {
+      this.error_username = '';
+      this.vacio_username = '';
+
+      if (this.username == '') {
+        return;
+      }
+
+      if (this.username.includes('@') || this.username.includes('.')) {
+        this.vacio_username = '';
+        this.error_username = 'El usuario no debe de incluir @ ó .';
+        return;
+      }
+    },
+    validateEmail: function validateEmail() {
+      var _this4 = this;
+
+      var correo = function correo() {
+        return /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(_this4.email);
+      };
+
+      this.error_email = '';
+      this.vacio_email = '';
+
+      if (this.email == '') {
+        return;
+      }
+
+      if (!correo(this.email)) {
+        this.error_email = 'Correo no válido';
+        this.vacio_email = '';
+      }
+    },
+    validatePassword: function validatePassword() {
+      this.error_password = '';
+      this.vacio_pass = '';
+
+      if (this.password.length == 0) {
+        return;
+      }
+
+      if (this.password.length >= 8) {
+        this.vacio_pass = "";
+        var mayuscula = false;
+        var minuscula = false;
+        var numero = false;
+
+        for (var i = 0; i < this.password.length; i++) {
+          if (this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) {
+            mayuscula = true;
+          } else if (this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) {
+            minuscula = true;
+          } else if (this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) {
+            numero = true;
+          }
+        }
+
+        if (mayuscula == false) {
+          this.error_password = "Su contraseña debe tener al menos una letra mayuscula";
+          return;
+        }
+
+        if (minuscula == false) {
+          this.error_password = "Su contraseña debe tener al menos una letra minuscula";
+          return;
+        }
+
+        if (numero == false) {
+          this.error_password = "Su contraseña debe tener al menos un número";
+          return;
+        }
+
+        if (mayuscula == true && minuscula == true && numero == true) {
+          this.error_password = "";
+        }
+      } else if (this.password.length < 8 && this.password.length > 0) {
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
+      }
+    },
+    validateRepeatPassword: function validateRepeatPassword() {
+      this.error_repeat_password = '';
+      this.vacio_repeat_pass = '';
+
+      if (this.repeat_password.length == 0) {
+        return;
+      }
+
+      if (this.repeat_password != this.password) {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    onFileChangeFileE: function onFileChangeFileE(e, name) {
+      var filesE = e.target.files || e.dataTransfer.files;
+      this[name] = filesE;
+
+      if (!filesE.length || !/\.(jpg|png|jpeg)$/i.test(filesE[0].name)) {
+        this.file_enterprise = '';
+        this.error_fileE = '';
+        this.vacio_fileE = '';
+        return;
+      }
+
+      if (filesE[0].size > 10000) {
+        this.file_enterprise = '';
+        this.error_fileE = 'El peso de la imagen no puede exceder los 10kb';
+        this.vacio_fileE = '';
+        return;
+      }
+
+      this.error_fileE = '';
+      this.vacio_fileE = '';
+      this.createImage(filesE[0], name);
+    },
+    onFileChangeFileA: function onFileChangeFileA(e, name) {
+      var filesA = e.target.files || e.dataTransfer.files;
+      this[name] = filesA;
+
+      if (!filesA.length || !/\.(jpg|png|jpeg)$/i.test(filesA[0].name)) {
+        this.file_admi = '';
+        this.error_fileA = '';
+        this.vacio_fileA = '';
+        return;
+      }
+
+      if (filesA[0].size > 10000) {
+        this.file_admi = '';
+        this.error_fileA = 'El peso de la imagen no puede exceder los 10kb';
+        this.vacio_fileA = '';
+        return;
+      }
+
+      this.error_fileA = '';
+      this.vacio_fileA = '';
+      this.createImage(filesA[0], name);
+    },
+    createImage: function createImage(file, name) {
+      var image = new Image();
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = function (e) {
+        vm[name] = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    },
+    removeImage: function removeImage(e, name) {
+      this[name] = "";
+>>>>>>> Bugs
     },
     validateUser: function validateUser() {
       this.error_username = '';
@@ -7759,10 +8285,13 @@ __webpack_require__.r(__webpack_exports__);
               case 0:
                 _this5.validateCardNumber();
 
+<<<<<<< HEAD
                 _this5.validateDNI();
 
                 _this5.validateRUC();
 
+=======
+>>>>>>> Bugs
                 _this5.validateUser();
 
                 _this5.validateEmail();
@@ -7882,17 +8411,29 @@ __webpack_require__.r(__webpack_exports__);
                 }
 
                 if (!(_boolean == true)) {
+<<<<<<< HEAD
                   _context4.next = 19;
+=======
+                  _context4.next = 17;
+>>>>>>> Bugs
                   break;
                 }
 
                 return _context4.abrupt("return");
 
+<<<<<<< HEAD
               case 19:
                 _this5.buttonLoading = true; //Se conecta con la lógica de negocio
                 //RUC de  ejemplos en : http://www.sunat.gob.pe/descarga/BueCont/BueCont0.html
 
                 _context4.next = 22;
+=======
+              case 17:
+                _this5.buttonLoading = true; //Se conecta con la lógica de negocio
+                //RUC de  ejemplos en : http://www.sunat.gob.pe/descarga/BueCont/BueCont0.html
+
+                _context4.next = 20;
+>>>>>>> Bugs
                 return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/signup", {
                   identity: _this5.identifier,
                   username: _this5.username,
@@ -7909,11 +8450,19 @@ __webpack_require__.r(__webpack_exports__);
                   DNI: _this5.dni
                 });
 
+<<<<<<< HEAD
               case 22:
                 response = _context4.sent;
 
                 if (response.ok) {
                   _context4.next = 29;
+=======
+              case 20:
+                response = _context4.sent;
+
+                if (response.ok) {
+                  _context4.next = 27;
+>>>>>>> Bugs
                   break;
                 }
 
@@ -7934,7 +8483,11 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 }));
 
+<<<<<<< HEAD
               case 29:
+=======
+              case 27:
+>>>>>>> Bugs
                 _this5.$toast.open({
                   message: response.data.data.success1[0],
                   type: "success",
@@ -7951,7 +8504,11 @@ __webpack_require__.r(__webpack_exports__);
 
                 _this5.$router.push("/login/enterprise");
 
+<<<<<<< HEAD
               case 32:
+=======
+              case 30:
+>>>>>>> Bugs
               case "end":
                 return _context4.stop();
             }
