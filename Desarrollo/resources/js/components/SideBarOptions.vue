@@ -28,7 +28,7 @@
     <div v-if="acceso == 'enterprise'">
       <SideBarOption
       title="Trabajadores"
-      url="/enterpise/worker/registrations"
+      url="/enterpise/list/worker"
       :icon="{ icon: 'users', solid: false }"
       />   
     </div>
