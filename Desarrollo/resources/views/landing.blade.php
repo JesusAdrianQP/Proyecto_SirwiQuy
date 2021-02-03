@@ -173,158 +173,116 @@
   </nav>
 
     <!--Portada-->
-    <header id="cover-responsive" class="bg-center bg-fixed bg-no-repeat bg-cover h-screen">
-            <div class="overlay">
-                <div class="h-screen items-center justify-center flex" >
-                    <div class="rounded-lg mx-6 sm:mx-16 md:mx-20 w-full p-4 text-center">
-                
+  <header>
+    <section id="cover-responsive" class="bg-center bg-fixed bg-no-repeat bg-cover h-screen">
+      <div class="overlay">
+        <div class="h-screen items-center justify-center flex" >
+          <div class="rounded-lg mx-6 sm:mx-16 md:mx-20 w-full p-4 text-center">
+            <h2 class="mt-8 lg:mt-5 xl:mt-10 font-black text-3xl sm:text-3xl lg:text-5.5xl xl:text-6xl" >
+              <span class="text-primary-900 w-full" style="font-family: 'Domine', serif;" >SISTEMA DE SERVICIOS DE ASISTENCIA AL HOGAR</span>
+            </h2>
 
-                        <h2 class="mt-8 lg:mt-5 xl:mt-10 font-black text-3xl sm:text-3xl lg:text-5.5xl xl:text-6xl" >
-                            <span class="text-primary-900 w-full" style="font-family: 'Domine', serif;" >MANTEN TU CASA EN PERFECTAS CONDICIONES</span>
-                        </h2>
+            <div class="mt-2 justify-center w-full h-6 text-base sm:text-sm lg:h-12 text-white lg:text-3xl inline-flex overflow-hidden" >
+              <p class="m-0 text-gray-900 font-light" style="font-family: 'Roboto', sans-serif;">Encuentra los servicios ideales para el mantenimiento de tu hogar</p>                
+            </div>
+            <a href="http://127.0.0.1:8000/home#/">
+              <button
+                class="mt-20 inline-flex justify-center w-auto  border-solid border-2 rounded-full py-3 px-10 border-gray-800 lg:text-xl leading-6 font-medium text-white shadow-sm  bg-primary-800 hover:text-black hover:bg-white focus:outline-none focus:border-primary-300 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+                >COMENZAR
+              </button>
+            </a>
+          </div>
+        </div>        
+      </div>
+    </section>
+    <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C239.50,136.48 338.82,-29.30 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+  </header>
 
-                        <div class="mt-2 justify-center w-full h-6 text-base sm:text-sm lg:h-12 text-white lg:text-3xl inline-flex overflow-hidden" >
-                            <p class="m-0 text-gray-900 font-light" style="font-family: 'Roboto', sans-serif;">Encuentra los servicios ideales para el mantenimiento de tu hogar</p>
-                            
-                        </div>
-                        <a href="http://127.0.0.1:8000/home#/">
-                          <button
-                              class="mt-20 inline-flex justify-center w-auto  border-solid border-2 rounded-full py-3 px-10 border-gray-800 lg:text-xl leading-6 font-medium text-white shadow-sm  bg-primary-800 hover:text-black hover:bg-white focus:outline-none focus:border-primary-300 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5"
-                              >COMENZAR
-                          </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-<!--Nosotros-->
-        <section>
-            <div class="flex justify-center items-center bg-gray-200">
-                <h2 class="subtitulo pb-0 pt-20 text-center text-3xl font-semibold lg:text-4xl" style="font-family: 'Domine', serif;"  >Nosotros</h2>
-            </div>
-            <div class="p-8 lg:p-10 md:p-10 bg-gray-200 ">
-                <div class="grid grid-row-2 max-h-full bg-gray-200 rounded-lg p-4 ">
-                    <div class=" w-full bg-gray-200">
-                        
-                        <div class="flex justify-center items-center ">
-                            <p class="text-base font-light flex flex-wrap content-center lg:py-10 md:py-10 md:text-lg lg:text-lg text-center">Somos una empresa que considera al cliente como el eje de sus operaciones brindándole servicios de calidad al precio justo.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="">
-                        <center>
-                            <img class=" md:flex md:w-50 lg:w-50 content-center"  width="600px" src="images/business.png"  alt="nosotros-sirwiyquy">
-                        </center>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-    <!--Objetivos-->
-        <section>
-            <div class="flex justify-center items-center bg-gray-200">
-                <h2 class="subtitulo pb-0 pt-20 text-center text-3xl font-semibold lg:text-4xl" style="font-family: 'Domine', serif;"  >Objetivos</h2>
-            </div>
-            <div class="flex justify-center items-center lg:p-10 md:p-10 bg-gray-200 ">
-                <div class="grid grid-cols-1 lg:grid-cols-3 max-h-full bg-gray-200 rounded-lg p-4 mx-4 ">
-                    <div class=" w-full bg-gray-200 py-4 md:mx-2">
-                        
-                        <div class="flex justify-center items-center ">
-                            <p class="text-base font-light flex flex-wrap content-center py-4 lg:py-10 md:py-10 md:text-lg lg:text-lg text-center">Acercar a clientes y proveedores
-                            </p>
-                        </div>
+  <main>
+    <section class="contenedores sobre-nosotros">
+      <h2 class="titulos">Nosotros</h2>
+      <div class="contenedor-sobre-nosotros">
+        <img src="images/business.png" alt="nosotros-sirwiyquy" class="imagen-about-us">
+        <div class="contenido-textos">
+          <p>Somos una empresa que considera al cliente como el eje de sus operaciones brindándole servicios de calidad al precio justo.</p>
+          <h3><span>1</span>Interacción entre clientes y proveedores</h3>
+          <p>Brindamos facilidades para que nuestros clientes y proveedores puedan interactuar con nuestro sistema de manera didáctica.</p>
+          <h3><span>2</span>Brindar los mejores servicios cerca de ti</h3>
+          <p>Contamos con un sistema que permite buscar servicios que existen alrededor de donde te encuentres.</p>
+          <h3><span>3</span>Plataforma sencilla y amigable</h3>
+          <p>Permite un fácil y entendible uso de nuestros servicios.</p>        
+        </div>
+      </div>
+    </section>
 
-                        <center>
-                            <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/transaction.png"  alt="nosotros-sirwiyquy">
-                        </center>
-                    </div>
-                    <div class=" w-full bg-gray-200 py-4 md:mx-2">
-                        
-                        <div class="flex justify-center items-center ">
-                            <p class="text-base font-light flex flex-wrap content-center py-4 lg:py-10 md:py-10 md:text-lg lg:text-lg text-center">Brindar los mejores servicios cerca de ti
-                            </p>
-                        </div>
-
-                        <center>
-                            <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center"  width="300px" src="images/cart.png"  alt="nosotros-sirwiyquy">
-                        </center>
-                    </div>
-                    <div class=" w-full bg-gray-200  py-4 md:mx-2">
-                        
-                        <div class="flex justify-center items-center ">
-                            <p class="text-base font-light flex flex-wrap content-center py-4 lg:py-10 md:py-10 md:text-lg lg:text-lg text-center">Plataforma sencilla y amigable
-                            </p>
-                        </div>
-
-                        <center>
-                            <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center"  width="300px" src="images/finance.png"  alt="nosotros-sirwiyquy">
-                        </center>
-                    </div>
-                </div>
+    <section class="portafolio">
+      <div class="contenedores">
+        <h2 class="titulos">Nuestros Servicios</h2>
+        <div class="galeria-port">
+          <div class="imagen-port">
+            <img src="images/carpinteria.jpg" alt="">
+            <div class="hover-galeria">
+              <img src="images/icono1.png" alt="">
+              <p>CARPINTERIA</p>
             </div>
-        </section>
+          </div>
+          <div class="imagen-port">
+            <img src="images/cerrajeria.jpg" alt="">
+            <div class="hover-galeria">
+              <img src="images/icono1.png" alt="">
+              <p>CERRAJERIA</p>
+            </div>
+          </div>
+          <div class="imagen-port">
+            <img src="images/electricidad.png" alt="">
+            <div class="hover-galeria">
+              <img src="images/icono1.png" alt="">
+              <p>ELECTRICIDAD</p>
+            </div>
+          </div>
+          <div class="imagen-port">
+            <img src="images/gasfiteria.jpg" alt="">
+            <div class="hover-galeria">
+              <img src="images/icono1.png" alt="">
+              <p>GASFITERIA</p>
+            </div>
+          </div>
+          <div class="imagen-port">
+            <img src="images/vidrieria.jpg" alt="">
+            <div class="hover-galeria">
+              <img src="images/icono1.png" alt="">
+              <p>VIDRIERIA</p>
+            </div>
+          </div>
+          <div class="imagen-port">
+            <img src="images/jardineria.jpg" alt="">
+            <div class="hover-galeria">
+              <img src="images/icono1.png" alt="">
+              <p>JARDINERIA</p>
+            </div>
+          </div>
+          <div class="imagen-port">
+            <img src="images/fumigacion.jpg" alt="">
+            <div class="hover-galeria">
+              <img src="images/icono1.png" alt="">
+              <p>FUMIGACIÓN</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mt-10 lg:pb-10 md:pb-10">
+          <a href="http://127.0.0.1:8000/home#/" class="mt-0 mb-2 inline-flex items-center py-3 px-10  lg:text-xl leading-5 font-medium text-primary-500 shadow-sm  hover:underline hover:text-black sm:text-sm " >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+              VER SERVICIOS
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!--Servicios-->
-        <section>
-            <div class="flex justify-center items-center bg-gray-200">
-                <h2 class="subtitulo pb-0 pt-20 text-center text-3xl font-semibold lg:text-4xl" style="font-family: 'Domine', serif;"  >Servicios</h2>
-            </div>
-            <div class="flex justify-center items-center lg:p-10 md:p-10 bg-gray-200 ">
-                <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 max-h-full bg-gray-200 rounded-lg p-4 mx-4 ">
-                    <div class="card w-auto bg-gray-200 my-4 pb-2 md:mx-2 ">
-                        <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/carpinteria.jpg"  alt="carpinteria">
-                        <div class="info text-center">
-                            <h2>Carpinteria</h2>
-                        </div>
-                    </div>
-                    <div class="card w-auto bg-gray-200 my-4 pb-2 md:mx-2">
-                        <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/cerrajeria.jpg"  alt="cerrajeria">
-                        <div class="info text-center">
-                            <h2>Cerrajeria</h2>
-                        </div>
-                    </div>
-                    <div class="card w-auto bg-gray-200 my-4 pb-2 md:mx-2">
-                        <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/electricidad.png"  alt="electricidad">
-                        <div class="info text-center">
-                            <h2>Electricidad</h2>
-                        </div>
-                    </div>
-                    <div class="card w-auto bg-gray-200 my-4 pb-2 md:mx-2">
-                        <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/gasfiteria.jpg"  alt="gasfiteria">
-                        <div class="info text-center">
-                            <h2>Gasfiteria</h2>
-                        </div>
-                    </div>
-                    <div class="card w-auto bg-gray-200 my-4 pb-2 md:mx-2">
-                        <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/vidrieria.jpg"  alt="gasfiteria">
-                        <div class="info text-center">
-                            <h2>Vidrieria</h2>
-                        </div>
-                    </div>
-                    <div class="card w-auto bg-gray-200 my-4 pb-2 md:mx-2">
-                        <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/jardineria.jpg"  alt="gasfiteria">
-                        <div class="info text-center">
-                            <h2>Jardineria</h2>
-                        </div>
-                    </div>
-                    <div class="card lg:col-start-2 lg:col-end-3 w-auto bg-gray-200 my-4 pb-2 md:mx-2">
-                        <img class=" md:flex md:w-50 lg:w-50 bg-auto content-center "  width="300px" src="images/fumigacion.jpg"  alt="gasfiteria">
-                        <div class="info text-center">
-                            <h2>Fumigación</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center lg:pb-10 md:pb-10 bg-gray-200">
-                <a href="http://127.0.0.1:8000/home#/" class="mt-0 mb-2 inline-flex items-center py-3 px-10  lg:text-xl leading-5 font-medium text-primary-500 shadow-sm  hover:underline hover:text-black sm:text-sm " >
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                    VER SERVICIOS
-                </a>
-            </div>
-        </section>
+   
 
-        <!--Footer-->
-        <footer class="inset-x-0 bottom-0 bg-primary-500 text-white pt-6 pb-4 px-4">
+  <!--Footer-->
+  <footer class="inset-x-0 bottom-0 bg-primary-500 text-white pt-6 pb-4 px-4">
     <div class="mx-auto md:px-2 container overflow-hidden flex flex-col md:flex-row justify-between">
       <!--Logotipo-->
       <a href="/" class="md:mt-8 lg:mt-1 lg:ml-1 md:ml-4 block mr-4 w-full lg:w-1/3">
@@ -415,7 +373,7 @@
         </div>
     </footer> 
     
-    <script src="{{ asset('js/custom_app.js') }}"></script>
+    <script src="{{ asset('js/preLoadLanding.js') }}"></script>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
   </body>
 </html>

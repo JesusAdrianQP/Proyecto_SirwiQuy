@@ -1,20 +1,21 @@
 <template>
-  <div class="text-center pt-4">
+  <div class="px-6">
     
-    <div class="sm:hidden px-2 py-1">
+    <div class="sm:hidden pb-2">
       <select
-        @click="Modal"
+        @click="controlOption()"
         v-model="select"
         class="form-select block w-full pl-3 pr-10 py-2 text-base leading-6 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
       >
-        <option value="all" selected>Ordenar por</option>
-        <option value="calificationOpen">Los mejores evaluados</option>
-        <option value="priceOpen">Precios</option>
+        <option value='all' selected>Ordenar por</option>
+        <option v-if="isCustomer" value='favoriteOpen'>Mis favoritos</option>
+        <option value='calificationOpen'>Los mejores evaluados</option>
+        <option value='priceOpen'>Precios</option>
       </select>
     </div>
 
     <!--Sección de las categorías - versión app-->
-    <div class="sm:hidden px-2 py-1">
+    <div class="sm:hidden">
       <select aria-label="Selected tab" class="form-select block w-full" v-model="chosenCategory" @change="onCategorySelected()">
         <option value="all" selected>Todos</option>
         <option value="Gasfitero">Gasfitero</option>
@@ -32,13 +33,14 @@
       <nav class="flex justify-center">
         <div>
           <select
-            @click="Modal"
+            @click="controlOption()"
             v-model="select"
             class="form-select block w-full pl-3 pr-10 py-2 text-base leading-6 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
           >
-            <option value="all" selected>Ordenar por</option>
-            <option value="calificationOpen">Los mejores evaluados</option>
-            <option value="priceOpen">Precios</option>
+            <option value='all' selected>Ordenar por</option>
+            <option v-if="isCustomer" value='favoriteOpen'>Mis favoritos</option>
+            <option value='calificationOpen'>Los mejores evaluados</option>
+            <option value='priceOpen'>Precios</option>
           </select>
         </div>
 
@@ -89,30 +91,21 @@
     </div>
 
     <!--Modal de filtro por precio-->
-    <div
-        v-show="priceOpen"
-        class="fixed inset-x-0 z-50 px-4 pb-6 inset-0 p-0 flex items-center justify-center"
-    >
-      <div @click="priceOpen = false; select = 'all'; 
-            hasError = false; error_pmax = '' ;
-            vacio_pmax = ''; vacio_pmin = ''; pmin=''; pmax=''"
-            class="fixed inset-0 transition-opacity">
+    <div v-show="priceOpen" class="fixed inset-x-0 px-4 pb-6 inset-0 p-0 flex items-center justify-center">
+      <div @click="priceOpen = false; select = 'all'; error_pmin= ''; error_pmax = ''; vacio_pmax = ''; vacio_pmin = ''; pmin=''; pmax=''"
+      class="fixed inset-0 transition-opacity">
         <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
       </div>
     
       <div
-        class="fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full sm:p-6"
+        class="w-68 fixed bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-xl sm:w-full sm:p-6"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-headline"
       >
         <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
-          <button
-            @click="priceOpen = false; select = 'all'; 
-            hasError = false; error_pmax = '' ;
-            vacio_pmax = ''; vacio_pmin = '';  pmin=''; pmax=''"
-            type="button"
-            class="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150"
+          <button @click="priceOpen = false; select = 'all'; error_pmin= ''; error_pmax = '' ; vacio_pmax = ''; vacio_pmin = '';  pmin=''; pmax=''"
+            type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150"
             aria-label="Close"
           >
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -126,69 +119,59 @@
           </button>  
         </div>
           
-        <div class="sm:flex sm:items-start justify-center">
-          <h2
-            class="text-lg leading-6 font-medium text-gray-900 "
-            id="modal-headline"
-          >Rango de precio</h2>
+        <div class="sm:flex sm:items-start">
+          <h2 class="text-lg leading-6 font-medium text-gray-900 " id="modal-headline">Rango de precio</h2>
         </div>
         
-        <div class="mt-4">
-          <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 flex flex-wrap ">
-            <div class="mt-1 rounded-md w-full md:w-2/5">
-              <div class="shadow-sm">
+        <div class="mt-3">
+          <div class="grid grid-cols-4 sm:gap-8 col-span-4 -my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+            <div class="col-span-4 sm:col-span-2 mt-1 rounded-md w-full">
+              <div>
+                <label for="input_pmin" class="block text-sm font-medium leading-5 text-gray-700">Precio mínimo:</label>
                 <input
-                  id="input_pmin"
-                  v-model="pmin"
-                  min="0"
-                  placeholder="Ingrese su precio mínimo"
-                  type="number"
-                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                />
+                    id="input_pmin"
+                    v-model="pmin"
+                    min="0"
+                    placeholder="Ingrese su precio mínimo"
+                    type="text"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    pattern="[0-9]*"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
               </div>
-              <small v-if="vacio_pmin" class="text-yellow-600">{{
-                  vacio_pmin
-              }}</small>
-            </div>
-
-            <div class="w-full py-3 md:w-1/5 justify-center all:justify-center text-center">
-              <h3 >a</h3>
+              <small v-if="error_pmin" class="text-red-600"> {{error_pmin}} </small>
+              <small v-if="vacio_pmin" class="text-yellow-600"> {{vacio_pmin}} </small>
             </div>
         
-            <div class="mt-1 rounded-md w-full md:w-2/5">
-              <div class="shadow-sm">
+            <div class="col-span-4 sm:col-span-2 mt-3 md:mt-1 rounded-md w-full">
+              <div>
+                <label for="input_pmax" class="block text-sm font-medium leading-5 text-gray-700">Precio máximo:</label>
                 <input
-                  id="input_pmax"
-                  v-model="pmax"
-                  min="0"
-                  placeholder="Ingrese su precio máximo"
-                  type="number"
-                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                />
+                    id="input_pmax"
+                    v-model="pmax"
+                    min="0"
+                    placeholder="Ingrese su precio máximo"
+                    type="text"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    pattern="[0-9]*"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
               </div>
-              <small v-if="vacio_pmax" class="text-yellow-600">{{
-                  vacio_pmax
-              }}</small>
+              <small v-if="error_pmax" class="text-red-600"> {{error_pmax}} </small>
+              <small v-if="vacio_pmax" class="text-yellow-600">{{vacio_pmax}}</small>
             </div>           
           </div> 
         </div>
         
-        <div class="justify-center mt-6 ">
-          
+        <div class="text-center mt-6 ">
           <button 
-            @click="onPriceSelected"
+            @click="onPriceSelected()"
             type="submit"
             class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
-          >Buscar</button>
-         
-          
-          <button @click="priceOpen=false" 
-              type="button"
-            class="inline-flex justify-center border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium rounded-md text-gray-700  hover:text-gray-500 focus:outline-none  focus:border-blue-300 focus:shadow-outline-primary active:bg-teal-700 transition duration-150 ease-in-out"
-              
-          >Cancelar</button>
-          
-      </div>
+          >Buscar</button>          
+        </div>
 
       </div>
     </div>
@@ -198,32 +181,95 @@
 
 <script>
 export default {
-  data: () => {
+  data: () => 
+  {
     return {
+      token: localStorage.getItem('token'),
+      level: localStorage.getItem('e_level'),
       chosenCategory: 'all',
       chosenCalification: 'all',
       priceOpen: false,
-      hasError: false,
+      isCustomer: false,
+
       pmin: '',
       pmax: '',
-
+      
+      error_pmin: '',
+      error_pmax: '',
       vacio_pmin: '',
       vacio_pmax: '',
 
-      value: false,
       select: 'all'
     }
   },
-  methods: {
-    onCategorySelected() {
+  async created() 
+  {
+    if((this.token == null) && (this.level == null)) { this.isCustomer = false; return; }
+    else { this.isCustomer = true; }
+  },
+  methods:
+  {
+    onCategorySelected() 
+    {
       this.$emit('onCategorySelected', {
         category: this.chosenCategory
       });
     },
-    onPriceSelected(){
-      this.validateSubmit();
-      if (this.hasError) return;
+    onPriceSelected()
+    {
+      if(parseInt(this.pmin) > parseInt(this.pmax))
+      { 
+        this.vacio_pmin = '';
+        this.vacio_pmax = '';
+        this.error_pmax = '';
+        this.error_pmin = 'Precio mínimo mayor al precio máximo';
+        return;
+      }
+      else if(parseInt(this.pmin) == parseInt(this.pmax))
+      {
+        this.vacio_pmin = '';
+        this.vacio_pmax = '';
+        this.error_pmax = 'Precios iguales';
+        this.error_pmin = 'Precios iguales';
+        return;
+      }
+      else
+      {
+        this.vacio_pmin = '';
+        this.vacio_pmax = '';
+        this.error_pmax = '';
+        this.error_pmin = '';
+      }
 
+      var boolean = false;
+      if((this.pmin == '' && this.error_pmin == '') || (this.pmin == '' && this.error_pmin != ''))
+      {
+        this.vacio_pmin = 'Campo necesario';
+        this.error_pmin = '';
+        boolean = true;
+      }
+      else if(this.pmin != '' && this.error_pmin != ''){ this.vacio_pmin = ''; boolean = true; }
+      else if(this.pmin != '' && this.error_pmin == '')
+      {
+        this.vacio_pmin = '';
+        this.error_pmin = '';
+      }
+
+      if((this.pmax == '' && this.error_pmax == '') || (this.pmax == '' && this.error_pmax != ''))
+      {
+        this.vacio_pmax = 'Campo necesario';
+        this.error_pmax = '';
+        boolean = true;
+      }
+      else if(this.pmax != '' && this.error_pmax != ''){ this.vacio_pmax = ''; boolean = true; }
+      else if(this.pmax != '' && this.error_pmax == '')
+      {
+        this.vacio_pmax = '';
+        this.error_pmax = '';
+      }
+
+      if(boolean) return;
+      
       this.$emit('onPriceSelected', {
         pmin: this.pmin,
         pmax: this.pmax
@@ -231,40 +277,35 @@ export default {
 
       this.select = 'all'; 
       this.priceOpen = false;
-      this.hasError = false; 
+      this.error_pmax = '';
+      this.error_pmin = '';
       this.vacio_pmax = ''; 
       this.vacio_pmin = '';  
       this.pmin=''; 
       this.pmax=''
     },
-    onCalificationSelected(){
-      this.value = true;
-
+    onCalificationSelected()
+    {
+      var bandera = true;
       this.$emit('onCalificationSelected', {
-        value: this.value
+        value: bandera
       })
-
-      this.value = false;
     },
-    async Modal(){
+    onFavoriteSelected()
+    {
+      // this.value = true;
+
+      // this.$emit('onCalificationSelected', {
+      //   value: this.value
+      // })
+
+      // this.value = false;
+    },
+    controlOption()
+    {
       if(this.select == 'priceOpen') this.priceOpen = true;
-        else if(this.select == 'calificationOpen') this.onCalificationSelected();
-    },
-    validateSubmit() {
-      this.hasError = false;
-
-      //Validacion de error para el precio minimo
-      if(this.pmin == ''){
-        this.hasError = true;
-        this.vacio_pmin = "Campo Necesario";
-      }
-      else this.vacio_pmin = "";
-
-      if(this.pmax == ''){
-        this.hasError = true;
-        this.vacio_pmax = "Campo Necesario";
-      }
-      else this.vacio_pmax = "";
+      else if(this.select == 'calificationOpen') this.onCalificationSelected();
+      else if(this.select == 'favoriteOpen') this.onFavoriteSelected();
     }
   }
 };

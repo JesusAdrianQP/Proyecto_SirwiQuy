@@ -8,11 +8,14 @@
           class="flex-1 appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-3 leading-tight focus:outline-none"
           v-model="search"
           placeholder="¿Qué Buscas?"
+          type="text"
+          onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 241)"
           autofocus="autofocus"
           aria-label
           @change="searchService()"
         />
       </div>
+      
       <div class="sm:flex flex-1 sm:border-l-2 border-primary-500 sm:pl-3 mt-2 sm:mt-0">
         <!--label for="email" class='block text-xl font-medium leading-5 text-gray-700 py-1'>Dónde?</label-->
         <select
@@ -57,20 +60,24 @@
 import api from "../api";
 
 export default {
-  data: () => {
+  data: () => 
+  {
     return {
       district: 'all',
       districts: [],
       search: '',
     }
   },
-  async mounted(){
+  async mounted()
+  {
     let response = await api.post(`/dist`, {id: '1501'})
     this.districts = response.data.data.districts;
   },
-  methods: {
+  methods: 
+  {
     //Busco segun los filtros correspondientes 
-    searchService() {
+    searchService() 
+    {
       this.$emit('searchService', {
         search: this.search,
         district: this.district,

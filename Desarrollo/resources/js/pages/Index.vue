@@ -4,14 +4,15 @@
   -->
   <Visitor>
     <main>
-      <div class="max-w-5xl mx-auto py-4 px-4 sm:px-6 lg:px-10 rounded-b-lg">
-        <SearchBar 
-        @searchService="filterBySearch"/>
+      
+      <div class="max-w-6xl mx-auto pt-10 pb-8 px-6 lg:px-10 rounded-b-lg">
+        <SearchBar @searchService="filterBySearch"/>
       </div>
+
       <div class="max-w-7xl mx-auto">
         <CategorySelector @onCategorySelected="filterByCategory"
-        @onPriceSelected="filterByPrice" 
-        @onCalificationSelected="orderByCalification"/>
+                          @onPriceSelected="filterByPrice" 
+                          @onCalificationSelected="orderByCalification"/>
         <ServiceList
         :prices="prices"
         :value="value"
@@ -30,20 +31,18 @@ import ServiceList from '../containers/ServiceList.vue'
 import Visitor from './Layouts/Visitor.vue'
 import CategorySelector from "../components/CategorySelector.vue";
 
-import api from "../api";
-
 export default {
   name: "IndexPage",
-  components: {
+  components: 
+  {
     SearchBar,
     ServiceList,
     CategorySelector,
     Visitor
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      username: '',
-      file: ' ',
       title: '',
       district: '',
       category: 'all',
@@ -54,19 +53,24 @@ export default {
       value: null
     }
   },
-  methods: {
-    filterBySearch(obj) {
+  methods: 
+  {
+    filterBySearch(obj) 
+    {
       this.title = obj.search;
       this.district = obj.district;
     },
-     filterByCategory(obj){
+    filterByCategory(obj)
+    {
       this.category=obj.category;
     },
-    filterByPrice(obj){
+    filterByPrice(obj)
+    {
       this.prices.pmin = obj.pmin;
       this.prices.pmax = obj.pmax;
     },
-    orderByCalification(obj){
+    orderByCalification(obj)
+    {
       this.value = obj.value;
     }
   }
