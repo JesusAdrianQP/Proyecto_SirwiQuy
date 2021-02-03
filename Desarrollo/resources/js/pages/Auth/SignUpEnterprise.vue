@@ -1061,7 +1061,7 @@ export default {
         this.error_repeat_password = '';
       }
 
-      if(boolean == true) { return; }
+      if(boolean) return;
       this.buttonLoading = true;
 
       //Se conecta con la lógica de negocio

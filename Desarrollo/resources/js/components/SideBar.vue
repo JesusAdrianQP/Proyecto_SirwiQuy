@@ -163,6 +163,7 @@
 <script>
 import SideBarOptions from './SideBarOptions'
 import Footer from "../containers/Footer";
+import perfilDefault from "../../assets/illustrations/user_icono.gif"
 import api from "../api";
 
 export default {
@@ -181,28 +182,29 @@ export default {
       isOpen: false,
       acceso: localStorage.getItem('e_level'),
       user: '',
-      image: ''
+      image: perfilDefault
     }
   },
   async created()
   {
-    if(localStorage.getItem('e_user')!=null)
+    if(localStorage.getItem('e_userS')!=null)
     {
-      this.user = localStorage.getItem('e_user');
-      if(localStorage.getItem('e_image')=='undefined') { return; }
-      this.image = localStorage.getItem('e_image');
+      this.user = localStorage.getItem('e_userS');
+      if(localStorage.getItem('e_imageS')=='undefined') { return; }
+      this.image = localStorage.getItem('e_imageS');
       return;
     }
 
     let response = await api.get(`/level=${this.acceso}/token=${localStorage.getItem('token')}`)
     let supplier = response.data.data;
    
-    localStorage.setItem('e_user', supplier.username);
-    localStorage.setItem('e_image', supplier.file);
+    localStorage.setItem('e_userS', supplier.username);
+    localStorage.setItem('e_imageS', supplier.file);
+    localStorage.setItem('e_id', supplier._id);
 
-    this.user = localStorage.getItem('e_user');
-    if(localStorage.getItem('e_image')=='undefined') { return; } 
-    this.image = localStorage.getItem('e_image');
+    this.user = localStorage.getItem('e_userS');
+    if(localStorage.getItem('e_imageS')=='undefined') { return; } 
+    this.image = localStorage.getItem('e_imageS');
   }
 }
 </script>

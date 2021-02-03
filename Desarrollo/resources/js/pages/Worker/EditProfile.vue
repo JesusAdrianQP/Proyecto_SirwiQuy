@@ -356,11 +356,9 @@ export default {
   {
     return {
       loading: false,
-      dni_validate: '',
       token: localStorage.getItem('token'),
       level: localStorage.getItem('e_level'),
-      supplierdata: [],
-user:'',image:'', id_provider:'',
+
       hasError: false,
       dni_valid: false,
       isType:"",
@@ -402,12 +400,9 @@ user:'',image:'', id_provider:'',
 
     let response = await api.get(`/level=${this.level}/token=${this.token}`)
     let supplier = response.data.data;
-        
-    this.id_provider = supplier._id;
-    this.dni_validate = supplier.DNI;
-    localStorage.setItem('e_id', this.id_provider);
+    let dni_validate = supplier.DNI;
     
-    if(this.dni_validate != undefined) { this.$router.push('/supplier'); return; }
+    if(dni_validate != undefined) { this.$router.push('/supplier'); return; }
 
     let response2 = await api.get(`/dep`)
     this.departments = response2.data.data.departments;

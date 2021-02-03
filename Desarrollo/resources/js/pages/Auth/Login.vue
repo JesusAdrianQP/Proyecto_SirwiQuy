@@ -397,7 +397,7 @@ export default {
         this.error_pass = "";
       }
 
-      if(boolean == true) { return; }
+      if(boolean) return;
       this.buttonLoading = true;
       
       //Conexión con la lógica de negocio

@@ -415,7 +415,7 @@ export default {
         this.error_repeat_password = "";
       }
 
-      if(boolean == true) { return; }
+      if(boolean) return;
       this.buttonLoading = true;
 
       let response = await api.post(`/changepass`, {
