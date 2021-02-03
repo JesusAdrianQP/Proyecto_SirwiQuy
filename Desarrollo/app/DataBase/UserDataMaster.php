@@ -9,8 +9,10 @@ use App\DataBase\UsersData\CustomerData;
 use App\DataBase\UsersData\EnterpriseData;
 use App\Http\Controllers\MailController;
 
-class UserDataMaster{
-    public static function into_sesion($user){
+class UserDataMaster
+{
+    public static function into_sesion($user)
+    {
         //Se crea el objeto a usar - se emplea Factory Method
         //Lo que devuelve es una clase EmployeeData() - CustomerData() - EnterpriseData()
         $user_valid = UserFactory::make($user->identity);
@@ -39,13 +41,15 @@ class UserDataMaster{
         }
     }
 
-    public static function openManager($user){
+    public static function openManager($user)
+    {
         //Lógica de la clase administrador
         //Solo requiere de user y pass propiamente definido
         //Admi - Admi
     }
 
-    public static function create_sesion($user){
+    public static function create_sesion($user)
+    {
         $user_new = UserFactory::make($user->identity);
         
         if($user_new::validationusername($user->username)) return response()->json(['errors' => ['username' => ['Este usuario ya esta en uso']]], 422);
@@ -63,7 +67,17 @@ class UserDataMaster{
                 }
     }
 
-    public static function getCodigo($longitud){
+    public static function update_users($user)
+    {
+        $level = UserDataMaster::getIdentity($user->level);
+
+        $user_update = UserFactory::make($level);
+
+        return $user_update::update($user);
+    }
+
+    public static function getCodigo($longitud)
+    {
         $key = '';
         $pattern = '1234567890abcdefghijklmnopqrstuvwxyz';
         $max = strlen($pattern)-1;
@@ -72,7 +86,8 @@ class UserDataMaster{
         return $key;
     }
 
-    public static function validate($user){
+    public static function validate($user)
+    {
         $level = UserDataMaster::getIdentity($user->level);
 
         $user_valid = UserFactory::make($level);
@@ -84,7 +99,8 @@ class UserDataMaster{
         else return response()->json(['errors' => ['false' => ['Error fatal']]], 422);
     }
 
-    public static function getIdentity($id){
+    public static function getIdentity($id)
+    {
         switch($id)
         {
             case "customer":
@@ -108,26 +124,51 @@ class UserDataMaster{
         return $identifier;
     }
 
-    public static function closesesion($id){
+    public static function details($user)
+    {
+        $details = UserFactory::make($user->ide);
+
+        return $details::getUser(3, $user->id_provider);
+    }
+
+    public static function closesesion($id)
+    {
         $level = UserDataMaster::getIdentity($id->level);
 
         $user_valid = UserFactory::make($level);
         $user_valid::updatetoken($id->token);
     }
 
-    public static function update_users($user){
-        $level = UserDataMaster::getIdentity($user->level);
+    public static function generatereset($user)
+    {
+        $user_reset = UserFactory::make($user->identity);
 
-        $user_update = UserFactory::make($level);
+        if($user_reset::validationemail($user->email))
+        {
+            $cod_reset = UserDataMaster::getCodigo(50);
+            $objUser = $user_reset::updateRecover($user->email, $cod_reset);
+            
+            $reseteo = new MailController;
+            $reseteo->reset($objUser, $user->identity);
 
-        return $user_update::update($user);
+            return response()->json([
+                'success' => ['Enlace enviado a su correo']
+            ], 200);
+        }
+        else return response()->json(['errors' => ['mail' => ['Correo inexistente']]], 422);
     }
 
-    public static function details($user)
+    public static function link_reset($link)
     {
-        //Se crea el objeto a usar
-        $details = UserFactory::make($user->ide);
+       $userReset = UserFactory::make($link->identifier);
+    
+       if($userReset::validationlink($link->code)) return 1;
+       else return 0;
+    }
 
-        return $details::getUser(3, $user->id_provider);
+    public static function change_pass($user)
+    {
+        $pass = UserFactory::make($user->identity);    
+        return $pass::updatepass($user);  
     }
 }

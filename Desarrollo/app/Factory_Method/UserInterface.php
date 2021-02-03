@@ -18,7 +18,7 @@ interface UserInterface
 
     public static function register($parameter);
 
-    public static function updatetoken($parameter);
-
-    public static function update($parameter);
+    public static function updateRecover($parameter, $par2); 
+    
+    public static function validationlink($parameter): Bool;
 }
