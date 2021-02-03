@@ -37,7 +37,6 @@ import UpdateData from "./pages/Customer/UpdateData.vue";
 
 
 //Importaciones de la carpeta empresa
-import ListWorker from "./pages/Enterprise/ListWorker.vue";
 import WorkerRegistrations from "./pages/Enterprise/WorkerRegistrations.vue";
 
 
@@ -258,11 +257,6 @@ export default new VueRouter({
         {
             path: '/enterpise/worker/registrations',
             component: WorkerRegistrations,  
-            beforeEnter: isEnterprise
-        },
-        {
-            path: '/enterpise/list/worker',
-            component: ListWorker,  
             beforeEnter: isEnterprise
         },
         {

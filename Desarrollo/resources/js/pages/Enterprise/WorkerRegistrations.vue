@@ -9,7 +9,7 @@
                         <div class="inline-flex border rounded w-7/12 px-2 lg:px-6 h-10 bg-transparent sm:mx-3 sm:my-3">
                             <div class="flex flex-wrap items-stretch w-full h-full mb-6 relative ">
                                 
-                                <input type="text" class=" flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px flex-1 border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs lg:text-base text-gray-500 font-thin" placeholder="Search">
+                                <input type="text" class=" flex-shrink flex-grow  leading-normal tracking-wide w-px flex-1 border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs lg:text-base text-gray-500 font-thin" placeholder="Search">
                             </div>
                         </div>
                     
@@ -57,7 +57,7 @@
                                 </thead>
                                 <tbody>
                                     
-                                    <tr v-for="(worker, index) in workers" :key="worker.index">
+                                    <tr v-for="worker in workers" :key="worker.index">
                                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                             <div class="flex items-center">
                                                 <div class="ml-3">
@@ -201,7 +201,7 @@
                             </div>
 
                         </div>
-                        <div class="mt-4">
+                        <!-- <div class="mt-4">
                             <h1>Sube una foto de perfil: </h1>
                         </div>
                         <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
@@ -224,7 +224,7 @@
                             <h1>Ningún archivo seleccionado</h1>
                             </div>
 
-                        </div>
+                        </div> -->
 
 
                         <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -330,7 +330,7 @@
                             </div>
 
                         </div>
-                        <div class="mt-4">
+                        <!-- <div class="mt-4">
                             <h1>Sube una foto de perfil: </h1>
                         </div>
                         <div class="mt-4 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
@@ -353,7 +353,7 @@
                             <h1>Ningún archivo seleccionado</h1>
                             </div>
 
-                        </div>
+                        </div> -->
 
 
                         <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">

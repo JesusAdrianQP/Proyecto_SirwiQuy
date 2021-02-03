@@ -368,7 +368,7 @@ export default {
         // this.data;
         // this.paidFor = true;
         // this.loading = false;
-        // this.UpdateStatus();
+        this.UpdateStatus();
         /**Funcion que recupera datos - Posible reporte de transaccion */
       },
       onError: err => {
@@ -379,44 +379,44 @@ export default {
   },
   methods:{
     async UpdateStatus(){
-      let response = await api.post(`/updatestatus`, {
-        typeNot: 'response',
-        id: this.response_id,
-        status: 'Pendiente',
-        email1: this.emailProv,
-        email2: this.emailCusto,
-        pay: this.paymentTotal
-      })
+    //   let response = await api.post(`/updatestatus`, {
+    //     typeNot: 'response',
+    //     id: this.response_id,
+    //     status: 'Pendiente',
+    //     email1: this.emailProv,
+    //     email2: this.emailCusto,
+    //     pay: this.paymentTotal
+    //   })
 
-      if (!response.ok) {
-        this.buttonLoading = false;
+    //   if (!response.ok) {
+    //     this.buttonLoading = false;
 
-        let er = response.error.errors;
-        let mensaje = "Error desconocido";
+    //     let er = response.error.errors;
+    //     let mensaje = "Error desconocido";
 
-        if(er.hasOwnProperty('fail')){
-          mensaje = er.fail[0];
-        }
+    //     if(er.hasOwnProperty('fail')){
+    //       mensaje = er.fail[0];
+    //     }
 
-        return this.$toast.open({
-          message: mensaje,
-          type: "error",
-          duration: 8000,
-          dismissible: true
-        });
-      }
+    //     return this.$toast.open({
+    //       message: mensaje,
+    //       type: "error",
+    //       duration: 8000,
+    //       dismissible: true
+    //     });
+    //   }
 
-      this.$toast.open({
-        message: "Pago Exitoso - " + response.data.data.success[0],
-        type: "success",
-        duration: 8000,
-        dismissible: true
-      });
+    //   this.$toast.open({
+    //     message: "Pago Exitoso - " + response.data.data.success[0],
+    //     type: "success",
+    //     duration: 8000,
+    //     dismissible: true
+    //   });
 
-      localStorage.removeItem('e_response');
-      localStorage.removeItem('e_link');
+    //   localStorage.removeItem('e_response');
+    //   localStorage.removeItem('e_link');
       
-      this.$router.push("/");
+        this.$router.push("/supplier");
     }
   }
 };
