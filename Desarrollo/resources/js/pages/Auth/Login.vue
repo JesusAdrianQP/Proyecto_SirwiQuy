@@ -197,7 +197,7 @@
                       </div>
 
                       <div class="col-span-3 sm:col-span-2 mt-3 md:mt-1 rounded-md w-full">
-                        <div class="shadow-sm">
+                        <div>
                           <label
                           for="email_recover"
                           class="block text-sm font-medium leading-5 text-gray-700"
@@ -312,8 +312,8 @@ export default {
   {
     this.validateRouter(this.identity);
   },
-   watch: 
-   { 
+  watch: 
+  { 
     identity: function(newVal, oldVal) 
     {
       this.validateRouter(newVal);
@@ -365,22 +365,15 @@ export default {
     {
       const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email_recover);
       
-      if(this.email_recover == "")
-      { 
-        this.error_email2 = "";
-        this.vacio_email2 = "";
-        return;
-      }
+      this.error_email2 = '';
+      this.vacio_email2 = '';
 
-      if(correo(this.email_recover) == false)
+      if(this.email_recover == '') {return;}
+
+      if(!correo(this.email_recover))
       {
-        this.error_email2 = "Correo no válido";
-        this.vacio_email2 = "";
-      }
-      else
-      {
-        this.error_email2 = "";
-        this.vacio_email2 = "";
+        this.error_email2 = 'Correo no válido';
+        this.vacio_email2 = '';
       }
     },
     async submitLogin() 
@@ -404,7 +397,7 @@ export default {
         this.error_pass = "";
       }
 
-      if(boolean == true) { return; }
+      if(boolean) return;
       this.buttonLoading = true;
       
       //Conexión con la lógica de negocio
@@ -528,12 +521,10 @@ export default {
     },
     validatePassword() 
     {
-      if(this.password.length == 0)
-      {
-        this.error_pass = "";
-        this.vacio_pass = "";
-        return;
-      }
+      this.error_pass = "";
+      this.vacio_pass = "";
+      
+      if(this.password.length == 0){return;}
 
       if(this.password.length >= 8)
 			{	

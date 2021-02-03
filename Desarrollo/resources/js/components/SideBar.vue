@@ -163,6 +163,7 @@
 <script>
 import SideBarOptions from './SideBarOptions'
 import Footer from "../containers/Footer";
+import perfilDefault from "../../assets/illustrations/user_icono.gif"
 import api from "../api";
 
 export default {
@@ -171,29 +172,39 @@ export default {
     SideBarOptions,
     Footer,
   },
-  props: {
+  props: 
+  {
     title: String,
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      token: localStorage.getItem('token'),
-      acceso: localStorage.getItem('e_level'),
-
       isOpen: false,
+      acceso: localStorage.getItem('e_level'),
       user: '',
-      image: '',
-      id_provider: ''
+      image: perfilDefault
     }
   },
-  async created(){
-    let response = await api.get(`/level=${this.acceso}/token=${this.token}`)
+  async created()
+  {
+    if(localStorage.getItem('e_userS')!=null)
+    {
+      this.user = localStorage.getItem('e_userS');
+      if(localStorage.getItem('e_imageS')=='undefined') { return; }
+      this.image = localStorage.getItem('e_imageS');
+      return;
+    }
+
+    let response = await api.get(`/level=${this.acceso}/token=${localStorage.getItem('token')}`)
     let supplier = response.data.data;
+   
+    localStorage.setItem('e_userS', supplier.username);
+    localStorage.setItem('e_imageS', supplier.file);
+    localStorage.setItem('e_id', supplier._id);
 
-    this.user = supplier.username;
-    this.image = supplier.file;
-    this.id_provider = supplier._id;
-
-    localStorage.setItem('e_id', this.id_provider);
+    this.user = localStorage.getItem('e_userS');
+    if(localStorage.getItem('e_imageS')=='undefined') { return; } 
+    this.image = localStorage.getItem('e_imageS');
   }
 }
 </script>

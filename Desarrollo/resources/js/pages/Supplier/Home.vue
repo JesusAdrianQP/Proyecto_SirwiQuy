@@ -256,13 +256,13 @@ export default {
     let response = await api.get(`/level=${this.acceso}/token=${this.token}`)
     let supplier = response.data.data;
     
-    this.dni = localStorage.getItem('e_DNI');
+    this.dni = supplier.DNI;
     this.name = supplier.name;
     this.lastnamep = supplier.lastnamep;
     this.lastnamem = supplier.lastnamem;
+    this.image = supplier.file;
 
     if(this.acceso == 'employee'){
-      this.image = supplier.file;
       this.depa = supplier.departamento;
       this.prov = supplier.provincia;
       this.dist = supplier.distrito;

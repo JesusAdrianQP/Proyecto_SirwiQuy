@@ -13,8 +13,6 @@
 
       <div class="sm:mx-auto sm:w-full sm:max-w-md mt-4 mb-4 sm:mb-6 md:mb-8">
         <div class="bg-white pb-4 pt-6 shadow rounded-lg mx-3 px-1 sm:px-10">
-          <!-- Sección de ingreso de usuario.
-          Solicita un nombre de usuario y lo valida.-->
           <div class="grid grid-cols-1 col-gap-4 row-gap-5 mx-5 sm:mx-1">
             <div class="sm:col-span-2">
               <label for="username" class="block text-sm font-medium leading-5 text-gray-700">Usuario</label>
@@ -25,6 +23,7 @@
                   placeholder="Ingrese un nombre de usuario"
                   type="text"
                   required
+                  @change="validateUser()"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -39,18 +38,17 @@
                 }}
               </small>
             </div>
-            <!-- Fin de sección de ingreso de usuario. -->
-            <!-- Sección de ingreso de correo.
-            Solicita un correo electrónico y lo valida.-->
+            
             <div class="sm:col-span-2">
               <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
               <div class="mt-1 rounded-md shadow-sm">
                 <input
                   id="email"
                   v-model="email"
-                  placeholder="Ingrese un correo electronico"
-                  type="email"
+                  placeholder="Ingrese un correo"
+                  type="text"
                   required
+                  @change="validateEmail()"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -65,9 +63,7 @@
                 }}
               </small>
             </div>
-            <!-- Fin de sección de ingreso de correo. -->
-            <!-- Sección de ingreso de contraseña.
-            Solicita una contraseña y la valida.-->
+            
             <div class="sm:col-span-2">
               <label
                 for="password"
@@ -80,6 +76,7 @@
                   v-model="password"
                   type="password"
                   required
+                  @change="validatePassword()"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -94,8 +91,7 @@
                 }}
               </small>
             </div>
-            <!-- Fin de sección ingresar contraseña. -->
-            <!-- Solicita repetir la contraseña y la valida. -->
+           
             <div class="sm:col-span-2">
               <label
                 for="repeat_password"
@@ -108,6 +104,7 @@
                   placeholder="Verifique su contraseña"
                   type="password"
                   required
+                  @change="validateRepeatPassword()"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -121,8 +118,7 @@
                 vacio_repeat_pass
                 }}
               </small>
-            </div>
-            <!-- Fin de sección de ingreso de repet contraseña. -->
+            </div>            
           </div>
 
           <div class="mt-8">
@@ -143,8 +139,7 @@
               >Al registrarte estás aceptando los términos y condiciones de <i>SirwiyQuy</i></span>
             </div>
           </div>
-          <!-- Sección de logeo.
-          Te redirige a la vista de logeo "Login".-->
+         
           <div class="mt-6 mb-2 flex text-right justify-between mx-3">
             <div class="text-base leading-5">
               <span class="font-medium">¿Ya tienes cuenta?</span>
@@ -154,7 +149,6 @@
               >¡Inicia sesión!</router-link>
             </div>
           </div>
-          <!-- Fin de sección de logeo. -->
         </div>
       </div>
     </main>
@@ -169,13 +163,14 @@ import AnimatedButton from "../../components/AnimatedButton.vue";
 
 export default {
   name: "SignUpIndie",
-  components: {
+  components: 
+  {
     Visitor,
     AnimatedButton,
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      hasError: false,
       buttonLoading: false,
 
       routes: "",
@@ -197,19 +192,24 @@ export default {
       vacio_repeat_pass: "",
     };
   },
-  props: {
+  props: 
+  {
     identity: String, //Ruta de tipo de usuario traida en primer plano
   },
-  async created() {
+  async created() 
+  {
     this.validateRouter(this.identity);
   },
-  watch: { 
+  watch: 
+  { 
     identity: function(newVal, oldVal) {
       this.validateRouter(newVal);
     },
   },
-  methods: {
-    async validateRouter(id){
+  methods: 
+  {
+    validateRouter(id)
+    {
       //Se crea condicionales para verificar de donde proviene
       //Una vez cargado no se cambiara el valor hasta que se recarge o vaya a otra pestaña diferente
       switch(id)
@@ -229,9 +229,142 @@ export default {
         break;
       };
     },
-    async submitSignup() {
-      this.validateSubmit();
-      if (this.hasError) return;
+    validateUser()
+    {
+      this.error_username = '';
+      this.vacio_username = '';
+
+      if(this.username == '') {return;}
+      
+      if(this.username.includes('@') || this.username.includes('.')) 
+      {
+        this.vacio_username = '';
+        this.error_username = 'El usuario no debe de incluir @ ó .';
+        return;
+      }       
+    },
+    validateEmail()
+    {
+      const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email);
+      
+      this.error_email = '';
+      this.vacio_email = '';
+
+      if(this.email == '') {return;}
+
+      if(!correo(this.email))
+      {
+        this.error_email = 'Correo no válido';
+        this.vacio_email = '';
+      }
+    },
+    validatePassword()
+    {
+      this.error_password = '';
+      this.vacio_pass = '';
+      
+      if(this.password.length == 0){return;}
+
+      if(this.password.length >= 8)
+			{	
+        this.vacio_pass = "";	
+				var mayuscula = false;
+				var minuscula = false;
+				var numero = false;
+				
+				for(var i = 0; i<this.password.length; i++)
+				{
+					if(this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) { mayuscula = true; }
+					else if(this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) { minuscula = true; }
+					else if(this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) { numero = true; }
+        }
+        
+        if(mayuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra mayuscula"; return;}
+        if(minuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra minuscula"; return;}
+        if(numero == false) { this.error_password = "Su contraseña debe tener al menos un número"; return;}
+        
+        if(mayuscula == true && minuscula == true && numero == true) { this.error_password = "" }
+			}
+      else if(this.password.length < 8 && this.password.length > 0)
+      { 
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
+      }
+    },
+    validateRepeatPassword()
+    {
+      this.error_repeat_password = '';
+      this.vacio_repeat_pass = '';
+      
+      if(this.repeat_password.length == 0){return;}
+
+      if(this.repeat_password != this.password)
+      {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    async submitSignup() 
+    {
+      this.validateUser();
+      this.validateEmail();
+      this.validatePassword();
+      this.validateRepeatPassword();
+      var boolean = false;
+
+       if(this.username == '' && this.error_username == '' )
+      { 
+        this.vacio_username = 'Campo obligatorio';
+        this.error_username = '';
+        boolean = true;
+      }
+      else if(this.username != '' && this.error_username != '') { this.vacio_username = ''; boolean = true;}
+      else if(this.username != '' && this.error_username == '')
+      {
+        this.vacio_username = '';
+        this.error_username = '';
+      }
+
+      if(this.email == '' && this.error_email == '' )
+      { 
+        this.vacio_email = 'Campo obligatorio';
+        this.error_email = '';
+        boolean = true;
+      }
+      else if(this.email != '' && this.error_email != '') { this.vacio_email = ''; boolean = true;}
+      else if(this.email != '' && this.error_email == '')
+      {
+        this.vacio_email = '';
+        this.error_email = '';
+      }
+
+      if(this.password == '' && this.error_password == '')
+      { 
+        this.vacio_pass = 'Campo obligatorio';
+        this.error_password = '';
+        boolean = true;
+      }
+      else if(this.password != '' && this.error_password != '') { this.vacio_pass = ''; boolean = true;}
+      else if(this.password != '' && this.error_password == '')
+      {
+        this.vacio_pass = '';
+        this.error_password = '';
+      }
+
+      if(this.repeat_password == '' && this.error_repeat_password == '')
+      { 
+        this.vacio_repeat_pass = 'Campo obligatorio';
+        this.error_repeat_password = '';
+        boolean = true;
+      }
+      else if(this.repeat_password != '' && this.error_repeat_password != '') { this.vacio_repeat_pass = ''; boolean = true;}
+      else if(this.repeat_password != '' && this.error_repeat_password == '')
+      {
+        this.vacio_repeat_pass = '';
+        this.error_repeat_password = '';
+      }
+
+      if(boolean) return;
       this.buttonLoading = true;
 
       //Se conecta con la lógica de negocio
@@ -276,7 +409,7 @@ export default {
       //Si se envia correo con exito
       this.$toast.open({
         message: response.data.data.success2.original.success[0],
-        type: "info",
+        type: "success",
         duration: 10000,
         dismissible: true,
       });
@@ -284,70 +417,6 @@ export default {
       //Redireccionamiento de rutas
       if (this.identifier == "trabajador") this.$router.push("/login/employee");
       else this.$router.push("/login/customer");
-    },
-    validateSubmit() {
-      this.hasError = false;
-
-      //Validaciones del campo usuario
-      if (this.username == "") {
-        this.hasError = true;
-        this.vacio_username = "Campo necesario";
-        this.error_username = "";
-      } else if (this.username.includes("@") || this.username.includes(".")) {
-        this.hasError = true;
-        this.vacio_username = "";
-        this.error_username =
-          "Usuario no válido, el usuario no debe de incluir @ o .";
-      } else {
-        this.error_username = "";
-        this.vacio_username = "";
-      }
-
-      //Validaciones del campo Email
-      if (this.email == "") {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = "";
-      } else if (
-        !this.email.includes("@") ||
-        !this.email.includes(".") ||
-        this.email.length < 5
-      ) {
-        this.hasError = true;
-        this.vacio_email = "";
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = "";
-        this.vacio_email = "";
-      }
-
-      //Validaciones del campo password
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      }
-
-      //Validaciones del campo repeat password
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      }
     },
   },
 };
