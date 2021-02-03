@@ -10,6 +10,7 @@ import JoinUs from "./pages/JoinUs.vue";
 import SignUpIndie from "./pages/Auth/SignUpIndie.vue";
 import Login from "./pages/Auth/Login.vue";
 import SignUpEnterprise from "./pages/Auth/SignUpEnterprise.vue";
+import RecoverSession from './pages/Auth/RecoverSession.vue';
 
 //Importaciones de la carpeta Suppliers (proveedores trabajadores y empresas en comun)
 import Home from "./pages/Supplier/Home.vue";
@@ -21,6 +22,7 @@ import UpdateService from "./pages/Supplier/UpdateService.vue";
 import UpdatePrice from "./pages/Supplier/UpdatePrice.vue";
 import SuppliersBlank from "./pages/Supplier/Blank.vue";
 import Notifications from "./pages/Supplier/Notifications.vue";
+import SatisfactionReport from './pages/supplier/SatisfactionReport.vue';
 
 //Importaciones de la carpeta cliente
 import CustomerBlank from "./pages/Customer/Blank.vue";
@@ -30,6 +32,13 @@ import ServiceReport from "./pages/Customer/ServiceReport.vue";
 import ServiceForm from "./pages/Customer/ServiceForm.vue";
 import RateService from "./pages/Customer/RateService.vue";
 import Payment from "./pages/Customer/Payment.vue";
+import PaymentS from "./pages/Supplier/Payment.vue";
+import UpdateData from "./pages/Customer/UpdateData.vue";
+
+
+//Importaciones de la carpeta empresa
+import WorkerRegistrations from "./pages/Enterprise/WorkerRegistrations.vue";
+
 
 //Importaciones de la carpeta Workers (solo pertenecientes a trabajadores independientes)
 import EditProfile from "./pages/Worker/EditProfile.vue";
@@ -59,22 +68,12 @@ const isGuest = (to, from, next) => {
 
 //Verifica si son proveedores son los usuarios entrantes
 const isSupplier = (to, from, next) => {
-    if (
-        localStorage.getItem("e_level") == "employee"
-    ) {
-        if (
-            (localStorage.getItem("e_DNI") == undefined ||
-                localStorage.getItem("e_DNI") == "") &&
-            to.path != "/worker/profile/edit"
-        ) {
-            next("/worker/profile/edit");
-            return;
-            }
+    if (localStorage.getItem("e_level") == "employee") 
+    {
         next();
         return;
-    }else if(
-        localStorage.getItem("e_level") == "enterprise"
-    ){
+    }else if(localStorage.getItem("e_level") == "enterprise")
+    {
         next();
         return;
     }
@@ -98,6 +97,16 @@ const isCustomer = (to, from, next) => {
     }
     next("/login/customer");
 };
+
+//Verificador de usuario empresa
+const isEnterprise = (to, from, next) => {
+    if (localStorage.getItem("e_level") == "enterprise") {
+        next();
+        return;
+    }
+    next("/login/enterprise");
+};
+
 
 Vue.use(VueRouter);
 
@@ -148,6 +157,12 @@ export default new VueRouter({
             component: SignUpEnterprise,
             beforeEnter: isGuest
         },
+        {
+            path: '/recover/session/identity=:identity&cod=:code',
+            component: RecoverSession,
+            beforeEnter: isGuest,
+            props:true
+        },
         
         //Rutas del cliente logeado
         {
@@ -170,6 +185,12 @@ export default new VueRouter({
             component: Payment,
             props: true
         },
+        {
+            path: "/customer/update/data",
+            component: UpdateData,
+            beforeEnter: isCustomer
+        },
+        
 
         //Rutas de los proveedores
         {
@@ -220,12 +241,28 @@ export default new VueRouter({
             beforeEnter: isSupplier,
             props: true
         },
+        {
+            path: '/supplier/satisfaction/report',
+            component: SatisfactionReport,
+            beforeEnter: isSupplier,  
+        },
 
         //Ruta solo para trabajador
         {
             path: "/worker/profile/edit",
             component: EditProfile,
             beforeEnter: isWorker
+        },
+        //Ruta solo para empresa
+        {
+            path: '/enterpise/worker/registrations',
+            component: WorkerRegistrations,  
+            beforeEnter: isEnterprise
+        },
+        {
+            path: '/supplier/payment',
+            component: PaymentS,
+            beforeEnter: isSupplier
         },
 
         //Ruta no registrada

@@ -12,7 +12,7 @@
           <p class="px-5 text-sm">Esta cuenta sera creada para un usuario de tipo <b class="text-base2 italic">{{identifier}}</b></p>
       </div>
 
-      <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-2xl">
+      <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-2xll">
         <nav class="mx-3 sm:mx-6">
           <ul class="bg-white shadow rounded-md divide-y divide-gray-300 md:flex md:divide-y-0">
             <li @click="step=0" class="group cursor-pointer relative md:flex-1 md:flex">
@@ -105,19 +105,24 @@
           </ul>
         </nav>
 
-        <div class="pt-6 pb-4 mx-3 sm:mx-6 px-1 sm:px-10 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
+        <div class="pt-5 pb-4 mx-3 sm:mx-6 px-1 sm:px-8 mt-4 mb-4 bg-white shadow rounded-lg  sm:mb-6 md:mb-8">
           <div v-show="step==0">
-            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
-              <!-- Sección de ingreso de DNI.
-              Solicita el DNI y lo valida.-->
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-8 sm:grid-cols-4">
+              <!-- Sección de ingreso de RUC.
+              Solicita el RUC y lo valida.-->
               <div class="sm:col-span-2">
-                <label for="input_ruc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
+                <label for="rucDoc" class="block text-sm font-medium leading-5 text-gray-700">RUC</label>
                 <div class="mt-1 relative rounded-md shadow-sm">
                   <input
                     placeholder="Ingrese su RUC"
-                    id="input_ruc"
+                    type="text"
+                    id="rucDoc"
                     v-model="ruc"
-                    @change="validateRUC"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    maxlength="11"
+                    pattern="[0-9]*"
+                    @change="validateRUC()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                   <div
@@ -151,83 +156,105 @@
 
               <div class="sm:col-span-2">
                 <label
+                  for="cardnumber"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                >Cuenta interbancaria (CCI)</label>
+                <div class="mt-1 relative rounded-md shadow-sm">
+                  <input
+                    placeholder="Digite su N° de Cuenta"
+                    id="cardnumber"
+                    type="text"
+                    pattern="[0-9]*"
+                    maxlength="23"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    v-model="cardNumber"
+                    @change="validateCardNumber()"
+                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                  />
+                  <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <svg id="ccicon" class="ccicon h-8" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    </svg>
+                  </div>
+                </div>
+                <small v-if="vacio_cardNumber" class="text-yellow-600">
+                  {{
+                  vacio_cardNumber
+                  }}
+                </small>
+                 <small v-if="error_cardNumber" class="text-red-600">
+                  {{
+                  error_cardNumber
+                  }}
+                </small>
+              </div>
+
+              <div class="sm:col-span-4">
+                <label
                   for="input_name_enterprise"
                   class="block text-sm font-medium leading-5 text-gray-700"
                 >Razón social</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Digite su razón social"
                     disabled="disabled"
                     id="input_name_enterprise"
                     type="text"
                     v-model="name_enterprise"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="bg-gray-100 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="vacio_name_enterprise" class="text-yellow-600">
-                  {{
-                  vacio_name_enterprise
-                  }}
-                </small>
               </div>
 
               <div class="sm:col-span-4">
                 <label
-                  for="input_cuenta_enterprise"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >Cuenta bancaria</label>
-                <div class="mt-1 rounded-md shadow-sm">
-                  <input
-                    placeholder="Digite su Cuenta bancaria"
-                    id="input_cuenta_enterprise"
-                    type="text"
-                    v-model="cuenta_enterprise"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                  />
-                </div>
-                <small v-if="vacio_cuenta_enterprise" class="text-yellow-600">
-                  {{
-                  vacio_cuenta_enterprise
-                  }}
-                </small>
-              </div>
-              
-              <div class="sm:col-span-4">
-                <label
-                  for="file_enterprise"
                   class="block text-sm leading-5 font-medium text-gray-700"
                 >Imagen de la empresa</label>
-                <div class="flex items-center w-full">
-                  <div class="mt-2" v-if="!file_enterprise">
-                    <label
-                      for="file_enterprise"
-                      style="cursor: pointer"
-                      class="w-full py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                    >Seleccionar imagen</label>
+                <div class="w-full sm:flex">
+                  <div class="flex items-center">
+                    <div class="mt-2 w-full" v-if="!file_enterprise">
+                      <div>
+                        <label
+                          for="file_enterprise"
+                          style="cursor: pointer"
+                          class="w-full py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                        >Seleccionar imagen</label>
 
-                    <span class="file_enterprise">
-                      <input
-                        id="file_enterprise"
-                        type="file"
-                        style="display:none;"
-                        accept="image/png, .jpeg, .jpg"
-                        @change="onFileChange($event, 'file_enterprise')"
-                      />
-                    </span>
+                        <span class="file_enterprise">
+                          <input
+                            id="file_enterprise"
+                            type="file"
+                            style="display:none;"
+                            accept=".png,.jpeg,.jpg"
+                            @change="onFileChangeFileE($event, 'file_enterprise')"
+                          />
+                        </span>
+                      </div>
+                      
+                      <small v-if="error_fileE" class="text-red-600">
+                        {{
+                          error_fileE
+                        }}
+                      </small>
+                      <small v-if="vacio_fileE" class="text-yellow-600">
+                        {{
+                          vacio_fileE
+                        }}
+                      </small>
+                    </div>                   
+
+                    <div class="flex items-center w-full mt-1" v-else>
+                      <button
+                        @click="removeImage($event, 'file_enterprise')"
+                        class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                      >Eliminar imagen</button>
+                    </div>
                   </div>
 
-                  <div class="flex items-center w-full" v-else>
-                    <button
-                      @click="removeImage($event, 'file_enterprise')"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out w-full sm:w-1/2"
-                    >Eliminar imagen</button>
-
-                    <div class="text-center w-full">
-                      <img
-                        :src="file_enterprise"
-                        class="object-cover inline-block h-20 w-20 sm:h-40 sm:w-40 rounded-full"
-                      />
-                    </div>
+                  <div class="mt-3 sm:mt-4 sm:pl-10 sm:w-3/4" v-if="file_enterprise">
+                    <img
+                      :src="file_enterprise"
+                      class="object-cover inline-block h-28 w-28 sm:h-40 sm:w-40 rounded-full"
+                    />
                   </div>
                 </div>
               </div>
@@ -235,7 +262,7 @@
           </div>
 
           <div v-show="step==1">
-            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-8 sm:grid-cols-4">
               <!-- Sección de ingreso de DNI.
               Solicita el DNI y lo valida.-->
               <div class="sm:col-span-2">
@@ -245,7 +272,12 @@
                     placeholder="Ingrese su DNI"
                     id="input_dni"
                     v-model="dni"
-                    @change="validateDNI"
+                    type="text"
+                    inputmode="numeric"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    maxlength="8"
+                    pattern="[0-9]*"
+                    @change="validateDNI()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                   <div
@@ -284,19 +316,13 @@
                 >Nombre(s)</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese sus nombres completos"
                     disabled="disabled"
                     id="input_name_admi"
                     v-model="name_admi"
                     type="text"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="bg-gray-100 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="vacio_name_admi" class="text-yellow-600">
-                  {{
-                  vacio_name_admi
-                  }}
-                </small>
               </div>
 
               <div class="sm:col-span-2">
@@ -306,18 +332,12 @@
                 >Apellido Paterno</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese su apellido paterno"
                     disabled="disabled"
                     id="input_lastnamep_admi"
                     v-model="lastnamep_admi"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="bg-gray-100  form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="vacio_lastnamep_admi" class="text-yellow-600">
-                  {{
-                  vacio_lastnamep_admi
-                  }}
-                </small>
               </div>
 
               <div class="sm:col-span-2">
@@ -327,18 +347,12 @@
                 >Apellido Materno</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    placeholder="Ingrese su apellido materno"
                     disabled="disabled"
                     id="input_lastnamem_admi"
                     v-model="lastnamem_admi"
-                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="bg-gray-100 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
-                <small v-if="vacio_lastnamem_admi" class="text-yellow-600">
-                  {{
-                  vacio_lastnamem_admi
-                  }}
-                </small>
               </div>
 
               <div class="sm:col-span-4">
@@ -346,37 +360,52 @@
                   for="photo"
                   class="block text-sm leading-5 font-medium text-gray-700"
                 >Foto de Perfil</label>
-                <div class="flex items-center w-full">
-                  <div class="mt-2" v-if="!file_admi">
-                    <label
-                      for="file_admi"
-                      style="cursor: pointer"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                    >Seleccionar imagen</label>
+                <div class="w-full sm:flex">
+                  <div class="flex items-center">
+                    <div class="mt-2" v-if="!file_admi">
+                      <div>
+                        <label
+                          for="file_admi"
+                          style="cursor: pointer"
+                          class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-center text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                        >Seleccionar imagen</label>
 
-                    <span class="file_admi">
-                      <input
-                        id="file_admi"
-                        type="file"
-                        style="display:none;"
-                        accept="image/png, .jpeg, .jpg"
-                        @change="onFileChange($event,'file_admi')"
-                      />
-                    </span>
+                        <span class="file_admi">
+                          <input
+                            id="file_admi"
+                            type="file"
+                            style="display:none;"
+                            accept="image/png, .jpeg, .jpg"
+                            @change="onFileChangeFileA($event,'file_admi')"
+                          />
+                        </span>
+                      </div>
+
+                      <small v-if="error_fileA" class="text-red-600">
+                        {{
+                          error_fileA
+                        }}
+                      </small>
+                      <small v-if="vacio_fileA" class="text-yellow-600">
+                        {{
+                          vacio_fileA
+                        }}
+                      </small>
+                    </div>
+
+                    <div class="flex items-center w-full mt-1" v-else>
+                      <button
+                        @click="removeImage($event,'file_admi')"
+                        class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
+                      >Eliminar imagen</button>
+                    </div>                  
                   </div>
 
-                  <div class="flex items-center w-full" v-else>
-                    <button
-                      @click="removeImage($event,'file_admi')"
-                      class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out w-full sm:w-1/2"
-                    >Eliminar imagen</button>
-
-                    <div class="text-center w-full">
-                      <img
-                        :src="file_admi"
-                        class="object-cover inline-block h-20 w-20 sm:h-40 sm:w-40 rounded-full"
-                      />
-                    </div>
+                  <div class="mt-3 sm:mt-4 sm:pl-10 sm:w-3/4" v-if="file_admi">
+                    <img
+                      :src="file_admi"
+                      class="object-cover inline-block h-28 w-28 sm:h-40 sm:w-40 rounded-full"
+                    />
                   </div>
                 </div>
               </div>
@@ -384,7 +413,7 @@
           </div>
 
           <div v-show="step==2">
-            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-4 sm:grid-cols-4">
+            <div class="mx-5 sm:mx-1 grid grid-cols-1 row-gap-5 col-gap-8 sm:grid-cols-4">
               <div class="sm:col-span-2">
                 <label
                   for="username"
@@ -397,6 +426,7 @@
                     placeholder="Ingrese un nombre de usuario"
                     type="text"
                     required
+                    @change="validateUser()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
@@ -410,20 +440,18 @@
                   vacio_username
                   }}
                 </small>
-              </div>
-              <!-- Fin de sección de ingreso de usuario. -->
-
-              <!-- Sección de ingreso de correo.
-              Solicita un correo electrónico y lo valida.-->
+              </div>              
+              
               <div class="sm:col-span-2">
                 <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Correo</label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
                     id="email"
                     v-model="email"
-                    placeholder="Ingrese un correo electronico"
-                    type="email"
+                    placeholder="Ingrese un correo"
+                    type="text"
                     required
+                    @change="validateEmail()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
@@ -438,10 +466,7 @@
                   }}
                 </small>
               </div>
-              <!-- Fin de sección de ingreso de correo. -->
-
-              <!-- Sección de ingreso de contraseña.
-              Solicita una contraseña y la valida.-->
+              
               <div class="sm:col-span-2">
                 <label
                   for="password"
@@ -454,6 +479,7 @@
                     v-model="password"
                     type="password"
                     required
+                    @change="validatePassword()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
@@ -468,9 +494,7 @@
                   }}
                 </small>
               </div>
-               <!-- Fin de sección de password. -->
-
-              <!-- Solicita repetir la contraseña y la valida. -->
+              
               <div class="sm:col-span-2">
                 <label
                   for="repeat_password"
@@ -483,6 +507,7 @@
                     placeholder="Verifique su contraseña"
                     type="password"
                     required
+                    @change="validateRepeatPassword()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
@@ -498,9 +523,8 @@
                 </small>
               </div>
             </div>
-             <!-- Fin de sección de repetir pass. -->
-
-            <div class="mt-4 flex text-center justify-between">
+            
+            <div class="mt-4 mb-14 flex text-center justify-between">
               <div class="text-sm leading-5">
                 <span
                   class="font-medium"
@@ -557,95 +581,154 @@ import api from "../../api";
 import Visitor from "../Layouts/Visitor";
 import AnimatedButton from "../../components/AnimatedButton.vue";
 import IconSvg from "../../components/IconSvg.vue";
+import Format from "../../formatosBancarios";
 
 export default {
   name: "SignUpEnterprise",
-  components: {
+  components: 
+  {
     Visitor,
     AnimatedButton,
     IconSvg,
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      hasError: false,
       buttonLoading: false,
       dni_valid: false,
       ruc_valid: false,
       isType: '',
-
+      ccicon: '',
       identifier: "empresa",
-
       step: 0,
 
-      //Datos comunes de registro
-      username: "",
-      email: "",
-      password: "",
-      repeat_password: "",
+      name_enterprise: '',//Razon social de la empresa
+      ruc: '',
+      file_enterprise: '', //Imagen de la empresa
+      cardNumber: '', //Cuenta bancaria de la empresa
 
-      //Nombre de los campos de empresa
-      name_enterprise: "",//Razon social de la empresa
-      ruc: "",
-      file_enterprise: "", //Imagen de la empresa
-      cuenta_enterprise: "", //Cuenta bancaria de la empresa
+      file_admi: '', //Imagen del administrador de la sesion que registra a la empresa
+      name_admi: '',
+      lastnamep_admi: '',
+      lastnamem_admi: '',
+      dni: '',
+
+      username: '',
+      email: '',
+      password: '',
+      repeat_password: '',      
+     
+      error_ruc: '',
+      error_cardNumber: '',
+      error_fileE: '',
+      error_dni: '',
+      error_fileA: '',
+      error_username: '',
+      error_email: '',
+      error_password: '',
+      error_repeat_password: '',
       
-      //Nombre de los campos del admi de la empresa
-      file_admi: "", //Imagen del administrador de la sesion que registra a la empresa
-      name_admi: "",
-      lastnamep_admi: "",
-      lastnamem_admi: "",
-      dni: "",
-     
-      error_username: "",
-      error_email: "",
-      error_password: "",
-      error_repeat_password: "",
-     
-      error_dni: "",
-      error_ruc: "",
-    
-      vacio_username: "",
-      vacio_email: "",
-      vacio_pass: "",
-      vacio_repeat_pass: "",
-      vacio_name_enterprise: "",
-      vacio_ruc: "",
-      vacio_cuenta_enterprise: "", //Cuenta bancaria de la empresa
-      vacio_name_admi: "",
-      vacio_lastnamep_admi: "",
-      vacio_lastnamem_admi: "",
-      vacio_dni: "",
+      vacio_ruc: '',
+      vacio_cardNumber: '',
+      vacio_fileE: '',
+      vacio_dni: '',
+      vacio_fileA: '',
+      vacio_username: '',
+      vacio_email: '',
+      vacio_pass: '',
+      vacio_repeat_pass: '',     
     };
   },
-  methods: {
-    async validateDNI() {
-      if ((this.dni.length >= 0 && this.dni.length < 8) || (this.dni.length > 8)) {
-        this.hasError = true;
-        this.dni_valid = false
-        this.name_admi = "";
-        this.lastnamep_admi = "";
-        this.lastnamem_admi = "";
-        this.error_dni = "El DNI debe tener 8 dígitos";
-        this.vacio_dni = "";
-        return;
-      }else{
-        this.hasError = false;
-        this.error_dni = "";
-        this.vacio_dni = "";
-        this.isType = 'DNI';
-      } 
+  async mounted()
+  {
+    this.ccicon = document.getElementById('ccicon');
+  },
+  methods: 
+  {
+    validateCardNumber()
+    {
+      if((this.cardNumber.replace(/-/g, "").length > 0 && this.cardNumber.replace(/-/g, "").length < 20)
+          || this.cardNumber.replace(/-/g, "").length > 20)
+      {
+        this.error_cardNumber = 'La CCI debe tener 20 dígitos';
+        this.vacio_cardNumber = '';
+      }
+      else if(this.cardNumber.replace(/-/g, "").length == 20)
+      {
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "";
 
-      let response = await api.get(`/validate/${this.isType}/${this.dni}`)//Se envia validacion
+        this.cardNumber = this.cardNumber.replace(/\W/gi, '').replace(/\b(\d{3})(\d{3})(\d{12})(\d{2})\b/, '$1-$2-$3-$4').trim();
+      }
+      else
+      {
+        this.error_cardNumber = "";
+        this.vacio_cardNumber = "";
+      }
+
+      if(this.cardNumber.replace(/-/g, "").length >= 3)
+      {
+        switch(this.cardNumber.substr(0,3))
+        {
+          case '002':
+            this.ccicon.innerHTML = Format.Bank('bcp');
+            break;
+          case '003':
+            this.ccicon.innerHTML = Format.Bank('interbank');
+            break;
+          case '009':
+            this.ccicon.innerHTML = Format.Bank('scotiabank');
+            break;
+          case '011':
+            this.ccicon.innerHTML = Format.Bank('bbva');
+            break;
+          default:
+            this.ccicon.innerHTML = "";
+            break;
+        }
+      }
+      else if(this.cardNumber.replace(/-/g, "").length < 3)
+      {
+        this.ccicon.innerHTML = "";
+      }
+    },
+    async validateDNI() 
+    {
+      this.error_dni = '';
+      this.vacio_dni = '';
+
+      if(this.dni == '')
+      {
+        this.dni_valid = false; 
+        this.name_admi = ''; 
+        this.lastnamep_admi = ''; 
+        this.lastnamem_admi = ''; 
+        return;
+      }
+        
+      if ((this.dni.length > 0 && this.dni.length < 8)) 
+      {
+        this.dni_valid = false;
+        this.name_admi = '';
+        this.lastnamep_admi = '';
+        this.lastnamem_admi = '';
+        this.error_dni = 'El DNI debe tener 8 dígitos';
+        this.vacio_dni = '';
+        return;
+      }
+
+      this.isType = 'DNI';
+      let response = await api.get(`/validate/${this.isType}/${this.dni}`)
       
       if (!response.ok) {
         this.dni_valid = false
-
-        this.name_admi = "";
-        this.lastnamep_admi = "";
-        this.lastnamem_admi = "";
+        this.error_dni = 'DNI no válido'
+        this.name_admi = '';
+        this.lastnamep_admi = '';
+        this.lastnamem_admi = '';
            
         return this.$toast.open({
-          message: "El sistema detectó que el DNI no es válido",
+          message: "DNI no válido",
           type: "error",
           duration: 8000,
           dismissible: true
@@ -665,32 +748,37 @@ export default {
         dismissible: true
       });
     },
-    async validateRUC() {
-      //Se comprueba longitud del campo apenas se llene
-      if ((this.ruc.length >= 0 && this.ruc.length < 11) || (this.ruc.length > 11)) {
-        this.hasError = true;
-        this.ruc_valid = false;
-        this.name_enterprise = "";
-        this.error_ruc = "El RUC debe tener 11 dígitos";
-        this.vacio_ruc = "";
-        return;
-      }else{
-        this.hasError = false;
-        this.error_ruc = "";
-        this.vacio_ruc = "";
-        this.isType = 'RUC';
-      } 
+    async validateRUC() 
+    {
+      this.error_ruc = '';
+      this.vacio_ruc = '';
 
-      let response = await api.get(`/validate/${this.isType}/${this.ruc}`)//Se envia validacion
+      if(this.ruc == '')
+      {
+        this.ruc_valid = false; 
+        this.name_enterprise = ''; 
+        return;
+      }
       
-      //Si recibo algún error del RUC
+      if ((this.ruc.length > 0 && this.ruc.length < 11)) 
+      {
+        this.ruc_valid = false;
+        this.name_enterprise = '';
+        this.error_ruc = 'El RUC debe tener 11 dígitos';
+        this.vacio_ruc = '';
+        return;
+      }
+
+      this.isType = 'RUC';
+      let response = await api.get(`/validate/${this.isType}/${this.ruc}`)
+      
       if (!response.ok) {
         this.ruc_valid = false;
-
-        this.name_enterprise = "";
+        this.error_ruc = 'RUC no válido'
+        this.name_enterprise = '';
 
         return this.$toast.open({
-          message:"El sistema detecto que el RUC no es válido",
+          message:"RUC no válido",
           type: "error",
           duration: 8000,
           dismissible: true,
@@ -707,34 +795,274 @@ export default {
         dismissible: true,
       });
     },
-    async submitSignup() {
-      this.validateSubmit();
-      if (this.hasError) return;
-      this.buttonLoading = true;
+    validateUser()
+    {
+      this.error_username = '';
+      this.vacio_username = '';
 
-      //Se condiciona la imagen de la empresa
-       if(this.file_enterprise === '' | this.file_enterprise === "" | this.file_enterprise === null){
-        this.buttonLoading = false;
+      if(this.username == '') {return;}
+      
+      if(this.username.includes('@') || this.username.includes('.')) 
+      {
+        this.vacio_username = '';
+        this.error_username = 'El usuario no debe de incluir @ ó .';
+        return;
+      }       
+    },
+    validateEmail()
+    {
+      const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email);
+      
+      this.error_email = '';
+      this.vacio_email = '';
 
-        return this.$toast.open({
-          message: 'Imagen de la empresa requerida',
-          type: "error",
-          duration: 8000,
-          dismissible: true
-        });
+      if(this.email == '') {return;}
+
+      if(!correo(this.email))
+      {
+        this.error_email = 'Correo no válido';
+        this.vacio_email = '';
       }
+    },
+    validatePassword()
+    {
+      this.error_password = '';
+      this.vacio_pass = '';
+      
+      if(this.password.length == 0){return;}
 
-      //Se condiciona las imagen del administrador
-      if(this.file_admi === '' | this.file_admi === "" | this.file_admi === null){
-        this.buttonLoading = false;
+      if(this.password.length >= 8)
+			{	
+        this.vacio_pass = "";	
+				var mayuscula = false;
+				var minuscula = false;
+				var numero = false;
+				
+				for(var i = 0; i<this.password.length; i++)
+				{
+					if(this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) { mayuscula = true; }
+					else if(this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) { minuscula = true; }
+					else if(this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) { numero = true; }
+        }
         
-        return this.$toast.open({
-          message: 'Imagen de la empresa requerida',
-          type: "error",
-          duration: 8000,
-          dismissible: true
-        });
+        if(mayuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra mayuscula"; return;}
+        if(minuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra minuscula"; return;}
+        if(numero == false) { this.error_password = "Su contraseña debe tener al menos un número"; return;}
+        
+        if(mayuscula == true && minuscula == true && numero == true) { this.error_password = "" }
+			}
+      else if(this.password.length < 8 && this.password.length > 0)
+      { 
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
       }
+    },
+    validateRepeatPassword()
+    {
+      this.error_repeat_password = '';
+      this.vacio_repeat_pass = '';
+      
+      if(this.repeat_password.length == 0){return;}
+
+      if(this.repeat_password != this.password)
+      {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    onFileChangeFileE(e, name) 
+    {
+      var filesE = e.target.files || e.dataTransfer.files;
+      this[name] = filesE;      
+
+      if (!filesE.length || !(/\.(jpg|png|jpeg)$/i).test(filesE[0].name))
+      {
+        this.file_enterprise = '';
+        this.error_fileE = '';
+        this.vacio_fileE = '';
+        return;
+      }
+
+      if(filesE[0].size > 10000)
+      {
+        this.file_enterprise = '';
+        this.error_fileE = 'El peso de la imagen no puede exceder los 10kb';
+        this.vacio_fileE = '';
+        return;
+      }
+      
+      this.error_fileE = '';
+      this.vacio_fileE = '';
+      this.createImage(filesE[0], name);
+    },
+    onFileChangeFileA(e, name)
+    {
+      var filesA = e.target.files || e.dataTransfer.files;
+      this[name] = filesA;
+      
+      if (!filesA.length || !(/\.(jpg|png|jpeg)$/i).test(filesA[0].name))
+      {
+        this.file_admi = '';
+        this.error_fileA = '';
+        this.vacio_fileA = '';
+        return;
+      }
+
+      if(filesA[0].size > 10000)
+      {
+        this.file_admi = '';
+        this.error_fileA = 'El peso de la imagen no puede exceder los 10kb';
+        this.vacio_fileA = '';
+        return;
+      }
+
+      this.error_fileA = '';
+      this.vacio_fileA = '';
+      this.createImage(filesA[0], name);
+    },
+    createImage(file, name) 
+    {
+      var image = new Image();
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = (e) => {
+        vm[name] = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    },
+    removeImage(e, name)
+    {
+      this[name] = "";
+    },
+    async submitSignup() 
+    {
+      this.validateCardNumber();
+      this.validateUser();
+      this.validateEmail();
+      this.validatePassword();
+      this.validatePassword();
+      var boolean = false;
+      
+      if(this.cardNumber == '' && this.error_cardNumber == '' )
+      { 
+        this.vacio_cardNumber = 'Campo obligatorio';
+        this.error_cardNumber = '';
+        boolean = true;
+      }
+      else if(this.cardNumber != '' && this.error_cardNumber != '') { this.vacio_cardNumber = ''; boolean = true;}
+      else if(this.cardNumber != '' && this.error_cardNumber == '')
+      {
+        this.vacio_cardNumber = '';
+        this.error_cardNumber = '';
+      }
+
+      if(this.ruc == '' && this.error_ruc == '' )
+      { 
+        this.vacio_ruc = 'Campo obligatorio';
+        this.error_ruc = '';
+        boolean = true;
+      }
+      else if(this.ruc != '' && this.error_ruc != '') { this.vacio_ruc = ''; boolean = true;}
+      else if(this.ruc != '' && this.error_ruc == '')
+      {
+        this.vacio_ruc = '';
+        this.error_ruc = '';
+      }
+
+      if(this.file_enterprise == '' && this.error_fileE == '' )
+      { 
+        this.vacio_fileE = 'Campo obligatorio';
+        this.error_fileE = '';
+        boolean = true;
+      }
+      else if(this.file_enterprise != '' && this.error_fileE != '') { this.vacio_fileE = ''; boolean = true;}
+      else if(this.file_enterprise != '' && this.error_fileE == '')
+      {
+        this.vacio_fileE = '';
+        this.error_fileE = '';
+      }
+
+      if(this.dni == '' && this.error_dni == '' )
+      { 
+        this.vacio_dni = 'Campo obligatorio';
+        this.error_dni = '';
+        boolean = true;
+      }
+      else if(this.dni != '' && this.error_dni != '') { this.vacio_dni = ''; boolean = true;}
+      else if(this.dni != '' && this.error_dni == '')
+      {
+        this.vacio_dni = '';
+        this.error_dni = '';
+      }
+
+      if(this.file_admi == '' && this.error_fileA == '' )
+      { 
+        this.vacio_fileA = 'Campo obligatorio';
+        this.error_fileA = '';
+        boolean = true;
+      }
+      else if(this.file_admi != '' && this.error_fileA != '') { this.vacio_fileA = ''; boolean = true;}
+      else if(this.file_admi != '' && this.error_fileA == '')
+      {
+        this.vacio_fileA = '';
+        this.error_fileA = '';
+      }
+
+      if(this.username == '' && this.error_username == '' )
+      { 
+        this.vacio_username = 'Campo obligatorio';
+        this.error_username = '';
+        boolean = true;
+      }
+      else if(this.username != '' && this.error_username != '') { this.vacio_username = ''; boolean = true;}
+      else if(this.username != '' && this.error_username == '')
+      {
+        this.vacio_username = '';
+        this.error_username = '';
+      }
+
+      if(this.email == '' && this.error_email == '' )
+      { 
+        this.vacio_email = 'Campo obligatorio';
+        this.error_email = '';
+        boolean = true;
+      }
+      else if(this.email != '' && this.error_email != '') { this.vacio_email = ''; boolean = true;}
+      else if(this.email != '' && this.error_email == '')
+      {
+        this.vacio_email = '';
+        this.error_email = '';
+      }
+
+      if(this.password == '' && this.error_password == '')
+      { 
+        this.vacio_pass = 'Campo obligatorio';
+        this.error_password = '';
+        boolean = true;
+      }
+      else if(this.password != '' && this.error_password != '') { this.vacio_pass = ''; boolean = true;}
+      else if(this.password != '' && this.error_password == '')
+      {
+        this.vacio_pass = '';
+        this.error_password = '';
+      }
+
+      if(this.repeat_password == '' && this.error_repeat_password == '')
+      { 
+        this.vacio_repeat_pass = 'Campo obligatorio';
+        this.error_repeat_password = '';
+        boolean = true;
+      }
+      else if(this.repeat_password != '' && this.error_repeat_password != '') { this.vacio_repeat_pass = ''; boolean = true;}
+      else if(this.repeat_password != '' && this.error_repeat_password == '')
+      {
+        this.vacio_repeat_pass = '';
+        this.error_repeat_password = '';
+      }
+
+      if(boolean) return;
+      this.buttonLoading = true;
 
       //Se conecta con la lógica de negocio
       //RUC de  ejemplos en : http://www.sunat.gob.pe/descarga/BueCont/BueCont0.html
@@ -746,7 +1074,7 @@ export default {
         name_enterprise: this.name_enterprise,
         RUC: this.ruc,
         file_enterprise: this.file_enterprise,
-        cuenta_enterprise: this.cuenta_enterprise, 
+        cardNumber: this.cardNumber, 
         file_admi: this.file_admi,
         name_admi: this.name_admi,
         lastnamep_admi: this.lastnamep_admi,
@@ -783,146 +1111,12 @@ export default {
 
       this.$toast.open({
         message: response.data.data.success2.original.success[0],
-        type: "info",
+        type: "success",
         duration: 10000,
         dismissible: true,
       });
 
       this.$router.push("/login/enterprise");
-    },
-    validateSubmit() {
-      if(this.hasError == true) this.hasError = true;
-        else this.hasError = false;
-
-      //Validaciones del campo usuario
-      if (this.username == "") {
-        this.hasError = true;
-        this.vacio_username = "Campo necesario";
-        this.error_username = "";
-      } else if (this.username.includes("@") || this.username.includes(".")) {
-        this.hasError = true;
-        this.vacio_username = "";
-        this.error_username =
-          "Usuario no válido, el usuario no debe de incluir @ o .";
-      } else {
-        this.error_username = "";
-        this.vacio_username = "";
-      }
-
-      //Validaciones del campo Email
-      if (this.email == "") {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = "";
-      } else if (
-        !this.email.includes("@") ||
-        !this.email.includes(".") ||
-        this.email.length < 5
-      ) {
-        this.hasError = true;
-        this.vacio_email = "";
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = "";
-        this.vacio_email = "";
-      }
-
-      //Validaciones del campo password
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      }
-
-      //Validaciones del campo repeat password
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      }
-
-      //Validacion del DNI
-      if(this.dni.length==0){
-        this.hasError = true;
-        this.error_dni = "";
-        this.vacio_dni = "Campo necesario";
-      }else{
-        this.error_dni = "";
-        this.vacio_dni = "";
-      } 
-       
-      //Comprobacion de nombres
-      if (this.name_admi == "") {
-        this.hasError = true;
-        this.vacio_name_admi = "Campo necesario";
-      } else this.vacio_name_admi = "";
-
-      //Comprobacion de apellido paterno
-      if (this.lastnamep_admi == "") {
-        this.hasError = true;
-        this.vacio_lastnamep_admi = "Campo necesario";
-      } else this.vacio_lastnamep_admi = "";
-
-      //Comprobacion de apellido materno
-      if (this.lastnamem_admi == "") {
-        this.hasError = true;
-        this.vacio_lastnamem_admi = "Campo necesario";
-      } else this.vacio_lastnamem_admi = "";
-     
-      //Comprobacion de razon social
-      if (this.name_enterprise == "") {
-        this.hasError = true;
-        this.vacio_name_enterprise = "Campo necesario";
-      } else this.vacio_name_enterprise = "";
-    
-      //Comprobacion de cuenta de empresa
-      if (this.cuenta_enterprise == "") {
-        this.hasError = true;
-        this.vacio_cuenta_enterprise = "Campo necesario";
-      } else this.vacio_cuenta_enterprise = "";
-
-      //Comprobacion de RUC
-      if(this.ruc.length==0){
-        this.hasError = true;
-        this.error_ruc = "";
-        this.vacio_ruc = "Campo necesario";
-      }else{
-        this.error_ruc = "";
-        this.vacio_ruc = "";
-      } 
-    },
-    onFileChange(e, name) {
-      var files = e.target.files || e.dataTransfer.files;
-      this[name] = files;
-      if (!files.length) return;
-      this.createImage(files[0], name);
-    },
-    createImage(file, name) {
-      var image = new Image();
-      var reader = new FileReader();
-      var vm = this;
-
-      reader.onload = (e) => {
-        vm[name] = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    },
-    removeImage(e, name) {
-      this[name] = "";
     },
   },
 };
