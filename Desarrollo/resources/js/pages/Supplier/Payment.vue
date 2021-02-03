@@ -1,5 +1,5 @@
 <template>
-  <Visitor>
+  <Sidebar title="Pago por servicios">
     <Loader class="min-h-screen"
             :load="loading"
       />
@@ -10,7 +10,7 @@
           <h1 class="text-2xl">MÉTODO DE PAGO</h1>
         </div>
         <div class="px-4 grid grid-cols-2 gap-6">
-          <div
+          <!-- <div
             class="col-span-2 sm:col-span-1 bg-white overflow-hidden shadow rounded-lg sm:mr-2"
           >
             <div class="px-4 py-5 sm:p-4 text-left">
@@ -172,18 +172,18 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div
-            class="col-span-2 sm:col-span-1 mt-4 sm:mt-0"
+            class="col-span-2 sm:col-span-2 mt-4 sm:mt-0"
           >
-            <div class="bg-white overflow-hidden shadow rounded-lg">
-              <div class="px-4 py-5 sm:p-6">
+            <div class="bg-white  overflow-hidden shadow rounded-lg">
+              <div class="px-4 py-5 sm:p-6 ">
                 <p class="text-lg leading-5 font-semibold text-gray-700">
                   Realizar Pago
                 </p>
 
-                <div class="px-2 mt-6">
+                <div class="px-2 mt-6 w-full flex justify-center items-center">
                   <div id="paypal-button-container"></div>
                 </div>
               </div>
@@ -198,21 +198,21 @@
         </div>
       </div>
     </div>
-  </Visitor>
+  </SideBar>
 </template>
 
 
 <script>
 import api from "../../api";
-
+import SideBar from "../../components/SideBar";
 import Loader from "../../components/Loader";
-import Visitor from "../Layouts/Visitor";
+// import Visitor from "../Layouts/Visitor";
 import IconSvg from "../../components/IconSvg";
 
 export default {
-  name: "Payment",
+  name: "PaymentS",
   components: {
-    Visitor,
+    SideBar,
     IconSvg,
     Loader
   },
@@ -254,120 +254,120 @@ export default {
   async created() {
     this.loading = true;
 
-    localStorage.setItem('e_link', this.id_link);
-    localStorage.setItem('e_response', this.id_response);
+    // localStorage.setItem('e_link', this.id_link);
+    // localStorage.setItem('e_response', this.id_response);
 
-    if(localStorage.getItem('e_level') !== 'customer') 
-    {
-      this.$toast.open({
-        message: "Inicie sesión para consultar por el pago...",
-        type: "info",
-        duration: 8000,
-        dismissible: true,
-      });
+    // if(localStorage.getItem('e_level') !== 'supplier') 
+    // {
+    //   this.$toast.open({
+    //     message: "Inicie sesión para consultar por el pago...",
+    //     type: "info",
+    //     duration: 8000,
+    //     dismissible: true,
+    //   });
     
-      localStorage.setItem('e_bandera', 'bandera');
-      this.$router.push("/login/customer");
-      return;
-    }
+    //   localStorage.setItem('e_bandera', 'bandera');
+    //   this.$router.push("/login/supplier");
+    //   return;
+    // }
 
-    let response = await api.get(`/paypal/${localStorage.getItem('e_link')}/${localStorage.getItem('e_response')}`)
+    // let response = await api.get(`/paypal/${localStorage.getItem('e_link')}/${localStorage.getItem('e_response')}`)
 
-    if(!response.ok)
-    { 
-      this.$toast.open({
-        message: "Enlace caducado...",
-        type: "error",
-        duration: 8000,
-        dismissible: true,
-      });
+    // if(!response.ok)
+    // { 
+    //   this.$toast.open({
+    //     message: "Enlace caducado...",
+    //     type: "error",
+    //     duration: 8000,
+    //     dismissible: true,
+    //   });
 
-      localStorage.setItem('e_bandera2', 'bandera2');
+    //   localStorage.setItem('e_bandera2', 'bandera2');
 
-      localStorage.removeItem('e_response');
-      localStorage.removeItem('e_link');
-      this.$router.push("/"); 
-      return;
-    }
+    //   localStorage.removeItem('e_response');
+    //   localStorage.removeItem('e_link');
+    //   this.$router.push("/"); 
+    //   return;
+    // }
     
-    this.customer = response.data.data.customer;
-    this.service = response.data.data.service;
-    this.supplier = response.data.data.supplier;
-    this.response = response.data.data.response;
+    // this.customer = response.data.data.customer;
+    // this.service = response.data.data.service;
+    // this.supplier = response.data.data.supplier;
+    // this.response = response.data.data.response;
 
-    if(this.customer.access != localStorage.getItem('token'))
-    {
-      this.$toast.open({
-        message: "Enlace no válido para su usuario...",
-        type: "error",
-        duration: 8000,
-        dismissible: true,
-      });
+    // if(this.supplier.access != localStorage.getItem('token'))
+    // {
+    //   this.$toast.open({
+    //     message: "Enlace no válido para su usuario...",
+    //     type: "error",
+    //     duration: 8000,
+    //     dismissible: true,
+    //   });
 
-      localStorage.setItem('e_bandera2', 'bandera2');
+    //   localStorage.setItem('e_bandera2', 'bandera2');
 
-      localStorage.removeItem('e_response');
-      localStorage.removeItem('e_link');
-      this.$router.push("/"); 
-      return;
-    }
+    //   localStorage.removeItem('e_response');
+    //   localStorage.removeItem('e_link');
+    //   this.$router.push("/"); 
+    //   return;
+    // }
 
-    this.emailProv = this.supplier.email;
-    this.emailCusto = this.customer.email;
+    // this.emailProv = this.supplier.email;
+    // this.emailCusto = this.customer.email;
 
-    this.response_id = this.response._id
-    this.title = this.service.title;
-    this.distrito = this.service.distrito;
+    // this.response_id = this.response._id
+    // this.title = this.service.title;
+    // this.distrito = this.service.distrito;
     
-    this.identity = this.response.identity;
-    if(this.identity == 'employee')
-    {
-      this.name = this.supplier.name;
-      this.lastnamep = this.supplier.lastnamep;
-      this.lastnamem = this.supplier.lastnamem;
-      this.account = this.supplier.cuenta;
-    }
-    else
-    {
-      this.razonsocial = this.supplier.name_enterprise;
-      this.account = this.supplier.cuenta_enterprise;
-    }
+    // this.identity = this.response.identity;
+    // if(this.identity == 'employee')
+    // {
+    //   this.name = this.supplier.name;
+    //   this.lastnamep = this.supplier.lastnamep;
+    //   this.lastnamem = this.supplier.lastnamem;
+    //   this.account = this.supplier.cuenta;
+    // }
+    // else
+    // {
+    //   this.razonsocial = this.supplier.name_enterprise;
+    //   this.account = this.supplier.cuenta_enterprise;
+    // }
 
-    this.address = this.response.addres;
-    this.date = this.response.date;
-    this.timemini = this.response.timemin;
-    this.timemax = this.response.timemax;
-    this.paymentTotal = this.response.sumaTotal;
-    this.paypalDolar = (this.paymentTotal / 3.64).toFixed(2);
+    // this.address = this.response.addres;
+    // this.date = this.response.date;
+    // this.timemini = this.response.timemin;
+    // this.timemax = this.response.timemax;
+    // this.paymentTotal = this.response.sumaTotal;
+    // this.paypalDolar = (this.paymentTotal / 3.64).toFixed(2);
 
     this.loading = false;
   },
   async mounted(){
-    if(localStorage.getItem('e_bandera') == 'bandera' ||
-        localStorage.getItem('e_bandera2') == 'bandera2')
-    {
-      localStorage.removeItem('e_bandera2');
-      return;
-    }
+    // if(localStorage.getItem('e_bandera') == 'bandera' ||
+    //     localStorage.getItem('e_bandera2') == 'bandera2')
+    // {
+    //   localStorage.removeItem('e_bandera2');
+    //   return;
+    // }
 
     window.paypal.Buttons({
       createOrder: (data, actions) => {
         /**Funcion que realiza el envio de los datos a pagar */
         return actions.order.create({
           purchase_units: [{
-            description: this.title,
+            description: 'Pago de aumento de servicios',
             amount: {
               currency_code: "USD",
-              value: this.paypalDolar
+              value: "15"
             }
           }]
         });
       },
       onApprove: async (data, actions, resp) => {
         const order = await actions.order.capture();
-        this.data;
-        this.paidFor = true;
-        this.loading = false;
+        // this.data;
+        // this.paidFor = true;
+        // this.loading = false;
         this.UpdateStatus();
         /**Funcion que recupera datos - Posible reporte de transaccion */
       },
@@ -379,44 +379,44 @@ export default {
   },
   methods:{
     async UpdateStatus(){
-      let response = await api.post(`/updatestatus`, {
-        typeNot: 'response',
-        id: this.response_id,
-        status: 'Pendiente',
-        email1: this.emailProv,
-        email2: this.emailCusto,
-        pay: this.paymentTotal
-      })
+    //   let response = await api.post(`/updatestatus`, {
+    //     typeNot: 'response',
+    //     id: this.response_id,
+    //     status: 'Pendiente',
+    //     email1: this.emailProv,
+    //     email2: this.emailCusto,
+    //     pay: this.paymentTotal
+    //   })
 
-      if (!response.ok) {
-        this.buttonLoading = false;
+    //   if (!response.ok) {
+    //     this.buttonLoading = false;
 
-        let er = response.error.errors;
-        let mensaje = "Error desconocido";
+    //     let er = response.error.errors;
+    //     let mensaje = "Error desconocido";
 
-        if(er.hasOwnProperty('fail')){
-          mensaje = er.fail[0];
-        }
+    //     if(er.hasOwnProperty('fail')){
+    //       mensaje = er.fail[0];
+    //     }
 
-        return this.$toast.open({
-          message: mensaje,
-          type: "error",
-          duration: 8000,
-          dismissible: true
-        });
-      }
+    //     return this.$toast.open({
+    //       message: mensaje,
+    //       type: "error",
+    //       duration: 8000,
+    //       dismissible: true
+    //     });
+    //   }
 
-      this.$toast.open({
-        message: "Pago Exitoso - " + response.data.data.success[0],
-        type: "success",
-        duration: 8000,
-        dismissible: true
-      });
+    //   this.$toast.open({
+    //     message: "Pago Exitoso - " + response.data.data.success[0],
+    //     type: "success",
+    //     duration: 8000,
+    //     dismissible: true
+    //   });
 
-      localStorage.removeItem('e_response');
-      localStorage.removeItem('e_link');
+    //   localStorage.removeItem('e_response');
+    //   localStorage.removeItem('e_link');
       
-      this.$router.push("/");
+        this.$router.push("/supplier");
     }
   }
 };
