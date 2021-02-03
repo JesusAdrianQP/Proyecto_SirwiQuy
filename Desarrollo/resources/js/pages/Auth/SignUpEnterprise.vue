@@ -1061,7 +1061,7 @@ export default {
         this.error_repeat_password = '';
       }
 
-      if(boolean == true) { return; }
+      if(boolean) return;
       this.buttonLoading = true;
 
       //Se conecta con la lógica de negocio
@@ -1111,7 +1111,7 @@ export default {
 
       this.$toast.open({
         message: response.data.data.success2.original.success[0],
-        type: "info",
+        type: "success",
         duration: 10000,
         dismissible: true,
       });

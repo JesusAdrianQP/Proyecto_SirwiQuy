@@ -47,7 +47,8 @@
 import api from "../api";
 
 export default {
-  props: {
+  props: 
+  {
     type_pag: String,
     category: String,
     prices: Object,
@@ -60,7 +61,8 @@ export default {
   },
   data: () => {
     return {
-      pagination: {
+      pagination: 
+      {
         'total': 0,
         'current_page': 0,
         'per_page': 0,
@@ -78,47 +80,55 @@ export default {
       value: 0
     }
   },
-  async mounted() {
-    if(this.type_pag == 'index')
-      this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all', 'all');
-    else if(this.type_pag == 'notifications')
-      this.getPagesNot(1, this.idProvider, 'all');
-    else if(this.type_pag == 'historial_solicitud')
-      this.getPagesHistoyResponse(1, this.idCustomer);
+  async mounted() 
+  {
+    if(this.type_pag == 'index') this.getPagesIndex(1, 'all', 'all', 0, 'all', 'all', 'all');
+    else if(this.type_pag == 'notifications') this.getPagesNot(1, this.idProvider, 'all');
+    else if(this.type_pag == 'historial_solicitud') this.getPagesHistoyResponse(1, this.idCustomer);
   },
-  watch: {
-    title: function(newVal, oldVal) {
+  watch: 
+  {
+    title: function(newVal, oldVal) 
+    {
       this.getPagesIndex(1, this.pmin, this.pmax, this.value, newVal, this.district, this.category)
     },
-    district: function(newVal, oldVal) {
+    district: function(newVal, oldVal) 
+    {
       this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, newVal, this.category)
     },
-     category: function(newVal, oldVal) {
+    category: function(newVal, oldVal) 
+    {
       this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, newVal)
     },
-    'prices.pmin': function(newVal, oldVal) {
+    'prices.pmin': function(newVal, oldVal) 
+    {
       this.pmin = newVal;
     },
-    'prices.pmax': function(newVal, oldVal){
+    'prices.pmax': function(newVal, oldVal)
+    {
       this.pmax = newVal;
       this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, this.category)
     },
-    calification: function(newVal, oldVal){
+    calification: function(newVal, oldVal)
+    {
       if(newVal == true) this.value = 1;
-        else this.value = 0;
+      else this.value = 0;
 
       this.getPagesIndex(1, this.pmin, this.pmax, this.value, this.title, this.district, this.category)
     },
-    filter: function(newVal, oldVal){
+    filter: function(newVal, oldVal)
+    {
       this.getPagesNot(1, this.idProvider, newVal)
     }
   },
   computed: {
     //Lógica de la paginación
-    isActived: function() {
+    isActived: function() 
+    {
       return this.pagination.current_page;
     },
-    pagesNumber:function() {
+    pagesNumber:function()
+    {
       if(!this.pagination.to) return [];
 
       var from = this.pagination.current_page - this.offset;
@@ -135,26 +145,30 @@ export default {
       return pagesArray;
     }
   },
-  methods: {
-    async getPagesIndex(page, pmin, pmax, value, title, district, category){
+  methods: 
+  {
+    async getPagesIndex(page, pmin, pmax, value, title, district, category)
+    {
       if(title == '') title = 'all';
       if(district == '') district = 'all';
       if(category == '') category = 'all';
       if(pmin == '') pmin = 'all';
       if(pmax == '') pmax = 'all';
       
-      //Se llama a toda la lista de servicios
+      this.$emit('setLoading');
+
       let response = await api.get(`/services/page=${page}/pmin=${pmin}&pmax=${pmax}/OrderByvalue=${value}/title=${title}/district=${district}/category=${category}`)
        
       this.services = response.data.data.paginate.data || []
       this.pagination = response.data.data.paginate //Se extrae los datos paginados 
 
-      //Evento que el componente padre oira para obtener valores
+      
       this.$emit('getServices', {
         services_paginate: this.services,
       })
     },
-     async getPagesNot(page, id, filter){
+    async getPagesNot(page, id, filter)
+    {
       if(filter == '') filter = 'all';
 
       this.$emit('setLoading')
@@ -169,7 +183,10 @@ export default {
         notification_paginate: this.notifications,
       })
     },
-    async getPagesHistoyResponse(page, id){
+    async getPagesHistoyResponse(page, id)
+    {
+       this.$emit('setLoading');
+
       let response3 = await api.get(`/responses/page=${page}/id=${id}`)
       
       this.historyResponses = response3.data.data.paginate.data || []
@@ -180,15 +197,13 @@ export default {
         response_paginate: this.historyResponses,
       })
     },
-    async changePage(page){
+    changePage(page)
+    {
       this.pagination.current_page = page;
 
-      if(this.type_pag == 'index')
-        this.getPagesIndex(page, this.pmin, this.pmax, this.value, this.title, this.district, this.category);
-      else if(this.type_pag == 'notifications')
-        this.getPagesNot(page, this.idProvider, this.filter);
-      else if(this.type_pag == 'historial_solicitud')
-        this.getPagesHistoyResponse(1, this.idCustomer);
+      if(this.type_pag == 'index') this.getPagesIndex(page, this.pmin, this.pmax, this.value, this.title, this.district, this.category);
+      else if(this.type_pag == 'notifications') this.getPagesNot(page, this.idProvider, this.filter);
+      else if(this.type_pag == 'historial_solicitud') this.getPagesHistoyResponse(1, this.idCustomer);
     },
   }
 };

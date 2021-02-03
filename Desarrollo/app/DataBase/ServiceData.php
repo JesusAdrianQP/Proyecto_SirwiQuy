@@ -4,6 +4,7 @@ namespace App\DataBase;
 
 use App\Service;
 use App\Price;
+use App\Favorite;
 use App\DataBase\UserDataMaster;
 use App\Http\Controllers\MailController;
 
@@ -49,7 +50,8 @@ class ServiceData
         else return response()->json(['errors' => ['fail' => ['Cotización no encontrada!']]], 422);
     }
 
-    public static function register($new_service){
+    public static function register($new_service)
+    {
         //Verifico que mi usuario no haya publicado más de 3 anuncios
         if(Service::where('token', '=', $new_service->id)->count()<3){
             //Se crea una nueva colección
@@ -141,5 +143,25 @@ class ServiceData
 
             return response()->json(['success' => ['Cambios guardados']], 200);
         }else return response()->json(['errors' => ['fail' => ['Hubo un error de conexión ... Intente más tarde']]], 422);
+    }
+
+    public static function save_service($service)
+    {
+        $favorite = new Favorite();
+
+        $favorite->idService = $service->idService;
+        $favorite->idCustomer = $service->idCustomer;
+
+        $favorite->save();
+    }
+
+    public static function favoriteBoolean($favorite)
+    {
+        $favorite = Favorite::where('idService', '=', $favorite->idService)
+                              ->where('idCustomer', '=', $favorite->idCustomer)
+                              ->first();
+        
+        if($favorite) return 1;
+        else return 0;
     }
 }

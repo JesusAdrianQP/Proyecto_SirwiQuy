@@ -9,7 +9,7 @@
         <!--Navbar en vista de laptop-->
         <div class="flex">
           <div class="flex-shrink-0 flex items-center">
-            <a href="/">
+            <a>
               <img
                 class="hidden lg:block h-16 w-auto"
                 src="../../assets/Logo_Sirwi_b.png"
@@ -66,7 +66,8 @@
                 v-on-clickaway="closeProfile"
               >
                 <!-- @click="profileOpen=!profileOpen": Es para constatar que se abra las opciones del menú de perfil-->
-                <img class="h-8 w-8 object-cover rounded-full" src="../../assets/illustrations/user_icono.png" alt="Perfil" />
+                <img class="h-8 w-8 object-cover rounded-full" :src="image"  alt="" />
+                
                 <div class="ml-3">
                   <p
                     class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900"
@@ -91,23 +92,15 @@
                 aria-labelledby="user-menu"
               >
                 <router-link
-                  to="/customer/blank"
+                  to="/customer/update/data"
                   class="flex items-center cursor-pointer px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   <IconSvg :solid="false" icon="cog" class="h-6 w-6 mr-2 text-gray-400" />Ver perfil
                 </router-link>
 
-                <router-link
-                  to="/customer/blank"
-                  class="flex items-center cursor-pointer px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  <IconSvg :solid="false" icon="cog" class="h-6 w-6 mr-2 text-gray-400" />Cuenta
-                </router-link>
-
                 <a
-                  @click="logout"
+                  @click="logout()"
                   class="flex items-center cursor-pointer px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
@@ -182,7 +175,7 @@
         <div v-if="isCustomer">
           <div class="flex items-center px-4">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 object-cover rounded-full" src="../../assets/illustrations/user_icono.png" alt="Perfil" />
+              <img class="h-10 w-10 object-cover rounded-full" :src="image" alt="" />
             </div>
             <div class="ml-3">
               <div class="text-md font-medium leading-6 text-gray-800">Bienvenido</div>
@@ -192,14 +185,9 @@
 
           <div class="mt-3">
             <router-link
-              to="/customer/blank"
+              to="/customer/update/data"
               class="block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
-            >Ver perfil</router-link>
-
-            <router-link
-              to="/customer/blank"
-              class="block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
-            >Cuenta</router-link>
+            >Ver perfil</router-link>           
 
             <a
               @click="logout"
@@ -215,16 +203,19 @@
 <script>
 import IconSvg from "./IconSvg.vue";
 import NavBarOption from "./NavBarOption.vue";
+import perfilDefault from "../../assets/illustrations/user_icono.gif"
 import api from "../api";
 import { mixin as clickaway } from "vue-clickaway";
 
 export default {
   mixins: [clickaway],
-  components: {
+  components: 
+  {
     IconSvg,
     NavBarOption,
   },
-  data: () => {
+  data: () => 
+  {
     return {
       token: localStorage.getItem('token'),
       level: localStorage.getItem('e_level'),
@@ -232,41 +223,51 @@ export default {
       isOpen: false,
       profileOpen: false,
       usuario: '',
-      foto: '',
-      id: ''
+      image: perfilDefault
     };
   },
-  async created() {
-    if((this.token == null || this.token == '') && (this.level == '' || this.level == null)){
-      this.isCustomer = false;
-    }
-    else{
+  async created() 
+  {
+    if((this.token == null) && (this.level == null)) { this.isCustomer = false; return; }
+    else
+    {
       this.isCustomer = true;
+
+      if(localStorage.getItem('e_userC')!=null)
+      {
+        this.usuario = localStorage.getItem('e_userC');
+        if(localStorage.getItem('e_imageC')=='undefined') { return; }
+        this.image = localStorage.getItem('e_imageC');
+        return;
+      }
+
       let response = await api.get(`/level=${this.level}/token=${this.token}`)
       let customer = response.data.data;
 
-      this.usuario = customer.username;
-      this.id = customer._id;
-      if(customer.file != '' || this.file == null){this.foto = customer.file };
+      localStorage.setItem('e_userC', customer.username);
+      localStorage.setItem('e_imageC', customer.file);
+      localStorage.setItem('e_id_customer', customer._id);
 
-      localStorage.setItem('e_id_customer', this.id);
-
-      this.$emit('onCustomerId', {
-        _id: this.id
-      });
+      this.usuario = localStorage.getItem('e_userC');
+      if(localStorage.getItem('e_imageC')=='undefined') { return; } 
+      this.image = localStorage.getItem('e_imageC');      
     }
   },
-  methods: {
-    isMenu(){
-      if(this.isOpen == false) this.isOpen = true;
-        else this.isOpen = false;
+  methods: 
+  {
+    isMenu()
+    {
+      if(!this.isOpen) this.isOpen = true;
+      else this.isOpen = false;
 
       this.$el.querySelector('.wrapper-menu').classList.toggle("open");
     },
-    closeProfile: function () {
+    closeProfile()
+    {
       if (this.profileOpen) this.profileOpen = false;
     },
-    async logout(){
+    async logout()
+    {
       await api.post(`/changeAccess`, {
         level: localStorage.getItem('e_level'),
         token: localStorage.getItem('token')
@@ -274,11 +275,16 @@ export default {
 
       localStorage.removeItem('token');
       localStorage.removeItem('e_level');
+
       localStorage.removeItem('request');
       localStorage.removeItem('suma');
       localStorage.removeItem('exist_service');
+
       localStorage.removeItem('e_response');
       localStorage.removeItem('e_link');
+
+      localStorage.removeItem('e_userC');
+      localStorage.removeItem('e_imageC');
       localStorage.removeItem('e_id_customer');
       
       window.location.reload();

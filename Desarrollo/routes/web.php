@@ -36,6 +36,8 @@ Route::post('create_service', 'ServiceController@createservice');//Ruta de creac
 Route::get('service_details/{service_id}', 'ServiceController@serviceiddetails');//Ruta de detalle de servicios 
 Route::get('service/{service_id}/cost', 'ServiceController@pricesdetails');//Ruta de los detalles de los precios 
 Route::get('services/page={page}/pmin{pmin}&pmax={pmax}/OrderByvalue={value}/title={title}/district={district}/category={category}', 'ServiceController@serviceall');//Ruta de los servicios paginados
+Route::post('save_favorite', 'ServiceController@saveservice');/**Guardado en favoritos */
+Route::get('favorite/idService={idService}/idCustomer={idCustomer}', 'ServiceController@validateFavorite');/**Valida si el servicio esta en favorito o no */
 
 /*--------------------------Comunicación - Request y Response ----------------------*/
 Route::post('request', 'CommunicationController@requestService');/*Solicitud de Servicio*/
