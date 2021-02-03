@@ -19,7 +19,7 @@ class MailController extends Controller
     {
         Mail::to($email)->send(new RegisterCheck($user, $email, $pass));
 
-        return response()->json(['success' => ['Sus credenciales han sido mandadas al correo proporcionado']], 200);
+        return response()->json(['success' => ['Credenciales enviadas a su correo']], 200);
     }
 
     public function message($request, $email)
