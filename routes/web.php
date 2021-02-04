@@ -15,9 +15,8 @@ Route::post('signup', 'LoginController@signup'); /*Ruta de crear sesión*/
 Route::get('level={level}/token={token}', 'LoginController@getUser');/*Ruta de obtención de datos de los usuarios*/
 Route::post('changeAccess', 'LoginController@close');/*Ruta de cerrar sesión y cambiar token*/
 Route::post('reset', 'LoginController@reset'); /**Ruta para generar reseteo de password*/
-
-Route::get('reset/{cod}/{identifier}', 'LoginController@validatereset'); //Funcion que comprobara mi enlace
-Route::post('changepass', 'LoginController@changepass'); //Funcion para cambiar completamente el password
+Route::get('reset/validate/{code}/{identifier}', 'LoginController@validatelink');/**Comprobación de link de reseteo */
+Route::post('changepass', 'LoginController@changepass'); /**Cambia contraseña en la data */
 
 /*---------------------------------Ruta de las apis--------------------------------------*/
 Route::get('validate/{isType}/{apidate}', 'UserController@getValidate'); //RuTa de obtencion de apis
@@ -37,6 +36,8 @@ Route::post('create_service', 'ServiceController@createservice');//Ruta de creac
 Route::get('service_details/{service_id}', 'ServiceController@serviceiddetails');//Ruta de detalle de servicios 
 Route::get('service/{service_id}/cost', 'ServiceController@pricesdetails');//Ruta de los detalles de los precios 
 Route::get('services/page={page}/pmin{pmin}&pmax={pmax}/OrderByvalue={value}/title={title}/district={district}/category={category}', 'ServiceController@serviceall');//Ruta de los servicios paginados
+Route::post('save_favorite', 'ServiceController@saveservice');/**Guardado en favoritos */
+Route::get('favorite/idService={idService}/idCustomer={idCustomer}', 'ServiceController@validateFavorite');/**Valida si el servicio esta en favorito o no */
 
 /*--------------------------Comunicación - Request y Response ----------------------*/
 Route::post('request', 'CommunicationController@requestService');/*Solicitud de Servicio*/

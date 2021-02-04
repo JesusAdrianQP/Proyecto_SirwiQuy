@@ -47,15 +47,17 @@
               </div>
 
                 <div class="block text-center text-5xl max-w-sm mx-auto mt-2 text-gray-700 px-8 lg:px-6">
-                    S/ 50.00
+                    USD 15.00
                 </div>
 
               <div class="block flex items-center p-8 uppercase">
+                <router-link to="payment" class="w-full">
                 <button
                   class="mt-3 text-lg font-semibold bg-blue-700 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700"
                 >
                   COMPRAR
                 </button>
+                </router-link>
               </div>
             </div>
           </div>
@@ -86,16 +88,18 @@
               </div>
               <div class="flex flex-wrap mt-3 px-6">
                 <div class="block text-center text-5xl max-w-sm mx-auto mt-2 text-gray-700 px-8 lg:px-6">
-                    S/ 120.00
+                    USD 60.00
                 </div>
               </div>
 
               <div class="block flex items-center p-8 uppercase">
+                <router-link to="payment" class="w-full">
                 <button
                   class="mt-3 text-lg font-semibold bg-blue-700 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700"
                 >
                   COMPRAR
                 </button>
+                </router-link>
               </div>
             </div>
           </div>

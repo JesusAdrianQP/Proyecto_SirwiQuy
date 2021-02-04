@@ -1,10 +1,6 @@
 <template>
   <div id="app" class="bg-white relative min-h-screen">
-    <!--
-      Se agrega la navbar y el landing footer como denominador comun 
-      para todos las interfaces
-    -->
-    <NavBar @onCustomerId="getCustomerId"/>
+    <NavBar/>
     <slot></slot>
     <LandingFooter/>
   </div>
@@ -16,24 +12,17 @@ import LandingFooter from "../../containers/LandingFooter.vue";
 
 export default {
   name: "App",
-  components: {
+  components: 
+  {
     NavBar,
     LandingFooter
-  },
-  methods: {
-    getCustomerId(obj) {
-      let id = obj._id;
-
-      this.$emit('onCustomerIdForm', {
-        idCustomer: id
-      });
-    },
   }
 }
 </script>
 
 <style>
-#app {
+#app 
+{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

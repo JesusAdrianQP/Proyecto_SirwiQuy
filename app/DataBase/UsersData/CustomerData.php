@@ -12,27 +12,28 @@ class CustomerData implements UserInterface
 {
     public static function validationemail($mail): Bool
     {
-        $response = Customer::where('email', '=', $mail)->first();
-        
-        if($response) return true;
+        if(Customer::where('email', '=', $mail)->first()) return true;
         else return false;
     }
 
     public static function validationusername($username): Bool
     {
-        $response = Customer::where('username', '=', $username)->first();
-        
-        if($response) return true;
+        if(Customer::where('username', '=', $username)->first()) return true;
         else return false;
     }
 
     public static function validationpass($param, $loger, $pass): Bool
     {
         $customer = CustomerData::getUser($param, $loger);
-
         $response = Hash::check($pass, $customer->password);
         
         if($response) return true;
+        else return false;
+    }
+
+    public static function validationlink($link): Bool
+    {
+        if(Customer::where('recover', '=', $link)->first()) return true;
         else return false;
     }
 
@@ -110,26 +111,19 @@ class CustomerData implements UserInterface
         return $cust;
     }
 
+    public static function updatepass($user)
+    {
+        $customer = Customer::where('email', '=', $user->email)->first();
 
-    // public static function updatepass($user)
-    // {
-    //     $customer = Customer::where('email', '=', $user->email)->first();
+        if($customer)
+        {
+            $customer->password = bcrypt($user->password);
+            $customer->recover = null;
+            
+            $customer->save();
 
-    //     if($customer){
-    //         $customer->password = bcrypt($user->password);
-    //         $customer->recover = null;
-    //         // Guardamos cambios
-    //         $customer->save();
-
-    //         return response()->json(['success' => ['Contraseña actualizada']], 200);
-    //     }
-    //     else return response()->json(['errors' => ['fail' => ['Cliente no encontrado, chequee sus datos porfavor!!']]], 422);
-    // }
-
-    
-    // public static function validationreset($customer)
-    // {
-    //     if(Customer::where('recover', '=', $customer)->first()) return 0;
-    //         else return 1;
-    // }
+            return response()->json(['success' => ['Contraseña actualizada']], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Cliente no encontrado, chequee tus datos porfavor!!']]], 422);
+    }
 }

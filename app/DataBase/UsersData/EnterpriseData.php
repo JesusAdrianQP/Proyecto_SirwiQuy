@@ -12,27 +12,28 @@ class EnterpriseData implements UserInterface
 {
     public static function validationemail($mail): Bool
     {
-       $response = Enterprise::where('email', '=', $mail)->first();
-        
-        if($response) return true;
-        else return false;
+       if(Enterprise::where('email', '=', $mail)->first()) return true;
+       else return false;
     }
 
     public static function validationusername($username): Bool
     {
-       $response = Enterprise::where('username', '=', $username)->first();
-        
-        if($response) return true;
+       if(Enterprise::where('username', '=', $username)->first()) return true;
         else return false;
     }
 
     public static function validationpass($param, $loger, $pass): Bool
     {
         $enterprise = EnterpriseData::getUser($param, $loger);
-
         $response = Hash::check($pass, $enterprise->password);
         
         if($response) return true;
+        else return false;
+    }
+
+    public static function validationlink($link): Bool
+    {
+        if(Enterprise::where('recover', '=', $link)->first()) return true;
         else return false;
     }
 
@@ -99,29 +100,21 @@ class EnterpriseData implements UserInterface
         return $enter;
     }
 
-    //Se actualiza el password del usuario
-    //  public static function updatepass($user)
-    //  {
-    //      $enterprise = Enterprise::where('email', '=', $user->email)
-    //                                ->where('RUC', '=', $user->ruc)
-    //                                ->first();
-  
-    //      if($enterprise){
-    //          $enterprise->password = bcrypt($user->password);
-    //          $enterprise->recover = null;
-    //          // Guardamos cambios
-    //          $enterprise->save();
-  
-    //          return response()->json(['success' => ['Contraseña actualizada']], 200);
-    //      }
-    //      else return response()->json(['errors' => ['fail' => ['Empresa no encontrada, chequee sus datos porfavor!']]], 422);
-    //  }
+    public static function updatepass($user)
+    {
+        $enterprise = Enterprise::where('email', '=', $user->email)
+                                ->where('RUC', '=', $user->ruc)
+                                ->first();
 
-    
+        if($enterprise)
+        {
+            $enterprise->password = bcrypt($user->password);
+            $enterprise->recover = null;
+            
+            $enterprise->save();
 
-    // //Funcion que valida mi enlace
-    // public static function validationreset($enterprise){
-    //     if(Enterprise::where('recover', '=', $enterprise)->first()) return 0;
-    //         else return 1;
-    // }
+            return response()->json(['success' => ['Contraseña actualizada']], 200);
+        }
+        else return response()->json(['errors' => ['fail' => ['Empresa no encontrada, chequee tus datos porfavor!!']]], 422);
+    }
 }

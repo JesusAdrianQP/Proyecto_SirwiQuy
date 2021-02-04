@@ -2,7 +2,11 @@
   <!-- RECOVER SESSION: Vista de interfaz de recuperacion de sesion de los usuarios
        Solo accesible por el enlace, y valido al correo enviado.-->
   <Visitor>
-    <main class="flex flex-col justify-center pt-2 pb-4 bg-gray-100">
+    <Loader class="min-h-screen"
+            :load="loading"
+    />
+    
+    <main v-show="!loading" class="min-h-screen flex flex-col justify-center pt-2 pb-4 bg-gray-100">
       <div class="md:text-center md:flex-col md:flex md:justify-center md:items-center">
         <img class="h-48 sm:h-56 px-6 w-auto mt-4" src="../../../assets/illustrations/forgot-pass.png" alt="forgot-pass" />
         <p class="uppercase px-5 mt-4 text-2xl md:text-3xl font-extrabold text-gray-900"
@@ -21,8 +25,9 @@
                 <input
                   id="email"
                   v-model="email"
-                  placeholder="Ingrese su correo electronico"
+                  placeholder="Ingrese su correo"
                   type="text"
+                  @change="validateEmail()"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -53,7 +58,7 @@
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   maxlength="8"
                   pattern="[0-9]*"
-                  @change="validateDNI"
+                  @change="validateDNI()"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -83,7 +88,7 @@
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   maxlength="11"
                   pattern="[0-9]*"
-                  @change="validateRUC"
+                  @change="validateRUC()"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -136,7 +141,7 @@
                     placeholder="Verifique su contraseña"
                     type="password"
                     required
-                    @change="validatePassword()"
+                    @change="validateRepeatPassword()"
                     class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
@@ -174,23 +179,24 @@
 import api from "../../api";
 
 import Visitor from "../Layouts/Visitor";
+import Loader from "../../components/Loader.vue";
 import AnimatedButton from "../../components/AnimatedButton.vue";
 
 export default {
-    name: "RecoverSession",
-    components: {
-        Visitor,
-        AnimatedButton
+  name: "RecoverSession",
+  components: 
+  {
+    Visitor,
+    AnimatedButton,
+    Loader
   },
-  data: () => {
+  data: () => 
+  {
     return {
-      hasError: false,
+      loading: false,
       buttonLoading: false,
-      errorPage: 0,
-
       identifier: "",
 
-     
       email: "",
       dni: "",
       ruc: "",
@@ -210,25 +216,206 @@ export default {
       vacio_repeat_pass: "",
     }
   },
-  props: {
-    cod: String,
-    ide: String
+  props: 
+  {
+    code: String,
+    identity: String
   },
-  async created() {
-    if(this.ide == 'cliente') this.identifier = 'cliente';
-      else if(this.ide == 'trabajador') this.identifier = 'trabajador';
-        else if(this.ide == 'empresa') this.identifier = 'empresa';
-         else this.$router.push("*");
-    
-    let response = await api.get(`/reset/${this.cod}/${this.identifier}`)
-    this.errorPage = response.data.data;
+  async created() 
+  {
+    this.loading = true;
 
-    if(this.errorPage == 1) this.$router.push("*");
+    if(this.identity == 'cliente') this.identifier = 'cliente';
+    else if(this.identity == 'trabajador') this.identifier = 'trabajador';
+    else if(this.identity == 'empresa') this.identifier = 'empresa';
+    else { this.$router.push("/**"); return; }
+    
+    let response = await api.get(`/reset/validate/${this.code}/${this.identifier}`)
+    if(response.data.data == 0)
+    {
+      this.$toast.open({
+        message: "Enlace no válido o caducado...",
+        type: "error",
+        duration: 8000,
+        dismissible: true,
+      });
+
+      this.$router.push("/");
+      return;
+    }
+
+    this.loading = false;
   },
-  methods: {
-    async submitPass() {
-      this.validateSubmit();
-      if (this.hasError) return;
+  methods: 
+  {
+    validateEmail()
+    {
+      const correo = () => /^(([^<>()$\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email);
+      
+      this.error_email = '';
+      this.vacio_email = '';
+
+      if(this.email == '') {return;}
+
+      if(!correo(this.email))
+      {
+        this.error_email = 'Correo no válido';
+        this.vacio_email = '';
+      }
+    },
+    validateDNI() 
+    {
+      this.error_dni = '';
+      this.vacio_dni = '';
+
+      if(this.dni == ''){return;}
+
+      if ((this.dni.length > 0 && this.dni.length < 8)) 
+      {
+        this.error_dni = "El DNI debe tener 8 dígitos";
+        this.vacio_dni = "";
+      }
+    },
+    validateRUC() 
+    {
+      this.error_ruc = '';
+      this.vacio_ruc = '';
+      
+      if(this.ruc == ''){return;}
+
+      if ((this.ruc.length > 0 && this.ruc.length < 11)) 
+      {
+        this.error_ruc = 'El RUC debe tener 11 dígitos';
+        this.vacio_ruc = '';
+      }
+    },
+    validatePassword()
+    {
+      this.error_password = '';
+      this.vacio_pass = '';
+      
+      if(this.password.length == 0){return;}
+
+      if(this.password.length >= 8)
+			{	
+        this.vacio_pass = "";	
+				var mayuscula = false;
+				var minuscula = false;
+				var numero = false;
+				
+				for(var i = 0; i<this.password.length; i++)
+				{
+					if(this.password.charCodeAt(i) >= 65 && this.password.charCodeAt(i) <= 90) { mayuscula = true; }
+					else if(this.password.charCodeAt(i) >= 97 && this.password.charCodeAt(i) <= 122) { minuscula = true; }
+					else if(this.password.charCodeAt(i) >= 48 && this.password.charCodeAt(i) <= 57) { numero = true; }
+        }
+        
+        if(mayuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra mayuscula"; return;}
+        if(minuscula == false) { this.error_password = "Su contraseña debe tener al menos una letra minuscula"; return;}
+        if(numero == false) { this.error_password = "Su contraseña debe tener al menos un número"; return;}
+        
+        if(mayuscula == true && minuscula == true && numero == true) { this.error_password = "" }
+			}
+      else if(this.password.length < 8 && this.password.length > 0)
+      { 
+        this.error_password = "La longitud mínima es de 8 caracteres";
+        this.vacio_pass = "";
+      }
+    },
+    validateRepeatPassword()
+    {
+      this.error_repeat_password = '';
+      this.vacio_repeat_pass = '';
+      
+      if(this.repeat_password.length == 0){return;}
+
+      if(this.repeat_password != this.password)
+      {
+        this.error_repeat_password = "Las contraseñas no coinciden";
+        this.vacio_repeat_pass = "";
+      }
+    },
+    async submitPass() 
+    {
+      this.validateEmail();
+      if(this.identifier == "empresa") { this.validateRUC(); }
+      if(this.identifier == "trabajador") { this.validateDNI(); }
+      this.validatePassword();
+      this.validateRepeatPassword();
+      var boolean = false;
+
+      if(this.email == "" && this.error_email == "" )
+      { 
+        this.vacio_email = "Campo obligatorio";
+        this.error_email = "";
+        boolean = true;
+      }
+      else if(this.email != "" && this.error_email != "") { this.vacio_email = ""; boolean = true;}
+      else if(this.email != "" && this.error_email == "")
+      {
+        this.vacio_email = "";
+        this.error_email = "";
+      }
+
+      if(this.identifier == "empresa")
+      {
+        if(this.ruc == "" && this.error_ruc == "" )
+        { 
+          this.vacio_ruc = "Campo obligatorio";
+          this.error_ruc = "";
+          boolean = true;
+        }
+        else if(this.ruc != "" && this.error_ruc != "") { this.vacio_ruc = ""; boolean = true;}
+        else if(this.ruc != "" && this.error_ruc == "")
+        {
+          this.vacio_ruc = "";
+          this.error_ruc = "";
+        }
+      }
+
+      if(this.identifier == "trabajador")
+      {
+        if(this.dni == "" && this.error_dni == "" )
+        { 
+          this.vacio_dni = "Campo obligatorio";
+          this.error_dni = "";
+          boolean = true;
+        }
+        else if(this.dni != "" && this.error_dni != "") { this.vacio_dni = ""; boolean = true;}
+        else if(this.dni != "" && this.error_dni == "")
+        {
+          this.vacio_dni = "";
+          this.error_dni = "";
+        }
+      }
+
+      if(this.password == "" && this.error_password == "" )
+      { 
+        this.vacio_pass = "Campo obligatorio";
+        this.error_password = "";
+        boolean = true;
+      }
+      else if(this.password != "" && this.error_password != "") { this.vacio_pass = ""; boolean = true;}
+      else if(this.password != "" && this.error_password == "")
+      {
+        this.vacio_pass = "";
+        this.error_password = "";
+      }
+
+      if(this.repeat_password == "" && this.error_repeat_password == "" )
+      { 
+        this.vacio_repeat_pass = "Campo obligatorio";
+        this.error_repeat_password = "";
+        boolean = true;
+      }
+      else if(this.repeat_password != "" && this.error_repeat_password != "") { this.vacio_repeat_pass = ""; boolean = true;}
+      else if(this.repeat_password != "" && this.error_repeat_password == "")
+      {
+        this.vacio_repeat_pass = "";
+        this.error_repeat_password = "";
+      }
+
+      if(boolean) return;
       this.buttonLoading = true;
 
       let response = await api.post(`/changepass`, {
@@ -239,7 +426,6 @@ export default {
         password: this.password
       });
 
-      //Si hay errores se identifica que tipo
       if (!response.ok) {
         this.buttonLoading = false;
 
@@ -256,7 +442,6 @@ export default {
         });
       }
 
-      //Si la operacion es exitosa
       this.$toast.open({
         message: response.data.data.success[0],
         type: "success",
@@ -264,90 +449,13 @@ export default {
         dismissible: true,
       });
 
-      //Redireccionamiento de rutas
-      this.$router.push("/");
-    },
-    validateSubmit() {
-      this.hasError = false;
-
-      //Validaciones del campo Email
-      if (this.email == '') {
-        this.hasError = true;
-        this.vacio_email = "Campo necesario";
-        this.error_email = '';
-      } else if (
-        !this.email.includes("@") ||
-        !this.email.includes(".") ||
-        this.email.length < 5
-      ) {
-        this.hasError = true;
-        this.vacio_email = '';
-        this.error_email = "Correo no válido";
-      } else {
-        this.error_email = '';
-        this.vacio_email = '';
-      }
-
-      if(this.identifier == 'trabajador'){
-         //Validación del DNI
-        if ((this.dni.length > 0 && this.dni.length < 8) || (this.dni.length > 8)) {
-          this.hasError = true;
-          this.error_dni = "El DNI debe tener 8 dígitos";
-          this.vacio_dni = "";
-        } else if(this.dni == ''){
-          this.hasError = true;
-          this.error_dni = '';
-          this.vacio_dni = 'Campo necesario';
-        } else{
-          this.error_dni = '';
-          this.vacio_dni = '';
-        } 
-      }
-
-      if(this.identifier == 'empresa'){
-         //Validacion de RUC
-        if ((this.ruc.length > 0 && this.ruc.length < 11) || (this.ruc.length > 11)) {
-          this.hasError = true;
-          this.error_ruc = "El RUC debe tener 11 dígitos";
-          this.vacio_ruc = "";
-        }else if(this.ruc == ''){
-          this.hasError = true;
-          this.error_ruc = '';
-          this.vacio_ruc = 'Campo necesario';
-        }else{
-          this.error_ruc = "";
-          this.vacio_ruc = "";
-        }
-      }
-
-      //Validaciones del campo password
-      if (this.password == "") {
-        this.hasError = true;
-        this.vacio_pass = "Campo necesario";
-        this.error_password = "";
-      } else if (this.password.length <= 5) {
-        this.hasError = true;
-        this.vacio_pass = "";
-        this.error_password = "La contraseña debe ser mayor de 5 caracteres";
-      } else {
-        this.error_password = "";
-        this.vacio_pass = "";
-      }
-
-      //Validaciones del campo repeat password
-      if (this.repeat_password == "") {
-        this.hasError = true;
-        this.vacio_repeat_pass = "Campo necesario";
-        this.error_repeat_password = "";
-      } else if (this.repeat_password != this.password) {
-        this.hasError = true;
-        this.error_repeat_password = "Las contraseñas no coinciden";
-        this.vacio_repeat_pass = "";
-      } else {
-        this.error_repeat_password = "";
-        this.vacio_repeat_pass = "";
-      }
-    },
+      var user = null;
+      if(this.identifier == 'cliente') user = 'customer';
+      else if(this.identifier == 'trabajador') user = 'employee';
+      else user = 'enterprise';
+      
+      this.$router.push("/login/" + user);
+    }
   },
 };
 </script>

@@ -158,21 +158,17 @@ class UserDataMaster
         else return response()->json(['errors' => ['mail' => ['Correo inexistente']]], 422);
     }
 
-    // public static function validateres($user)
-    // {
-    //     //Se crea fabrica
-    //     $vreset = UserFactory::make($user->identifier);
+    public static function link_reset($link)
+    {
+       $userReset = UserFactory::make($link->identifier);
+    
+       if($userReset::validationlink($link->code)) return 1;
+       else return 0;
+    }
 
-    //     $bool = $vreset::validationreset($user->cod);//Verifico existencia del enlace
-
-    //     if($bool == 1) return 1;
-    //         else return 0;
-    // }
-
-    // public static function change_pass($user)
-    // {
-    //     //Se crea fabrica
-    //     $pass = UserFactory::make($user->identity);    
-    //     return $pass::updatepass($user);  
-    // }
+    public static function change_pass($user)
+    {
+        $pass = UserFactory::make($user->identity);    
+        return $pass::updatepass($user);  
+    }
 }

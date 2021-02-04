@@ -32,9 +32,11 @@ import ServiceReport from "./pages/Customer/ServiceReport.vue";
 import ServiceForm from "./pages/Customer/ServiceForm.vue";
 import RateService from "./pages/Customer/RateService.vue";
 import Payment from "./pages/Customer/Payment.vue";
+import PaymentS from "./pages/Supplier/Payment.vue";
+import UpdateData from "./pages/Customer/UpdateData.vue";
+
 
 //Importaciones de la carpeta empresa
-import ListWorker from "./pages/Enterprise/ListWorker.vue";
 import WorkerRegistrations from "./pages/Enterprise/WorkerRegistrations.vue";
 
 
@@ -66,22 +68,12 @@ const isGuest = (to, from, next) => {
 
 //Verifica si son proveedores son los usuarios entrantes
 const isSupplier = (to, from, next) => {
-    if (
-        localStorage.getItem("e_level") == "employee"
-    ) {
-        if (
-            (localStorage.getItem("e_DNI") == undefined ||
-                localStorage.getItem("e_DNI") == "") &&
-            to.path != "/worker/profile/edit"
-        ) {
-            next("/worker/profile/edit");
-            return;
-            }
+    if (localStorage.getItem("e_level") == "employee") 
+    {
         next();
         return;
-    }else if(
-        localStorage.getItem("e_level") == "enterprise"
-    ){
+    }else if(localStorage.getItem("e_level") == "enterprise")
+    {
         next();
         return;
     }
@@ -166,7 +158,7 @@ export default new VueRouter({
             beforeEnter: isGuest
         },
         {
-            path: '/recover/session/identity=:ide&cod=:cod',
+            path: '/recover/session/identity=:identity&cod=:code',
             component: RecoverSession,
             beforeEnter: isGuest,
             props:true
@@ -193,6 +185,12 @@ export default new VueRouter({
             component: Payment,
             props: true
         },
+        {
+            path: "/customer/update/data",
+            component: UpdateData,
+            beforeEnter: isCustomer
+        },
+        
 
         //Rutas de los proveedores
         {
@@ -262,9 +260,9 @@ export default new VueRouter({
             beforeEnter: isEnterprise
         },
         {
-            path: '/enterpise/list/worker',
-            component: ListWorker,  
-            beforeEnter: isEnterprise
+            path: '/supplier/payment',
+            component: PaymentS,
+            beforeEnter: isSupplier
         },
 
         //Ruta no registrada
