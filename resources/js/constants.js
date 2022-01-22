@@ -1,3 +1,3 @@
 module.exports = {
-  API_URL: 'https://sirwiquy-peru2020.herokuapp.com'
+  API_URL: 'https://sirwiquy-peru2022.herokuapp.com'
 }
