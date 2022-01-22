@@ -10506,23 +10506,15 @@ __webpack_require__.r(__webpack_exports__);
               case 0:
                 _this2.validateSubmit();
 
-                if (!_this2.hasError) {
-                  _context2.next = 3;
-                  break;
-                }
-
-                return _context2.abrupt("return");
-
-              case 3:
                 _this2.buttonLoading = true;
-                _context2.next = 6;
+                _context2.next = 4;
                 return _api__WEBPACK_IMPORTED_MODULE_10__["default"].post("/request", {
                   id_provider: _this2.id_provider,
                   id_service: localStorage.getItem('exist_service'),
                   identity: _this2.identity,
-                  lati: _this2.new_lat,
-                  longi: _this2.new_lng,
-                  exactly: _this2.addres_exactly,
+                  lati: 0,
+                  longi: 0,
+                  exactly: '',
                   id_customer: _this2.id_customer,
                   name: _this2.first_name,
                   last_name_p: _this2.last_name_p,
@@ -10536,11 +10528,11 @@ __webpack_require__.r(__webpack_exports__);
                   suma: _this2.sumatotal
                 });
 
-              case 6:
+              case 4:
                 response4 = _context2.sent;
 
                 if (response4.ok) {
-                  _context2.next = 10;
+                  _context2.next = 8;
                   break;
                 }
 
@@ -10552,7 +10544,7 @@ __webpack_require__.r(__webpack_exports__);
                   dismissible: true
                 }));
 
-              case 10:
+              case 8:
                 _this2.$toast.open({
                   message: response4.data.data.success,
                   type: "success",
@@ -10566,7 +10558,7 @@ __webpack_require__.r(__webpack_exports__);
 
                 _this2.$router.push("/");
 
-              case 15:
+              case 13:
               case "end":
                 return _context2.stop();
             }
@@ -10626,13 +10618,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.last_name_m == "") {
         this.hasError = true;
         this.vacio_last_name_m = "Campo necesario";
-      } else this.vacio_last_name_m = ""; //Comprobacion de direccion
-
-
-      if (this.new_lat == null || this.new_lat == '') {
-        this.hasError = true;
-        this.vacio_addres = "Campo necesario";
-      } else this.vacio_addres = ""; //Comprobacion de fecha
+      } else this.vacio_last_name_m = ""; //Comprobacion de fecha
 
 
       if (this.date == "") {
@@ -10681,13 +10667,7 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.error_mensaje = "";
         this.vacio_mensaje = "";
-      } //Comprobacion de la dirección exacta
-
-
-      if (this.addres_exactly == "") {
-        this.hasError = true;
-        this.vacio_addres_exactly = "Campo necesario";
-      } else this.vacio_addres_exactly = "";
+      }
     }
   }
 });
@@ -55235,15 +55215,7 @@ var render = function() {
                                       "\n                          Dirección referencial (*)\n                        "
                                     )
                                   ]
-                                ),
-                                _vm._v(" "),
-                                _vm.vacio_addres
-                                  ? _c(
-                                      "small",
-                                      { staticClass: "text-yellow-600" },
-                                      [_vm._v(_vm._s(_vm.vacio_addres))]
-                                    )
-                                  : _vm._e()
+                                )
                               ]),
                               _vm._v(" "),
                               _c(
@@ -63013,7 +62985,7 @@ var render = function() {
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n                                                        26/06/2020\r\n                                                    "
+                                            "\r\n                                                        22/01/2022\r\n                                                    "
                                           )
                                         ]
                                       )
