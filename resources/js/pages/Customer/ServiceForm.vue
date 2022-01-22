@@ -599,10 +599,10 @@ export default {
       }
 
       //Comprobacion de la dirección exacta
-      if (this.addres_exactly == "") {
+      /*if (this.addres_exactly == "") {
         this.hasError = true;
         this.vacio_addres_exactly = "Campo necesario";
-      } else this.vacio_addres_exactly = "";
+      } else this.vacio_addres_exactly = "";*/
     },
   },
 };
