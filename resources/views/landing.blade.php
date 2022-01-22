@@ -67,7 +67,7 @@
         <div class="hidden sm:ml-4 lg:flex sm:items-center">
           <a       
             v-if="!isCustomer"     
-            href="https://sirwiquy-peru2020.herokuapp.com/home#/login/customer"
+            href="https://sirwiquy-peru2022.herokuapp.com/home#/login/customer"
             class="flex w-full rounded-md shadow-sm sm:w-auto"
           >
             <button
@@ -78,7 +78,7 @@
 
           <a            
             v-if="!isCustomer"
-            href="https://sirwiquy-peru2020.herokuapp.com/home#/signup/indie/customer"
+            href="https://sirwiquy-peru2022.herokuapp.com/home#/signup/indie/customer"
             class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:ml-2 sm:w-auto"
           >
             <button
@@ -158,7 +158,7 @@
             >Ver perfil</a>
 
             <a
-              href="https://sirwiquy-peru2020.herokuapp.com/home#/customer/blank"
+              href="https://sirwiquy-peru2022.herokuapp.com/home#/customer/blank"
               class="block px-4 py-2 text-md font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
             >Cuenta</a>
 
@@ -185,7 +185,7 @@
             <div class="mt-2 justify-center w-full h-6 text-base sm:text-sm lg:h-12 text-white lg:text-3xl inline-flex overflow-hidden" >
               <p class="m-0 text-gray-900 font-light" style="font-family: 'Roboto', sans-serif;">Encuentra los servicios ideales para el mantenimiento de tu hogar</p>                
             </div>
-            <a href="https://sirwiquy-peru2020.herokuapp.com/home#/">
+            <a href="https://sirwiquy-peru2022.herokuapp.com/home#/">
               <button
                 class="mt-20 inline-flex justify-center w-auto  border-solid border-2 rounded-full py-3 px-10 border-gray-800 lg:text-xl leading-6 font-medium text-white shadow-sm  bg-primary-800 hover:text-black hover:bg-white focus:outline-none focus:border-primary-300 focus:shadow-outline-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5"
                 >COMENZAR
@@ -270,7 +270,7 @@
           </div>
         </div>
         <div class="flex justify-center items-center mt-10 lg:pb-10 md:pb-10">
-          <a href="https://sirwiquy-peru2020.herokuapp.com/home#/" class="mt-0 mb-2 inline-flex items-center py-3 px-10  lg:text-xl leading-5 font-medium text-primary-500 shadow-sm  hover:underline hover:text-black sm:text-sm " >
+          <a href="https://sirwiquy-peru2022.herokuapp.com/home#/" class="mt-0 mb-2 inline-flex items-center py-3 px-10  lg:text-xl leading-5 font-medium text-primary-500 shadow-sm  hover:underline hover:text-black sm:text-sm " >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
               VER SERVICIOS
           </a>
@@ -297,8 +297,8 @@
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
               ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path
             ></svg>Trabaja con nosotros</li>
-          <li><a href="https://sirwiquy-peru2020.herokuapp.com/home#/join_us" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Únete</a></li>
-          <li><a href="https://sirwiquy-peru2020.herokuapp.com/home#/login/employee" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Inicia sesión</a></li>
+          <li><a href="https://sirwiquy-peru2022.herokuapp.com/home#/join_us" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Únete</a></li>
+          <li><a href="https://sirwiquy-peru2022.herokuapp.com/home#/login/employee" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Inicia sesión</a></li>
         </ul>
 
         <ul class="text-gray-700 list-none pt-6 font-thin flex flex-col text-left lg:ml-10">
@@ -306,11 +306,11 @@
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
               ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path
             ></svg>Link útiles</li>
-          <li><a href="https://sirwiquy-peru2020.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Sobre Nosotros</a></li>
-          <li><a href="https://sirwiquy-peru2020.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Contáctanos</a></li>
-          <li><a href="https://sirwiquy-peru2020.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Politicas</a></li>
-          <li><a href="https://sirwiquy-peru2020.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Términos y condiciones</a></li>
-          <li><a href="https://sirwiquy-peru2020.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Ayuda</a></li>
+          <li><a href="https://sirwiquy-peru2022.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Sobre Nosotros</a></li>
+          <li><a href="https://sirwiquy-peru2022.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Contáctanos</a></li>
+          <li><a href="https://sirwiquy-peru2022.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Politicas</a></li>
+          <li><a href="https://sirwiquy-peru2022.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Términos y condiciones</a></li>
+          <li><a href="https://sirwiquy-peru2022.herokuapp.com/home#" class="inline-block ml-6 px-3 text-gray-300 hover:text-gray-400 no-underline">Ayuda</a></li>
         </ul>
       </div>
     </div>
@@ -318,7 +318,7 @@
     <!--Información final y redes sociales-->
     <div class="mt-8 pt-2 text-white">
       <div class="flex m-auto pt-5 border-t text-sm lg:text-base flex-col max-w-6xl">
-        <div class="text-center">SirwiyQuy &copy; 2020 | Todos los derechos reservados.</div>
+        <div class="text-center">SirwiyQuy &copy; 2022 | Todos los derechos reservados.</div>
 
         <div class="md:flex-auto md:flex-row-reverse mt-2 justify-center flex-row flex">
           <a href="/#" class="w-6 lg:w-8 mx-1">
