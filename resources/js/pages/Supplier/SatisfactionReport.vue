@@ -69,7 +69,7 @@
                                             <div class="flex items-center">
                                                 <div class="ml-3">
                                                     <p class="text-gray-900 whitespace-no-wrap">
-                                                        26/06/2020
+                                                        22/01/2022
                                                     </p>
                                                 </div>
                                                 <div class="ml-3">
