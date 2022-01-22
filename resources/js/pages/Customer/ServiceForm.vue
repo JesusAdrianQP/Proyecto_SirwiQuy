@@ -540,10 +540,10 @@ export default {
       } else this.vacio_last_name_m = "";
       
       //Comprobacion de direccion
-      if (this.new_lat == null || this.new_lat == '') {
+      /*if (this.new_lat == null || this.new_lat == '') {
         this.hasError = true;
         this.vacio_addres = "Campo necesario";
-      } else this.vacio_addres = ""; 
+      } else this.vacio_addres = ""; */
 
       //Comprobacion de fecha
       if (this.date == "") {
