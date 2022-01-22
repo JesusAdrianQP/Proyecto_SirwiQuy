@@ -182,9 +182,9 @@
                           >
                             Dirección referencial (*)
                           </label>
-                          <small v-if="vacio_addres" class="text-yellow-600">{{
+                          <!--<small v-if="vacio_addres" class="text-yellow-600">{{
                               vacio_addres
-                          }}</small>
+                          }}</small>-->
                         </div>
 
                         <!--Mapa iterativo para el usuario -->
@@ -435,16 +435,15 @@ export default {
     },
     async submitForm() {
       this.validateSubmit();
-      if (this.hasError) return;
       this.buttonLoading = true;
       
       let response4 = await api.post(`/request`, {
         id_provider: this.id_provider,
         id_service: localStorage.getItem('exist_service'),
         identity: this.identity,
-        lati: this.new_lat,
-        longi: this.new_lng,
-        exactly: this.addres_exactly,
+        lati: 0,
+       longi: 0,
+       exactly: '',
         id_customer: this.id_customer,
         name: this.first_name,
         last_name_p: this.last_name_p,
@@ -539,12 +538,6 @@ export default {
         this.vacio_last_name_m = "Campo necesario";
       } else this.vacio_last_name_m = "";
       
-      //Comprobacion de direccion
-      /*if (this.new_lat == null || this.new_lat == '') {
-        this.hasError = true;
-        this.vacio_addres = "Campo necesario";
-      } else this.vacio_addres = ""; */
-
       //Comprobacion de fecha
       if (this.date == "") {
         this.hasError = true;
@@ -597,12 +590,6 @@ export default {
         this.error_mensaje = "";
         this.vacio_mensaje = "";
       }
-
-      //Comprobacion de la dirección exacta
-      /*if (this.addres_exactly == "") {
-        this.hasError = true;
-        this.vacio_addres_exactly = "Campo necesario";
-      } else this.vacio_addres_exactly = "";*/
     },
   },
 };
