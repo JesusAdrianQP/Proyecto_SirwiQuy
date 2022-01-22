@@ -35,7 +35,7 @@
     <!--Información final y redes sociales-->
     <div class="mt-8 pt-2 text-white">
       <div class="flex m-auto pt-5 border-t text-sm lg:text-base flex-col max-w-6xl">
-        <div class="text-center">SirwiyQuy &copy; 2020 | Todos los derechos reservados.</div>
+        <div class="text-center">SirwiyQuy &copy; 2022 | Todos los derechos reservados.</div>
 
         <div class="md:flex-auto md:flex-row-reverse mt-2 justify-center flex-row flex">
           <a href="/#" class="w-6 lg:w-8 mx-1">
